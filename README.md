@@ -17,6 +17,9 @@
 * Data capture for room short, long desc, area name  
 * Map follow on following others  
 * Transports for uncommon exits / moving areas  
+
+#### 3k/killer.tin
+* Floobity Alternative to bot.tin
 		  
 #### 3k/mip.tin
 * Modified from Balthus' original script.
@@ -27,6 +30,9 @@
 
 #### 3k/assemble.tin
 * Craft satchel auto-assembler
+
+#### 3k/mysql.tin
+* Database integration with mysql/mariadb
 
 ### Aardwolf:
 
