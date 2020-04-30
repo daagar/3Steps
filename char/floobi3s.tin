@@ -1,0 +1,1286 @@
+#class {floobi} {open}
+
+#var guild mages
+
+#gag {The Veil is %1 here}
+#gag {You continue chanting, further thinning the veil between worlds.}
+#gag {You incant thunderous words of power, and the Veil thins.}
+#gag {You concentrate on directing the Astral energies!}
+
+#gag {Ethereal tides wash over you, cleansing your spirit and refreshing your mind.}
+#gag {You lose control of the scouring forces, and umbral tides rip through you!}
+#gag {You lose control of the scouring forces, and astral fires rip through you!}
+
+#gag {The world suddenly seems darker, a velvet blackness.}
+#act {It is too dark}{!cast moon ribbon;glance}
+#act {There is darkness as %1 goes dark}{!cast moon ribbon;glance}
+#act {The Astral Matrix unravels, energies untwining from your summons.}{
+	#var {my[matrix][status]}{0};
+};
+
+
+#gag {A wellspring of otherworldly energies fountains into the area!}
+#gag {You draw deeply of the astral forces, harnessing them to your will!}
+
+#gag {You intone:}
+#gag {Everybody follows you in.}
+#gag {%1 has become level %2!}
+#gag {You shape %1 to your will}
+#gag {An orb of mist's attack paralyzes %1}
+#gag {A vortex of mist twines around %1 with crushing force!}
+#gag {emits freezing rays of moonlight!}
+#gag {pulls the stars above to crash down around you!}
+
+#nop {Maelstrom Summoning}
+#gag {A maelstrom of lightning whirls like thunder around}
+#gag {A maelstrom of flame blazes around %1 like the heart}
+#gag {^star!$};
+
+#gag {%1 dims as the lunar energies disperse.}
+#gag {Silvery lunar forces converge on %1}
+
+#gag {You have already called a riptide on this enemy!}
+#gag {Umbral ocean currents roar from the Astral, eddying powerfully}
+#gag {around %1, buffeting %2 with strange tides!}
+#gag {The strong current drags %1 under!}
+#gag {The strong current drowns %1}
+#gag {The strong current batters %1}
+#gag {The strong current pulls %1 off-balance!}
+
+#nop {Gag some other stuff that is happening all the time}
+#gag {Giant Donut %1 nexus of stability};
+#gag {Giant Donut %1 nobody of};
+
+#gag {A Fire Elemental %1 nexus of stability};
+#gag {The elemental %1 nexus of stability};
+
+#gag {^The %1 closes around you, defensive};
+#gag {^raised and ready. It is now ready to absorb all of the attacks directed};
+#gag {^at you.};
+#gag {^The %1 cannot perceive what it should defend against.};
+#gag {^You step back, allowing the %1 to be the focus of attack!};
+#gag {^Blazing with strange energies, the %1 momentarily becomes};
+#gag {^conduit for extradimensional force};
+#gag {^You utter powerful words and the syllables shape the alien energies flowing};
+
+#gag {^into our world, molding the %1 to your will.};
+#gag {^Torrential energies stream momentarily through the %1 into};
+#gag {^the material world.};
+
+
+#nop {defenses casting}
+
+#gag {You take note of where you can draw the Veil to defend you.}
+#gag {A great globe of flickering sorcerous energies rises around you.}
+#gag {Delicate vines of invisible force ripple into existence around you!}
+#gag {Furious winds rise, currents coiling and ready for your defense.}
+
+#gag {Rainbow light bleeds through the Veil, blossoming rapidly around you.}
+#gag {They shift chaotically through a thousand colors, casting strange}
+#gag {illumination on the area.}
+
+#nop {defenses blocking}
+#gag {The attack burns away in your aura of light!}
+#gag {Astral fires burn away extraneous thought, leaving peace and clarity}
+#gag {A blossom of shimmering force absorbs the brunt of %1 attack!}
+
+#gag {The blinding brilliance of thousands of suns springs up around you,}
+#gag {sheltering you in defensive light.}
+
+#gag {A strange wind rises and deflects the attack}
+#gag {Storm winds gust and deflect the attack!}
+
+#gag {The attack is scattered by the energies of the minor globe!}
+#gag {The attack is partially scattered by the energies of the minor globe!}
+
+#nop {Elementals are spammy}
+#gag {draws mists into the area, corroding everything};
+#gag {^away!$}
+
+#nop {Gag some staff}
+#gag {You draw upon the astral forces in the staff, grappling for a moment}
+#gag {with the rarefied energies. Using the energy to form a shelter from the}
+#gag {supernal, you gain a moment's respite and regain some clarity.}
+
+#gag {the rarefied energies. Shaping the energy into thousands of fine threads,}
+#gag {your thunderous words of power weave them back into your umbra.}
+
+#nop {Gag the HC Mage}
+#gag {A shimmering globe flashes briefly around the Arch Mage!}
+#gag {One of the High Colonic's images winks out as it is struck!}
+#gag {The High Colonic blasts %1 with a barrage of magic missiles!}
+#gag {One of the High Colonic's images winks out as it is struck!}
+#gag {The High Colonic blasts %1 with a disintegration ray!}
+#gag {The High Colonic waves his arms and suddenly there are 5 more of him!}
+#gag {A protective aura surrounds the Arch Mage.}
+#gag {Shimmering colors engulf the High Colonic.}
+#gag {A golden sheen pours over the Arch Mage's skin.}
+#gag {A myriad of colorful sparks fly from the High Colonic's magical shields as}
+#gag {the powerful attack tears through his defenses!}
+#gag {The High Colonic's skin flashes a golden aura as the force of the attack}
+#gag {^blasts into him!$}
+#gag {The Arch-Mage blasts the room with a fireball!}
+
+#nop {Gag Vine Vetters}
+#nop {Strange vines sprout grasping, but %1 evades them!}
+#nop {Strange vines sprout, grasping at %1}
+
+#gag {The %1 closes around you, defensive energies raised and}
+#gag {ready. It is now ready to absorb all of the attacks directed at you.}
+
+#gag {fades in from the Astral.}
+
+#gag {A %1 of %1 forms around you}
+#gag {The %1 of %2 lashes out at %3}
+#gag {The %1 of %2 blunts the attack}
+#gag {The %1 of %2 shields you from the attack}
+#gag {%1 is blistered by the %1 of %2}
+#gag {%1 withers as %2 attacks through the %3 of %4}
+
+#nop {polymorph other}
+#alias {gstr}{
+        !cast strength of oceans on %0;
+        !cast strength of mountains on %0;
+}
+
+#alias {po}{
+        #10 {
+                !cast intuil's funnel on %0;
+        };
+};
+
+#alias {do_vine_fetters}{
+        #if {$vine_attempts < 10}{
+                !cast vine fetters;
+                #math {vine_attempts}{$vine_attempts + 1};
+        };
+}
+
+#act {Strange vines sprout grasping, but %1 evades them!}{
+        do_vine_fetters;
+};
+
+#alias {sl}{#var vine_attempts 0;do_vine_fetters};
+
+#act {%1 tears free of the grasping umbral vines!}{
+        #var vine_attempts 0;
+        do_vine_fetters;
+};
+
+#nop {defenses failing}
+
+#gag {You may not cast another defensive spell so quickly!}
+
+#gag {The Veil clouds, forcing you to look for a new way through.}
+#act {The Veil clouds, forcing you to look for a new way through.}{
+        !cast blink;
+}
+
+#gag {Your contingency spell has been activated!}
+
+#gag {The flickering energies of your %1 globe dissipate.}
+#act {The flickering energies of your %1 globe dissipate.}{
+        !cast %1 globe;
+};
+
+#gag {Your shroud of storms dissipates}
+#act {Your shroud of storms dissipates}{
+        !cast shroud of storms;
+}
+
+#gag {Your shroud of storms disperses!}
+#act {Your shroud of storms disperses!}{
+        !cast shroud of storms;
+}
+
+#gag {The prismatic lights die down.}
+#act {The prismatic lights die down.}{
+        !cast prismatic aura;
+};
+
+#gag {There are already winds defending you.}
+
+#gag {fades back through the Veil to the Astral.}
+#act {fades back through the Veil to the Astral.}{
+        #var summonflag 0;
+}
+
+#act {Your material seam begins to close...}{
+        !cast material seam;
+}
+
+#act {The material seam shimmers and closes!}{
+        !cast material seam;
+}
+#act {You need a source of safe astral energy to build a Bridge!}{
+        !ffetch star;
+};
+
+#alias {pck}{
+        !put %1 in seam;
+}:
+
+#alias {ppck}{
+        !put all in seam;
+};
+
+#alias {shoo}{
+        #if {"%0" != ""}{
+                !cast vocalize as %0, begone;
+        }{
+                !cast vocalize as all, begone;
+        };
+};
+
+#alias {imb}{
+        #if {$hpbarUmb < 100}{
+                !weave staff 1000;
+        };
+        #if {$hpbarCurSP < $tmpSP}{
+                !draw staff 1000;
+        };
+        !imbue staff 1000;
+};
+
+#gag {You focus on summoning forth a %1}
+#gag {materializes from the Astral}
+
+#gag {The umbral staff is %1\% charged}
+#act {The umbral staff is %1\% charged}{
+        #var {my[staff][umbra]}{%1};
+};
+
+#gag {The umbral staff's shelter is %1\% charged}
+#act {The umbral staff's shelter is %1\% charged}{
+        #var {my[staff][shelter]}{%1};
+};
+
+#ticker {staff}{!cast sorcerous forge on staff}{900};
+#ticker {staffcheck}{#var {my[staff][shelter]}{100};!staffcheck}{30}
+
+#alias kk {kill $kstr}
+#alias k {kill %0}
+
+#alias {autos}{
+	#if {$my[autosetup][summons] != 1}{
+		#var {my[autosetup][summons]}	{1};
+		#echo {Picking Summons};
+	}{
+		#var {my[autosetup][summons]}	{0};
+		#echo {Not Picking Summons};
+	};
+	display_desired_summons;
+};
+
+#alias {autoc}{
+	#if {$my[autosetup][staff] != 1}{
+		#var {my[autosetup][staff]}	{1};
+		#echo {Autoconfiguring Staff};
+	}{
+		#var {my[autosetup][staff]}	{0};
+		#echo {Not Autoconfiguring Staff};
+	};
+};
+
+#alias {autor}{
+	#if {$my[autosetup][rotate] != 1}{
+		#var {my[autosetup][rotate]}	{1};
+		#echo {AutoRotating Summons};
+	}{
+		#var {my[autosetup][rotate]}	{0};
+		#echo {Not AutoRotating Summons};
+	};
+};
+
+#alias {automf}{
+	#if {$my[autosetup][fortitude] == 0}{
+		#var {my[autosetup][fortitude]}	{1};
+		#echo {Casting Fortitude on Offense Summons};
+	}{
+		#if {$my[autosetup][fortitude] == 1}{
+			#var {my[autosetup][fortitude]}	{2};
+			#echo {Casting Fortitude on All Summons};
+		}{
+			#var {my[autosetup][fortitude]}	{0};
+			#echo {Casting Fortitude on NO Summons};
+		};
+	};
+};
+
+#alias {autoflee}{
+	#if {$my[autosetup][flee] != 1}{
+		#var {my[autosetup][flee]}	{1};
+		#echo {Automatically Fleeing};
+	}{
+		#var {my[autosetup][flee]}	{0};
+		#echo {Not Automatically Fleeing};
+	};
+};
+
+#alias {display_desired_summons}{
+	#screen clear square 43 -41 57 -3;
+	#draw rounded box 43 -41 57 -3;
+	#if {$my[autosetup][summons] == 1}{
+		#showme {Current Summon Setup:  [<128>ON<088>]} 44 -38;
+		#unbutton {44;-15;44;-11}{autos};
+		#button {44;-15;44;-12}{autos};
+	}{
+		#showme {Current Summon Setup:  [<118>OFF<088>]} 44 -38;
+		#unbutton {44;-15;44;-12}{autos};
+		#button {44;-15;44;-11}{autos};
+	};
+	#showme {                 Avg:  ${mage_avg[1][avg(damage)]}} 45 -38;
+	#showme {       [<afa>+<088>] [<afa>+<088>]  <<afa>next<088>>} 46 -38;
+	#button {46;-31;46;-29}{tankcountup};
+	#button {46;-27;46;-25}{tanklevelup};
+	#button {46;-22;46;-16}{tanknameup};
+	#showme {Tank:   $my[summon][desired][tank][count] x $my[summon][desired][tank][level] - $my[summon][desired][tank][name]} 47 -38;
+	#showme {       [<faa>-<088>] [<faa>-<088>]  <<faa>prev<088>>} 48 -38;
+	#button {48;-31;48;-29}{tankcountdown};
+	#button {48;-27;48;-25}{tankleveldown};
+	#button {48;-22;48;-16}{tanknamedown};
+	#showme {       [<afa>+<088>] [<afa>+<088>]  <<afa>next<088>>} 50 -38;
+	#button {50;-31;50;-29}{damagecountup};
+	#button {50;-27;50;-25}{damagelevelup};
+	#button {50;-22;50;-16}{damagenameup};
+	#showme {Damage: $my[summon][desired][damage][count] x $my[summon][desired][damage][level] - $my[summon][desired][damage][name]} 51 -38;
+	#showme {       [<faa>-<088>] [<faa>-<088>]  <<faa>prev<088>>} 52 -38;
+	#button {52;-31;52;-29}{damagecountdown};
+	#button {52;-27;52;-25}{damageleveldown};
+	#button {52;-22;52;-16}{damagenamedown};
+	#showme {       [<afa>+<088>] [<afa>+<088>]  <<afa>next<088>>} 54 -38;
+	#button {54;-31;54;-29}{extracountup};
+	#button {54;-27;54;-25}{extralevelup};
+	#button {54;-22;54;-16}{extranameup};
+	#showme {Extra:  $my[summon][desired][extra][count] x $my[summon][desired][extra][level] - $my[summon][desired][extra][name]} 55 -38;
+	#showme {       [<faa>-<088>] [<faa>-<088>]  <<faa>prev<088>>} 56 -38;
+	#button {56;-31;56;-29}{extracountdown};
+	#button {56;-27;56;-25}{extraleveldown};
+	#button {56;-22;56;-16}{extranamedown};
+};
+
+#alias {db_query_mage_damage}{
+        db_submit {mage_avg}{%s}{select guildstring, avg(damage) from (select * from damage_log where author=`${world}` order by timestamp desc limit 100)var1;};
+        display_desired_summons;
+};
+
+#ticker {mage_damage}{db_query_mage_damage}{30};
+
+#alias {setsummon}{
+	#var {mytank}{%1};
+	#var {mydamage}{%2};
+	#var {myextra}{%3};
+	#regex {$mytank}{%+/%+/%+}{
+		#var {my[summon][desired][tank][level]}	{&1};
+		#var {my[summon][desired][tank][name]}	{&2};
+		#var {my[summon][desired][tank][count]}	{&3};
+		#if {$my[summon][desired][tank][level] == 8 && $my[summon][desired][tank][count] > 0}{
+			#var {my[summon][desired][tank][count]}{1};
+		};
+	};
+	#regex {$mydamage}{%+/%+/%+}{
+		#var {my[summon][desired][damage][level]}	{&1};
+		#var {my[summon][desired][damage][name]}	{&2};
+		#var {my[summon][desired][damage][count]}	{&3};
+		#if {$my[summon][desired][damage][level] == 8 && $my[summon][desired][damage][count] > 0}{
+			#var {my[summon][desired][damage][count]}{1};
+		};
+	};
+	#regex {$myextra}{%+/%+/%+}{
+		#var {my[summon][desired][extra][level]}	{&1};
+		#var {my[summon][desired][extra][name]}		{&2};
+		#var {my[summon][desired][extra][count]}	{&3};
+		#if {$my[summon][desired][extra][level] == 8 && $my[summon][desired][extra][count] > 0}{
+			#var {my[summon][desired][extra][count]}{1};
+		};
+	};
+	#var {my[summon][desired][bridge][name]}		{entity};
+	#var {my[summon][desired][bridge][count]}		{1};
+	#math {my[summon][desired][total][count]}{$my[summon][desired][extra][count] + $my[summon][desired][damage][count] + $my[summon][desired][tank][count] + $my[summon][desired][bridge][count]};
+	#unvar {mytank};#unvar {mydamage};#unvar {myextra};
+	display_desired_summons;
+};
+
+#alias {tset}{
+	#var {my[summon][desired][tank][name]}{%0};
+	shoo;
+	display_desired_summons;
+}
+#alias {dset}{
+	#var {my[summon][desired][damage][name]}{%0};
+	shoo;
+	display_desired_summons;
+}
+#alias {eset}{
+	#var {my[summon][desired][extra][name]}{%0};
+	shoo;
+	display_desired_summons;
+}
+
+#alias {setup_available_summons}{
+#nop Minor Summoning;
+	#var {my[summon][available][1][1]}{curl};
+	#var {my[summon][available][1][2]}{pinpoint};
+	#var {my[summon][available][1][3]}{tendril};
+	#var {my[summon][available][1][4]}{tumbling};
+	#var {my[summon][available][1][5]}{rippling};
+	#var {my[summon][available][1][6]}{gust};
+#nop Lesser Summoning;
+	#var {my[summon][available][2][1]}{whorl};
+	#var {my[summon][available][2][2]}{current};
+	#var {my[summon][available][2][3]}{disk};
+	#var {my[summon][available][2][4]}{thundering};
+	#var {my[summon][available][2][5]}{gale};
+	#var {my[summon][available][2][6]}{coil};
+#nop Orb Summoning;
+	#var {my[summon][available][3][1]}{song orb};
+	#var {my[summon][available][3][2]}{entropy orb};
+	#var {my[summon][available][3][3]}{sunlight orb};
+	#var {my[summon][available][3][4]}{moonlight orb};
+	#var {my[summon][available][3][5]}{sorcerous orb};
+	#var {my[summon][available][3][6]}{wind orb};
+	#var {my[summon][available][3][7]}{shadow orb};
+	#var {my[summon][available][3][8]}{mist orb};
+	#var {my[summon][available][3][9]}{storm orb};
+	#var {my[summon][available][3][10]}{force orb};
+#nop Major Summoning;
+	#var {my[summon][available][4][1]}{tide};
+	#var {my[summon][available][4][2]}{avalanche};
+	#var {my[summon][available][4][3]}{vines};
+	#var {my[summon][available][4][4]}{cloud};
+	#var {my[summon][available][4][5]}{column};
+	#var {my[summon][available][4][6]}{web};
+	#var {my[summon][available][4][7]}{streak};
+	#var {my[summon][available][4][8]}{ghostly fire};
+	#var {my[summon][available][4][9]}{star};
+	#var {my[summon][available][4][10]}{nightmare};
+	#var {my[summon][available][4][11]}{blast};
+#nop Vortex Summoning;
+	#var {my[summon][available][5][1]}{moonlight vortex};
+	#var {my[summon][available][5][2]}{prismatic vortex};
+	#var {my[summon][available][5][3]}{flame vortex};
+	#var {my[summon][available][5][4]}{song vortex};
+	#var {my[summon][available][5][5]}{force vortex};
+	#var {my[summon][available][5][6]}{storm vortex};
+	#var {my[summon][available][5][7]}{sorcerous vortex};
+	#var {my[summon][available][5][8]}{mist vortex};
+#nop Greater Summoning;
+	#var {my[summon][available][6][1]}{hurricane};
+	#var {my[summon][available][6][2]}{tempest};
+	#var {my[summon][available][6][3]}{ocean};
+	#var {my[summon][available][6][4]}{well};
+	#var {my[summon][available][6][5]}{void};
+	#var {my[summon][available][6][6]}{harmony};
+	#var {my[summon][available][6][7]}{sun};
+	#var {my[summon][available][6][8]}{field};
+	#var {my[summon][available][6][9]}{mountain};
+	#var {my[summon][available][6][10]}{bank};
+	#var {my[summon][available][6][11]}{rainbow};
+	#var {my[summon][available][6][12]}{constellation};
+#nop Nexus Summoning;
+	#var {my[summon][available][7][1]}{stability};
+	#var {my[summon][available][7][2]}{inevitability};
+	#var {my[summon][available][7][3]}{mystery};
+	#var {my[summon][available][7][4]}{boundaries};
+	#var {my[summon][available][7][5]}{possibility};
+	#var {my[summon][available][7][6]}{illusion};
+	#var {my[summon][available][7][7]}{paradoxes};
+	#var {my[summon][available][7][8]}{eternity};
+	#var {my[summon][available][7][9]}{duality};
+	#var {my[summon][available][7][10]}{causality};
+	#var {my[summon][available][7][11]}{containment};
+	#var {my[summon][available][7][12]}{concentricity};
+	#var {my[summon][available][7][13]}{transformation};
+	#var {my[summon][available][7][14]}{essentiality};
+	#var {my[summon][available][7][15]}{metamorphosis};
+	#var {my[summon][available][7][16]}{depth};
+#nop Maelstrom Summoning;
+	#var {my[summon][available][8][1]}{flame};
+	#var {my[summon][available][8][2]}{lightning};
+#nop Conjure Greater Elemental;
+	#var {my[summon][available][9][1]}{elemental};
+#nop Inveiglement
+	#var {my[summon][available][10][1]}{inveiglement};
+#nop Sorcerous weapon;
+	#var {my[summon][available][11][1]}{sorcerous};
+#nop Sorcerous Shield;
+	#var {my[summon][available][12][1]}{sorcerous};
+	#var {my[summon][desired][damage][increment]}{1};
+	#var {my[summon][desired][tank][increment]}{1};
+	#var {my[summon][desired][extra][increment]}{1};
+}
+
+#alias {tankcountup}{
+	#math {my[summon][desired][tank][count]}{$my[summon][desired][tank][count] + 1};
+	#if {$my[summon][desired][tank][level] == 8}{
+		#var {my[summon][desired]tank][count]}{1};
+	};
+	display_desired_summons;
+};
+#alias {damagecountup}{
+	#math {my[summon][desired][damage][count]}{$my[summon][desired][damage][count] + 1};
+	#if {$my[summon][desired][damage][level] == 8}{
+		#var {my[summon][desired][extra][count]}{1};
+	};
+	display_desired_summons;
+};
+#alias {extracountup}{
+	#math {my[summon][desired][extra][count]}{$my[summon][desired][extra][count] + 1};
+	#if {$my[summon][desired][extra][level] == 8}{
+		#var {my[summon][desired][extra][count]}{1};
+	};
+	display_desired_summons;
+};
+
+#alias {tankcountdown}{
+	#math {my[summon][desired][tank][count]}{$my[summon][desired][tank][count] - 1};
+	!cast vocalize as $my[summon][desired][tank][type], begone;
+	display_desired_summons;
+};
+#alias {damagecountdown}{
+	#math {my[summon][desired][damage][count]}{$my[summon][desired][damage][count] - 1};
+	!cast vocalize as $my[summon][desired][damage][type], begone;
+	display_desired_summons;
+};
+#alias {extracountdown}{
+	#math {my[summon][desired][extra][count]}{$my[summon][desired][extra][count] - 1};
+	!cast vocalize as $my[summon][desired][extra][type], begone;
+	display_desired_summons;
+};
+
+#alias {damagelevelup}{
+	#math {my[summon][desired][damage][level]}{$my[summon][desired][damage][level] + 1};
+	#var {templevel}{${my[summon][desired][damage][level]}};
+	#var {my[summon][desired][damage][increment]}{1};
+	#var {my[summon][desired][damage][name]}{${my[summon][available][${templevel}][1]}};
+	#var {my[autosetup][summons]}	{0};
+	!cast vocalize as all, begone;
+	display_desired_summons;
+};
+#alias {extralevelup}{
+	#math {my[summon][desired][extra][level]}{$my[summon][desired][extra][level] + 1};
+	#var {templevel}{${my[summon][desired][extra][level]}};
+	#var {my[summon][desired][extra][increment]}{1};
+	#var {my[summon][desired][extra][name]}{${my[summon][available][${templevel}][1]}};
+	#var {my[autosetup][summons]}	{0};
+	!cast vocalize as all, begone;
+	display_desired_summons;
+};
+#alias {tanklevelup}{
+	#math {my[summon][desired][tank][level]}{$my[summon][desired][tank][level] + 1};
+	#var {templevel}{${my[summon][desired][tank][level]}};
+	#var {my[summon][desired][tank][increment]}{1};
+	#var {my[summon][desired][tank][name]}{${my[summon][available][${templevel}][1]}};
+	#var {my[autosetup][summons]}	{0};
+	!cast vocalize as all, begone;
+	display_desired_summons;
+};
+
+#alias {damageleveldown}{
+	#math {my[summon][desired][damage][level]}{$my[summon][desired][damage][level] - 1};
+	#var {templevel}{${my[summon][desired][damage][level]}};
+	#var {my[summon][desired][damage][increment]}{1};
+	#var {my[summon][desired][damage][name]}{${my[summon][available][${templevel}][1]}};
+	#var {my[autosetup][summons]}	{0};
+	!cast vocalize as all, begone;
+	display_desired_summons;
+};
+#alias {extraleveldown}{
+	#math {my[summon][desired][extra][level]}{$my[summon][desired][extra][level] - 1};
+	#var {templevel}{${my[summon][desired][extra][level]}};
+	#var {my[summon][desired][extra][increment]}{1};
+	#var {my[summon][desired][extra][name]}{${my[summon][available][${templevel}][1]}};
+	#var {my[autosetup][summons]}	{0};
+	!cast vocalize as all, begone;
+	display_desired_summons;
+};
+#alias {tankleveldown}{
+	#math {my[summon][desired][tank][level]}{$my[summon][desired][tank][level] - 1};
+	#var {templevel}{${my[summon][desired][tank][level]}};
+	#var {my[summon][desired][tank][increment]}{1};
+	#var {my[summon][desired][tank][name]}{${my[summon][available][${templevel}][1]}};
+	#var {my[autosetup][summons]}	{0};
+	!cast vocalize as all, begone;
+	display_desired_summons;
+};
+
+#alias {damagenameup}{
+	#math {my[summon][desired][damage][increment]}{$my[summon][desired][damage][increment] + 1};
+	#var {tempincrement}{${my[summon][desired][damage][increment]}};
+	#var {templevel}{${my[summon][desired][damage][level]}};
+	#var {my[autosetup][summons]}	{0};
+	!cast vocalize as all, begone;
+	#var {my[summon][desired][damage][name]}{${my[summon][available][${templevel}][${tempincrement}]}};
+	display_desired_summons;
+};
+
+#alias {extranameup}{
+	#math {my[summon][desired][extra][increment]}{$my[summon][desired][extra][increment] + 1};
+	#var {tempincrement}{${my[summon][desired][extra][increment]}};
+	#var {templevel}{${my[summon][desired][extra][level]}};
+	#var {my[autosetup][summons]}	{0};
+	!cast vocalize as all, begone;
+	#var {my[summon][desired][extra][name]}{${my[summon][available][${templevel}][${tempincrement}]}};
+	display_desired_summons;
+};
+#alias {tanknameup}{
+	#math {my[summon][desired][tank][increment]}{$my[summon][desired][tank][increment] + 1};
+	#var {tempincrement}{${my[summon][desired][tank][increment]}};
+	#var {templevel}{${my[summon][desired][tank][level]}};
+	#var {my[autosetup][summons]}	{0};
+	!cast vocalize as all, begone;
+	#var {my[summon][desired][tank][name]}{${my[summon][available][${templevel}][${tempincrement}]}};
+	display_desired_summons;
+};
+
+#alias {damagenamedown}{
+	#math {my[summon][desired][damage][increment]}{$my[summon][desired][damage][increment] - 1};
+	#var {tempincrement}{${my[summon][desired][damage][increment]}};
+	#var {templevel}{${my[summon][desired][damage][level]}};
+	#var {my[autosetup][summons]}	{0};
+	!cast vocalize as all, begone;
+	#var {my[summon][desired][damage][name]}{${my[summon][available][${templevel}][${tempincrement}]}};
+	display_desired_summons;
+};
+#alias {extranamedown}{
+	#math {my[summon][desired][extra][increment]}{$my[summon][desired][extra][increment] - 1};
+	#var {tempincrement}{${my[summon][desired][extra][increment]}};
+	#var {templevel}{${my[summon][desired][extra][level]}};
+	#var {my[autosetup][summons]}	{0};
+	!cast vocalize as all, begone;
+	#var {my[summon][desired][extra][name]}{${my[summon][available][${templevel}][${tempincrement}]}};
+	display_desired_summons;
+};
+#alias {tanknamedown}{
+	#math {my[summon][desired][tank][increment]}{$my[summon][desired][tank][increment] - 1};
+	#var {tempincrement}{${my[summon][desired][tank][increment]}};
+	#var {templevel}{${my[summon][desired][tank][level]}};
+	#var {my[autosetup][summons]}	{0};
+	!cast vocalize as all, begone;
+	#var {my[summon][desired][tank][name]}{${my[summon][available][${templevel}][${tempincrement}]}};
+	display_desired_summons;
+};
+
+#alias {set_basic}{
+	setsummon 7/stability/1 7/inevitability/2 8/lightning/1;
+	!cast vocalize as all, begone;
+};
+
+#alias {set_defend}{
+	setsummon 7/stability/2 7/inevitability/0 8/lightning/1;
+	!cast vocalize as all, begone;
+};
+
+#alias {set_ele}{
+	setsummon 7/stability/1 9/elemental/1 8/lightning/1;
+	!cast vocalize as all, begone;
+};
+
+#alias {set_ele2}{
+	setsummon 7/stability/1 9/elemental/2 8/lightning/0;
+	!cast vocalize as all, begone;
+};
+
+#alias {set_inv}{
+	setsummon 7/stability/0 10/inveiglement/1 8/lightning/0;
+	!cast vocalize as nobody, begone;
+};
+
+#alias {set_default}{
+	#var {my[autosetup][staff]}	{0};
+	#var {my[autosetup][summons]}	{0};
+	#var {my[autosetup][fortitude]}	{0};
+	#var {my[autosetup][rotate]}	{0};
+	#var {my[autosetup][delay]}	{0};
+	#var {my[autosetup][flee]}	{0};
+	#var {my[matrix][status]}	{0};
+	#nop {
+	autos;
+	};
+	autoc;
+	automf;
+	autor;
+	autoflee;
+	set_basic;
+};
+
+#alias setup_contingency {
+        !cast remove contingency 1;
+        !cast remove contingency 1;
+        !cast remove contingency 1;
+        !cast remove contingency 1;
+        !cast remove contingency 1;
+        !cast remove contingency 1;
+        !cast remove contingency 1;
+        !cast contingency as shield#cast greater shield#immediately#priority 1;
+        !cast contingency as aura#cast aura of light#end of round#priority 2;
+        !cast contingency as shroud#cast shroud of storms#end of round#priority 4;
+        !cast contingency as blink#cast blink#end of round#priority 5;
+        !cast contingency as prismatic_aura#cast prismatic aura#end of round#priority 6;
+        !cast contingency as major_globe#cast major globe#end of round#priority 3;
+        !cast contingency as concentration#90#cast vocalize as all, begone#end of round#priority 7;
+}
+
+#var desiredspell {400/cast riptide}
+
+#alias login_setup {
+        !cast aura of light;
+        !cast shroud of storms;
+        !cast perform as $desiredspell;
+        !cast activate combat;
+        !cast astral guide;
+        !lstats clear;
+        !cast material seam;
+        gs;
+        #var {my[staff][shelter]}{100};
+        #var {my[staff][umbra]}{100};
+	#var {my[summon][current][protector][counter]}{0};
+	#var {my[summon][current][protector][healthiest]}{none};
+        !staffcheck;
+        setup_contingency;
+	setup_available_summons;
+	db_query_mage_damage;
+	set_default;
+}
+
+#alias {do_compare}{
+	#var {tempcount}{%1};
+	#loop {$tempcount}{$summon_count}{quantity}{
+		#regex {$summons[$quantity]}{%D:%S}{
+			#var {prevname}{&1};
+		};
+		#if {"$tempname" == "$prevname"}{
+			#math {tempsequence}{$tempsequence + 1};
+		};
+	};
+};
+
+#alias {reset_tank}{
+	#var {my[summon][current][protector][name]}	{None};
+	#var {my[summon][current][protector][health]}	{0};
+	#var {my[summon][current][protector][counter]}	{0};
+	#var {my[summon][current][protector][healthiest][name]}	{None};
+	#var {my[summon][current][protector][healthiest][health]}	{0};
+	#var {my[summon][current][protector][healthiest][counter]}	{0};
+	#if {${my[summon][current][tank][total]} > ${my[summon][desired][tank][count]}}{
+		!cast vocalize as ${my[summon][desired][tank][name]} 2, begone;
+		!cast vocalize as ${my[summon][desired][tank][name]}, defend me;
+		!cast vocalize as ${my[summon][desired][tank][name]}, defend me;
+	};
+};
+
+#alias {do_summon}{
+	#if {$my[summon][desired][%1][level] == 1}{
+		!cast minor summoning as $my[summon][desired][%1][name];
+		#var {my[summon][desired][%1][type]}{${my[summon][desired][%1][name]}};
+	};
+	#if {$my[summon][desired][%1][level] == 2}{
+		!cast lesser summoning as $my[summon][desired][%1][name];
+		#var my[summon][desired][%1][type] {${my[summon][desired][%1][name]}};
+	};
+	#if {$my[summon][desired][%1][level] == 3}{
+		!cast orb summoning as $my[summon][desired][%1][name];
+		#var my[summon][desired][%1][type] {${my[summon][desired][%1][name]} orb};
+	};
+	#if {$my[summon][desired][%1][level] == 4}{
+		!cast major summoning as $my[summon][desired][%1][name];
+		#var my[summon][desired][%1][type] {${my[summon][desired][%1][name]}};
+	};
+	#if {$my[summon][desired][%1][level] == 5}{
+		!cast vortex summoning as $my[summon][desired][%1][name];
+		#var my[summon][desired][%1][type] {${my[summon][desired][%1][name]} vortex};
+	};
+	#if {$my[summon][desired][%1][level] == 6}{
+		!cast greater summoning as $my[summon][desired][%1][name];
+		#var my[summon][desired][%1][type] {${my[summon][desired][%1][name]}};
+	};
+	#if {$my[summon][desired][%1][level] == 7}{
+		!cast nexus summoning as $my[summon][desired][%1][name];
+		#var my[summon][desired][%1][type] {${my[summon][desired][%1][name]}};
+	};
+	#if {$my[summon][desired][%1][level] == 8}{
+		!cast maelstrom summoning as $my[summon][desired][%1][name];
+		#var my[summon][desired][%1][type] {maelstrom};
+	};
+	#if {$my[summon][desired][%1][level] == 9}{
+		!cast conjure greater elemental;
+		#var my[summon][desired][%1][type] {elemental};
+	};
+	#if {$my[summon][desired][%1][level] == 10}{
+		!cast inveiglement;
+	};
+	#if {$my[summon][desired][%1][level] == 11}{
+		!cast sorcerous weapon on sword;
+	};
+	#if {$my[summon][desired][%1][level] == 12}{
+		!cast sorcerous weapon on shield;
+	};
+	#if {"%1" == "tank"}{
+		!cast vocalize as $my[summon][desired][%1][name], defend me;
+		!cast vocalize as $my[summon][desired][%1][name], defend always;
+		#delay {4}{
+			!cast vocalize as $my[summon][desired][%1][name], defend always;
+		};
+	};
+	#var {my[autosetup][delay]}	{0};
+	reset_tank;
+};
+
+#gag {HP: %1/%2 SP: %3/%4/%5%/%6% Umb: %7% Cnc: %8% B:%9/%29% I:%10 S:%11/%12% G2N:%13% GLR:%14 %15 <P>}
+#act {HP: %1/%2 SP: %3/%4/%5%/%6% Umb: %7% Cnc: %8% B:%9/%10% I:%11 S:%12/%13% G2N:%14% GLR:%15 %16 <P>%17}{
+	#var {my[hp][current]}		{%1};
+	#var {my[hp][max]}		{%2};
+	#var {my[sp][current]}		{%3};
+	#var {my[sp][max]}		{%4};
+	#regex {$my[sp][max]}{S}{
+		#nop;
+	}{
+		!scour;
+	};
+	#replace {my[sp][max]}{S}{};
+	#var {my[cpc]}			{%5};
+	#var {my[gem]}			{%6};
+	#var {my[gp1][current]}		{%7};
+	#var {my[gp2][current]}		{%8};
+	#var {my[bridge][current]}	{%9};
+	#var {my[bridge][reset]}	{%10};
+	#var {my[imbue][current]}	{%11};
+	#var {my[school][current]}	{%12};
+	#var {my[school][reset]}	{%13};
+	#var {my[gxp][current]}		{%14};
+	#var {my[gxp][round]}		{%15};
+	#var {my[prots][full]}		{%16};
+	#if {"$my[setup]" != "1"}{
+		login_setup;
+		#var {my[setup]}	{1};
+	};
+	#math {my[autosetup][delay]}{$my[autosetup][delay] + 1};
+	#math {my[summon][current][protector][counter]}{$my[summon][current][protector][counter] + 1};
+        #if {"%17" != ""}{
+                #var {my[enemy]}	{%17};
+                #var {my[incombat]}	{1};
+		#if {$my[rend] != 1}{
+			do_vine_fetters;
+			gouge;
+			!cast mindblossom;
+			!cast silver bell;
+			#var {my[rend]}	{1};
+		};
+        }{
+		reset_tank;
+		#var {my[rend]}		{0};
+                #var {my[enemy]} 	{None};
+                #var {my[incombat]}	{0};
+        };
+	#if {$my[autosetup][flee] == 1 && $my[incombat] == 1 && $my[hp][current] < $my[hp][max]}{
+		go mage regen;
+	};
+	#if {$my[autosetup][flee] == 1 && $my[incombat] == 1 && $my[sp][current] < 500}{
+		go mage imbue;
+	};
+	#regex {$my[prots][full]}{A}{#var {my[prots][aura]}{1}}{#var {my[prots][aura]}{0}};
+	#regex {$my[prots][full]}{SS}{#var {my[prots][shroud]}{1}}{#var {my[prots][shroud]}{0}};
+	#regex {$my[prots][full]}{B}{#var {my[prots][blink]}{1}}{#var {my[prots][blink]}{0}};
+	#regex {$my[prots][full]}{GS}{#var {my[prots][shield]}{1}}{#var {my[prots][shield]}{0}};
+	#regex {$my[prots][full]}{DF}{#var {my[prots][fortress]}{1}}{#var {my[prots][fortress]}{0}};
+	#regex {$my[prots][full]}{MG}{#var {my[prots][globe]}{1}}{#var {my[prots][globe]}{0}};
+	#regex {$my[prots][full]}{PA}{#var {my[prots][paura]}{1}}{#var {my[prots][paura]}{0}};
+	#if {$my[prots][aura] != 1}{!cast aura of light};
+	#if {$my[prots][shroud] != 1}{!cast shroud of storms};
+	#if {$my[prots][blink] != 1}{!cast blink};
+	#if {$my[prots][shield] != 1}{!cast greater shield};
+	#if {$my[prots][fortress] != 1}{!cast dream fortress};
+	#if {$my[prots][globe] != 1}{!cast major globe};
+	#if {$my[prots][paura] != 1}{!cast prismatic aura};
+	#if {$my[school][current] > 0 && $my[school][reset] > 90}{
+		!cast astral matrix;
+	};
+	#if {$my[autosetup][staff] == 1 && $my[staff][umbra] < 20 && $my[sp][current] > 1000 && $my[imbue][current] > 1}{
+		!imbue staff 1000;
+	};
+	#if {$my[incombat] == 1}{
+		#if {$my[sp][current] < 1500 && $my[gp1][current] > 30}{
+			!cast wellspring;
+		};
+		#if {$my[school][current] > 0 && $my[staff][shelter] < 30 && $my[matrix][status] != 1}{
+			!cast astral matrix;
+			#var {my[matrix][status]}	{1};
+		};
+	};
+	#if {$my[staff][umbra] > 0}{
+		#if {$my[gp2][current] > 70 && $my[incombat] == 1}{
+			!shelter staff 500;
+		};
+		#if {$my[gp1][current] < 40}{
+			!weave staff 1000;
+		};
+		#if {$my[sp][current] < 1000}{
+			!draw staff 500;
+		};
+	};
+	#if {$my[gem] < 50 && $my[autosetup][delay] > 10}{
+		!ffetch gem;
+		#var {my[autosetup][delay]}	{0};
+	};
+}
+
+	
+#gag {  --> %1}
+#act {  --> %1}{
+	#list {summons}{clear};
+	#if {"$my[summon][current][protector][name]" == ""}{
+		#var {my[summon][current][protector][name]}{none};
+		#var {my[summon][current][protector][health]}{0};
+	};
+	#unvar {my[summon][current][tank]};
+	#unvar {my[summon][current][damage]};
+	#unvar {my[summon][current][bridge]};
+	#unvar {my[summon][current][extra]};
+	#var {my[summon][current][tank][total]}		{0};
+	#var {my[summon][current][damage][total]}	{0};
+	#var {my[summon][current][bridge][total]}	{0};
+	#var {my[summon][current][extra][total]}	{0};
+	#if {"%1" == " "}{
+		#var {my[summon][current][all]}	{none};
+	}{
+		#var {my[summon][current][all]}	{%1};
+		#replace {my[summon][current][all]}{,}{;};
+		#replace {my[summon][current][all]}{  }{};
+		#list {summons}{create}{$my[summon][current][all]};
+		#list {summons}{size}{summon_count};
+		#loop {1}{$summon_count}{count}{
+			#replace {summons[$count]}{M:}{moon:};
+			#nop {
+			#replace {summons[$count]}{m:}{mote:};
+			};
+			#replace {summons[$count]}{V:}{vine:};
+			#format {summons}{%l}{$summons};
+			#regex {$summons[$count]}{%D:%S}{
+				#var {tempname}{&1};
+				#var {temphealth}{&2};
+				#var {tempstatus}{none};
+				#var {tempsequence}{0};
+				do_compare $count;
+				#replace {temphealth}{~}{};
+				#replace {temphealth}{+}{};
+				#regex {$temphealth}{(lm)}{
+					#var {tempstatus}{(lm)};
+				};
+				#replace {temphealth}{(lm)}{};
+				#format {temphealth}{%l}{$temphealth};
+				#replace {tempname}{nightmare}{something};
+				#replace {tempname}{sorc weapon}{sorcerous weapon};
+				#replace {tempname}{sorc shield}{sorcerous shield};
+				#replace {tempname}{bridge}{entity};
+				#regex {$tempname}{$my[summon][desired][tank][name]}{
+					#var {my[summon][current][tank][$count][name]}{$tempname};
+					#var {my[summon][current][tank][$count][health]}{$temphealth};
+					#var {my[summon][current][tank][$count][status]}{$tempstatus};
+					#var {my[summon][current][tank][$count][sequence]}{$tempsequence};
+					#math {my[summon][current][tank][total]}{$my[summon][current][tank][total] + 1};
+					#if {$my[summon][current][tank][$count][health] > $my[summon][current][protector][health]}{
+						#if {$my[summon][current][tank][$count][health] > $my[summon][current][protector][healthiest][health]}{
+							#var {my[summon][current][protector][healthiest][name]}{$my[summon][current][tank][$count][name]};
+							#var {my[summon][current][protector][healthiest][sequence]}{$my[summon][current][tank][$count][sequence]};
+							#var {my[summon][current][protector][healthiest][health]}{$my[summon][current][tank][$count][health]};
+						};
+					};
+					#if {${my[summon][current][tank][$count][health]} < 30 && $my[autosetup][rotate] == 1 && $my[autosetup][delay] > 2}{
+						shoo $my[summon][current][tank][$count][name] $my[summon][current][tank][$count][sequence];
+						do_summon tank;
+					};
+					#if {${my[summon][current][tank][$count][health]} < 100 && $my[autosetup][rotate] == 1 && $my[autosetup][delay] > 2 && $my[incombat] == 0}{
+						shoo $my[summon][current][tank][$count][name] $my[summon][current][tank][$count][sequence];
+						do_summon tank;
+					};
+					#if {"$tempstatus" != "(lm)" && $my[autosetup][fortitude] > 1}{
+						!cast lunar might on $tempname $tempsequence;
+					};
+					};
+				#if {$my[summon][desired][damage][level] == 10}{
+					#regex {$tempname}{being}{
+						#var {my[summon][current][damage][$count][name]}{$tempname};
+						#var {my[summon][current][damage][$count][health]}{$temphealth};
+						#var {my[summon][current][damage][$count][status]}{$tempstatus};
+						#var {my[summon][current][damage][$count][sequence]}{$tempsequence};
+						#math {my[summon][current][damage][total]}{$my[summon][current][damage][total] + 1};
+						#if {"$tempstatus" != "(lm)" && $my[autosetup][fortitude] > 0}{
+							!cast lunar might on $tempname $tempsequence;
+						};
+					};
+					#regex {$tempname}{intelligence}{
+						#var {my[summon][current][damage][$count][name]}{$tempname};
+						#var {my[summon][current][damage][$count][health]}{$temphealth};
+						#var {my[summon][current][damage][$count][status]}{$tempstatus};
+						#var {my[summon][current][damage][$count][sequence]}{$tempsequence};
+						#math {my[summon][current][damage][total]}{$my[summon][current][damage][total] + 1};
+						#if {"$tempstatus" != "(lm)" && $my[autosetup][fortitude] > 0}{
+							!cast lunar might on $tempname $tempsequence;
+						};
+					};
+					#regex {$tempname}{sentience}{
+						#var {my[summon][current][damage][$count][name]}{$tempname};
+						#var {my[summon][current][damage][$count][health]}{$temphealth};
+						#var {my[summon][current][damage][$count][status]}{$tempstatus};
+						#var {my[summon][current][damage][$count][sequence]}{$tempsequence};
+						#math {my[summon][current][damage][total]}{$my[summon][current][damage][total] + 1};
+						#if {"$tempstatus" != "(lm)" && $my[autosetup][fortitude] > 0}{
+							!cast lunar might on $tempname $tempsequence;
+						};
+					};
+					#regex {$tempname}{godling}{
+						#var {my[summon][current][damage][$count][name]}{$tempname};
+						#var {my[summon][current][damage][$count][health]}{$temphealth};
+						#var {my[summon][current][damage][$count][status]}{$tempstatus};
+						#var {my[summon][current][damage][$count][sequence]}{$tempsequence};
+						#math {my[summon][current][damage][total]}{$my[summon][current][damage][total] + 1};
+						#if {"$tempstatus" != "(lm)" && $my[autosetup][fortitude] > 0}{
+							!cast lunar might on $tempname $tempsequence;
+						};
+					};
+				}{
+					#if {$my[summon][desired][damage][level] == 9}{
+						#regex {$tempname}{conglomeration}{
+							#var {my[summon][current][damage][$count][name]}{$tempname};
+							#var {my[summon][current][damage][$count][health]}{$temphealth};
+							#var {my[summon][current][damage][$count][status]}{$tempstatus};
+							#var {my[summon][current][damage][$count][sequence]}{$tempsequence};
+							#math {my[summon][current][damage][total]}{$my[summon][current][damage][total] + 1};
+							#if {"$tempstatus" != "(lm)" && $my[autosetup][fortitude] > 0}{
+								!cast lunar might on $tempname $tempsequence;
+							};
+						};
+						#regex {$tempname}{elemental}{
+							#var {my[summon][current][damage][$count][name]}{$tempname};
+							#var {my[summon][current][damage][$count][health]}{$temphealth};
+							#var {my[summon][current][damage][$count][status]}{$tempstatus};
+							#var {my[summon][current][damage][$count][sequence]}{$tempsequence};
+							#math {my[summon][current][damage][total]}{$my[summon][current][damage][total] + 1};
+							#if {"$tempstatus" != "(lm)" && $my[autosetup][fortitude] > 0}{
+								!cast lunar might on $tempname $tempsequence;
+							};
+						};
+					}{
+						#if {$my[summon][desired][damage][level] == 8}{
+							#regex {$tempname}{maelstrom}{
+								#var {my[summon][current][damage][$count][name]}{$tempname};
+								#var {my[summon][current][damage][$count][health]}{$temphealth};
+								#var {my[summon][current][damage][$count][status]}{$tempstatus};
+								#var {my[summon][current][damage][$count][sequence]}{$tempsequence};
+								#var {my[summon][current][damage][total]}{1};
+								#if {$my[summon][desired][damage][count] > 1}{
+									#var {my[summon][desired][damage][count]}{1};
+								};
+								#if {"$tempstatus" != "(lm)" && $my[autosetup][fortitude] > 0}{
+									!cast lunar might on $tempname $tempsequence;
+								};
+							};
+						}{
+							#regex {$tempname}{$my[summon][desired][damage][name]}{
+								#var {my[summon][current][damage][$count][name]}{$tempname};
+								#var {my[summon][current][damage][$count][health]}{$temphealth};
+								#var {my[summon][current][damage][$count][status]}{$tempstatus};
+								#var {my[summon][current][damage][$count][sequence]}{$tempsequence};
+								#math {my[summon][current][damage][total]}{$my[summon][current][damage][total] + 1};
+								#if {"$tempstatus" != "(lm)" && $my[autosetup][fortitude] > 0}{
+									!cast lunar might on $tempname $tempsequence;
+								};
+							};
+						};
+						#nop {Just for evil looking wand};
+						#regex {$tempname}{conglomeration}{
+							#var {my[summon][current][damage][$count][name]}{$tempname};
+							#var {my[summon][current][damage][$count][health]}{$temphealth};
+							#var {my[summon][current][damage][$count][status]}{$tempstatus};
+							#var {my[summon][current][damage][$count][sequence]}{$tempsequence};
+							#math {my[summon][current][damage][total]}{$my[summon][current][damage][total] + 1};
+							#if {"$tempstatus" != "(lm)" && $my[autosetup][fortitude] > 0}{
+								!cast lunar might on $tempname $tempsequence;
+							};
+						};
+						#regex {$tempname}{elemental}{
+							#var {my[summon][current][damage][$count][name]}{$tempname};
+							#var {my[summon][current][damage][$count][health]}{$temphealth};
+							#var {my[summon][current][damage][$count][status]}{$tempstatus};
+							#var {my[summon][current][damage][$count][sequence]}{$tempsequence};
+							#math {my[summon][current][damage][total]}{$my[summon][current][damage][total] + 1};
+							#if {"$tempstatus" != "(lm)" && $my[autosetup][fortitude] > 0}{
+								!cast lunar might on $tempname $tempsequence;
+							};
+						};
+					};
+				};
+				#regex {$tempname}{$my[summon][desired][bridge][name]}{
+					#var {my[summon][current][bridge][$count][name]}{$tempname};
+					#var {my[summon][current][bridge][$count][health]}{$temphealth};
+					#var {my[summon][current][bridge][$count][status]}{$tempstatus};
+					#var {my[summon][current][bridge][$count][sequence]}{$tempsequence};
+					#math {my[summon][current][bridge][total]}{$my[summon][current][bridge][total] + 1};
+					#if {"$tempstatus" != "(lm)" && $my[autosetup][fortitude] > 1}{
+						!cast lunar might on $tempname $tempsequence;
+					};
+				};
+				#if {$my[summon][desired][extra][level] == 9}{
+					#regex {$tempname}{conglomeration}{
+						#var {my[summon][current][extra][$count][name]}{$tempname};
+						#var {my[summon][current][extra][$count][health]}{$temphealth};
+						#var {my[summon][current][extra][$count][status]}{$tempstatus};
+						#var {my[summon][current][extra][$count][sequence]}{$tempsequence};
+						#math {my[summon][current][extra][total]}{$my[summon][current][extra][total] + 1};
+						#if {"$tempstatus" != "(lm)" && $my[autosetup][fortitude] > 0}{
+							!cast lunar might on $tempname $tempsequence;
+						};
+					};
+					#regex {$tempname}{elemental}{
+						#var {my[summon][current][extra][$count][name]}{$tempname};
+						#var {my[summon][current][extra][$count][health]}{$temphealth};
+						#var {my[summon][current][extra][$count][status]}{$tempstatus};
+						#var {my[summon][current][extra][$count][sequence]}{$tempsequence};
+						#math {my[summon][current][extra][total]}{$my[summon][current][extra][total] + 1};
+						#if {"$tempstatus" != "(lm)" && $my[autosetup][fortitude] > 0}{
+							!cast lunar might on $tempname $tempsequence;
+						};
+					};
+				}{
+					#if {$my[summon][desired][extra][level] == 8}{
+						#regex {$tempname}{maelstrom}{
+							#var {my[summon][current][extra][$count][name]}{$tempname};
+							#var {my[summon][current][extra][$count][health]}{$temphealth};
+							#var {my[summon][current][extra][$count][status]}{$tempstatus};
+							#var {my[summon][current][extra][$count][sequence]}{$tempsequence};
+							#var {my[summon][current][extra][total]}{1};
+							#if {$my[summon][desired][extra][count] > 1}{
+								#var {my[summon][desired][extra][count]}{1};
+							};
+							#if {"$tempstatus" != "(lm)" && $my[autosetup][fortitude] > 0}{
+								!cast lunar might on $tempname $tempsequence;
+							};
+						};
+					}{
+						#regex {$tempname}{$my[summon][desired][extra][name]}{
+							#var {my[summon][current][extra][$count][name]}{$tempname};
+							#var {my[summon][current][extra][$count][health]}{$temphealth};
+							#var {my[summon][current][extra][$count][status]}{$tempstatus};
+							#var {my[summon][current][extra][$count][sequence]}{$tempsequence};
+							#math {my[summon][current][extra][total]}{$my[summon][current][extra][total] + 1};
+							#if {"$tempstatus" != "(lm)" && $my[autosetup][fortitude] > 0}{
+								!cast lunar might on $tempname $tempsequence;
+							};
+						};
+					};
+				};
+			};
+			
+		};
+		#var {my[summon][current][total]}{$summon_count};
+		#list {summons}{clear};
+		#unvar {summon_count};
+		#unvar {tempcount};
+		#unvar {tempsequence};
+		#unvar {tempstatus};
+		#unvar {tempname};
+	};
+	#if {$my[summon][desired][damage][level] != 10 && $my[summon][current][bridge][total] < $my[summon][desired][bridge][count] && $my[bridge][current] > 0 && $my[autosetup][summons] == 1}{
+		!smuggle remove star;
+		!cast bridge shutter;
+		!smuggle star;
+                !cast vocalize as entity, ignore blanket commands;
+                !cast vocalize as entity, shutter;
+	};
+	#if {$my[summon][current][tank][total] < $my[summon][desired][tank][count] && $my[sp][current] > 1000 && $my[autosetup][summons] == 1 && $my[autosetup][delay] > 2}{
+		do_summon tank;
+	};
+	#if {$my[summon][current][damage][total] < $my[summon][desired][damage][count] && $my[sp][current] > 1000 && $my[autosetup][summons] == 1 && $my[autosetup][delay] > 2}{
+		do_summon damage;
+	};
+	#if {$my[summon][current][extra][total] < $my[summon][desired][extra][count] && $my[sp][current] > 1000 && $my[autosetup][summons] == 1 && $my[autosetup][delay] > 2}{
+		do_summon extra;
+	};
+	#if {$my[summon][current][protector][health] < $my[summon][current][protector][healthiest][health] && $my[incombat] == 1 && $my[autosetup][rotate] == 1 && $my[summon][current][protector][counter] > 2}{
+		!cast vocalize as $my[summon][current][protector][healthiest][name] $my[summon][current][protector][healthiest][sequence], defend me;
+		!cast vocalize as $my[summon][current][protector][healthiest][name] $my[summon][current][protector][healthiest][sequence], defend always;
+		#var {my[summon][current][protector][name]}{$my[summon][current][protector][healthiest][name]};
+		#var {my[summon][current][protector][sequence]}{$my[summon][current][protector][healthiest][sequence]};
+		#var {my[summon][current][protector][health]}{$my[summon][current][protector][healthiest][health]};
+		
+	};
+	#if {$my[summon][current][protector][counter] > 4}{
+		reset_tank;
+	};
+	update_status;
+};
+
+#alias {update_status} {
+        #if {"$cooler" == "on" || $corpses[cooler] > 0} {
+                #format {sb1_cooler} {%+2s} {$corpses[cooler]};
+                #var {sb1_cooler} { CL:<130>$sb1_cooler<088>}
+        } {
+                #var {sb1_cooler} {}
+        };
+        #if {"$freezer" == "on" || $corpses[freezer] > 0} {
+                #format {sb2_freezer} {%+2s} {$corpses[freezer]};
+                #var {sb2_freezer} { FZ:<130>$sb2_freezer<088>}
+        } {
+                #var {sb2_freezer} {}
+        };
+	#var	{my[hp][graph]}		{@graph{$my[hp][current];$my[hp][max]}};
+	#var	{my[sp][graph]}		{@graph{$my[sp][current];$my[sp][max]}};
+	#var	{my[gp1][graph]}	{@graph{$my[gp1][current];100}};
+	#var	{my[gp2][graph]}	{@graph{$my[gp2][current];100}};
+	#var	{my[gxp][graph]}	{@graph{$my[gxp][current];100}};
+	#var	{enemy[graph]}		{@graph{$enemy[hp];100}};
+	#var	{mystaffshelter[graph]}	{@graph{$my[staff][shelter];100}};
+	#var	{mystaffumbra[graph]}	{@graph{$my[staff][umbra];100}};
+	#format {hp}			{%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
+	#format {hp_max}		{%+4s} {<128>$my[hp][max]<088>};
+	#format {sp}			{%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
+	#format {sp_max}		{%+4s} {<128>$my[sp][max]<088>};
+	#format {umb}			{%+6s} {@colscale{$my[gp1][current];100}};
+	#format {conc}			{%+5s} {@colscale{$my[gp2][current];100}};
+	#format {gtnl}			{%+6s} {@colscale{$my[gxp][current];100}};
+	#format {gxpr}			{%+6s} {@colscale{$my[gxp][round];20}};
+	#format {ehealth}		{%+8s} {@colscale{$enemy[hp];100}\%};
+        #format {corpses[inventory]}    {%+2s} {$corpses[inventory]};
+        #format {corpses[truck]}	{%+2s} {$corpses[truck]};
+        #format {corpses[coffin]}	{%+2s} {$corpses[coffin]};
+        #format {corpses[freezer]}	{%+2s} {$corpses[freezer]};
+        #format {round_damage}          {%+16s} {$my[damagetracker][foe] -> @rcolscale{$my[damagetracker][damage];2500}};
+	#format {round_average}		{%+4s} {@rcolscale{$my[damagetracker][average];2500}};
+	#format {staffumbra}		{%+5s} {@colscale{$my[staff][umbra];100}};
+	#format {staffshelter}		{%+6s} {@colscale{$my[staff][shelter];100}};
+	#showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} UM:${umb}%    CN: ${conc}%    GXP:${gxpr}     E: $round_damage  SU: ${staffumbra}%    SS: ${staffshelter}%} {-4};
+	#showme {H:${my[hp][graph]} S:${my[sp][graph]} UM:${my[gp1][graph]} CN:${my[gp2][graph]} G2N:${my[gxp][graph]} E:    ${enemy[graph]}     SU:${mystaffumbra[graph]} SS: ${mystaffshelter[graph]}} {-3};
+	#showme {$mip[gline][2]} {-6};
+	#showme {$mip[gline][1]} {-7};
+}
+
+#alias {corpsetrig} {
+	!wrap corpse;
+	!divvy;
+}
+
+#alias {cco}{
+	!unwrap corpse;
+	#if {"$my[autocorpse][method]" == "guild"}{
+		!cast ocean's embrace;
+	};
+	#if {"$my[autocorpse][method]" == "nex"}{
+		!orare;
+	};
+};
+
+
+#act {%1 dealt the killing blow to %2.}{
+        #format {killer}{%l}{%1};
+        #format {killee}{%l}{%2};
+	#regex {$killer}{{floobi|moon|maelstrom|orb|sorcerous|vortex|bank|mountain|mote|nobody|conglomeration|elemental|vine|nexus}}{
+		reset_tank;
+		#if {"$my[autocorpse][method]" != "off"}{
+			corpsetrig;
+		};
+	};
+	#var {my[damagetracker][submit]}{1};
+}
+
+
+#class {floobi} {close}

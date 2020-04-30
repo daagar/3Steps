@@ -1,0 +1,21 @@
+#unvar kill_path
+#list {kill_path}{clear}
+#unvar {area_items}
+#list {area_items}{clear}
+#unvar all_area_items
+
+
+#var kill_path {e;ne;n;n;ne;n;nw;n;n;ne;ne;ne;ne;ne;s;s;s;s;s;s;s;se;se;se;se;se;se;se;se;se;se;e;e;e;e;e;e;e;e;e;e;e;e;e;e;ne;ne;ne;ne;ne;ne;ne;ne;ne;ne;n;n;n;n;n;n;n;n;nw;nw;nw;nw;nw;nw;nw;nw;nw;nw;w;w;w;w;w;w;w;w;w;w;w;w;w;w;sw;sw;sw;sw;sw;sw;sw;sw;sw;sw;e;s;s;s;s;s;s;s;s;se;se;se;se;se;se;se;se;se;ne;e;e;e;w;w;w;sw;e;e;e;e;e;e;e;e;e;e;e;e;e;e;nw;w;w;w;e;e;e;se;ne;ne;ne;ne;ne;ne;ne;ne;ne;n;n;n;n;n;n;n;n;nw;nw;nw;nw;nw;nw;nw;nw;nw;w;w;w;w;w;w;w;w;w;w;w;w;w;w;se;e;e;e;w;w;w;nw;sw;sw;sw;sw;sw;sw;sw;sw;sw;se;ne;ne;ne;ne;sw;sw;sw;e;ne;ne;ne;ne;ne;ne;ne;e;e;e;e;e;e;e;e;e;e;e;e;se;se;se;se;se;se;se;nw;nw;nw;nw;nw;nw;nw;w;w;w;w;w;w;w;w;w;w;w;w;sw;sw;sw;sw;sw;sw;sw;sw;s;s;s;s;s;s;e;ne;n;n;n;n;n;ne;ne;ne;ne;ne;ne;ne;e;e;e;e;e;e;e;e;e;e;se;se;se;se;se;se;se;w;w;s;s;sw;se;s;s;sw;sw;sw;sw;sw;n;n;ne;e;ne;ne;n;n;s;s;sw;sw;w;w;sw;sw;ne;ne;ne;ne;ne;n;n;n;n;sw;sw;n;nw;nw;nw;sw;sw;nw;s;n;e;w;se;se;e;w;nw;ne;se;se;se;se;n;se;se;sw;sw;sw;e;sw;s;s;w;w;w;w;w;se;e;e;e;w;w;w;nw;sw;w;w;w;nw;nw;nw;nw;nw;se;se;se;se;e;e;e;e;w;w;w;w;n;n;nw;w;nw;nw;n;n;s;s;se;se;e;se;n;nw;nw;se;se;se;se;e;ne;n;w;e;e;e;s;se;w;w;w;e;e;e;nw;n;e;ne;ne;ne;sw;sw;sw;w;nw;w;e;e;ne;ne;ne;n;s;s;n;sw;sw;nw;ne;ne;s;n;w;w;sw;n;n;sw;w;w;n;s;ne;ne;nw;sw;sw;n;s;s;n;ne;ne;ne;e;e;w;nw;w;sw;sw;sw;ne;ne;ne;e;n;nw;e;e;e;w;w;w;se;s;e;e;e;w;n;ne;e;se;se;se;se;nw;nw;n;se;e;se;se;s;s;n;n;nw;nw;w;nw;n;n;w;w;w;w;e;e;e;e;se;se;se;se;nw;nw;nw;nw;nw;w;w;w;sw;nw;w;w;w;e;e;e;se;w;w;w;w;w;s;s;sw;w;sw;sw;s;s;n;n;ne;ne;e;e;ne;ne;sw;sw;sw;sw;sw;s;s;s;s;ne;ne;s;se;se;se;ne;ne;se;n;s;w;e;nw;nw;w;e;se;sw;nw;nw;nw;nw;s;nw;nw;ne;ne;ne;w;ne;n;n;sw;sw;sw;sw;sw;s;s;se;sw;s;s;w;w;se;se;se;se;se;se;se;e;e;e;e;e;e;e;e;e;e;ne;ne;ne;ne;ne;ne;ne;n;n;n;n;n;ne;e;s;s;s;s;s;s;sw;sw;sw;sw;sw;sw;sw;sw;w;w;w;w;w;w;w;w;w;w;w;w;nw;nw;nw;nw;nw;nw;nw;se;se;se;se;se;se;se;e;e;e;e;e;e;e;e;e;e;e;e;ne;ne;ne;ne;ne;ne;ne;e;sw;sw;sw;ne;ne;ne;ne;se;n;n;n;n;n;n;n;n;nw;nw;nw;nw;nw;nw;nw;nw;nw;sw;w;w;w;e;e;e;ne;w;w;w;w;w;w;w;w;w;w;w;w;w;w;sw;sw;sw;sw;sw;sw;sw;sw;sw;w;ne;ne;ne;ne;ne;ne;ne;ne;ne;ne;e;e;e;e;e;e;e;e;e;e;e;e;e;e;se;se;se;se;se;se;se;se;se;se;s;s;s;s;s;s;s;s;sw;sw;sw;sw;sw;sw;sw;sw;sw;sw;w;w;w;w;w;w;w;w;w;w;w;w;w;w;nw;nw;nw;nw;nw;nw;nw;nw;nw;nw;n;n;n;n;n;n;n;sw;sw;sw;sw;sw;s;s;se;s;sw;s;s;sw;w}
+
+#list {kill_path}{create}{$kill_path}
+#list {kill_path}{size}{max_room}
+
+#var stepper 1
+#var room_num 0
+
+#var {area_items}{mandibles;scale mail;puppy;crystal;casing;shard}
+#list {area_items}{create}{$area_items}
+#list {area_items}{size}{all_area_items}
+
+#var area_aggro 1
+rating

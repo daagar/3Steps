@@ -1,0 +1,25 @@
+#class {aliases} {open}
+
+/* TMUX Aliases */
+#alias {rs} {
+	#read .tt/3k/draw.tin
+}
+
+#alias {rsaw} {
+	#sys tmux resize-pane -t 1 -x 30 -y 20;
+}
+
+
+/* TT Aliases */
+#alias {ascii} {
+	converse %1;
+	#textin .tt/ascii/%2;
+	~q
+}
+
+#alias {/calc} {
+	#math {math} {%1};
+	#echo $math
+}
+
+#class {aliases} {close}

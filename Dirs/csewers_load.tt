@@ -1,0 +1,49 @@
+#unvar kill_path
+#list {kill_path}{clear}
+#unvar {area_items}
+#list {area_items}{clear}
+#unvar all_area_items
+#var area_aggro 0
+
+#var stepper 0
+
+#var {area_items}{scroll;armor;armour;amulet;axe;ball;belt;bag;blade;book;boots;bracers;breastplate;cloak;club;codpiece;cudgel;dice;dirk;dragonhelm;falchion;flask;gauntlets;gloves;girdle;hammer;hatchet;helmet;hole;jo;katana;khopesh;knife;kynac;mace;machete;main gauche;morningstar;necklace;phial;pick;puppy;rapier;ring;rod;sai;scimitar;shield;spear;staff;stiletto;sword;tools;trident;wand}
+
+#list {area_items}{create}{$area_items}
+#list {area_items}{size}{all_area_items}
+
+#gag {The fungus shoots a stream of acid at you}
+#gag {Acid from the fungus burns at your skin}
+#gag {The thorn beast sinks its deadly thorns into you.}
+#gag {The thorn beast wraps a vine around you and strangles you.}
+#gag {The thorn beast wraps a tentacle around you and squeezes.}
+#gag {The thorn beast releases a deadly spray of thorns at you!}
+#gag {The muck monster bashes you in the head.}
+#gag {Somewhere in the distance, you hear water drip into a puddle.}
+#gag {The beast rakes at you with clawed hands.}
+#gag {Water drips from the ceiling}
+#gag {The sewer stench grows as toxic bubbles burst on the sludge}
+#gag {An acidic hiss fills the air}
+#gag {Poison from the sludge eats into your skin.}
+#gag {Your skin burns as the sludge sprays you in acid.}
+#gag {The sludge enters a frenzied state, sending venomous chunks everywhere.}
+#gag {The sludge spits acid in your eyes.}
+#gag {The sludge wraps all around you, covering you in acid.}
+#gag {The grimy beast slowly limps toward you.}
+#gag {The beast rakes at you with its clawed hands.}
+#gag {The thorn beast lashes out at you.}
+#gag {The thorn beast scurries around the room.}
+#gag {The mudman pummels you with its huge arms.}
+#gag {The mudman picks you up and body slams you.}
+
+
+
+
+#act {You lose your footing and wind up flat on your butt!}{
+	#map undo;
+	#if {$domove == 1}{
+		dirfunction $desired_dir;
+	}
+}
+
+rating

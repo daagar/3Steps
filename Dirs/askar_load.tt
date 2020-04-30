@@ -1,0 +1,16 @@
+#unvar kill_path
+#list {kill_path}{clear}
+#unvar {area_items}
+#list {area_items}{clear}
+#unvar all_area_items
+
+#var stepper 0
+
+#var {area_items}{}
+
+#list {area_items}{create}{$area_items}
+#list {area_items}{size}{all_area_items}
+
+#alias precstone {go cook;go padrin;go miranda;go trophycase;get scroll;go painting;enter painting}
+
+rating

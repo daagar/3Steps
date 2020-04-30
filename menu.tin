@@ -1,0 +1,137 @@
+#NOP
+
+#echo {Alts:};
+#echo {};
+
+#echo {1) Fl(changeling)};
+#var {my[alts][1][name]}{fl};
+#var {my[alts][1][guild]}{changeling};
+
+#echo {2) Floobi(mage) (summoner)};
+#var {my[alts][2][name]}{floobi};
+#var {my[alts][2][guild]}{mage};
+#var {my[alts][2][subguild]}{summoner};
+
+#echo {3) Floobity(angel) (fallen)};
+#var {my[alts][3][name]}{floobity};
+#var {my[alts][3][guild]}{angel};
+#var {my[alts][3][subguild]}{fallen};
+
+#echo {};
+
+#echo {4) Fla(monk)};
+#var {my[alts][4][name]}{fla};
+#var {my[alts][4][guild]}{monk};
+
+#echo {5) Floob(sii)};
+#var {my[alts][5][name]}{floob};
+#var {my[alts][5][guild]}{sii};
+
+#echo {};
+
+#echo {6) Floo(jedi) (teepo)};
+#var {my[alts][6][name]}{floo};
+#var {my[alts][6][guild]}{jedi};
+#var {my[alts][6][subguild]}{teepo};
+
+#echo {7) Flaab(jedi) (shimura monk)};
+#var {my[alts][7][name]}{flaab};
+#var {my[alts][7][guild]}{jedi};
+#var {my[alts][7][subguild]}{shimura};
+
+#echo {8) Flaabity(jedi) (baadu)};
+#var {my[alts][8][name]}{flaabity};
+#var {my[alts][8][guild]}{jedi};
+#var {my[alts][8][subguild]}{baadu};
+
+#echo {9) Fleebity(jedi) (krath)};
+#var {my[alts][9][name]}{fleebity};
+#var {my[alts][9][guild]}{jedi};
+#var {my[alts][9][subguild]}{krath};
+
+#echo {10) Flu(jedi) (jensaarai)};
+#var {my[alts][10][name]}{flu};
+#var {my[alts][10][guild]}{jedi};
+#var {my[alts][10][subguild]}{jensaarai};
+
+#echo {};
+
+
+#echo {11) Fluub(bard) (mystic)};
+#var {my[alts][11][name]}{fluub};
+#var {my[alts][11][guild]}{bard};
+#var {my[alts][11][subguild]}{mystic};
+
+#echo {};
+
+#echo {12) Fly(angel) (divine)};
+#var {my[alts][12][name]}{fly};
+#var {my[alts][12][guild]}{angel};
+#var {my[alts][12][subguild]}{divine};
+
+#echo {};
+#echo {13) Flo(necromancer) (werebeast)};
+#var {my[alts][13][name]}{flo};
+#var {my[alts][13][guild]}{necromancer};
+#var {my[alts][13][subguild]}{werebeast};
+
+#echo {14) Flyybity(necromancer) (lich)};
+#var {my[alts][14][name]}{flyybity};
+#var {my[alts][14][guild]}{necromancer};
+#var {my[alts][14][subguild]}{lich};
+
+#echo {15) Flyybit(necromancer) (reaper)};
+#var {my[alts][15][name]}{flyybit};
+#var {my[alts][15][guild]}{necromancer};
+#var {my[alts][15][subguild]}{reaper};
+
+#echo {};
+
+#echo {16) Fluu(fremen) (qizarate)};
+#var {my[alts][16][name]}{fluu};
+#var {my[alts][16][guild]}{fremen};
+#var {my[alts][16][subguild]}{qizarate};
+
+#echo {17) Flaabit(fremen) (fedaykin)};
+#var {my[alts][17][name]}{flaabit};
+#var {my[alts][17][guild]}{fremen};
+#var {my[alts][17][subguild]}{fedaykin};
+#echo {};
+
+#echo {18) Floobit(elemental)};
+#var {my[alts][18][name]}{floobit};
+#var {my[alts][18][guild]}{elemental};
+
+#echo {19) Fluubity(warder)};
+#var {my[alts][19][name]}{fluubity};
+#var {my[alts][19][guild]}{warder};
+
+#echo {20) Fluubit(priest)};
+#var {my[alts][20][name]}{fluubit};
+#var {my[alts][20][guild]}{priest};
+
+#echo {21) Fluubi(juggernaut)};
+#var {my[alts][21][name]}{fluubi};
+#var {my[alts][21][guild]}{juggernaut};
+
+#echo {22) Flaa(witch) (ritualist)};
+#var {my[alts][22][name]}{flaa};
+#var {my[alts][22][guild]}{witch};
+#var {my[alts][22][subguild]}{ritualist};
+
+#echo {23) Flaabi(gentech)};
+#var {my[alts][23][name]}{flaabi};
+#var {my[alts][23][guild]}{gentech};
+#echo {};
+#echo {24) flyybi(jedi) (sith)(maybe)};
+#var {my[alts][24][name]}{flyybi};
+#var {my[alts][24][guild]}{jedi};
+#var {my[alts][24][subguild]}{sith};
+
+#echo {};
+#echo {con <number>:};
+
+#alias {con}{
+	connect ${my[alts][%1][name]}3s;
+	#unalias {con};
+};

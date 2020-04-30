@@ -1,0 +1,228 @@
+#class {gags} {open}
+
+/* Blank Line */
+#gag {^$}
+
+/* Guilds */
+#NOP Juggernauts
+#gag {YOU FRENZY!!!}
+#gag {Your feral rage allows you to shrug off some of the blow.}
+
+/* Item Gags */
+#NOP CMC
+#gag {The armour infuses you with chemicals, augmenting your abilities.}
+#gag {A flash of light from the CMC-660 fills everyone in your party with invigorating warmth!}
+#gag {The CMC-660 infuses you with adrenaline!}
+#gag {A flicker in the containment field surrounding the CMC's plasma tank}
+#gag {results in a plasma leak within your suit, causing you great pain.}
+#gag {The CMC-660 blocks the entire attack!!}
+#gag {The CMC-660 REFLECTS the entire attack!!}
+
+#NOP Cocoon
+#gag {The sticky cocoon absorbs part of the attack!}
+#gag {The cocoon fuses with the attack and grows stronger!}
+
+#NOP Redaxe
+#gag {Chopping violently, the axe draws {rancor|crimson|blood} from }
+#gag {You slice, and a flow of rancor falls from }
+#gag {You slice, and a flow of blood falls from }
+#gag {The blood from the wound flows into your soul through the Axe.}
+
+#NOP Powerstone
+#gag {The energy of the powerstone flows through you.}
+#gag {Magical energies course through your body.}
+
+#NOP Zelligar's Headband
+#gag {Zelligar's Headband warms you with a radiant glow.}
+
+#NOP Octopus Garden
+#gag {The octopus invades your mind with hallucinations!}
+
+
+/* Mskills */
+#NOP Dodge
+#gag {ou nimbly dodge }
+
+#NOP Critical Hit
+#gag {You critically hit }
+
+#NOP Penetrate
+#gag {You drive your attack past %*'s resistances!}
+
+#NOP Shield Block
+#gag {Your shield blocks %* attack!}
+
+
+/* Professions */
+#NOP Assassin
+#gag {Your insidious inspiration flows through you as you make the most of each attack!}
+#gag {Your insidious inspiration fades.}
+
+#NOP Big Game Hunter
+#gag {Your crazed ambition overflows!}
+#gag {Your ambition overflows as you try to bring down the big game with a spell!}
+#gag {Your ambition overflows as you try to bring down the big game with a ferocious attack!}
+#gag {Your wild ambition drives you ever onward!}
+#gag {Your wild ambition takes a back seat to prudence.}
+
+#NOP Lumberjack
+#gag {You sing: }
+#gag {Yes, you're a lumberjack and you're ok, but you're done singing for now.}
+
+#NOP Tactician
+#gag {You outfox your opponent and take advantage of it!}
+#gag {You press your advantage on your outsmarted foe!}
+#gag {Your tactical advantage ends.}
+
+#class {gags} {close}
+
+
+/* Eternals */
+#NOP Immunity
+#gag {The assault glances harmlessly off your aura.}
+
+
+/* Dog */
+#gag {Your dog tears a chunk of flesh from }
+
+/* Mobs/Areas */
+#NOP Rimalkins
+#gag {^The small Rimalkin lunges at you with its needle-like fangs!}
+#gag {^The small Rimalkin scratches about the room.}
+#gag {^The small Rimalkin slashes at you with tis razor sharp claws!}
+
+#NOP Silver/Blue
+#gag {^Impediment shakes, fire burning.}
+
+#gag {^Shadow sees the light, frenzied screeching!}
+#gag {^Shadow seeps into the ground, reappearing momentarily.}
+#gag {^Shadow slows, light sinking in, time flowing out.}
+
+#gag {^Shield askew, Bulwark screams, black blood flows.}
+#gag {^Glancing blow, Shield shudders.}
+#gag {^Serrated sword sweeping in front, Bulwark rolls.}
+#gag {^Bulwark pulls his shield up, struck low.  Oopse}
+
+#gag {^Stuck in his own trap, Furtive squeals.}
+#gag {^Furtive darts behind his web, protected by the silk.}
+
+#gag {^Tough as steel, Resilient feels nothing.}
+
+#nop Stuff imported from Old Tintin
+
+#gag {shortsword %1 like %2 %3 the %4}
+#gag {%1 the shortsword like %2 %3 the %4}
+#gag {^The sword bites like %1 into %2}
+#gag {^You hit %1.};
+#gag {The bracers flare brightly and your form wavers slightly!}
+#gag {The Sword strikes with an unholy power!}
+#gag {The scorpion stabs you with its stinger!}
+#gag {The elemental CRUSHES you with an %1 fist!}
+#gag {The elemental CRUSHES you with a %1 fist!}
+#gag {The Staff of the Magi unleashes a torrent of magical energy upon %1}
+#gag {The staff strikes with %1 force!}
+#gag {You can feel the liquid churn inside of you...}
+#gag {Magical energies course through your body.}
+#gag {Shansabyk tears through you like a man possessed!}
+#gag {Cow kicks you with its hoof!}
+#gag {Cow tramples you!}
+#gag {Cow moos, 'MOOOooOOOoOOO!'}
+#gag {Cow moos, 'MOOO mooo MOOOOOO!'}
+#gag {You KICK the Biker boot right up}
+#gag {Your shield blocks %1 attack!}
+#gag {A cow says:}
+#gag {The donut poisons %1 with a massive dose of sugar and fat!}
+#gag {The donut flings piping hot glaze at %1}
+#gag {The donut invades %1 mind with cravings for chocolate!}
+#gag {A wave of sparks fly from the bracers, striking your opponent!}
+#gag {Your eyes glaze over as a blast of fertilizing energy shoots through your veins.}
+#nop {xmas gag}
+#gag {You feel your stuff recharge.}
+#gag {The force of the Goddess Kourlyn is channeled through the gloves and}
+#gag {sends a blast of wind at your opponent!}
+#gag {Warmth and life force flows into you through your hand.}
+#gag {You say: Awww man, play time is over.}
+#gag {You say: Blow it out your ass!}
+#gag {You say: Come get some.}
+#gag {You say: Damn I'm good.}
+#gag {You say: Damn those alien bastards are gonna pay for shooting up my ride.}
+#gag {You say: I just wore the Duke Nukem helmet, and now I'm gonna kick ass!}
+#gag {You say: Let god sort 'em out.}
+#gag {You say: Nobody steals our chicks... and lives.}
+#gag {You say: Piece of cake.}
+#gag {You say: See you in hell, buddy.}
+#gag {You say: That's right baby, I'm NUKEM.}
+#gag {You say: What are you waiting for, Christmas?}
+#gag {You say: Who's your Daddy?}
+#gag {You say: Your face, your ass... what's the difference?}
+#gag {You say: Blow it out your ass!}
+#gag {You say: Come get some!!!}
+#gag {You say: Come get some.}
+#gag {You say: Damn I'm good.}
+#gag {You say: Damn those alien bastards are gonna pay for shooting up my ride.}
+#gag {You say: I just wore the Duke Nukem helmet, and now I'm gonna kick ass!}
+#gag {You say: It's time to kick ass and chew bubble gum...and I'm all outta gum.}
+#gag {You say: LET'S ROCK BABY!!!}
+#gag {You say: Let god sort 'em out.}
+#gag {You say: Let's rock.}
+#gag {You say: Nobody steals our chicks... and lives.}
+#gag {You say: Piece of Cake baby!}
+#gag {You say: Piece of cake.}
+#gag {You say: See you in hell, buddy.}
+#gag {You say: That's right baby, I'm NUKEM.}
+#gag {You say: What are you waiting for, Christmas?}
+#gag {You say: Who's your Daddy?}
+#gag {You say: Your face, your ass, what's the difference.}
+#gag {A bit of brains drips out of the zombie's head and onto his shirt!}
+#gag {Blood drools down the zombie's chin as she grins at you!}
+#gag {The zombie flails at you wildly!}
+#gag {The zombie gropes for you, trying to claw out your eyes!}
+#gag {The zombie gropes wildly, attempting to grab you!}
+#gag {The zombie opens her mouth to grin at you, hunger in her eyes!}
+#gag {The zombie scratches and claws at you!}
+#gag {The zombie tilts her head to one side, trying to get a good look at you!}
+#gag {The zombie tries to beat you with his one good arm!}
+#gag {The zombie viciously bites you!}
+#gag {The zombie's stench is nearly overwhelming!}
+#gag {The guardian announces: All lower life forms will be terminated."}
+#gag {The guardian guns you down in a hellish torrent of bullets!}
+#gag {The guardian fires a fragment grenade, nearly obliterating you in$}
+#gag {^a deadly explosion of metal!$}
+#gag {The robot ignores your attack, moving in for the kill!}
+#gag {The assembler jabs its electric wand into your torso and}
+#gag {^sends a bolt of electricity running through your body!}
+#gag {The assembler pounds a hammer into your skull, nearly}
+#gag {^crushing your head!}
+#gag {The assembler aims its blow torch at you and scorches you}
+#gag {^with a highly concentrated burst of fire!}
+#gag {The assembler clamps down on your arm with its pincer}
+#gag {^and nearly rips it right off!}
+#gag {The sentry announces: Enemy targeted.  Level %1  Prepare to fire.}
+#gag {The sentry announces: Intruder alert.  Level %1  Intruder alert.}
+#gag {The sentry launches a grenade, choking you in poison gas!}
+#gag {The sentry's flame thrower scorches you in liquid fire!}
+#gag {The shrapnel from one of the sentry's grenades nearly rips you apart!}
+#gag {The sentry scorches you with jets of liquid flame!}
+#gag {The sentry strafes you with gunfire!}
+#gag {The sentry guns you down in a barrage of bullets!}
+#gag {Its sticky, poisonous saliva burns into your flesh!}
+#gag {The spider creature bites into you with its fangs}
+#gag {The red eyes of the spider creature glow hideously!}
+#gag {The sheer bulk of the evil creature shifts and fills the cavern.}
+#gag {Spider Creature's spider mandibles slice you apart!}
+#gag {You critically hit}
+#gag {**FREE CAST**}
+#gag {You drive your attack past %1 resistances}
+#gag {You nimbly dodge %1 attack!}
+#gag {^$}
+#gag {The spell dissipates as it contacts your form!}
+
+#NOP Theorem
+#gag {^As you grasp, just momentarily, some of the Axioms upon which the}
+#gag {^sorcerous Theorem is derived, brilliant supernal light explodes}
+#gag {^in your mind!}
+
+#NOP UO
+#gag {^A bolt of energy slams into you!}
+#gag {^Explosions erupt across your body!}
+#gag {^The elemental strikes you with lightning!}

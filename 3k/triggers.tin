@@ -1,0 +1,79 @@
+#act {Gary Bettman says: Welcome to the Hockey Hall of Fame.}{
+	!say hall of fame;
+}
+#act {Gary Bettman says: Though, I hope we can find a new Chairman soon.}{
+	!say chairman;
+}
+#act {Gary Bettman says: If the Hall of Fame is to continue doing well, I must}{
+	!say replacement;
+};
+#act {Gary Bettman says: You'll just have to answer a few questions for me.}{
+	!say questions;
+}
+#act {Gary Bettman says: Who was the first black player in the NHL?}{
+	!say willie o'ree;
+}
+#act {Gary Bettman says: What year did the "Miracle on Ice" take place?}{
+	!say 1980;
+}
+#act {Gary Bettman says: Which trophy is awarded for perseverance, sportsmanship}{
+	!say bill masterton memorial trophy;
+}
+#act {Gary Bettman says: Who is known of as the greatest captain of the most}{
+	!say jean beliveau;
+}
+
+#act {You will no longer see the HP bar on the main screen.}{
+	!forcehp;
+};
+
+#nop {New Mapper really messes this up
+	#act {As you climb the stairs, you step on a weak board and fall through.}{#map undo}
+	#act {You cannot go}{#map undo}
+	#act {that these guards are demon spawn.}{#map undo}
+	#act {The guards hiss as you attempt to move}{#map undo}
+	#act {There are rocks blocking your passage in that direction.}{#map undo}
+	#act {Buildings prevent you from going that direction.}{#map undo}
+	#act {Buildings prevent you from going that way.}{#map undo}
+	#act {This guard isn't going to let you go that way!}{#map undo}
+
+	#act {Carrying all that stuff, you lose your balance and slip and fall on the ice.}{#map undo}
+
+	#act {You bounce right off the gelatinous wall.}{#map undo}
+}
+
+
+#act {smack dab in the middle of a large sewer}{
+	#if {$autokill == 1}{
+                #var findexit 0;
+                #var critter_room 0;
+                #var player_room 0;
+                #var domove 1;
+                #var starter 1;
+                glance
+	}
+}
+
+#act {The coffin is full!}{cco}
+#act {The coffin is now full!}{cco}
+
+#nop {Bshroud}
+#act {Imogen says: Other than me, who were the people in the Silicon Wraiths}{
+	say midnite, talon, stella, kerrie, azrael, enigma;
+}
+
+#act {Imogen says: Where does Azrael spend most of his time?}{
+	say basement;
+}
+
+#act {Imogen says: Finally, what are the names of the corporations}{
+	say megatech, sonybishi;
+}
+
+#act {Imogen whispers: %1, your code is %2.}{
+        #var {pincode}{%2};
+}
+
+#act {^To do so, type: tskill %1}{
+	#send {tskill %1};
+}; 

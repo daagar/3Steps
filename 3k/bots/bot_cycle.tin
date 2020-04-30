@@ -1,0 +1,109 @@
+#class {botcycle} {open}
+
+#var cycle 0
+
+#alias {ba} {
+	#list {botcycle} {add} {%1};
+	botdraw
+}
+
+#alias {br} {
+	#list {botcycle} {del} {%1};
+	botdraw
+}
+
+#alias {nextarea} {
+	#if {$cycle < &botcycle[]} {
+		#math cycle {$cycle+1}
+	} {
+		#var cycle 1
+	};
+	#list {botcycle} {get} {$cycle} {currentarea};
+	go $currentarea;
+	#delay {1} {- $currentarea};
+	#delay {2} {..}
+}
+
+#alias {botclear} {
+	#var botcycle {};
+	#var cycle 0
+}
+
+#alias {bc} {
+	#echo {<228> +-------------------+}<088>;
+	#echo {<228> |<138>    Area Cycler    <228>|<088>};
+	#echo {<228> +-------------------+}<088>;
+	#if {&botcycle[] == 0} {
+		#echo {<228> |<178>  No areas loaded  <228>|<088>};
+		#echo {<228> +-------------------+}<088>
+	} {
+		#var cnt 0;
+		#while {$cnt < &botcycle[]} {
+			#math {cnt} {$cnt + 1};
+			#if {$cnt == $cycle} {
+				#format {cntnum} {%+4s} {<128>$cnt\.<088>};
+				#format {area_display} {%-12s} {<128>$botcycle[$cnt]<088>}
+			} {
+				#format {cntnum} {%+4s} {<178>$cnt\.<088>};
+				#format {area_display} {%-12s} {<148>$botcycle[$cnt]<088>}
+			};
+			#echo { <228>| $cntnum $area_display <228>|<088>};
+		};
+		#echo { <228>+-------------------+}<088>
+	}
+}
+
+#alias {botdraw} {
+	#NOP Clear previous drawing;
+	#screen clear square 21 -42 -8 -1;
+
+	#if {&botcycle[] == 0} {
+		#var botareas {
+			<178>            No areas loaded<088>
+		};
+		#var botheight 1;
+	} {
+		#var botheight &botcycle[];
+		#var botareas {};
+		#var cnt 0;
+		#while {$cnt < &botcycle[]} {
+			#math {cnt} {$cnt + 1};
+			#if {$cnt == $cycle} {
+				#format {cntnum} {%+4s} {<128>$cnt.<088>};
+				#format {area_display} {%-12s} {<128>$botcycle[$cnt]<088>}
+			} {
+				#format {cntnum} {%+4s} {<178>$cnt.<088>};
+				#format {area_display} {%-12s} {<148>$botcycle[$cnt]<088>}
+			};
+			#if {$cnt == 1} {
+				#var botareas {$cntnum $area_display}
+			} {
+				#var botareas {$botareas\n$cntnum $area_display}
+			}
+		}
+	};
+	#draw green rounded box 22 -41 24 -3 {
+		<138>              Area Cycler    <088>
+	};
+	#draw green rounded box 24 -41 25+$botheight -3 {
+		$botareas
+	};
+	#showme {<228>\u251C} 24 -41;
+	#showme {<228>\u2524} 24 -3;
+}
+
+#event {VARIABLE UPDATE cycle} {
+	#delay 0 botdraw
+}
+
+
+#event {VARIABLE UPDATE botcycle} {
+	#delay 0 botdraw
+}
+
+
+#alias {bas}	{ba {rim2;android;rim2;dundee8;rim2;dundee7;rim2;dundee6;rim2;dundee5}}
+#alias {bas2}	{ba {whorehouse;puppy;mahjongg;rim2;whorehouse;puppy;mahjongg;android;whorehouse;puppy;mahjongg;rim2;whorehouse;puppy;mahjongg;dundee8;whorehouse;puppy;mahjongg;rim2;whorehouse;puppy;mahjongg;dundee7;whorehouse;puppy;mahjongg;rim2;whorehouse;puppy;mahjongg;dundee6}}
+#alias {basa}	{ba {aegis1;aegis2;aegis3;aegis4;aegis5}}
+
+#class {botcycle} {close}

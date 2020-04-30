@@ -1,0 +1,324 @@
+#class {floob} {open}
+
+#var guild sii
+
+#gag {You outfox your opponent and take advantage of it!}
+#gag {Your tactical advantage ends.}
+#gag {You press your advantage on your outsmarted foe!}
+#gag {%1 slashes at %2}
+#gag {%1 razor claws slash into %2}
+#gag {%1 snarls as it attacks}
+#gag {%1 darts out and slashes %2}
+#gag {%1 claws at %2}
+#gag {%1 tiny wicked claws tear at %2}
+#gag {%1 draws blood on %2}
+#gag {%1 snicks %2 with vicious claws}
+#gag {%1 rips %2 with its claws}
+#gag {%1 claws viciously at %2}
+#gag {You drive your attack past %1 resistances}
+#gag {You critically hit}
+#gag {You are not flying, there is no need to use gather to take items.}
+#gag {That is much too low to reach.}
+#alias {g}{get %0;gather %0}
+#alias kk {kill $kstr}
+#alias lt talk %0
+#alias gl glance
+#alias gs {siiscore}
+#alias ch psi
+#alias gwho siiwho
+#alias l look %0
+#alias v vortex
+#alias p portal
+#alias pt ptell %0
+#alias ps members
+#alias info siihelp %0
+#alias rcost siiscore stat cost
+#alias gskills siiscore skills
+#alias gs2 siiscore skills
+#alias gs3 siiscore forms
+#alias gs4 siiscore history
+#alias gs5 siiscore mastery
+#alias pstats siiscore combat
+#alias merge {go merge;\merge %0}
+#alias remerge {go merge;\remerge}
+#act {You step out of the cubicle and adjust to your new senses.}{doshield;!psipulse}
+
+#gag {^You %1 your metabolism, and focus on regenerating %2 rate.};
+
+#alias pck put %0 in bag
+
+
+#var my[desired][shield] {adapt};
+#alias shieldswap {
+        #if {"${my[desired][shield]}" == "reflect"}{
+                #var my[desired][shield] {absorb};
+                #echo {Absorb};
+        };
+        #if {"${my[desired][shield]}" == "augment"}{
+                #var my[desired][shield] {reflect};
+                #echo {Reflect};
+        };
+        #if {"${my[desired][shield]}" == "adapt"}{
+                #var my[desired][shield] {augment};
+                #echo {Augment};
+        };
+        #if {"${my[desired][shield]}" == "protect abrasive"}{
+                #var my[desired][shield] {adapt};
+                #echo {Adapt};
+        };
+        #if {"${my[desired][shield]}" == "protect impact"}{
+                #var my[desired][shield] {protect abrasive};
+                #echo {Protect Abrasive};
+        };
+        #if {"${my[desired][shield]}" == "absorb"}{
+                #var my[desired][shield] {protect impact};
+                #echo {Protect Impact};
+        };
+        #echo {doshield to activate your new shield};
+};
+
+#alias {doshield}{
+        !shield off;
+        !boost;
+        !shield ${my[desired][shield]};
+        #echo;
+        #echo {shieldswap to switch};
+};
+
+#var autobrood 0
+#alias {autob}{
+        #if {$my[desired][brood] == 0}{
+                #echo {Brooding};
+                #var my[desired][brood] 1;
+        }
+        #if {$my[desired][brood] == 1}{
+                #echo {Not Brooding};
+                #var my[desired][brood] 0;
+        }
+}
+
+#var my[desired][overload] 1
+#alias {auto}{
+        #if {$my[desired][overload] == 0}{
+                #echo {Overloading};
+                #var my[desired][overload] 1;
+        }{
+                #echo {Not Overloading};
+                #var my[desired][overload] 0;
+        }
+}
+
+#var my[desired][autobag] 0
+
+#alias {my[desired][autobag]}{
+        #if {$my[desired][autobag] == 0}{
+                #echo {Bagging};
+                #var my[desired][autobag] 1;
+        }{
+                #echo {Not Bagging};
+                #var my[desired][autobag] 0;
+        }
+}
+
+
+#nop {gset hpbar HP:$HP$ SP:$SP$ FO:$FORT$ CON:$CON$ EN:$FOE$ P:$PERC$ M:$MIT$ $NL$CH:$CHO$ GL:$CL$ GXP:$GXP$ FI:$FI$ Brood:$BROOD$ B:$BST$ $NL$OL:$OVER$ BR:$BR$ AMP:$AMP$ RT:$RT$ SH:$PS$ CL:$PC$ PG:$PG$ R:$REG$}
+#gag {HP:%1/%2 SP:%3/%4 FO:%5/%6 CON:%7 EN:%8 P:%9 M:%10}
+#act {HP:%1/%2 SP:%3/%4 FO:%5/%6 CON:%7 EN:%8 P:%9 M:%10}{
+	#var {my[hp][current]}		{%1};
+	#var {my[hp][max]}		{%2};
+	#var {my[sp][current]}		{%3};
+	#var {my[sp][max]}		{%4};
+	#var {my[gp1][current]}		{%5};
+	#var {my[fort][current]}		{%5};
+	#var {my[gp1][max]}		{%6};
+	#var {my[fort][max]}		{%6};
+	#var {my[gp2][current]}		{%7};
+	#var {my[control][current][verb]}{%7};
+        #if {"$my[control][current][verb]" == "Complete"}{#var my[control][current][integer] 18};
+        #if {"$my[control][current][verb]" == "Indefatigable"}{#var my[control][current][integer] 17};
+        #if {"$my[control][current][verb]" == "Unshakeable"}{#var my[control][current][integer] 16};
+        #if {"$my[control][current][verb]" == "Vigorous"}{#var my[control][current][integer] 15};
+        #if {"$my[control][current][verb]" == "Tenacious"}{#var my[control][current][integer] 14};
+        #if {"$my[control][current][verb]" == "Steadfast"}{#var my[control][current][integer] 13};
+        #if {"$my[control][current][verb]" == "Resolute"}{#var my[control][current][integer] 12};
+        #if {"$my[control][current][verb]" == "Substantial"}{#var my[control][current][integer] 11};
+        #if {"$my[control][current][verb]" == "Stable"}{#var my[control][current][integer] 10};
+        #if {"$my[control][current][verb]" == "Mediocre"}{#var my[control][current][integer] 9};
+        #if {"$my[control][current][verb]" == "Wavering"}{#var my[control][current][integer] 8};
+        #if {"$my[control][current][verb]" == "Deficient"}{#var my[control][current][integer] 7};
+        #if {"$my[control][current][verb]" == "Tenuous"}{#var my[control][current][integer] 6};
+        #if {"$my[control][current][verb]" == "Drained"}{#var my[control][current][integer] 5};
+        #if {"$my[control][current][verb]" == "Weak"}{#var my[control][current][integer] 4};
+        #if {"$my[control][current][verb]" == "Paltry"}{#var my[control][current][integer] 3};
+        #if {"$my[control][current][verb]" == "Feeble"}{#var my[control][current][integer] 2};
+        #if {"$my[control][current][verb]" == "Exhausted"}{#var my[control][current][integer] 1};
+        #if {"$my[control][current][verb]" == "None"}{#var my[control][current][integer] 0};
+	#var {my[control][max][integer]}{18};
+	#var {my[enemy]}		{%8};
+	#if {"$my[enemy]" == "None"}{#var my[incombat] 0}{#var my[incombat] 1};
+	#if {$my[incombat] == 1}{
+		#math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+                #regex {$my[enemy]}{%*(%*)}{
+                        #var {my[damagetracker][foe]}{&1};
+                };
+	};
+	#var {my[perception][current]}		{%9};
+	#var {my[mitigation][current]}		{%10};
+}
+
+#gag {CH:%1 GL:%2 GXP:%3 FI: Brood:%5 B:%6 (%7)}
+#act {CH:%1 GL:%2 GXP:%3 FI: Brood:%5 B:%6 (%7)}{
+        #var my[choose][current] %1;
+        #var my[gtnl][current][verb] %2;
+        #var my[gxp][round][verb] %3;
+        #var my[form][current] None;
+        #var my[brood][current] %5;
+        #var my[boost][current] %6;
+        #var my[boost][status] %7;
+}
+
+#gag {CH:%1 GL:%2 GXP:%3 FI:%4 Brood:%5 B:%6 (%7)}
+#act {CH:%1 GL:%2 GXP:%3 FI:%4 Brood:%5 B:%6 (%7)}{
+        #var my[choose][current] %1;
+        #var my[gtnl][current][verb] %2;
+        #var my[gxp][round][verb] %3;
+        #var my[form][current] %4;
+        #var my[brood][current] %5;
+        #var my[boost][current] %6;
+        #var my[boost][status] %7;
+}
+#gag {OL:%1 (%2) BR:%3 AMP:%4 RT:%5 SH:%6 CL:%7 PG:%8 R:%9}
+#act {OL:%1 (%2) BR:%3 AMP:%4 RT:%5 SH:%6 CL:%7 PG:%8 R:%9}{
+        #var my[overload][current] %1;
+        #var my[overload][status] %2;
+        #var my[bloodrush][current] %3;
+        #var my[amplify][current] %4;
+        #var my[root][current] %5;
+        #var my[psishield][current] %6;
+        #var my[cleanse][current] %7;
+        #var my[psighost][current] %8;
+        #var my[regeneration][current] %9;
+        #if {"$my[gtnl][current][verb]" == "unskilled"}{#var my[gtnl][current][integer] 0};
+        #if {"$my[gtnl][current][verb]" == "beginner"}{#var my[gtnl][current][integer] 1};
+        #if {"$my[gtnl][current][verb]" == "initiate"}{#var my[gtnl][current][integer] 2};
+        #if {"$my[gtnl][current][verb]" == "novice"}{#var my[gtnl][current][integer] 3};
+        #if {"$my[gtnl][current][verb]" == "student"}{#var my[gtnl][current][integer] 4};
+        #if {"$my[gtnl][current][verb]" == "amateur"}{#var my[gtnl][current][integer] 5};
+        #if {"$my[gtnl][current][verb]" == "apprentice"}{#var my[gtnl][current][integer] 6};
+        #if {"$my[gtnl][current][verb]" == "learned"}{#var my[gtnl][current][integer] 7};
+        #if {"$my[gtnl][current][verb]" == "adept"}{#var my[gtnl][current][integer] 8};
+        #if {"$my[gtnl][current][verb]" == "proficient"}{#var my[gtnl][current][integer] 9};
+        #if {"$my[gtnl][current][verb]" == "scholar"}{#var my[gtnl][current][integer] 10};
+        #if {"$my[gtnl][current][verb]" == "specialist"}{#var my[gtnl][current][integer] 11};
+        #if {"$my[gtnl][current][verb]" == "expert"}{#var my[gtnl][current][integer] 12};
+        #if {"$my[gtnl][current][verb]" == "authority"}{#var my[gtnl][current][integer] 13};
+        #if {"$my[gtnl][current][verb]" == "master"}{#var my[gtnl][current][integer] 14};
+        #if {"$my[gtnl][current][verb]" == "guru"}{#var my[gtnl][current][integer] 15};
+        #if {"$my[gtnl][current][verb]" == "completed"}{#var my[gtnl][current][integer] 16};
+        #if {"$my[gtnl][current][verb]" == "quack"}{#var my[gtnl][current][integer] 17};
+        #if {"$my[gxp][round][verb]" == "Very Low"}{#var my[gxp][round][integer] 1};
+        #if {"$my[gxp][round][verb]" == "Low"}{#var my[gxp][round][integer] 2};
+        #if {"$my[gxp][round][verb]" == "Average"}{#var my[gxp][round][integer] 3};
+        #if {"$my[gxp][round][verb]" == "Good"}{#var my[gxp][round][integer] 4};
+        #if {"$my[gxp][round][verb]" == "High"}{#var my[gxp][round][integer] 5};
+        #if {"$my[gxp][round][verb]" == "Very High"}{#var my[gxp][round][integer] 6};
+        #if {"$my[gxp][round][verb]" == "Exemplary"}{#var my[gxp][round][integer] 7};
+        #math {my[targetlevel][fortitude]}{$my[fort][max] / 3};
+        #math {my[targetlevel][high][regen]}{${my[hp][max]} * .9};
+        #math {my[targetlevel][high][prevent][hp]}{$my[hp][max] * .5};
+        #math {my[targetlevel][high][prevent][sp]}{$my[sp][max] * .75};
+        #math {my[targetlevel][mid][regen]}{$my[hp][max] * .7};
+        #math {my[targetlevel][mid][prevent][hp]}{$my[hp][max] * .4};
+        #math {my[targetlevel][mid][prevent][sp]}{$my[sp][max] * .4};
+        #math {my[targetlevel][low][regen]}{$my[hp][max] * .5};
+        #math {my[targetlevel][low][prevent][hp]}{$my[hp][max] * .3};
+        #math {my[targetlevel][low][prevent][sp]}{$my[sp][max] * .3};
+        #math {my[targetlevel][panic][regen]}{$my[hp][max] * .3};
+        #math {my[targetlevel][panic][prevent][hp]}{$my[hp][max] * .2};
+        #math {my[targetlevel][panic][prevent][sp]}{$my[sp][max] * .2};
+        #if {$my[overload][current] > 80 && "$my[overload][status]" == "On"}{overload off};
+        #if {$my[hp][current] < $my[targetlevel][high][regen] && $my[fort][current] > $my[targetlevel][fortitude]}{
+        	#if {"$my[regeneration][current]" != "Bl"}{
+        		!focus regen blazing;
+		};
+	}{
+        	#if {"$my[regeneration][current]" == "Bl"}{
+        		!focus regen normal;
+		};
+        };
+	#if {$my[sp][current] < 50 && $my[prevent][current] != "off"}{
+		#var {my[prevent][current]}{off};
+		!focus prevent off;
+	};
+	#if {$my[hp][current] < $my[targetlevel][high][prevent][hp] && $my[sp][current] > $my[targetlevel][high][prevent][sp] && $my[prevent][current] != "very low"}{
+		#var {my[prevent][current]}{very low};
+		!focus prevent very low;
+	};
+	#if {$my[hp][current] < $my[targetlevel][mid][prevent][hp] && $my[sp][current] > $my[targetlevel][mid][prevent][sp] && $my[prevent][current] != "low"}{
+		#var {my[prevent][current]}{low};
+		!focus prevent low;
+	};
+	#if {$my[hp][current] < $my[targetlevel][low][prevent][hp] && $my[sp][current] > $my[targetlevel][low][prevent][sp] && $my[prevent][current] != "average"}{
+		#var {my[prevent][current]}{average};
+		!focus prevent average;
+	};
+	#if {$my[hp][current] < $my[targetlevel][panic][prevent][hp] || $my[sp][current] < $my[targetlevel][panic][prevent][sp] && $my[incombat] == 1}{
+		go home;
+	};
+	update_status;
+}
+
+#alias {update_status} {
+	#var	{my[hp][graph]}		{@graph{$my[hp][current];$my[hp][max]}};
+	#var	{my[sp][graph]}		{@graph{$my[sp][current];$my[sp][max]}};
+	#var	{my[gp1][graph]}	{@graph{$my[gp1][current];$my[gp1][max]}};
+	#var	{my[control][graph]}	{@graph{$my[control][current][integer];$my[control][max][integer]}};
+	#var	{enemy[graph]}		{@graph{$enemy[hp];100}};
+	#format {hp}			{%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
+	#format {hp_max}		{%+4s} {<128>$my[hp][max]<088>};
+	#format {sp}			{%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
+	#format {sp_max}		{%+4s} {<128>$my[sp][max]<088>};
+	#format {fo}			{%+4s} {@colscale{$my[gp1][current];$my[gp1][max]}};
+	#format {fo_max}		{%+4s} {<128>$my[gp1][max]<088>};
+	#format {co}			{%+4s} {@colscale{$my[control][current][integer];$my[control][max][integer]}};
+	#format {co_max}		{%+4s} {<128>$my[control][max][integer]<088>};
+	#format {ehealth}		{%+6s} {@colscale{$enemy[hp];100}\%};
+	#showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} FO:${fo}/${fo_max} CO:${co}/${co_max} E: ${ehealth}} {-4};
+	#showme {H:${my[hp][graph]} S:${my[sp][graph]} F:${my[gp1][graph]} C:${my[control][graph]} E:${enemy[graph]}} {-3};
+	#showme {$mip[gline][2]} {-6};
+	#showme {$mip[gline][1]} {-7};
+}
+
+
+#act {Your malicious attacks fade.} {malice}
+
+#alias {co} {
+        #if {$hpbarBoost > 4}{boost};
+        !envelop corpse;
+        !collect dna from corpse;
+        !divvy;
+}
+
+#alias {corpsetrig} {
+	!wrap corpse;
+}
+
+#alias {cco}{!unwrap corpse;co}
+	!unwrap corpse;
+	!cease;
+	#if {"$my[autocorpse][method]" == "guild"}{
+		co;
+	};
+	#if {"$my[autocorpse][method]" == "nex"}{
+		!orare;
+	};
+};
+
+#act {Floob dealt the killing blow to %1.} {
+	log_damage_no_numbers %1;
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+};
+
+#class {floob} {close}

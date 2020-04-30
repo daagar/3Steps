@@ -1,0 +1,22 @@
+#var stepper 0 
+
+#var {area_items}{puppy}
+#list {area_items}{create}{$area_items}
+#list {area_items}{size}{$all_area_items}
+
+#unact {This %1 appears to be %2 but %3}
+#unact {This %1 appears to be %2 and has %3}
+#unact {This %1 appears to have %2 and has %3}
+#unact {This %1 appears to have %2 but %3}
+#unalias bscan
+#unalias autobscan
+#unalias display_biome_scan
+#var domove 0
+#unvar autobscan
+#var starter 0
+#unvar kill_path
+#var area_aggro 0
+#list kill_path {clear}
+#unvar max_room
+#var area none
+#var area_aggro 0

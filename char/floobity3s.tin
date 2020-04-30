@@ -1,0 +1,752 @@
+#class {floobity} {open}
+
+#var guild angel
+
+#alias kk {kill $kstr}
+#alias k {kill %0}
+#alias ka {kill all}
+
+#gag {In self preservation, you call Vitalis to refresh}
+#gag {Bruises lighten across your corporeal form.}
+#gag {Pain seeps away, replaced by healing energy.}
+#gag {Spiritual energy soothes your physical body.}
+#gag {Minor abrasions slowly heal and vanish.}
+#gag {Cuts and gashes mend quickly, as the Spirit touches your form.}
+#gag {Soothing energy alleviates your body's harm.}
+#gag {Life flows through you, convalescing your entire body.}
+#gag {Your bleeding stops as your gaping wounds close and heal.}
+#gag {The flowing energy of the Spirit revitalizes your body's damage.}
+#gag {Life, in its purest form, returns to your body!}
+
+#gag {The spell dissipates as it contacts your form!}
+#gag {You nimbly dodge %* attack!}
+
+#gag {Your blazing aura %*!}
+
+#gag {Your blazing claws %*}
+#gag {The battlefield filled with your flashing claws, %* is forced to the ground!}
+#gag {Filling the battlefield with your flashing claws, you force %1 to the ground!}
+#gag {To protect %2 vital organs from your claws, %1 is forced to retreat!}
+#gag {With blinding speed, you SHRED %1 to ribbons!}
+#gag {A flurry of razored madness, you DICE %1 into bits!}
+#gag {You disembowel %1, %2 viscera uncoiling to the ground!}
+#gag {You drive your claws deep into %1 vital organs!}
+#gag {You press %1 with your claws, denying it room to move.}
+#gag {You slash with your claws at %1, who steps back.}
+#gag {You try to corral %1 with a vicious claw swipe!}
+#gag {With blinding speed, you swipe at %1 again and again!}
+#gag {Your deadly claws open %1 up from head to groin!}
+#gag {Trying to avoid your deadly claws, %1 is forced to an exposed position!}
+#gag {%1 bleeds horribly as your claws slice into it!}
+#gag {%1 crumples as you hamstring it with your claws!}
+#gag {%1 stumbles back trying to avoid your claws!}
+#gag {Lunging forward, you slam your claws deep into %1!}
+#gag {With incredible savagery, your claws mangle %1!}
+#gag {You rake %1 with your deadly claws!}
+#gag {You rake at %1 with your claws.}
+#gag {You use your claws to limit %1's options.}
+#gag {Your claws slash brutally through %1}
+#gag {Blood fountains from %1 as you tear into it!}
+#gag {Claws flashing, you drive %1 into a corner!}
+#gag {You swipe at %1, but it is unfazed.}
+
+#gag {%1 backpedals furiously to avoid a ball of purple-black energy!}
+#gag {%1 barely dodges the Tenebra's energy ball!}
+#gag {%1 dodges and weaves, struggling to avoid the Tenebra's assault!}
+#gag {%1 dodges the Tenebra's energy ball!}
+#gag {%1 easily dodges the Tenebra's energy ball!}
+#gag {%1 falls back under a withering assault of your Tenebra's purple-black energy!}
+#gag {%1 is hit by the Tenebra's energy ball!}
+#gag {%1 leaps to the side as purple-black energy streams toward %1!}
+#gag {%1 yelps in pain as purple-black tendrils of energy graze %1!}
+#gag {Purple-black energy flies towards %1, who backs away quickly!}
+#gag {Purple-black energy smacks into %1, who shudders in horror!}
+#gag {The Tenebra spits purple-black energy, forcing %1 to sidestep!}
+#gag {The Tenebra's energy ball impacts on %1, forcing %1 to duck!}
+#gag {The ball of purple-black energy passes by %1!}
+#gag {Purple-black tendrils pierce %1 a thousand times, devouring its life force!}
+
+
+
+#gag {Your aegis softens the blow!}
+#gag {Your rage causes your blood to boil!}
+
+#gag {A ball of purple-black energy slams into %1, who gasps with pain!}
+#gag {The Tenebra's energy ball impacts on %1, forcing it to flinch!}
+#gag {%1 spasms as a ball of purple-black energy impacts on it!}
+#gag {%1 screams in pure agony as it is assaulted by the death-dealing energy!}
+#gag {The Tenebra spits deadly energy at %1, who cries out in agony!}
+#gag {%1 yelps in pain as purple-black tendrils of energy assault it!}
+#gag {Purple-black tendrils burrow into %1, hungrily seeking life to consume!}
+#gag {%1 spasms as a ball of purple-black energy impacts on him!}
+
+#gag {You seethe with burning hate.}
+#gag {Your weakened blow drives your determination!}
+
+#NOP DAMAGETRACKER MYSQL ENHANCEMENTS
+#alias {show_current_form_table}{
+        #draw {rounded}{box} 47 -41 56 -3 {Current Form Stats:};
+	#showme {Form : ${my[possess][body]}} 49 -38;
+	#showme {  Attack : ${my[possess][attack]}} 50 -38;
+	#showme {     Def : ${my[possess][defense]}} 51 -38;
+	#showme {  Health : ${my[possess][health]}} 52 -38;
+	#showme {   Speed : ${my[possess][fullspeed]}} 53 -38;
+        db_query_form_damage;
+	#showme { Avg Dam : ${form_avg[1][avg(damage)]}} 55 -38;
+}
+
+#alias {db_query_form_damage}{
+        db_submit {form_avg}{%s}{select guildstring, avg(damage) from (select guildstring, damage from damage_log where guildstring = `$my[damagetracker][guildstring]` order by timestamp desc limit 100)var1;};
+};
+
+#ticker {damage_query}{show_current_form_table}{10};
+#delay {initial_update}{show_current_form_table}{2};
+
+#NOP END OF DAMAGETRACKER MYSQL ENHANCEMENTS
+
+#act {You cease funneling the fires of Creation into your desecrated room.}{
+        #var my[drounds] 0;
+        #var my[desecrate] 0;
+        #var my[ceasetrigger] 0;
+}
+
+#act {Your desecration has failed!}{
+        #var my[drounds] 0;
+        #var my[desecrate] 0;
+        #var my[ceasetrigger] 0;
+}
+
+#act {You lack divine affirmation for such a task!}{
+        #var my[drounds] 0;
+        #var my[desecrate] 0;
+        #var my[ceasetrigger] 0;
+}
+
+
+#act {What are you trying to cease?}{
+        #var my[drounds] 0;
+        #var my[desecrate] 0;
+        #var my[ceasetrigger] 0;
+}
+
+#act {You are not ready yet, wait a few moments.}{
+        #var my[desecrate] 0;
+        #var my[drounds] 0;
+        #var my[ceasetrigger] 0;
+}
+
+#act {You stoke the tinder of your soul, feeding the vast and eternal fires of}{
+        #var my[drounds] 0;
+        #var my[desecrate] 1;
+        #var my[ceasetrigger] 0;
+}
+
+#act {You must cease your current one first!}{
+        #var my[drounds] 0;
+        #var my[desecrate] 1;
+        #var my[ceasetrigger] 0;
+}
+
+#alias waffle {
+        #if {$waffling != 1}{
+                #echo {Waffling};
+                #var my[desired][shadowflame] 1;
+                #var my[desired][darkfire] 0;
+                #var my[desired][bloodrage] 0;
+                #var my[desired][claws] 0;
+                #var my[desired][evil] 1;
+                #var my[desired][prowess] 1;
+                #var my[desired][perseverance] 0;
+                #var my[desired][aegis] 0;
+                #var my[desired][tenebra] 0;
+                #var waffling 1;
+        }{
+                set_defaults;
+        }
+}
+
+#alias my[autocease] {
+        #if {$my[autocease] != 1}{
+                #echo {Auto Ceasing};
+                #var my[autocease] 1;
+        }{
+                #var my[autocease] 0;
+                #echo {Not Auto Ceasing};
+        }
+}
+
+#alias {allon}{
+        #echo {Going All In!};
+        #var waffling 0;
+        #var my[desired][shadowflame] 1;
+        #var my[desired][claws] 1;
+        #var my[desired][darkfire] 1;
+        #var my[desired][bloodrage] 1;
+        #var my[desired][evil] 1;
+        #var my[desired][prowess] 1;
+        #var my[desired][perseverance] 1;
+        #var my[desired][aegis] 0;
+        #var my[desired][tenebra] 1;
+};
+
+#alias {alloff}{
+        #echo {Going All Off!};
+        #var waffling 0;
+        #var my[desired][shadowflame] 0;
+        #var my[desired][claws] 0;
+        #var my[desired][darkfire] 0;
+        #var my[desired][bloodrage] 0;
+        #var my[desired][evil] 0;
+        #var my[desired][prowess] 0;
+        #var my[desired][perseverance] 0;
+        #var my[desired][aegis] 0;
+        #var my[desired][tenebra] 0;
+};
+
+#alias {set_defaults}{
+        #echo {Default Transfigurations Set};
+        #var waffling 0;
+        #var my[desired][shadowflame] 1 ;
+        #var my[desired][claws] 1;
+        #var my[desired][darkfire] 0;
+        #var my[desired][bloodrage] 0;
+        #var my[desired][evil] 1;
+        #var my[desired][prowess] 1;
+        #var my[desired][perseverance] 0;
+        #var my[desired][aegis] 0;
+        #var my[desired][tenebra] 1;
+};
+
+#alias {autos}{
+        #if {$my[desired][shadowflame] == 1}{
+                #echo {Shadowflame off!};
+                #var my[desired][shadowflame] 0;
+        }{
+                #echo {Shadowflame on!};
+                #var my[desired][shadowflame] 1;
+        }
+};
+#alias {autoc}{
+        #if {$my[desired][claws] == 1}{
+                #echo {Claws off!};
+                #var my[desired][claws] 0;
+        }{
+                #echo {Claws on!};
+                #var my[desired][claws] 1;
+        }
+};
+#alias {autod}{
+        #if {$my[desired][darkfire] == 1}{
+                #echo {Darkfire off!};
+                #var my[desired][darkfire] 0;
+        }{
+                #echo {Darkfire on!};
+                #var my[desired][darkfire] 1;
+        }
+};
+#alias {autob}{
+        #if {$my[desired][bloodrage] == 1}{
+                #echo {Bloodlust off!};
+                #var my[desired][bloodrage] 0;
+        }{
+                #echo {Bloodlust on!};
+                #var my[desired][bloodrage] 1;
+        }
+};
+
+#alias {autoe}{
+        #if {$my[desired][evil] == 1}{
+                #echo {Evil off!};
+                #var my[desired][evil] 0;
+        }{
+                #echo {Evil on!};
+                #var my[desired][evil] 1;
+        }
+};
+#alias {autopr}{
+        #if {$my[desired][prowess] == 1}{
+                #echo {Prowess off!};
+                #var my[desired][prowess] 0;
+        }{
+                #echo {Prowess on!};
+                #var my[desired][prowess] 1;
+        }
+};
+
+#alias {autope}{
+        #if {$my[desired][perseverance] == 1}{
+                #echo {Perseverance off!};
+                #var my[desired][perseverance] 0;
+        }{
+                #echo {Perseverance on!};
+                #var my[desired][perseverance] 1;
+        }
+};
+
+#alias {autoa}{
+        #if {$my[desired][aegis] == 1}{
+                #echo {Aegis off!};
+                #var my[desired][aegis] 0;
+        }{
+                #echo {Aegis on!};
+                #var my[desired][aegis] 1;
+        }
+};
+
+#alias {autote}{
+        #if {$my[desired][tenebra] == 1}{
+                #echo {Tenebra off!};
+                #var my[desired][tenebra] 0;
+        }{
+                #echo {Tenebra on!};
+                #var my[desired][tenebra] 1;
+        }
+};
+
+#act {The fires of evil can blaze no stronger through you.}{
+        #var my[desired][evil] 0;
+}
+
+#alias {setall}{
+        !setstance attack 100;
+        !setstance defense 100;
+        !setstance health 100;
+        !setstance speed hyperfocused;
+}
+
+#alias setslab {
+        !setstance attack 80;
+        !setstance defense 100;
+        !setstance health 50;
+        !setstance speed hyperfocused;
+}
+
+#alias setvortex {
+        !setstance attack 60;
+        !setstance defense 60;
+        !setstance health 50;
+        !setstance speed focused;
+}
+
+#alias setooze {
+        !setstance attack 70;
+        !setstance defense 70;
+        !setstance health 50;
+        !setstance speed hyperfocused;
+}
+
+#nop { Thamiel, Chaigidel, Sathariel,Gamchicoth, Goalchab, Thagirion, Harab Serapel, Samael, Gamaliel, and Nehemoth.}
+
+#alias {emb}{
+        #if {"%0" != ""}{
+                !embrace %0;
+                !possess reassert;
+                !checkstance;
+        }{
+                #echo {Goalchab:      Health 80,  Attack 80,  Defense 100.  Attacks: Normal.};
+                #echo {Thamiel:       Health 100, Attack 100, Defense 100.  Attacks: Normal.};
+                #echo {Thagirion:     Health 50,  Attack 100, Defense 75.   Attacks: Focused.};
+                #echo {Gamchicoth:    Health 50,  Attack 100, Defense 75.   Attacks: Focused.};
+                #echo {Sathariel:     Health 80,  Attack 80,  Defense 80.   Attacks: Focused.};
+                #echo {Chaigidel:     Health 60,  Attack 100, Defense 60.   Attacks: Focused. Transfig: Focused};
+                #echo {Harab Serapel: Health 100, Attack 70,  Defense 80.   Attacks: Focused. Transfig: Focused};
+                #echo {Samael:        Health 80,  Attack 100, Defense 80.   Attacks: Normal.  Special attacks.};
+                #echo {Gamaliel:      Health 100, Attack 100, Defense 60.   Attacks: Normal.  Special attacks.};
+                #echo {Nehemoth:      Health 100, Attack 100, Defense 100.  Attacks: Normal.  Special attacks.};
+        };
+}
+
+#alias {prae}{
+        #echo {Terra Praemunio: Edged/Blunt};
+        #echo {Lumen Praemunio: Energy/Radiation};
+        #echo {Vitalis Praemunio: Poison / Acid};
+        #echo {Furor Praemunio: Fire/Mind};
+        #echo {Ultionis Praemunio: Ice/Electricity};
+}
+
+
+#act {Your current possession stance for any new possession is: Health %1\%, Attack %2\%, Defense %3\%.  Attacks will be %4}{
+        #var {my[possess][health]}{%1};
+        #var {my[possess][attack]}{%2};
+        #var {my[possess][defense]}{%3};
+        #echo {%4};
+        #if {"%4" == "natural speed using regular melee only."}{
+                #var {my[possess][speed]}{N};
+                #var {my[possess][special]}{N};
+                #var {my[possess][fullspeed]}{natural};
+        }
+        #if {"%4" == "focused."}{
+                #var {my[possess][speed]}{F};
+                #var {my[possess][special]}{N};
+                #var {my[possess][fullspeed]}{focused};
+        }
+        #if {"%4" == "focused, and offensive transfigurations will be focused as well."}{
+                #var {my[possess][speed]}{F};
+                #var {my[possess][special]}{T};
+                #var {my[possess][fullspeed]}{hyperfocused};
+        }
+        #if {"%4" == "natural speed, and include special attacks."}{
+                #var {my[possess][speed]}{N};
+                #var {my[possess][special]}{S};
+                #var {my[possess][fullspeed]}{special};
+        }
+}
+
+#act {offensive transfigurations will be focused as well.}{
+        #var {my[possess][speed]}{F};
+        #var {my[possess][special]}{T};
+        #var {my[possess][fullspeed]}{hyperfocused};
+}
+
+#act {speed, and include special attacks}{
+        #var {my[possess][speed]}{N};
+        #var {my[possess][special]}{S};
+        #var {my[possess][fullspeed]}{special};
+}
+
+
+#act {You alter your stance on to possession health to %1\%.}{
+        #var {my[possess][health]}{%1};
+}
+#act {You alter your stance on to possession defense to %1\%.}{
+        #var {my[possess][defense]}{%1};
+}
+#act {You alter your stance on to possession attack to %1\%.}{
+        #var {my[possess][attack]}{%1};
+}
+
+#act {You alter your stance on to possession speed to be '%1':}{
+        #if {"%1" == "natural"}{
+                #var my[possess][speed] {N};
+                #var my[possess][special] {None};
+        	#var {my[possess][fullspeed]}{natural};
+        };
+        #if {"%1" == "focused"}{
+                #var my[possess][speed] {F};
+                #var my[possess][special] {None};
+        	#var {my[possess][fullspeed]}{focused};
+        };
+        #if {"%1" == "hyperfocused"}{
+                #var my[possess][speed] {F};
+                #var my[possess][special] {T};
+        	#var {my[possess][fullspeed]}{hyperfocused};
+        };
+        #if {"%1" == "specials"}{
+                #var my[possess][speed] {N};
+                #var my[possess][special] {S};
+        	#var {my[possess][fullspeed]}{special};
+        };
+}
+
+#act {This stance's source is: %1}{
+        #var my[stance] {%1};
+}
+
+
+set_defaults
+
+#var my[desecrate] 0
+#var my[drounds] 0
+#var my[ceasetrigger] 0
+#var my[autocease] 1
+#var my[gouged] 0
+#var my[desired][refresh][rate] 51
+
+#alias setess {
+        #var my[desired][refresh][rate] %1;
+        #math {my[desired][refresh][modulo]}{$my[desired][refresh][rate] % 3};
+        #if {$my[desired][refresh][modulo] != 0}{
+                #math {my[desired][refresh][rate]}{$my[desired][refresh][rate] - 1};
+                #math {my[desired][refresh][modulo]}{$my[desired][refresh][rate] % 3};
+                #if {$my[desired][refresh][modulo] != 0}{
+                        #math {my[desired][refresh][rate]}{$my[desired][refresh][rate] - 1};
+                        #math {my[desired][refresh][modulo]}{$my[desired][refresh][rate] % 3};
+                        #if {$my[desired][refresh][modulo] != 0}{
+                                #math {my[desired][refresh][rate]}{$my[desired][refresh][rate] - 1};
+                                #math {my[desired][refresh][modulo]}{$my[desired][refresh][rate] % 3};
+                        };
+                };
+        };
+        #math {my[desired][refresh][formula]}{$my[essence][max] / 10};
+        #math {my[desired][refresh][modulo]}{$my[desired][refresh][formula] % 3};
+        #if {$my[desired][refresh][modulo] != 0}{
+                #math {my[desired][refresh][formula]}{$my[desired][refresh][formula] - 1};
+                #math {my[desired][refresh][modulo]}{$my[desired][refresh][formula] % 3};
+                #if {$my[desired][refresh][modulo] != 0}{
+                        #math {my[desired][refresh][formula]}{$my[desired][refresh][formula] - 1};
+                        #math {my[desired][refresh][modulo]}{$my[desired][refresh][formula] % 3};
+                        #if {$my[desired][refresh][modulo] != 0}{
+                                #math {my[desired][refresh][formula]}{$my[desired][refresh][formula] - 1};
+                                #math {my[desired][refresh][modulo]}{$my[desired][refresh][formula] % 3};
+                        };
+                };
+        };
+        #if {$my[desired][refresh][rate] > $my[desired][refresh][formula]}{
+                #var {my[desired][refresh][rate]}{$my[desired][refresh][formula]};
+        };
+        #echo {Essence Rate now $my[desired][refresh][rate]};
+};
+
+
+
+#nop {H: $HP$/$HPMAX$[$DHP$]|$PHP$/$PHPMAX$[$DPHP$] S: $SP$/$SPMAX$[$DSP$] E: $ESS$/$ESSMAX$[$DESS$]($REFR$)$NL$G: $GXP3$% SC: ($RELE$) $SOUL$% C: $SPEC$% [$SPIR2$|$DISC2$]$NL$T: [ $TFIG$ ] E: $NME$}
+
+#gag {H: %1/%2[%3]|%4/%5[%6] S: %7/%8[%9] E: %10/%11[%12](%13)}
+#act {H: %1/%2[%3]|%4/%5[%6] S: %7/%8[%9] E: %10/%11[%12](%13)}{
+	#var {my[hp][current]}		{%1};
+	#var {my[hp][max]}		{%2};
+	#var {my[hp][delta]}		{%3};
+	#var {my[php][current]}		{%4};
+	#var {my[php][max]}		{%5};
+	#var {my[php][delta]}		{%6};
+	#var {my[sp][current]}		{%7};
+	#var {my[sp][max]}		{%8};
+	#var {my[sp][delta]}		{%9};
+	#var {my[gp1][current]}		{%10};
+	#var {my[essence][current]}	{%10};
+	#var {my[gp1][max]}		{%11};
+	#var {my[essence][max]}		{%11};
+	#var {my[gp1][delta]}		{%12};
+	#var {my[essence][delta]}	{%12};
+	#var {my[refresh][rate]}	{%13};
+	#math {my[hp][difference]}	{$my[hp][max] - $my[hp][current]};
+	#math {my[php][difference]}	{$my[php][max] - $my[php][current]};
+	#math {my[essence][difference]}	{$my[essence][max] - $my[essence][current]};
+        #math {my[desired][refresh][formula]}{$my[essence][max] / 10};
+        #math {my[desired][refresh][modulo]}{$my[desired][refresh][formula] % 3};
+	#if {"${my[possess][attack]}" == "" }{!checkstance};
+        #if {$my[desired][refresh][modulo] != 0}{
+                #math {my[desired][refresh][formula]}{$my[desired][refresh][formula] - 1};
+                #math {my[desired][refresh][modulo]}{$my[desired][refresh][formula] % 3};
+                #if {$my[desired][refresh][modulo] != 0}{
+                        #math {my[desired][refresh][formula]}{$my[desired][refresh][formula] - 1};
+                        #math {my[desired][refresh][modulo]}{$my[desired][refresh][formula] % 3};
+                        #if {$my[desired][refresh][modulo] != 0}{
+                                #math {my[desired][refresh][formula]}{$my[desired][refresh][formula] - 1};
+                                #math {my[desired][refresh][modulo]}{$my[desired][refresh][formula] % 3};
+                        };
+                };
+        };
+        #math {RelEss}{$my[desired][refresh][formula] / 2};
+        #nop {Set Essence Rate to whatever I want it to be};
+        #var {my[desired][refresh][formula]}{$my[desired][refresh][rate]};
+        #if {$my[refresh][rate] != $my[desired][refresh][formula]}{!rate $my[desired][refresh][formula]};
+}
+
+#gag {G: %1\% SC: (%2) %3\% C: %4\% [%5|%6]}
+#act {G: %1\% SC: (%2) %3\% C: %4\% [%5|%6]}{
+        #var my[gtnl] %1;
+        #var my[release][current] %2;
+        #var my[soul][current] %3;
+        #var my[spec][current] %4;
+        #var my[spirit][current] %5;
+        #var my[discipline][current] %6;
+}
+
+#gag {^T: [%1] E: %2}
+#act {^T: [%1] E: %2}{
+        #var my[transfigurations][all] %1;
+        #var my[attacker] %2;
+        #if {"$my[attacker]" == "None"}{
+                #var my[incombat] 0;
+                #if {$my[desecrate] == 1}{
+                        #math {my[ceasetrigger]}{$my[ceasetrigger] + 1};
+                }
+                #if {$my[autocease] == 1 && $my[ceasetrigger] >= 10}{
+                        !cease;
+                };
+                #var my[gouged] 0;
+        }{
+                #var my[incombat] 1;
+                #if {$my[gouged] != 1}{
+                        !gouge;
+                        #var my[gouged] 1;
+                }
+                #if {$my[ceasetrigger] >= 5}{
+                        #if {$my[autocease] == 1 && my[desecrate] == 1}{
+                                !cease;
+                        };
+                };
+        };
+        #regex {$my[transfigurations][all]}{Da}{
+                #if {$my[desired][darkfire] == 0}{
+                        !hide darkfire;
+                };
+        }{
+                #if {$my[desired][darkfire] == 1}{
+                        !show darkfire;
+                };
+        };
+        #regex {$my[transfigurations][all]}{Cl}{
+                #if {$my[desired][claws] == 0}{
+                        !hide claws;
+                };
+        }{
+		#if {$my[desired][claws] == 1}{
+			!show claws;
+		};
+        };
+        #regex {$my[transfigurations][all]}{Sh}{
+                #if {$my[desired][shadowflame] == 0}{
+                        !hide shadowflame;
+                }
+        }{
+                #if {$my[desired][shadowflame] == 1}{
+                        !show shadowflame;
+                };
+        };
+        #regex {$my[transfigurations][all]}{Bl}{
+                #if {$my[desired][bloodrage] == 0}{
+                        !hide bloodrage;
+                }
+        }{
+                #if {$my[desired][bloodrage] == 1}{
+                        !show bloodrage;
+                };
+        };
+        #regex {$my[transfigurations][all]}{Ev}{
+                #if {$my[desired][evil] == 0}{
+                        !hide evil;
+                }
+        }{
+                #if {$my[desired][evil] == 1}{
+                        !show evil;
+                };
+        };
+        #regex {$my[transfigurations][all]}{Pr}{
+                #if {$my[desired][prowess] == 0}{
+                        !hide prowess;
+                }
+        }{
+                #if {$my[desired][prowess] == 1}{
+                        !show prowess;
+                };
+        };
+        #regex {$my[transfigurations][all]}{Pe}{
+                #if {$my[desired][perseverance] == 0}{
+                        !hide perseverance;
+                }
+        }{
+                #if {$my[desired][perseverance] == 1}{
+                        !show perseverance;
+                };
+        };
+        #regex {$my[transfigurations][all]}{Ae}{
+                #if {$my[desired][aegis] == 0}{
+                        !hide aegis;
+                }
+        }{
+                #if {$my[desired][aegis] == 1}{
+                        !show aegis;
+                };
+        };
+        #regex {$my[transfigurations][all]}{Te}{
+                #if {$my[desired][tenebra] == 0}{
+                        !hide tenebra;
+                }
+        }{
+                #if {$my[desired][tenebra] == 1}{
+                        !show tenebra;
+                };
+        };
+        #if {$my[incombat] == 1 && $my[hp][current] < 150}{
+                go fallen regen;
+        };
+        #if {$my[incombat] == 1 && $my[essence][current] < 100}{
+                go fallen regen;
+        };
+        #if {$my[incombat] == 1 && $my[drounds] >= 30 && $my[desecrate] != 1}{
+                !desecrate;
+        };
+        #if {$my[autocease] == 1 && $my[incombat] == 0 && $my[desecrate] == 1 && $my[hp][difference] == 0 && $my[php][difference] == 0 && $my[essence][difference] < 5}{
+                !cease;
+        };
+        #if {my[desecrate] != 1}{
+                #math {my[drounds]}{$my[drounds] + 1};
+        };
+	update_status;
+}
+
+#alias {update_status} {
+        #if {"$cooler" == "on" || $corpses[cooler] > 0} {
+                #format {sb1_cooler} {%+2s} {$corpses[cooler]};
+                #var {sb1_cooler} { CL:<130>$sb1_cooler<088>}
+        } {
+                #var {sb1_cooler} {}
+        };
+        #if {"$freezer" == "on" || $corpses[freezer] > 0} {
+                #format {sb2_freezer} {%+2s} {$corpses[freezer]};
+                #var {sb2_freezer} { FZ:<130>$sb2_freezer<088>}
+        } {
+                #var {sb2_freezer} {}
+        };
+	#var	{my[hp][graph]}		{@graph{$my[hp][current];$my[hp][max]}};
+	#var	{my[php][graph]}	{@graph{$my[php][current];$my[php][max]}};
+	#var	{my[sp][graph]}		{@graph{$my[sp][current];$my[sp][max]}};
+	#var	{my[gp1][graph]}	{@graph{$my[gp1][current];$my[gp1][max]}};
+	#var	{enemy[graph]}		{@graph{$enemy[hp];100}};
+	#format {hp}			{%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
+	#format {hp_max}		{%+4s} {<128>$my[hp][max]<088>};
+	#format {php}			{%+5s} {@colscale{$my[php][current];$my[php][max]}};
+	#format {php_max}		{%+5s} {<128>$my[php][max]<088>};
+	#format {sp}			{%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
+	#format {sp_max}		{%+4s} {<128>$my[sp][max]<088>};
+	#format {ep}			{%+4s} {@colscale{$my[gp1][current];$my[gp1][max]}};
+	#format {ep_max}		{%+4s} {<128>$my[gp1][max]<088>};
+	#format {ehealth}		{%+8s} {@colscale{$enemy[hp];100}\%};
+        #format {transfigs}    		{%-35s}{$my[transfigurations][all]};
+        #format {round_damage}          {%+16s} {$NumbersString};
+	#format {possess_string}	{%-38s}{S: $my[stance] - A${my[possess][attack]} D${my[possess][defense]} H${my[possess][health]} (${my[possess][fullspeed]})};
+	#format {gtnl_string}		{%-18s}{$my[gtnl] - $my[discipline][current]};
+	#format {desecrate_string}	{%-18s}{${my[desecrate]}/${my[drounds]}};
+	#format {round_damage}          {%+16s} {$my[damagetracker][foe] -> @rcolscale{$my[damagetracker][damage];2500}};
+	#format {round_average}		{%+4s} {@rcolscale{$my[damagetracker][average];2500}};
+        #format {corpses[inventory]}    {%+2s} {$corpses[inventory]};
+        #format {corpses[truck]}	{%+2s} {$corpses[truck]};
+        #format {corpses[coffin]}	{%+2s} {$corpses[coffin]};
+        #format {corpses[freezer]}	{%+2s} {$corpses[freezer]};
+	#showme {<088>PHP: ${php}/${php_max} HP:${hp}/${hp_max} SP:${sp}/${sp_max}  E:${ep}/${ep_max}  $possess_string D: ${desecrate_string} D: $round_damage}{-4};   
+	#showme {PHP: ${my[php][graph]}   H:${my[hp][graph]} S:${my[sp][graph]} E:${my[gp1][graph]} T: ${transfigs} G: $gtnl_string E:${enemy[graph]}} {-3};
+	#showme {$mip[gline][2]} {-6};
+	#showme {$mip[gline][1]} {-7};
+}
+
+#alias {corpsetrig} {
+	!wrap corpse;
+	!divvy;
+}
+
+#alias {cco}{
+	!unwrap corpse;
+	#if {"$my[autocorpse][method]" == "guild"}{
+		!free corpse;
+	};
+	#if {"$my[autocorpse][method]" == "nex"}{
+		!orare;
+	};
+};
+
+#act {BEGINS TO REBEL AGAINST YOUR CONTROL}{
+        !possess reassert;
+}
+
+#act {Floobity dealt the killing blow to %1.} {
+	#var {my[damagetracker][submit]}{1};
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+}
+#act {Ominous Shadow dealt the killing blow to %1.} {
+	#var {my[damagetracker][submit]}{1};
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+}
+#act {Writhing Horror dealt the killing blow to %1.} {
+	#var {my[damagetracker][submit]}{1};
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+}
+
+#class {floobity} {close}

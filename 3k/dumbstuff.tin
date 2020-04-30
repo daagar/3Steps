@@ -1,0 +1,36 @@
+#act {TS:%1/%2}
+{
+#var {my[timeslices][current]}    {%1};
+}
+
+#act {HO:%d.%d Hit:%d HI:%d.%d Hit:%d LO:%d.%d Hit:%d LI:%d.%d Hit:%d} {
+    #var {my[advantage][ho]}    {%1};
+    #var {my[weakness][ho]}        {%3};
+    #var {my[advantage][hi]}    {%4};
+    #var {my[weakness][hi]}        {%6};
+    #var {my[advantage][lo]}    {%7};
+    #var {my[weakness][lo]}        {%9};
+    #var {my[advantage][li]}    {%10};
+    #var {my[weakness][li]}            {%12};
+#NOP {Set up divine strikes when advantage is approprate};
+	#if {$my[advantage][ho] >= 85}{
+		  #if {$my[timeslices][current] >= 5}{
+		   !divine strike ho;
+		}
+	};
+	#if {$my[advantage][hi] >= 85}{
+	    #if {$my[timeslices][current] >= 5}{
+		   !divine strike hi;
+		}
+	}; 
+	#if {$my[advantage][li] > 85}{
+		  #if {$my[timeslices][current] >= 5}{
+		   !divine strike li;
+		}
+	}; 
+	#if {$my[advantage][lo] > 85}{
+	     #if {$my[timeslices][current] >= 5}{
+		   !divine strike lo;
+		}
+	}; 
+}

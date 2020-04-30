@@ -1,0 +1,295 @@
+#var domove 0
+#var critter_room 0
+#var player_room 0
+#var starter 0
+#var stepper 0
+#var reversedir s
+#var reverse_dir 0
+#var findexit 0
+#var area_aggro 0
+#var automap 0
+#var autogather 0
+
+#alias {steptest}{
+        #if {$stepper == 1}{
+                #math {room_num}{$room_num + 1};
+                $kill_path[$room_num];
+                #map map;
+                #showme {You are on Room $room_num};
+        };
+}
+
+#act {You bounce right off the gelatinous wall.}{
+	#map undo;
+	#var {desired_dir}{s};
+	dirfunction {$desired_dir};
+}
+
+#act {Too heavy.}{
+	#var domove 0;
+	#var starter 0;
+}
+
+#act {%1 is too heavy for Ventra's secret chest}{
+	#var domove 0;
+	#var starter 0;
+}
+
+#alias {mysearch}{
+	#var {searchstring}{%0};
+	#echo {Searching for $searchstring};
+}
+
+#act {^=M= %*} {
+	#math {critter_room}{$critter_room + 1};
+	#format {tkstr}{%l}{%1};
+	#var {critter_short_desc}{$tkstr};
+	#if {"$searchstring" != ""}{
+		#regex {$tkstr}{$searchstring}{
+			#bell;
+			#bell;
+			#map get {roomvnum}{foundroom};
+			#echo {***** Found $searchstring in room $foundroom****}
+		};
+	};
+	#if {"$guild" == "mages"}{
+		#regex {$tkstr}{%* (%*)}{
+			#var tkstr none;
+			#math {critter_room}{$critter_room - 1}
+		};
+	};
+	#if {"$searchstring" != ""}{
+		#regex {$tkstr}{$searchstring}{
+			#bell;
+			#bell;
+			#map get {roomvnum}{foundroom};
+			#echo {***** Found $searchstring in room $foundroom****}
+		};
+	};
+	#if {"$guild" == "changeling"}{
+		#regex {$tkstr}{chromatic cuckoo owlet}{
+			#var tkstr none
+			#math {critter_room}{$critter_room - 1}
+		};
+		#regex {$tkstr}{tiny translucent bombardier beetle}{
+			#var tkstr none;
+			#math {critter_room}{$critter_room - 1}
+		};
+		#regex {$tkstr}{tiny translucent wandering spider}{
+			#var tkstr none;
+			#math {critter_room}{$critter_room - 1}
+		};
+	};
+	#if {"$guild" == "changeling" && "$area" == "Changeling"}{
+		#format {timestamp} {%t} {[<268>%H<088>:<268>%M<088>] };
+		#format {dbtimestamp} {%t} {[%Y:%m:%d %H:%M:%S]};
+		update_chat ${timestamp}<178>Biome<088>: $tkstr;
+		db_submit_chat ${dbtimestamp}Biome: $tkstr;
+	};
+	#regex {$tkstr}{%*attacking you%*}{#var tkstr &1};
+	#regex {$tkstr}{%*(%d\%)}{#var tkstr &1};
+	#regex {$tkstr}{%*attacking you%*}{#var tkstr &1};
+	#regex {$tkstr}{%* [%*]%*}{#var tkstr &1};
+	#regex {$tkstr}{[%*] %*}{#var tkstr &2};
+	#regex {$tkstr}{%*[%*]%*}{#var tkstr &1};
+	#regex {$tkstr}{everybody}{#var tkstr none;#math {critter_room}{$critter_room - 1}};
+	#regex {$tkstr}{under the control of}{#var tkstr none;#math {critter_room}{$critter_room - 1}};
+	#if {"$area" == "Summerset Warrens"}{
+		#regex {$tkstr}{cow}{#var tkstr cow};
+		#if {"$tkstr" != "cow"}{
+			#math {critter_room}{$critter_room - 1};
+			#var tkstr cow;
+		};
+	};
+	#regex {$tkstr}{betrayer}{
+		#var tkstr none;
+		#math {critter_room}{$critter_room - 1};
+	};
+	#regex {$tkstr}{broodling}{
+		#var tkstr none;
+		#math {critter_room}{$critter_room - 1};
+	};
+	#regex {$tkstr}{%* %w.$}{#var tkstr &2};
+	#regex {$tkstr}{%* %w$}{#var tkstr &2};
+	#regex {$tkstr}{%* %S$}{#var tkstr &1};
+	#regex {$tkstr}{%* %w.$}{#var tkstr &2};
+	#regex {$tkstr}{%w.$}{#var tkstr &1};
+	#if {"$tkstr" != "none"}{
+		#var kstr $tkstr;
+	};
+	#if {"$area" == "Changeling" && $starter != 1 && $domove == 1}{
+		bscan;
+	};
+}
+
+#act {^=P= %*} {
+        #math {player_room}{$player_room + 1};
+}
+
+
+#act {^=I= %*} {
+        #format {item}{%l}{%1};
+        #if {$player_room == 0}{
+                #regex {$item}{gold coins}{!divvy coins};
+        };
+        #loop {1}{$all_area_items}{count}{
+                #regex {$item}{$area_items[$count]}{
+                        #list {item_list}{add}{$area_items[$count]};
+                        #list {item_list}{size}{total_items};
+                };
+        };	
+	#if {$player_room == 0}{
+		#regex {$item}{gold coins}{!divvy coins};
+	};
+}
+
+#alias {dirfunction}{
+        #if {"%1" == "s"}{#var reversedir n;s};
+        #if {"%1" == "e"}{#var reversedir w;e};
+        #if {"%1" == "w"}{#var reversedir e;w};
+        #if {"%1" == "n"}{#var reversedir s;n};
+        #if {"%1" == "sw"}{#var reversedir ne;sw};
+        #if {"%1" == "se"}{#var reversedir nw;se};
+        #if {"%1" == "nw"}{#var reversedir se;nw};
+        #if {"%1" == "ne"}{#var reversedir sw;ne};
+}
+
+
+#alias ki {
+	#if {$domove == 1}{
+		#var domove 0;
+		#var starter 0;
+		#var player_room 0;
+		#var critter_room 0
+	}{
+		#var findexit 0;
+		#var critter_room 0;
+		#var player_room 0;
+		#var domove 1;
+		#var starter 1;
+		#if {"$guild" == "angel" && $my[desecrate] == 1}{
+			!cease;
+		};
+		glance;
+	};
+}
+
+#alias {o}{
+	#if {$domove == 1}{
+		#var domove 0;
+		#var findexit 0;
+	}{
+		#var findexit 1;
+		#var domove 1;
+		!glance;
+	};
+}
+
+#alias {gather_items}{
+	#if {$total_items > 0}{
+		#loop {1}{$total_items}{count}{
+		!get ${item_list[$count]};
+		#if {"$area" == "csewers" && "$guild" == "mage"}{
+			id ${item_list[$count]};
+		};
+		pck ${item_list[$count]};
+	};
+		#list {item_list}{clear};
+		#unvar item_list;
+	};
+}
+
+#alias kill-loop {
+	#if {$starter == 1}{
+		#if {${player_room} == 0}{ 
+			#if {${autogather} == 1}{
+				gather_items;
+				};
+		};
+		#if {$stepper == 1}{
+			#map flag static on;
+			#math {room_num}{$room_num + 1};
+			$kill_path[$room_num];
+		}{
+			#map flag static off;
+			dirfunction $desired_dir;
+		};
+		#var domove 1;
+		#var starter 0;
+	}{
+		#if {${player_room} == 0}{ 
+			#if {${autogather} == 1}{
+				gather_items;
+			};
+			#if {${critter_room} > 0}{
+				#var domove 0;
+				#if {$autokill == 1 && $area_aggro != 1}{
+					kk;
+				};
+			}{
+				#if {$stepper == 1}{
+					#math {room_num}{$room_num + 1};
+					$kill_path[$room_num];
+				}{
+					dirfunction $desired_dir;
+				};
+			};
+		}{
+			#if {$stepper == 1}{
+				#math {room_num}{$room_num + 1};
+				$kill_path[$room_num];
+			}{
+				dirfunction $desired_dir;
+			};
+		};
+	};
+}
+
+#alias dir_selection {
+	#var good_dir 0;
+	#var max_rand 0;
+	#if {$domove == 1}{
+		#if {$room_exits == 1}{
+			#var desired_dir ${room_dirs[1]};
+		}{
+			#if {$room_exits == 2}{
+				#if {$upexit == 1}{
+					#var desired_dir ${room_dirs[2]};
+					#var good_dir 1;
+				};
+				#if {$upexit == 2}{
+					#var desired_dir ${room_dirs[1]};
+					#var good_dir 1;
+				};
+			};
+			#while {$good_dir == 0 && $max_rand < 100}{
+				#math {max_rand}{$max_rand + 1};
+				#math {desired_num}{1 d $room_exits};
+				#if {$desired_num != $upexit}{
+					#if {$desired_num != $reverse_dir}{
+						#var {desired_dir}{${room_dirs[$desired_num]}};
+						#var good_dir 1;
+					};
+				};
+			};
+			#if {"$room_short_desc" == "The east gate of Lut Gholein"}{
+				#var {desired_dir}{e};
+				#var good_dir 1;
+			};
+			#if {"$room_short_desc" == "The town square"}{
+				#var {desired_dir}{e};
+				#var good_dir 1;
+			};
+		};
+		#if {$findexit == 1}{
+			kill-loop;
+		}{
+			#if {"$mapping" == "on"}{
+				#delay {0.15}{kill-loop};
+			}{
+				#delay {0.05}{kill-loop};
+			};
+		};
+	};
+}
+

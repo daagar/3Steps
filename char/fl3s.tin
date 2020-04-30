@@ -1,0 +1,439 @@
+#class {fl} {open}
+
+#var guild changeling
+#NOP MYSQL CONNECTOR STUFF
+
+#alias {show_current_form_table}{
+        #draw {rounded}{box} 47 -41 54 -3 {Current Form Stats:};
+	#showme {Form : ${my[form]}} 49 -38;
+        db_query_single_form ${my[form]};
+	#showme {  Major : ${form_results[1][major]}} 50 -38;
+	#showme {  Minor : ${form_results[1][minor]}} 51 -38;
+	#showme {     FF : ${my[ff][level]}} 52 -38;
+	#showme {Avg Dam : ${form_avg[1][avg(damage)]}} 53 -38;
+}
+#alias {show_biome_table}{
+	#format {padded_form}{%+3s}{$form_number};
+        #draw {rounded}{box} 55 -41 65 -3 {   Pokedex Results   (${padded_form}/${all_forms}): << >>};
+        #button {56;-5;56;-4}{
+        	#math {form_number}{$form_number + 1}{};
+        	db_query_biome ${form_list[${form_number}][form]};
+	};
+        #button {56;-8;56;-7}{
+        	#math {form_number}{$form_number - 1}{};
+        	db_query_biome ${form_list[${form_number}][form]};
+	};
+	#showme {Form : $biome_results[$result_number][form]} 58 -38;
+        #button {58;-40;58;-35}{db_list_biome form};
+	#showme { Type : $biome_results[$result_number][formtype]} 59 -38;
+        #button {59;-40;59;-35}{db_list_biome formtype};
+	#showme { Major: $biome_results[$result_number][major]} 60 -38;
+        #button {60;-40;60;-35}{db_list_biome major};
+	#showme { Minor: $biome_results[$result_number][minor]} 61 -38;
+        #button {61;-40;61;-35}{db_list_biome minor};
+	#format {padded_room}{%-9s}{${biome_results[$result_number][roomvnum]}};
+	#showme { Room : $padded_room  (${result_number}/${result_size})} 62 -38;
+        #button {62;-40;62;-35}{db_list_biome roomvnum};
+        #if {"${biome_results[$result_number][form]}" != ""}{
+		#replace {biome_results[$result_number][roomshort]}{ x7Bnightx7D}{ \x7Bnight\x7D};
+		#replace {biome_results[$result_number][roomshort]}{ x7Bdayx7D}{ \x7Bday\x7D};
+		#replace {biome_results[$result_number][roomshort]}{ x7Bduskx7D}{ \x7Bdusk\x7D};
+		#replace {biome_results[$result_number][roomshort]}{ x7Bdawnx7D}{ \x7Bdawn\x7D};
+	};
+        #showme {       [ <128>GO<088> ]      [<faa>-<088>][<afa>+<088>]} 63 -38;
+        #button {63;-16;63;-14}{bnext};
+        #button {63;-19;63;-17}{bprev};
+        #button {63;-34;63;-26}{biomego};
+	#showme {$biome_results[$result_number][roomshort]} 64 -38;
+        #button {64;-40;64;-35}{db_list_biome roomshort};
+};
+
+#alias {db_submit_biome}{
+        db_submit {db_return}{%s}{insert into biome (timestamp, roomvnum, roomshort, form, formtype, major, minor) VALUES (`$dbtimestamp`,`$roomvnum`, `$biome[roomshort]`, `$biome[form]`, `$biome[formtype]`, `$biome[major]`, `$biome[minor]`)};
+};
+
+#alias {db_list_biome}{
+        db_submit {form_list}{%s}{select distinct form from biome order by %0 asc;};
+	#list {form_list}{size}{all_forms};
+        #var {form_number}{1};
+        db_query_biome ${form_list[${form_number}][form]}
+};
+
+#alias {db_query_biome}{
+        db_submit {biome_results}{%s}{select distinct roomvnum, roomshort, form, formtype, major, minor from biome where form = `%0` order by timestamp desc limit 100;};
+        #var {result_number}{1};
+        #list {biome_results}{size}{result_size};
+        show_biome_table;
+};
+
+#alias {db_query_single_form}{
+        db_submit {form_results}{%s}{select form, formtype, major, minor from biome where form = `a %0` or form = `an %0` limit 1;};
+};
+
+#alias {db_query_form_damage}{
+        db_submit {form_avg}{%s}{select guildstring, avg(damage) from (select guildstring, damage from damage_log where guildstring = `$guild ($my[form]($my[ff][level]))` order by timestamp desc limit 1000)var1;};
+	show_current_form_table;
+};
+
+#ticker {form_damage}{show_biome_table;db_query_form_damage}{30};
+	
+#alias {bnext}{
+        #math {result_number}{$result_number + 1};
+        #if {$result_number > $result_size}{#var {result_number}{$result_size}};
+        show_biome_table;
+};
+
+#alias {bprev}{
+        #math {result_number}{$result_number - 1};
+        #if {$result_number == 0}{#var {result_number}{1}};
+        show_biome_table;
+};
+
+#alias {biomego}{
+	#map flag static on;
+        #map run ${biome_results[$result_number][roomvnum]};
+	#math {result_number}{$result_number + 1};
+        show_biome_table;
+};
+
+
+#NOP END OF MYSQL
+#alias {autope}{
+	#if {$my[autopersevere] != 1}{
+		#var {my[autopersevere]} {1};
+	}{
+		#var {my[autopersevere]} {0};
+	}
+};
+
+#gag {You will no longer dissipate attacks against you.}
+#gag {You will no longer persevere.}
+#gag {You focus on retaining your shape.}
+#gag {You begin to concentrate on turning aside harmful attacks.}
+#gag {Your cells rapidly freeze and die}
+#gag {The supercooled regions cause your cells}
+#gag {The searing heat that you are generating is damaging}
+#gag {Cells blacken and die around your superheated regions!}
+#gag {The tiny translucent bombardier beetle hit}
+#gag {The tiny translucent wandering spider hit}
+#gag {The tiny translucent bombardier beetle sighs.}
+#gag {The tiny translucent wandering spider sighs.}
+#gag {^You instinctively know that biting this being would have no effect.}
+#gag {^You are not able to bite anything at this time!}
+#gag {%1 writhes in pain as its flesh slowly rots!}
+
+
+#gag {Energy pours into you, rejuvenating lost stamina and protoplasm!}
+#gag {You resume accelerating your natural regeneration.}
+#gag {You resume radiating heat.}
+#gag {You resume radiating cold.}
+#gag {When you persevere, you will dedicate %1 of your focus on retaining your shape.}
+#gag {The chaotic energies revitalize you!}
+
+#act {^You instinctively know that biting this being would have no effect.}{
+	#var {my[bite][status]}{1};
+};
+#act {%1 flesh stops rotting}{
+	#var {my[bite][status]}{0};
+};
+#act {^Your wounds close as you morph into a %1!}{
+	#delay {2}{db_query_form_damage};
+};
+#act {You morph into a %1!}{
+	#delay {2}{db_query_form_damage};
+};
+#act {^Your wounds close as you morph into an %1!}{
+	#delay {2}{db_query_form_damage};
+};
+#act {You morph into an %1!}{
+	#delay {2}{db_query_form_damage};
+};
+
+#alias kk {kill $kstr}
+#alias k {kill %0}
+#alias co {
+	!give bioplast to fl;
+	!consume bioplast;
+	!give bioplast to fl;
+	!consume bioplast;
+};
+
+#gag {HP[%1/%2] SP[%3/%4] ST[%5\%] PP[%6\%] CF[%7/%8\%] FF[%9] E%10 %11}
+#act {HP[%1/%2] SP[%3/%4] ST[%5\%] PP[%6\%] CF[%7/%8\%] FF[%9] E[%10] %11}{
+	#var {my[hp][current]}		{%1};
+	#var {my[hp][max]}		{%2};
+	#var {my[sp][current]}		{%3};
+	#var {my[sp][max]}		{%4};
+	#var {my[gp1][current]}		{%5};
+	#var {my[stam][current]}	{%5};
+	#var {my[gp2][current]}		{%6};
+	#var {my[pp][current]}		{%6};
+	#var {my[relinquish][current]}	{%7};
+	#var {my[relinquish][reset]}	{%8};
+	#var {my[ff][current]}		{%9};
+	#replace {my[ff][current]}{%}{};
+	#math {my[hp][deficit]}{$my[hp][max] - $my[hp][current]};
+        #if {"%10" != ""}{
+		#var {my[attacker]}	{%10};
+		#var {my[incombat]}	{1};
+        }{
+                #var {my[attacker]}	{0};
+		#var {my[incombat]}	{0};
+		#var {my[bite][status]}{0};
+        };
+        #if {"%11" != ""}{
+                #var hpbarTmpInt 	{%11};
+        }{
+                #var hpbarInt 		{None};
+        };
+        #regex {$hpbarTmpInt}{%.%s%*}{
+                #var hpbarInt 		{&3};
+        };
+        #regex {$hpbarInt}{A}{
+                #var {my[adrenalize]}	 {1};
+                }{
+                #var {my[adrenalize]}	{0};
+        };
+        #regex {$hpbarInt}{H}{
+                #var {my[hyperproliferate]}	{1};
+                }{
+                #var {my[hyperproliferate]}	{0};
+        }
+        #regex {$hpbarInt}{D}{
+                #var {my[dissipate]}		{1};
+        }{
+                #var {my[dissipate]}		{0};
+        };
+        #regex {$hpbarInt}{V}{
+                #var {my[perseverance][active]}	{1};
+        }{
+                #var {my[perseverance][active]}	{0};
+        };
+        #regex {$hpbarInt}{R:%d}{
+                #var {my[relinq]}		{1};
+        }{
+                #var {my[relinq]}		{0};
+        };
+	#if {$my[gp1][current] < 10 || $my[gp2][current] < 20} {
+		#if {$my[relinquish][current] > 0}{
+			#if {$my[relinq] != 1} {
+				!relinquish;
+				#var {my[relinq]}	{1};
+			};
+		}{
+			#if {$my[bioplasts] > 0} {
+				!= give bioplast to fl;
+				!consume bioplast;
+			};
+		};
+		#if {$my[gp2][current] < 10}{
+			!= give bioplast to fl;
+			!consume bioplast;
+		};
+		#if {$my[gp1][current] < 10}{
+			!= give bioplast to fl;
+			!consume bioplast;
+		};
+	};
+	#if {$my[sp][current] < 10 && $my[relinquish][current] > 2 && $my[relinq] != 1}{
+			!relinquish;
+			#var {my[relinq]}	{1};
+	};
+	#if {$my[relinquish][reset] > 90 && $my[relinquish][current] > 0 && $my[relinq] != 1}{
+			!relinquish;
+			#var {my[relinq]}	{1};
+	};
+        #if {$my[adrenalize] != 1}{
+                #if {$my[sp][current] > 50}{
+                        !adrenalize on;
+                };
+        };
+        #if {$my[hyperproliferate] != 1}{
+                #if {$my[sp][current] > 50 && $my[relinq] != 1}{
+                        !hyperproliferate on;
+                };
+        };
+	#if {$my[incombat] == 0}{
+		#if {$my[hp][current] < $my[hp][max]}{
+			!morph;
+		};
+	}{
+		#if {${my[bite][status]} != 1}{
+			!gouge;
+			#nop {
+			#if {"${my[form]}" != "white tail spider"}{
+				!morph white tail;
+				!bite;
+				#delay {unmorph}{!morph ${my[returnform]}}{2};
+			};
+			};
+			#var {my[bite][status]}{1};
+		};
+		#if {$my[hp][deficit] > 500}{
+			!morph;
+		};
+		#if {${my[hp[current]} < 1000 && ${my[pp][current]} < 10}{
+			go home;
+		};
+	};
+	#if {$my[hp][current] < 1000}{
+		!morph;
+		!morph;
+	};
+	#math {my[gpdiff]}{$my[gp1][current] - $my[gp2][current]};
+	#if {$my[gpdiff] > 0}{
+		#if {$my[dissipate] != 1}{
+			!dissipate on;
+			#var {my[dissipate]}{1};
+		};
+		#if {$my[gpdiff] > 10}{
+			#if {$my[perseverance][active] != 1}{
+				!perseverance on;
+			};
+			#if {$my[gpdiff] > 20}{
+				#if {"$my[perseverance][level]" != "half"}{
+					!perseverance half;
+					#var {my[perseverance][level]}{half};
+				};
+			}{
+				#if {"$my[perseverance][level]" != "some"}{
+					!perseverance some;
+					#var {my[perseverance][level]}{some};
+				};
+			};
+		}{
+			#if {$my[perseverance][active] == 1}{
+				!perseverance off;
+			};
+		};
+	}{
+		#if {$my[dissipate] == 1}{
+			!dissipate off;
+			#var {my[dissipate]}{0};
+		};
+		#if {$my[perseverance][active] == 1}{
+			!perseverance off;
+		};
+	};
+}
+
+#gag {^F[%1] S[%2/%3\%] B[%4]$}
+#act {^F[%1] S[%2/%3\%] B[%4]$}{
+	#var {my[form]}			{%1};
+	#var {my[skill][name]}		{%2};
+	#var {my[skill][current]}	{%3};
+	#var {my[bioplasts]}		{%4};
+	#if {"${form_avg[1][guildstring]}" == ""}{
+		#delay {2}{db_query_form_damage};
+	};
+	#if {"${biome_results[1][form]}" == ""}{
+		db_list_biome form;
+	};
+	#if {"${my[form]}" == "white tail spider"}{
+		#var {my[desired][perform]}{bite};
+	}{
+		#var {my[desired][perform]}{off};
+	};
+	#if {"${my[current][perform]}" != "${my[desired][perform]}"}{
+		!perform ${my[desired][perform]};
+		#var {my[current][perform]}{${my[desired][perform]}};
+	};
+	update_status;
+}
+
+#alias {update_status} {
+        #if {"$cooler" == "on" || $corpses[cooler] > 0} {
+                #format {sb1_cooler} {%+2s} {$corpses[cooler]};
+                #var {sb1_cooler} { CL:<130>$sb1_cooler<088>}
+        } {
+                #var {sb1_cooler} {}
+        };
+        #if {"$freezer" == "on" || $corpses[freezer] > 0} {
+                #format {sb2_freezer} {%+2s} {$corpses[freezer]};
+                #var {sb2_freezer} { FZ:<130>$sb2_freezer<088>}
+        } {
+                #var {sb2_freezer} {}
+        };
+	#var	{my[hp][graph]}		{@graph{$my[hp][current];$my[hp][max]}};
+	#var	{my[sp][graph]}		{@graph{$my[sp][current];$my[sp][max]}};
+	#var	{my[gp1][graph]}	{@graph{$my[gp1][current];100}};
+	#var	{my[gp2][graph]}	{@graph{$my[gp2][current];100}};
+	#var	{my[ff][graph]}		{@graph{$my[ff][current];100}};
+	#var	{my[skill][graph]}	{@graph{$my[skill][current];100}};
+	#var	{enemy[graph]}		{@graph{$enemy[hp];100}};
+	#format {hp}			{%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
+	#format {hp_max}		{%+4s} {<128>$my[hp][max]<088>};
+	#format {sp}			{%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
+	#format {sp_max}		{%+4s} {<128>$my[sp][max]<088>};
+	#format {stam}			{%+8s} {@colscale{$my[gp1][current];100}};
+	#format {pp}			{%+7s} {@colscale{$my[gp2][current];100}};
+	#format {ff}			{%+8s} {@colscale{$my[ff][current];100}};
+	#format {skill}			{%+8s} {@colscale{$my[skill][current];100}};
+	#format {relin}			{%+2s} {$my[relinquish][current]};
+	#format {relin_r}		{%+3s} {$my[relinquish][reset]};
+	#format {bio}			{%+3s} {$my[bioplasts]};
+        #format {round_damage}          {%-16s} {$my[damagetracker][foe] -> @rcolscale{$my[damagetracker][damage];2500}};
+	#format {round_average}		{%+4s} {@rcolscale{$my[damagetracker][average];2500}};
+	#format {ehealth}		{%+8s} {@colscale{$enemy[hp];100}\%};
+        #format {corpses[inventory]}    {%+2s} {$corpses[inventory]};
+        #format {corpses[truck]}	{%+2s} {$corpses[truck]};
+        #format {corpses[coffin]}	{%+2s} {$corpses[coffin]};
+        #format {corpses[freezer]}	{%+2s} {$corpses[freezer]};
+	#showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} ST:${stam}%  PP:${pp}%  FF:${ff}  G2N: ${skill}%  BP:${bio}    E: $round_damage} {-4};
+	#showme {H:${my[hp][graph]} S:${my[sp][graph]} ST:${my[gp1][graph]} P:${my[gp2][graph]} F:${my[ff][graph]} G2N: $my[skill][graph] R:${relin}/${relin_r}\% E:${enemy[graph]}} {-3};
+	#showme {$mip[gline][2]} {-7};
+	#showme {$mip[gline][1]} {-6};
+}
+
+#alias {corpsetrig} {
+	!unwrap corpse;
+	#if {"$my[autocorpse][method]" == "guild"}{
+		!bioextract;
+		!give bioplast to clone;
+	};
+	#if {"$my[autocorpse][method]" == "nex"}{
+		!orare;
+	};
+	!wrap corpse;
+	!divvy;
+}
+
+#alias {cco}{
+	!unwrap corpse;
+	!bioextract;
+	!give corpse to nobody;
+};
+
+#alias fa {
+        !fuse all black;
+        !fuse all dark;
+        !fuse all murky;
+        !fuse all turbid;
+        !fuse all lucid;
+        !fuse all milky;
+        !fuse all opaque;
+        !fuse all cloudy;
+        !fuse all foggy;
+        !fuse all translucent;
+        !fuse all transparent;
+        !fuse black and dark;
+        !fuse black and murky;
+        !fuse black and turbid;
+        !fuse black and milky;
+        !fuse black and opaque;
+        !fuse dark and murky;
+        !fuse dark and turbid;
+        !fuse dark and milky;
+        !fuse dark and opaque;
+        !fuse murky and turbid;
+        !fuse turbid and milky;
+}
+
+#act {Fl dealt the killing blow to %1.} {
+	#var {my[damagetracker][submit]}{1};
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+}
+
+#class {fl} {close}

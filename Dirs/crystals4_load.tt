@@ -1,0 +1,21 @@
+#unvar kill_path
+#list {kill_path}{clear}
+#unvar {area_items}
+#list {area_items}{clear}
+#unvar all_area_items
+
+#var kill_path {nw;nw;nw;nw;nw;nw;sw;se;se;se;se;se;se;se;se;se;se;se;se;ne;ne;nw;nw;sw;nw;ne;nw;sw;nw;ne;nw;sw;nw;ne;nw;nw;nw;ne;ne;se;sw;se;se;se;se;se;se;ne;se;se;ne;nw;nw;nw;nw;nw;nw;nw;nw;nw;ne;se;sw;se;ne;ne;e;e;se;se;s;s;sw;n;nw;ne;nw;sw;sw;sw;sw;sw;sw;sw;sw;sw;sw;sw;se;se;nw;ne;ne;ne;ne;ne;ne;ne;ne;ne;se;nw;nw;nw;se;sw;se;se;se;se;ne;se;se;sw;sw;nw;ne;sw;se;ne;ne;nw;nw;sw;sw;sw;sw;se;se;se;sw;nw;sw;w;se;e;e;ne;ne;n;n;nw;nw;ne;ne;se;sw;nw;sw;sw;sw;sw;sw;sw;e;se;se;e;e;ne;ne;ne;n;n;ne;ne;ne;n;n;n;nw;nw;sw;sw;e;se;ne;nw;s;n;sw;w;sw;nw;nw;nw;nw;nw;nw;nw;ne;se;sw;sw;nw;nw;n;ne;nw;sw;e;w;se;s;se;w;nw;nw;w;w;sw;sw;sw;s;s;sw;sw;sw;s;s;s;se;se;ne;ne;w;sw;n;w;ne;se;e;ne;nw;nw;ne;se;ne;nw;nw;n;n;ne;ne;e;e;se;w;sw;nw;sw;se;se;se;se;se;se;se;sw;sw;sw;sw;sw;sw;nw;ne;nw;n;sw;s;s;se;se;e;e;ne;ne;nw;nw;nw;nw;nw;ne;ne;ne;ne;ne;ne;ne;ne;se;se;sw;sw;sw;sw;se}
+
+#list {kill_path}{create}{$kill_path}
+#list {kill_path}{size}{max_room}
+
+#var stepper 1
+#var room_num 0
+
+#var {area_items}{mandibles;scale mail;puppy;crystal;casing}
+#list {area_items}{create}{$area_items}
+#list {area_items}{size}{all_area_items}
+
+
+#var area_aggro 1
+rating
