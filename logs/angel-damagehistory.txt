@@ -2902,3 +2902,6 @@ angel (Northron Wind [A100 D80 H50 (hyperfocused) - [Ter Ev Cl Pr Te Sh ]) - Bla
 angel (Northron Wind [A100 D80 H50 (hyperfocused) - [Ter Ev Cl Pr Te Sh ]) - Black Oo -> 1090 -> 3 times -> 1090 (1201 Avg)
 angel (Northron Wind [A100 D80 H50 (hyperfocused) - [Ter Ev Cl Pr Te Sh ]) - Black Oo -> 928 -> 3 times -> 928 (1192 Avg)
 angel (Northron Wind [A100 D60 H50 (hyperfocused) - [Ter Ev Cl Pr Te Sh ]) - Black Oo -> 1261 -> 3 times -> 1261 (1194 Avg)
+angel (None [A100 D80 H50 (hyperfocused) - [Ter Ev Cl Pr Te Sh ]) - Tornado -> 1173 -> 2 times -> 1173 (1988 Avg)
+angel (None [A100 D80 H50 (hyperfocused) - [Ter Ev Cl Pr Te Sh ]) - Tornado  -> 862 -> 2 times -> 862 (0 Avg)
+angel (None [A100 D80 H50 (hyperfocused) - [Ter Ev Cl Pr Te Sh ]) - Northron -> 1019 -> 2 times -> 1019 (1019 Avg)
