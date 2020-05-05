@@ -41,6 +41,20 @@
 #gag {^violent spasms through %1 body.$}
 #gag {^You have no injuries to mend with the Force.}
 
+#gag {^You clutch at %1 throat with the Force, cutting off %1 oxygen}
+#gag {^You clutch at %1 throat with the Force, cutting}
+#gag {^you crush %1 windpipe.}
+#gag {^off %1 oxygen as you crush %1 windpipe.}
+#gag {^as you crush %1 windpipe.}
+#gag {^oxygen as you crush %1 windpipe.}
+
+#gag {%1 is already under the effects of a Jedi mind trick.}
+#gag {^You delve into %1 mind and draw out}
+#gag {^making %1 recoil in fear}
+
+#gag {^You lash out at %1 with your mind, but find}
+#gag {^prepared.}
+
 #gag {^You lash out at %1 with your mind, but find %2 prepared.}
 #gag {^You delve into %1 mind and draw out %2 fears, making}
 #gag {^recoil in fear!};
