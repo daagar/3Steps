@@ -18,7 +18,7 @@ F 11
 
 G 0
 
-I 9802
+I 411
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -2267,7 +2267,7 @@ R {  410} {0} {} {410} { } {} {} {} {} {} {1.000} {}
 E {  409} {w} {w} {8} {0} {} {1.000} {}
 E {  391} {n} {n} {1} {0} {} {1.000} {}
 
-R {  411} {0} {} {aegisl5} { } {} {} {} {} {} {1.000} {}
+R {  411} {0} {} {aegisl5} { } {} {} {aegisl5} {} {} {1.000} {}
 E {  311} {u} {u} {16} {0} {} {1.000} {}
 E {  412} {e} {e} {2} {0} {} {1.000} {}
 E {  430} {w} {w} {8} {0} {} {1.000} {}
@@ -25634,7 +25634,6 @@ E { 5648} {n} {n} {1} {0} {} {1.000} {}
 R { 5628} {0} {} {5628} { } {} {} {} {} {} {1.000} {}
 E { 5627} {n} {n} {1} {0} {} {1.000} {}
 E { 5629} {s} {s} {4} {0} {} {1.000} {}
-E {12914} {e} {e} {2} {0} {} {1.000} {}
 
 R { 5629} {0} {} {5629} { } {} {} {} {} {} {1.000} {}
 E { 5628} {n} {n} {1} {0} {} {1.000} {}
@@ -60795,19 +60794,7 @@ R {12913} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 5949} {n} {n} {1} {0} {} {1.000} {}
 E {  818} {e} {e} {2} {0} {} {1.000} {}
 
-R {12914} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
-E { 5628} {w} {w} {8} {0} {} {1.000} {}
-E {12915} {s} {s} {4} {0} {} {1.000} {}
-E {12919} {e} {e} {2} {0} {} {1.000} {}
-E {12923} {n} {n} {1} {0} {} {1.000} {}
-
-R {12915} {0} {} {} { } {} {} {} {} {} {1.000} {}
-E {12914} {n} {n} {1} {0} {} {1.000} {}
-E {12916} {e} {e} {2} {0} {} {1.000} {}
-E {12920} {s} {s} {4} {0} {} {1.000} {}
-
 R {12916} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
-E {12915} {w} {w} {8} {0} {} {1.000} {}
 E {12917} {e} {e} {2} {0} {} {1.000} {}
 E {12921} {s} {s} {4} {0} {} {1.000} {}
 E {12919} {n} {n} {1} {0} {} {1.000} {}
@@ -60826,12 +60813,10 @@ E {12928} {n} {n} {1} {0} {} {1.000} {}
 
 R {12919} {0} {} {Near a skeleton in the sands (n,s,w,e)} { } {The bleak landscape is punctuated here by the presence of an ancient skeleton which has sat undisturbed for decades. The sand has brushed every surface smooth and all traces of organic material have been long since carried off by carrion. An ancient spear is clutched in the still closed hand of this ancient victim of the wastes. The area is otherwise uninteresting. } {Diablo 2 Act 2} {} {} {} {1.000} {}
 E {12918} {e} {e} {2} {0} {} {1.000} {}
-E {12914} {w} {w} {8} {0} {} {1.000} {}
 E {12924} {n} {n} {1} {0} {} {1.000} {}
 E {12916} {s} {s} {4} {0} {} {1.000} {}
 
 R {12920} {0} {} {} { } {} {} {} {} {} {1.000} {}
-E {12915} {n} {n} {1} {0} {} {1.000} {}
 E {12921} {e} {e} {2} {0} {} {1.000} {}
 
 R {12921} {0} {} {} { } {} {} {} {} {} {1.000} {}
@@ -60844,12 +60829,7 @@ E {12921} {w} {w} {8} {0} {} {1.000} {}
 E {12917} {n} {n} {1} {0} {} {1.000} {}
 E {12985} {e} {e} {2} {0} {} {1.000} {}
 
-R {12923} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
-E {12914} {s} {s} {4} {0} {} {1.000} {}
-E {12924} {e} {e} {2} {0} {} {1.000} {}
-
 R {12924} {0} {} {Along an ancient desert road (n,s,w,e)} { } {=M= A heucuva under the control of Flo.  Flo3s    Uptime: 5.0 days  Reboot: 2.0 days  Lag: 0.00  Idle: [00:00:01]   =S=Along an ancient desert road (n,s,w,e)                         =S=W ---*--- E The desert landscape is dominated by distant rock walls and mountains which climb relatively short heights before flattening into plateaus. An ancient cobblestone road is half covered in sand as it leads off into the distance in no particular direction, meandering to and fro. Uncomfortably large insects scurry around underfoot and hide in the cracks of the road. An old wheel sits on the side of the road collecting dust. } {Diablo 2 Act 2} {} {} {} {1.000} {}
-E {12923} {w} {w} {8} {0} {} {1.000} {}
 E {12919} {s} {s} {4} {0} {} {1.000} {}
 E {12927} {n} {n} {1} {0} {} {1.000} {}
 E {12928} {e} {e} {2} {0} {} {1.000} {}
@@ -61216,7 +61196,6 @@ R {12999} {0} {} {A small set of ruins (n,s,w,e)} { } {An ancient collection of 
 E {12934} {e} {e} {2} {0} {} {1.000} {}
 E {13000} {n} {n} {1} {0} {} {1.000} {}
 E {12927} {s} {s} {4} {0} {} {1.000} {}
-E {13002} {w} {w} {8} {0} {} {1.000} {}
 
 R {13000} {0} {} {Atop a small cliff in the desert (s,w,e)} { } {A modest cliff drops away in front of you. It is not large enough to block travel, but a fall from the top would leave a mark. The land below spreads out in the distance with few signs of activity. Well off in the opposite direction a desert twister moves across the horizon leaving a trail of dust in the air. Tracks abound in this area showing signs of desert predators hunting for prey. The sun bakes down from above heating the surface of the rocks. } {Diablo 2 Act 2} {} {} {} {1.000} {}
 E {12936} {e} {e} {2} {0} {} {1.000} {}
@@ -61225,15 +61204,8 @@ E {13001} {w} {w} {8} {0} {} {1.000} {}
 
 R {13001} {0} {} {Along an ancient desert road (s,e)} { } {The desert landscape is dominated by distant rock walls and mountains which climb relatively short heights before flattening into plateaus. An ancient cobblestone road is half covered in sand as it leads off into the distance in no particular direction, meandering to and fro. Uncomfortably large insects scurry around underfoot and hide in the cracks of the road. An old wheel sits on the side of the road collecting dust. } {Diablo 2 Act 2} {} {} {} {1.000} {}
 E {13000} {e} {e} {2} {0} {} {1.000} {}
-E {13002} {s} {s} {4} {0} {} {1.000} {}
-
-R {13002} {0} {} {Somewhere in the desert (n,s,e)} { } {Hot desert air blasts down from a cloudless sky that spreads overhead. The sickly blue dome above is broken in its limitless expansion only by the glowing hot orb that is the sun. The ground is a series of baked and cracked rings of dirt that are decorated only by the holes created from the brief rains that infrequently visit this wasteland. Scattered here and there are a few dead or dying bushes of the prickly, stout kind one expects to see in the desert. } {Diablo 2 Act 2} {} {} {} {1.000} {}
-E {12999} {e} {e} {2} {0} {} {1.000} {}
-E {13001} {n} {n} {1} {0} {} {1.000} {}
-E {13003} {s} {s} {4} {0} {} {1.000} {}
 
 R {13003} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
-E {13002} {n} {n} {1} {0} {} {1.000} {}
 E {12927} {e} {e} {2} {0} {} {1.000} {}
 
 R {13004} {0} {} {Somewhere in the desert (n,s,w)} { } {Hot desert air blasts down from a cloudless sky that spreads overhead. The sickly blue dome above is broken in its limitless expansion only by the glowing hot orb that is the sun. The ground is a series of baked and cracked rings of dirt that are decorated only by the holes created from the brief rains that infrequently visit this wasteland. Scattered here and there are a few dead or dying bushes of the prickly, stout kind one expects to see in the desert. } {Diablo 2 Act 2} {} {} {} {1.000} {}
