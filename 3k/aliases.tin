@@ -33,23 +33,11 @@
 #alias {mipon} {#read .tt/3k/mip.tin}
 #alias {mipoff} {#class mip kill}
 
-#alias {dg} {divvy gold}
-#alias {fol} {follow}
 #alias {ga} {get all}
 #alias {gac} {get all from corpse}
-#alias {gc} {get coins}
-#alias {goto} {houseedit gotoroom}
 #alias {gl} {glance}
-#alias {k} {kill}
-#alias {los} {lineofsight}
-#alias {cl} {ctell}
 #alias {pt} {ptell}
 #alias {pth} {ptell -h}
-#alias {th} {tellhist}
-#alias {rem} {remove}
-#alias {efor} {portal eforest}
-#alias {wfor} {portal wforest}
-#alias {pnam} {pname Whiteout}
 
 #alias {nex}{
 	#if {"%1" != ""}{

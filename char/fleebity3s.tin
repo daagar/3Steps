@@ -146,7 +146,7 @@
 };
 
 #nop Set default mode to ipain/guide
-fti
+ftik
 
 #nop {focus hpconfigure /HP: #hp/#mhp SP: #sp/#msp C: #c F: #f M: #sm/#%c D: #dn/#ng P: #df E: #es GXP: #gxp}
 #gag {HP: %2/%3 SP: %4/%5 C: %6 F: %7 M: %8/%9 D:%10/%11 P: %12 E: %14GXP:%13}

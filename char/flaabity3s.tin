@@ -37,6 +37,20 @@
 #gag {^You try to tumble to safety but get struck a glancing blow}
 #gag {^Your mind is as strong as it can be.}
 #gag {^pain.%s$}
+#gag {^You spin away from a lethal blow!}
+#gag {^You dive to the ground and roll away from your foe's attack!}
+#gag {^You deftly sidestep a deadly strike!}
+#gag {^Your thumbs are too tired to gouge right now}
+
+#gag {^You concentrate on your metabolism and free your body of}
+#gag {^the harsh toxins within it.}
+
+#gag {^You begin to control your pain.}
+
+#gag {^You pull out your holocron and study it.}
+
+#gag {^You prepare your mind to draw upon the force.}
+#gag {^You already have your %1 drawn.}
 
 #alias at {!focus dissipate on attack}
 #alias c {#10 !focus confusion}
@@ -51,8 +65,9 @@
 #alias pp {!focus cloud mind}
 #alias pstats {!focus login stats}
 #alias rcost {!focus check /cost}
-#alias kk {kill $kstr;!focus target on $kstr}
-#alias k {kill %0;!focus target on %0}
+#alias kk {kill $kstr}
+#alias ka {focus force taunt for all};
+#alias k {kill %0}
 #alias lt talk %0
 #alias ch com 
 #alias chist com -h
@@ -68,24 +83,28 @@
 
 
 #alias {g}{
+	!draw ${my[desired][weapon]};
 	!focus mode /guide;
 	#var {my[desired][mode]}{guide};
 	#var {my[desired][modeshort]}{g};
 };
 
 #alias {fl}{
+	!draw ${my[desired][weapon]};
 	!focus mode /flurry;
 	#var {my[desired][mode]}{flurry};
 	#var {my[desired][modeshort]}{f};
 };
 
 #alias {de}{
+	!draw ${my[desired][weapon]};
 	!focus mode /deflect;
 	#var {my[desired][mode]}{deflect};
 	#var {my[desired][modeshort]}{d};
 };
 
 #alias {ftik}{
+	!draw ${my[desired][weapon]};
 	!focus force trance /off;
 	!focus mode /guide;
 	#var {my[desired][mode]}{guide};
@@ -95,6 +114,7 @@
 };
 
 #alias {fti}{
+	!draw ${my[desired][weapon]};
 	!focus force trance /off;
 	!focus mode /guide;
 	#var {my[desired][mode]}{guide};
@@ -104,6 +124,7 @@
 };
 
 #alias {fttk}{
+	!draw ${my[desired][weapon]};
 	!focus force trance /off;
 	!focus mode /flurry;
 	#var {my[desired][mode]}{flurry};
@@ -114,6 +135,7 @@
 
 
 #alias {ftd}{
+	!draw ${my[desired][weapon]};
 	!focus force trance /off;
 	!focus mode /deflect;
 	#var {my[desired][mode]}{deflect};
@@ -128,7 +150,9 @@
 };
 
 #nop Set default mode to ipain/guide
-fti
+#delay {2}{ftik}
+#var {my[cleanse][status]}{0};
+#var {my[cloud][threshold]}{50};
 
 #nop {focus hpconfigure /HP: #hp/#mhp SP: #sp/#msp C: #c F: #f M: #sm/#%c D: #dn/#ng P: #df E: #es GXP: #gxp}
 #gag {HP: %2/%3 SP: %4/%5 C: %6 F: %7 M: %8/%9 D:%10/%11 P: %12 E: %14GXP:%13}
@@ -148,61 +172,80 @@ fti
 	#var {my[gtnl]}			{%13};
 	#math {my[hp][deficit]}{$my[hp][max] - $my[hp][current]};
 	#math {my[sp][deficit]}{$my[sp][max] - $my[sp][current]};
+	#math {my[hp][percent]}{$my[hp][current] * 100 / $my[hp][max]};
+	#math {my[sp][percent]}{$my[sp][current] * 100 / $my[sp][max]};
         #if {"$my[attacker]" != " "}{
 		#var {my[incombat]}	{1};
 		#math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+		#var {my[cleanse][status]}{0};
+		#var {enemy[hp]}{0};
         }{
 		#var {my[incombat]}	{0};
+		#var {my[gouged]}	{0};
         };
-	#if {$my[incombat] != 1}{
-		#if {$my[sp][current] < $my[sp][max]}{
-			!focus clear mind;
-		};
-		#if {$my[hp][current] < $my[hp][max]}{
-			!focus reduce injury;
-		};
-	}{
+	#if {$my[incombat] == 1}{
 		#if {$my[sp][deficit] > 50}{
 			!focus clear mind;
 		};
-	};
-        #regex {$my[prots][current][all]}{s}{
-                #var {my[prots][current][lfs]}{1};
-        }{
-		#var {my[prots][current][lfs]}{0};
-		!focus lesser force shield;
-        };
-        #regex {$my[prots][current][all]}{S}{
-                #var {my[prots][current][gfs]}{1};
-        }{
-		#var {my[prots][current][gfs]}{0};
-		!focus greater force shield;
-        };
-        #regex {$my[prots][current][all]}{D}{
-                #var {my[prots][current][dodge]}{1};
-        }{
-		#var {my[prots][current][dodge]}{0};
-		!focus dodge /on;
-        };
-        #regex {$my[prots][current][all]}{RP}{
-                #var {my[prots][current][rpoison]}{1};
-        }{
-		#var {my[prots][current][rpoison]}{0};
-		!focus resist poison;
-        };
-	#if {"${my[mode][current]}" != "${my[desired][modeshort]}"}{
-		!sheath;
-		!draw ${my[desired][weapon]};
-		!focus mode /${my[desired][mode]};
-	};
-	#if {$my[charge][current] < 5}{
-		!smuggle remove cell;
-		!recharge ;
-	};
-	#regex {$mip[gline][2]}{Deflection UP}{
-		#nop;
+		#if {$my[hp][deficit] > 100}{
+			!focus reduce injury;
+		};
+		#if {${my[hp][percent]} < ${my[cloud][threshold]}}{
+			ppp;
+		};
+		#if {${my[gouged]} != 1}{
+			!gouge;
+			#var {my[gouged]}{1};
+		};
 	}{
-		!focus force deflection;
+		#if {${my[cleanse][status]} != 1}{
+			#if {$my[sp][current] < $my[sp][max]}{
+				!focus clear mind;
+			};
+			#if {$my[hp][current] < $my[hp][max]}{
+				!focus reduce injury;
+			};
+		};
+	};
+	#if {${my[cleanse][status]} != 1}{
+		#regex {$my[prots][current][all]}{s}{
+			#var {my[prots][current][lfs]}{1};
+		}{
+			#var {my[prots][current][lfs]}{0};
+			!focus lesser force shield;
+		};
+		#regex {$my[prots][current][all]}{S}{
+			#var {my[prots][current][gfs]}{1};
+		}{
+			#var {my[prots][current][gfs]}{0};
+			!focus greater force shield;
+		};
+		#regex {$my[prots][current][all]}{D}{
+			#var {my[prots][current][dodge]}{1};
+		}{
+			#var {my[prots][current][dodge]}{0};
+			!focus dodge /on;
+		};
+		#regex {$my[prots][current][all]}{RP}{
+			#var {my[prots][current][rpoison]}{1};
+		}{
+			#var {my[prots][current][rpoison]}{0};
+			!focus resist poison;
+		};
+		#if {"${my[mode][current]}" != "${my[desired][modeshort]}"}{
+			!sheath;
+			!draw ${my[desired][weapon]};
+			!focus mode /${my[desired][mode]};
+		};
+		#if {$my[charge][current] < 5}{
+			!smuggle remove cell;
+			!recharge ${my[desired][weapon]};
+		};
+		#regex {$mip[gline][2]}{Deflection UP}{
+			#nop;
+		}{
+			!focus force deflection;
+		};
 	};
 	update_status;
 }
@@ -229,11 +272,37 @@ fti
 	#showme {$mip[gline][1]} {-7};
 }
 
+#act {^You begin the meditation exercises to cleanse your soul!}{
+	#var {my[cleanse][status]}{1};
+};
+
+#act {^Your meditation has cleared your soul of the pull of}{
+	#var {my[cleanse][status]}{0};
+};
+
+#alias {do_cleanse}{
+	!focus cleanse;
+	#var {my[cleanse][status]} {1};
+};
+
+#alias {do_htrance}{
+	!focus hibernation trance;
+	#var {my[cleanse][status]}{1};
+};
+
 #alias {corpsetrig} {
 	!wrap corpse;
 	!focus absorb energy;
 	!divvy;
 }
+
+#alias {cl}{
+	do_cleanse;
+};
+
+#alias {ht}{
+	do_htrance;
+};
 
 #alias {cco}{
 	!unwrap corpse;
