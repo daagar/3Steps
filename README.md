@@ -39,6 +39,9 @@
 
 #### 3k/mysql.tin
 * Database integration with mysql/mariadb
+* Included a damage database with multiple hundreds of thousands of combat logs from changeling, angel, and mage
+* Included a Kill Database with a few tens of thousands of kills
+* Included a full 3k biome that integrates with changeling character's "Pokedex"
 
 #### Dirs/*.tin
 * Repository for area load and unload actions - currently being loaded when entering an area via #room {exit}{exit}{command}
