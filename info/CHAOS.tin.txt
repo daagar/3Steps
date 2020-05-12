@@ -1,0 +1,234 @@
+#var realms[CHAOS][areas]
+{
+    {sweetboots house paradigm} {e;e;e;s;s;e;e;n;e;e;e;n;w;w;n;n;n;n}
+    {starbucks coffee vishnu} {e;e;e;s;s;e;e;n;e;e;e;n;w;w;n;n;n;w}
+    {aquarium blizzard} {e;e;e;s;s;e;e;n;e;e;e;n;w;w;n;n;n;east}
+    {electric cave aserena} {w;w;w;n;n;touch light}
+    {11 melville terrace solo} {w;w;w;n;n;visit flat}
+    {tencho nanook} {w;w;n;n;break cookie}
+    {shady oaks asylum zetron} {w;n;n;n}
+    {chaos mall kintax} {n;n;climb escalator}
+    {dog pound rumor} {n;n;pull leash}
+    {walled lake central high school arrion} {n;n;e;enter mist}
+    {game show kohl} {n;n;e;e;n}
+    {old london samiel} {e;e;e;n;n;n}
+    {used car lot darwi} {e;e;e;s;s;e;e;n;n;n;n;w;jump curb}
+    {the ten commandments distortion} {e;e;e;s;s;e;e;n;e;e;e;n;w;w;n;n;e;e;study book}
+    {mcdonalds tuesdai} {w;w;w;w;e;n;w;n;taste grease}
+    {grocery store tuesdai} {n;n;push cart}
+    {chaos museum bake} {e;e;e;n;n;w}
+    {chicago zoo flaxen} {e;e;e;s;s;e;e;n;e;e;e;n;w;w;n;n;e;e;e}
+    {fidohell eek} {w;w;w;n;n;se}
+    {laboratory maze igor} {e;e;e;n;n;enter hole}
+    {the land tiro} {e;e;e;s;s;e;e;n;n;n;n;break arch}
+    {summerset warrens miyurachi} {w;w;w;w;e;n;w;push fence}
+    {zippos showcase aztec} {w;w;w;w;e;n;pop door}
+    {night of colour stelari} {n;climb tower}
+    {hyperfunkzone artex} {n;enter fog}
+    {hippie commune xiola} {e;n;climb vine}
+    {hockey hall of fame olower} {w;w;w;n;wrist puck}
+    {kandy mountain tuesdai} {w;n;twist knob}
+    {mouse house ryft} {n;w}
+    {lostars bedroom lostar} {e;e;n;doorway}
+    {a gigantic bedroom bebe} {e;e;e;n;e}
+    {einsteins cottage ulme} {e;e;e;s;s;e;e;n;n;n;trail}
+    {the soda jerk tuesdai} {n;shop}
+    {nethack infiniti} {e;e;e;n;climb staircase}
+    {winnie the pooh tuesdai} {w;w;w;w;e;open chest}
+    {ladder frizzle} {w;w;w;w;eat mushroom}
+    {chinese checkers safeire} {w;ladder}
+    {chess board tiro} {e;climb pipe}
+    {dr. seuss hunches tiro} {e;e;e;climb ladder}
+    {spooky pines crossbone} {e;e;e;s;s;e;e;n;n;pull flag}
+    {mystic forest eliot} {e;e;e;s;s;e;e;n;e;e;e;n;n}
+    {paris: eiffel tower santiago} {e;e;e;s;s;e;e;n;e;e;e;n;pick paris}
+    {waldos house aserena} {w;w;w;w;e;east}
+    {frosty igloo slister} {e;e;e;s;s;e;e;n;e;e;e;n;e}
+    {tree of life eek} {w;w;w;w;enter void}
+    {smurfland zoom} {e;play flute}
+    {alphabet land rastafan} {e;e;d}
+    {jags bar koronin} {e;e;e;grab stein}
+    {teenage mutant turtles vraal} {e;e;e;s;s;e;e;n;n;hole}
+    {beavis and butthead slick} {e;e;e;s;s;e;e;n;e;e;e;n;w;w;southwest}
+    {antietam battlefield green} {e;e;e;s;s;e;e;n;e;e;e;n;pick antietam}
+    {chaos candy store druss} {w;w;w;w;e;s;enter store}
+    {capn crunch land santiago} {w;w;w;s;u;slide spoon}
+    {sesame street xiola} {w;w;s;count 123}
+    {care bears groosh} {e;e;e;s;climb rainbow}
+    {hockey arena heath} {e;e;e;s;s;e;e;n;grab ticket}
+    {warner bros inuit village vivianne} {e;e;e;s;s;e;e;n;e;n}
+    {enchanted jungle necrite} {e;e;e;s;s;e;e;n;e;slip peel}
+    {physics lab blizzard} {w;w;w;w;e;s;east}
+    {gremlins joker} {w;s;w}
+    {rampage of the piggies wizwise} {s;turn flag}
+    {leprechaun village druss} {s;e}
+    {mouse trails cottage mischief} {e;e;s;leap ditch}
+    {veggie garden tuesdai} {e;e;e;s;w}
+    {seinfeld studio set} {e;e;e;s;s;e;e;n;enter}
+    {darkmoore drakacanus} {e;e;e;s;s;e;e;n;e;e;e;e}
+    {atlantis woof} {w;w;w;s;dive into bucket}
+    {radioactive sewer orthas} {e;e;s;d}
+    {funky bathroom razorx} {e;e;e;s;s;e;e;n;e;turn faucet}
+    {ice fishing igor} {e;e;e;s;s;e;e;n;e;e;s}
+    {lost ship it} {e;e;e;s;s;e;e;n;e;e;e;drop anchor}
+    {daylns mind dayln} {e;e;e;s;s;e;e;fix typo}
+    {rotc hayt} {e;e;e;s;s;e;e;n;e;e;e;s;w;north}
+    {a spectral warehouse doh} {w;w;w;w;e;s;w;s;e;e;n;enter warehouse}
+    {mp3 cd stelari} {w;w;w;s;s;listen cd}
+    {mahjongg rumor} {w;w;s;s;draw tile}
+    {little people town tuesdai} {w;s;s;enter playhouse}
+    {carinas observatory talismon} {s;s;w}
+    {toy store woof} {s;s;e}
+    {billy bobs big top circus koronin} {e;e;e;s;s;w}
+    {cloud city manson} {e;e;e;s;s;e;e;n;e;e;e;s;e}
+    {pandaemonium briareos} {w;w;w;w;e;s;w;s;e;e;n;n;enter pool}
+    {burdog gorge kinslayer} {w;w;w;s;s;south}
+    {barneys studio tuesdai} {w;s;s;s}
+    {spaceport miyurachi} {s;s;ride comet}
+    {forest of wolves blazen} {s;s;s}
+    {old woman in the shoe foggie} {s;s;open book;read chapter 1}
+    {brewery swamp talismon} {e;e;s;s;sw}
+    {new legoland vermillion} {e;e;s;s;s}
+    {cowville stelari} {e;e;e;s;s;ride cow}
+    {tornado zair} {e;e;e;s;s;e;s}
+    {haunted house it} {e;e;e;s;s;e;carve pumpkin}
+    {chaos cinemaplex mos} {e;e;e;s;s;e;e;s}
+    {club chaos olower} {e;e;e;s;s;e;e;skip rope}
+    {happy eds chinchilla farm flaxen} {e;e;e;s;s;e;e;n;e;e;e;s;w;w;s}
+    {easter bunny academy slick} {e;e;e;s;s;e;e;n;e;e;e;s;w;w;enter hole}
+    {xanth swamp lipscom} {e;e;e;s;s;e;e;n;e;e;e;s;w;s}
+    {silicon caverns takamori} {e;e;e;s;s;e;e;n;e;e;e;s;w;fit inside bucket}
+    {wormhole laboratory tharog} {e;e;e;s;s;e;e;n;e;e;e;s;enter}
+    {the chronicles of thomas covenant tiro} {w;w;w;w;e;s;w;s;read book}
+    {the outhouse tiro} {w;w;w;w;e;s;w;s;e;enter outhouse}
+    {crydee slick} {w;w;w;w;e;s;w;s;e;e;up}
+    {the book nook nanook} {w;w;w;w;e;s;w;s;e;e;e}
+    {funkytown mors} {e;e;e;s;s;s;w}
+    {duality etah} {e;e;e;s;s;e;e;n;e;e;e;s;s;challenge brain}
+    {xanadu davien} {w;w;w;w;e;s;w;s;e;pierce the veil}
+    {gamers house kendric} {w;w;w;w;e;s;w;s;e;e;grab joystick}
+    {mentos pyros} {e;e;e;s;s;s;buy mentos}
+    {toy factory mithrandir} {w;w;w;w;e;s;w;s;e;e;n;n;e;s;enter sleigh}
+    {ultimate tournament green} {e;e;e;s;s;s;s;w;catch disc}
+    {the queen of hearts garden takamori} {e;e;e;s;s;s;s;touch card}
+    {disney world glorfindel} {e;e;e;s;s;s;s;s;sideways}
+    {the secret of nimh samiel} {e;e;e;s;s;s;s;s;press play}
+    {body mansion mischief} {e;e;e;s;s;s;s;s;out2;s}
+}
+#var realms[CHAOS][areasreverse]
+{
+    {sweetboots house paradigm} {s;s;s;s;e;e;s;w;w;w;s;w;w;n;n;w;w;w}
+    {starbucks coffee vishnu} {e;s;s;s;e;e;s;w;w;w;s;w;w;n;n;w;w;w}
+    {aquarium blizzard} {out;s;s;s;e;e;s;w;w;w;s;w;w;n;n;w;w;w}
+    {electric cave aserena} {}
+    {11 melville terrace solo} {leave;s;s;e;e;e}
+    {tencho nanook} {exit;s;s;e;e}
+    {shady oaks asylum zetron} {s;s;s;e}
+    {chaos mall kintax} {down;s;s}
+    {dog pound rumor} {exit;s;s}
+    {walled lake central high school arrion} {retreat;w;s;s}
+    {game show kohl} {s;w;w;s;s}
+    {old london samiel} {s;s;s;w;w;w}
+    {used car lot darwi} {exit;e;s;s;s;s;w;w;n;n;w;w;w}
+    {the ten commandments distortion} {forsake;w;w;s;s;e;e;s;w;w;w;s;w;w;n;n;w;w;w}
+    {mcdonalds tuesdai} {west;s;e;s;w;w;e;e;e}
+    {grocery store tuesdai} {exit;s;s}
+    {chaos museum bake} {e;s;s;w;w;w}
+    {chicago zoo flaxen} {w;w;w;s;s;e;e;s;w;w;w;s;w;w;n;n;w;w;w}
+    {fidohell eek} {nw;s;s;e;e;e}
+    {laboratory maze igor} {up;s;s;w;w;w}
+    {the land tiro} {portal;s;s;s;s;w;w;n;n;w;w;w}
+    {summerset warrens miyurachi} {push fence;e;s;w;w;e;e;e}
+    {zippos showcase aztec} {jump out;s;w;w;e;e;e}
+    {night of colour stelari} {down;s}
+    {hyperfunkzone artex} {}
+    {hippie commune xiola} {exit;s;w}
+    {hockey hall of fame olower} {}
+    {kandy mountain tuesdai} {out;s;e}
+    {mouse house ryft} {e;s}
+    {lostars bedroom lostar} {doorway;s;w;w}
+    {a gigantic bedroom bebe} {w;s;w;w;w}
+    {einsteins cottage ulme} {back;s;s;s;w;w;n;n;w;w;w}
+    {the soda jerk tuesdai} {out;s}
+    {nethack infiniti} {up;s;w;w;w}
+    {winnie the pooh tuesdai} {out;w;w;e;e;e}
+    {ladder frizzle} {}
+    {chinese checkers safeire} {ladder;e}
+    {chess board tiro} {climb;w}
+    {dr. seuss hunches tiro} {}
+    {spooky pines crossbone} {wash ball;s;s;w;w;n;n;w;w;w}
+    {mystic forest eliot} {s;s;w;w;w;s;w;w;n;n;w;w;w}
+    {paris: eiffel tower santiago} {exit;s;w;w;w;s;w;w;n;n;w;w;w}
+    {waldos house aserena} {east;w;w;e;e;e}
+    {frosty igloo slister} {w;s;w;w;w;s;w;w;n;n;w;w;w}
+    {tree of life eek} {leave;w;e;e;e}
+    {smurfland zoom} {exit;w}
+    {alphabet land rastafan} {u;w;w}
+    {jags bar koronin} {leave;w;w;w}
+    {teenage mutant turtles vraal} {out;s;s;w;w;n;n;w;w;w}
+    {beavis and butthead slick} {out;e;e;s;w;w;w;s;w;w;n;n;w;w;w}
+    {antietam battlefield green} {exit;s;w;w;w;s;w;w;n;n;w;w;w}
+    {chaos candy store druss} {out;n;w;w;e;e;e}
+    {capn crunch land santiago} {}
+    {sesame street xiola} {exit;n;e;e}
+    {care bears groosh} {slide down rainbow;n;w;w;w}
+    {hockey arena heath} {exit;s;w;w;n;n;w;w;w}
+    {warner bros inuit village vivianne} {s;w;s;w;w;n;n;w;w;w}
+    {enchanted jungle necrite} {exit;w;s;w;w;n;n;w;w;w}
+    {physics lab blizzard} {out;n;w;w;e;e;e}
+    {gremlins joker} {e;n;e}
+    {rampage of the piggies wizwise} {leave;n}
+    {leprechaun village druss} {w;n}
+    {mouse trails cottage mischief} {leave;n;w;w}
+    {veggie garden tuesdai} {e;n;w;w;w}
+    {seinfeld studio set} {leave;s;w;w;n;n;w;w;w}
+    {darkmoore drakacanus} {w;w;w;w;s;w;w;n;n;w;w;w}
+    {atlantis woof} {up;n;e;e;e}
+    {radioactive sewer orthas} {u;n;w;w}
+    {funky bathroom razorx} {out;w;s;w;w;n;n;w;w;w}
+    {ice fishing igor} {n;w;w;s;w;w;n;n;w;w;w}
+    {lost ship it} {exit;w;w;w;s;w;w;n;n;w;w;w}
+    {daylns mind dayln} {}
+    {rotc hayt} {out;e;n;w;w;w;s;w;w;n;n;w;w;w}
+    {a spectral warehouse doh} {enter hole;s;w;w;n;e;n;w;w;e;e;e}
+    {mp3 cd stelari} {sing we gotta get out of this place;n;n;e;e;e}
+    {mahjongg rumor} {exit;n;n;e;e}
+    {little people town tuesdai} {out;n;n;e}
+    {carinas observatory talismon} {e;n;n}
+    {toy store woof} {w;n;n}
+    {billy bobs big top circus koronin} {e;n;n;w;w;w}
+    {cloud city manson} {w;n;w;w;w;s;w;w;n;n;w;w;w}
+    {pandaemonium briareos} {up;w;s;w;w;n;e;n;w;w;e;e;e}
+    {burdog gorge kinslayer} {west;n;n;e;e;e}
+    {barneys studio tuesdai} {n;n;n;e}
+    {spaceport miyurachi} {comet;n;n}
+    {forest of wolves blazen} {n;n;n}
+    {old woman in the shoe foggie} {leave;n;n}
+    {brewery swamp talismon} {ne;n;n;w;w}
+    {new legoland vermillion} {n;n;n;w;w}
+    {cowville stelari} {path;n;n;w;w;w}
+    {tornado zair} {n;w;n;n;w;w;w}
+    {haunted house it} {}
+    {chaos cinemaplex mos} {n;w;w;n;n;w;w;w}
+    {club chaos olower} {exit;w;w;n;n;w;w;w}
+    {happy eds chinchilla farm flaxen} {n;e;e;n;w;w;w;s;w;w;n;n;w;w;w}
+    {easter bunny academy slick} {up;e;e;n;w;w;w;s;w;w;n;n;w;w;w}
+    {xanth swamp lipscom} {n;e;n;w;w;w;s;w;w;n;n;w;w;w}
+    {silicon caverns takamori} {}
+    {wormhole laboratory tharog} {out;n;w;w;w;s;w;w;n;n;w;w;w}
+    {the chronicles of thomas covenant tiro} {exit;n;e;n;w;w;e;e;e}
+    {the outhouse tiro} {}
+    {crydee slick} {up;w;w;n;e;n;w;w;e;e;e}
+    {the book nook nanook} {w;w;w;n;e;n;w;w;e;e;e}
+    {funkytown mors} {e;n;n;n;w;w;w}
+    {duality etah} {concede;n;n;w;w;w;s;w;w;n;n;w;w;w}
+    {xanadu davien} {leave;w;n;e;n;w;w;e;e;e}
+    {gamers house kendric} {out;w;w;n;e;n;w;w;e;e;e}
+    {mentos pyros} {try dementos;n;n;n;w;w;w}
+    {toy factory mithrandir} {back;n;n;w;s;w;w;n;e;n;w;w;e;e;e}
+    {ultimate tournament green} {exit;e;n;n;n;n;w;w;w}
+    {the queen of hearts garden takamori} {}
+    {disney world glorfindel} {down;out1;n;n;n;n;w;w;w}
+    {the secret of nimh samiel} {out;out1;n;n;n;n;w;w;w}
+    {body mansion mischief} {n;n;out1;n;n;n;n;w;w;w}
+}

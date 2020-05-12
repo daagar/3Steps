@@ -1,0 +1,15 @@
+#var stepper 0 
+
+#var {area_items}{puppy}
+#list {area_items}{create}{$area_items}
+#list {area_items}{size}{$all_area_items}
+
+#var domove 0
+#var starter 0
+#unvar kill_path
+#list kill_path {clear}
+#unvar max_room
+#var area none
+
+#unalias zelligar
+#var area_aggro 0

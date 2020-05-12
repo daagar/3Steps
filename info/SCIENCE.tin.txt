@@ -1,0 +1,160 @@
+#var realms[SCIENCE][areas]
+{
+    {valley of the tribes kwuteg} {u;n;n;n;n;d;n;w;w;n;n;n;n;w;w;n;w;n;n;n;n;n;n;n;n;n;n;n;n;n;n;w;n;n;n;n;w;n;n;w;w;n;n;w;w;w;nw}
+    {exobiology laboratory ulme} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;n;e;e;n;e;e;e;e;n;e;e;e;e;e;e;e;n;n;n;n;n;e;n;n;e;e;e;n;n;n;n;n;e;n;n;e;e;e;e;n;e;n;n;door}
+    {cult of the atomic cleansing crolack} {u;n;n;n;n;d;n;n;n;n;n;n;n;n;n;n;w;n;n;w;w;n;n;n;n;n;n;w;w;w;n;n;n;n;n;n;w;w;n;n;w;w;n;w;ne}
+    {solchem chrome} {u;n;n;n;n;d;n;w;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;w;enter}
+    {microtech vaix} {u;n;n;n;n;d;n;n;n;n;w;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;w;w;path}
+    {hamilton plant tuesdai} {u;n;n;n;n;d;n;n;n;n;n;n;n;n;n;n;n;e;e;n;n;n;n;n;n;n;n;n;e;n;n;n;e;e;n;n;n;d}
+    {global merc training theatre} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;n;e;e;n;e;e;e;e;n;e;e;e;e;e;e;e;n;n;n;n;n;e;n;n;e;e;n;n;n;n;n;e;n;e;n;enter}
+    {rocky mountainside polsy} {u;n;n;n;n;d;n;w;w;n;n;n;n;w;w;n;w;n;n;n;n;n;n;n;n;n;n;n;w;w;w;n;n;n;n;w;w;n;w;n;w;w;trail}
+    {fallout shelter pistil} {u;n;n;n;n;d;n;e;n;n;n;n;n;n;n;e;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;e;e;n;d}
+    {temple of syrinx igor} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;n;e;e;n;e;e;e;e;n;e;e;e;e;e;e;e;n;n;n;n;n;e;n;n;e;e;e;n;n;n;n;n;e;e;e;n;path}
+    {old sewers ariakus} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;e;e;e;e;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;e;n;down}
+    {new york} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;n;e;e;n;e;e;e;e;n;e;e;e;e;e;e;e;n;n;n;n;n;e;n;n;e;e;e;e;e;e;n;n;n;n;e;e}
+    {alien ship distortion} {u;n;n;n;n;d;n;n;n;n;n;n;n;n;n;n;w;n;n;w;w;n;n;n;n;n;n;w;w;w;w;w;w;w;n;n;n;w;enter}
+    {ruined barn vivianne} {u;n;n;n;n;d;n;n;n;n;w;n;n;n;n;n;n;n;n;n;n;w;n;w;n;n;w;w;n;n;w;n;n;w;enter}
+    {environmentalist camp nanook} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;n;e;e;n;e;e;e;e;n;e;e;e;e;e;e;e;n;n;n;n;n;e;n;n;e;e;n;n;n;e;e;nw}
+    {detroit pistil} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;n;n;n;e;n;n;n;n;n;n;e;n;e;n;e;e;e;e;e;e;n;n;e}
+    {ohare international airport alerik} {u;n;n;n;n;d;n;n;n;n;n;e;n;n;n;n;e;e;n;e;n;n;n;n;n;n;n;n;n;e;e;e;e;e;e;n;enter}
+    {the fern man vivianne} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;n;n;n;e;n;n;n;e;e;e;e;e;e;e;e;e;e;n;n;n;n;n;n}
+    {mercenary tent mithrandir} {u;n;n;n;n;d;n;n;n;n;n;n;n;n;n;n;w;n;n;n;n;n;n;n;n;w;w;w;w;w;w;w;w;w;w;w;enter}
+    {kilton research, inc. takamori} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;n;e;e;n;e;e;e;e;n;e;e;e;e;e;e;e;n;n;n;n;n;n;n;e;n;enter}
+    {military camp ariakus} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;n;e;e;n;e;e;e;e;n;e;e;e;e;e;e;e;n;n;n;n;n;e;e;n;n;e;e;e;e;n;camp}
+    {lost city aserena} {u;n;n;n;n;d;n;n;n;n;n;n;n;n;n;n;w;n;w;w;n;n;n;w;n;w;w;w;w;n;n;w;ne}
+    {pittsburgh cletus} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;n;e;e;n;e;e;e;e;n;e;e;e;e;e;e;e;n;n;n;n;n;n;e;n;enter}
+    {gencorps pistil} {u;n;n;n;n;d;n;e;n;e;n;n;n;n;e;n;n;n;n;n;n;n;n;n;e;e;n;e;road}
+    {d.c. megatech cletus} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;n;e;e;n;e;e;e;e;n;e;e;e;e;e;e;e;n;n;e;e;n;n;n;e;n;enter}
+    {collapsed subway ulme} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;n;n;n;e;n;n;n;e;e;e;e;e;e;e;n;e;e;n;ladder}
+    {oil storage cave ulme} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;n;e;e;n;e;e;e;e;n;e;e;e;e;e;e;e;n;n;n;n;e;enter}
+    {air force base nanook} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;n;e;e;n;e;e;e;e;n;e;e;e;e;e;e;e;n;n;n;e;e;e;e;e;n;e;road}
+    {genlab tarin} {u;n;n;n;n;d;n;w;w;n;n;n;n;w;w;n;w;n;n;n;n;n;n;n;n;w;w;w;w;w;w;w;w;n;se}
+    {icare polsy} {u;n;n;n;n;d;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;d}
+    {crashed satellite mithrandir} {u;n;n;n;n;d;n;w;w;n;n;n;n;w;w;n;w;n;n;n;n;w;n;w;n;n;w;w;trail}
+    {mortimers church assassin} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;n;e;e;n;e;e;e;e;n;n;n;se}
+    {contention training grounds hobbes} {u;n;n;n;n;d;n;w;w;n;n;n;n;w;w;n;w;n;n;n;n;w;n;w;w;w;w;w;w;w;n;se}
+    {luddite commune telcontar} {u;n;n;n;n;d;n;w;w;n;n;n;n;w;w;n;w;n;n;n;n;w;n;w;w;w;w;w;w;path}
+    {camazots mischief} {u;n;n;n;n;d;n;e;n;n;n;e;n;n;n;n;n;n;n;enter}
+    {cybdom inc. polsy} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;n;e;e;n;e;e;e;e;n;e;e;e;e;e;e;e;e;e;e;e;e;n;enter}
+    {toxic dump vivianne} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;n;n;n;n;e;n;e;d}
+    {weather station shadowlotus} {u;n;n;n;n;d;n;w;w;n;n;n;n;n;n;w;n;w;w;enter}
+    {bombfreaks abbey syd} {u;n;n;n;n;d;n;e;n;n;n;n;n;n;n;e;path}
+    {oasis in the badlands lipscom} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;n;e;e;e;n;se}
+    {murdock chicken plant mischief} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;n;n;n;enter}
+    {a refugee house infiniti} {u;n;n;n;n;d;n;n;n;n;n;e;n;e;n;e;e;e;e;e;e;e;e;e;e;e;e;e;e;n;e;e;e;e;e;e;e;n;e;enter}
+    {redneck trailer lorderon} {u;n;n;n;n;d;n;w;w;n;n;n;n;w;w;n;w;n;w;w;w;enter}
+    {ued installation heath} {u;n;n;n;n;d;n;w;n;n;n;n;n;enter}
+    {antimammonist vault solo} {u;n;n;n;n;d;n;n;n;n;n;n;path}
+    {crashed plane ulme} {u;n;n;n;n;d;n;e;e;n;e;e;n;n;e;e;e;e;e;n;n;e;n;enter}
+    {atlanta cletus} {u;n;n;n;n;d;n;e;e;n;e;e;n;n;e;e;e;e;e;e;e;n;e;e;e;e;e;e;e;n;n;road}
+    {last chance truck stop jeffo} {u;n;n;n;n;d;n;w;w;n;n;n;w;w;w;w;n;w;road}
+    {toxic waste dump mithrandir} {u;n;n;n;n;d;n;e;n;e;n;e;e;n;n;path}
+    {bandit camp gogmagog} {u;n;n;n;n;d;n;e;e;n;e;e;n;n;e;e;e;e;e;e;n;e;e;e;n;trail}
+    {incinerator tuesdai} {u;n;n;n;n;d;n;n;n;n;w;ne}
+    {the amazon research center samiel} {u;n;n;n;n;d;n;e;e;n;e;e;n;e;e;e;n;e;e;n;clearing}
+    {outlaws train talismon} {u;n;n;n;n;d;n;e;e;n;e;e;n;e;e;e;n;e;e;e;e;n;d}
+    {military bunker chrome} {u;n;n;n;n;d;n;e;e;n;e;e;n;e;e;e;n;e;e;e;e;e;e;e;e;e;e;e;e;e;n;bunker}
+    {gas station angio} {u;n;n;n;n;d;n;w;w;n;n;w;w;n;w;se}
+    {old guard tower ulme} {u;n;n;n;n;d;n;e;n;e;e;n;tower}
+    {jeremys swamp vivianne} {u;n;n;n;n;d;n;e;e;n;e;e;n;e;e;e;ne}
+    {swamp lake mithrandir} {u;n;n;n;n;d;n;e;e;n;e;e;n;e;e;e;e;e;e;e;n;se}
+    {a quiet swamp polsy} {u;n;n;n;n;d;n;e;e;n;e;e;n;e;e;e;e;e;e;e;e;e;n;path}
+    {mantis swamp rumor} {u;n;n;n;n;d;n;e;e;n;e;e;n;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;enter}
+    {mars nanook} {u;n;n;n;n;d;n;w;w;w;w;w;w;w;w;w;w;w;n;nw}
+    {ruined bunker druss} {u;n;n;n;n;d;n;w;w;w;w;w;w;w;w;n;w;ne}
+    {schroedingers lab glorfindel} {u;n;n;n;n;d;n;w;n;enter}
+    {swamp tunnel ulme} {u;n;n;n;n;d;n;e;e;n;e;e;n;e;e;e;e;e;e;e;e;e;e;e;e;e;e;d}
+    {swede research center mithrandir} {u;n;n;n;n;d;n;e;e;n;e;e;n;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;s;ne}
+    {ruined reactor scrubby} {u;n;n;n;n;d;n;e;e;n;e;e;n;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;ruins}
+    {water tower xiola} {u;n;n;n;n;d;n;w;w;w;w;w;w;w;enter}
+    {dans garage garet} {u;n;n;n;n;d;n;w;w;ne}
+    {desert mine vivianne} {u;n;n;n;n;d;n;e;e;n;e;d}
+    {voodoo scavengers requiem} {u;n;n;n;n;d;n;e;e;n;e;e;n;e;e;e;e;e;e;e;e;e;e;e;e;s;d}
+    {desert path polsy} {u;n;n;n;n;d;n;w;w;w;w;w;w;w;w;s;path}
+    {swamp tunnel ulme} {u;n;n;n;n;d;n;e;e;n;e;e;n;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;s;s;e;d}
+    {florida sinkhole delenn} {u;n;n;n;n;d;n;e;e;n;e;e;n;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;s;s;e;s;d}
+    {mk  machine steel} {u;n;n;n;w}
+    {underwood disease testing center tuesdai} {u;n;n;n;n;d;n;e;e;n;e;e;n;e;e;e;e;e;e;e;e;e;e;e;e;e;e;s;e;e;s;s;s;e;sw}
+    {sandmans oasis mithrandir} {u;n;n;n;n;d;n;w;w;s;w;s;s;w;se}
+    {impact crater saragon} {u;n;n;n;n;d;n;w;w;s;w;s;s;s;nw}
+}
+#var realms[SCIENCE][areasreverse]
+{
+    {valley of the tribes kwuteg} {se;e;e;s;s;s;e;s;s;e;s;s;s;s;s;e;s;s;s;s;e;e;e;s;e;s;s;s;s;s;s;s;s;s;e;s;s;s;e;e;s;u;s;s;s;s;d}
+    {exobiology laboratory ulme} {leave;s;s;w;s;s;w;w;s;s;s;s;s;s;w;w;w;w;w;w;s;s;w;w;w;w;s;s;s;s;w;w;w;s;w;s;s;s;s;s;s;s;s;w;w;w;w;w;w;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {cult of the atomic cleansing crolack} {sw;s;s;e;s;s;s;e;e;s;e;s;s;e;s;e;s;s;e;s;e;s;s;s;e;s;e;s;e;s;s;s;s;s;s;s;s;s;s;u;s;s;s;s;d}
+    {solchem chrome} {leave;s;s;e;s;e;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;u;s;s;s;s;d}
+    {microtech vaix} {path;s;s;e;s;s;s;s;s;s;s;s;s;s;e;s;s;s;s;s;s;s;s;s;e;s;s;s;e;e;e;s;s;u;s;s;s;s;d}
+    {hamilton plant tuesdai} {u;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {global merc training theatre} {leave;s;s;s;s;s;w;s;s;s;s;s;s;s;s;s;s;w;w;w;s;s;s;s;s;s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {rocky mountainside polsy} {trail;s;s;e;s;s;s;s;s;s;e;e;e;e;s;e;e;s;e;s;e;e;s;s;s;s;s;s;s;s;e;s;e;s;s;e;s;u;s;s;s;s;d}
+    {fallout shelter pistil} {u;s;s;w;s;w;s;w;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;w;s;s;u;s;s;s;s;d}
+    {temple of syrinx igor} {path;w;w;s;s;s;s;s;s;w;s;w;s;s;w;w;w;w;w;w;w;w;w;s;w;w;s;w;w;s;w;s;s;s;w;w;s;w;s;w;s;s;w;w;s;w;s;s;s;s;u;s;s;s;s;d}
+    {old sewers ariakus} {climb ladder;s;s;w;s;s;s;s;s;s;w;w;w;s;w;s;s;s;s;s;s;s;w;s;w;s;s;s;s;s;s;u;s;s;s;s;d}
+    {new york} {w;w;s;s;w;s;w;s;w;w;w;w;w;w;w;w;w;s;s;s;w;w;w;w;w;w;w;w;s;s;s;s;w;w;w;s;s;s;w;s;s;s;s;w;w;s;s;s;s;u;s;s;s;s;d}
+    {alien ship distortion} {leave;s;s;e;s;s;s;s;e;e;s;e;e;s;s;s;e;s;s;s;s;s;s;e;e;s;e;s;e;s;s;e;s;u;s;s;s;s;d}
+    {ruined barn vivianne} {leave;s;s;e;s;s;s;e;s;s;e;e;s;s;s;e;s;s;s;e;s;s;s;s;s;s;s;e;s;u;s;s;s;s;d}
+    {environmentalist camp nanook} {se;w;w;s;w;s;w;s;s;s;s;s;s;s;s;s;w;w;w;w;s;w;s;w;w;w;w;w;w;w;s;s;s;s;s;w;w;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {detroit pistil} {w;s;s;w;s;s;w;w;w;w;s;w;s;s;s;w;s;s;s;s;s;s;s;s;w;w;w;w;w;s;w;s;s;s;w;s;u;s;s;s;s;d}
+    {ohare international airport alerik} {leave;s;w;w;s;w;s;s;s;w;w;s;s;s;s;s;w;w;s;w;s;s;s;w;s;s;s;w;s;s;s;u;s;s;s;s;d}
+    {the fern man vivianne} {s;s;w;w;w;s;s;w;s;w;w;s;s;s;w;s;s;w;s;s;s;s;w;s;w;w;s;s;w;w;s;w;w;w;s;s;u;s;s;s;s;d}
+    {mercenary tent mithrandir} {leave;e;e;s;e;e;s;e;e;e;s;s;s;s;s;s;e;s;e;s;e;s;e;s;s;e;s;s;s;s;s;u;s;s;s;s;d}
+    {kilton research, inc. takamori} {leave;w;w;s;w;w;s;s;s;s;w;s;w;s;s;s;s;w;w;s;w;w;w;w;w;s;w;s;s;w;w;s;s;w;s;s;w;w;s;u;s;s;s;s;d}
+    {military camp ariakus} {leave;s;w;w;s;s;s;s;s;w;w;s;s;s;w;w;w;w;w;w;w;s;s;s;s;s;s;s;w;w;w;w;w;w;w;w;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {lost city aserena} {sw;s;s;e;s;s;s;s;s;e;e;e;s;e;s;e;e;e;s;s;e;s;s;s;s;s;s;u;s;s;s;s;d}
+    {pittsburgh cletus} {west;s;s;w;w;w;w;w;s;s;w;w;w;s;s;w;w;s;s;s;w;w;s;s;w;w;s;s;s;w;s;s;w;w;s;w;w;s;u;s;s;s;s;d}
+    {gencorps pistil} {road;s;s;w;s;s;s;w;w;w;w;s;w;s;s;s;s;s;s;s;s;s;s;u;s;s;s;s;d}
+    {d.c. megatech cletus} {leave;s;s;w;s;w;w;w;s;w;s;w;s;w;s;w;s;s;w;s;w;w;w;s;s;s;w;w;s;w;w;w;w;w;w;w;s;s;s;u;s;s;s;s;d}
+    {collapsed subway ulme} {leave;s;s;w;s;s;s;s;s;w;w;s;w;w;w;s;s;w;w;w;w;w;s;w;w;s;w;s;w;s;s;s;u;s;s;s;s;d}
+    {oil storage cave ulme} {leave;s;s;w;w;w;w;w;w;s;s;s;s;w;s;s;w;w;w;w;w;w;w;w;w;s;s;w;s;w;w;s;s;s;s;u;s;s;s;s;d}
+    {air force base nanook} {road;w;w;w;s;w;w;s;s;s;w;w;w;w;w;w;w;w;w;w;w;s;s;s;s;s;s;s;w;s;w;w;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {genlab tarin} {nw;s;s;e;s;s;s;e;e;s;s;e;s;e;e;e;e;e;e;e;s;s;s;s;s;e;e;s;s;u;s;s;s;s;d}
+    {icare polsy} {u;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;u;s;s;s;s;d}
+    {crashed satellite mithrandir} {trail;s;s;e;s;e;e;e;s;s;e;s;s;s;s;e;e;e;e;s;s;s;s;u;s;s;s;s;d}
+    {mortimers church assassin} {nw;s;s;w;s;w;s;w;w;w;s;s;w;s;w;w;w;w;s;s;s;s;s;w;s;u;s;s;s;s;d}
+    {contention training grounds hobbes} {nw;s;s;e;e;e;e;s;s;s;e;s;e;e;s;s;e;e;e;e;e;e;s;s;s;s;u;s;s;s;s;d}
+    {luddite commune telcontar} {path;e;e;s;e;e;e;s;s;e;e;s;e;s;e;s;e;s;s;e;s;s;e;s;u;s;s;s;s;d}
+    {camazots mischief} {leave;s;s;w;s;s;s;s;s;s;s;w;s;s;u;s;s;s;s;d}
+    {cybdom inc. polsy} {out;s;w;w;w;w;w;s;w;w;s;s;w;w;s;w;w;w;w;w;s;w;w;s;w;w;w;s;w;w;s;w;w;s;s;s;u;s;s;s;s;d}
+    {toxic dump vivianne} {u;s;s;w;s;s;s;s;s;w;w;w;w;w;w;w;w;w;s;w;w;w;w;w;w;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {weather station shadowlotus} {leave;s;s;e;s;s;e;e;e;e;s;s;s;s;u;s;s;s;s;d}
+    {bombfreaks abbey syd} {path;s;s;w;s;s;s;s;w;s;s;u;s;s;s;s;d}
+    {oasis in the badlands lipscom} {nw;s;s;w;w;w;w;w;w;s;s;w;s;s;s;w;s;s;u;s;s;s;s;d}
+    {murdock chicken plant mischief} {leave;s;w;w;w;w;w;w;w;w;w;s;w;w;w;w;s;w;w;w;w;w;w;w;s;s;s;s;s;s;u;s;s;s;s;d}
+    {a refugee house infiniti} {leave;w;s;w;w;w;s;s;w;w;w;w;s;s;w;w;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;s;s;u;s;s;s;s;d}
+    {redneck trailer lorderon} {leave;s;s;e;e;e;e;s;s;s;e;e;e;e;s;s;u;s;s;s;s;d}
+    {ued installation heath} {leave;s;s;s;s;s;e;s;u;s;s;s;s;d}
+    {antimammonist vault solo} {path;s;s;s;s;s;s;u;s;s;s;s;d}
+    {crashed plane ulme} {leave;s;s;w;w;w;w;w;w;w;w;w;w;s;s;s;s;s;u;s;s;s;s;d}
+    {atlanta cletus} {north;s;s;w;w;w;w;w;w;w;w;w;w;w;w;s;s;w;w;w;w;s;w;w;s;s;u;s;s;s;s;d}
+    {last chance truck stop jeffo} {road;e;e;s;e;e;s;s;e;s;e;e;s;u;s;s;s;s;d}
+    {toxic waste dump mithrandir} {path;s;s;w;s;w;s;w;w;s;u;s;s;s;s;d}
+    {bandit camp gogmagog} {trail;s;s;s;w;w;w;w;w;w;w;w;w;w;w;w;w;s;s;s;u;s;s;s;s;d}
+    {incinerator tuesdai} {sw;s;s;e;s;s;u;s;s;s;s;d}
+    {the amazon research center samiel} {leave;s;w;w;w;w;w;w;s;s;w;s;w;w;s;u;s;s;s;s;d}
+    {outlaws train talismon} {u;s;s;w;w;w;w;w;w;w;s;w;w;w;s;w;s;u;s;s;s;s;d}
+    {military bunker chrome} {leave;s;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {gas station angio} {nw;s;s;e;e;e;e;e;s;s;u;s;s;s;s;d}
+    {old guard tower ulme} {leave;s;w;s;w;w;s;u;s;s;s;s;d}
+    {jeremys swamp vivianne} {sw;w;w;w;s;w;w;w;s;w;s;u;s;s;s;s;d}
+    {swamp lake mithrandir} {nw;s;w;w;w;w;w;w;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {a quiet swamp polsy} {path;s;w;w;w;w;w;w;w;w;w;s;w;w;s;w;w;s;u;s;s;s;s;d}
+    {mantis swamp rumor} {leave;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {mars nanook} {se;e;e;e;s;e;e;e;e;e;e;e;e;s;u;s;s;s;s;d}
+    {ruined bunker druss} {sw;e;s;e;e;e;e;e;e;e;e;s;u;s;s;s;s;d}
+    {schroedingers lab glorfindel} {leave;e;s;s;u;s;s;s;s;d}
+    {swamp tunnel ulme} {u;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {swede research center mithrandir} {sw;w;n;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {ruined reactor scrubby} {leave;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {water tower xiola} {leave;e;e;e;e;e;e;e;s;u;s;s;s;s;d}
+    {dans garage garet} {sw;e;e;s;u;s;s;s;s;d}
+    {desert mine vivianne} {u;w;w;w;s;s;u;s;s;s;s;d}
+    {voodoo scavengers requiem} {u;n;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {desert path polsy} {path;e;e;e;e;e;e;e;n;e;s;u;s;s;s;s;d}
+    {swamp tunnel ulme} {u;w;n;w;n;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {florida sinkhole delenn} {u;n;w;n;w;n;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {mk  machine steel} {e;s;s;s;d}
+    {underwood disease testing center tuesdai} {ne;w;n;n;w;n;w;n;w;w;w;w;w;w;w;w;w;w;w;w;w;w;s;w;w;w;w;s;s;u;s;s;s;s;d}
+    {sandmans oasis mithrandir} {nw;e;e;n;e;n;n;e;s;u;s;s;s;s;d}
+    {impact crater saragon} {se;e;n;n;e;n;n;e;s;u;s;s;s;s;d}
+}

@@ -1,0 +1,61 @@
+[lower     ability]   ( 1)    Constitution : 30 experience points.
+[lower     ability]   ( 2)    Constitution : 34 experience points.
+[lower     ability]   ( 3)    Constitution : 42 experience points.
+[lower     ability]   ( 4)    Constitution : 57 experience points.
+[lower     ability]   ( 5)    Constitution : 78 experience points.
+[lower     ability]   ( 1)    Strength     : 30 experience points.
+[lower     ability]   ( 6)    Constitution : 107 experience points.
+[lower     ability]   ( 7)    Constitution : 146 experience points.
+[lower     ability]   ( 8)    Constitution : 200 experience points.
+[lower     ability]   ( 9)    Constitution : 274 experience points.
+[lower     ability]   (10)    Constitution : 375 experience points.
+[lower     ability]   (11)    Constitution : 514 experience points.
+[lower     ability]   (12)    Constitution : 704 experience points.
+[lower     ability]   (13)    Constitution : 964 experience points.
+[lower     ability]   (14)    Constitution : 1321 experience points.
+[lower     ability]   (15)    Constitution : 1810 experience points.
+[lower     ability]   (16)    Constitution : 2479 experience points.
+[lower     ability]   (17)    Constitution : 3397 experience points.
+[lower     ability]   (18)    Constitution : 4653 experience points.
+[lower     ability]   (19)    Constitution : 6375 experience points.
+[lower     ability]   (20)    Constitution : 8734 experience points.
+[lower     ability]   (21)    Constitution : 13101 experience points.
+[lower     ability]   (22)    Constitution : 19651 experience points.
+[lower     ability]   (23)    Constitution : 29477 experience points.
+[lower     ability]   (24)    Constitution : 44215 experience points.
+[lower     ability]   (25)    Constitution : 66323 experience points.
+[lower     ability]   (26)    Constitution : 99484 experience points.
+[lower     ability]   (27)    Constitution : 149226 experience points.
+[lower     ability]   (28)    Constitution : 223839 experience points.
+[lower     ability]   (29)    Constitution : 335759 experience points.
+[lower     ability]   (30)    Constitution : 503638 experience points.
+[lower     ability]   (31)    Constitution : 553646 experience points.
+[lower     ability]   (32)    Constitution : 603655 experience points.
+[lower     ability]   (33)    Constitution : 653663 experience points.
+[lower     ability]   (34)    Constitution : 703671 experience points.
+[lower     ability]   (35)    Constitution : 753680 experience points.
+[lower     ability]   (36)    Constitution : 803688 experience points.
+[lower     ability]   (37)    Constitution : 853696 experience points.
+[lower     ability]   (38)    Constitution : 903705 experience points.
+[lower     ability]   (39)    Constitution : 953713 experience points.
+[lower     ability]   (40)    Constitution : 1003721 experience points.
+[lower     ability]   (41)    Constitution : 1053730 experience points.
+[lower     ability]   (42)    Constitution : 1103738 experience points.
+[lower     ability]   (43)    Constitution : 1153746 experience points.
+[lower     ability]   (44)    Constitution : 1203755 experience points.
+[lower     ability]   (45)    Constitution : 1253763 experience points.
+[lower     ability]   (46)    Constitution : 1303771 experience points.
+[lower     ability]   (47)    Constitution : 1353780 experience points.
+[lower     ability]   (48)    Constitution : 1403788 experience points.
+[lower     ability]   (49)    Constitution : 1453796 experience points.
+[lower     ability]   (50)    Constitution : 1503805 experience points.
+[lower     ability]   (51)    Constitution : 2087163 experience points.
+[lower     ability]   (52)    Constitution : 2087163 experience points.
+[lower     ability]   (53)    Constitution : 2087163 experience points.
+[lower     ability]   (54)    Constitution : 2670521 experience points.
+[lower     ability]   (55)    Constitution : 2670521 experience points.
+[lower     ability]   (56)    Constitution : 2670521 experience points.
+[lower     ability]   (57)    Constitution : 3253880 experience points.
+[lower     ability]   (58)    Constitution : 3253880 experience points.
+[lower     ability]   (59)    Constitution : 3253880 experience points.
+[lower     ability]   (60)    Constitution : 3837238 experience points.

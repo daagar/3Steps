@@ -1,0 +1,186 @@
+Witch Info
+Note: I refer to gramarye as skills.
+
+When you first join
+
+Salema whispers: When you are ready, request guidance and we will start down the path of life.
+
+People commonly skip over the messages at joining, but there's a reward if you pay attention.
+Go to each gnpc and ‘say guidance’ (5 free skill pts + ritual/hex/blessing), returning to Salema after your tour.
+You also must be taught your invokation phases. You get one when you join, and then new ones every 10th glvl (glvl = skills spent / 10 (rounded up to 1 when you first join)). 'say invokation' at a gnpc to see what they can teach you.
+
+Custom HP bar
+
+Here is my current hpbar (I gag the 2nd line and pull the info into my client, a technique I usually do to separate information that's important or significant to see every round from the information that's good to keep constantly updated, but you don't need to constantly see it (I have this information on display in my client). I include GXP in the latter since I often have a GXP tracker setup that displays GXP gains for the round, and summarizes at the end of fights.):
+
+hpbar HP:@hired:$HP$@/@red:$HPMAX$@ SP:@hiblue:$SP$@/@blue:$SPMAX$@ A:@yellow:$ANIMA$@/@brown:$ANIMAMAX$@ MIS:$MISDIRECTION$ E:@white:$ENEMY$@($INVOKELEFT$)$CR$SM:@hicyan:$SPIRITUS$@ C:@brown:$CENTERING$@ [@cyan:$SEASON$@|@cyan:$SUN$@($SUNPERCENT$%)|@cyan:$MOON$@($MOONPERCENT$%)] BE:$BEWITCHES$ B:$BLOOD$ EFF:$EFFECTS$ H:$HEXSET$ AS:$ANIMASHIELD$% G2N: $STAGEPERCENT$%($STAGE$)
+
+Rituals
+
+(I don't guarantee these costs are accurate since it's my own recording and I could have made mistakes. The rituals listing order is dynamic, so sometimes I have thought things were in a different order than they actually are and it's messed me up.)
+
+You 'pay' for rituals with receptiveness (using the intuit command). The skill Apotheosis grants 100 receptiveness each time it is raised.
+Definite costs are in bold (noted by whom I received the information if it wasn't my own purchase), rounded costs (based on how much receptiveness made them available, and are therefore rounded up to the nearest fifty) are in italics. Rituals that last until experiencing a moon phase change are underlined.
+
+   0 - Blood (freebie, blood is a consumable resource that fuels/powers invokation)
+       The Wisp (summons a will o'wisp - light source eventually? haven't noticed what this does)
+ 100 - Cloud Walking (grants flight (soar/land))
+       False Visage (changes your appearance in the room to be random from a list)
+       The Harvest (boost and preserve a corpse)
+       The Kraken (survive underwater)
+       Kenning (identifies all items on ground and in inventory)
+       Offering ("do the last bit of damage to a mob to gain Anima at the cost of Centering")
+       Placating the Sky Father (placates SM balance)
+       Renewal (allows herbs to be gathered from corpses)
+       Rousing the Earth Mother (rouses SM balance)
+ 150 - Blinding The <Grey/Iron/Fiery> Eye (removes penalties to Occultation (illusion? glamour? against undead/robots/elementals)
+ 200 - Peaceful Passing (destroys a corpse to recover Centering)
+       Spiritual Guidance (small boost to all stats)
+ 250 - Air* (force leave)
+       Earth* (force noleave)
+       Fire* (stun)
+       Water* (slow)
+<I believe these 4 rituals are multi-round cast and their effects kick in at completion (not take affect during casting)>
+ 300 - Sanctuary (wandering/hunting mobs won't enter the room while performed)
+ 350 - Shadows (assume it hides your appearance in the room, also assume it doesn't affect mobs)
+ 400 - Dawn (grants 'dawntouch' (heals hp, costs sp))
+       Day (recover HP during performance)
+       Dusk (grants 'dusktouch' (heals sp, costs sp))
+       Good Luck (some ac vs all)
+       Night (recover SP during performance)
+       Rooting (self noleave)
+ 450 - The Emperor* (+str)
+       The Hanged Man* (+con)
+       The Magician* (+int)
+       The Hierophant (+wis)
+       The Fool* (+dex)
+       The Empress* (+cha)
+ 500 - Fair Fortune (ac vs all)
+ 600 - Sky (recover Anima during performance)
+       Stone* (recover Centering during performance)
+ 750 - Warding Against (powerful ac vs one type):
+         Swords (edged)/Stones (blunt)/Fire* (fire)/Cold* (ice)/Acid* (acid)/Lightning* (elec)/Fear* (mental)/Sorcery* (energy)/Poison (poison)/Light* (radiation)
+1000 - Brambles [Skeletor] (blunt dmg every round during performance)
+       The Defiled Earth (aoe poison dmg each round while performing?)
+       Heroic Destiny (powerful ac vs all)
+       The King of Kings (consumes a piece of armour to absorb some of its ac (only benefit from one at a time))
+(* = reported by Broomhilda)
+Hexes
+
+(Rituals you can 'rituals all', blessings you can 'info blessings', but there is no way to see the list of hexes before you get them, so here it is (you can still info the individual hexes once you know their names):)
+
+Both hexes and blessings, you get the first in the list at your first point (though it levels (intensity - you get a stronger version (you can downcast since they take up 'room', granted by the Thorns/Loom skills)) every 5th, the 2nd is gained/leveled every 10, and the 3rd is gained/leveled every 20 pts of the related skill. I tried to figure out how much room Thorns gave vs how much room different intensity hexes gave, but I started to run into discrepancies, so I figured it wasn't just a simple formula (ie. I didn't try very hard, and can't be bothered :-D).
+
+So, just to restate, raising Malice will improve your offensive hexes. You'll gain Infirmity at 1, Shattering at 10, and Doom at 20. Infirmity will gain intensity (more powerful) every 5 skill pts spent in Malice, Shattering every 10, and Doom every 20. Raising Thorns will allow you to put more hexes on a target (though Doom costs more 'room' than Shattering, which costs more than Infirmity... and higher intensities cost more than lower intensities).
+Malice (offensive hexes (debuff defense))
+
+Infirmity (-dodge/regen, chance of snare), Shattering (random chance on incoming hit to perm lower ac), Doom.(random chance on incoming hit to augment dmg)
+Malediction (damage hexes)
+
+Blight (poison), Agony (mental), Destruction (acid).
+Bane (defensive hexes (debuff offense))
+Nightmares (anti-specials (less often, less intense)), Blindness (chance to botch outgoing attack), Decay (perm lowers dmg when procs (I haven't had a good opportunity to watch for when this procs, could be per round? on outgoing hits?)).
+
+Blessings
+
+Note: You can only bless others (including other witches, though I've heard blessings work less well on them?).
+
+(Just to have a more complete reference, I'm including these even though the list is readily available:)
+
+Weaving
+
+Wealth (+wealth(fleecing?)), Health (static hp regen), Long Life (%age of hp regen).
+Braiding
+
+Fair Face (+con/cha w defense), Straight Limb (+str/dex w random extra hits/dodge), Sound Mind.(+int/wis w sp regen)
+Combing
+Good Weather (ac? 'survive extremes'? light?), Clear Roads (DR? 'freedom of travel'? 'oceans'?), Safe Travel (consumable shield, 'safe in adverse conditions'?).
+
+Herbs/Potions/Brewing
+
+Note: Only non-Witches can drink these potions.
+
+Disclaimer: Obviously this is my understanding of the process, so, as with anything that involves experiment, I could clearly be totally mistaken about some of this. I know that I haven't figured out everything yet, despite having max Herbcraft and identifying all my herbs.
+
+It is not the combination of herbs that is important (at least when discovering herb properties). Each herb (random for each witch) is tied to a certain effect. It is up to you to discover which effect each herb has for you. 
+
+Tips:
+
+Double-herb potions
+Brewing takes two sets of 4 herbs. To keep it simple, especially when you don't have any known herbs, brew 8 of the same herb. Once you have a known herb, you could brew 4 of that with 4 of another herb you're testing, but I just kept brewing 8 all along to keep it simple. (brewing 4 of a good herb and 4 of a bad herb will give a bad result, so if you don't know the first herb is good then you're left only knowing there was a bad herb in the mix)
+Keeping track of results
+There are 3 different results you can get from brewing. There's no need for keeping an excel sheet, a simple text document will do. Keep track of: successful herbs (sorted by their effect), low skill herbs (the brewing is a failure, but due to low skill (different failure message)), and useless herbs. Here is an example of my listing (note that low skill herbs are no longer in it since my herbcraft is maxed; also note that I haven't tested the potions on my alts yet, so little information on what each type of potion does).
+Which herbs to experiment with
+Type 'peruse' at the herb storage room. This is a limited list that will make your experimenting easier than trying to use the whole list of herbs. Even at maxed herbcraft, procure excludes 2 dozen(ish) bad herbs. Procure will have more herbs added to it as you level your herbcraft. There will still be useless herbs in this list, but it will also exclude herbs that are far ahead in skill and therefore no point constantly testing them every herbcraft level.
+Order obtained (the numbers listed in 'herbcraft') is not the same as herb strength
+Bit of a chore, but testing your whole procure list (excluding successful and useless herbs of course) every herbcraft level or so will ensure that your gained knowledge is in order. For example, if you just sat there grinding herbcraft xp (gained through brewing, successful brewing xp > unsuccessful xp I hear), gained 20 herbcraft levels, and then retested, you risk discovering the herbs out of order for their strength. This might not be a concern for you if all you care about is grinding out maximum herbcraft ASAP and only using the maximum herbs. (As an example in my herb list link above, in my Adeptness herbs I discovered Dill as my 58th herb, but it brews a better potion than Willow, discovered 68th. For herbs within the same tier (same description) this would be a lot harder to notice except through careful testing of the resulting potions. The last half of potion advancement all seems to look identical within the same type.)
+Spiritus Mundi
+
+The Spiritus Mundi, or the world spirit, both guides and is guided by all living beings. When things are out of balance, the Spiritus Mundi may become enraged, and expend much of its power towards righting the imbalance of the world.
+
+On the other hand, things may be TOO balanced - even excessive balance is a sort of imbalance. In such a case, the Spiritus Mundi may slip into dormancy, a hibernative sleep.
+
+To keep the world spirit in a calm state of wakefulness, it is important that all Witches work to maintain the balance. To slay too many living things enrages the Spiritus Mundi, while sealing too rapidly the growing tear of Chaos puts it to rest. A Witch must consider her actions wisely, lest the world spirit fall to one extreme or the other.
+So basically, Spiritus Mundi (SM) is a measure in the guild that is ideal to keep balanced. There are activities that agitate it, and activities that calm it. Combat is a stimulant. There are rituals that can move it - Placating the Sky Father and Rousing the Earth Mother. So... it costs 1 skill point to be able to counter combat's effects on SM. Don't nag the guild to placate for you when you can do it yourself. 1 skill point.
+So what is so important about SM? SM will occasionally grant large chunks of GXP. The greatest chance of this happening is when SM is balanced ("Awake").
+
+The Spiritus Mundi moves through sky and earth, awakening strange currents in you. Visions assail you, guiding your psyche along a journey that is yours and yours alone. The cycles of the world wheel through you, insights surfacing, lifetimes passing in a mere instant.
+
+SM can only be seen in an hpbar variable that you will need to add to a custom hpbar (unless something has changed... not in 'gscore', not in 'witches', not in default hpbar). The scale is:
+
+Stabby
+Troubled
+Awake (ideal)
+Lethargic
+Torpid
+Attunement
+
+You can bond to seasons/day-night/moon phases for certain benefits. One definite benefit is you earn more GXP when the guild is in a phase you're bonded to. When the phases align to a triple bond, I'm told you get double your normal gxp. A single bond seems to give ~20-25% and a double seems to give ~40-50% bonus gxp. An assumed benefit (since I don't have numbers and can't be bothered to datamine/track info) is that your invoking that phase works better, especially?only? during that phase.
+
+Each attunement also has a specific specialization benefit to it. These are the benefits I know of (they occur when the guild is in that phase, not all the time):
+
+Seasons
+Summer - Invoking
+Winter - Hexing
+Autumn - Rituals
+Spring - Blessings
+Day/Night
+Day - hp regen
+Night - sp regen (seems to be around 3/rd give or take, but that actually goes quite a ways to stabilizing your vitals)
+Moon Phases
+
+These I don't know. The only rumor I've heard is that they probably affect specific conjuring skills.
+New Moon - This is the only one I've seen the message for. It states that your 'powers of majesty' are boosted under a New Moon. Maybe if I see the other messages it'll be more clear. (I suspect Warding, but that's total conjecture).
+Invokation
+
+During each full length invokation, there will be one round (either the last, or the first) where you do not get gxp for invoking. So if you're dependent on invokation gxp (you may be able to get full gxp on hexing for a while), you'll want to keep invokation length at glvl cap for optimal gxp (see below for notes on invokation length).
+
+There are 10 phases. 'info phases' will give you an idea of the damage types. Witches lack edged, blunt, and electric invokations.
+
+Winter: Rebirth is only possible through the frigidity of death.
+Spring: The energy of new life feeds on the bones of old.
+Summer: Golden fire brings the heat of the heavens to bear.
+Autumn: As green fades to brown, the old is scoured away for the new.
+
+Day: The power of the Sun's radiation can create or destroy.
+Night: The power of darkness can poison those that fear it.
+
+Full Moon: The pale light of madness shines brightly within.
+Waning Moon: As light fades to dark, the mind yearns for oblivion.
+New Moon: Sometimes a mere hint can turn the mind to madness.
+Waxing Moon: Anticipation of the inevitable can haunt the weak minded.
+So why are there 4 moon phases all doing mental damage?
+
+15:54 <| WITCHES |> Etah: season                                
+
+15:54 <| WITCHES |> Etah: moon cycle
+
+15:54 <| WITCHES |> Etah: some are more effective at given times
+
+ 
+Vinculum adds another round to your invoke every 4th point. Guild level limits this amount to a cap (glvl/7). There seem to be a point here and there where you either get a free round or the equation shifts (the equation was changed at one point for balance reasons to be a lot more dependent on GLVL... since the numbers along the way changed, I think to keep the end numbers the same there may have been a little fudging (extra point here or there)).
+What is "Misdirection"?
+
+Misdirection is a percentage variable that you can put on your hpbar. It is a measure of unused or extra capability that you can put into your misdirecting defenses (certainly illusion, probably glamour too? (Bullet-ridden Zombie is distracted by your illusions, and attacks half-heartedly. <--- Glamour defense firing)). So if you are hitting behind someone, or defending against something very easy for you, this stat will go up. As it gets used up against tougher hits it will drain away (and somewhat fluctuate near empty probably). So to a degree it will help you survive a little longer if you're hitting behind someone and suddenly you're getting hit for some reason.
+
+Last updated (likely): 2/20/2014

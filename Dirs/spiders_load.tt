@@ -1,0 +1,20 @@
+#unvar kill_path
+#list {kill_path}{clear}
+#var area_aggro 1
+#unvar {area_items}
+#list {area_items}{clear}
+#unvar all_area_items
+
+#var {kill_path}{w;sw;s;s;s;s;s;s;sw;sw;se;s;s;s;se;se;se;se;se;sw;ne;s;se;nw;s;n;sw;w;e;sw;ne;se;nw;s;sw;w;n;nw;se;s;w;w;e;nw;sw;ne;nw;se;w;w;w;w;se;nw;s;n;sw;ne;w;e;nw;se;n;s;ne;sw;e;e;e;e;se;e;se;s;s;n;n;sw;s;n;sw;w;ne;ne;sw;sw;e;ne;ne;nw;sw;sw;w;s;n;sw;ne;w;e;e;ne;w;w;w;sw;s;s;n;nw;se;sw;nw;se;w;e;s;sw;ne;se;sw;ne;se;sw;se;s;n;nw;sw;ne;ne;e;se;nw;ne;w;e;nw;se;n;s;ne;sw;e;e;n;s;ne;sw;e;w;w;w;sw;w;nw;nw;n;ne;se;e;e;e;e;e;ne;n;ne;n;ne;ne;e;ne;nw;nw;se;n;ne;sw;s;se;ne;n;n;ne;sw;s;s;ne;sw;sw;sw;e;e;se;ne;ne;e;e;nw;se;n;s;ne;sw;e;w;se;nw;s;n;sw;ne;w;w;sw;sw;se;nw;s;s;sw;ne;n;n;sw;nw;nw;w;sw;se;ne;sw;e;w;nw;sw;s;ne;se;nw;sw;se;e;ne;e;n;s;sw;ne;w;sw;se;ne;ne;sw;se;ne;se;nw;ne;se;ne;e;nw;se;n;s;ne;sw;e;w;se;nw;s;n;sw;ne;w;sw;s;se;se;nw;ne;e;e;n;e;nw;n;s;se;w;s;w;w;sw;se;nw;nw;sw;w;w;w;n;s;w;e;se;e;se;e;w;ne;e;nw;sw;ne;se;w;se;sw;se;s;w;n;s;e;sw;ne;se;s;n;ne;se;e;e;se;nw;w;w;nw;e;n;ne;sw;s;w;sw;nw;n;nw;ne;se;e;ne;nw;n;s;ne;sw;e;w;se;sw;w;nw;e;w;s;se;e;ne;ne;se;sw;e;se;e;w;se;nw;s;n;nw;w;ne;e;se;n;s;nw;w;nw;ne;s;n;se;nw;e;se;nw;ne;sw;e;ne;s;n;sw;w;w;w;e;n;ne;sw;n;s;s;nw;n;ne;e;se;nw;w;nw;ne;n;n;n;ne;nw;ne;nw;ne;nw;ne;n;n;n;n;s;s;s;s;sw;se;sw;se;sw;se;sw;s;s;s;sw;se;sw;s;se;sw;sw;sw;w;nw;n;nw;sw;nw;w;nw;e;e;e;ne;n;nw;sw;sw;nw;sw;nw;w;nw;sw;e;se;e;sw;e;w;w;w;ne;sw;w;se;s;e;ne;e;nw;w;w;se;nw;w;se;s;se;sw;w;w;ne;sw;n;s;nw;se;w;e;sw;ne;s;n;se;nw;e;e;ne;se;ne;sw;nw;ne;e;se;e;nw;se;s;n;w;nw;ne;se;se;nw;nw;e;w;sw;w;sw;s;se;ne;e;w;se;nw;sw;se;e;ne;ne;sw;sw;se;nw;e;e;ne;se;sw;ne;nw;ne;sw;n;n;e;nw;se;w;nw;se;s;s;sw;w;w;w;nw;nw;n;nw;n;nw;w;w;w;w;w;nw;n;ne;e;e;e;ne;e;ne;n;ne;n;nw;nw;nw;nw;nw;n;n;n;nw;ne;ne;n;n;n;n;n;n;ne;e}
+
+#list {kill_path}{create}{$kill_path}
+#list {kill_path}{size}{max_room}
+
+#var {area_items}{mandibles;scale mail;puppy;crystal;casing}
+#list {area_items}{create}{$area_items}
+#list {area_items}{size}{all_area_items}
+
+#var stepper 1
+#var room_num 0
+
+rating

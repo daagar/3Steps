@@ -1,0 +1,196 @@
+#var {my[damagetracker][record]}{0};
+#var {my[damagetracker][foe]}{0};
+#var {my[damagetracker][damage]}{0};
+#var {my[damagetracker][healthiest]}{0};
+#var {my[damagetracker][record-health]}{0};
+#var {my[damagetracker][record-foe]}{0};
+
+#alias {reset_counter}{
+	#var {my[damagetracker][rounds]}{0};
+	#var {my[damagetracker][total]}{0};
+	#var {my[damagetracker][average]}{0};
+};
+
+#alias {log_record_damage}{
+	#showme {Highest Dam : $my[damagetracker][record-foe] -> $my[damagetracker][record]} 25 -38;
+};
+
+#alias {log_record_health}{
+	#showme {Toughest Foe: $my[damagetracker][healthiest] -> $my[damagetracker][record-health]} 28 -38;
+};
+	
+
+#act {^You hit %1 %d time for %3 damage.}{
+	#var {my[damagetracker][foe]}{%1};
+	#var {my[damagetracker][foe-full]}{%1};
+	#var {my[damagetracker][hits]}{%2};
+	#var {my[damagetracker][damage]}{%3};
+        #format {my[damagetracker][foe]}{%.8s}{$my[damagetracker][foe]};
+	#math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+	#math {my[damagetracker][total]}{$my[damagetracker][total] + $my[damagetracker][damage]};
+	#math {my[damagetracker][average]}{$my[damagetracker][total] / $my[damagetracker][rounds]};
+	#if {$my[damagetracker][submit] == 1}{
+		log_damage ${my[damagetracker][foe-full]};
+	};
+	#if {$my[damagetracker][damage] > $my[damagetracker][record]}{
+		#var {my[damagetracker][record]}{$my[damagetracker][damage]};
+		#var {my[damagetracker][record-foe]}{$my[damagetracker][foe]};
+		show_damage_table;
+	};
+        #var {my[damagetracker][targetstring]}{$my[damagetracker][foe] -> $my[damagetracker][damage]};
+        #var {my[damagetracker][guildstring]}{$guild};
+        #if {"$guild" == "changeling"}{
+                #var {my[damagetracker][guildstring]}{$guild (${my[form]}(${my[ff][level]}))};
+        };
+        #if {"$guild" == "angel"}{
+                #var {my[damagetracker][guildstring]}{$guild (${my[possess][body]} [A${my[possess][attack]} D${my[possess][defense]} H${my[possess][health]} (${my[possess][fullspeed]}) - [${my[spirit][current]} ${my[transfigurations][all]}])};
+	};
+        #if {"$guild" == "mages"}{
+                #var {my[damagetracker][guildstring]}{$guild (${my[summon][current][all]})};
+	};
+	#if {$my[config][db][damage] == 1}{
+		#format {dbtimestamp} {%t} {[%Y:%m:%d %H:%M:%S]};
+		db_submit_damage
+	}{
+        	#system {echo "$my[damagetracker][guildstring] - $my[damagetracker][targetstring] -> $my[damagetracker][hits] time -> $my[damagetracker][damage] ($my[damagetracker][average] Avg)" >> .tt/logs/${guild}-damagehistory.txt};
+        };
+};
+
+#act {^You hit %1 %d times for %3 damage.}{
+	#var {my[damagetracker][foe]}{%1};
+	#var {my[damagetracker][foe-full]}{%1};
+	#var {my[damagetracker][hits]}{%2};
+	#var {my[damagetracker][damage]}{%3};
+        #format {my[damagetracker][foe]}{%.8s}{$my[damagetracker][foe]};
+	#math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+	#math {my[damagetracker][total]}{$my[damagetracker][total] + $my[damagetracker][damage]};
+	#math {my[damagetracker][average]}{$my[damagetracker][total] / $my[damagetracker][rounds]};
+	#if {$my[damagetracker][submit] == 1}{
+		log_damage ${my[damagetracker][foe-full]};
+	};
+	#if {$my[damagetracker][damage] > $my[damagetracker][record]}{
+		#var {my[damagetracker][record]}{$my[damagetracker][damage]};
+		#var {my[damagetracker][record-foe]}{$my[damagetracker][foe]};
+		show_damage_table;
+	};
+        #var {my[damagetracker][targetstring]}{$my[damagetracker][foe] -> $my[damagetracker][damage]};
+        #var {my[damagetracker][guildstring]}{$guild};
+        #if {"$guild" == "changeling"}{
+                #var {my[damagetracker][guildstring]}{$guild (${my[form]}(${my[ff][level]}))};
+        };
+        #if {"$guild" == "angel"}{
+                #var {my[damagetracker][guildstring]}{$guild (${my[possess][body]} [A${my[possess][attack]} D${my[possess][defense]} H${my[possess][health]} (${my[possess][fullspeed]}) - [${my[spirit][current]} ${my[transfigurations][all]}])};
+	};
+        #if {"$guild" == "mages"}{
+                #var {my[damagetracker][guildstring]}{$guild (${my[summon][current][all]})};
+	};
+	#if {$my[config][db][damage] == 1}{
+		#format {dbtimestamp} {%t} {[%Y:%m:%d %H:%M:%S]};
+		db_submit_damage;
+	};
+        #system {echo "$my[damagetracker][guildstring] - $my[damagetracker][targetstring] -> $my[damagetracker][hits] times -> $my[damagetracker][damage] ($my[damagetracker][average] Avg)" >> .tt/logs/${guild}-damagehistory.txt};
+};
+
+#var {damagetracker[rows]}{10};
+#var {damagetracker[page]}{1};
+#var {damagetracker[max]}{100};
+
+#alias {show_damage_table}{
+	#screen clear square 21 -42 44 -1;
+	#draw rounded box 21 -41 23 -3 {            Last 10 Kills    [<128>GO<088>]};
+	#button {22;-11;22;-8}{ki};
+	#draw rounded box 24 -41 26 -3;
+	#draw rounded box 27 -41 29 -3;
+	#showme {<088>\u251C} 30 -41;
+	#showme {<088>\u2524} 30 -3;
+	#showme {  Foe   | Rnds | Tot. Dmg | Avg} 30 -38;
+	#draw rounded box 31 -41 42 -3;
+	log_record_damage;
+	log_record_health;
+	#if {"$guild" == "mages"}{
+		display_desired_summons;
+	};
+	#if {"guild" == "changeling"}{
+		show_current_form_table;
+		show_biome_table;
+	};
+        #math damagetracker[start]       {$damagetracker[rows] * $damagetracker[page]};
+        #math damagetracker[end]         {$damagetracker[rows] * $damagetracker[page] - $damagetracker[rows] + 1};
+        #line sub {var} #draw {tile} 32 -39 41 -4 $damagetracker[log][-$damagetracker[start]..-$damagetracker[end]];
+};
+
+show_damage_table
+
+#ticker {damage_table}{show_damage_table}{4}
+
+#alias {update_damage_table}{
+        #if {&damagetracker[log][] > $damagetracker[max]} {
+                #list damagetracker[log] del 1
+        };
+        #list damagetracker[log] ins -1 {%0};
+        show_damage_table
+}
+
+#alias log_damage_no_numbers {
+        #var {my[damagetracker][guildstring]}{$guild};
+	#var {my[damagetracker][foe]}{%0};
+        #var {my[damagetracker][foe-full]}{%0};
+	#var {my[damagetracker][dbrounds]}{$my[damagetracker][rounds]};
+	#var {my[damagetracker][dbtotal]}{0};
+	#var {my[damagetracker][dbaverage]}{0};
+        #format {my[damagetracker][foe]}{%+8s}{$my[damagetracker][foe]};
+        #format {my[damagetracker][foe]}{%.8s}{$my[damagetracker][foe]};
+	#format {my[damagetracker][rounds]}{%+4s}{$my[damagetracker][rounds]};
+	#format {my[damagetracker][total]}{%+8s}{};
+	#format {my[damagetracker][average]}{%-4s}{};
+	#if {$my[config][db][kill] == 1}{
+		#format {dbtimestamp} {%t} {[%Y:%m:%d %H:%M:%S]};
+		db_submit_kill;
+		db_query_kill $my[damagetracker][foe-full];
+		#var {my[damagetracker][total]}{$killstats[1][total]};
+		#math {my[damagetracker][average]}{$my[damagetracker][total] / $my[damagetracker][dbrounds]};
+		#if {$my[damagetracker][average] > $my[damagetracker][record]}{
+			#var {my[damagetracker][record]}{$my[damagetracker][average]};
+			#var {my[damagetracker][record-foe]}{$my[damagetracker][foe]};
+			show_damage_table;
+		};
+		#if {$my[damagetracker][total] > $my[damagetracker][record-health]}{
+			#var {my[damagetracker][healthiest]}{$my[damagetracker][foe]};
+			#var {my[damagetracker][record-health]}{$my[damagetracker][total]};
+			show_damage_table;
+		};
+		#format {my[damagetracker][total]}{%+8s}{$my[damagetracker][total]};
+		#format {my[damagetracker][average]}{%-4s}{$my[damagetracker][average]};
+	}{
+		#system {echo "$my[damagetracker][guildstring] | $my[damagetracker][foe-full] | $my[damagetracker][rounds] | $my[damagetracker][total] | $my[damagetracker][average]" >> .tt/logs/kill-records.txt};
+	}
+	update_damage_table ${my[damagetracker][foe]} | ${my[damagetracker][rounds]} | ${my[damagetracker][total]} | ${my[damagetracker][average]};
+	reset_counter;
+};
+
+#alias log_damage {
+	#var {my[damagetracker][submit]}{0};
+	#var {my[damagetracker][foe]}{%0};
+        #var {my[damagetracker][foe-full]}{%0};
+	#var {my[damagetracker][dbrounds]}{$my[damagetracker][rounds]};
+	#var {my[damagetracker][dbtotal]}{$my[damagetracker][total]};
+	#var {my[damagetracker][dbaverage]}{$my[damagetracker][average]};
+	#format {my[damagetracker][foe]}{%-8s}{$my[damagetracker][foe]};
+        #format {my[damagetracker][foe]}{%.8s}{$my[damagetracker][foe]};
+	#format {my[damagetracker][rounds]}{%+4s}{$my[damagetracker][rounds]};
+	#format {my[damagetracker][rounds]}{%+4s}{$my[damagetracker][rounds]};
+	#format {my[damagetracker][total]}{%+8s}{$my[damagetracker][total]};
+	#format {my[damagetracker][average]}{%-4s}{$my[damagetracker][average]};
+	#if {$my[damagetracker][total] > $my[damagetracker][record-health]}{
+		#var {my[damagetracker][healthiest]}{$my[damagetracker][foe]};
+		#var {my[damagetracker][record-health]}{$my[damagetracker][total]};
+	};
+	update_damage_table ${my[damagetracker][foe]} | ${my[damagetracker][rounds]} | ${my[damagetracker][total]} | ${my[damagetracker][average]};
+	#if {$my[config][db][kill] == 1}{
+		#format {dbtimestamp} {%t} {[%Y:%m:%d %H:%M:%S]};
+		db_submit_kill;
+	}{
+		#system {echo "$my[damagetracker][guildstring] | $my[damagetracker][foe-full] | $my[damagetracker][rounds] | $my[damagetracker][total] | $my[damagetracker][average]" >> .tt/logs/kill-records.txt};
+	};
+	reset_counter;
+};

@@ -1,0 +1,19 @@
+#unvar kill_path
+#list {kill_path}{clear}
+#unvar {area_items}
+#list {area_items}{clear}
+#unvar all_area_items
+
+#var kill_path {n;n;nw;nw;n;n;n;ne;n;s;s;s;s;s;ne;n;n;n;n;ne;s;s;s;s;s;ne;n;n;n;s;s;s;ne;ne;ne;n;nw;nw;n;n;se;s;s;ne;n;n;se;s;s;s;ne;n;n;s;s;se;n;n;n;n;n;n;n;n;nw;s;s;s;sw;n;n;n;n;nw;s;s;s;s;sw;n;n;n;sw;s;s;s;nw;n;sw;n;n;ne;n;n;n;se;se;se;nw;nw;nw;nw;s;s;s;s;s;sw;n;n;n;n;n;n;sw;s;s;s;s;nw;n;n;n;sw;sw;sw;s;se;se;s;s;s;ne;ne;ne;nw;sw;nw;n;nw;s;s;s;sw;n;n;n;s;s;s;nw;n;n;n;n;sw;s;s;s;n;n;n;sw;s;s;s;s;s;s;s;s;ne;n;n;ne;s;s;s;se;n;n;n;n;se;ne;se;sw;sw;s;sw;s;se;se;se;se;se;s;s}
+
+
+#list {kill_path}{create}{$kill_path}
+#list {kill_path}{size}{max_room}
+
+#var stepper 1
+#var room_num 0
+
+#var {area_items}{puppy;claws;talons;sword;staff;wings;cloak;suit;key;antlers}
+#list {area_items}{create}{$area_items}
+#list {area_items}{size}{all_area_items}
+rating

@@ -1,0 +1,284 @@
+#var realms[FANTASY][areas]
+{
+    {realm of the verbeeg vexorg} {w2;e;e;ne;n;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n}
+    {pirate ship lostar} {w2;e;n;e;e;n;ne;n;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;climb}
+    {bear cave jux} {w2;e;n;e;e;n;ne;n;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;e;n;n;n}
+    {winter wonderland alayna} {w2;e;n;n;e;e;ne;n;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;e;n;n;path}
+    {black pyramid kohl} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;w;n;n;n;n;n}
+    {troll caves morkin} {w2;e;n;e;e;n;ne;n;n;n;n;n;e;e;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;enter}
+    {seahaven cirrus} {w2;e;n;n;e;e;ne;n;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;e;e;n;e;n}
+    {tower of frost nanook} {w2;e;n;e;n;e;ne;n;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;e;e;n;e;e;ne}
+    {frost giant lair} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;n;n;n;n;enter}
+    {unknown 1} {w2;e;e;ne;n;ne;n;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;e;e;n;e;s;enter}
+    {valley of forests and glaciers thorin} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;n;n;w;n;n;n;touch statue}
+    {jaffas lair caalan} {w2;e;n;e;e;n;ne;n;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;enter}
+    {blackfathom rumor} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;w;w;w;w;w;w;w;w;w;nw;nw;w;ne;e;ne;ne;nw;ne;enter}
+    {excavation site stelari} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;n;n;enter}
+    {land of the ice people rastafan} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;portal}
+    {ice crevice fantasy} {w2;e;n;n;e;e;ne;n;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;e;e;s;down}
+    {tower of pak-tor flaxen} {w2;e;e;ne;n;ne;n;e;e;ne;ne;n;n;ne;n;n;n;n;e;n;e;n;n;n;n;n;n}
+    {ant hole tensor} {w2;e;e;ne;n;ne;n;e;e;ne;ne;n;n;ne;n;n;n;n;e;n;e;n;n;n;n;e;e;n;e;e;n;d}
+    {forest lake stelari} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;w;w;w;w;w;w;w;w;w;nw;nw;w;nw;nw;n;path}
+    {hovel skinless} {w2;e;e;ne;n;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;enter}
+    {catapult peeron} {w2;e;n;e;e;n;ne;n;e;e;ne;ne;n;n;ne;n;n;n;n;n;n;n;n;n;n}
+    {dragon slister} {w2;e;n;n;e;n;n;e;e;e;n;e;e;ne;n;n;ne;n;n;n;n;e;n;e;n;n;n;n;e;e;n;path}
+    {medlar castle pistil} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;w;w;n;n;path}
+    {red lotus temple rumor} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;w;w;w;w;w;w;w;w;w;nw;nw;w;nw;w;w;enter}
+    {vagos stronghold thoreau} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;w;w;w;w;w;w;w;w;w;nw;nw;w;ne;enter}
+    {pelt traders oberon} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;w;w;w;w;w;w;w;w;w;nw;nw;w;ne;e;ne;ne;se;path}
+    {ruined dovaron school of dark magic lorderon} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;w;w;w;enter}
+    {epic tensor} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;enter}
+    {hut joker} {w2;e;e;ne;n;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;e;enter}
+    {mount knivur talismon} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;w;w;w;w;w;w;w;w;w;n;n;path}
+    {guiles forest aztec} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;w;w;w;w;w;w;nw}
+    {pegasus port lagman / rampage rampage} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;w;w;w;w;path}
+    {cavern tranzic} {w2;e;n;n;e;n;n;e;e;e;n;e;e;ne;n;n;ne;n;n;n;n;e;n;e;n;n;e;e;cave}
+    {grindur olfin} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;w;w;w;w;w;w;w;enter}
+    {lonely keep tensor} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;enter}
+    {mage tower rastafan} {w2;e;n;e;e;n;ne;n;e;e;ne;n;n;n;n;n;n;n;n;n;n;enter}
+    {kazhirs hut tinder} {w2;e;n;n;e;n;n;e;e;e;n;e;e;ne;n;n;ne;n;n;n;n;e;n;e;n;e;enter}
+    {giant camp zix} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;w;w;w;w;w;w;w;w;enter}
+    {the catacombs nanook} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;w;n;d}
+    {balooga falls mos} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;w;w;w;w;w;w;w;w;w;enter}
+    {grue cave syd} {w2;e;n;e;n;e;ne;n;e;e;ne;ne;n;n;ne;n;n;n;n;e;n;e;d}
+    {valley zimpor} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;path}
+    {explorers tomb amish} {w2;w;w;n;w;n;n;w;n;n;n;n;n;n;w;w;w;n;w;w;w;nw;ne;e;nw}
+    {arcanarton cletus} {w2;e;e;ne;n;n;n;n;n;n;n;n;n;n;n;n;n;w;w;w;w;w;w;s;w;w;w;w;sw;trail}
+    {durhals ant caves orthas} {w2;w;w;n;w;n;n;w;n;n;n;n;n;n;w;w;w;n;w;w;w;nw;nw;enter}
+    {fire giant lair shadow} {w2;n;n;e;n;n;n;n;e;e;n;n;e;e;e;e;e;ne;n;n;n;enter}
+    {hobgoblin cave blackstaff} {w2;n;n;n;n;n;n;n;n;n;n;n;path}
+    {gnoll outpost eek} {w2;e;n;n;n;n;n;n;n;n;n;n;n;path}
+    {hut kintax} {w2;n;n;n;n;n;n;n;n;e;n;n;e;n;enter}
+    {tookwich rumor} {w2;w;w;n;w;n;n;w;n;n;n;w;n;n;n;n;w;n;w;path}
+    {sarkath khan johnny} {w2;w;w;w;w;n;n;n;w;n;n;n;n;n;n;n;path}
+    {harfain vermillion} {w2;w;w;n;w;n;n;n;n;n;n;n;n;n;nw}
+    {momentory keep peeron} {w2;e;n;e;e;n;ne;n;e;e;ne;n;n;n;n;n;enter}
+    {tower of the clenched light davien} {w2;w;w;n;w;n;n;w;n;n;n;n;n;n;w;w;w;n;w;w;w;nw;sw;w}
+    {hell tensor} {w2;n;n;e;n;n;n;n;e;e;n;n;e;e;e;e;e;ne;n;enter}
+    {devourer cavern heath} {w2;w;w;n;w;n;n;w;n;n;n;w;n;n;n;w;w;w;n;d}
+    {gnome house skeet} {w2;w;w;w;w;n;n;n;w;n;n;n;n;n;n;w;path}
+    {alchemists house solo} {w2;n;n;n;n;w;n;n;n;n;n;w;w;enter}
+    {troll hunters cabin aztec} {w2;e;n;n;e;e;ne;n;n;n;n;n;e;n;enter}
+    {phantom ship xiola} {w2;e;e;ne;n;ne;n;e;e;ne;ne;n;sh;n;ne;ne}
+    {murus faralain bran} {w2;w;w;n;w;n;n;w;w;w;n;w;w;w;n;n;n;n;n;w}
+    {alizarian tower darrkin} {w2;w;w;n;w;n;n;w;w;w;n;w;w;w;n;n;n;n;n;n;w;nw;sw;se;sw}
+    {necromancers lair lostar} {w2;w;w;n;w;n;n;w;n;n;n;w;n;n;w;w;enter}
+    {circle hill cat} {w2;w;n;n;n;n;n;n;n;n;n;path}
+    {haunted manor tarin} {w2;w;w;n;w;n;n;w;w;w;n;w;w;w;n;n;n;n;w;w}
+    {isle of bones aravan} {w2;n;n;e;n;n;n;n;e;e;n;e;e;e;e;e;sh;n;row boat}
+    {clear falls valley ganzie} {w2;w;w;n;w;n;n;w;w;w;n;w;w;w;n;n;n;w;nw}
+    {aunt mays cottage casso} {w2;w;w;w;w;n;n;n;w;n;n;n;n;w;enter}
+    {larem cemetery halcyon} {w2;w;w;n;w;n;n;n;n;n;n;w;path}
+    {a missionary camp takamori} {w2;e;n;n;n;n;n;n;n;path}
+    {garrison vlad} {w2;e;e;ne;n;n;n;n;n;n;enter}
+    {a forest trail lostar} {w2;w;w;n;w;n;n;w;w;w;n;w;w;w;n;n;n;w;w;w}
+    {cavemaw wain} {w2;w;w;n;w;n;n;w;w;w;n;w;w;w;n;n;w;w;w;w;enter}
+    {the old hermit talimar} {w2;w;w;n;w;n;n;w;w;w;n;w;w;w;n;n;w;w;w;n}
+    {alagons hill devesine} {w2;n;n;n;n;w;n;n;w;w;enter}
+    {garou cave miyurachi} {w5;e;ne;ne;e;e;e;n;ne;ne;n;n;enter}
+    {the overlands distortion} {w5;e;ne;ne;e;e;e;n;ne;ne;e;e;e;n;n;n}
+    {enchanted spring tramane} {w5;e;ne;ne;e;e;e;n;ne;ne;e;e;e;e;n;n;n}
+    {katin tensor} {w5;e;ne;ne;e;e;e;n;ne;ne;e;e;e;n;n;e;e;e;n}
+    {harpy forest manson} {w5;e;ne;ne;e;e;e;n;ne;ne;e;e;e;n;n;e;e;e;e;ne}
+    {tower eek} {w2;w;w;n;w;n;n;w;w;w;n;w;w;w;n;w;enter}
+    {azrals tower kohl} {w2;w;w;n;w;n;n;w;w;w;n;n;w;enter}
+    {marble castle peeron} {w2;e;n;e;e;n;ne;n;n;e;e;enter}
+    {forest cottage pistil} {w5;e;ne;ne;e;e;e;n;ne;ne;e;e;e;e;e;e;n;e;enter}
+    {hacketoffs bridge stelari} {w5;e;ne;ne;e;e;e;n;ne;ne;e;e;e;e;e;e;n;e;e;path}
+    {angelo mischief} {w2;w;w;n;w;n;n;w;w;w;n;w;w;w;n;w;w;w;w;w}
+    {witch coven kino} {w2;w;w;n;w;n;n;w;w;w;n;w;path}
+    {the holy shrine of tarmatin tarin} {w2;n;n;n;n;w;w;enter}
+    {cottage polanna} {w5;e;ne;ne;e;e;n;n;ne;enter}
+    {abandoned garden salrylia} {w5;e;ne;ne;e;e;e;n;ne;ne;e;e;e;e;e;e;e;e;e;n}
+    {the barbarian plains razorx} {w2;w;w;n;w;n;n;w;w;w;w;n;w;w;n;w;w;s;w;w;w}
+    {stormrock castle: dark forest toasty} {w2;w;w;n;w;n;n;w;w;w;w;w;n;w;n;w;w;s;w;s}
+    {library of elandra fubger} {w2;w;w;n;w;n;n;w;w;w;w;w;n;w;sw}
+    {carnelians lair ryft} {w2;w;w;n;w;n;n;w;w;w;w;w;enter}
+    {zelligars castle pfunk} {w2;w;w;n;w;n;n;w;enter}
+    {ravenloft tensor} {w5;e;ne;ne;e;e;e;n;ne;e;ne;e;e;s}
+    {beach tiro} {w5;e;ne;ne;e;e;e;n;ne;e;ne;e;e;e;e;e;se;e;e;e;e}
+    {kalaenas fountain hobbes} {w2;w;w;n;w;n;w;w;w;w;enter}
+    {bandit hut shadowlotus} {w2;w;w;n;n;w;enter}
+    {tor bran} {w2;e;e;n;n;path}
+    {new arovian graveyard druss} {w5;e;ne;ne;e;n;path}
+    {lost woods slister} {w5;e;ne;ne;e;e;e;e;e;se;e;ne;ne;e;grove}
+    {rocky hill thyros} {w2;w;w;w;w;w;w;w;w;w;w;w;n;n}
+    {owlbears trandamere} {w5;e;ne;ne;e;e;e;e;path}
+    {karaks hut jux} {w5;e;ne;ne;e;e;e;e;e;se;e;ne;e;e;e;enter}
+    {troll bridge wain} {w5;e;ne;ne;w}
+    {kellen mausoleum argoth} {w5;e;ne;enter}
+    {portal of life keeble} {w5;e;ne;e;e;e;e;e;e;portal}
+    {bukken tunnels machina} {w5;e;ne;e;e;e;ne;e;e;se;e;hole}
+    {elven woods kohl} {w5;e;ne;e;e;e;ne;e;e;se;e;e;path}
+    {kelon olethros} {w5;e;ne;e;e;e;ne;e;e;se;e;e;e;e;e;e;e;e;ne;s}
+    {scorpion caves skeet} {w4;w;w;w;w;w;w;w;w;w;w;w;enter}
+    {druid copse syd} {w5;e;e;e;e;e;trail}
+    {temple of alythra riekl} {w5;e;e;e;e;e;e;path}
+    {kingdom of zanros rajah} {w5;e;e;e;e;e;e;e;e;e;e;e;e;e;e;e;enter}
+    {xaxis rumor} {w4;sw;w;w;w;w;w;w;w;w;w;w;w;rent carpet}
+    {rampage rampage} {w4;sw;w;w;w;w;w;w;w;w;w;trail}
+    {usloptas tower vryce} {w5;e;se;e;e;e;enter}
+    {dryad tree mosiah} {w5;e;se;e;e;e;e;e;e;e;e;e;e;e;e;e;e;clearing}
+    {boggart vale sorva} {w4;sw;trail}
+    {ancient dolmen solo} {w5;e;se;e;trail}
+    {troll alliance requiem} {w5;e;se;e;e;e;e;s;w;w;w;in}
+    {menhirs bran} {w5;e;se;e;e;e;e;e;e;e;e;s}
+    {blingdenwood village calaran} {w5;e;se;e;e;e;e;e;e;e;e;se;e;e;enter}
+    {marsh goblins skinless} {w5;e;se;e;e;e;e;s;e;e;e;e}
+    {rampart tensor} {w5;e;se;e;e;e;e;e;e;e;e;se;e;e;e;e;e;e;sinkhole}
+    {sand pit loomer} {w4;sw;w;w;w;w;w;s;w;w;w;w;w;w;w;d}
+    {rabbit fields rastafan} {w5;e;se;e;e;e;e;e;e;e;e;se;s}
+    {ruins of an old city johnny} {w4;sw;w;w;w;w;w;s;w;w;s;s}
+    {unknown 2} {w5;e;se;e;e;e;e;e;e;e;e;se;se;se;e;path}
+    {fachan trandamere} {w5;e;se;e;e;e;e;s;w;w;s;s;s}
+    {worms talon airship docks darrkin} {w4;sw;s;s;sw;w;s;dock}
+    {desert palace damo} {w4;sw;w;w;w;w;w;w;w;w;w;w;w;w;s;s;w;s;s;s}
+    {nomad camp dayln} {w4;sw;w;w;w;w;w;w;s;s;w;w;w;s;s;path}
+    {tower of fire nanook} {w4;sw;s;s;sw;se;se;se;e;e;e;ne;enter}
+    {lair of the matriarch requiem} {w5;e;se;e;e;e;e;s;s;s;s;s;enter}
+    {great lighthouse ryft} {w5;e;se;e;e;e;e;e;e;e;e;se;se;se;s;s;s}
+    {dreamville crowley} {w5;e;se;e;e;e;e;s;s;s;s;s;se;e;e;e}
+    {seacave cirrus} {w4;sw;s;s;sw;se;se;s;se}
+}
+#var realms[FANTASY][areasreverse]
+{
+    {realm of the verbeeg vexorg} {s;w;s;s;s;s;s;s;s;s;s;s;s;s;s;s;w;s;s;s;s;s;s;s;w;w;s;s;s;w1}
+    {pirate ship lostar} {overboard;s;w;s;w;s;s;s;s;s;s;s;w;s;s;s;s;s;s;s;s;s;w;s;s;s;s;s;sw;w;w;w1}
+    {bear cave jux} {s;s;s;w;s;s;s;s;s;s;w;w;w;s;s;s;s;s;s;s;w;s;s;w;s;w;s;w;s;s;s;s;s;w1}
+    {winter wonderland alayna} {path;s;s;w;s;s;s;s;s;s;w;w;w;s;s;s;s;s;s;s;w;s;s;w;s;w;s;w;s;s;s;s;s;w1}
+    {black pyramid kohl} {s;s;s;s;s;s;s;s;s;s;e;s;s;s;s;s;s;w;s;s;s;s;s;w;w;s;s;s;w1}
+    {troll caves morkin} {leave;s;s;s;s;s;s;s;s;w;s;w;s;s;s;s;s;s;s;w;w;w;s;s;s;s;w;s;s;s;w1}
+    {seahaven cirrus} {s;w;w;s;w;s;w;s;s;s;w;s;s;s;s;s;s;s;w;s;w;s;s;s;s;s;s;s;s;s;sw;w;w;w1}
+    {tower of frost nanook} {sw;w;w;w;s;w;s;w;s;s;s;s;s;w;s;s;s;s;s;s;s;w;s;s;w;s;s;w;s;s;w;s;s;w;s;w1}
+    {frost giant lair} {leave;s;s;s;s;s;s;s;s;s;e;e;s;s;s;s;s;s;w;s;s;s;s;s;w;w;s;s;s;w1}
+    {unknown 1} {leave;n;w;s;w;w;s;s;s;s;w;s;s;s;s;s;s;w;s;w;s;s;s;s;s;s;s;s;sw;s;sw;w;w;w1}
+    {valley of forests and glaciers thorin} {touch statue;e;s;s;s;s;s;s;s;e;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;sw;w;w;w1}
+    {jaffas lair caalan} {leave;s;s;s;s;s;s;w;s;s;s;s;s;s;s;s;s;s;w;s;w;w;s;s;s;sw;w;w;w1}
+    {blackfathom rumor} {leave;sw;se;sw;sw;w;sw;e;se;se;e;e;e;e;e;e;e;e;e;e;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;sw;w;w;w1}
+    {excavation site stelari} {up;s;s;s;s;s;s;s;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;sw;w;w;w1}
+    {land of the ice people rastafan} {portal;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;sw;w;w;w1}
+    {ice crevice fantasy} {leave;n;w;w;w;w;s;s;s;s;s;s;s;s;s;s;s;s;s;s;w;s;s;s;s;s;sw;s;sw;w;w;w1}
+    {tower of pak-tor flaxen} {s;s;s;w;s;s;w;s;s;w;s;s;s;s;s;s;s;sw;sw;w;w;s;sw;s;sw;w;w;w1}
+    {ant hole tensor} {u;w;s;s;s;w;w;w;w;s;s;w;w;s;s;s;s;s;s;s;s;s;sw;sw;w;w;s;sw;s;sw;w;w;w1}
+    {forest lake stelari} {path;s;se;se;e;se;se;e;e;e;e;e;e;e;e;e;e;e;e;s;s;s;w;s;w;w;s;s;s;s;s;s;s;s;s;s;w1}
+    {hovel skinless} {leave;s;s;w;s;s;s;s;s;s;s;w;w;s;w;s;s;s;s;s;s;s;s;w1}
+    {catapult peeron} {s;w;s;s;w;s;w;s;s;w;s;s;s;s;s;s;s;s;s;w;w;w;s;w;w;s;s;s;w1}
+    {dragon slister} {path;s;w;w;w;w;w;w;s;w;w;w;w;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;s;sw;w;w;w1}
+    {medlar castle pistil} {path;s;e;s;s;s;e;e;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;sw;w;w;w1}
+    {red lotus temple rumor} {leave;e;e;se;e;se;se;e;e;e;e;e;e;e;e;e;e;e;e;s;s;s;s;s;s;s;w;s;s;s;s;w;w;s;s;s;w1}
+    {vagos stronghold thoreau} {leave;sw;e;se;se;e;e;e;e;e;e;e;e;e;e;e;e;s;s;s;s;s;s;s;w;s;s;s;s;w;w;s;s;s;w1}
+    {pelt traders oberon} {path;nw;sw;sw;w;sw;e;se;se;e;e;e;e;e;e;e;e;e;e;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;sw;w;w;w1}
+    {ruined dovaron school of dark magic lorderon} {leave;s;e;s;s;e;e;e;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;sw;w;w;w1}
+    {epic tensor} {leave;s;s;s;e;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;sw;w;w;w1}
+    {hut joker} {leave;s;s;s;w;s;s;s;s;s;w;w;w;s;s;s;s;s;s;s;s;s;w;w1}
+    {mount knivur talismon} {path;s;s;e;e;e;e;e;e;e;e;e;e;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;sw;w;w;w1}
+    {guiles forest aztec} {se;s;e;e;e;e;e;e;s;e;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;sw;w;w;w1}
+    {pegasus port lagman / rampage rampage} {path;s;e;e;s;e;e;e;e;e;s;s;s;s;s;s;s;s;s;w;s;s;w;w;s;s;s;w1}
+    {cavern tranzic} {out;w;s;w;w;w;s;s;s;s;s;s;sw;s;s;sw;sw;w;w;s;sw;s;sw;w;w;w1}
+    {grindur olfin} {leave;e;e;e;e;e;e;e;s;e;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;sw;w;w;w1}
+    {lonely keep tensor} {leave;s;e;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;sw;w;w;w1}
+    {mage tower rastafan} {leave;s;s;w;s;s;s;s;s;s;s;s;w;w;s;s;sw;s;sw;w;w;w1}
+    {kazhirs hut tinder} {leave;w;s;w;s;w;w;s;s;s;s;w;s;s;s;s;sw;w;w;s;sw;s;sw;w;w;w1}
+    {giant camp zix} {leave;e;e;e;e;e;e;e;e;e;e;e;s;s;s;s;s;s;s;s;s;w;s;s;w;w;s;s;s;w1}
+    {the catacombs nanook} {u;s;e;s;s;s;s;w;s;s;s;s;s;s;s;w;w;s;s;s;w1}
+    {balooga falls mos} {leave;e;e;e;e;e;e;e;e;e;e;e;e;s;s;s;s;s;s;s;s;s;s;s;s;s;sw;w;w;w1}
+    {grue cave syd} {u;w;w;s;s;w;s;s;s;w;s;w;s;s;s;w;w;s;s;sw;s;sw;w;w;w1}
+    {valley zimpor} {path;s;s;w;w;w;s;s;s;s;s;s;s;s;s;s;s;w1}
+    {explorers tomb amish} {se;w;sw;se;e;s;e;s;e;s;s;e;s;s;s;s;s;s;s;e;e;e;e;e;w3}
+    {arcanarton cletus} {trail;ne;e;e;e;e;n;e;e;e;e;e;e;s;s;s;s;s;s;s;s;s;w;s;s;w;w;s;s;s;w1}
+    {durhals ant caves orthas} {leave;se;se;e;s;s;s;s;s;s;e;s;e;e;s;e;e;s;s;e;e;s;e;w3}
+    {fire giant lair shadow} {leave;w;s;s;s;s;s;s;sw;sw;w;w;s;sw;s;sw;w;w;w1}
+    {hobgoblin cave blackstaff} {path;s;s;s;s;s;s;s;s;s;s;s;w1}
+    {gnoll outpost eek} {path;s;w;s;s;s;s;s;s;s;s;s;s;w1}
+    {hut kintax} {leave;s;s;w;s;s;s;s;s;s;w;s;s;s;w1}
+    {tookwich rumor} {path;e;s;s;s;e;s;s;s;s;s;e;s;s;s;e;e;e;s;w3}
+    {sarkath khan johnny} {path;s;e;e;e;s;e;s;s;s;s;s;s;e;s;s;w1}
+    {harfain vermillion} {se;s;s;e;e;s;s;s;s;s;e;s;s;s;w1}
+    {momentory keep peeron} {leave;s;s;s;s;s;sw;w;w;s;sw;s;sw;w;w;w1}
+    {tower of the clenched light davien} {e;ne;se;e;s;s;s;s;s;s;e;s;e;e;s;e;e;s;s;e;e;s;e;w3}
+    {hell tensor} {leave;s;sw;s;s;sw;sw;w;w;s;sw;s;sw;w;w;w1}
+    {devourer cavern heath} {u;s;e;e;s;s;s;e;e;e;s;e;s;s;e;s;s;e;s;w1}
+    {gnome house skeet} {path;s;s;e;e;e;s;s;s;s;s;s;s;s;e;e;w3}
+    {alchemists house solo} {leave;s;s;e;e;s;s;s;s;e;s;s;s;w1}
+    {troll hunters cabin aztec} {leave;s;s;s;w;s;s;s;sw;s;sw;w;w;w1}
+    {phantom ship xiola} {sw;sw;s;pl;s;sw;sw;w;w;s;sw;s;sw;w;w;w1}
+    {murus faralain bran} {e;s;e;e;s;e;e;e;e;s;s;e;s;s;e;s;s;e;s;w1}
+    {alizarian tower darrkin} {ne;nw;ne;se;e;s;e;s;e;s;s;e;s;s;s;s;s;s;s;e;e;e;e;e;w3}
+    {necromancers lair lostar} {leave;s;s;e;e;e;s;s;s;s;e;s;e;e;e;s;w1}
+    {circle hill cat} {path;s;s;e;s;s;s;s;s;s;s;w1}
+    {haunted manor tarin} {e;s;e;e;e;e;e;s;e;e;e;s;e;s;s;s;e;s;s;w1}
+    {isle of bones aravan} {row boat;s;pl;s;sw;sw;w;w;s;sw;s;sw;w;w;w1}
+    {clear falls valley ganzie} {se;s;s;e;s;e;s;e;s;s;s;e;e;e;e;e;e;e;w1}
+    {aunt mays cottage casso} {leave;s;s;e;e;e;e;s;s;s;e;s;s;e;w1}
+    {larem cemetery halcyon} {path;s;s;e;s;s;e;s;s;e;e;s;w1}
+    {a missionary camp takamori} {path;s;s;w;s;s;s;s;s;w1}
+    {garrison vlad} {leave;s;s;w;s;w;s;s;s;w;s;w1}
+    {a forest trail lostar} {e;s;e;e;s;e;e;e;e;e;s;s;s;e;e;e;s;s;e;w1}
+    {cavemaw wain} {out;e;e;e;s;e;s;e;e;s;e;s;e;s;s;e;e;e;e;e;w1}
+    {the old hermit talimar} {s;e;e;e;e;e;s;s;s;e;s;s;e;e;e;s;e;e;e;w1}
+    {alagons hill devesine} {leave;s;s;e;e;s;s;s;e;s;w1}
+    {garou cave miyurachi} {leave;sw;sw;sw;s;s;s;sw;w;w;w;w;w6}
+    {the overlands distortion} {s;w;s;w;s;sw;sw;w;s;sw;sw;w;w;w;w;w6}
+    {enchanted spring tramane} {s;s;s;s;s;sw;sw;w;w;w;w;w;sw;w;w;w;w;w6}
+    {katin tensor} {s;w;s;s;s;s;w;sw;sw;w;w;w;w;w;sw;w;w;w;w;w6}
+    {harpy forest manson} {sw;w;s;s;w;w;w;w;w;sw;sw;w;s;sw;sw;w;w;w;w;w6}
+    {tower eek} {leave;e;s;e;s;s;s;e;s;s;e;e;e;e;e;e;w3}
+    {azrals tower kohl} {leave;s;s;e;s;s;e;s;e;e;e;e;s;w3}
+    {marble castle peeron} {leave;w;w;s;s;sw;s;sw;w;w;w1}
+    {forest cottage pistil} {leave;w;w;s;w;s;s;sw;sw;w;w;w;w;w;sw;w;w;w;w;w6}
+    {hacketoffs bridge stelari} {path;w;w;s;w;w;s;s;sw;sw;w;w;w;w;w;sw;w;w;w;w;w6}
+    {angelo mischief} {e;e;e;e;e;s;e;e;e;s;e;s;e;s;s;e;e;s;e;w3}
+    {witch coven kino} {leave;s;e;s;e;e;e;e;e;e;s;s;w1}
+    {the holy shrine of tarmatin tarin} {leave;s;e;s;s;e;s;w1}
+    {cottage polanna} {leave;sw;s;s;s;sw;w;w;w;w;w6}
+    {abandoned garden salrylia} {s;w;s;s;w;w;w;w;sw;sw;w;w;w;w;w;sw;w;w;w;w;w6}
+    {the barbarian plains razorx} {e;e;e;n;e;e;s;e;e;e;s;e;e;e;s;e;s;e;s;s;w3}
+    {stormrock castle: dark forest toasty} {n;e;n;e;e;s;e;e;e;s;e;e;e;s;e;s;e;s;s;w3}
+    {library of elandra fubger} {ne;e;s;e;e;s;s;s;e;s;e;e;e;e;w3}
+    {carnelians lair ryft} {leave;e;s;s;s;e;e;e;s;e;e;e;w3}
+    {zelligars castle pfunk} {leave;e;e;s;s;e;s;e;w1}
+    {ravenloft tensor} {n;w;w;sw;sw;w;s;sw;sw;w;w;w;w;w6}
+    {beach tiro} {w;s;s;sw;w;w;w;w;w;w;w;w;w;w;w;w;sw;w;w;w;w;w6}
+    {kalaenas fountain hobbes} {leave;e;e;s;e;s;e;e;s;e;w3}
+    {bandit hut shadowlotus} {leave;s;e;s;s;e;w3}
+    {tor bran} {path;s;w;s;w;w1}
+    {new arovian graveyard druss} {path;w;s;sw;sw;w;w6}
+    {lost woods slister} {leave;w;sw;sw;w;w;w;w;w;sw;w;w;w;w;w6}
+    {rocky hill thyros} {s;e;s;s;e;e;e;e;e;e;e;e;e;w3}
+    {owlbears trandamere} {path;w;sw;sw;w;w;w;w;w6}
+    {karaks hut jux} {leave;w;w;s;w;w;w;w;w;w;w;sw;w;w;w;w;w6}
+    {troll bridge wain} {w;sw;w;w;w1}
+    {kellen mausoleum argoth} {leave;sw;w;w6}
+    {portal of life keeble} {portal;w;w;w;sw;w;w;w;w;w6}
+    {bukken tunnels machina} {out;w;w;w;w;w;sw;w;w;w;w;w6}
+    {elven woods kohl} {path;w;w;w;w;w;w;sw;w;w;w;w;w6}
+    {kelon olethros} {n;sw;w;w;w;w;w;w;w;w;w;w;w;w;sw;w;w;w;w;w6}
+    {scorpion caves skeet} {leave;e;e;e;e;e;e;e;e;e;e;e;w3}
+    {druid copse syd} {trail;w;w;w;w;w;w6}
+    {temple of alythra riekl} {path;w;w;w;w;w;w;w6}
+    {kingdom of zanros rajah} {leave;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w;w6}
+    {xaxis rumor} {}
+    {rampage rampage} {trail;e;e;e;e;e;e;e;e;ne;e;w3}
+    {usloptas tower vryce} {leave;w;w;w;nw;w;w6}
+    {dryad tree mosiah} {forest;w;w;w;w;w;w;w;w;w;w;w;w;w;w;nw;w;w6}
+    {boggart vale sorva} {trail;ne;w3}
+    {ancient dolmen solo} {north;w;nw;w;w6}
+    {troll alliance requiem} {out;e;e;e;n;w;w;w;w;nw;w;w6}
+    {menhirs bran} {n;w;w;w;w;w;w;w;w;nw;w;w6}
+    {blingdenwood village calaran} {leave;w;w;nw;w;w;w;w;w;w;w;w;nw;w;w6}
+    {marsh goblins skinless} {w;w;w;w;n;w;w;w;w;nw;w;w6}
+    {rampart tensor} {leave;w;w;w;w;n;w;w;w;w;w;w;w;w;w;w;w;nw;w;w6}
+    {sand pit loomer} {u;e;e;n;e;e;e;e;e;e;e;e;e;ne;e;w3}
+    {rabbit fields rastafan} {n;nw;w;w;w;w;w;w;w;w;nw;w;w6}
+    {ruins of an old city johnny} {n;e;n;e;e;n;e;e;e;ne;e;w3}
+    {unknown 2} {path;w;nw;nw;nw;w;w;w;w;w;w;w;w;nw;w;w6}
+    {fachan trandamere} {n;n;n;e;e;n;w;w;w;w;nw;w;w6}
+    {worms talon airship docks darrkin} {leave;e;n;ne;n;n;ne;w3}
+    {desert palace damo} {n;n;e;e;e;n;n;e;e;e;e;e;e;n;e;e;e;ne;e;w3}
+    {nomad camp dayln} {path;n;e;n;e;n;e;e;n;e;e;e;e;ne;e;w3}
+    {tower of fire nanook} {leave;sw;w;w;w;nw;nw;nw;ne;n;n;ne;w3}
+    {lair of the matriarch requiem} {leave;n;n;n;n;n;w;w;w;w;nw;w;w6}
+    {great lighthouse ryft} {n;n;n;nw;nw;nw;w;w;w;w;w;w;w;w;nw;w;w6}
+    {dreamville crowley} {w;nw;w;n;n;n;w;n;n;w;w;w;w;nw;w;w6}
+    {seacave cirrus} {nw;n;nw;nw;ne;n;n;ne;w3}
+}

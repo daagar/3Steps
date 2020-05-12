@@ -1,0 +1,81 @@
+#class speedwalk kill
+#class speedwalk open
+
+#var realms[CHAOS] {{forward} {n;w;n;n;e;n;enter} {reverse} {vortex;s;w;s;s;e;s}}
+#var realms[FANTASY] {{forward} {s;w;w;n;w;w;w;portal} {reverse} {portal;e;e;e;s;e;e;n}}
+#var realms[SCIENCE] {{forward} {s;e;e;n;e;e;enter} {reverse} {out;w;w;s;w;w;n}}
+
+#read CHAOS.tin
+#read FANTASY.tin
+#read SCIENCE.tin
+
+#alias goto {
+    @findarea{%0};
+    #if {"$currentarea" != ""}
+    {
+        $realms[$currentrealm][forward];
+        $realms[$currentrealm][areas][$currentarea];
+    };
+};
+
+#alias rgoto {
+    @findarea{%0};
+    #if {"$currentarea" != ""}
+    {
+        $realms[$currentrealm][areasreverse][$currentarea];
+        $realms[$currentrealm][reverse];
+    };
+};
+
+#alias return {
+    $realms[$currentrealm][areasreverse][$currentarea];
+    $realms[$currentrealm][reverse];
+};
+
+#alias dirs {
+    @findarea{%0};
+    #if {"$currentarea" != ""}
+    {
+        #echo {Forward: $realms[$currentrealm][areas][$currentarea]};
+        #echo {Reverse: $realms[$currentrealm][areasreverse][$currentarea]};
+    };    
+};
+
+#function findarea {
+    #var {currentrealm} {};
+    #var {currentarea} {};
+
+    #foreach $realms[] realm
+    {
+        #foreach $realms[$realm][areas][] area
+        {
+            #regex {$area} {%*%0%*}
+            {
+                #var currentrealm $realm;
+                #var currentarea $area;
+
+                #echo {Found: $area};
+            };
+
+            #if {"$currentarea" != ""}
+            {
+                #return;
+            };
+        };
+    };    
+}
+
+#alias w1 {enter;#12 s};
+#alias w2 {#12 n;leave};
+#alias w3 {enter;#12 e};
+#alias w4 {#12 w;leave};
+#alias w5 {#15 e;leave};
+#alias w6 {enter;#15 w};
+
+#alias wforestp {#12 n;leave;#10 n;#10 w};
+#alias eforestp {#15 e;leave;#3 e;#2 ne;n;#2 ne;#4 e};
+#alias roadp {#12 n;leave;#8 n;#4 e;#6 n;#9 w};
+#alias icelandsp {#12 n;leave;#8 n;#4 e;#6 n;w;#10 n};
+#alias desertp {#12 w;leave;#8 w;#3 s};
+
+#class speedwalk close

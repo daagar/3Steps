@@ -1,0 +1,526 @@
+#class {fluub} {open}
+
+#var guild bard
+
+
+#alias kk {kill $kstr}
+#alias k {kill %0}
+
+
+#gag {^With remarkable skill and aim you drive your weapon into a poorly defended};
+#gag {^spot on %1};
+#gag {^You target a weak spot on %1 but miss your mark!};
+
+#gag {^Your mystic guardian reminds you to}
+#gag {^You do your best to bandage your wounds.}
+#gag {^With swiftness unmatched, you tumble in the nick of time to avoid the brunt}
+#gag {^of the attack.}
+#gag {^You take a deep breath and begin to stretch your vocal cords.}
+#gag {^Your attack glanced off of}
+#gag {There are no coins here to share!}
+
+#gag {Chanting an arcane spell, you draw upon magical energies to heal yourself.}
+#gag {You call forth a bolt of lightning from the shimmering vortex!}
+#gag {The lightning vortex crackles loudly.}
+#gag {You are not in need of aid.}
+#gag {You've already cast a spell this round!}
+#gag {%1 shudders as the power of your music washes across %2}
+#gag {%1 shudders as the power of your music washes across}
+
+#gag {%1 hacks and wheezes in the toxic cloud.}
+#gag {%1 body slumps forward as your music rips %1 apart.}
+#gag {Your music tears through %1 viciously!}
+#gag {%1 screams in agony!}
+#gag {%1 body is wracked with convulsions.}
+#gag {%1 grimaces in pain.}
+#gag {%1 cries out from the assault of your music.}
+#gag {^him.$}
+
+#gag {Your spell tears %1 apart.}
+#gag {The powers of your spell rips into %1}
+#gag {%1 is pummeled by the force of your spell.}
+#gag {%1 is driven to the ground by your spell.}
+#gag {Your spell harnesses the complexity and power of an augmented triad and}
+#gag {severs the harmony of %1 life!}
+
+#gag {^You position yourself for a deadly strike against your opponents weakest}
+#gag {^point.$}
+
+#gag {You are currently performing %1}
+#gag {You can't cast a spell while singing!}
+
+#gag {^You play a soothing melody on your instrument.}
+#gag {^You feel better.}
+#gag {You blink out just as the attack strikes!}
+
+#gag {^You play onward...}
+#gag {^You're in mid performance, remember?}
+#gag {You avoid the attack.}
+#gag {You are not performing any song...?}
+
+#gag {The force of the Goddess Kourlyn is channeled through the gloves and}
+#gag {sends a blast of wind at your opponent!}
+
+#gag {^  1 %* 1 %* \?\? %* \-\-.}
+
+#nop {
+        #gag {^Hundreds of tiny lightning bolts fly down from the sky and strike}
+        #gag {^Chanting an arcane spell, you draw upon magical energies to heal yourself.}
+        #gag {^%1 lightning bolt%2 from the sky%3 striking}
+        #gag {causing %1 to writhe in pain from the electrifying shocks.$}
+        #gag {causing %1 to writhe in pain from the electrifying}
+        #gag {jump back from the shock.$}
+        #gag {causing %1 to convulse in pain from the electrifying shocks.$}
+        #gag {causing %1 to convulse in pain from the electrifying}
+        #gag {^shocks.$}
+        #gag {electrifying shock which causes %1 hair to stand on end.$}
+        #gag {slight shock.$}
+        #gag {A lightning bolt flies down from the sky striking %1 with minimal damage.}
+        #gag {^Zombie!$}
+        #gag {Hundreds of lightning bolts shower down from the sky above.  They}
+        #gag {continuously strike %1 for a long while before}
+        #gag {into the atmosphere.  %1 begins writhing on the ground.}
+}
+
+#nop {Setup some triggers};
+#gag {^You finish your performance with a bow.}
+#gag {^You crack your knuckles and get ready to play for %1}
+#act {^You crack your knuckles and get ready to play for %1}{
+        #var {my[current][playing][status]}{1};
+};
+
+#gag {You take a deep breath and focus upon %1 with hellish intent}
+#act {You take a deep breath and focus upon %1 with hellish intent}{
+        #var {my[current][playing][status]}{1};
+}
+
+
+#act {You crack your knuckles and get}{
+        #var my[current][playing][status] 1;
+        #var my[current][singing][status] 0;
+}
+
+#act {You take a deep breath and begin}{
+        #var my[current][singing][status] 1;
+}
+
+#act {You cease your performance of}{
+        #var my[current][singing][status] 0;
+        #var my[current][playing][status] 0;
+}
+
+#act {You finish your performance with a bow}{
+        #var my[current][playing][status] 0;
+        #var my[current][singing][status] 0;
+}
+
+
+#act {It is too dark}{
+        !cast light;
+}
+
+#act {The light flickers out.}{
+        !cast light;
+}
+
+#act {You call forth a bolt of lightning from the shimmering vortex!}{#var my[current][vortex][status] 1};
+#act {apart, a swirling vortex of electrical energy forms in the air.}{#var my[current][vortex][status] 1};
+#act {The lightning vortex crackles loudly.}{#if {$my[incombat] == 1}{#var my[current][vortex][status] 1}};
+#act {You may only have one of these at a time!}{#if {$my[incombat] == 1}{#var my[current][vortex][status] 1}};
+
+
+#act {You wave your hands around, make swooshing and farting sounds, and spit}{#var my[current][cloud][status] 1};
+#act {Not more than one per room}{#var my[current][cloud][status] 1};
+
+#act {Heartening Laugh fades from you.}{
+        #var my[current][laugh][status] 0;
+}
+#act {You let out a deep, loud laugh.  As you laugh, energies in the air begin to}{
+        #var my[current][laugh][status] 1;
+}
+
+#act {That creature is already somewhat spasmodic}{
+	#var my[current][shuffled][status] 1;
+};
+
+#act {With a few quick mystical words you send}{
+	#var my[current][shuffled][status] 1;
+};
+
+#nop {setup some aliases};
+
+#alias gl {!cast light}
+
+#alias {omuse}{
+        #if {$my[current][singing][status] == 1}{
+                !cease;
+        };
+        #if {$my[current][playing][status] == 1}{
+                !cease;
+        };
+        !perform o muse;
+        #var my[current][singing][status] 1;
+}
+
+#alias {iamarock}{
+        #if {$my[current][singing][status] == 1}{
+                !cease;
+        };
+        #if {$my[current][playing][status] == 1}{
+                !cease;
+        };
+        !perform i am a rock;
+        #var my[current][singing][status] 1;
+}
+
+#alias {agrace}{
+        #if {$my[current][singing][status] == 1}{
+                !cease;
+        };
+        #if {$my[current][playing][status] == 1}{
+                !cease;
+        };
+        !perform amazing grace;
+        #var my[current][singing][status] 1;
+        #var my[current][playing][status] 1;
+}
+
+#alias {hskin}{
+        #if {$my[current][singing][status] == 1}{
+                !cease;
+                #var my[current][singing][status] 0;
+        };
+        !cast hardened skin;
+}
+#alias proe {
+        #if {$my[current][singing][status] == 1}{
+                !cease;
+                #var my[current][singing][status] 0;
+        };
+        #var my[configuration][alignment] evil;
+        !cast protection from evil;
+}
+#alias prog {
+        #if {$my[current][singing][status] == 1}{
+                !cease;
+                #var my[current][singing][status] 0;
+        };
+        #var my[configuration][alignment] good;
+        !cast protection from good;
+}
+#alias pron {
+        #if {$my[current][singing][status] == 1}{
+                !cease;
+                #var my[current][singing][status] 0;
+        };
+        #var my[configuration][alignment] neutral;
+        !cast protection from neutral;
+}
+
+#alias proh {
+        #if {$my[current][singing][status] == 1}{
+                !cease;
+                #var my[current][singing][status] 0;
+        };
+        #var my[configuration][temperature] heat;
+        !cast protection from heat;
+}
+
+#alias prof {
+        #if {$my[current][singing][status] == 1}{
+                !cease;
+                #var my[current][singing][status] 0;
+        };
+        #var my[configuration][temperature] frost;
+        !cast protection from frost;
+}
+
+#alias {autoplay}{
+        #if {$my[configuration][autoplay] == 1}{
+                #echo {Autoplay off};
+                #var my[configuration][autoplay] 0;
+                #math {my[configuration][guardian][hp]}{$my[hp][max] * 0.4};
+        }{
+                #echo {Autoplay on};
+                #var my[configuration][autoplay] 1;
+                #math {my[configuration][guardian][hp]}{$my[hp][max] * 0.6};
+        };
+}
+
+#alias set_guardian {
+        !cast mystic guardian at hp/$my[configuration][guardian][hp]/cast cure;
+        !setpanic enthrall at 25%;
+        #var {my[current][guardian][hp]}{$my[configuration][guardian][hp]};
+}
+
+
+#alias {sol}{
+        #var my[configuration][desiredsong] {shower of light};
+        #var my[configuration][autoresume] 1;
+};
+
+#alias {dm}{
+        #var my[configuration][desiredsong] {death march};
+        #var my[configuration][autoresume] 1;
+};
+
+#alias {sot}{
+        #var my[configuration][desiredsong] {sands of time};
+        #var my[configuration][autoresume] 1;
+};
+
+#alias {eow}{
+        #var my[configuration][desiredsong] {it's the end of the world as we know it};
+        #var my[configuration][autoresume] 1;
+};
+
+#alias {min}{
+        #var my[configuration][desiredsong] {minstrel boy};
+        #var my[configuration][autoresume] 1;
+};
+
+#alias {wail}{
+        #var my[configuration][desiredsong] {wail of the banshee};
+        #var my[configuration][autoresume] 1;
+};
+
+#alias {cnn}{
+        #var my[configuration][desiredsong] {comfortably numb};
+        #var my[configuration][autoresume] 1;
+};
+
+#alias {dosong}{
+        !bandage;
+        !cast cure;
+        !perform $my[configuration][desiredsong];
+	#if {"${my[configuration][desiredsong]}" == "sands of time"}{
+              	#var my[current][singing][status] 1;
+               	#var my[current][playing][status] 1;
+        };
+};
+
+#alias {bst}{
+        #10 {!hide in shadows};
+        !backstab %0;
+}
+
+
+#alias {autocast}{
+        #if {$my[configuration][autocast] == 1}{
+                #var my[configuration][autocast] 0;
+                #echo {Not Casting};
+        }{
+                #var my[configuration][autocast] 1;
+                #echo {Casting};
+        };
+};
+
+
+
+#nop {setup defaults};
+#var {my[current][vortex][status]}{0};
+#var {my[current][cloud][status]}{0};
+#var {my[current][shuffled][status]}{0};
+#var {my[current][gouge][status]}{0};
+#var my[current][singing][status] 0
+#var my[current][playing][status] 0
+#var my[configuration][autoplay] 1
+#var my[current][guardian][hp] 0
+#var my[configuration][desiredsong] {death march}
+#var my[configuration][desiredspell] {augmented chord};
+#var my[configuration][autocast] 1;
+#var my[configuration][alignment] evil;
+#var my[configuration][temperature] heat;
+#var my[current][laugh][status] 0;
+
+#nop {bset custom_hp HP: &$HP2$& SP: &$SP2$& K: &$K2$& V: &$V2$& [ &$P$& ]&$NL$&E: &$C$& D: &$AS2$& GTNL: &$G2N$& (&$G2N%$& - &$G2S$&)}
+#gag {HP: %1/%2 SP: %3/%4 K: %5/%6 V: %7/%8 [%9]}
+#act {HP: %1/%2 SP: %3/%4 K: %5/%6 V: %7/%8 [%9]} {
+	#var {my[hp][current]}				{%1};
+	#var {my[hp][max]}				{%2};
+	#var {my[sp][current]}				{%3};
+	#var {my[sp][max]}				{%4};
+	#var {my[gp1][current]}				{%5};
+	#var {my[karma][current]}			{%5};
+	#var {my[gp1][max]}				{%6};
+	#var {my[karma][max]}				{%6};
+	#var {my[gp2][current]}				{%7};
+	#var {my[voice][current]}			{%7};
+	#var {my[gp2][max]}				{%8};
+	#var {my[voice][max]}				{%8};
+	#if {"%9" != "  "}{
+		#var {my[current][song][duration]}	{%9};
+        }{
+		#var {my[current][song][duration]}	{0};
+                #var {my[current][playing][status]}	{0};
+                #var {my[current][singing][status]}	{0};
+        };
+        #math {my[hp][difference]}{$my[hp][max] - $my[hp][current]};
+        #math {my[sp][difference]}{$my[sp][max] - $my[sp][current]};
+        #math {my[karma][difference]}{$my[karma][max] - $my[karma][current]};
+        #math {my[voice][difference]}{$my[voice][max] - $my[voice][current]};
+        #if {$my[configuration][autoplay] == 1}{
+                #math {my[configuration][guardian][hp]}{$my[hp][max] * 0.6};
+        }{
+                #math {my[configuration][guardian][hp]}{$my[hp][max] * 0.4};
+        };
+	#if {$my[current][guardian][hp] != $my[configuration][guardian][hp]}{
+		set_guardian;
+	};
+};
+#gag {E:%1D:%2GTNL: %3 (%4 - %5)}
+#act {E:%1D:%2GTNL: %3 (%4 - %5)} {
+        #var enemy[full] %1;
+        #var my[defense][all] %2;
+        #var my[gxp][gtnl] %3;
+        #var my[gxp][percent] %4;
+        #var my[gxp][skills] %5;
+        #math {my[gxp][round]}{$my[gxp][lastround] - $my[gxp][gtnl]};
+        #var {my[gxp][lastround]}{$my[gxp][gtnl]};
+        #regex {$enemy[full]}{T:%*\%}{
+                #var {my[incombat]}{1};
+                #math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+                #var {enemy[hp]}{&1};
+        }{
+        	#regex {$enemy[full]}{T:%*}{
+                	#var {my[incombat]}{1};
+                	#math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+                	#var {enemy[hp]}{&1};
+                }{
+	                #var {my[incombat]}{0};
+	                #var {enemy[hp]}{0};
+			#var {my[current][vortex][status]}{0};
+			#var {my[current][shuffled][status]}{0};
+			#var {my[current][cloud][status]}{0};
+			#var {my[current][gouge][status]}{0};
+		};
+        };
+        #regex {$my[defense][all]}{O:%d}{#var my[defense][omuse] &1}{#var my[defense][omuse] 0};
+        #regex {$my[defense][all]}{R:%d}{#var my[defense][rock] &1}{#var my[defense][rock] 0};
+        #regex {$my[defense][all]}{AG:%d}{#var my[defense][grace] &1}{#var my[defense][grace] 0};
+        #regex {$my[defense][all]}{HS:%d}{#var my[defense][skin] &1}{#var my[defense][skin] 0};
+        #regex {$my[defense][all]}{PG:%d}{#var my[defense][protection][good] &1}{#var my[defense][protection][good] 0};
+        #regex {$my[defense][all]}{PE:%d}{#var my[defense][protection][evil] &1}{#var my[defense][protection][evil] 0};
+        #regex {$my[defense][all]}{PN:%d}{#var my[defense][protection][neutral] &1}{#var my[defense][protection][neutral] 0};
+        #regex {$my[defense][all]}{PH:%d}{#var my[defense][protection][heat] &1}{#var my[defense][protection][heat] 0};
+        #regex {$my[defense][all]}{PF:%d}{#var my[defense][protection][frost] &1}{#var my[defense][protection][frost] 0};
+        #regex {$my[defense][all]}{B/%d}{#var my[defense][blink] &1}{#var my[defense][blink] 0};
+        #regex {$my[defense][all]}{CS}{#var my[defense][shot] 1}{#var my[defense][shot] 0};
+        #regex {$my[defense][all]}{RF}{#var my[defense][fury] 1}{#var my[defense][fury] 0};
+        #nop {Do the following always, regardless of incombat status};
+        #if {$my[defense][protection][evil] < 10 && "$my[configuration][alignment]" == "evil"}{
+        	proe;
+	};
+        #if {$my[defense][protection][good] < 10 && "$my[configuration][alignment]" == "good"}{
+        	prog;
+	};
+        #if {$my[defense][protection][neutral] < 10 && "$my[configuration][alignment]" == "neutral"}{
+        	pron;
+	};
+        #if {$my[defense][protection][heat] < 10 && "$my[configuration][temperature]" == "heat"}{
+        	proh;
+	};
+        #if {$my[defense][protection][frost] < 10 && "$my[configuration][temperature]" == "frost"}{
+        	prof;
+	};
+        #if {$my[defense][skin] < 10}{
+        	hskin;
+	};
+        #if {$my[defense][grace] < 10}{
+        	agrace;
+	}{
+        	#if {$my[defense][rock] < 10}{
+        		iamarock;
+		}{
+        		#if {$my[defense][omuse] < 10}{
+        			omuse;
+			};
+		};
+	};
+#nop {
+	#if {$my[karma][difference] < 50 && $my[defense][shot] != 1}{!called shot};
+};
+	#if {$my[defense][fury] != 1}{!righteous fury};
+        #if {$my[current][laugh][status] != 1}{!heartening laugh};
+	#if {$my[incombat] == 1}{
+		#if {$my[current][gouge][status] == 0}{
+			!gouge;
+			#var {my[current][gouge][status]}{1};
+		};
+		#if {$my[karma][difference] < 100 && $my[sp][difference] > 400 && $my[playing][status] != 1}{!soothe};
+		#if {$my[configuration][autocast] == 1 && $my[current][singing][status] != 1}{
+			#if {$my[current][vortex][status] != 1 && $my[current][singing][status] != 1}{!cast lightning vortex};
+			#if {$my[current][cloud][status] != 1 && $my[current][singing][status] != 1}{!cast noxious cloud};
+			#if {$my[current][shuffled][status] != 1 && $my[current][singing][status] != 1}{!cast spasmodic shuffle};
+			#if {$my[current][singing][status] != 1 && $my[sp][current] > 1000}{
+				!cast ${my[configuration][desiredspell]};
+			};
+		};
+		#if {$my[configuration][autoplay] == 1}{
+			#if {$my[current][song][duration] == 0}{
+				dosong;
+			};
+		};
+		#if {$my[hp][current] < 300}{go home};
+		#if {$my[sp][current] < 300}{go home};
+		#if {$my[karma][current] < 50}{go home};
+	}{
+		#if {$my[hp][current] < $my[hp][max] && $my[current][singing][status] != 1}{
+			!cast cure;
+		};
+		#if {$my[sp][difference] > 100 && $my[karma][difference] < 50 && $my[current][playing][status] != 1}{
+			!soothe;
+		};
+	};
+	update_status;
+}
+
+#alias {update_status} {
+	#var	{my[hp][graph]}		{@graph{$my[hp][current];$my[hp][max]}};
+	#var	{my[sp][graph]}		{@graph{$my[sp][current];$my[sp][max]}};
+	#var	{my[gp1][graph]}	{@graph{$my[gp1][current];${my[gp1][max]}}};
+	#var	{my[gp2][graph]}	{@graph{$my[gp2][current];100}};
+	#var	{my[ff][graph]}		{@graph{$my[ff][current];100}};
+	#var	{my[skill][graph]}	{@graph{$my[skill][current];100}};
+	#var	{enemy[graph]}		{@graph{$enemy[hp];100}};
+	#format {hp}			{%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
+	#format {hp_max}		{%+4s} {<128>$my[hp][max]<088>};
+	#format {sp}			{%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
+	#format {sp_max}		{%+4s} {<128>$my[sp][max]<088>};
+	#format {karma}			{%+4s} {@colscale{$my[karma][current];$my[karma][max]}};
+	#format {karma_max}		{%+4s} {<128>$my[karma][max]<088>};
+	#format {voice}			{%+6s} {@colscale{$my[voice][current];100}};
+	#format {gtnl}			{%+10s} {$my[gxp][gtnl]};
+	#format {glr}			{%+10s} {$my[gxp][round]};
+	#format {ehealth}		{%+6s} {@colscale{$enemy[hp];100}\%};
+	#showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} K:${karma}/${karma_max}  V:${voice}%       G2N: $gtnl  E: $ehealth} {-4};
+	#showme {H:${my[hp][graph]} S:${my[sp][graph]} K:${my[gp1][graph]} V:${my[gp2][graph]}    GLR: $glr  E:${enemy[graph]}} {-3};
+	#showme {$mip[gline][2]} {-6};
+	#showme {$mip[gline][1]} {-7};
+}
+
+#alias {corpsetrig} {
+	!wrap corpse;
+	!divvy;
+}
+
+#alias {cco}{
+	!unwrap corpse;
+	!cease;
+	#if {"$my[autocorpse][method]" == "guild"}{
+		!perform dirge;
+	};
+	#if {"$my[autocorpse][method]" == "nex"}{
+		!orare;
+	};
+};
+
+
+#act {Fluub dealt the killing blow to %1.} {
+	log_damage_no_numbers %1;
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+}
+
+#class {fluub} {close}

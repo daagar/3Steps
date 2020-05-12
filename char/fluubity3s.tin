@@ -1,0 +1,139 @@
+#class {fluubity} {open}
+
+#var guild warder
+
+#alias kk {kill $kstr}
+#alias k {kill %0}
+
+#alias setcstrat {
+        #var {my[cstrat]}{blade};
+        !cstrat assist blade;
+}
+
+#gag {HP: %1/%2 SP: %3/%4 STS: %5}
+#act {HP: %1/%2 SP: %3/%4 STS: %5/%6\% %7} {
+	#var {my[hp][current]}		{%1};
+	#var {my[hp][max]}		{%2};
+	#var {my[sp][current]}		{%3};
+	#var {my[sp][max]}		{%4};
+	#var {my[sts][current]}		{%5};
+	#var {my[sts][reset]}		{%6};
+	#var {my[effects][all]}		{%7};
+	#regex {$my[effects][all]}{(V)}{
+		#var my[effects][void] 1;
+        }{
+		#var my[effects][void] 0;
+        }
+        #regex {$my[effects][all]}{(B)}{
+		#var my[effects][block] 1;
+        }{
+		#var my[effects][block] 0;
+        }
+        #regex {$my[effects][all]}{(STS)}{
+		#var my[effects][sts] 1;
+        }{
+		#var my[effects][sts] 0;
+        };
+        #regex {$my[effects][all]}{Enemy: %d}{
+		#var {enemy[health]}{&1};
+                #var incombat 1;
+                #math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+        }{
+		#var {enemy[health]}{0};
+                #var incombat 0;
+        };
+        #regex {$my[effects][all]}{(P:%w)}{
+		#var {my[effects][pward]}{&1};
+        }{
+		#var {my[effects][pward]}{None};
+                #var hpbarPward None;
+        };
+	#if {$my[effects][block] != 1}{!block};
+	#if {$my[effects][void] != 1}{!void};
+	#if {"$my[effects][pward]" != "A"}{!pward air};
+	#if {"$my[cstrat]" != "blade"}{setcstrat};
+}
+
+#gag {\{F:%1\}  F: %2/%3\%  GTNL: %4 LAST: %5}
+#act {\{F:%1\}  F: %2/%3\%  GTNL: %4 LAST: %5  SKILLS: %6}{
+        #var my[form][current] %1;
+        #var my[favor][current] %2;
+        #var my[favor][reset] %3;
+        #var my[gxp][gtnl] %4;
+        #var my[gxp][round] %5;
+        #var my[gxp][skills] %6;
+	update_status;
+}
+
+#alias {update_status} {
+        #if {"$cooler" == "on" || $corpses[cooler] > 0} {
+                #format {sb1_cooler} {%+2s} {$corpses[cooler]};
+                #var {sb1_cooler} { CL:<130>$sb1_cooler<088>}
+        } {
+                #var {sb1_cooler} {}
+        };
+        #if {"$freezer" == "on" || $corpses[freezer] > 0} {
+                #format {sb2_freezer} {%+2s} {$corpses[freezer]};
+                #var {sb2_freezer} { FZ:<130>$sb2_freezer<088>}
+        } {
+                #var {sb2_freezer} {}
+        };
+	#var	{my[hp][graph]}		{@graph{$my[hp][current];$my[hp][max]}};
+	#var	{my[sp][graph]}		{@graph{$my[sp][current];$my[sp][max]}};
+	#var	{my[gp1][graph]}	{@graph{$my[gp1][current];100}};
+	#var	{my[gp2][graph]}	{@graph{$my[gp2][current];100}};
+	#var	{my[ff][graph]}		{@graph{$my[ff][current];100}};
+	#var	{my[skill][graph]}	{@graph{$my[skill][current];100}};
+	#var	{enemy[graph]}		{@graph{$enemy[hp];100}};
+	#format {hp}			{%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
+	#format {hp_max}		{%+4s} {<128>$my[hp][max]<088>};
+	#format {sp}			{%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
+	#format {sp_max}		{%+4s} {<128>$my[sp][max]<088>};
+	#format {stam}			{%+8s} {@colscale{$my[gp1][current];100}};
+	#format {pp}			{%+7s} {@colscale{$my[gp2][current];100}};
+	#format {ff}			{%+8s} {@colscale{$my[ff][current];100}};
+	#format {skill}			{%+8s} {@colscale{$my[skill][current];100}};
+	#format {relin}			{%+2s} {$my[relinquish][current]};
+	#format {relin_r}		{%+3s} {$my[relinquish][reset]};
+	#format {bio}			{%+3s} {$my[bioplasts]};
+        #format {round_damage}          {%+16s} {$NumbersString};
+        #format {gxp_display}           {%+16s} {GTNL: $my[gxp][gtnl] S: $my[gxp][skills]($my[gxp][round])};
+	#format {round_average}		{%+4s} {@rcolscale{$AvgDamage;2500}};
+	#format {ehealth}		{%+8s} {@colscale{$enemy[hp];100}\%};
+        #format {corpses[inventory]}    {%+2s} {$corpses[inventory]};
+        #format {corpses[truck]}	{%+2s} {$corpses[truck]};
+        #format {corpses[coffin]}	{%+2s} {$corpses[coffin]};
+        #format {corpses[freezer]}	{%+2s} {$corpses[freezer]};
+	#showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} $gxp_display} {-4};
+	#showme {H:${my[hp][graph]} S:${my[sp][graph]}} {-3};
+	#showme {$mip[gline][2]} {-6};
+	#showme {$mip[gline][1]} {-7};
+}
+
+#alias {corpsetrig} {
+	!wrap corpse;
+	!divvy;
+}
+
+#alias {co}{
+	!unwrap corpse;
+	#if {"$my[autocorpse][method]" == "guild"}{
+		!salute;
+	};
+	#if {"$my[autocorpse][method]" == "nex"}{
+		!orare;
+	};
+}
+
+#alias {cco}{
+	co;
+};
+
+
+#act {Fluubity dealt the killing blow to %1.}{
+	log_damage_no_numbers %1;
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+};
+#class {fluubity} {close}

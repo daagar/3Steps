@@ -1,0 +1,20 @@
+#unvar kill_path
+#list {kill_path}{clear}
+#unvar {area_items}
+#list {area_items}{clear}
+#unvar all_area_items
+#var area_aggro 1
+
+#var kill_path {n;ne;n;n;nw;n;n;d;n;ne;nw;s;n;sw;se;s;u;s;s;sw;nw;d;n;s;u;se;s;s;se;s}
+
+#list {kill_path}{create}{$kill_path}
+#list {kill_path}{size}{max_room}
+
+#var stepper 1
+#var room_num 0
+
+#var {area_items}{puppy;giant platemail;giant axe}
+#list {area_items}{create}{$area_items}
+#list {area_items}{size}{all_area_items}
+
+rating

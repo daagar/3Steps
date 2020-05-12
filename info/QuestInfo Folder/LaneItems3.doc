@@ -1,0 +1,866 @@
+
+Area [JT1]Name	Start Loc	Directions
+
+Underdark:  	EForest  	#5 w;#5 s;#5 e;#9 s;w;w;s
+Rabbit:	EForest	#5 w;#5 s;#5 e;#9 s;w;w;sw;sw;nw;nw;d
+Angel:	Chaos	#4 w;enter void
+Pandemonium:	Chaos    	#4 w;e;s;w;s;e;e;n;n;enter whirlpool
+Western Union:	Chaos	#3 w;#8 s;w
+Land:	Chaos	#3 e;s;s;e;e;#4 n;break arch;say land
+Tear:	Road		#7 e;tear
+SeaOfSuffering:	EForest	#2 w;#10 n;move closer
+Factory: (workers)	Science	u;#4 n;d;#3 n;#3 e;#4 n;#5 e;factory
+Icelands:	Ice Portal	e;n;trail
+Megatech:	Science	u;e;e;e;d;#10 e;n;#7 e;#3 s;#4 s;w;w;#3 s;w
+Atlanta:	Science	u;e;e;e;d;#10 e;n;#7 e;#3 s
+Wormhole:	Chaos	#3 e;#2 s;#2 e;n;#3 e;s;enter;#3 n;e;open door;enter wormhole(when green)
+Kintax Elves:	EForest	#5 w;#5 s;#5 e;n;path
+Simpsons:	Chaos	Find the TV and enter it
+Miyu Quest Area:	Chaos 	Find the Strange Boy, trace symbol
+Anthole:	Road		#16 e;#3 n;#3 e;#3 n;#3 e
+Jack and the Beanstalk Giant	Wayhaven	#12 w;leave;#2 w;#5 n;enter
+Fire Giants:	Road		#14 e;s;s;enter
+
+Overlands:	Eforest	#3 n;portal
+Tensor's Keep:	Eforest	#5 w;#5 s;#5 e;#11 s;#8 w;s;d
+WWF:	Chaos	#3 e;s;#2 e
+
+
+
+
+
+
+Adamantium Bracers:	Rastafan's Tower (shansabyk) (unique)
+Alien Ring:	Red Wormhole;s;s;e;search ground;w;s;s;s;s;w;give part to alien
+Armour of Lucanus:	(unique) tear;keyloncia;northgate;s;s;enter w;n;salinsha
+Aura of Heavenly Protection	TV;#4 e;s;enter;e (Ned)
+Bioskin Suit:	chaos;red wormhole;s;s;e;search ground;w;s;s;s;s;w;give part to alien;w;s;open cylinder;
+	n;enter;say hi;insert card;enter;take suit
+Blade of Ghoti: 	(unique) Underdark;#3 d;#3 n;nw;#3 w;10 s;#3 e;se;enter hole;w;n;challenge ghoti
+Book of Wisdom: 	(unique 3) East Forest Portal;w;w;#8 n;#3 e;search shelves;n
+Book of Dexterity:	Sea of Suffering;Jueyan
+Book of Intelligence:	tear;dragon's isle;Saoirse the shadow dragon
+Boots of Lucanus:	(unique) tear;dragon's isle;byrontic
+Champ Bear's Headband:	carebear (25 ac)
+Crimson Equipment:	Wayhaven Portal;#11 n;#10 w;n;climb well;#3 d;search dirt;light torch
+Cryrohydra Equipment:	Icelands;nw;ne;n;n;climb mountain;e;climb mountain;e;climb mountain;e
+	climb mountain;e;climb mountain;w (cryrohydra 100k)
+	give hide to verbeeg chief to get equipment
+Diamond studded tiger collar	CHAOS;#3 e;s;s;w;n;buy ticket;ne;n;nw;sw;sw;n;sw
+Earrings:	Road;#12 e;n;enter;u;n (unique)
+Genesis Scroll: 	Underdark Maze Lvl 2
+Kunzit's Eye:	Road Portal;#9 e;enter hole;squeeze through passageway (Kunzit)
+Portable Moruge: 	Underdark Maze Lvl 4
+Dark Green Equipment:	Underdark Maze Lvl 3 (drow princess') (random real)
+Demon Spider Carpace: 	(uniqueX3) Underdark Maze Lvl 4
+Hide of Galmog:	Rastafan's Tower (galmog) (unique)
+Hoelerin sword:	Rastafan's Tower (shansabyk) (unique)
+Glass Boots:	(unique) Crysmal, Prismatic God of Crystals
+Glass Gloves:	(unique)Razor Warrior  RavenLft:n;nw;n;ne;n;nw;n;ne;n;ne;ne;e;e;n;n;w;nw;n;n
+Genesis Scroll:	Underdark;Maze Lvl 2 (Amed Demon) or (Jabberwocky)
+Glittering Full Platemail:	Kimlark;#3 w;#4 s;u;#3 s;u;n;#3 w;u;e;ne;n;e;enter hole;d;e (gnome warlord) (unique)
+Gloves of Karak:	Ice;s;s;#4 e;u;n;n;n;kill bear;s;kill bear;Eforest;#3 e;#3 s;enter hut;give hide to karak
+Gloves of Lucanus:	(unique) Tear;Sopem;center;center;center;sleep on altar;search east wall;push spike;e;n;n;n;n;
+                                                        pull brick;e;e;s;s;s;s;dorthinik
+Gnomistic Sword	Kimlark;#3 w;#4 s;u;#3 s;u;n;#3 w;u;e;ne;n;e;enter hole;d;e (gnome warlord) (unique)
+God Crafted Platemail:	Underdark;(E) Challenge area1 on Ghoti (unique)
+Greenstone amulet:	eforest;#6 e;#6 s;e
+Matrixes (str,con,dex,wis,int,cha)	Road;e;n;n;u;e;n;n;n;ne;n; ...........(ADD MORE)
+Night flame wand:	tear;porih;enter traveler;push 1;leave;all e;s;all e;n;e;all n;u;sabrena
+Pitch Black Equipment:	Tear;Sopem;center;center;center;sleep on altar;search east wall;push spike;e;n;n;n;n;push brick;
+   	w;w;n;n;n
+Poison Dagger:	(unique) Underdark Maze Lvl 1
+Potion with yellow Floaties :    	Rabbit;s;w;n;sw;all w;d;n
+  (random 4-12 str boost)
+Powerstone:	Icelands:nw;ne;n;n;climb mountain;e;climb mountain;e;climb mountain;e
+	climb mountain;e;climb mountain;w;enter (shaman 100k) (random and unique)
+Ring of Heroism:	road;#16 e;n;n;e;e;cave;n;e (dragon)
+Ring of Regeneration:
+   1.  (smithers)	TV;w;s;s;w;w;enter;n;w;w;s;s;u;n;n;vine;s;s (random)
+   2.  (Large Fire Elemental)	Road;#14 e;s;s;enter;n;ne;n;w;portal;e;n;e;e;s;w
+   3.  (Superheroes)	Underdark;#3 d;#3 n;nw;#3 w;#3 s;se;e;d;w;w;all s;search each statue
+   4.  (Jag in Jag's Bar)	Chaos;all e;ne corner;swing door;n;u;u;u;s
+Ring of Stoneskin:
+   1.  (Askar) random	Wayhaven;#7 w;#3 n;e;e;enter;#4 s;u;n;n
+Ring of Wonder:	Underdark;challenge arena 1; delundar (unique)
+Robes of the Archmage:	Wayhaven;#12 n;leave;#5 n;#10 w;enter (sparkling tower);sit chair;enter mirror;u (unique)
+Scroll of Universe: 	(+2 wis) Angel Area
+Scroll of Enchant Armour:	Wayhaven;7w;3n;2e;enter;flick switch;n;d;e;e (miranda)
+Shiny Black Amulet:	Kimlark (gnome warlord)
+Shortsword of Quickness	Road Portal;#5 e;n;enter;w;w
+Slime Shield:	Eforest;n;n;n;portal;se;sw;s;e;se;se;s;sw;sw;w;cottage (unique)
+Spectral Hand	Land;w;nw;nw;#3 n;e;#4 n;#5 e;#3 n;cross river;e;n;e;n;e;n;n;lie down;se;ne;dig dirt
+Sphere of Annhiliation	Rabbit;s;w;n;sw;all w;d;n (unique)
+Spirit Equipment: 	Angel Area
+Staff of Magi:	Rastafan's Tower (sauk) (unique)
+Staff of nature:	tear;devil's isle;e;e;e;e;s;e;n (elven sage) 'staff of nature' in item description makes it real
+Strange ring (dark):	Eforest;#5 e;s;#4 e;enter ship;stairs;open door (Undead Scarecrow)
+String of love and happiness:	TV;#8 e;n;enter;open freezer;u (paul) random
+Sword of Fates:	tear;devil's isle;#5 e;s;all e;n;e;all n;u (sabrena) (unique)
+Sword of War:	Wayhaven;#7 w;#3 n;e;e;enter;#4 s;u;n;n
+Sword of Light:	Road Portal;#5 e;n;enter;w;w (Honorable Knight) (random)
+Talisman of Honor:	Road Portal;#5 e;n;enter;w;w
+Translucent Equipment: 	Land;w;nw;nw;#3 n;e;nw;w;#6 s;w;w;n;w;enter stairwell
+Unholy symbol of Dorthinik:	Tear;Sopem;center;center;center;sleep on altar;search east wall;push spike;e;e;n;n;n;pull brick;e;s
+Unfettered Staff:	1.  Land;w;nw;nw;#3 n;e;nw;n;nw;#4 w;#4 n;ford;n;ford;n;w;n;w (random)
+	2.  Land;w;nw;nw;#3 n;e;#4 n;#5 e;#3 n;cross river;e;n;e;n;e;#4 n;w;n;w;w;s;e;s;s;w;n (random)
+	3.  Land;w;nw;nw;#3 n;e;#4 n;#5 e;#3 n;cross river;e;n;e;n;e;n;n;lie down;se;ne;nw;turn doorknob;search copse
+	     (forestal) (unique)
+Wand of Fireballs: 	Underdark Maze Lvl 4
+White pearl (above hp heal):	Eforest;#5 e;s;#4 e;enter shit;stairs;search barrels
+
+
+Misc Things To do:	1.  At Arcanarton 'read book' for bonus stats 5 int / 5 wis
+
+Blood Crystal
+ Wayhaven Portal: 12w/leave/2s/sw/e/2s/swim/wait for the
+        island/s/2sw/2s/se/2ne/2e/se/s/2se/2e/n/2nw/n/w/nw/ne/n/2ne/3s/sw
+        she also can make potions of firebreath/heroism
+
+
+
+MARBLES    
+
+  1.  Bronze Marble	Eforest;2w;9n;move closer;ne;n;nw;search sands(1000 times)
+  2.  Opal Marble	Wayhaven;#12n;leave;#6 n;#13 w;cave
+       'search debris' until you find marble
+  3.  Crystal Marble	Arena2 in Deep Mountain
+       must kill the challenge beasts, one of them has an item, identify to get marble
+	Any area that gives random misc equipment
+  4.  Blood Marble	Boy;trace symbol;forward;kill boy;gemstone (identify)
+  5.  Cerulean Marble	Peeron Castle Entrance; search tapestry 5
+  6.  Alabaster Marble	TV;#5 e;n;enter;e;n;kill skinnner;open drawer
+  7.  Gray Marble	Museum;s;search dust
+  8.  Azure Marble	Chaos;#3 w;#3 n;d;n;search mist
+  9.  Ebony Marble	Eforest;#5 e;s;all e;enter ship;stairs;enter door;search hay (many times)
+10.  Iron Marble	Science;u;#4 n;d;#2 n;#4 w;s;tower;u;u;left;search crate
+
+
+CHOP TREE
+
+  From Newbie Bin
+     1.  #3 s;#4 e;s;climb tree;search nest;get the axe
+     2.  Go to the forested areas of newbie and fine the tree 
+
+KODIAK
+
+  From Newbie Bin, 16s
+     1.  From start  nw;nw;e;search rubble;nw;nw;nw;search elevator;nw;search floor;d;say scanner;say ford
+     2.  From start  sw;sw;wear scanner;search trees;se;kill kodiak
+
+LOTHARIAN QUEST
+
+  From Newbie Bin, 15s
+     1.  From start  s;s
+     2.  From start  s;s;e;search;say knots
+
+MICKEY MOUSE QUEST
+
+  From Newbie Bin, 8s
+     1.  From entrance #3 w;s;#10 w;#2 s;kill dwarf;get pickaxe;e;swing axe;get diamond
+     2.  From entrance all west;enter;give diamond to snow white;
+
+RESOURCE CRISIS
+
+  From Newbie Bin, 7s
+     1.  Find multimeter and cutters, 3 places
+          a.  enter truck;search tools
+          b.  ne corner, enter shed, search box
+          c.  trailer; search tools
+     2.  From outside trailer;w;climb stairs
+          a.  Then 'test color wire' until you find the correct wire
+          b.  Then cut that wire, quest done.
+
+
+TREE
+
+  From COT;s;e;#3 s;look at tree
+
+
+VOLE THE HATEFUL
+
+   1.  Get the Drow Translator  (F) in Deep Mountain
+   2.  Then goto (G) Maze Level 4 and listen till you get the password, it's one word
+   3.  Then goto (J) Maze Level 4 and get Maul of the Titans
+   4.  Then get out of UnderDark and dig in every room of the fields
+         until the ground rumbles, you'll fall into a hole, keep digging until
+         the maul runs out of power, you'll end up in room with Rastafan
+         He'll give you the beads.
+    5.  Then go to (E) Maze Level 4 and search throne, d, w till you can go s
+    6.  Then s until you see Vole the Hateful
+    7.  'break beads' watch them kill vole, or join in, don't matter, when vole
+         dies you get qps. 
+
+KILL BAHAMUT
+
+    1.  Get black dragon tooth from (A) maze level 1.
+    2.  Get green dragon tooth from (F) maze level 1.
+    3.  Get white dragon tooth from (J) maze level 1.
+    4.  Get blue dragon tooth from (K) maze level 1.
+    5.  Get red dragon tooth from (E) maze level 2.
+         or there is another place. 
+    6.  Get the Catalyst from (E) maze level 1.
+    7.  You need to activate the catalyst. The password is made from the letters
+         spoken by the dragons when you kill them.
+    8.  Go to (S) in fields and give him the dragon teeth and the catalyst
+    9.  Kill Shamus, get his sword, wield it, kill bahamut, Quest Done!
+
+
+MIYU
+
+  1. Get the mirror from (G) House
+  2. Go to (A)Miyu and drop all south of her.
+  3. Type 'bite me' at Miyu, you get miyu's blood.
+  4. Go to (B) Mirror Activator, activate mirror.
+  5. Go to (H) Suit of Armour, 'use mirror on suit'
+     Then kill suit, then 'sever head'
+  6. Go to (G) House and 'place head in mirror'
+  7. Quest Done.
+  8. Go to (F) buy reality to get out.
+
+         	
+     	A			* - Start Point	
+	|			A - Miyu (Get miyu blood here)
+	#			B - Gate, Mirror Activator, Cross
+	|			C - Train Station, (black gemstone -> blood marble)
+	#       D		D - Library
+	|       |		E - Police, idol
+	#     B-#     C	F - Kyoto Inn, shop, Exit(buy reality)
+	|       |     |   	G - House, Mirror, Picture
+	#       #     *	H - Suit of Armour
+	|       |     |
+	#-#-#-#-#-#-#-#
+           |     |
+         H #-E   #
+         | |     |
+       F-#-#     #
+           |     |
+           F     G
+
+
+RING OF POWER
+
+	1.  Chaos;#3 e;s;s;e;e;n;#3 e;n;w;w;n;n;#4 e;#3 n   (Zookeepers House)
+        2.  'move rug' gives you a key then 'unlock drawer' and 'open drawer' gives you keepers journal 
+             (Journal tells you this is Ring of Power quest and gives a little info)
+	3.  Zookeepers House;s;#3 e;order mapper
+        4.  Zookeepers House;s;#4 w;#3 n;enter   Kill Lion King (keep unicorn's horn)
+        5.  Zookeepers House;s;#4 w;n;nw;w        Kill Black Panther(keep scorpion's tail)
+        6.  Zookeepers House;s;#4 w;s;sw;w         Kill Polar Bear(keep griffon's feather)
+	7.  Zookeepers House;s;#4 w;enter;clean mirror;gaze mirror (Take you to maze) 
+             Use mapper here, type 'mark start' remember this is your start room
+             #### Note to self, unidentified cloak here.
+	8.  Figure your way around this maze using mapper for help (IT's random every boot)
+             Find room that says, "Before castle of Mizra"
+	9.  At entrance to castle, 'wiggle stone' then down kill Red Dragon
+      10.  'look at shelf' and 'look at holes' then:
+                put feather in medium oblong hole
+	        put tail in shallow cylindrical hole
+                put horn in deep conic hole
+                get ring
+       11.  Enter Castle, kill Mizra, enter crack, melt ring in lava, DONE.
+
+
+HIDE AND SEEK
+
+	1.  Chaos;#3 e;s;s;e;e;n;e;e;e;n;w;w;#4 n;enter
+	2.  Entrance;e;e;n;n;e;kill brooms   then 'move panel' and 
+             'bow down in worship' then kill commander get 'a jar of peanut butter'
+        3.  Next: w;s;e  'open refrigerator' get 'slices of bread'
+        4.  Next: w;n;n;u;e;e;d;kill oj  then 'search home plate' get 'a bread knife'
+ 	5.  Entrance;nw;w;s;open dresser you get 'tula's ring'
+             then 'gaze into mirror' and s;w then 'open refrigerator' you get 'a jar of jelly'
+	     then e;e;slide on slide
+	6.  Next: n;knock on door;search bed;d;d;s;e;search devices   get 'toaster'
+        7.  Entrance: e;e;n;n;n;u;search carpet;nw;make sandwich;tag matt    DONE!!!
+
+NUKE
+
+         1.  Science;enter;u;#4 n;d;n;n;#3 e;#6 n;#7 e;#3 n;e;se
+         2.  1 west from SE corner, enter pool
+         3.  search sludge, kill sludge, search film, d, push enter, enter
+         4.  (at c) take hostage,  interrogate wass for launch codes (1.22.79 was mine)
+	He tells you he left the keycard in this neat compartment he built into the
+	outhouse behind the fake building on the west side of the test site. (what i got, it's diff every time)
+         5.  (at f) peruse papers for plans
+	You read the documents carefully, and discover
+	that the test site is on the south side of the
+	mountain range, near where the swamp touches the
+	mountains.
+         6.  (at g) search desk, search drawer for key
+         7.  (at a) unlock door, open door
+         8.  (at h) search stairwell for another key
+         9.  (at j) search panel for another key
+       10.  leave and find 2nd silo
+       11.  At 2nd silo follow wass' instructions for obtaining the keycard
+       12.  plug in, insert keycard, enter coordinates
+
+x-x x-x                   b - armoury
+|     |                   c - communications
+x-x x-x         e         d - mess hall
+|     |         |         e - cook
+x-x x-x     b c d         f - secretary
+|     |     | | |         g - lieutenant/key
+*-x-x-x-x-a-x-x-x-x-x     h - key
+          |         |   a/i - door
+    j x   x         f     j - control room
+    | |\ /          |     k - radioactive man/missile
+k-x-x-i h           g
+
+>Go back to the first oasis, back down to the control room. look at
+wall,=
+> look at plug, 'plug in', insert keycard, enter the launch code.
+Kaboom
+
+KIMLARK
+
+   1.  Go to (2) type move grate
+   2.  Kill the Huge Dragon (Gold Key)
+   3.  Use the key to unlock the door before you get to End.
+   4.  Kill the monster, then kill the ghost
+   5.  Go s, like 2w, look at the cleft and use it to get out
+   6.  Find the throne, sit on it, open the chest, place crystal in chest, done.
+
+                                                                    #
+                                                                    |
+                                                                    #-#
+                                                                    | |
+       A------#         # #                         #     F(cont.)  #-#
+       |      |         | |                         |     |         |
+     #-#-#    #-B-#-#-#-#-#          #-E            #     #         #
+     | | |      |                    | |            |     |         |         #-#
+     #-#-#      |           #-#      # #-#        #-#     #         #-#       | |
+       | |      B-C-#       | |      | | |          |     |           |       #-#
+       #-#        |   #-#-#-#-D------D #-#-#-Embark #     G           #         |
+       | |        |   |     | |        | |          |                 |         L        J
+       #-#        C-#-#     #-#-#      #-#          #-#         #-#   #-#       |        |
+                              | |      |              |         | |   | |       #    #-#-#
+                 #-B          #-#      #              #-#-I-H-#-#-#   L-#-#   I      | | 
+                   |            |      |                |   | | | |   | | |   |    K-#-#
+           # 2 #   #-#          #      #                #   #-#-#-G   #-#-#-#-J
+           | | |   | |          |      |                    |   | |   | | | |
+           # #-#-# #-#-#        #      F(Above)             #   #-#   #-#-#-#
+           | | |   |            |                               |     | |
+           A 1 #-# # #-M        #              2                #     #-K
+           |   |   | |                        /|\
+           #-#-#-#-# #                       # # 3-#-#-# #-#
+             | |    /                                  | | |
+             # #-H-#                             #-#-# #-# #
+                                                 |   |     |
+                                                 #-# #-#-#-#
+                                                 |
+                                                 #-#-#-#-#-#
+                                                       |   |
+                                                 #-#-#-# #-#
+                                                 |     |   |
+                                                 #-#-# #-#-#
+                                                     |
+                                                 #-#-# #-# End
+                                                 |     | | |
+                                                 #-#-#-# #-#
+
+
+KATIN
+
+(start point) Eforest;#5 e;n  - You'll need the journal from George, say journal at george.
+
+   1.  Goto C, kill tir, End. (key to C is on a monster in the maze that C is in)
+
+               B-=-#-A
+                     |
+                   #-#                               C
+                   | |                               |
+                   #-#                             #-#-#
+                   |                               | | |
+                   #                             #-#-#-#-#
+                    \                            | | | | |
+                     #                           #-#-B-#-#
+                     |                           | | | | |
+                     #       #                   #-#-#-#-#
+                     |       |                     | | |
+                     #   #   #                     #-#-#
+                     |   |  /|
+                     #-#-#-# #
+                    /    |
+                   #     #
+                   |
+                   #
+                   |
+                 Start
+
+
+HAUNTED MANOR
+
+AT 'C' kill the ghost, then get the knife from the hanging body
+and use the knife to smash the gem.
+
+                             #-W-#            # C-#
+                             | |              | |
+                             B #-A            #-#-A        B-#-#
+                             | |                |
+                             #-#-#            #-#-#
+
+
+Dragon Knight Underdark connects with (1) Rastafan Underdark
+
+                     #
+                    / \
+                 #-#   #-#        
+                /   \ /   \
+               #     #     #
+                \    |    /
+                 \   #   /
+                  \     /
+                   # # #                      
+                   |/|\|                  
+                   # # #                      
+                    /   
+                   #
+                    \
+                     #-------#-#
+                     |         |
+                     #       # # #-#-#
+                     |        \|/    |
+                     #       #-#-#   #
+                    /|        /|\
+                   #-#   #-#-# # #-#
+                   |/      |   |   |
+                   #       #   1   #
+                   |              
+                   *          
+
+
+Science
+	                                                                  
+
+
+ 	                                                                  m
+	                            		                              \    |
+	        	 	                                              #-#-#     #
+	               			                               | | |     |
+						                              -#-#-*-#-X   #
+						       |                       | |   | |   |
+						     #-T-                     -#-*   *-#-#-#
+						     | |                       | |   | | |
+						   #-#-#-                      #-#-*-#-#-#
+						   | | |                       | | | | | |
+A. Cybertron					   #-#-U-                      #-#-#-#-#-#-Mith
+B. Tower(ulme)					   | | |                       | | | | | |
+C. Tower(xiola)                                 #-#-#-                      #-#-#-#-#-#
+D. Antitech Abbey(syd)		                  | | |                       | | | | | |
+E. Aliens                                     #-#-#-#-                      #-l-#-#-k-#
+F. Mars ext.(nanook)                          | | |                       | | | | |
+G. Tech Scavengers(druss)                   S-#-#-#-                    #-#-#-#-#-#
+H. Marines(heath)                           | | |                     | | | | | |
+I. Subway(ulme)                             #-#-#-                  #-#-#-#-#-#-#
+J. Gas Station			              | | |                   | | | | | | |
+K. Disease Testing Ctr		              #-#-# W               #-#-#-#-f-#-#-#
+L. Swamp(mithrandir)                        | | | |               | | | | | | |
+M. Swamp(viviane)                           #-#-#-#-#             #-#-j-#-#-#-#
+N. Incinerator(tuesdai)                     | | |                 | | | | | | |
+0. Loading dock(tuesdai) good xp            #-#-#                 #-#-#-#-#-#-#
+P. Ruins(aserena)                           | |  \                | | | | | | |
+Q. Flaxen                                 R-#-#   V             #-#-#-i-#-#-#-#
+R. Shadowlotus                            | | |                 | | | | | | | 
+S. Jeffo's                    P         #-#-#-#                 #-#-#-#-#-#-#
+T. military camp(ariakus)     |         | | | |                 | | | | | |
+U. toxic dump(mithrandir)     #-#-#-#-#-#-#-#-#-e               #-#-#-#-#-#
+V. Nuke quest area(lipscom)   | | | | | | | | |                 | | | | | |
+W. Compound(Pistil)           #-Q-#-#-#-#-#-#-#             f   g-#-#-#-#-h
+X. Swamp(ulme)                | | |         | |              \  | | | | | |
+Y. Fence(mithrandir)          #-#-#         #-#               #-#-#-#-#-#-#
+Z. Atlanta(cletus)            | |           | |               | | | | | | |
+a. Aliens(distortion)         #-#           #-# M         c   #-#-#-#-#-#-#
+b. Ruins(scrubby)             | |           | | |         |	  | | | | | | |                   
+c. Excavation	   #-#       I-#-0           #-#-#   Y     #-#-a-#-#-#-#-#-b
+   (tarin)	   | |       | | |           | | |   |     | | | | | | | |
+d. Subway     F-# #-# G   H-#-#-#-N       #-#-#-X-#-#-#-#-#-#-#-#-#-#-#-#
+e. Microtech  | | |   |   | | | |         | | | | | | | | | | |     | | |
+   (vaix)     #-E-#-#-#-#-#-#-#-#-#       d-#-#-#-#-#-#-#-#-#-#   M-#-#-#
+f. Nanook     | | | | |   | | | | |       | | | | | | | | | |         | |
+g. trailer  #-#-#-#-C-#   A # #-#-#-#-M-#-#-#-#-#-#-X-#-#-#-#         #-#
+h. labor-   | | | | | |     | | | | | | | | | | | |         |         |
+   torium   #-#-D-#-#-#     * | | | | | | | | | | |         Z         Z
+i. bunker     | | | | |       | | | | | | | | | | |
+j. tent       #-#-#-#-B   *-#-#-#-#-#-#-#-#-#-#-#-#
+k. plane                      | | | | |
+l. ryft                       J #-#-#-#
+m. kwuteg                       |     |
+	                         K     L
+
+
+
+
+
+
+
+
+
+
+
+
+
+Der'Thalasian
+
+   0. Mixed Eq (gaunts,helm,armband)
+   1. Boots                                                        *
+   2. Helmet                                                       |
+   S  sinkhole (ror on vampire)                                    #
+                                                                   |
+                                                                   #
+                                                                   |
+                                                                   #
+                                                                   |
+                                                                   #
+                                                                  /
+                                                               A-#
+                                                 |/| |           |
+                                             #-#-#-#-R-          #
+                                               |/  | | | | |/|  /
+                                             #-R-#-2-1-#-#-#-#-#
+                                                 |   | |   | |
+                                               1 R-#-R
+                                               |\ /| |/
+                                               #-#-2 #-#-
+                                                   | | |
+                                                   # # #
+                                                       |\
+                                                       #
+                                                      /|/
+                                                   # #-#
+                                                   | |/ \
+                                                 #-2-#
+                                                   |\| |/
+                                                   # #-0-
+                                                      X 
+                                                     #-#
+                                                     |X|
+                                                     #
+                                                     |
+                                                     #-
+                                                     | |
+                                                     #-#-#-S
+                                               | | |   | |
+                                               #-#-#-# # #               #-#-#-#-#
+                                               |/  |\|/|/|               | | | | |
+                                             #-# # #-# #-#             #-#-#-#-#-#-#
+                                            / \ /| | |/|               |   | | |   |
+                                           #   # #-#-#-#-#           #-#   #-#-#   #-#
+                                                /|   | |  \          | |     |     | |
+                                               #-#-# 1 S   #-#-#-0-#-#-#     0     #-# 
+                                                 | |/                | |     |     | |
+                                                 # #                 #-#-#-#-#-#-#-#-#
+                                                /| |                   | | | | | | |
+                                                -#-#                   #-#-#-#-#-#-#
+                                           | | | |                       | | | | |
+                                          -#-#-#-#                       #-#-#-#-#
+                                     | | | |                             | | | | |
+                                    -#-#-#-#                             # # # # #
+                                     |                                   | | | | |
+                                    -#               #-#                 # # # # #
+                                     |               | |                 | | | | |
+                                    -#-#-#         #-#-#-#-#             #-#-#-#-#
+                         | | |   | | | | |         | | | | |               | | |
+                        -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#             #-#-#
+                   | | | |                       | | | | | |
+                  -#-#-#-#                       #-#-#-#-#-#
+                 | |                                   | | |
+                -#-#                                   #-#-#-#-#
+                 |                                         | | |
+                -#       #-#                               #-#-#-#-#-#-#-#-#
+                 |       | |                               | | | | |     | |
+                -#-#-#-#-#-#-#                         #-#-#-#-#-#-#     #-#-#-#
+                 |   | | | | |                         | | | | | | |     | |
+                          -#-#-#-#                     #-#-#-#-#-#-#-#-#-#-#
+                           |                           | | | | | | |   | | |
+                          -#                     #   #-#-#-#-#-#-#-#-#-#-#-#-#
+                           |                     |     | | | | |     | | | | |
+                          -#-#   #-#-#-#-#-#-#-#-#-#   #-#-#-#-#     #-#-#-#-#
+                           |     | | | |   |   | | |   | | | |         | | |
+                          -#   #-#-#-#-#   #   #-#-#-#-#-#-#-#         #-#-#
+                           |   | |   | |   |   | | |
+                          -#-#-#-#   #-#-#-#-#-#-#-#
+                           | | | |
+                            -#-#-#-#
+                             | |   |
+                                   #-#-#-#-#
+                                     | | | |
+                                     #-#-#-#-#
+                                 |   | | | | |
+                                -#-#-#-#-#-#-#-#
+                               | | | | | | | |
+                              -#-#-#-#-#-#-#-#
+                     |     | | |
+                    -#-#-#-#-#-#
+                   | | |
+                  -#-#-#
+               |   |
+               #-#-#
+               |
+              mist
+
+
+
+
+Tear
+______
+                           X            
+                            \     /   
+                             0   0
+                              \ /
+                               a-0-0-0-0
+                                \| | | |
+                                 0-b-0-0-2
+                                   | |
+                                   0-0
+                                   | |
+                                   0-0
+                                   | |
+                                 0-0-0-0
+                                 | | | |
+                                 0-0-0-0
+                                 | | | |
+                               0-0-0-0-0-3
+                                 |
+                                 0
+                                 |
+                             0   0   5
+                              \  |   |
+                               0-0-0-4-0-0-0-c
+                                 | | | |/
+                                 0-0-0-0
+                                   |\|/|
+                                   0-0-0
+                                   |/ \|
+             0         0   0     0-0   0
+             |\       /|    \    | |   |
+             0-0     7-0-0-0-0-0-d-0   0
+             | |\    |/ /           \
+             0-0-7-7-0-0             0-6
+             | | | | |
+           7-7-0-0-0-0     0
+           | | | | | |      \
+         7-7-0-C-7-0-0       0
+        /| | | | | | |\      |
+       0-7-7-7-7-7-0-0-0-0-0-0-0
+        \| | | | | | | | | | | |
+         0-0-0-0-0-i-0-0-0-0-0-0
+           | | | | | | | | |  \|
+           0-0-0-0-7-0-0-0-0   0-0-0-0
+                 | | | | | |\         \
+                 0-0-0-0-0-0-0-0-0-0-0 0
+                     | | | | | | | | |
+         0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0   8
+         | | | | | | | | | | | | | | | |\   \
+       0-0-0-0-0-0-0-0-0-0-0-0-0-0-0 0-0-0   0 
+       | | | | | | | | | | | | | | | | | |  /|
+       0-0-0-0-B-0-0-0-0-0-0-0-0-0 0 0-e-0-0-0
+         | | | | | | | | | | | | | | | |    \|
+         0-0-0-0-0-0-0-0-0-0-0-0-0 0 0-0     0
+         | | | | | | | | | | | | |\    |     |
+         0-0-0-0-0-0-0-0-0-0-0-0-0-0-0 0     0
+         | | | |           | | | | | |
+         0-0-0-0           0-0-0-0-0-0
+           | |  \             \| | | |
+           f-9   0-0           0-h-0-0
+                   |            \| | |
+                   0-0-0-0       0-0-0
+                  /    | |          \|
+               0-0     0-0-0-0       0-0
+               | |     | | | |\        |
+             0-0-D   0-0-0-0-0-0       0-0-0
+            /| | |  /| | | | |/        | |/
+           0-0-0-0 0-0-0-0-0-0       0-g-0
+           | | |   |                 |
+         0-0-0-0 0-0                 0
+        /| | |   |/
+     0-0-0-0-0   0
+           | |
+           A-0
+           | |
+           0 0
+
+a-i - tear in the Fabric of Time 
+2 -Tower (ruined) 
+3- City of Raric 
+4- City of Keyloncia 
+5- Town of Porik 
+6- Small Town of Flinia 
+7- Several Monsters 
+8- Town of Waff 
+9- Forest of Illusion 
+A- Town of Piep 
+B- City of Zolifo 
+C- City of Razorin 
+D- Spoem  
+
+
+
+  DEEP MOUNTAIN
+  
+               #-#-#-#-#-F         > - Up and Portal to Leave Deep Mountain
+               |       |           A - Deep Mountain Start Point
+               #-< E B #-#         B - Deep Mountain Shop
+                   | |   |         C - Deep Mountain Pub
+               #-#-#-A-> G         D - Challenge Arena 2
+               |     | | |         E - Challenge Arena 1 (Ghoti)
+               # #-D C # #         F - Living Quarters (Drow Translator) search for it
+                 |     | |         G - Rubble, Search ---> Carrion Crawlers
+               H-#-#-#-#-#         H - Gambling Area
+                                   < - Portal to Maze Level 2
+                                   A - Swirling Vortex, Portal ---> Maze 2
+
+
+  MAZE LEVEL 1
+  
+       >-#-#-#-# A #-#-#            > - To Upper Level
+       |     | | | |   |            A - Small Black Dragon
+       # #-#-# #-# #-B #            B - Flailing Beast
+       | | |     |     |            C - Whip Snake
+       #-# #-#-K #-# C-#            D - Sneaky Thief (Poison Dagger)
+         | | |     |   |            E - Beholder (Demon Catalyst)
+       D #-# #-# E-#-#-#            F - Search(vortex) to Dragon Area
+       | | | | |       |                (small green dragon) up from guardian
+       #-# #-#-#-#-#-G #            G - Brave Elven Warrior
+       |   | |   | |   |            H - Two Headed Troll (Tapan Crystal)
+       # J I #-#-# #-#-#            I - Umber Hulk
+       | |   | | | |   |            J - Small White Dragon
+       #-#-#-# # H #-# F            K - Small Blue Dragon
+       |     | |     |              L - Creatures Summoned by Jabberwocky (random)
+       #-# #-# #-#-< # L            < - Down to Maze Level 2
+       | | |     |   | |
+       #-#-#-#-#-#-#-#-#
+
+  MAZE LEVEL 2
+  
+                    #-#-#-B
+                    |   |           < - Up to Maze Level 1
+                    #-A #           A - Armed Demon (Genesis Scroll, Stiletto of Pain)
+                    |   |           B - Secret Portal, Exit to Underdark Entrance
+                    # #-#           C - Shook Shirek
+                    | | |           D - Bandriggan Predator Demon
+                    # F #           E - Gor Shirek (sometimes Small Red Dragon)
+                    |   |           F - Brave Elven Warrior (Ring of Peace)
+          #-#-# E-# #-# #           G - Hell Hound (Entrance to Deep Mountain)
+          | | |   |   | |           H - Armed Demon (Dark Black Set)
+          > # #-#-#-#-# #           I - Bashnadderei (Cursed Demon Blade)
+            | |   |     |           < - Down to Maze Level 3
+          C-# #-D #-# H #          
+                    | | |
+                    #-# #
+                      | |
+                    #-# G
+                    |
+                    #-#-#
+                    |   |
+                    #-< I
+
+
+ MAZE LEVEL 3
+  
+              #-A #-#           > - Up to Maze Level 2
+              |   | |           A - Arriana, Drow Princess (Ornate Robe, DG)
+              # #-# #           B - Eleari, Drow Princess (Ornate Robe, DG)
+              | |   |           C - Oranin, Drow Princess
+          >-#-# <-# #-#-#       D - Urys, Drow Princess (Ornate Robe, DG)
+          |       |   | |       < - Down to Maze Level 4
+          # B-#-# D C-# #
+          |     |       |
+          #-#-# #-# #-#-#
+              |   | |
+              # #-# #
+              | |   |
+              #-#-#-#
+
+  MAZE LEVEL 4
+  
+             #-#-C
+             | | |             > - Up to Maze Level 3
+           #-#-#-#-#           A - Death Demon (Portable Morgue)
+           | |   | |           B - Fire Elemental (Wand of Fireballs)
+         G-#-# D-# >-#         C - Drow Soldier (Random Potions)
+           |     |   |         D - Big Ugly
+       C #-# #-#-# #-#-#       E - Spider Demon (Demon spider carapace)
+       | | | |   | |   |       F - Drow Cleric (Staff of Curing)
+     F-#-#-#-# E #-# C-# B     G - Dusty Corner ('listen' with translator)
+       |   |   |   | |   |     H - Demon Guard
+     H-#-#-# #-#-# #-#-#-#     I - Drow Magistrate
+       | |   |   |   | |       J - Ghost of Titan (Maul of the titans)
+       #-#-# # I #-#-# A           down from here
+         | | | | |   |         K - Ghost of Titan (Has no Maul)
+         #-#-#-#-#-#-#
+           |
+           #-#-#-#-K-#
+             | | |
+           J-C-#-#
+
+
+   MAP OF FIELDS
+            
+                          |
+          *-*-*-*-*-*-*-*-*    
+          |X|X|/ \|X|X|X|X|
+          *-*-* S-*-*-*-*-*     S= SHACK (SAMUS)
+          |X|X|\  | |X|X|X|     B= UNDERDARK BOARD
+          *-*-*-* * *-*-*-*     U= SHED TO UNDERDARK
+          |X|X|X| | |X|X|X|     T= TOWER
+          *-*-*-* * *-*-*-*
+          |X     /|\     X|
+          *-*-*-*-*-*-*-*-*
+          |X     \|/     X|
+          *-*-*-* * *-*-*-*
+          |X|X|X| | |X|X|X|
+          *-*-*-* * *-B-*-*
+          |X|X|X| | |/| |X|
+          *-*-*-* * * U *-*
+          |X|X|X|X|X|\ /|X|
+          *-*-*-*-*-*-*-*-*
+          |
+          T
+
+
+FANTASY
+                                          A
+                                          |
+                                        P-#
+                                        | |
+                                    #-#-#-#-#-#-#
+                                    | | | | | | |
+                                  #-#-#-#-#-#-#-#
+                                  | | | | | | | |
+                                #-#-#-#-#-#-#-#-#
+                                | | | | | | | | |
+                                #-#-#-#-#-#-#-#-#       B     #-#
+                                | | | | | | | | |       |     | |
+                                #-#-#-#-#-#-#-#-#   C   #   #-#-#    
+                                | | | | | | | | |   |   |   | |           
+                              #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+                              | | | | | | | | | | | | | | | | |
+                            #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+                            | | | | | | | | | | | | | | | | |
+                      #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+                      | | | | | | | | | | | | | | | | | | |
+                E   #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+                |   | | | | | | | | | | | | | | | | | | |
+              D-#-#-#-#-P-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+
+
+
+
+galax:	ok first....gargamel in smurfs..his room...search cauldron...douse fire..get all from cauldron...get identified at gypsy....marble
+InstaAir:	woo
+galax:	second...principal skiinne in chaos tv...hist office...la desk...search drawer..open drawer...get all from drawer...marble
+galax:	peeron castle...
+galax:	search tapestry #5...marble
+InstaAir:	woo
+galax:	hey one more marble thing...
+galax:	the peridot ring of adornment is a marble...get gem...or search ring
+galax:	it has a marble as the gem
+Lane0oo:	cool
+galax:	figured you might like to know that
+
+
+Buddha : eengel@majorissues.com
+
+[JT1]

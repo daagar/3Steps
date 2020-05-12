@@ -1,0 +1,19 @@
+#unvar kill_path
+#list {kill_path}{clear}
+#unvar {area_items}
+#list {area_items}{clear}
+#unvar all_area_items
+
+#var kill_path {e;e;s;e;e;e;s;w;w;w;s;e;e;e;n;n;w;w;w;n;w;n;w;n;n;n;e;s;s;s;s;e;n;n;n;n;e;s;s;s;s;e;n;n;n;n;n;e;s;s;s;e;n;n;n;e;s;s;s;e;s;w;s;e;s;w;e;e;e;n;w;n;e;n;w;n;e;s;e;e;n;w;e;n;w;n;e;s;s;e;e;e;e;e;n;w;w;w;w;n;e;e;e;e;n;w;w;w;w;n;n;w;s;e;s;s;s;s;w;s;w;w;s;s;s;w;w;w;n;n;n;w;w;n;n;n;w;s;s;s;s;s;w;w;w;w}
+
+#list {kill_path}{create}{$kill_path}
+#list {kill_path}{size}{max_room}
+
+#var stepper 1
+#var room_num 0
+
+#var {area_items}{puppy}
+#list {area_items}{create}{$area_items}
+#list {area_items}{size}{all_area_items}
+
+rating

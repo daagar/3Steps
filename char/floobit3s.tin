@@ -1,0 +1,75 @@
+#class {floobit} {open}
+
+#var guild elemental
+
+/* HP Bars */
+#gag { HP:%2/%3 C:%4\%  NRG:%5/%6(%7)  SP:%8/%9  B:%10(%11) G2N:%12} 
+#act { HP:%2/%3 C:%4\%  NRG:%5/%6(%7)  SP:%8/%9  B:%10(%11) G2N:%12} {
+	#var my[hp][current]		{%2};
+	#var my[hp][max]		{%3};
+	#var my[cohesion]		{%4};
+	#var my[gp1][current]		{%5};
+	#var my[gp1][max]		{%6};
+	#var my[emit][level]		{%7};
+	#var my[sp][current]		{%8};
+	#var my[sp][max]		{%9};
+	#var my[blasts]			{%10};
+	#var my[reset]			{%11};
+	#var my[g2n][full-string]	{%12};
+	#regex {$my[g2n][full-string]}{T:%*:%*\%}{
+		#var {enemy[name]}{&1};
+		#var {enemy[hp]}{&2};
+		#var my[incombat] 1;
+		#math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+	}{
+		#var {enemy[name]}{None};
+		#var {enemy[hp]}{0};
+		#var my[incombat] 0;
+	};
+	update_status;
+}
+
+#alias {update_status} {
+	#var {my[hp][graph]}		{@graph{$my[hp][current];$my[hp][max]}};
+	#var {my[sp][graph]}		{@graph{$my[sp][current];$my[sp][max]}};
+	#var {my[gp1][graph]}		{@graph{$my[gp1][current];$my[gp1][max]}};
+	#var {enemy[graph]}		{@graph{$enemy[hp];100}};
+	#format {hp}			{%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
+	#format {hp_max}		{%+4s} {<128>$my[hp][max]<088>};
+	#format {sp}			{%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
+	#format {sp_max}		{%+4s} {<128>$my[sp][max]<088>};
+	#format {nrg}			{%+4s} {@colscale{$my[gp1][current];$my[gp1][max]}};
+	#format {nrg_max}		{%+4s} {<128>$my[gp1][max]<088>};
+	#format {ehealth}		{%+3s} {@colscale{$enemy[hp];100}};
+	#showme {H:${hp}/${hp_max}  S:${sp}/${sp_max}  N:${nrg}/${nrg_max}  E:$enemy[name](${ehealth}%)} {-4};
+	#showme {H:${my[hp][graph]} S:${my[sp][graph]} N:${my[gp1][graph]} E:${enemy[graph]}} {-3};
+	#showme {$mip[gline][2]} {-6};
+	#showme {$mip[gline][1]} {-7};
+}
+
+
+#alias {corpsetrig} {
+	!wrap corpse;
+	!divvy;
+}
+
+#alias {co}{
+	!unwrap corpse;
+	#if {"$my[autocorpse][method]" == "guild"}{
+		!evoke corpse drain;
+	};
+	#if {"$my[autocorpse][method]" == "nex"}{
+		!orare;
+	};
+}
+
+#alias {cco}{co};
+
+#act {Floobit dealt the killing blow to %1}{
+	log_damage_no_numbers %1;
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+}
+
+#class {floobit} {close}

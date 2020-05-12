@@ -1,0 +1,491 @@
+#class {flo} {open}
+
+#var guild necromancer
+
+#nop {This is a list of necro commands that are obscure or not well documented, but are still useful to know.
+
+	The following commands have info files:
+
+	lscroll — This is a remote listing of the contents in the scroll case.
+
+	glamor2 — Ordained+ command to select one's second form glamour.
+
+	gtitle — set your title to your necromatic standing
+
+	hpreport — displays a graphical representation of a necromancer's energy usage during an interval of time.
+
+	dosoul — Due to the occasional conflict between guild command names and soul commands, the 'dosoul' command allows you to carry out these soul commands while still leaving the guild commands as they currently are.
+
+	detect darkness — See the level of darkness in a room.
+	*1 light: Clear
+	*0 light: Misty
+	*-1 light: Shadowy
+	*-2 light: Murky
+	*-3 light: Black
+	*-4+ light: Pitch black
+
+	The following commands do not have info files:
+
+	Chat to both 3k and 3s Necros at the same time:
+	gguild
+
+	At Duncan you may:
+	check
+	lookup
+	say donators
+
+	To get a list of objects/mobs in a room:
+	parse <partial word>
+	Lists all matches.
+
+	To gather kindling for 'funeral pyre'
+	'gather kindling' in an outdoor room
+
+	Also check out these hard-to-find info and necro files
+
+	info base powers
+	info titles
+	info retirement
+	info exodus
+	info transference
+
+	necro alphapowers
+	necro general_index
+
+};
+
+#gag {Innocence and light permeate the room, making your enemy stumble!}
+#gag {Remembering summers lost, never to be regained, your foe halts!}
+#gag {The bright soul blasts into your enemy, merging with it in pain!}
+#gag {The innocent breaks into a dozen lights that scorch your opponent!}
+#gag {The light of the tortured soul rends apart your opponent's life!}
+#gag {The serene form of the innocent gapes to a skull before your enemy!}
+#gag {The sobs of the innocent shatters the dark heart of your enemy!}
+#gag {The soul reaches out to your enemy for help, draining its life!}
+#gag {The tears from the innocent soul burn the skin of your opponent!}
+#gag {The tormented soul cries, tearing at the life of your enemy!}
+#gag {Your enemy falters and weeps as he watches the innocent soul!}
+#gag {Your enemy screams out in pain as the innocent soul confronts him!}
+#gag {Your foe falls to its knees crying as the innocent sheds its light!}
+#gag {Your foe is blinded as the innocent soul reveals itself before it!}
+#gag {Your foe is overcome with innocence and succumbs to your attack!}
+#gag {Your foe screams as souls of the innocent materialize around him!}
+#gag {Quoth tells you:}
+#gag {Somewhere, an innocent dies, and you capture its soul in this room.}
+#gag {You cannot change your atrance while it is activated.}
+#gag {Your link to the guild tells you:}
+#gag {Its task complete, the innocent soul is freed.}
+#gag {Using the viciousness of the beast within your soul, you rend}
+#gag {the flesh of your enemy and feed upon the flowing lifeblood.}
+
+#nop {Gag the fury emotes}
+#gag {Ripples of power channel along %1 body}
+#gag {With a %1 strike, Flo %2 his enemy %3}
+
+#nop {gag the familiars}
+#gag {F bites Flo's enemy!}
+
+#nop {gag the qtrance stuff}
+#gag {* You blink into unconsciousness *}
+#gag {You alter back to your normal, human form.}
+#gag {F tells you:}
+#gag {  Your maximum alter degree is %1 master.  Invoking that now.}
+#gag {(%1)You alter into the embodimental spirit of the devil!}
+#gag {* You recover your senses *}
+#gag {You hand 10 coins to F, who then %1 guild.}
+
+
+#nop {Naturian}
+#gag {Burning into the flesh of your opponent, the dark sap attacks!}
+#gag {Dripping and burning, the sap causes intense agony unto your foe!}
+#gag {Drops of sap cause agonizing pain as they splash your opponent!}
+#gag {Horrifying and deadly sheets of acidic sap rain down upon your foe!}
+#gag {Rivulets of sap burn bloody tunnels into your opponent's flesh!}
+#gag {The acidic sap dissolves your opponent's skin into a sticky goo!}
+#gag {The flesh of your enemy melts and burns from the acidic sap!}
+#gag {The sticky and deadly acid sap clings mercilessly to your opponent!}
+#gag {The sticky sap rains upon your adversary, burning its flesh!}
+#gag {With futile effort, your enemy tries to scrape off the burning sap!}
+#gag {Your foe becomes mired in the burning sap, unable to break free!}
+
+#nop {Beastioric}
+#gag {Acidic venom is injected into your enemy from the viper's attack!}
+#gag {The acidic, corrosive bite of the viper debilitates your foe!}
+#gag {The bite of the spirit viper leaves a corrosive, burning wound!}
+#gag {The slithering viper coils about your foe with an acidic embrace!}
+#gag {The spirit viper's acid dissolves your enemy slowly and painfully!}
+#gag {The viper bites into your foe, pumping acid deep into its flesh!}
+#gag {The viper bites your opponent's ankle, causing them to collapse!}
+#gag {The viper rears back its head and strikes with sharp, acidic fangs!}
+#gag {With a lunging strike, the viper darts at your opponent!}
+#gag {Your foe is consumed by decay from the viper's corrosive bite!}
+#gag {Hissing viciously, the spirit spits caustic acid at your enemy!}
+
+#nop {Deamonasis}
+#gag {A mass of gore-covered hooks emerges from the ground around you.}
+#gag {The hooks retract into the ground, trailing bits of gore.}
+
+#gag {There is no corpse here.}
+#gag {You have no corpse.}
+#gag {You must have a corpse in the room with you}
+#gag {There are no corpses here to wrap}
+#gag {%1 informs you:}
+#gag {You send the chest to the ethereal plane.}
+#gag {You close the chest.}
+#gag {You open the chest.}
+#gag {You call the chest from the ethereal plane.}
+#gag {The chest fades into nothingness.}
+#gag {Nobody tells you:}
+#gag {Your maximum dream factor is %1 mistress, invoking that now.}
+#gag {^C:D=}
+#act {^C:D=}{
+	#math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+}
+#gag {^B:D=}
+#act {^B:D=}{
+	#math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+};
+#gag {^D=}
+#act {^D=}{
+	#math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+};
+#gag {Shadowy powers compel you to}
+
+#act {Visions of the guild appear first in your mind, then reality...}{
+	mapgo rr;
+}
+
+#nop {were stuff}
+
+#act {In ecstasy, your body contorts into a sleek, beastly form.}{#var {my[status][altered]}{1}}
+#act {You alter into the embodimental spirit of the devil!}{#var {my[status][altered]}{1}}
+#act {You are already altered into beast form master.}{#var {my[status][altered]}{1}}
+#act {You return to your normal were form.}{#var {my[status][altered]}{0}}
+#act {You alter back to your normal, human form.}{#var {my[status][altered]}{0}}
+#act {You can only alter your form into beast form master.}{#var {my[status][altered]}{0}}
+
+#alias kk {kill $kstr}
+#alias k {kill %0}
+#alias pca {
+        #loop {1}{100}{count}{
+                !preserve corpse $count;
+        };
+};
+
+#alias gda {
+        !retrieve;
+        !open chest;
+        !get all from chest;
+        !close chest;
+        !deliver;
+        !donate all;
+}
+
+#alias pck {
+        !retrieve;
+        !open chest;
+        !put %0 in chest;
+        !close chest;
+        !deliver;
+}
+
+#alias ppck {
+        !retrieve;
+        !open chest;
+        !put all in chest;
+        !close chest;
+        !deliver;
+}
+
+#alias pca {
+        #loop {1}{100}{count}{
+                !preserve corpse $count;
+        };
+};
+
+#alias {ab}{
+        !alter;
+        !alter beast 10;
+}
+
+#alias necrobuy {
+        #var necrobuy 1;
+        buy;
+        #delay {2}{#var necrobuy 0};
+}
+
+#act {^  %w %w %* %d for %d coins}{
+        #format {reagent}{%l}{%1 %2};
+        #var amount {%4};
+        #if {$necrobuy == 1}{
+                !buy $amount $reagent;
+        }
+}
+
+#alias pc {
+        #if {$my[undead][health] > 0}{
+                !preserve corpse;
+                !get corpse;
+                !give corpse to undead follower;
+        };
+        !preserve corpse;
+        !wrap corpse;
+        !preserve corpse;
+        !get corpse;
+        !keep corpse;
+}
+
+
+/* HP Bar */
+#gag {HP[%1/%2] SP[%3/%4] NP[%5/%6|%7c] Status[w%8\%|p%9|v%10|r%11\%]}
+#act {HP[%1(%2)/%3] SP[%4/%5] NP[%6/%7|%8c] Status[w%9\%|p%10|v%11|r%12\%]}{
+	#var {my[hp][current]}		{%1};
+	#var {my[hp][fuse][current]}	{%2};
+	#var {my[hp][max]}		{%3};
+	#var {my[sp][current]}		{%4};
+	#var {my[sp][max]}		{%5};
+	#var {my[gp1][current]}		{%6};
+	#var {my[np][current]}		{%6};
+	#var {my[gp1][max]}		{%7};
+	#var {my[np][max]}		{%7};
+	#var {my[corpses][inventory]}	{%8};
+	#var {my[worth]}		{%9};
+	#var {my[prot]}			{%10};
+	#var {my[veil]}			{%11};
+	#var {my[repower]}		{%12};
+	#math {my[hp][diff]}{$my[hp][max] - $my[hp][current]};
+	#math {my[sp][diff]}{$my[sp][max] - $my[sp][current]};
+	#math {my[np][diff]}{$my[np][max] - $my[np][current]};
+	#math {my[spnp][diff]}{$my[sp][diff] + $my[np][diff]};
+	#math {my[hpsp][diff]}{$my[sp][diff] + $my[hp][diff]};
+	#math {my[hpspnp][diff]}{$my[sp][diff] + $my[np][diff] + $my[hp][diff]};
+	#if {$my[worth] < 125} {
+		!con;
+	};
+	#if {"$my[prot]" == "OFF"} {
+		!protection;
+	};
+}
+
+#gag {%9[%1] E[%2] Memory[dev%3 alt%4 pro%5]}
+#act {%1[%2] E[%3] Memory[dev%6 alt%7 pro%8]}{
+	#var {my[undead][type]}		{%1};
+	#var {my[undead][string][all]}	{%2};
+        #regex {$my[undead][string][all]}{%d\%/%dc/%dc}{
+                #var {my[undead][health]} {&1};
+                #var {my[corpses][undead]} {&2};
+                #var {my[corpses][coffin]} {&3};
+        };
+        #regex {$my[undead]string]all]}{none/%dc}{
+                #var {my[undead][health]} 	{0};
+                #var {my[corpses][undead]} 	{0};
+                #var {my[corpses][coffin]} 	{&1};
+        };
+	#var {my[attacker][ehealth]}		{%3};
+	#var {my[mem][dev]}			{%6};		
+	#var {my[mem][alt]}			{%7};		
+	#var {my[mem][pro]}			{%8};		
+	#math {my[corpses][total]}{$my[corpses][inventory] + $my[corpses][undead] + $my[corpses][coffin]};
+};
+
+#gag {\$[%8] Cr[%9\%] Exp[%10]}
+#act {\$[%1] Cr[%2\%] Exp[%3]}{
+        #var {my[coins][current]}	{%1};
+        #var {my[gxp][current]} 	{%2};
+        #var {my[exp][current]}		{%3};
+}
+
+#gag {TG[%11|%12] Reag[g%1 b%2 w%3 r%4 m%5 p%6 n%7]}
+#act {TG[%11|%12] Reag[g%1 b%2 w%3 r%4 m%5 p%6 n%7]}{
+        #var {my[teleport][current]} {%11};
+        #var {my[formpower][current]} {%12};
+        #var {my[reagents][ginseng]}	{%1}
+        #var {my[reagents][pearl]}	{%2}
+        #var {my[reagents][web]}	{%3}
+        #var {my[reagents][silk]}	{%4}
+        #var {my[reagents][mandrake]}	{%5}
+        #var {my[reagents][needle]}	{%6}
+        #var {my[reagents][nightshade]}	{%7}
+        #if {$my[corpses][total] > 5}{
+                #if {$my[corpses][inventory] > 3}{
+                        #if {$my[corpses][coffin] < 11}{
+                                !unkeep corpse;
+                                !wrap corpse;
+                        };
+                };
+        };
+        #if {$my[corpses][inventory] < 3}{
+                #if {$my[corpses][undead] >= 1}{
+                        !=give corpse;
+                }{
+                        #if {$my[corpses][coffin] > 0}{
+                                !unwrap corpse;
+                                !get corpse;
+                        }
+                };
+        };
+        #if {$my[corpses][inventory] > 3}{
+                #if {$my[corpses][coffin] < 11}{
+                        !unkeep corpse;
+                        !wrap corpse;
+                }{
+                        #if {$my[undead][health] > 0}{
+                                !unkeep corpse;
+                                !give corpse to undead follower;
+                        };
+                };
+        };
+        #if {$my[corpses][coffin] < 5 && $my[corpses][undead] > 0}{
+                !=give corpse;
+                !wrap corpse;
+        };
+        #var doabsorb 0;
+        #var doabsorbprime 0;
+        #var dodevour 0;
+        #var doalter 0;
+        #nop {Auto Alter};
+        #if {$altered == 0 && $my[repower] < 98 && $my[mem][alt] > 1 && $my[np][current] > 50}{#var doalter 1};
+        #if {$altered == 1 && $my[repower] >= 98}{!alter};
+        #nop {SP Healing};
+        #if {$my[sp][current] < 50}{
+                #if {$my[mem][dev] > 50}{
+                        #var dodevour 1;
+                }{
+                        #if {$my[mem][alt] > 20}{
+                                #var doalter 1;
+                        }{
+                                #if {$my[corpses][total] > 0}{
+                                        #var doabsorb 1;
+                                };
+                        };
+                };
+        };
+        #nop {HP Healing};
+        #if {$my[hp][diff] > 150}{
+                #if {$my[corpses][total] > 0}{
+                        #var doabsorbprime 1;
+                };
+        };
+        #nop {Both Healing};
+        #if {$my[hpsp][diff] > 300}{
+                #if {$my[mem][dev] > 50}{
+                        #var dodevour 1;
+                };
+                #if {$my[mem][alt] > 10}{
+                        #var doalter 1;
+                };
+        };
+        #nop {NP Healing};
+        #if {$my[np][current] < 120}{
+		#echo {I think I need to absorb};
+                #if {$my[corpses][total] > 0}{
+                        #var doabsorb 1;
+                };
+        };
+        #nop {SP and NP Healing};
+        #if {$my[spnp][diff] > 500}{
+                #if {$my[corpses][total] > 0}{
+                        #var doabsorb 1;
+                };
+        };
+        #if {$doabsorbprime == 1}{
+                cor;
+        };
+        #if {$doabsorb == 1}{
+                co;
+        };
+        #if {$my[incombat] == 1 && $dodevour == 1}{
+                !devour;
+        };
+        #if {$doalter == 1}{
+                ab;
+        };
+        #var combatcounter 0;
+        #nop {xmas potion};
+        #if {$xmas == 1}{
+                drink potion;
+        };
+	update_status;
+}
+
+
+#alias {update_status} {
+	#if {"$cooler" == "on" || $corpses[cooler] > 0} {
+		#format {sb1_cooler} {%+2s} {$corpses[cooler]};
+		#var {sb1_cooler} { CL:<130>$sb1_cooler<088>}
+	} {
+		#var {sb1_cooler} {}
+	};
+	#if {"$freezer" == "on" || $corpses[freezer] > 0} {
+		#format {sb2_freezer} {%+2s} {$corpses[freezer]};
+		#var {sb2_freezer} { FZ:<130>$sb2_freezer<088>}
+	} {
+		#var {sb2_freezer} {}
+	};
+	#var {my[hp][graph]}		{@graph{$my[hp][current];$my[hp][max]}};
+	#var {my[sp][graph]}		{@graph{$my[sp][current];$my[sp][max]}};
+	#var {my[gp1][graph]}		{@graph{$my[gp1][current];$my[gp1][max]}};
+	#var {enemy[graph]}		{@graph{$enemy[hp];100}};
+	#format {hp}			{%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
+	#format {hp_inf}		{%+3s} {<168>$my[hp][fuse][current]<088>};
+	#format {hp_max}		{%+4s} {<128>$my[hp][max]<088>};
+	#format {sp}			{%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
+	#format {sp_max}		{%+4s} {<128>$my[sp][max]<088>};
+	#format {np}			{%+5s} {@colscale{$my[gp1][current];$my[gp1][max]}};
+	#format {np_max}		{%+5s} {<128>$my[gp1][max]<088>};
+	#format {ehealth}		{%+8s} {@colscale{$enemy[hp];100}\%};
+	#format {repower}               {%+4s} {@colscale{$my[repower];100}\%};
+	#format {corpses[inventory]}	{%+2s} {$my[corpses][inventory]};
+	#format {corpses[coffin]}	{%+2s} {$my[corpses][coffin]};
+	#format {corpses[freezer]}	{%+2s} {$my[corpses][freezer]};
+	#format {corpses[undead]}	{%+2s} {$my[corpses][undead]};
+	#format {dev}                   {%-6s} {dev$my[mem][dev]};
+        #format {alt}                   {%-6s} {alt$my[mem][alt]};
+        #format {pro}                   {%-6s} {pro$my[mem][pro]};
+	#showme {<088>HP:$hp($hp_inf)/$hp_max SP:$sp/$sp_max NP:$np/$np_max  E: $ehealth    M: $dev $alt $pro R: ${repower}} {-4};
+	#showme {H:$my[hp][graph] SP:$my[sp][graph]     NP:$my[gp1][graph]   E:$enemy[graph] IC: <138>${corpses[inventory]}<088> CC: <138>$corpses[coffin]<088>${sb2_freezer} UC: <138>$corpses[undead]<088>} {-3};
+	#showme {$mip[gline][2]} {-6};
+	#showme {$mip[gline][1]} {-7};
+}
+
+
+#var autogather 1;
+
+#alias co {
+        !unwrap corpse;
+        !absorb;
+        pc;
+        !absorb;
+}
+#alias cor {
+        #nop {
+        !=give corpse;
+        !unwrap corpse;
+        !unwrap corpse;
+        !absorb prime;
+        pc;
+        };
+        !absorb prime;
+}
+
+#alias cco {
+        !get corpse;
+}
+
+#alias {corpsetrig} {
+        #2 pc;
+        !divvy coins;
+	#if {$autogather == 1}{
+		!get all;
+		ppck;
+	};
+}
+
+#act {Flo dealt the killing blow to} {
+	log_damage_no_numbers %1;
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+};
+
+#class {flo} {close}

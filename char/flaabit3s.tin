@@ -1,0 +1,115 @@
+#class {flaabit} {open}
+
+#var guild fremen
+
+#alias kk {kill $kstr}
+#alias k {kill %0}
+
+#nop {confighp hp HP: $CHP$/$MHP$ SP: $CSP$/$MSP$ W: $CWT$/$MWT$($SWT$) P: $PSN$/$PSR$% T: $TRG$$NL$G: $GXP$ - $GXA$ F: $FOC$ L: $LMB$%$MPS$}
+
+
+#gag {HP: %1/%2 SP: %3/%4 W: %5/%6(%7) P: %9/%10\% T: %11}
+#act {HP: %1/%2 SP: %3/%4 W: %5/%6(%7) P: %9/%10\% T: %11} {
+	#var {my[hp][current]}		{%1};
+	#var {my[hp][max]}		{%2};
+	#var {my[sp][current]}		{%3};
+	#var {my[sp][max]}		{%4};
+	#var {my[gp1][current]}		{%5};
+	#var {my[gp1][max]}		{%6};
+	#var {my[gp1][cycle]}		{%7};
+	#var {my[poison][current]}	{%9};
+	#var {my[poison][reset]}	{%10};
+	#math {my[hp][diff]}{$my[hp][max] - $my[hp][current]};
+	#math {my[gp1][total]}{$my[gp1][current] + $my[gp1][cycle]};
+        #if {"%11" != "none "}{
+		#var {my[attacker]}	{%11};
+		#var {my[incombat]}	{1};
+		#math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+        }{
+                #var {my[attacker]}	{none};
+		#var {my[incombat]}	{0};
+        };
+}
+
+#gag {G: %1 - %2 F: %3 L: %4\%}
+#act {G: %1 - %2 F: %3 L: %4\%}{
+        #var my[gxp][round] {%1};
+        #var my[gxp][total] {%2};
+        #var my[focus] {%3};
+        #var my[limberness] {%4};
+        #if {$my[incombat] == 1}{
+                #if {$my[hp][diff] > 100}{go home};
+                #if {$my[sp][current] < 50}{go home};
+        };
+	update_status;
+}
+
+#alias {update_status} {
+        #if {"$cooler" == "on" || $corpses[cooler] > 0} {
+                #format {sb1_cooler} {%+2s} {$corpses[cooler]};
+                #var {sb1_cooler} { CL:<130>$sb1_cooler<088>}
+        } {
+                #var {sb1_cooler} {}
+        };
+        #if {"$freezer" == "on" || $corpses[freezer] > 0} {
+                #format {sb2_freezer} {%+2s} {$corpses[freezer]};
+                #var {sb2_freezer} { FZ:<130>$sb2_freezer<088>}
+        } {
+                #var {sb2_freezer} {}
+        };
+	#var	{my[hp][graph]}		{@graph{$my[hp][current];$my[hp][max]}};
+	#var	{my[sp][graph]}		{@graph{$my[sp][current];$my[sp][max]}};
+	#var	{my[gp1][graph]}	{@graph{$my[gp1][current];$my[gp1][max]}};
+	#var	{enemy[graph]}		{@graph{$enemy[hp];100}};
+	#format {hp}			{%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
+	#format {hp_max}		{%+4s} {<128>$my[hp][max]<088>};
+	#format {sp}			{%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
+	#format {sp_max}		{%+4s} {<128>$my[sp][max]<088>};
+	#format {water}			{%+8s} {@colscale{$my[gp1][current];$my[gp1][max]}};
+	#format {water_max}		{%+4s} {<128>$my[gp1][max]<088>};
+	#format {water_cycle}		{%+4s} {$my[gp1][cycle]};
+	#format {poison}		{%+2s} {$my[relinquish][current]};
+	#format {poison_r}		{%+3s} {$my[relinquish][reset]};
+	#format {ehealth}		{%+8s} {@colscale{$enemy[hp];100}\%};
+        #format {corpses[inventory]}    {%+2s} {$corpses[inventory]};
+        #format {corpses[truck]}	{%+2s} {$corpses[truck]};
+        #format {corpses[coffin]}	{%+2s} {$corpses[coffin]};
+        #format {corpses[freezer]}	{%+2s} {$corpses[freezer]};
+	#showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} W:${water}/${water_max}(${water_cycle})}{-4};
+	#showme {H:${my[hp][graph]} S:${my[sp][graph]} W:${my[gp1][graph]}           E:${enemy[graph]}} {-3};
+	#showme {$mip[gline][2]} {-6};
+	#showme {$mip[gline][1]} {-7};
+}
+
+#alias {corpsetrig} {
+	!wrap corpse;
+	!divvy;
+	#if {$my[gp1][total] < $my[gp1][max]}{
+		!reclaim;
+	}{
+		!fai;
+	};
+}
+
+#alias {cco}{
+	!unwrap corpse;
+	#if {"$my[autocorpse][method]" == "guild"}{
+		#if {$my[gp1][total] < $my[gp1][max]}{
+			!reclaim;
+		}{
+			!fai;
+		};
+	};
+	#if {"$my[autocorpse][method]" == "nex"}{
+		!orare;
+	};
+};
+
+#act {Flaabit dealt the killing blow to %1.} {
+	log_damage_no_numbers %1;
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+}
+
+#class {flaabit} {close}
