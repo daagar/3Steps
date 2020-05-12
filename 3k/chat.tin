@@ -40,6 +40,18 @@
 	};
 	update_chat ${timestamp}<178>%0<088>;
 }{1};
+#act {^\[%1 reconnects\]} {
+	#format {timestamp} {%t} {[<268>%H<088>:<268>%M<088>] };
+        #format {dbtimestamp} {%t} {[%Y:%m:%d %H:%M:%S]};
+	#if {$my[config][db][chat] == 1}{
+		#var {dbmess}{%0};
+		db_submit_chat $dbmess;
+	}{
+		#line log {/tintin/logs/3s.chat} {$timestamp\};
+		#line log {/tintin/logs/3s.chat} {<178>To &3<088>: &4};
+	};
+	update_chat ${timestamp}<178>%0<088>;
+}{1};
 
 /*	#var IdleTimeout 600
 	#undelay {deadmanSwitch};

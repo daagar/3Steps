@@ -1,6 +1,7 @@
 #class {flaabity} {open}
 
 #var guild jedi
+#var subguild baadu
 
 #gag {Your shot hit}
 #gag {The Force flows through you, mending your wounds.}
@@ -79,7 +80,6 @@
 	#10 {!focus cloud mind};
 };
 
-#var {my[desired][weapon]}{lightsaber};
 
 
 #alias {g}{
@@ -103,12 +103,25 @@
 	#var {my[desired][modeshort]}{d};
 };
 
+#alias {hh}{
+	!sheath;
+	!focus hand to hand;
+	#var {my[desired][mode]}{hand to hand};
+	#var {my[desired][modeshort]}{h};
+};
+
 #alias {ftik}{
 	!draw ${my[desired][weapon]};
 	!focus force trance /off;
-	!focus mode /guide;
-	#var {my[desired][mode]}{guide};
-	#var {my[desired][modeshort]}{g};
+	#if {"${my[desired][weapon]}" == "lightdaggers"}{
+		#var {my[desired][mode]}{flurry};
+		#var {my[desired][modeshort]}{f};
+		!focus mode /flurry;
+	}{
+		#var {my[desired][mode]}{guide};
+		#var {my[desired][modeshort]}{g};
+		!focus mode /guide;
+	};
 	#var {my[desired][spell]}{injure-kill};
 	#delay {2}{!focus force trance /ik,repeat};
 };
@@ -116,9 +129,15 @@
 #alias {fti}{
 	!draw ${my[desired][weapon]};
 	!focus force trance /off;
-	!focus mode /guide;
-	#var {my[desired][mode]}{guide};
-	#var {my[desired][modeshort]}{g};
+	#if {"${my[desired][weapon]}" == "lightdaggers"}{
+		#var {my[desired][mode]}{flurry};
+		#var {my[desired][modeshort]}{f};
+		!focus mode /flurry;
+	}{
+		#var {my[desired][mode]}{guide};
+		#var {my[desired][modeshort]}{g};
+		!focus mode /guide;
+	};
 	#var {my[desired][spell]}{ipain};
 	#delay {2}{!focus force trance /ip,repeat};
 };
@@ -132,6 +151,26 @@
 	#var {my[desired][spell]}{telekinetic kill};
 	#delay {2}{!focus force trance /tk,repeat};
 };
+
+#alias {switchw}{
+	#if {"${my[desired][weapon]}" == "lightsaber"}{
+		#echo {Light Daggers};
+		#var {my[desired][weapon]}{lightdaggers};
+		fttk;
+	}{
+		#if {"${my[desired][weapon]}" == "lightdaggers"}{
+			#echo {Light Staff};
+			#var {my[desired][weapon]}{lightstaff};
+			ftik;
+		}{
+			#echo {Light Saber};
+			#var {my[desired][weapon]}{lightsaber};
+		};
+	};
+	!sheath;
+	!draw ${my[desired][weapon]};
+};
+			
 
 
 #alias {ftd}{
@@ -149,10 +188,22 @@
 	#var {my[desired][spell]}{none};
 };
 
+#alias {show_damage}{
+	#echo {Injure-Kill:};
+	#echo { Boil: Fire};
+	#echo { Strangle: Mind};
+	#echo { Crumble: Blunt};
+	#echo {Telekinetic Kill};
+	#echo { Asphyxiate: Poison};
+	#echo { Cardiac: Energy};
+	#echo { Hemmorhage: Mind};
+};
+
 #nop Set default mode to ipain/guide
 #delay {2}{ftik}
 #var {my[cleanse][status]}{0};
 #var {my[cloud][threshold]}{50};
+#var {my[desired][weapon]}{lightsaber};
 
 #nop {focus hpconfigure /HP: #hp/#mhp SP: #sp/#msp C: #c F: #f M: #sm/#%c D: #dn/#ng P: #df E: #es GXP: #gxp}
 #gag {HP: %2/%3 SP: %4/%5 C: %6 F: %7 M: %8/%9 D:%10/%11 P: %12 E: %14GXP:%13}
@@ -185,14 +236,14 @@
 		#var {my[gouged]}	{0};
         };
 	#if {${my[incombat]} == 1}{
-		#if {$my[sp][deficit] > 50}{
-			!focus clear mind;
-		};
-		#if {$my[hp][deficit] > 100}{
+		#if {$my[hp][deficit] > 150}{
 			!focus reduce injury;
 		};
-		#if {${my[hp][percent]} < ${my[cloud][threshold]}}{
-			ppp;
+		#if {$my[sp][deficit] > 100}{
+			!focus clear mind;
+		};
+		#if {${my[hp][percent]} < 30}{
+			go home;
 		};
 		#if {${my[gouged]} != 1}{
 			!gouge;
@@ -200,11 +251,11 @@
 		};
 	}{
 		#if {${my[cleanse][status]} != 1}{
-			#if {${my[sp][current]} < $my[sp][max]}{
-				!focus clear mind;
-			};
 			#if {${my[hp][current]} < $my[hp][max]}{
 				!focus reduce injury;
+			};
+			#if {${my[sp][current]} < $my[sp][max]}{
+				!focus clear mind;
 			};
 		};
 	};
@@ -234,13 +285,20 @@
 			!focus resist poison;
 		};
 		#if {"${my[mode][current]}" != "${my[desired][modeshort]}"}{
-			!sheath;
-			!draw ${my[desired][weapon]};
-			!focus mode /${my[desired][mode]};
+			#if {"${my[desired][modeshort]}" == "h"}{
+				!sheath;
+				!focus hand to hand;
+			}{
+				!sheath;
+				!draw ${my[desired][weapon]};
+				!focus mode /${my[desired][mode]};
+			};
 		};
-		#if {$my[charge][current] < 5}{
-			!smuggle remove cell;
-			!recharge ${my[desired][weapon]};
+		#if {"${my[mode][current]}" != "h"}{
+			#if {$my[charge][current] < 5}{
+				!smuggle remove cell;
+				!recharge ${my[desired][weapon]};
+			};
 		};
 		#regex {$mip[gline][2]}{Deflection UP}{
 			#nop;
@@ -248,6 +306,7 @@
 			!focus force deflection;
 		};
 	};
+	#var {my[damagetracker][guildstring]}{${guild}/${subguild} - ${my[desired][weapon]} - ${my[desired][mode]}/${my[desired][spell]}};
 	update_status;
 }
 
@@ -295,6 +354,7 @@
 	!wrap corpse;
 	!focus absorb energy;
 	!divvy;
+	do_htrance;
 }
 
 #alias {cl}{

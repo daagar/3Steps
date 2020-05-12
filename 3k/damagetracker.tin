@@ -149,6 +149,16 @@ show_damage_table
 		db_query_kill $my[damagetracker][foe-full];
 		#var {my[damagetracker][total]}{$killstats[1][total]};
 		#math {my[damagetracker][average]}{$my[damagetracker][total] / $my[damagetracker][dbrounds]};
+		#if {$my[damagetracker][average] > $my[damagetracker][record]}{
+			#var {my[damagetracker][record]}{$my[damagetracker][average]};
+			#var {my[damagetracker][record-foe]}{$my[damagetracker][foe]};
+			show_damage_table;
+		};
+		#if {$my[damagetracker][total] > $my[damagetracker][record-health]}{
+			#var {my[damagetracker][healthiest]}{$my[damagetracker][foe]};
+			#var {my[damagetracker][record-health]}{$my[damagetracker][total]};
+			show_damage_table;
+		};
 		#format {my[damagetracker][total]}{%+8s}{$my[damagetracker][total]};
 		#format {my[damagetracker][average]}{%-4s}{$my[damagetracker][average]};
 	}{
