@@ -96,7 +96,7 @@
 #var {damagetracker[max]}{100};
 
 #alias {show_damage_table}{
-	#screen clear square 21 -42 44 -1;
+	#screen clear square 21 -42 42 -1;
 	#draw rounded box 21 -41 23 -3 {            Last 10 Kills    [<128>GO<088>]};
 	#button {22;-11;22;-8}{ki};
 	#draw rounded box 24 -41 26 -3;
@@ -133,6 +133,9 @@ show_damage_table
 
 #alias log_damage_no_numbers {
         #var {my[damagetracker][guildstring]}{$guild};
+        #if {"$guild" == "jedi" && "$subguild" == "baadu"}{
+		#var {my[damagetracker][guildstring]}{${guild}/${subguild} - ${my[desired][weapon]} - ${my[desired][mode]}/${my[desired][spell]}/${my[damage][type]}};
+	};
 	#var {my[damagetracker][foe]}{%0};
         #var {my[damagetracker][foe-full]}{%0};
 	#var {my[damagetracker][dbrounds]}{$my[damagetracker][rounds]};

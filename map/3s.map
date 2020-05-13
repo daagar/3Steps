@@ -18,7 +18,7 @@ F 11
 
 G 0
 
-I 449
+I 12914
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -4229,10 +4229,11 @@ E {  799} {s} {s} {4} {0} {} {1.000} {}
 E {  801} {n} {n} {1} {0} {} {1.000} {}
 E { 3972} {e} {e} {2} {0} {} {1.000} {}
 
-R {  801} {0} {} {801} { } {} {} {} {} {} {1.000} {}
+R {  801} {0} {<118>} {801} { } {} {} {} {} {} {1.000} {}
 E {  800} {s} {s} {4} {0} {} {1.000} {}
 E {  802} {n} {n} {1} {0} {} {1.000} {}
 E {12253} {w} {w} {8} {0} {} {1.000} {}
+E {12914} {let myself go} {let myself go} {0} {0} {} {1.000} {}
 
 R {  802} {0} {<128>} {802} { } {} {} {} {} {} {1.000} {}
 E {  801} {s} {s} {4} {0} {} {1.000} {}
@@ -60797,6 +60798,9 @@ E { 5951} {e} {e} {2} {0} {} {1.000} {}
 R {12913} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 5949} {n} {n} {1} {0} {} {1.000} {}
 E {  818} {e} {e} {2} {0} {} {1.000} {}
+
+R {12914} {0} {} {chaotic forest} { } {You find yourself standing at the border of a chaotic wood.  Looking around you, you find it difficult to focus on anything in particular.  It's almost as though your surroundings are vibrating so quickly that they appear blurred and indistinct.  Colors and sounds merge together to create wild panoramic views of nothing in particular.  A cold chill breeze rustles through the branches of the trees to the east. } {Chaotic Forest} {chaotic forest} {} {} {1.000} {}
+E {  801} {out} {out} {0} {0} {} {1.000} {}
 
 R {12916} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {12917} {e} {e} {2} {0} {} {1.000} {}

@@ -1,0 +1,29 @@
+Melee Emote,*Approximate* Damage (as of 2008)
+Missed you,0
+Tickled you in the stomach,1
+Grazed you,2-3
+Hit you,3-10
+Hit you hard,10-20
+Hit you very hard,20-30
+Struck you a mighty blow,30-55
+Smashed you with a bone crushing sound,55-65
+Pulverized you with a powerful attack,65-110
+Trounced you up and down,110-160
+Pummeled you into small fragments,160-210
+Massacred you into tiny fragments,210-260
+Utterly annihilated you,260-325
+Completely devastated you with awesome force,325-390
+Destroyed you,390-450
+Absolutely massacred you,450-550
+Thrashed you completely,600-700
+Demolished you,700-800
+Nearly exterminated you,900-1000
+Obliterated you,1100-1400
+Eradicated you,1500-1700
+Decimated you,1750-1900
+beat you like a rented mule,2000-2300
+exsanguinated you,2500-2800
+atomized you,3000-4000
+beat you like a red-headed step child,God help you.
+drop-kicked you,You're screwed.
+
