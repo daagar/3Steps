@@ -42,6 +42,21 @@
 #gag {^You dive to the ground and roll away from your foe's attack!}
 #gag {^You deftly sidestep a deadly strike!}
 #gag {^Your thumbs are too tired to gouge right now}
+#gag {^You feel rejuvenated by the power of the force}
+#gag {^Raw power flows out of your body, causing it to shimmer with light.}
+#gag {^You feel your body regenerating.}
+#gag {^The clash of combat interrupts your concentration.}
+#gag {^You feel rejuvenated by the power of the Force.}
+#gag {^Your wounds mend as healing energy washes over you.}
+#gag {^Your pain ebbs as your wounds mend.}
+#gag {^Power flows through you, healing your wounds.}
+#gag {^You feel your bones knitting together.}
+#gag {^The healing power of the Force flows through you.}
+#gag {^The Force courses through you, mending your body.}
+
+#gag {^You clutch %1 heart with the Force}
+#gag {^life from %1.}
+#gag {^from %1.}
 
 #gag {^You concentrate on your metabolism and free your body of}
 #gag {^the harsh toxins within it.}
@@ -488,6 +503,11 @@ show_damage_selector
 			#nop;
 		}{
 			!focus force deflection;
+		};
+		#regex {$mip[gline][2]}{Accelerated Healing}{
+			#nop;
+		}{
+			!focus accelerated healing;
 		};
 	};
 	#var {my[damagetracker][guildstring]}{${guild}/${subguild} - ${my[desired][weapon]} - ${my[desired][mode]}/${my[desired][spell]}/${my[damage][type]}};
