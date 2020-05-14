@@ -1,0 +1,6 @@
+#class vars open
+
+#read .tt/AW/vars/areas.var
+#read .tt/AW/vars/mobs.var
+
+#class vars close
