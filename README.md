@@ -31,17 +31,27 @@
 #### 3k/assemble.tin
 * Craft satchel auto-assembler
 
-#### 3k/draw.tin
-* Modified to contain space for damage tracker and biome
-
-#### 3k/damagetracker.tin
-* Gives the ability to count rounds and if mysql is being used, read and write damage and kills directly from the database
-
 #### 3k/mysql.tin
 * Database integration with mysql/mariadb
-* Included a damage database with multiple hundreds of thousands of combat logs from changeling, angel, and mage
-* Included a Kill Database with a few tens of thousands of kills
-* Included a full 3k biome that integrates with changeling character's "Pokedex"
 
-#### Dirs/*.tin
-* Repository for area load and unload actions - currently being loaded when entering an area via #room {exit}{exit}{command}
+### Aardwolf:
+
+#### map/AWmap.tin
+* Additional mapping features not included in the gmcp module
+* Data captures for longdesc
+* Aliases for easier map movement and mob hunting
+* Capture of AW mini-map
+* Auto saves map on disconnect
+
+#### AW/gmcp.tin
+* Modified from TheIxle's original script.
+* Chat monitor for all lines
+* Status updates integrated with graph function
+* Auto-mapping with exit-stubs
+* Terrain mapping to set roomsymbol to Aardwolf style terrain on adding new rooms
+
+#### AW/terrain.tin
+* Set rooms currently in your map to Aardwolf style terrain
+
+#### AW/snd.tin
+* Search and Destroy style mob hunting for TinTin
