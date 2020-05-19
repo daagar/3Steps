@@ -60,6 +60,8 @@
 #gag {^life from %1.}
 #gag {^from %1.}
 #gag {^him.}
+#gag {^it.}
+#gag {^her.}
 
 #gag {You twist the Force within %1 to cause massive hemorrhaging.}
 
@@ -515,6 +517,9 @@ show_damage_selector
 		};
 	}{
 		#if {${my[conc][current]} < 80 && ${my[cleanse][status]} == 0}{
+			do_htrance
+		};
+		#if {${my[force][current]} > 10 && ${my[cleanse][status]} == 0}{
 			do_htrance
 		};
 		#if {${my[cleanse][status]} != 1}{

@@ -1,6 +1,4 @@
-#var domove 0
-#var critter_room 0
-#var player_room 0
+#var domove 0 #var critter_room 0 #var player_room 0
 #var starter 0
 #var stepper 0
 #var reversedir s
@@ -9,6 +7,35 @@
 #var area_aggro 0
 #var automap 0
 #var autogather 0
+
+#act {AREA NAME: %1 [%2]} {
+	#var {area}{%1};
+	make_roomlist {$area};
+}
+
+#act {AREA RATING -> %1 [%2]}{
+	#var {area}{%2};
+	make_roomlist {$area};
+}
+
+#alias {make_killpath}{
+	#map {find}{%0};
+	#unvar {kill_path2};
+	#list {kill_path2}{clear};
+	#path {save}{forward}{kill_path2};
+	#list {kill_path2}{create}{$kill_path2};
+	#list {kill_path2}{size}{path_size};
+	#var {path_index}{1};
+};
+
+#alias {make_roomlist}{
+	#map list {roomarea}{%*%0%*}{variable}{my_roomlist};
+	#list {roomlist}{create}{*my_roomlist[]};
+	#list {roomlist}{size}{area_size};
+	#nop {Make the Initial kill_path};
+	#var {room_index}{2};
+	make_killpath {${roomlist[2]}};
+}
 
 #alias {steptest}{
         #if {$stepper == 1}{
@@ -156,32 +183,26 @@
 
 
 #alias ki {
-	#if {$domove == 1}{
-		#var domove 0;
-		#var starter 0;
+	#if {$stepindex == 0}{
+		#var stepindex 1;
+	};
+	#if {$domove2 == 1}{
+		#var domove2 0;
+		#var starter2 0;
 		#var player_room 0;
 		#var critter_room 0
 	}{
-		#var findexit 0;
 		#var critter_room 0;
 		#var player_room 0;
-		#var domove 1;
-		#var starter 1;
+		#var domove2 1;
+		#var starter2 1;
+		#if {$stepignore != 1}{
+			#var stepper2 1;
+		};
 		#if {"$guild" == "angel" && $my[desecrate] == 1}{
 			!cease;
 		};
 		glance;
-	};
-}
-
-#alias {o}{
-	#if {$domove == 1}{
-		#var domove 0;
-		#var findexit 0;
-	}{
-		#var findexit 1;
-		#var domove 1;
-		!glance;
 	};
 }
 
@@ -200,44 +221,55 @@
 }
 
 #alias kill-loop {
-	#if {$starter == 1}{
-		#if {${player_room} == 0}{ 
-			#if {${autogather} == 1}{
-				gather_items;
+	#if {$starter2 == 1}{
+		#if {$stepper2 == 1}{
+			${kill_path2[${path_index}]};
+			#math {path_index}{$path_index + 1};
+			#if {${path_index} > ${path_size}}{
+				#math {room_index}{${room_index} +1};
+				#if {$room_index > $area_size}{
+					#var {room_index}{1}
 				};
-		};
-		#if {$stepper == 1}{
-			#map flag static on;
-			#math {room_num}{$room_num + 1};
-			$kill_path[$room_num];
+				make_killpath {${roomlist[${room_index}]}};
+			};
 		}{
-			#map flag static off;
 			dirfunction $desired_dir;
 		};
-		#var domove 1;
-		#var starter 0;
+		#var {starter2}{0};
+		#var {domove2}{1};
 	}{
 		#if {${player_room} == 0}{ 
 			#if {${autogather} == 1}{
 				gather_items;
 			};
 			#if {${critter_room} > 0}{
-				#var domove 0;
-				#if {$autokill == 1 && $area_aggro != 1}{
-					kk;
-				};
+				#var domove2 0;
 			}{
-				#if {$stepper == 1}{
-					#math {room_num}{$room_num + 1};
-					$kill_path[$room_num];
+				#if {$stepper2 == 1}{
+					${kill_path2[${path_index}]};
+					#math {path_index}{$path_index + 1};
+					#if {${path_index} > ${path_size}}{
+						#math {room_index}{${room_index} +1};
+						#if {$room_index > $area_size}{
+							#var {room_index}{1}
+						};
+						make_killpath {${roomlist[${room_index}]}};
+					};
 				}{
 					dirfunction $desired_dir;
 				};
 			};
 		}{
-			#if {$stepper == 1}{
-				#math {room_num}{$room_num + 1};
-				$kill_path[$room_num];
+			#if {$stepper2 == 1}{
+				${kill_path2[${path_index}]};
+				#math {path_index}{$path_index + 1};
+				#if {${path_index} > ${path_size}}{
+					#math {room_index}{${room_index} +1};
+					#if {$room_index > $area_size}{
+						#var {room_index}{1}
+					};
+					make_killpath {${roomlist[${room_index}]}};
+				};
 			}{
 				dirfunction $desired_dir;
 			};

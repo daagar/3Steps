@@ -16,4 +16,4 @@
 #var {area_items}{puppy;claws;talons;sword;staff;wings;cloak;suit;key;antlers}
 #list {area_items}{create}{$area_items}
 #list {area_items}{size}{all_area_items}
-rating
+

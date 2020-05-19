@@ -18,4 +18,4 @@
 #list {area_items}{size}{all_area_items}
 
 #alias {zelligar}{go zellgloves;search shelf;get gloves;go zellpool;get key;go 3486;unlock door;open door;s;get key;go 3480;unlock door;open door;go zellmage}
-rating
+

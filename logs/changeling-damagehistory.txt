@@ -8416,3 +8416,5 @@ changeling (ankylosaurus(_MAX_)) - Shansaby -> 1282 -> 2 times -> 1282 (1375 Avg
 changeling (ankylosaurus(_MAX_)) - Shansaby -> 1187 -> 2 times -> 1187 (1374 Avg)
 changeling (ankylosaurus(_MAX_)) - Shansaby -> 1172 -> 2 times -> 1172 (1374 Avg)
 changeling (ankylosaurus(_MAX_)) - Shansaby -> 832 -> 2 times -> 832 (1374 Avg)
+changeling (white tail spider(8+)) - Giant Do -> 1391 -> 2 times -> 1391 (1113 Avg)
+changeling (white tail spider(8+)) - An Earth -> 1024 -> 2 times -> 1024 (1100 Avg)

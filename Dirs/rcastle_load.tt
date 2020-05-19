@@ -13,4 +13,4 @@
 #list {area_items}{size}{all_area_items}
 
 #alias {sauk}{search bed;pull lever;search dresser;open drawer;get key}
-rating
+
