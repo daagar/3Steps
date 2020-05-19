@@ -18,7 +18,7 @@ F 11
 
 G 0
 
-I 12914
+I 259
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} { }
+L {UNICODE GRAPHICS} {NO DIAGONAL} {}
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -1493,7 +1493,7 @@ R {  258} {0} {} {258} {S} {Bullet holes riddle every surface in this office, ma
 E {  257} {w} {w} {8} {0} {} {1.000} {}
 E {  255} {n} {n} {1} {0} {} {1.000} {}
 
-R {  259} {0} {} {aegisl3} { } {The hallway is blackened by fire damage, rubble strewn all over the scorched carpet.  It looks like an explosion ripped out a chunk of the ceiling overhead, leaving a gaping hole and a pile of debris stacked up nearly waist high.  You could inch your way past this mess toward the west if you desired.  You might be better off just climbing up on top of the mess and using it as a means of reaching a higher floor and a possible escape route. } {Aegis Global} {} {} {} {1.000} {}
+R {  259} {0} {} {aegisl3} { } {The hallway is blackened by fire damage, rubble strewn all over the scorched carpet.  It looks like an explosion ripped out a chunk of the ceiling overhead, leaving a gaping hole and a pile of debris stacked up nearly waist high.  You could inch your way past this mess toward the west if you desired.  You might be better off just climbing up on top of the mess and using it as a means of reaching a higher floor and a possible escape route. } {Aegis Global} {aegisl3} {} {} {1.000} {}
 E {  254} {u} {u} {16} {0} {} {1.000} {}
 E {  260} {w} {w} {8} {0} {} {1.000} {}
 
@@ -1709,7 +1709,7 @@ E {  307} {w} {w} {8} {0} {} {1.000} {}
 E {  311} {d} {d} {32} {0} {} {1.000} {}
 E {12455} {e} {e} {2} {0} {} {1.000} {}
 
-R {  311} {0} {<118>} {aegisl4} { } {} {} {} {} {} {1.000} {}
+R {  311} {0} {<118>} {aegisl4} { } {} {} {aegisl4} {} {} {1.000} {}
 E {  310} {u} {u} {16} {0} {} {1.000} {}
 E {  312} {e} {e} {2} {0} {} {1.000} {}
 E {  330} {w} {w} {8} {0} {} {1.000} {}

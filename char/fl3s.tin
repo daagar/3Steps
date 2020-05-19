@@ -122,6 +122,17 @@
 #gag {^You are not able to bite anything at this time!}
 #gag {%1 writhes in pain as its flesh slowly rots!}
 
+#alias {select_current_form_biome}{
+	#loop {1}{$all_forms}{index}{
+		#regex {$form_list[${index}][form]}{${my[form]}}{
+			#var {current_index}{$index};
+		};
+	};
+	#var {form_number}{$current_index};
+        db_query_biome ${form_list[${form_number}][form]};
+	show_biome_table;
+};
+
 
 #gag {Energy pours into you, rejuvenating lost stamina and protoplasm!}
 #gag {You resume accelerating your natural regeneration.}
@@ -137,16 +148,16 @@
 	#var {my[bite][status]}{0};
 };
 #act {^Your wounds close as you morph into a %1!}{
-	#delay {2}{db_query_form_damage};
+	#delay {2}{db_query_form_damage;select_current_form_biome};
 };
 #act {You morph into a %1!}{
-	#delay {2}{db_query_form_damage};
+	#delay {2}{db_query_form_damage;select_current_form_biome};
 };
 #act {^Your wounds close as you morph into an %1!}{
-	#delay {2}{db_query_form_damage};
+	#delay {2}{db_query_form_damage;select_current_form_biome};
 };
 #act {You morph into an %1!}{
-	#delay {2}{db_query_form_damage};
+	#delay {2}{db_query_form_damage;select_current_form_biome};
 };
 
 #alias kk {kill $kstr}
@@ -324,7 +335,7 @@
 	#var {my[skill][current]}	{%3};
 	#var {my[bioplasts]}		{%4};
 	#if {"${form_avg[1][guildstring]}" == ""}{
-		#delay {2}{db_query_form_damage};
+		#delay {2}{db_query_form_damage;select_current_form_biome};
 	};
 	#if {"${biome_results[1][form]}" == ""}{
 		db_list_biome form;

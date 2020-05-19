@@ -55,8 +55,15 @@
 #gag {^The Force courses through you, mending your body.}
 
 #gag {^You clutch %1 heart with the Force}
+#gag {^the very life from %1.}
+#gag {^very life from %1.}
 #gag {^life from %1.}
 #gag {^from %1.}
+#gag {^him.}
+#gag {^it.}
+#gag {^her.}
+
+#gag {You twist the Force within %1 to cause massive hemorrhaging.}
 
 #gag {^You concentrate on your metabolism and free your body of}
 #gag {^the harsh toxins within it.}
@@ -139,6 +146,8 @@
 };
 
 #alias {ftik}{
+	#send {alias ik focus injure-kill for boil};
+	#var {my[damage][type]}{boil};
 	!draw ${my[desired][weapon]};
 	!focus force trance /off;
 	#if {"${my[desired][weapon]}" == "lightdaggers"}{
@@ -171,12 +180,14 @@
 };
 
 #alias {fttk}{
+	#send {alias tk focus telekinetic kill for cardiac};
+	#var {my[desired][spell]}{telekinetic kill};
 	!draw ${my[desired][weapon]};
 	!focus force trance /off;
 	!focus mode /flurry;
 	#var {my[desired][mode]}{flurry};
 	#var {my[desired][modeshort]}{f};
-	#var {my[desired][spell]}{telekinetic kill};
+	#var {my[damage][type]}{cardiac};
 	#delay {2}{!focus force trance /tk,repeat};
 };
 
@@ -226,7 +237,20 @@
 	};
 	#button {46;-40;46;-4}{
 		#send {alias ik focus injure-kill for boil};
-		ftik;
+		!focus force trance /off;
+		#if {"${my[desired][weapon]}" == "lightdaggers"}{
+			!draw ${my[desired][weapon]};
+			#var {my[desired][mode]}{flurry};
+			#var {my[desired][modeshort]}{f};
+			!focus mode /flurry;
+		}{
+			!draw ${my[desired][weapon]};
+			#var {my[desired][mode]}{guide};
+			#var {my[desired][modeshort]}{g};
+			!focus mode /guide;
+		};
+		#var {my[desired][spell]}{injure-kill};
+		#delay {2}{!focus force trance /ik,repeat};
 		#var {my[damage][type]}{boil};
 		show_damage_selector;
 	};
@@ -237,7 +261,20 @@
 	};
 	#button {47;-40;47;-4}{
 		#send {alias ik focus injure-kill for strangle};
-		ftik;
+		!focus force trance /off;
+		#if {"${my[desired][weapon]}" == "lightdaggers"}{
+			!draw ${my[desired][weapon]};
+			#var {my[desired][mode]}{flurry};
+			#var {my[desired][modeshort]}{f};
+			!focus mode /flurry;
+		}{
+			!draw ${my[desired][weapon]};
+			#var {my[desired][mode]}{guide};
+			#var {my[desired][modeshort]}{g};
+			!focus mode /guide;
+		};
+		#var {my[desired][spell]}{injure-kill};
+		#delay {2}{!focus force trance /ik,repeat};
 		#var {my[damage][type]}{strangle};
 		show_damage_selector;
 	};
@@ -248,7 +285,19 @@
 	};
 	#button {48;-40;48;-4}{
 		#send {alias ik focus injure-kill for crumble};
-		ftik;
+		#if {"${my[desired][weapon]}" == "lightdaggers"}{
+			!draw ${my[desired][weapon]};
+			#var {my[desired][mode]}{flurry};
+			#var {my[desired][modeshort]}{f};
+			!focus mode /flurry;
+		}{
+			!draw ${my[desired][weapon]};
+			#var {my[desired][mode]}{guide};
+			#var {my[desired][modeshort]}{g};
+			!focus mode /guide;
+		};
+		#var {my[desired][spell]}{injure-kill};
+		#delay {2}{!focus force trance /ik,repeat};
 		#var {my[damage][type]}{crumble};
 		show_damage_selector;
 	};
@@ -260,7 +309,13 @@
 	};
 	#button {51;-40;51;-4}{
 		#send {alias tk focus telekinetic kill for asphyxiate};
-		fttk;
+		!draw ${my[desired][weapon]};
+		!focus force trance /off;
+		!focus mode /flurry;
+		#var {my[desired][mode]}{flurry};
+		#var {my[desired][modeshort]}{f};
+		#var {my[desired][spell]}{telekinetic kill};
+		#delay {2}{!focus force trance /tk,repeat};
 		#var {my[damage][type]}{asphyxiate};
 		show_damage_selector;
 	};
@@ -271,7 +326,13 @@
 	};
 	#button {52;-40;52;-4}{
 		#send {alias tk focus telekinetic kill for cardiac};
-		fttk;
+		!draw ${my[desired][weapon]};
+		!focus force trance /off;
+		!focus mode /flurry;
+		#var {my[desired][mode]}{flurry};
+		#var {my[desired][modeshort]}{f};
+		#var {my[desired][spell]}{telekinetic kill};
+		#delay {2}{!focus force trance /tk,repeat};
 		#var {my[damage][type]}{cardiac};
 		show_damage_selector;
 	};
@@ -282,7 +343,13 @@
 	};
 	#button {53;-40;53;-4}{
 		#send {alias tk focus telekinetic kill for hemorrhage};
-		fttk;
+		!draw ${my[desired][weapon]};
+		!focus force trance /off;
+		!focus mode /flurry;
+		#var {my[desired][mode]}{flurry};
+		#var {my[desired][modeshort]}{f};
+		#var {my[desired][spell]}{telekinetic kill};
+		#delay {2}{!focus force trance /tk,repeat};
 		#var {my[damage][type]}{hemorrhage};
 		show_damage_selector;
 	};
@@ -391,7 +458,7 @@
 };
 
 #nop Set default mode to ipain/guide
-#delay {2}{alias ik focus injure-kill for boil;ftik}
+#delay {2}{ftik}
 #var {my[cleanse][status]}{0};
 #var {my[cloud][threshold]}{50};
 #var {my[desired][weapon]}{lightsaber};
@@ -438,6 +505,9 @@ show_damage_selector
 		#if {$my[sp][deficit] > 100}{
 			!focus clear mind;
 		};
+		#if {${my[hp][percent]} < 50}{
+			ppp;
+		};
 		#if {${my[hp][percent]} < 30}{
 			go home;
 		};
@@ -447,6 +517,9 @@ show_damage_selector
 		};
 	}{
 		#if {${my[conc][current]} < 80 && ${my[cleanse][status]} == 0}{
+			do_htrance
+		};
+		#if {${my[force][current]} > 10 && ${my[cleanse][status]} == 0}{
 			do_htrance
 		};
 		#if {${my[cleanse][status]} != 1}{

@@ -133,4 +133,4 @@
 #list {area_items}{create}{$area_items}
 #list {area_items}{size}{$all_area_items}
 
-rating
+
