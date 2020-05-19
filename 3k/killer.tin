@@ -198,6 +198,8 @@
 		#var starter2 1;
 		#if {$stepignore != 1}{
 			#var stepper2 1;
+		}{
+			#var stepper2 0;
 		};
 		#if {"$guild" == "angel" && $my[desecrate] == 1}{
 			!cease;
@@ -222,7 +224,7 @@
 
 #alias kill-loop {
 	#if {$starter2 == 1}{
-		#if {$stepper2 == 1}{
+		#if {${stepper2} == 1}{
 			${kill_path2[${path_index}]};
 			#math {path_index}{$path_index + 1};
 			#if {${path_index} > ${path_size}}{
@@ -260,7 +262,7 @@
 				};
 			};
 		}{
-			#if {$stepper2 == 1}{
+			#if {${stepper2} == 1}{
 				${kill_path2[${path_index}]};
 				#math {path_index}{$path_index + 1};
 				#if {${path_index} > ${path_size}}{
@@ -271,7 +273,7 @@
 					make_killpath {${roomlist[${room_index}]}};
 				};
 			}{
-				dirfunction $desired_dir;
+				dir_selection;
 			};
 		};
 	};
@@ -280,7 +282,7 @@
 #alias dir_selection {
 	#var good_dir 0;
 	#var max_rand 0;
-	#if {$domove == 1}{
+	#if {$domove2 == 1}{
 		#if {$room_exits == 1}{
 			#var desired_dir ${room_dirs[1]};
 		}{

@@ -178,6 +178,10 @@
                                 #delay {0.05}{kill-loop};
                 	};
                 };
+	}{
+		#if {${domove2} == 1}{
+			dir_selection;
+		};
 	};
 #nop {End of Magic Stepper};
 }
