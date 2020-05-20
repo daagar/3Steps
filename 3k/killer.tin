@@ -33,8 +33,11 @@
 	#list {roomlist}{create}{*my_roomlist[]};
 	#list {roomlist}{size}{area_size};
 	#nop {Make the Initial kill_path};
-	#var {room_index}{2};
-	make_killpath {${roomlist[2]}};
+	#var {room_index}{1};
+	#if {${roomvnum} == ${roomlist[${room_index}]}} {
+		#math {room_index} {$room_index + 1};
+	};
+	make_killpath {${roomlist[${room_index}]}};
 }
 
 #alias {steptest}{
@@ -183,29 +186,28 @@
 
 
 #alias ki {
-	#if {$stepindex == 0}{
-		#var stepindex 1;
-	};
-	#if {$domove2 == 1}{
-		#var domove2 0;
-		#var starter2 0;
-		#var player_room 0;
-		#var critter_room 0
-	}{
-		#var critter_room 0;
-		#var player_room 0;
-		#var domove2 1;
-		#var starter2 1;
-		#if {$stepignore != 1}{
-			#var stepper2 1;
-		}{
-			#var stepper2 0;
-		};
-		#if {"$guild" == "angel" && $my[desecrate] == 1}{
-			!cease;
-		};
-		glance;
-	};
+        #if {$domove2 == 1}{
+                #var domove2 0;
+                #var starter2 0;
+                #var player_room 0;
+                #var critter_room 0
+        }{
+                make_killpath {${roomlist[${room_index}]}};
+                #var critter_room 0;
+                #var player_room 0;
+                #var domove2 1;
+                #var starter2 1;
+                #if {$stepignore != 1}{
+                        #var stepper2 1;
+                }{
+                        #var stepper2 0;
+                        #map {flag}{static}{off};
+                };
+                #if {"$guild" == "angel" && $my[desecrate] == 1}{
+                        !cease;
+                };
+                glance;
+        };
 }
 
 #alias {gather_items}{

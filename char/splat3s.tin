@@ -287,10 +287,10 @@
 			go home;
 		};
 	};
-	#if {$my[hp][current] < 1000}{
-		!morph;
-		!morph;
-	};
+	#NOP #if {$my[hp][current] < 1000}{
+	#NOP 	!morph;
+	#NOP 	!morph;
+	#NOP };
 	#math {my[gpdiff]}{$my[gp1][current] - $my[gp2][current]};
 	#if {$my[gpdiff] > 0}{
 		#if {$my[dissipate] != 1}{
@@ -390,21 +390,21 @@
         #format {corpses[truck]}	{%+2s} {$corpses[truck]};
         #format {corpses[coffin]}	{%+2s} {$corpses[coffin]};
         #format {corpses[freezer]}	{%+2s} {$corpses[freezer]};
-	#showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} ST:${stam}%  PP:${pp}%  FF:${ff}  G2N: ${skill}%  BP:${bio}    E: $round_damage} {-4};
-	#showme {H:${my[hp][graph]} S:${my[sp][graph]} ST:${my[gp1][graph]} P:${my[gp2][graph]} F:${my[ff][graph]} G2N: $my[skill][graph] R:${relin}/${relin_r}\% E:${enemy[graph]}} {-3};
-	#showme {$mip[gline][2]} {-7};
-	#showme {$mip[gline][1]} {-6};
+	#showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} ST:${stam}%  PP:${pp}%  BP:${bio}    E: $round_damage} {-4};
+	#showme {H:${my[hp][graph]} S:${my[sp][graph]} ST:${my[gp1][graph]} P:${my[gp2][graph]} R:${relin}/${relin_r}\% E:${enemy[graph]}} {-3};
+	#showme {$mip[gline][1] $mip[gline][2]} {-6};
 }
 
 #alias {corpsetrig} {
-	!unwrap corpse;
-	#if {"$my[autocorpse][method]" == "guild"}{
-		!bioextract;
-		!give bioplast to clone;
-	};
-	#if {"$my[autocorpse][method]" == "nex"}{
-		!orare;
-	};
+	#NOP !unwrap corpse;
+	#NOP #if {"$my[autocorpse][method]" == "guild"}{
+	#NOP 	!bioextract;
+	#NOP 	!give bioplast to clone;
+	#NOP };
+	#NOP #if {"$my[autocorpse][method]" == "nex"}{
+	#NOP 	!orare;
+	#NOP };
+	#NOP !wrap corpse;
 	!wrap corpse;
 	!divvy;
 }

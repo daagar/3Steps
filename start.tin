@@ -39,7 +39,7 @@
 	
 	#read .tt/3k/killer.tin;
 	#read .tt/3k/triggers.tin;
-	#read .tt/3k/damagetracker.tin;
+	#NOP #read .tt/3k/damagetracker.tin;
 	#script {cat .tt/map/lastroom.tt}
 	
 }
