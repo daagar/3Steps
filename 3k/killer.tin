@@ -45,8 +45,14 @@
 	#map list {roomarea}{%0}{variable}{my_roomlist};
 	#list {roomlist}{create}{*my_roomlist[]};
 	#list {roomlist}{size}{area_size};
+	#if {$do_return == 1}{
+	#nop {If we are coming back to this room, use the return_room_index};
+		#var {room_index}{$return_room_index};
+		#var {do_return}{0};
+	}{
 	#nop {Make the Initial kill_path};
-	#var {room_index}{1};
+		#var {room_index}{1};
+	};
 	#if {${roomvnum} == ${roomlist[${room_index}]}}{
 		#math {room_index}{$room_index + 1};
 	};

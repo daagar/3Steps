@@ -239,9 +239,8 @@
 
 #alias goback {
         #map run $returnroom;
+        #var {do_return}{1};
 	rating;
-        #var room_num $returnpathroom;
-        #var room_index {$return_room_index};
 }
 
 #alias {mapgo} {
