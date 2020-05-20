@@ -7,7 +7,9 @@
 }
 #map read .tt/map/${mapfile}
 
-#map offset 1 -42 17 -1
+#var map[height] 17
+#var map[width] 42
+
 #map goto {roomnote} {home}
 
 /* Move Event */
@@ -20,13 +22,15 @@
 	#format {roomvnum_len}	{%L} {$roomvnum};
 	#format {roomarea_len}	{%L} {$roomarea};
 	#format {roomdesc_len}	{%L} {$roomdesc};
-	#math {name_len} {42-$roomvnum_len};
+	#math {name_len} {42-$roomvnum_len-3};
 	#format {name_trunc} {%.${name_len}s} {$roomname};
 	#unvar area_mapped;
 	#map list {} {} {} {$roomarea} {variable} {area_mapped};
 	#var {room_cnt} {&area_mapped[]};
-	#draw {tile} 16 -42 16 -1 {<020>$roomarea <140>(<120>$room_cnt<140>)<099>};
-	#draw {tile} 17 -42 17 -1 {<140>[<030>$roomvnum<140>] <130>$name_trunc<099>}
+	#if {"$draw[map]" == "on"} {
+		#draw {tile} $map[height]-1 -$map[width] $map[height]-1 -1 {<020>$roomarea <140>(<120>$room_cnt<140>)<099>};
+		#draw {tile} $map[height] -$map[width] $map[height] -1 {<140>[<030>$roomvnum<140>] <130>$name_trunc<099>}
+	};
 }
 
 #event {MAP UPDATED VTMAP} {
@@ -240,8 +244,10 @@
 	};
 	#map get {roomvnum} {gonum};
 	#map goto $gonum;
-	#draw {tile} 16 -42 16 -1 {<020>$roomarea <140>(<120>$room_cnt<140>)<099>};
-	#draw {tile} 17 -42 17 -1 {<140>[<030>$roomvnum<140>] <130>$roomname<099>}
+	#if {"$draw[map]" == "on"} {
+		#draw {tile} $map[height]-1 -$map[width] $map[height]-1 -1 {<020>$roomarea <140>(<120>$room_cnt<140>)<099>};
+		#draw {tile} $map[height] -$map[width] $map[height] -1 {<140>[<030>$roomvnum<140>] <130>$roomname<099>}
+}
 }
 
 #alias {go} {
@@ -375,6 +381,36 @@
 	#read .tt/3k/draw.tin
 }
 
+/* Allow clicking on a room to get map info */
+#event {MAP SHORT-CLICKED MOUSE BUTTON ONE} {
+    lfr {%0};
+};
+#alias lr {
+    #if {"%1" == ""} {
+        #map get;
+    } {
+        #if {%2 || %2 == 0} {
+            #map jump %1 %2 %3;
+            #map get;
+            #map undo;
+        } {
+            #map at {%1} #map get;
+        };
+    };
+};
+#alias lfr {
+    #if {"%1" == ""} {
+        #map info;
+    } {
+        #if {%2 || %2 == 0} {
+            #map jump %1 %2 %3;
+            #map info;
+            #map undo;
+        } {
+            #map at {%1} #map info;
+        };
+    };
+};
 /* Transports */
 #nop { These rooms are all too specific.  may address later
 	#NOP Abyss

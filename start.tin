@@ -1,10 +1,10 @@
 #NOP
 /* Load Common Files */
-#config {packet patch}{0.5}
-#config {repeat enter}{on}
-#nop {Set to make copy/paste work
-	#config {mouse tracking}{off}
-};
+#config {packet patch} {0.5}
+#config {repeat enter} {on}
+#NOP #nop {Set to make copy/paste work
+#NOP 	#config {mouse tracking}{off}
+#NOP };
 #read .tt/aliases.tin
 #read .tt/graph.tin
 
@@ -18,20 +18,30 @@
 	#read .tt/3k/bots/bot_load.tin;
 	#read .tt/3k/corpses.tin;
 	#read .tt/3k/dog.tin;
-	#read .tt/3k/draw.tin;
-	#read .tt/3k/gag.tin;
 	#read .tt/3k/mapper.tin;
+	#read .tt/3k/exits.tin;
+	#read .tt/3k/gag.tin;
+	#read .tt/3k/chat.tin;
+	
 	#read .tt/3k/mip.tin;
-	#nop {
-	#read .tt/3k/miphp.tin;
-	};
+	#if {$mud == "3k"} {
+		#read .tt/char/${ses_name}.tin;
+	} {
+		#read .tt/char/${ses_name}3s.tin;
+	}
+	
+	#read .tt/3k/draw.tin;
+	#NOP #nop {
+	#NOP #read .tt/3k/miphp.tin;
+	#NOP };
 	#read .tt/3k/mob_monitors.tin;
 	#read .tt/3k/trigs.tin;
-	#read .tt/3k/chat.tin;
+	
 	#read .tt/3k/killer.tin;
 	#read .tt/3k/triggers.tin;
 	#read .tt/3k/damagetracker.tin;
 	#script {cat .tt/map/lastroom.tt}
+	
 }
 
 load3k;

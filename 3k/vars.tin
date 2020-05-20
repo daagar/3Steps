@@ -1,6 +1,9 @@
 #CLASS {vars} OPEN
 
 #class chat kill
-#read .tt/3k/vars/3schat.var
+#read .tt/3k/vars/${mud}chat.var
+
+#class drawvar kill
+#read .tt/3k/vars/draw.var
 
 #CLASS {vars} CLOSE
