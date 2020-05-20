@@ -122,7 +122,9 @@ prompt >$nl$
 
 /* Detect Players */
 #act {^=P= %*} {
-	#regex {%1} {Nauda} {#nop} {#var foundplayer 1}
+	#NOP #regex {%1} {Nauda} {#nop} {#var foundplayer 1};
+	#NOP #regex {%1} {Glowie} {#nop} {#var foundplayer 1}
+	#var foundplayer 1;
 } {6}
 
 /* Skip room on Mob */
@@ -136,7 +138,7 @@ prompt >$nl$
 		#if {&botcycle[] > 1} {
 			nextarea
 		}; #else {
-			go home
+			#if {!$no_home} {go home}
 		}
 	} {
 		#unact {^>$};

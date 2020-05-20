@@ -3,15 +3,15 @@
 #echo {Alts:};
 #echo {};
 
-#echo {1) Fl(changeling)};
-#var {my[alts][1][name]}{fl};
+#echo {1) Splat (3s - changeling)};
+#var {my[alts][1][name]}{splat3s};
 #var {my[alts][1][guild]}{changeling};
 
-#echo {2) Floobi(mage) (summoner)};
-#var {my[alts][2][name]}{floobi};
-#var {my[alts][2][guild]}{mage};
-#var {my[alts][2][subguild]}{summoner};
+#echo {2) Crankshaft (3k - cyborg)};
+#var {my[alts][2][name]}{crankshaft};
+#var {my[alts][2][guild]}{cyborg};
 
+#NOP {
 #echo {3) Floobity(angel) (fallen)};
 #var {my[alts][3][name]}{floobity};
 #var {my[alts][3][guild]}{angel};
@@ -127,11 +127,12 @@
 #var {my[alts][24][name]}{flyybi};
 #var {my[alts][24][guild]}{jedi};
 #var {my[alts][24][subguild]}{sith};
+};
 
 #echo {};
 #echo {con <number>:};
 
 #alias {con}{
-	connect ${my[alts][%1][name]}3s;
+	connect ${my[alts][%1][name]};
 	#unalias {con};
 };

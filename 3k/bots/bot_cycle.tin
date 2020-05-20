@@ -1,4 +1,5 @@
 #class {botcycle} {open}
+#NOP REQUIRED:  draw.tin  //canvas dimensions
 
 #var cycle 0
 
@@ -12,7 +13,14 @@
 	botdraw
 }
 
-#alias {nextarea} {
+#alias {thisarea} {
+	#list {botcycle} {get} {$cycle} {currentarea};
+	go $currentarea;
+	#delay {1} {- $currentarea};
+	#delay {2} {..}
+}
+
+#alias {nextarea_orig} {
 	#if {$cycle < &botcycle[]} {
 		#math cycle {$cycle+1}
 	} {
@@ -22,6 +30,21 @@
 	go $currentarea;
 	#delay {1} {- $currentarea};
 	#delay {2} {..}
+}
+
+#alias {nextarea} {
+	#math cycle {$cycle+1};
+	#if {$cycle <= &botcycle[]} {
+		#list {botcycle} {get} {$cycle} {currentarea};
+		go $currentarea;
+		#delay {1} {- $currentarea};
+		#delay {2} {..}
+	} {
+		#var cycle 0;
+		killbot;
+		go home
+	}
+
 }
 
 #alias {botclear} {
@@ -55,40 +78,40 @@
 
 #alias {botdraw} {
 	#if {"$draw[canvas]" == "on"} {
-	#NOP Clear previous drawing;
+		#NOP Clear previous drawing;
 		#screen clear square $chat[height]+$caption[height]+$exitpanel[height]+2 -$right_split+1 -$status[height]-2 -1;
 
-	#if {&botcycle[] == 0} {
-		#var botareas {
-			<178>            No areas loaded<088>
-		};
-		#var botheight 1;
-	} {
-		#var botheight &botcycle[];
-		#var botareas {};
-		#var cnt 0;
-		#while {$cnt < &botcycle[]} {
-			#math {cnt} {$cnt + 1};
-			#if {$cnt == $cycle} {
-				#format {cntnum} {%+4s} {<128>$cnt.<088>};
-				#format {area_display} {%-12s} {<128>$botcycle[$cnt]<088>}
-			} {
-				#format {cntnum} {%+4s} {<178>$cnt.<088>};
-				#format {area_display} {%-12s} {<148>$botcycle[$cnt]<088>}
+		#if {&botcycle[] == 0} {
+			#var botareas {
+				<178>            No areas loaded<088>
 			};
-			#if {$cnt == 1} {
-				#var botareas {$cntnum $area_display}
-			} {
-				#var botareas {$botareas\n$cntnum $area_display}
+			#var botheight 1;
+		} {
+			#var botheight &botcycle[];
+			#var botareas {};
+			#var cnt 0;
+			#while {$cnt < &botcycle[]} {
+				#math {cnt} {$cnt + 1};
+				#if {$cnt == $cycle} {
+					#format {cntnum} {%+4s} {<128>$cnt.<088>};
+					#format {area_display} {%-12s} {<128>$botcycle[$cnt]<088>}
+				} {
+					#format {cntnum} {%+4s} {<178>$cnt.<088>};
+					#format {area_display} {%-12s} {<148>$botcycle[$cnt]<088>}
+				};
+				#if {$cnt == 1} {
+					#var botareas {$cntnum $area_display}
+				} {
+					#var botareas {$botareas\n$cntnum $area_display}
+				}
 			}
-		}
-	};
+		};
 		#draw green rounded box $chat[height]+$caption[height]+$exitpanel[height]+2 -$right_split+2 $chat[height]+$caption[height]+$exitpanel[height]+4 -3 {
-		<138>              Area Cycler    <088>
-	};
+			<138>              Area Cycler    <088>
+		};
 		#draw green rounded box $chat[height]+$caption[height]+$exitpanel[height]+4 -$right_split+2 $chat[height]+$caption[height]+$exitpanel[height]+5+$botheight -3 {
-		$botareas
-	};
+			$botareas
+		};
 		#showme {<228>\u251C} $chat[height]+$caption[height]+$exitpanel[height]+4 -$right_split+2;
 		#showme {<228>\u2524} $chat[height]+$caption[height]+$exitpanel[height]+4 -3
 	}
@@ -105,7 +128,8 @@
 
 
 #alias {bas}	{ba {rim2;android;rim2;dundee8;rim2;dundee7;rim2;dundee6;rim2;dundee5}}
-#alias {bas2}	{ba {whorehouse;puppy;mahjongg;rim2;whorehouse;puppy;mahjongg;android;whorehouse;puppy;mahjongg;rim2;whorehouse;puppy;mahjongg;dundee8;whorehouse;puppy;mahjongg;rim2;whorehouse;puppy;mahjongg;dundee7;whorehouse;puppy;mahjongg;rim2;whorehouse;puppy;mahjongg;dundee6}}
+#NOP #alias {bas2}	{ba {whorehouse;puppy;mahjongg;rim2;whorehouse;puppy;mahjongg;android;whorehouse;puppy;mahjongg;rim2;whorehouse;puppy;mahjongg;dundee8;whorehouse;puppy;mahjongg;rim2;whorehouse;puppy;mahjongg;dundee7;whorehouse;puppy;mahjongg;rim2;whorehouse;puppy;mahjongg;dundee6}}
+#alias {bas2}	{ba {whorehouse;mahjongg;rim2;whorehouse;mahjongg;android;whorehouse;mahjongg;rim2;whorehouse;mahjongg;dundee8;whorehouse;mahjongg;rim2;whorehouse;mahjongg;dundee7;whorehouse;mahjongg;rim2;whorehouse;mahjongg;dundee6}}
 #alias {basa}	{ba {aegis1;aegis2;aegis3;aegis4;aegis5}}
 
 #class {botcycle} {close}

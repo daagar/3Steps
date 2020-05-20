@@ -20,12 +20,12 @@
 
 #NOP **** Database Connection Info ****;
 #VAR {dbSettings[user]} {tintin};
-#VAR {dbSettings[pass]} {floobity};
+#VAR {dbSettings[pass]} {tintin};
 #VAR {dbSettings[database]} {tintin};
 #VAR {dbSettings[server]} {localhost};
 
 #NOP **** DB Variables to enable logging into DB vs files ****;
-#VAR {my[config][db][chat]}{1};
+#VAR {my[config][db][chat]}{0};
 #VAR {my[config][db][damage]}{1};
 #VAR {my[config][db][kill]}{1};
 #VAR {my[config][db][biome]}{1};

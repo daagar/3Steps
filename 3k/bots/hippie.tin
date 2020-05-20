@@ -1,0 +1,19 @@
+#class {bot} {open}
+#var {area} {hippie}
+#var {botpath} {w;door;climb tree;d;e;e;e;n;s;s;n;w;n;e;w;n;w;e;n;enter;w;d;u;e;e;u;w;e;e;w;s;w;e;e;w;s;n;u;n;s;d;n;d;w;n;e;w;w;door;w;ne;e;s;s;e;n;n;e;s;s;se;nw;n;n;w;w;w;sw;e;door;e;s;s;s;s;s}
+
+#act {^=M= %*{Mole|Rabbit|Mouse|Racoon|Hippie|chicken|Child}} {
+        #if {"%2" == "Mole"} {#var mobname mole};
+	#if {"%2" == "Rabbit"} {#var mobname rabbit};
+	#if {"%2" == "Mouse"} {#var mobname mouse};      
+        #if {"%2" == "Raccoon"} {#var mobname raccoon};
+        #if {"%2" == "Hippie"} {#var mobname hippie};
+	#if {"%2" == "chicken"} {#var mobname chicken};
+	#if {"%2" == "Child"} {#var mobname hippie}; 
+        _check_mob
+        }
+/* #act {You've killed} {#nop} {1} */
+
+#class {bot} {close}
+
+

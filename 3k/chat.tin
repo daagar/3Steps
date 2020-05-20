@@ -5,9 +5,9 @@
         #format {datestamp} {%t} {%Y-%m-%d.log};
 	#format {timestamp} {%t} {[<268>%H<088>:<268>%M<088>] };
 	#regex {"$world"} {3s} {
-		#line log /tintin/logs/3s.chat {$timestamp\}
+		#line log .tt/logs/3s.chat {$timestamp\}
 	} {
-		#line log /tintin/logs/3k.chat {$timestamp\}
+		#line log .tt/logs/3k.chat {$timestamp\}
 	};
         -xchatlog
         }
@@ -27,6 +27,7 @@
 
 #act {{[A-z0-9@]+ tells you:}} {
 	-cl;
+	#bell
 } {4};
 #act {%1@3k tells you: %2} {
 	#format {timestamp} {%t} {[<268>%H<088>:<268>%M<088>] };
@@ -66,7 +67,7 @@
 #act {{^[\w]+ <cgame>:}} {-cl}
 
 /* PARTY (Until they add timestamps) */
-#act {~^\e[0m\e[33;1m[PARTY]\e[0m} {-cl} {4}
+#act {~^\e[0m\e[33;1m[PARTY]\e[0m} {-cl;#bell} {4}
 #act {^[PARTY] {GOLD divvy called by|All gold divvied}} {#nop} {3}
 #act {~^\e[0m[PARTY]} {#nop} {3}
 

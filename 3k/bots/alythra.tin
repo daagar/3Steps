@@ -1,0 +1,13 @@
+#class {bot} {open}
+#NOP #var {areaname} {alythra}
+#var {botpath} {n;e;e;nw;se;n;n;n;sw;ne;w;w;s;u;n;w;s;n;e;e;s;n;w;s;d;n;w;w;se;nw;s;s;s;ne;sw;e;e;s}
+
+#act {^=M= {An apprentice cultist|A junior cultist|Senior Cultist}} {
+	#if {"%1" == "An apprentice cultist"} {#var mobname cultist};
+	#if {"%1" == "A junior cultist"} {#var mobname cultist};
+	#if {"%1" == "Senior Cultist"} {#var mobname cultist};
+	_check_mob}
+
+#class {bot} {close}
+
+

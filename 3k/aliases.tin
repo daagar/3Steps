@@ -135,4 +135,19 @@
 	#echo {Corpse trigger is now $my[autocorpse][method]};
 }
 
+#alias {colorpalette}
+{
+     #foreach {a;b;c;d;e;f} {cnt1}
+     {
+          #foreach {a;b;c;d;e;f} {cnt2}
+          {
+               #variable result <000>;
+               #foreach {a;b;c;d;e;f} {cnt3}
+               {
+                    #variable result $result  <$cnt1$cnt2$cnt3> <<888>$cnt1$cnt2$cnt3><088>
+               };
+               #showme $result
+          }
+     }
+}
 #class {aliases} {close}

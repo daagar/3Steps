@@ -1,0 +1,129 @@
+#class {daagar} {kill}
+#class {daagar} {open}
+
+#var guild changeling
+
+/* Used by some bots */
+#var hardmode 0
+#var bot_repeat 0
+
+#var round 0
+#var lastround 0
+#var pers off
+
+#act {{HP:(\d+)/(\d+) SP:(\d+)/(\d+) ST:([\d\.]+)\% PP:([\d\.]+)\% CF:(\d+)/(\d+)\% BP:(\d+) FF:([\d\.]+)\% E?:?([\w\d\%]+)?}} {
+
+    #var {my[hp][current]}			{%2};
+    #var {my[hp][max]}				{%3};
+    #var {my[sp][current]}			{%4};
+    #var {my[sp][max]}				{%5};
+    #var {my[gp1][current]}			{%6};
+    #var {my[gp2][current]}			{%7};
+    #var {my[relinquish][current]}	{%8};
+    #var {my[relinquish][reset]}	{%9};
+    #var {my[bioplasts]}			{%10};
+    #var {my[ff][current]}			{%11};
+    #var {ehealth}					{%12};
+    #math {round} 					{$round + 1};
+    update_status;
+    #line gag
+}
+
+#alias {update_status} {
+    #if {$my[gp1][current] < 35 && $my[gp2][current] > 35 && "$pers" == "on"} {
+        perseverance off;
+        #var pers off
+    }; #elseif {$my[gp1][current] > 35 && $my[gp2][current] < 35 && "$pers" == "off"} {
+        perseverance on;
+        #var pers on
+    };
+
+    #if {$my[gp1][current] > 98 && $my[gp2][current] > 98 && $resumebot} {
+        #var resumebot 0;
+        .resume
+    };
+
+    #if {$my[gp1][current] < 40 || $my[gp2][current] < 50} {
+        #if {$my[relinquish][current] > 0} {
+            #delay {relinquish} {relinquish} {0.5}
+        }; #elseif {$my[bioplasts] > 0} {
+            consume bioplast
+        }
+    };
+
+    #if {"$cooler" == "on" || $corpses[cooler] > 0} {
+        #format {sb1_cooler} {%+2s} {$corpses[cooler]};
+        #var {sb1_cooler} { CL:<130>$sb1_cooler<088>}
+    } {
+        #var {sb1_cooler} {}
+    };
+
+    #if {"$freezer" == "on" || $corpses[freezer] > 0} {
+        #format {sb2_freezer} {%+2s} {$corpses[freezer]};
+        #var {sb2_freezer} { FZ:<130>$sb2_freezer<088>}
+    } {
+        #var {sb2_freezer} {}
+    };
+
+    #var	{my[hp][graph]}			{@graph{$my[hp][current];$my[hp][max]}};
+    #var	{my[sp][graph]}			{@graph{$my[sp][current];$my[sp][max]}};
+    #var	{my[gp1][graph]}		{@graph{$my[gp1][current];100}};
+    #var	{my[gp2][graph]}		{@graph{$my[gp2][current];100}};
+    #var	{my[ff][graph]}			{@graph{$my[ff][current];100}};
+    #var	{enemy[graph]}			{@graph{$enemy[hp];100}};
+    #format {hp}			 		{%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
+    #format {hp_max}		 		{%+4s} {<128>$my[hp][max]<088>};
+    #format {sp}			 		{%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
+    #format {sp_max}		 		{%+4s} {<128>$my[sp][max]<088>};
+    #format {stam}			 		{%+8s} {@colscale{$my[gp1][current];100}};
+    #format {pp}			 		{%+7s} {@colscale{$my[gp2][current];100}};
+    #format {ff}			 		{%+7s} {@colscale{$my[ff][current];100}};
+    #format {relin}			 		{%+2s} {$my[relinquish][current]};
+    #format {relin_r}		 		{%+3s} {$my[relinquish][reset]};
+    #format {bio}			 		{%+3s} {$my[bioplasts]};
+    #format {ehealth}				{%+8s} {@colscale{$enemy[hp];100}\%};
+    #format {corpses[inventory]}    {%+2s} {$corpses[inventory]};
+    #format {corpses[truck]}		{%+2s} {$corpses[truck]};
+    #format {corpses[coffin]}		{%+2s} {$corpses[coffin]};
+    #format {corpses[freezer]}		{%+2s} {$corpses[freezer]};
+    #format {round}			 		{%+3s} {$round};
+    #format {lastround}		 		{%+3s} {$lastround};
+
+    #NOP #showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} ST:${stam}%  PP:${pp}%  FF:${ff}%  R:${relin}/${relin_r}\% BP:${bio} IC:<138>${corpses[inventory]}<088>${sb1_cooler}} {-4};
+    #NOP #showme {H:${my[hp][graph]} S:${my[sp][graph]} ST:${my[gp1][graph]} P:${my[gp2][graph]} F:${my[ff][graph]} E:${enemy[graph]}     CF:<138>${corpses[coffin]}<088>${sb2_freezer}} {-3};
+
+    #showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} ST:${stam}%  PP:${pp}%  R: (${lastround})-${round} E:${ehealth}  IC:<138>${corpses[inventory]}<088>${sb1_cooler}} {-4};
+    #showme {H:${my[hp][graph]} S:${my[sp][graph]} ST:${my[gp1][graph]} P:${my[gp2][graph]} E:${enemy[graph]}     CF:<138>${corpses[coffin]}<088>${sb2_freezer}} {-3};
+    #showme {$mip[gline][1]  $mip[gline][2]} {-6}
+}
+
+#alias {corpsetrig} {
+    #if {$my[bioplasts] < 25 && ($my[gp1][current] > 70 || $my[gp2][current] > 90)} {
+        bioextract;
+    } {
+        absorb corpse; 
+    };
+    get coins;
+
+    #act {^>$} {
+        #unact {^>$};
+        #var lastround $round;
+        #var round 0
+    }
+
+    #if {$my[gp2][current] < 75 && $my[bioplasts] < 20 && $bot} {
+        #showme {STOPPING!};
+        .stop;
+        #var resumebot 1
+    };
+
+    #if {$my[gp1][current] < 80 && $my[bioplasts] < 20 && $bot} {
+        #showme {STOPPING!};
+        .stop;	
+        #var resumebot 1
+    };
+}
+
+#act {dealt the killing blow} {corpsetrig}
+
+#class {daagar} {close}

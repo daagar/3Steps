@@ -1,6 +1,6 @@
 #class {mob_monitors} {open}
 
-#var monitor_file {/tintin/logs/3s.chat}
+#var monitor_file {.tt/logs/${mud}.chat}
 
 #NOP Farsight Tag
 #act {^You notice that %*} {update_chat %0}
