@@ -54,8 +54,9 @@
 }
 
 #alias {botdraw} {
+	#if {"$draw[canvas]" == "on"} {
 	#NOP Clear previous drawing;
-	#screen clear square 21 -42 -8 -1;
+		#screen clear square $chat[height]+$caption[height]+$exitpanel[height]+2 -$right_split+1 -$status[height]-2 -1;
 
 	#if {&botcycle[] == 0} {
 		#var botareas {
@@ -82,14 +83,15 @@
 			}
 		}
 	};
-	#draw green rounded box 22 -41 24 -3 {
+		#draw green rounded box $chat[height]+$caption[height]+$exitpanel[height]+2 -$right_split+2 $chat[height]+$caption[height]+$exitpanel[height]+4 -3 {
 		<138>              Area Cycler    <088>
 	};
-	#draw green rounded box 24 -41 25+$botheight -3 {
+		#draw green rounded box $chat[height]+$caption[height]+$exitpanel[height]+4 -$right_split+2 $chat[height]+$caption[height]+$exitpanel[height]+5+$botheight -3 {
 		$botareas
 	};
-	#showme {<228>\u251C} 24 -41;
-	#showme {<228>\u2524} 24 -3;
+		#showme {<228>\u251C} $chat[height]+$caption[height]+$exitpanel[height]+4 -$right_split+2;
+		#showme {<228>\u2524} $chat[height]+$caption[height]+$exitpanel[height]+4 -3
+	}
 }
 
 #event {VARIABLE UPDATE cycle} {
