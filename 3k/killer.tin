@@ -8,14 +8,27 @@
 #var automap 0
 #var autogather 0
 
+#alias {si}{
+	#if {$stepignore != 1}{
+		#echo {Not using Magic stepper};
+		#var stepignore 1;
+	}{
+		#echo {Using Magic Stepper};
+		#var stepignore 0;
+	};
+};
 #act {AREA NAME: %1 [%2]} {
 	#var {area}{%1};
-	make_roomlist {$area};
+	#if {$stepignore != 1}{
+		make_roomlist {$area};
+	};
 }
 
 #act {AREA RATING -> %1 [%2]}{
 	#var {area}{%2};
-	make_roomlist {$area};
+	#if {$stepignore != 1}{
+		make_roomlist {$area};
+	};
 }
 
 #alias {make_killpath}{
@@ -29,15 +42,16 @@
 };
 
 #alias {make_roomlist}{
-	#map list {roomarea}{%*%0%*}{variable}{my_roomlist};
+	#map list {roomarea}{%0}{variable}{my_roomlist};
 	#list {roomlist}{create}{*my_roomlist[]};
 	#list {roomlist}{size}{area_size};
 	#nop {Make the Initial kill_path};
 	#var {room_index}{1};
-	#if {${roomvnum} == ${roomlist[${room_index}]}} {
-		#math {room_index} {$room_index + 1};
+	#if {${roomvnum} == ${roomlist[${room_index}]}}{
+		#math {room_index}{$room_index + 1};
 	};
 	make_killpath {${roomlist[${room_index}]}};
+	#unvar my_roomlist;
 }
 
 #alias {steptest}{
@@ -56,13 +70,13 @@
 }
 
 #act {Too heavy.}{
-	#var domove 0;
-	#var starter 0;
+	#var domove2 0;
+	#var starter2 0;
 }
 
 #act {%1 is too heavy for Ventra's secret chest}{
-	#var domove 0;
-	#var starter 0;
+	#var domove2 0;
+	#var starter2 0;
 }
 
 #alias {mysearch}{
@@ -147,7 +161,7 @@
 	#if {"$tkstr" != "none"}{
 		#var kstr $tkstr;
 	};
-	#if {"$area" == "Changeling" && $starter != 1 && $domove == 1}{
+	#if {"$area" == "Changeling" && $starter != 1 && $domove2 == 1}{
 		bscan;
 	};
 }
@@ -186,28 +200,28 @@
 
 
 #alias ki {
-        #if {$domove2 == 1}{
-                #var domove2 0;
-                #var starter2 0;
-                #var player_room 0;
-                #var critter_room 0
-        }{
-                make_killpath {${roomlist[${room_index}]}};
-                #var critter_room 0;
-                #var player_room 0;
-                #var domove2 1;
-                #var starter2 1;
-                #if {$stepignore != 1}{
-                        #var stepper2 1;
-                }{
-                        #var stepper2 0;
-                        #map {flag}{static}{off};
-                };
-                #if {"$guild" == "angel" && $my[desecrate] == 1}{
-                        !cease;
-                };
-                glance;
-        };
+	#if {$domove2 == 1}{
+		#var domove2 0;
+		#var starter2 0;
+		#var player_room 0;
+		#var critter_room 0
+	}{
+		#var critter_room 0;
+		#var player_room 0;
+		#var domove2 1;
+		#var starter2 1;
+		#if {$stepignore != 1}{
+			make_killpath {${roomlist[${room_index}]}};
+			#var stepper2 1;
+		}{
+			#var stepper2 0;
+			#map {flag}{static}{off};
+		};
+		#if {"$guild" == "angel" && $my[desecrate] == 1}{
+			!cease;
+		};
+		glance;
+	};
 }
 
 #alias {gather_items}{

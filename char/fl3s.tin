@@ -3,6 +3,18 @@
 #var guild changeling
 #NOP MYSQL CONNECTOR STUFF
 
+#alias {disable_biome}{
+	#if {${my[config][db][biome]} == 1}{
+		#var {my[config][db][biome]}{0};
+		#echo {Biome Disabled};
+		#unvar biome_results;
+		#unvar form_list;
+	}{
+		#var {my[config][db][biome]}{1};
+		#echo {Biome Enabled};
+	};
+};
+
 #alias {show_current_form_table}{
         #draw {rounded}{box} 47 -41 54 -3 {Current Form Stats:};
 	#showme {Form : ${my[form]}} 49 -38;
@@ -12,6 +24,7 @@
 	#showme {     FF : ${my[ff][level]}} 52 -38;
 	#showme {Avg Dam : ${form_avg[1][avg(damage)]}} 53 -38;
 }
+
 #alias {show_biome_table}{
 	#format {padded_form}{%+3s}{$form_number};
         #draw {rounded}{box} 55 -41 65 -3 {   Pokedex Results   (${padded_form}/${all_forms}): << >>};
@@ -49,29 +62,38 @@
 };
 
 #alias {db_submit_biome}{
-        db_submit {db_return}{%s}{insert into biome (timestamp, roomvnum, roomshort, form, formtype, major, minor) VALUES (`$dbtimestamp`,`$roomvnum`, `$biome[roomshort]`, `$biome[form]`, `$biome[formtype]`, `$biome[major]`, `$biome[minor]`)};
+	#if {${my[config][db][biome]} == 1}{
+        	db_submit {db_return}{%s}{insert into biome (timestamp, roomvnum, roomshort, form, formtype, major, minor) VALUES (`$dbtimestamp`,`$roomvnum`, `$biome[roomshort]`, `$biome[form]`, `$biome[formtype]`, `$biome[major]`, `$biome[minor]`)};
+	};
 };
 
 #alias {db_list_biome}{
-        db_submit {form_list}{%s}{select distinct form from biome order by %0 asc;};
+	#if {${my[config][db][biome]} == 1}{
+        	db_submit {form_list}{%s}{select distinct form from biome order by %0 asc;};
+	};
 	#list {form_list}{size}{all_forms};
         #var {form_number}{1};
         db_query_biome ${form_list[${form_number}][form]}
 };
 
 #alias {db_query_biome}{
-        db_submit {biome_results}{%s}{select distinct roomvnum, roomshort, form, formtype, major, minor from biome where form = `%0` order by timestamp desc limit 100;};
+	#if {${my[config][db][biome]} == 1}{
+        	db_submit {biome_results}{%s}{select distinct roomvnum, roomshort, form, formtype, major, minor from biome where form = `%0` order by timestamp desc limit 100;};
+	};
         #var {result_number}{1};
         #list {biome_results}{size}{result_size};
-        show_biome_table;
 };
 
 #alias {db_query_single_form}{
-        db_submit {form_results}{%s}{select form, formtype, major, minor from biome where form = `a %0` or form = `an %0` limit 1;};
+	#if {${my[config][db][biome]} == 1}{
+        	db_submit {form_results}{%s}{select form, formtype, major, minor from biome where form = `a %0` or form = `an %0` limit 1;};
+	};
 };
 
 #alias {db_query_form_damage}{
-        db_submit {form_avg}{%s}{select guildstring, avg(damage) from (select guildstring, damage from damage_log where guildstring = `$guild ($my[form]($my[ff][level]))` order by timestamp desc limit 1000)var1;};
+	#if {${my[config][db][biome]} == 1}{
+        	db_submit {form_avg}{%s}{select guildstring, avg(damage) from (select guildstring, damage from damage_log where guildstring = `$guild ($my[form]($my[ff][level]))` order by timestamp desc limit 1000)var1;};
+	};
 	show_current_form_table;
 };
 

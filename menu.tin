@@ -135,4 +135,5 @@
 #alias {con}{
 	connect ${my[alts][%1][name]};
 	#unalias {con};
+	#unvar {my[alts]};
 };

@@ -549,6 +549,7 @@
 		#loop {1}{99}{count}{
 			#list chat[log] ins -1 {${db_chat_query[$count][timestamp]} ${db_chat_query[$count][message]}};
 		};
+		#unvar db_chat_query;
 	}{
 		#script {tail -n 99 .tt/logs/3s.chat | awk '{print "#list chat[log] ins -1 {"$0"}"}'};
 	};
