@@ -1,0 +1,78 @@
+#class {exits} {kill}
+#class {exits} {open}
+
+#NOP Must wait for a prompt to be able to 'see' mobile exits in the room
+#act {^>$} {
+    show_exits
+}
+
+#NOP Create a list of all exits to other areas from the current room
+#alias {show_exits} {
+    #var area_exits {};
+    #var current_exits {};
+    #var current_area {};
+
+    #map get roomexits current_exits;
+    #map get {roomarea} {current_area};
+    
+    #NOP Special handling for 'moving' rooms;
+    #foreach {*mobile_areas[]} {mobile_area} {
+        #format {command} {%+12s} {$mobile_areas[$mobile_area]};
+        #var {area_exits[$mobile_area]} {<140>[<120>$command<140>]: <130>$mobile_area<099>};
+    };
+
+    #NOP Find all adjacent rooms, and check if the room area differs from current room;
+    #NOP If it is a void room, follow it to the 'real' room;
+    #foreach {*current_exits[]} {this_exit} {
+        
+        #map at {$this_exit} {#map roomflag void get {is_void}};
+        #if {$is_void} {
+            #map at {$this_exit} {#map get {roomexits} {void_exits}};
+            #map at {$void_exits[$this_exit]} {#map get {roomarea} {this_area}};
+        } {    
+            #map at $this_exit {#map get {roomarea} {this_area}};
+        };
+        
+        #if {{$this_area} != {$current_area}} {
+            #format {this_exit} {%+12s} {$this_exit};
+            #var {area_exits[$this_exit]} {<140>[<120>$this_exit<140>]: <130>$this_area<099>};
+        };
+        
+    }
+
+    #if {"$draw[exitpanel]" == "on"} {
+		#draw {tile} $chat[height]+$caption[height]+1 -$exitpanel[width]+1 $chat[height]+$caption[height]+$exitpanel[height] -2 $area_exits[%*];
+	};
+
+    #var mobile_areas {};
+    #var mobile_area {};
+}
+
+#class {exits} {close}
+
+#NOP List of all moving areas, in the format of {direction}{area}
+#class {mobile} {open}
+
+    #act {^A {tasty-looking|bendy} frankfurter.} {#var mobile_areas[The Sausage Dimension] {smack frankfurter}}
+    #act {^The Good Humor, Ice Cream Truck.} {#var mobile_areas[Good Humor Truck] {enter truck}}
+    #act {^Arena Ticket.} {#var mobile_areas[Kareless Kanga's] {grab arena ticket}}
+    #act {^A bouncing bingo ball.} {#var mobile_areas[Ashridge Acres] {catch ball}}
+    #act {^A plastic magnifying glass.} {#var mobile_areas[The Magic Fungus] {gaze through glass}}
+    #act {^A HUGE refrigerator.} {#var mobile_areas[Wandering Refrigerator] {open refrigerator}}
+    #act {^A mud puddle.} {#var mobile_areas[Mud Puddle] {puddle}}
+    #act {^A piece of USA(r) Today.} {#var mobile_areas[The Zodiac] {study horoscopes}}
+    #act {^A strange boy.} {#var mobile_areas[Miyu] {trace symbol}}
+    #act {^An Illuminati Pyramid.} {#var mobile_areas[Illuminati Pyramid] {enter pyramid}}
+    #act {^A Chocolate Cake.} {#var mobile_areas[Sin City] {indulge cake}}
+    #act {^An eighteenth hole flag.} {#var mobile_areas[Spooky Pines] {pull flag}}
+    #act {^A big red shoe.} {#var mobile_areas[The big red shoe] {put on shoe}}
+    #act {^Erratio Forest.} {#var mobile_areas[Erratio Forest] {enter gap}}
+    #act {^A chromatic mutant plant.} {#var mobile_areas[Greenhouse] {embrace plant}}
+    #act {^A little brown monkey doll.} {#var mobile_areas[Monkeytown] {squeeze monkey}}
+    #act {^A fairy (Twinkling).} {#var mobile_areas[Myth Area] {chase fairy}}
+    #act {^A hip doorway.} {#var mobile_areas[B Sharp Jazz Club] {enter doorway}}
+    #act {^A very greasy hamburger.} {#var mobile_areas[PGs] {eat hamburger}}
+    #act {^A patch of mist.} {#var mobile_areas[Chaotic Forest] {let go}}
+    #act {^An ancient runestone.} {#var mobile_areas[Midgard and Valhalla] {read runes}}
+
+#class {mobile} {close}
