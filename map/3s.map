@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 10
+F 11
 
 G 0
 
-I 507
+I 2900
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -12996,7 +12996,7 @@ R { 2899} {0} {} {2899} { } {} {} {} {} {} {1.000} {}
 E { 2898} {n} {n} {1} {0} {} {1.000} {}
 E { 2900} {s} {s} {4} {0} {} {1.000} {}
 
-R { 2900} {0} {} {mantis wings} { } {} {} {} {} {} {1.000} {}
+R { 2900} {0} {} {mantis wings} { } {} {} {mantis wings} {} {} {1.000} {}
 E { 2899} {n} {n} {1} {0} {} {1.000} {}
 E { 7215} {e} {e} {2} {0} {} {1.000} {}
 
@@ -18236,7 +18236,7 @@ R { 4008} {0} {} {4008} { } {} {} {} {} {} {1.000} {}
 E {12269} {n} {n} {1} {0} {} {1.000} {}
 E {12270} {e} {e} {2} {0} {} {1.000} {}
 
-R { 4009} {0} {} {4009} { } {} {} {} {} {} {1.000} {}
+R { 4009} {0} {<118>} {4009} { } {} {} {} {} {} {1.000} {}
 E {12250} {s} {s} {4} {0} {} {1.000} {}
 E { 4010} {w} {w} {8} {0} {} {1.000} {}
 E { 5416} {pick paris} {pick paris} {0} {0} {} {1.000} {}
@@ -26880,7 +26880,7 @@ E { 5908} {s} {s} {4} {0} {} {1.000} {}
 R { 5908} {0} {} {bard advancement} { } {} {} {} {} {} {1.000} {}
 E { 5907} {n} {n} {1} {0} {} {1.000} {}
 
-R { 5909} {0} {} {ss} { } {} {} {ss} {} {} {1.000} {}
+R { 5909} {0} {<118>} {ss} { } {} {} {ss} {} {} {1.000} {}
 E { 3959} {n} {n} {1} {0} {} {1.000} {}
 
 R { 5910} {0} {} {5910} { } {} {} {} {} {} {1.000} {}
@@ -47897,43 +47897,44 @@ E { 9882} {e} {e} {2} {0} {} {1.000} {}
 R { 9884} {0} {} {9884} { } {} {} {} {} {} {1.000} {}
 E { 4017} {s} {s} {4} {0} {} {1.000} {}
 
-R { 9885} {0} {} {9885} { } {} {} {} {} {} {1.000} {}
+R { 9885} {0} {} {9885} { } {You are on a forest path going north and south. All around you are maple trees with small birds singing beautifully. The ground is covered with all kinds of different flowers. There is a soft breeze flowing through the trees swirling up the pollen from the flowers. You can smell the sweetness in the air. A small board is nailed to one of the trees here. To the south the path goes into another part of the forest. } {Mystic Forest} {} {} {} {1.000} {}
 E { 4009} {ss} {#map leave;s;#map go 4009} {0} {0} {} {1.000} {}
 E { 9886} {n} {n} {1} {0} {} {1.000} {}
 
-R { 9886} {0} {} {9886} { } {} {} {} {} {} {1.000} {}
+R { 9886} {0} {} {9886} { } {You are on a forest path going north and south. Tall trees line the path around you. High up in the trees you can spot small birds that seem to be looking down on you. There is a breeze flowing through the trees and as it touches the ground it swirls up pollen from the blooming flowers. } {Mystic Forest} {} {} {} {1.000} {}
 E { 9885} {s} {s} {4} {0} {} {1.000} {}
 E { 9887} {n} {n} {1} {0} {} {1.000} {}
 
-R { 9887} {0} {} {9887} { } {} {} {} {} {} {1.000} {}
+R { 9887} {0} {} {9887} { } {You are on a forest path going northeast and south. The trees around you stand very close together, making the forest quite dense. Further to the northeast you notice the forest getting less dense. The air is thick with pollen from all the flowers that has been rocked by the wind. } {Mystic Forest} {} {} {} {1.000} {}
 E { 9886} {s} {s} {4} {0} {} {1.000} {}
 E { 9888} {ne} {ne} {3} {0} {} {1.000} {}
 
-R { 9888} {0} {} {9888} { } {} {} {} {} {} {1.000} {}
+R { 9888} {0} {} {9888} { } {You are on a forest path that splits up going north and southwest and east. The forest is a bit less dense here. The path going east seems to have been used a lot recently. The forest looks somewhat darker to the east. To the north you can make out a small clearing. } {Mystic Forest} {} {} {} {1.000} {}
 E { 9887} {sw} {sw} {12} {0} {} {1.000} {}
 E { 9889} {n} {n} {1} {0} {} {1.000} {}
 E { 9892} {e} {e} {2} {0} {} {1.000} {}
 
-R { 9889} {0} {} {9889} { } {} {} {} {} {} {1.000} {}
+R { 9889} {0} {} {9889} { } {You are in a small clearing in the forest. There is a path going south and northwest. The ground is covered with flowers of different kinds. Here and there you see small rabbit holes. The path have once been well travelled but now it is overgrown and not so well kept. } {Mystic Forest} {} {} {} {1.000} {}
 E { 9888} {s} {s} {4} {0} {} {1.000} {}
 E { 9890} {nw} {nw} {9} {0} {} {1.000} {}
 
-R { 9890} {0} {} {9890} { } {} {} {} {} {} {1.000} {}
+R { 9890} {0} {} {9890} { } {You are on a forest path going north and southeast. The sound of running water fills your ears. As you gaze north you see a bridge crossing a stream. The forest is less dense to the north. There are some bushes growing next to the path. To the southeast there is a small clearing. } {Mystic Forest} {} {} {} {1.000} {}
 E { 9889} {se} {se} {6} {0} {} {1.000} {}
 E { 9891} {n} {n} {1} {0} {} {1.000} {}
 E { 9893} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 9891} {0} {} {9891} { } {} {} {} {} {} {1.000} {}
+R { 9891} {0} {} {9891} { } {You stand next to a stone bridge. On the other side you see some workers lay new stones to the bridge. The bridge seems far from done. A stream flows northeast and southwest under the bridge. The forest is not so dense around the bridge. The path goes back to the south. } {Mystic Forest} {} {} {} {1.000} {}
 E { 9890} {s} {s} {4} {0} {} {1.000} {}
 
-R { 9892} {0} {} {9892} { } {} {} {} {} {} {1.000} {}
+R { 9892} {0} {} {9892} { } {You are on a forest path going east and west. The forest is quite dense here and the only way to go is to follow the path. The forest is a bit darker, though some small beams of light penetrate just enough for you to see the path. } {Mystic Forest} {} {} {} {1.000} {}
 E { 9888} {w} {w} {8} {0} {} {1.000} {}
+E {13244} {e} {e} {2} {0} {} {1.000} {}
 
-R { 9893} {0} {} {9893} { } {} {} {} {} {} {1.000} {}
+R { 9893} {0} {} {9893} { } {You are on a small trail going northeast and southwest. The forest is very dense here so you cannot make out where the trail to the southwest ends up. You can hear the sound of running water coming from the west and northwest. To the northeast you see some bushes, where the trail joins the path. } {Mystic Forest} {} {} {} {1.000} {}
 E { 9890} {ne} {ne} {3} {0} {} {1.000} {}
 E { 9894} {sw} {sw;drink pool;swim pool} {12} {0} {} {1.000} {}
 
-R { 9894} {0} {} {nice pool} { } {} {} {nice pool} {} {} {1.000} {}
+R { 9894} {0} {} {nice pool} { } {You are standing near a large pool of water that seems very deep. The stream coming from the north ends up here. Maple trees tower above the pool, dipping their branches in the water. A trail goes into the forest to the northeast. } {Mystic Forest} {nice pool} {} {} {1.000} {}
 E { 9893} {ne} {ne} {3} {0} {} {1.000} {}
 
 R { 9895} {0} {} {divine regen} { } {} {} {divine regen} {} {} {1.000} {}
@@ -62218,3 +62219,14 @@ E {13243} {s} {s} {4} {0} {} {1.000} {}
 
 R {13243} {0} {} {In a very dark forest (n)} { } {The forest is too thick to the south to continue any further. You feel as if you are being watched by hundreds of tiny eyes. The path goes back to the north. } {Smurfland} {} {} {} {1.000} {}
 E {13242} {n} {n} {1} {0} {} {1.000} {}
+
+R {13244} {0} {} {A forest path (se,w)} { } {You are on a forest path going west and southeast. The ground is shaded because of the tall trees all around you. Tiny beams of light streams through the leaves from above illuminating the path in front of you. You think you can hear some voices coming further away to the southeast. } {Mystic Forest} {} {} {} {1.000} {}
+E { 9892} {w} {w} {8} {0} {} {1.000} {}
+E {13245} {se} {se} {6} {0} {} {1.000} {}
+
+R {13245} {0} {} {A forest path (e,nw)} { } {You are on a forest path going northwest and east. To the east you can see the light from a large bonfire. There seems to be some tents around it. It looks like some kind of camp. You can hear loud voices coming from the camp, though you cannot make out what they say. } {Mystic Forest} {} {} {} {1.000} {}
+E {13244} {nw} {nw} {9} {0} {} {1.000} {}
+E {13246} {e} {e} {2} {0} {} {1.000} {}
+
+R {13246} {0} {} {A bandit camp (w)} { } {You are in a bandit camp. There is a large bonfire in the middle of the camp. Around it are three tents, perhaps where the bandits hang out. A path goes out of the camp to the west. Maple trees line up around the camp making a protective wall of safety from attacks. } {Mystic Forest} {} {} {} {1.000} {}
+E {13245} {w} {w} {8} {0} {} {1.000} {}

@@ -122,7 +122,6 @@
 	#var total_items 0;
 	#var player_room 0;
 	#var critter_room 0;
-        #var upexit 0;
         #var room_dirs %3;
         #replace {room_dirs}{,}{;};
         #var {room_short_desc}{%1};
@@ -192,6 +191,9 @@
 } {6}
 
 #act {=X={.*}} {
+	#var total_items 0;
+	#var player_room 0;
+	#var critter_room 0;
 	#if {"$longcap" == "on"} {
 		#var longcap off;
 		#unact {%%1};
@@ -316,12 +318,6 @@
 	#map flag static on;
 	#unvar mapstatic;
 	#unvar mapping;
-#nop {Biome Work in progress
-	#unsub {^%*=X=(};
-	#unsub {^+%*+%s};
-	#unsub {^|%*|%s};
-	#unsub {^ %s};
-};
 }
 #map flag static on
 #unvar mapstatic

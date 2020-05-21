@@ -10,13 +10,22 @@
 
 #alias {si}{
 	#if {$stepignore != 1}{
-		#echo {Not using Magic stepper};
-		#var stepignore 1;
+		#if {$manual_stepper != 1}{
+			#echo {Using Manual Stepper};
+			#var {manual_stepper}{1};
+			#var stepignore 2;
+		}{
+			#echo {Using Magic Wanderer};
+			#var {manual_stepper}{0};
+			#var stepignore 1;
+		};
 	}{
 		#echo {Using Magic Stepper};
+		#var manual_stepper 0;
 		#var stepignore 0;
 	};
 };
+
 #act {AREA NAME: %1 [%2]} {
 	#var {area}{%1};
 	#if {$stepignore != 1}{
@@ -61,7 +70,7 @@
 }
 
 #alias {steptest}{
-        #if {$stepper == 1}{
+        #if {$manual_stepper == 1}{
                 #math {room_num}{$room_num + 1};
                 $kill_path[$room_num];
                 #map map;
@@ -167,10 +176,10 @@
 	#if {"$tkstr" != "none"}{
 		#var kstr $tkstr;
 	};
-	#if {"$area" == "Changeling" && $starter != 1 && $domove2 == 1}{
+	#if {"$area" == "Changeling Biome" && $starter2 != 1 && $domove2 == 1}{
 		bscan;
 	};
-}
+}{9};
 
 #act {^=P= %*} {
         #math {player_room}{$player_room + 1};
@@ -216,12 +225,12 @@
 		#var player_room 0;
 		#var domove2 1;
 		#var starter2 1;
-		#if {$stepignore != 1}{
-			make_killpath {${roomlist[${room_index}]}};
-			#var stepper2 1;
-		}{
+		#if {$stepignore > 0}{
 			#var stepper2 0;
 			#map {flag}{static}{off};
+		}{
+			make_killpath {${roomlist[${room_index}]}};
+			#var stepper2 1;
 		};
 		#if {"$guild" == "angel" && $my[desecrate] == 1}{
 			!cease;
@@ -244,21 +253,35 @@
 	};
 }
 
-#alias kill-loop {
-	#if {$starter2 == 1}{
-		#if {${stepper2} == 1}{
-			${kill_path2[${path_index}]};
-			#math {path_index}{$path_index + 1};
-			#if {${path_index} > ${path_size}}{
-				#math {room_index}{${room_index} +1};
-				#if {$room_index > $area_size}{
-					#var {room_index}{1}
-				};
-				make_killpath {${roomlist[${room_index}]}};
+#alias {step_function}{
+	#if {${stepper2} == 1}{
+		#echo {Using Stepper 2};
+		${kill_path2[${path_index}]};
+		#math {path_index}{$path_index + 1};
+		#if {${path_index} > ${path_size}}{
+			#math {room_index}{${room_index} +1};
+			#if {$room_index > $area_size}{
+				#var {room_index}{1}
 			};
+			make_killpath {${roomlist[${room_index}]}};
+		};
+	}{
+		#if {$manual_stepper == 1}{
+			#echo {Using Stepper (manual)};
+			#nop {If we aren't using the magic stepper, check for a manual path};
+			#math {room_num}{$room_num + 1};
+			${kill_path[${room_num}]};
 		}{
+		#nop {If we aren't specifying a manual path, we are wandering aimlessly};
+			#echo {Wandering};
 			dirfunction $desired_dir;
 		};
+	};
+};
+
+#alias kill-loop {
+	#if {$starter2 == 1}{
+		step_function;
 		#var {starter2}{0};
 		#var {domove2}{1};
 	}{
@@ -269,34 +292,10 @@
 			#if {${critter_room} > 0}{
 				#var domove2 0;
 			}{
-				#if {$stepper2 == 1}{
-					${kill_path2[${path_index}]};
-					#math {path_index}{$path_index + 1};
-					#if {${path_index} > ${path_size}}{
-						#math {room_index}{${room_index} +1};
-						#if {$room_index > $area_size}{
-							#var {room_index}{1}
-						};
-						make_killpath {${roomlist[${room_index}]}};
-					};
-				}{
-					dirfunction $desired_dir;
-				};
+				step_function;
 			};
 		}{
-			#if {${stepper2} == 1}{
-				${kill_path2[${path_index}]};
-				#math {path_index}{$path_index + 1};
-				#if {${path_index} > ${path_size}}{
-					#math {room_index}{${room_index} +1};
-					#if {$room_index > $area_size}{
-						#var {room_index}{1}
-					};
-					make_killpath {${roomlist[${room_index}]}};
-				};
-			}{
-				dir_selection;
-			};
+			step_function;
 		};
 	};
 }
