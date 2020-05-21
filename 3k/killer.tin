@@ -255,7 +255,6 @@
 
 #alias {step_function}{
 	#if {${stepper2} == 1}{
-		#echo {Using Stepper 2};
 		${kill_path2[${path_index}]};
 		#math {path_index}{$path_index + 1};
 		#if {${path_index} > ${path_size}}{
@@ -267,13 +266,11 @@
 		};
 	}{
 		#if {$manual_stepper == 1}{
-			#echo {Using Stepper (manual)};
 			#nop {If we aren't using the magic stepper, check for a manual path};
 			#math {room_num}{$room_num + 1};
 			${kill_path[${room_num}]};
 		}{
 		#nop {If we aren't specifying a manual path, we are wandering aimlessly};
-			#echo {Wandering};
 			dirfunction $desired_dir;
 		};
 	};
