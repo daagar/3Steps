@@ -3,6 +3,10 @@
 /* Blank Line */
 #gag {^$}
 
+/* Gag Ansi Setup */
+#gag {^ANSI variables %1 removed.};
+#gag {^Variable %1 set to: %2};
+
 /* Guilds */
 #NOP Juggernauts
 #gag {YOU FRENZY!!!}

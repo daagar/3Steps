@@ -41,6 +41,7 @@
 	#read .tt/3k/killer.tin;
 	#read .tt/3k/triggers.tin;
 	#NOP #read .tt/3k/damagetracker.tin;
+	#delay {ansi}{#read .tt/3k/ansi_setup.tin}{2};
 	#script {cat .tt/map/lastroom.tt}
 	
 }
