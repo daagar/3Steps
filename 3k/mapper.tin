@@ -86,38 +86,6 @@
 #act {{=S=(.*) \((.*)\)\s*=S=}} {
 	#var room %2;
 	#var exits %3;
-#nop {Fl Stepper without stepper direction};
-	#var total_items 0;
-	#var player_room 0;
-	#var critter_room 0;
-        #var upexit 0;
-        #var room_dirs %3;
-        #replace {room_dirs}{,}{;};
-        #var {room_short_desc}{%1};
-        #regex {$room_short_desc}{=S=%* (%*)}{
-        	#var {room_short_desc}{&1};
-        };
-        #list {room_dirs}{create}{$room_dirs};
-        #list {room_dirs}{find}{u}{upexit};
-        #if {$upexit == 0}{
-                #list {room_dirs}{find}{exit}{upexit};
-        };
-        #if {$upexit == 0}{
-                #list {room_dirs}{find}{portal}{upexit};
-        };
-        #if {$upexit == 0}{
-                #list {room_dirs}{find}{menu}{upexit};
-        };
-#nop {  #if {$upexit > 0 && "$area" == "csewers"} };
-        #if {"%2" == "Sewer Portal" && "$area" == "Chaotic Sewers"}{
-                #map name exit;#map set roomsymbol x;#map set roomcolor <128>;
-                #map dig u;
-                #map {exit}{u}{command}{#read Dirs/csewers_unload.tt;u;#var findloc 1};
-                #if {$findexit == 1}{#var domove 0};
-        };
-        #list {room_dirs}{find}{$reversedir}{reverse_dir};
-        #list {room_dirs}{size}{room_exits};
-#nop {End of support for Fl Mapper};
 	#if {"$mapping" == "on"} {
 		#replace exits {,} {;};
 		#foreach {$exits} {eachexit} {#map dig $eachexit};
@@ -150,26 +118,35 @@
 		};
 		#delay 0 mapupdate
 	};
-#nop {Fl Stepper Stuff};
-        #if {$stepper == 1}{
-                #if {${domove} == 1}{
-                        #if {$findexit == 1}{
-                                kill-loop;
-                        }{
-                                #if {"$mapping" == "on"}{
-                                        #delay {0.15}{kill-loop};
-                                }{
-                                        #delay {0.05}{kill-loop};
-                                };
-                        };
-                };
-        }{
-                #if {${domove} == 1}{
-			dir_selection;
-		};
-	};
-#nop {Fl Stepper Stuff Ends};
-#nop {Automagic Kill Path Generation Begins Here};
+	#nop {Automagic Kill Path Generation Begins Here};
+	#var total_items 0;
+	#var player_room 0;
+	#var critter_room 0;
+        #var room_dirs %3;
+        #replace {room_dirs}{,}{;};
+        #var {room_short_desc}{%1};
+        #regex {$room_short_desc}{=S=%* (%*)}{
+        	#var {room_short_desc}{&1};
+        };
+        #list {room_dirs}{create}{$room_dirs};
+        #list {room_dirs}{find}{u}{upexit};
+        #if {$upexit == 0}{
+                #list {room_dirs}{find}{exit}{upexit};
+        };
+        #if {$upexit == 0}{
+                #list {room_dirs}{find}{portal}{upexit};
+        };
+        #if {$upexit == 0}{
+                #list {room_dirs}{find}{menu}{upexit};
+        };
+        #if {"%2" == "Sewer Portal" && "$area" == "Chaotic Sewers"}{
+                #map name exit;#map set roomsymbol x;#map set roomcolor <128>;
+                #map dig u;
+                #map {exit}{u}{command}{#read Dirs/csewers_unload.tt;u;#var findloc 1};
+                #if {$findexit == 1}{#var domove 0};
+        };
+        #list {room_dirs}{find}{$reversedir}{reverse_dir};
+        #list {room_dirs}{size}{room_exits};
         #if {$stepper2 == 1}{
                 #if {${domove2} == 1}{
                 	#if {"$mapping" == "on"}{
@@ -183,7 +160,7 @@
 			dir_selection;
 		};
 	};
-#nop {End of Magic Stepper};
+	#nop {End of Magic Stepper};
 }
 
 #NOP Room Short with No Exits, Lowered Priority
@@ -214,6 +191,9 @@
 } {6}
 
 #act {=X={.*}} {
+	#var total_items 0;
+	#var player_room 0;
+	#var critter_room 0;
 	#if {"$longcap" == "on"} {
 		#var longcap off;
 		#unact {%%1};
@@ -223,15 +203,14 @@
 
 
 /* Aliases */
-#NOP count the # of rooms mapped
-#alias {area_mapped %1} {
+
+#alias {area_mapped} {
 	#unvar area_mapped;
 	#map list {} {} {} {%1} {variable} {area_mapped};
 	#showme {&area_mapped[] rooms mapped.};
-}
+};
 
-#NOP Color rooms that have no area set (unexplored)
-#alias nacolor {
+#alias {nocolor}{
 	#loop 1 20000 {cnt} {
 		#map at {$cnt} {
 			#map get {roomarea} {cntarea};
@@ -242,26 +221,28 @@
 	#map goto $gonum;
 	#draw {tile} 16 -42 16 -1 {<020>$roomarea <140>(<120>$room_cnt<140>)<099>};
 	#draw {tile} 17 -42 17 -1 {<140>[<030>$roomvnum<140>] <130>$roomname<099>}
-}
+};
 
 #alias {go} {
 	#if {"$mapping" == "on"}{
 		mapoff;
 	};
         #map flag static on;
-        #var domove 0;
         #var domove2 0;
 	#map find {roomnote} {%0%*};
         #map get roomvnum returnroom;
         #var returnpathroom $room_num;
 	#path run;
-	#var {mapindex}{0};
+	#var {return_room_index}{${room_index}};
+	#var {path_index}{0};
+	#var {room_index}{0};
 	rating;
 }
 
 #alias goback {
         #map run $returnroom;
-        #var room_num $returnpathroom;
+        #var {do_return}{1};
+	rating;
 }
 
 #alias {mapgo} {
@@ -326,16 +307,9 @@
 	#var mapstatic 1;
 	#var area %1;
 	#var mapping on;
-#nop {Biome Work in progress
-	#if {"$area" == "Changeling"}{
-		#sub {^%*=X=(} {=X=Biome (};
-		#sub {^+%*+%s} {};
-		#sub {^|%*|%s} {};
-		#sub {^ %s} {};
-	};
-};
 	!rating;
 }
+
 #alias {mapoff}{
 	#nop {
 	!brief on yes;
@@ -344,12 +318,6 @@
 	#map flag static on;
 	#unvar mapstatic;
 	#unvar mapping;
-#nop {Biome Work in progress
-	#unsub {^%*=X=(};
-	#unsub {^+%*+%s};
-	#unsub {^|%*|%s};
-	#unsub {^ %s};
-};
 }
 #map flag static on
 #unvar mapstatic
