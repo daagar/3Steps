@@ -16,8 +16,8 @@
 #alias {thisarea} {
 	#list {botcycle} {get} {$cycle} {currentarea};
 	go $currentarea;
-	#delay {1} {- $currentarea};
-	#delay {2} {..}
+	#NOP #delay {1} {- $currentarea};
+	#delay {2} {ki}
 }
 
 #alias {nextarea_orig} {
@@ -28,8 +28,8 @@
 	};
 	#list {botcycle} {get} {$cycle} {currentarea};
 	go $currentarea;
-	#delay {1} {- $currentarea};
-	#delay {2} {..}
+	#NOP #delay {1} {- $currentarea};
+	#delay {2} {ki}
 }
 
 #alias {nextarea} {
@@ -37,11 +37,11 @@
 	#if {$cycle <= &botcycle[]} {
 		#list {botcycle} {get} {$cycle} {currentarea};
 		go $currentarea;
-		#delay {1} {- $currentarea};
-		#delay {2} {..}
+		#NOP #delay {1} {- $currentarea};
+		#delay {2} {ki}
 	} {
 		#var cycle 0;
-		killbot;
+		#NOP killbot;
 		go home
 	}
 
