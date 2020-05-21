@@ -70,9 +70,10 @@
 	}; #elseif {$idle < 600} {
 		#screen clear square 21 1 -8 1
 	};
-	#if {$bot && $idle > $IdleLimit} {
-		.stop;
-		#unvar bot;
+	#if {$autobot && $idle > $IdleLimit} {
+		#NOP .stop;
+		#NOP #unvar bot;
+		#var autobot 0;
 		#delay {gohome} {go home} {100}
 	};
 	update_caption

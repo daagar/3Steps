@@ -39,7 +39,6 @@
             #nop #read .tt/char/%0.tin;
         }
 
-
         #EVENT {SESSION DISCONNECTED} {
             mapsave;      
         }
@@ -56,34 +55,33 @@
         } {
                 connect %0
         }
-}
+};
+
 #alias {connect} {
-        #regex {%0} {3s} {
-                #var {mud} {3s};
-                #ses {%0} {3scapes.org} {3200};
-                #format {ses_len} {%L} {%0};
-                #math {ses_len} {$ses_len-2};
-                #format {ses_name} {%.${ses_len}s} {%0};               
+    #regex {%0} {3s} {
+        #var {mud} {3s};
+        #ses {%0} {3scapes.org} {3200};
+        #format {ses_len} {%L} {%0};
+        #math {ses_len} {$ses_len-2};
+        #format {ses_name} {%.${ses_len}s} {%0};               
+    } {
+        #regex {%0} {AW} {
+            #var {mud} {AW};
+            #ses {%0} {aardwolf.org} {23};
+            #format {ses_len} {%L} {%0};
+            #math {ses_len} {$ses_len-2};
+            #format {ses_name} {%.${ses_len}s} {%0};                       
         } {
-                #regex {%0} {AW} {
-                        #var {mud} {AW};
-                        #ses {%0} {aardwolf.org} {23};
-                        #format {ses_len} {%L} {%0};
-                        #math {ses_len} {$ses_len-2};
-                        #format {ses_name} {%.${ses_len}s} {%0};                       
-                } {
-                        #var {mud} {3k};
-                        #ses {%0} {3k.org} {3000};
-                        #var {ses_name} {%0};         
-                }
-        };
-
-        #act {^<Entering 3%*.  Enter your character name or press enter to continue>} {
-            $ses_name;
-            #read .tt/.pass;
+            #var {mud} {3k};
+            #ses {%0} {3k.org} {3000};
+            #var {ses_name} {%0};         
         }
+};
 
-        
-}
+    #act {^<Entering 3%*.  Enter your character name or press enter to continue>} {
+        $ses_name;
+        #read .tt/.pass;
+    }    
+};
 
 #read .tt/menu.tin
