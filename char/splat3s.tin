@@ -164,9 +164,9 @@
 #alias kk {kill $kstr}
 #alias k {kill %0}
 #alias co {
-	!give bioplast to fl;
+	!give bioplast to Splat;
 	!consume bioplast;
-	!give bioplast to fl;
+	!give bioplast to Splat;
 	!consume bioplast;
 };
 
@@ -174,67 +174,69 @@
 
 #gag {HP[%1/%2] SP[%3/%4] ST[%5\%] PP[%6\%] CF[%7/%8\%] FF[%9] E%10 %11}
 #act {HP[%1/%2] SP[%3/%4] ST[%5\%] PP[%6\%] CF[%7/%8\%] FF[%9] E[%10] %11}{
-	#var {my[hp][current]}		{%1};
-	#var {my[hp][max]}			{%2};
-	#var {my[sp][current]}		{%3};
-	#var {my[sp][max]}			{%4};
-	#var {my[gp1][current]}		{%5};
-	#var {my[stam][current]}	{%5};
-	#var {my[gp2][current]}		{%6};
-	#var {my[pp][current]}		{%6};
+	#var {my[hp][current]}			{%1};
+	#var {my[hp][max]}				{%2};
+	#var {my[sp][current]}			{%3};
+	#var {my[sp][max]}				{%4};
+	#var {my[gp1][current]}			{%5};
+	#var {my[stam][current]}		{%5};
+	#var {my[gp2][current]}			{%6};
+	#var {my[pp][current]}			{%6};
 	#var {my[relinquish][current]}	{%7};
 	#var {my[relinquish][reset]}	{%8};
-	#var {my[ff][current]}		{%9};
+	#var {my[ff][current]}			{%9};
 	#replace {my[ff][current]}{%}{};
 
-	#if {$my[gp1[current]] > 95 && $my[gp2[current]] > 95 && $resumebot} {
+	#if {$my[gp1][current] > 95 && $my[gp2][current] > 95 && $resumebot} {
 		#var resumebot 0;
-		#var autobot 1;
-		ki;
+		.resume;
 	}
 
-	#math {my[hp][deficit]}{$my[hp][max] - $my[hp][current]};
-        #if {"%10" != ""}{
+	#math {my[hp][deficit]} {$my[hp][max] - $my[hp][current]};
+        
+	#NOP Enemy parsing
+	#if {"%10" != ""}{
 		#var {my[attacker]}	{%10};
 		#var {my[incombat]}	{1};
-        }{
-            #var {my[attacker]}	{0};
-			#var {my[incombat]}	{0};
-			#var {my[bite][status]}{0};
-        };
-        #if {"%11" != ""}{
-                #var hpbarTmpInt 	{%11};
-        }{
-                #var hpbarInt 		{None};
-        };
-        #regex {$hpbarTmpInt}{%.%s%*}{
-                #var hpbarInt 		{&3};
-        };
-        #regex {$hpbarInt}{A}{
-                #var {my[adrenalize]}	 {1};
-                }{
-                #var {my[adrenalize]}	{0};
-        };
-        #regex {$hpbarInt}{H}{
-                #var {my[hyperproliferate]}	{1};
-                }{
-                #var {my[hyperproliferate]}	{0};
-        }
-        #regex {$hpbarInt}{D}{
-                #var {my[dissipate]}		{1};
-        }{
-                #var {my[dissipate]}		{0};
-        };
-        #regex {$hpbarInt}{V}{
-                #var {my[perseverance][active]}	{1};
-        }{
-                #var {my[perseverance][active]}	{0};
-        };
-        #regex {$hpbarInt}{R:%d}{
-                #var {my[relinq]}		{1};
-        }{
-                #var {my[relinq]}		{0};
-        };
+    }{
+        #var {my[attacker]}	{0};
+		#var {my[incombat]}	{0};
+		#var {my[bite][status]}{0};
+    };
+
+    #if {"%11" != ""}{
+        #var hpbarTmpInt 	{%11};
+    }{
+        #var hpbarInt 		{None};
+    };
+    #regex {$hpbarTmpInt}{%.%s%*}{
+        #var hpbarInt 		{&3};
+    };
+    #regex {$hpbarInt} {A} {
+        #var {my[adrenalize]}	 {1};
+    } {
+        #var {my[adrenalize]}	{0};
+    };
+    #regex {$hpbarInt}{H} {
+        #var {my[hyperproliferate]}	{1};
+    } {
+        #var {my[hyperproliferate]}	{0};
+    };
+    #regex {$hpbarInt}{D} {
+        #var {my[dissipate]}		{1};
+    } {
+        #var {my[dissipate]}		{0};
+    };
+    #regex {$hpbarInt}{V} {
+        #var {my[perseverance][active]}	{1};
+    } {
+        #var {my[perseverance][active]}	{0};
+    };
+    #regex {$hpbarInt} {R:%d} {
+        #var {my[relinq]}		{1};
+    }{
+        #var {my[relinq]}		{0};
+    };
 
 	#if {$my[gp1][current] < 10 || $my[gp2][current] < 20} {
 		#if {$my[relinquish][current] > 0}{
@@ -257,24 +259,29 @@
 			!consume bioplast;
 		};
 	};
-	#if {$my[sp][current] < 10 && $my[relinquish][current] > 2 && $my[relinq] != 1}{
+
+	#if {$my[sp][current] < 10 && $my[relinquish][current] > 2 && $my[relinq] != 1} {
 			!relinquish;
 			#var {my[relinq]}	{1};
 	};
-	#if {$my[relinquish][reset] > 90 && $my[relinquish][current] > 0 && $my[relinq] != 1}{
+
+	#if {$my[relinquish][reset] > 90 && $my[relinquish][current] > 0 && $my[relinq] != 1 && !$idling} {
 			!relinquish;
 			#var {my[relinq]}	{1};
 	};
-        #if {$my[adrenalize] != 1}{
-                #if {$my[sp][current] > 50}{
-                        !adrenalize on;
-                };
+
+    #if {$my[adrenalize] != 1} {
+        #if {$my[sp][current] > 50} {
+            !adrenalize on;
         };
-        #if {$my[hyperproliferate] != 1}{
-                #if {$my[sp][current] > 50 && $my[relinq] != 1}{
-                        !hyperproliferate on;
-                };
+    };
+
+    #if {$my[hyperproliferate] != 1}{
+        #if {$my[sp][current] > 50 && $my[relinq] != 1}{
+            !hyperproliferate on;
         };
+    };
+
 	#if {$my[incombat] == 0}{
 		#if {$my[hp][current] < $my[hp][max]}{
 			!morph;
@@ -302,37 +309,37 @@
 	#NOP 	!morph;
 	#NOP };
 	#math {my[gpdiff]}{$my[gp1][current] - $my[gp2][current]};
-	#if {$my[gpdiff] > 0}{
-		#if {$my[dissipate] != 1}{
+	#if {$my[gpdiff] > 0} {
+		#if {$my[dissipate] != 1} {
 			!dissipate on;
-			#var {my[dissipate]}{1};
+			#var {my[dissipate]} {1};
 		};
 		#if {$my[gpdiff] > 10}{
-			#if {$my[perseverance][active] != 1}{
+			#if {$my[perseverance][active] != 1} {
 				!perseverance on;
 			};
-			#if {$my[gpdiff] > 20}{
-				#if {"$my[perseverance][level]" != "half"}{
+			#if {$my[gpdiff] > 20} {
+				#if {"$my[perseverance][level]" != "half"} {
 					!perseverance half;
-					#var {my[perseverance][level]}{half};
+					#var {my[perseverance][level]} {half};
 				};
-			}{
-				#if {"$my[perseverance][level]" != "some"}{
+			} {
+				#if {"$my[perseverance][level]" != "some"} {
 					!perseverance some;
-					#var {my[perseverance][level]}{some};
+					#var {my[perseverance][level]} {some};
 				};
 			};
-		}{
-			#if {$my[perseverance][active] == 1}{
+		} {
+			#if {$my[perseverance][active] == 1} {
 				!perseverance off;
 			};
 		};
-	}{
-		#if {$my[dissipate] == 1}{
+	} {
+		#if {$my[dissipate] == 1} {
 			!dissipate off;
-			#var {my[dissipate]}{0};
+			#var {my[dissipate]} {0};
 		};
-		#if {$my[perseverance][active] == 1}{
+		#if {$my[perseverance][active] == 1} {
 			!perseverance off;
 		};
 	};
@@ -340,7 +347,7 @@
 
 #gag {^F[%1] S[%2/%3\%] B[%4]$}
 #act {^F[%1] S[%2/%3\%] B[%4]$}{
-	#var {my[form]}			{%1};
+	#var {my[form]}				{%1};
 	#var {my[skill][name]}		{%2};
 	#var {my[skill][current]}	{%3};
 	#var {my[bioplasts]}		{%4};
@@ -363,18 +370,20 @@
 }
 
 #alias {update_status} {
-        #if {"$cooler" == "on" || $corpses[cooler] > 0} {
-                #format {sb1_cooler} {%+2s} {$corpses[cooler]};
-                #var {sb1_cooler} { CL:<130>$sb1_cooler<088>}
-        } {
-                #var {sb1_cooler} {}
-        };
-        #if {"$freezer" == "on" || $corpses[freezer] > 0} {
-                #format {sb2_freezer} {%+2s} {$corpses[freezer]};
-                #var {sb2_freezer} { FZ:<130>$sb2_freezer<088>}
-        } {
-                #var {sb2_freezer} {}
-        };
+    #if {"$cooler" == "on" || $corpses[cooler] > 0} {
+        #format {sb1_cooler} {%+2s} {$corpses[cooler]};
+        #var {sb1_cooler} { CL:<130>$sb1_cooler<088>}
+    } {
+        #var {sb1_cooler} {}
+    };
+
+    #if {"$freezer" == "on" || $corpses[freezer] > 0} {
+        #format {sb2_freezer} {%+2s} {$corpses[freezer]};
+        #var {sb2_freezer} { FZ:<130>$sb2_freezer<088>}
+    } {
+        #var {sb2_freezer} {}
+    };
+
 	#var	{my[hp][graph]}		{@graph{$my[hp][current];$my[hp][max]}};
 	#var	{my[sp][graph]}		{@graph{$my[sp][current];$my[sp][max]}};
 	#var	{my[gp1][graph]}	{@graph{$my[gp1][current];100}};
@@ -382,24 +391,24 @@
 	#var	{my[ff][graph]}		{@graph{$my[ff][current];100}};
 	#var	{my[skill][graph]}	{@graph{$my[skill][current];100}};
 	#var	{enemy[graph]}		{@graph{$enemy[hp];100}};
-	#format {hp}			{%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
-	#format {hp_max}		{%+4s} {<128>$my[hp][max]<088>};
-	#format {sp}			{%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
-	#format {sp_max}		{%+4s} {<128>$my[sp][max]<088>};
-	#format {stam}			{%+8s} {@colscale{$my[gp1][current];100}};
-	#format {pp}			{%+7s} {@colscale{$my[gp2][current];100}};
-	#format {ff}			{%+8s} {@colscale{$my[ff][current];100}};
-	#format {skill}			{%+8s} {@colscale{$my[skill][current];100}};
-	#format {relin}			{%+2s} {$my[relinquish][current]};
-	#format {relin_r}		{%+3s} {$my[relinquish][reset]};
-	#format {bio}			{%+3s} {$my[bioplasts]};
-        #format {round_damage}          {%-16s} {$my[damagetracker][foe] -> @rcolscale{$my[damagetracker][damage];2500}};
+	#format {hp}				{%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
+	#format {hp_max}			{%+4s} {<128>$my[hp][max]<088>};
+	#format {sp}				{%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
+	#format {sp_max}			{%+4s} {<128>$my[sp][max]<088>};
+	#format {stam}				{%+8s} {@colscale{$my[gp1][current];100}};
+	#format {pp}				{%+7s} {@colscale{$my[gp2][current];100}};
+	#format {ff}				{%+8s} {@colscale{$my[ff][current];100}};
+	#format {skill}				{%+8s} {@colscale{$my[skill][current];100}};
+	#format {relin}				{%+2s} {$my[relinquish][current]};
+	#format {relin_r}			{%+3s} {$my[relinquish][reset]};
+	#format {bio}				{%+3s} {$my[bioplasts]};
+    #format {round_damage}      {%-16s} {$my[damagetracker][foe] -> @rcolscale{$my[damagetracker][damage];2500}};
 	#format {round_average}		{%+4s} {@rcolscale{$my[damagetracker][average];2500}};
-	#format {ehealth}		{%+8s} {@colscale{$enemy[hp];100}\%};
-        #format {corpses[inventory]}    {%+2s} {$corpses[inventory]};
-        #format {corpses[truck]}	{%+2s} {$corpses[truck]};
-        #format {corpses[coffin]}	{%+2s} {$corpses[coffin]};
-        #format {corpses[freezer]}	{%+2s} {$corpses[freezer]};
+	#format {ehealth}			{%+8s} {@colscale{$enemy[hp];100}\%};
+    #format {corpses[inventory]}{%+2s} {$corpses[inventory]};
+    #format {corpses[truck]}	{%+2s} {$corpses[truck]};
+    #format {corpses[coffin]}	{%+2s} {$corpses[coffin]};
+    #format {corpses[freezer]}	{%+2s} {$corpses[freezer]};
 	#showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} ST:${stam}%  PP:${pp}%  BP:${bio}    E: $round_damage} {-4};
 	#showme {H:${my[hp][graph]} S:${my[sp][graph]} ST:${my[gp1][graph]} P:${my[gp2][graph]} R:${relin}/${relin_r}\% E:${enemy[graph]}} {-3};
 	#showme {$mip[gline][1] $mip[gline][2]} {-6};
@@ -418,30 +427,32 @@
 	!wrap corpse;
 	!divvy;
 
-	#if {$my[gp1][current] < 80 || $my[gp2][current] < 80 && $autobot} {
-		#var autobot 0;
-		#var resumebot 1;
-	};
-
-	#if {$autobot} {
-		#delay {1} {ki};
-	};
-};
-
-#act {^The coffin is now full!} {
-	#if {$autobot} {
-		#showme <128>Doing autocoffin donate<099>;
-		#var autobot 0;
-		go morgue;
-		!donate coffin;
-		goback;
+	#if {$bot} {
+		#if {$coffin_full} {
+			#showme <128>Doing autocoffin donate<099>;
+			.pause;
+			go morgue;
+			donate coffin;
+			#var coffin_full 0;
+			#delay {1} {goback};
+			#delay {3} {#var resumebot 1};
+		} {
+			#if {$my[gp1][current] < 80 || $my[gp2][current] < 80} {
+				.pause;
+				#var resumebot 1;
+			} {
+				#if {$autokill} {ki};
+			};
+		};
 	};
 };
 
 #alias {cco}{
-	!unwrap corpse;
-	!bioextract;
-	!give corpse to nobody;
+	#NOP !unwrap corpse;
+	#NOP !bioextract;
+	#NOP !give corpse to nobody;
+
+	#var coffin_full 1;
 };
 
 #alias fa {

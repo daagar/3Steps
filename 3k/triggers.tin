@@ -27,35 +27,35 @@
 	!forcehp;
 };
 
-#nop {New Mapper really messes this up
-	#act {As you climb the stairs, you step on a weak board and fall through.}{#map undo}
-	#act {You cannot go}{#map undo}
-	#act {that these guards are demon spawn.}{#map undo}
-	#act {The guards hiss as you attempt to move}{#map undo}
-	#act {There are rocks blocking your passage in that direction.}{#map undo}
-	#act {Buildings prevent you from going that direction.}{#map undo}
-	#act {Buildings prevent you from going that way.}{#map undo}
-	#act {This guard isn't going to let you go that way!}{#map undo}
+#nop New Mapper really messes this up
+	#NOP #act {As you climb the stairs, you step on a weak board and fall through.}{#map undo}
+	#NOP #act {You cannot go}{#map undo}
+	#NOP #act {that these guards are demon spawn.}{#map undo}
+	#NOP #act {The guards hiss as you attempt to move}{#map undo}
+	#NOP #act {There are rocks blocking your passage in that direction.}{#map undo}
+	#NOP #act {Buildings prevent you from going that direction.}{#map undo}
+	#NOP #act {Buildings prevent you from going that way.}{#map undo}
+	#NOP #act {This guard isn't going to let you go that way!}{#map undo}
 
-	#act {Carrying all that stuff, you lose your balance and slip and fall on the ice.}{#map undo}
+	#NOP #act {Carrying all that stuff, you lose your balance and slip and fall on the ice.}{#map undo}
 
-	#act {You bounce right off the gelatinous wall.}{#map undo}
-}
+	#NOP #act {You bounce right off the gelatinous wall.}{#map undo}
 
 
-#act {smack dab in the middle of a large sewer}{
-	#if {$autokill == 1}{
-                #var findexit 0;
-                #var critter_room 0;
-                #var player_room 0;
-                #var domove 1;
-                #var starter 1;
-                glance
-	}
-}
 
-#act {The coffin is full!}{cco}
-#act {The coffin is now full!}{cco}
+#NOP #act {smack dab in the middle of a large sewer}{
+#NOP 	#if {$autokill == 1}{
+#NOP                 #var findexit 0;
+#NOP                 #var critter_room 0;
+#NOP                 #var player_room 0;
+#NOP                 #var domove 1;
+#NOP                 #var starter 1;
+#NOP                 glance
+#NOP 	}
+#NOP }
+
+#act {The coffin is full!} {cco}
+#act {The coffin is now full!} {cco}
 
 #nop {Bshroud}
 #act {Imogen says: Other than me, who were the people in the Silicon Wraiths}{

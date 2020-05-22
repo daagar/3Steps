@@ -7,16 +7,38 @@
 #var area_aggro 0
 #var automap 0
 #var autogather 0
-#var autobot 0
+#var autokill 0
+#var bot 0
 
-#alias {autobot} {
-	#if {$autobot} {
-		#var autobot 0;
-		#showme <128>Autobot OFF<099>;
+#alias {.stop} {
+	#var bot 0;
+	#var autokill 0;
+	#showme Bot Deactivated;
+}
+
+#NOP Should only be called after already in the area to step through
+#alias {.start} {
+	#var bot 1;
+	#var autokill 1;
+	#showme Bot Activated;
+	ki;
+}
+
+#alias {.resume} {
+	#if {$bot} {
+		#var autokill 1;
+		#showme Bot: Resuming;
+		ki;
 	} {
-		#var autobot 1;
-		#showme <128>Autobot ON<099>;
+		#showme Bot currently deactivated
 	};
+}
+
+#alias {.pause} {
+	#if {$bot} {
+		#var autokill 0;
+		#showme Bot: Paused
+	}
 };
 
 #alias {si}{
@@ -39,6 +61,9 @@
 
 #act {AREA NAME: %1 [%2]} {
 	#var {area}{%1};
+
+	#if {$area == "Smurfland%*"} {#var area Smurfland};
+
 	#if {$stepignore != 1}{
 		make_roomlist {$area};
 	};
@@ -66,11 +91,11 @@
 	#list {roomlist}{create}{*my_roomlist[]};
 	#list {roomlist}{size}{area_size};
 	#if {$do_return == 1}{
-	#nop {If we are coming back to this room, use the return_room_index};
+	#nop If we are coming back to this room, use the return_room_index;
 		#var {room_index}{$return_room_index};
 		#var {do_return}{0};
 	}{
-	#nop {Make the Initial kill_path};
+	#nop Make the Initial kill_path;
 		#var {room_index}{1};
 	};
 	#if {${roomvnum} == ${roomlist[${room_index}]}}{
@@ -80,14 +105,14 @@
 	#unvar my_roomlist;
 }
 
-#NOP #alias {steptest}{
-#NOP         #if {$stepper == 1}{
-#NOP                 #math {room_num}{$room_num + 1};
-#NOP                 $kill_path[$room_num];
-#NOP                 #map map;
-#NOP                 #showme {You are on Room $room_num};
-#NOP         };
-#NOP }
+#alias {steptest}{
+    #if {$stepper == 1}{
+        #math {room_num}{$room_num + 1};
+        $kill_path[$room_num];
+        #map map;
+        #showme {You are on Room $room_num};
+    };
+}
 
 #act {You bounce right off the gelatinous wall.}{
 	#map undo;
@@ -114,6 +139,7 @@
 	#math {critter_room}{$critter_room + 1};
 	#format {tkstr}{%l}{%1};
 	#var {critter_short_desc}{$tkstr};
+
 	#if {"$searchstring" != ""}{
 		#regex {$tkstr}{$searchstring}{
 			#bell;
@@ -122,20 +148,14 @@
 			#echo {***** Found $searchstring in room $foundroom****}
 		};
 	};
+
 	#if {"$guild" == "mages"}{
 		#regex {$tkstr}{%* (%*)}{
 			#var tkstr none;
 			#math {critter_room}{$critter_room - 1}
 		};
 	};
-	#if {"$searchstring" != ""}{
-		#regex {$tkstr}{$searchstring}{
-			#bell;
-			#bell;
-			#map get {roomvnum}{foundroom};
-			#echo {***** Found $searchstring in room $foundroom****}
-		};
-	};
+
 	#if {"$guild" == "changeling"}{
 		#NOP #regex {$tkstr}{chromatic cuckoo owlet}{
 		#NOP 	#var tkstr none
@@ -190,42 +210,40 @@
 	#if {"$area" == "Changeling Biome" && $starter2 != 1 && $domove2 == 1}{
 		bscan;
 	} {
-		#if {$autobot} {
+		#if {$autokill} {
 			kk;
 		}
 	};
 }{9};
 
 #act {^=P= %*} {
-        #math {player_room}{$player_room + 1};
+    #math {player_room}{$player_room + 1};
 }
 
 
 #act {^=I= %*} {
-        #format {item}{%l}{%1};
-        #if {$player_room == 0}{
-                #regex {$item}{gold coins}{!divvy coins};
+    #format {item}{%l}{%1};
+    #if {$player_room == 0} {
+        #regex {$item} {gold coins} {!divvy coins};
+    };
+
+    #loop {1}{$all_area_items}{count} {
+        #regex {$item}{$area_items[$count]} {
+            #list {item_list}{add}{$area_items[$count]};
+            #list {item_list}{size}{total_items};
         };
-        #loop {1}{$all_area_items}{count}{
-                #regex {$item}{$area_items[$count]}{
-                        #list {item_list}{add}{$area_items[$count]};
-                        #list {item_list}{size}{total_items};
-                };
-        };	
-	#if {$player_room == 0}{
-		#regex {$item}{gold coins}{!divvy coins};
-	};
+    };
 }
 
 #alias {dirfunction}{
-        #if {"%1" == "s"}{#var reversedir n;s};
-        #if {"%1" == "e"}{#var reversedir w;e};
-        #if {"%1" == "w"}{#var reversedir e;w};
-        #if {"%1" == "n"}{#var reversedir s;n};
-        #if {"%1" == "sw"}{#var reversedir ne;sw};
-        #if {"%1" == "se"}{#var reversedir nw;se};
-        #if {"%1" == "nw"}{#var reversedir se;nw};
-        #if {"%1" == "ne"}{#var reversedir sw;ne};
+    #if {"%1" == "s"}{#var reversedir n;s};
+    #if {"%1" == "e"}{#var reversedir w;e};
+    #if {"%1" == "w"}{#var reversedir e;w};
+    #if {"%1" == "n"}{#var reversedir s;n};
+    #if {"%1" == "sw"}{#var reversedir ne;sw};
+    #if {"%1" == "se"}{#var reversedir nw;se};
+    #if {"%1" == "nw"}{#var reversedir se;nw};
+    #if {"%1" == "ne"}{#var reversedir sw;ne};
 }
 
 
@@ -279,12 +297,12 @@
 			};
 			make_killpath {${roomlist[${room_index}]}};
 		};
-	}{
+	} {
 		#if {$manual_stepper == 1}{
 			#nop {If we aren't using the magic stepper, check for a manual path};
 			#math {room_num}{$room_num + 1};
 			${kill_path[${room_num}]};
-		}{
+		} {
 		#nop {If we aren't specifying a manual path, we are wandering aimlessly};
 			dirfunction $desired_dir;
 		};
@@ -306,7 +324,7 @@
 			}{
 				step_function;
 			};
-		}{
+		} {
 			step_function;
 		};
 	};
