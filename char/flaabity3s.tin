@@ -517,6 +517,7 @@ show_damage_selector
 			#nop {Safety measure for UO};
 			#if {$critter_room > 1 && "$area" == "Ultima Online"}{
 				ppp;
+				#var {critter_room}{0};
 			};
 		};
 	}{

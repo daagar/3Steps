@@ -54,19 +54,19 @@
 	#map list {roomarea}{%0}{variable}{my_roomlist};
 	#list {roomlist}{create}{*my_roomlist[]};
 	#list {roomlist}{size}{area_size};
-	#if {$do_return == 1}{
-	#nop {If we are coming back to this room, use the return_room_index};
-		#var {room_index}{$return_room_index};
-		#var {do_return}{0};
-	}{
-	#nop {Make the Initial kill_path};
-		#var {room_index}{1};
+	#if {$area_size > 1}{
+		#if {$do_return == 1}{
+			#var {room_index}{$return_room_index};
+			#var {do_return}{0};
+		}{
+			#var {room_index}{1};
+		};
+		#if {${roomvnum} == ${roomlist[${room_index}]}}{
+			#math {room_index}{$room_index + 1};
+		};
+		make_killpath {${roomlist[${room_index}]}};
+		#unvar my_roomlist;
 	};
-	#if {${roomvnum} == ${roomlist[${room_index}]}}{
-		#math {room_index}{$room_index + 1};
-	};
-	make_killpath {${roomlist[${room_index}]}};
-	#unvar my_roomlist;
 }
 
 #alias {steptest}{
@@ -145,7 +145,7 @@
 		update_chat ${timestamp}<178>Biome<088>: $tkstr;
 		db_submit_chat ${dbtimestamp}Biome: $tkstr;
 	};
-	#regex {$tkstr}{%*attacking you%*}{#var tkstr &1};
+	#regex {$tkstr}{%* attacking you%*}{#var tkstr &1};
 	#regex {$tkstr}{%*(%d\%)}{#var tkstr &1};
 	#regex {$tkstr}{%*attacking you%*}{#var tkstr &1};
 	#regex {$tkstr}{%* [%*]%*}{#var tkstr &1};
@@ -173,6 +173,7 @@
 	#regex {$tkstr}{%* %S$}{#var tkstr &1};
 	#regex {$tkstr}{%* %w.$}{#var tkstr &2};
 	#regex {$tkstr}{%w.$}{#var tkstr &1};
+	#regex {$tkstr}{%* %w}{#var tkstr &2};
 	#if {"$tkstr" != "none"}{
 		#var kstr $tkstr;
 	};
