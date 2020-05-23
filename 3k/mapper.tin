@@ -1,9 +1,11 @@
 #class {mapper} {open}
 
+#var finding_here off;
+
 #regex {"$world"} {3s} {
 	#var {mapfile}{3s.map}
 } {
-	#var {mapfile}{3k.map}
+	#var {mapfile}{daagar.map}
 }
 #map read .tt/map/${mapfile}
 #map write .tt/map/${mud}-session-backup.map
@@ -252,7 +254,8 @@
 
 #alias goback {
     #map run $returnroom;
-    #var {do_return}{1};
+	#var {room_num} {$returnpathroom};
+    #var {do_return} {1};
 	rating;
 }
 
@@ -319,7 +322,7 @@
 
 #alias {mapsave} {
 	#map write .tt/map/${mapfile};
-	#showme {<128>Saved map to .tt/map/${mud}.map<088>}
+	#showme {<128>Saved map to .tt/map/${mapfile}<088>}
 };
 
 #alias {mapon} {

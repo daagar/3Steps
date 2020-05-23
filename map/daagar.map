@@ -18,7 +18,7 @@ F 8455
 
 G 0
 
-I 166
+I 1
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -834,7 +834,6 @@ R {  123} {0} {} {In a very dark forest (n,s,e)} { } {You're in a very dark fore
 E {  120} {e} {e} {2} {0} {} {1.000} {}
 E {  111} {n} {n} {1} {0} {} {1.000} {}
 E {  137} {s} {s} {4} {0} {} {1.000} {}
-E {  125} {w} {w} {8} {0} {} {1.000} {}
 
 R {  124} {0} {} {In a very dark forest (s,w,e)} { } {You're in a very dark forest. You feel as if you are being watched by hundreds of tiny eyes. The path gets narrower ahead, but it looks travelable. } {Smurfland} {} {} {} {1.000} {}
 E {  111} {e} {e} {2} {0} {} {1.000} {}
@@ -845,7 +844,6 @@ R {  125} {0} {} {In a very dark forest (n,s,w)} { } {You're in a very dark fore
 E {  124} {n} {n} {1} {0} {} {1.000} {}
 E {  127} {w} {w} {8} {0} {} {1.000} {}
 E {  134} {s} {s} {4} {0} {} {1.000} {}
-E {  123} {e} {e} {2} {0} {} {1.000} {}
 
 R {  126} {0} {} {In a very dark forest (n,s,w,e)} { } {You're in a very dark forest. You feel as if you are being watched by hundreds of tiny eyes. The path gets narrower ahead, but it looks travelable. } {Smurfland} {} {} {} {1.000} {}
 E {  124} {e} {e} {2} {0} {} {1.000} {}
@@ -3523,7 +3521,7 @@ E {  652} {s} {s} {4} {0} {} {1.000} {}
 E {  522} {w} {w} {8} {0} {} {1.000} {}
 E {  676} {n} {n} {1} {0} {} {1.000} {}
 E {  665} {e} {e} {2} {0} {} {1.000} {}
-E {  677} {enter} {enter} {0} {0} {} {1.000} {}
+E {  677} {enter} {enter;#read .tt/Dirs/zelligar_load.tt} {0} {0} {} {1.000} {}
 
 R {  668} {0} {} {Forest (s,n,w,e)} { } {Forest You are completely surrounded by trees of varying shapes and sizes.  You notice what you assume are animal tracks crossing the forest bed.  The trees cast long shadows on the ground before you as you wander through this lovely forest. Birds sing in the branches above you.  Further to the west and south you see that the forest continues.  A road lies to the east. } {Fantasy} {} {} {} {1.000} {}
 E {  651} {s} {s} {4} {0} {} {1.000} {}
@@ -3574,7 +3572,7 @@ E {  523} {w} {w} {8} {0} {} {1.000} {}
 
 R {  677} {0} {} {Zelligar's Castle (n,leave)} { } {You stand in the first room of what appears to be an abandoned castle.  Made of hard, dark stone, the walls of this castle are crumbling.  Dust and dirt have accumulated on the floor and the tapestries that line the walls are in tatters.  Perhaps once a great castle, it is clear that it is no longer cared for.  There is a hallway to the north that leads to the heart of the castle and a staircase to the northwest and northeast that lead to a parapet that surrounds the perimeter of the castle. } {$area} {zelligars} {} {} {1.000} {}
 E { 2747} {n} {n} {1} {0} {} {1.000} {}
-E {  667} {leave} {leave} {0} {0} {} {1.000} {}
+E {  667} {leave} {leave;#read .tt/Dirs/zelligar_unload.tt} {0} {0} {} {1.000} {}
 
 R {  678} {0} {} {Forest (n,s,w,e)} { } {Forest You are completely surrounded by trees of varying shapes and sizes.  You notice what you assume are animal tracks crossing the forest bed.  The trees cast long shadows on the ground before you as you wander through this lovely forest. Birds sing in the branches above you.  Further to the east, south and north you can see that the forest continues.   } {Fantasy} {} {} {} {1.000} {}
 E {  665} {s} {s} {4} {0} {} {1.000} {}
@@ -12845,7 +12843,7 @@ R { 2752} {0} {} {Zelligar's Castle (s,nw)} { } {At the center of this room is a
 E { 2750} {s} {s} {4} {0} {} {1.000} {}
 E { 2753} {nw} {nw} {9} {0} {} {1.000} {}
 
-R { 2753} {0} {} {Zelligar's Castle (se,n,e)} { } {Although the walls of this room are the same as elsewhere, the floor of this room is covered with ceramic tiles arranged in mosaic fashion.  Arrayed throughout the room are fourteen different pools. } {Zelligar's Castle} {} {} {} {1.000} {}
+R { 2753} {0} {} {Zelligar's Castle (se,n,e)} { } {Although the walls of this room are the same as elsewhere, the floor of this room is covered with ceramic tiles arranged in mosaic fashion.  Arrayed throughout the room are fourteen different pools. } {Zelligar's Castle} {zellpool} {} {} {1.000} {}
 E { 2752} {se} {se} {6} {0} {} {1.000} {}
 E { 2754} {n} {n} {1} {0} {} {1.000} {}
 E { 2755} {e} {e} {2} {0} {} {1.000} {}
@@ -12908,7 +12906,7 @@ E { 2768} {s} {s} {4} {0} {} {1.000} {}
 R { 2767} {0} {} {Zelligar's Castle (w)} { } {The hallway comes to an abrupt halt here, ending at a stark blank wall.  From behind the wall, there is a great commotion, with someone who seems to be in distress. You hear loud banging and cries for help from the other side. } {Zelligar's Castle} {} {} {} {1.000} {}
 E { 2763} {w} {w} {8} {0} {} {1.000} {}
 
-R { 2768} {0} {} {Zelligar's Castle (n)} { } {This irregularly-shaped room is designed to house the arms supply of the stronghold.  It is mostly empty now, however.  The rock walls of this room are mostly smooth, and there are carved ledges within several of them.  Wooden pegs also line the walls. } {Zelligar's Castle} {} {} {} {1.000} {}
+R { 2768} {0} {} {Zelligar's Castle (n)} { } {This irregularly-shaped room is designed to house the arms supply of the stronghold.  It is mostly empty now, however.  The rock walls of this room are mostly smooth, and there are carved ledges within several of them.  Wooden pegs also line the walls. } {Zelligar's Castle} {zellgloves} {} {} {1.000} {}
 E { 2766} {n} {n} {1} {0} {} {1.000} {}
 E { 2769} {e} {e} {2} {0} {} {1.000} {}
 

@@ -49,19 +49,32 @@
 		#var mapstatus {};
 	};
 
-	#if {$autokill} {
-		#format {autokillstatus} {<068>[AUTOKILL]<088>};
-	} {
-		#var autokillstatus {};
-	};
-
-	#if {$stepignore == 0} {	
-		#format {stepper} {<068>[S]<088>};
+	#if {$stepignore == 0} {
+		#if {$bot} {
+			#if {$autokill} {
+				#format {stepper} {<068>[S:B(A)]};
+			} {
+				#format {stepper} {<068>[S:B(P)]};
+			};
+			
+		} {
+			#format {stepper} {<068>[S]<088>};
+		};
+		
 	} {
 		#if {$stepignore == 1} {
 			#format {stepper} {<068>[W]<088>};
 		} {
-			#var stepper {};
+			#if {$bot} {
+				#if {$autokill} {
+					#format {stepper} {<068>[M:B(A)]};
+				} {
+					#format {stepper} {<068>[M:B(P)]};
+				};
+			} {
+				#var stepper {<068>[M]};
+			}
+			
 		}
 	};
 
@@ -71,7 +84,7 @@
 		#var areacap {};	
 	};
 	#if {"$draw[caption]" == "on"} {
-		#SHOWME {<088> <128>$world_cap <068>Uptime: <168>$uptime_cap  <038>Reboot: <138>$reboot_cap  <fca>Lag: <fcb>$lag_cap  <228>Idle: $idle_cap<088> $mapstatus<088> $stepper<088> $autokillstatus<088> $areacap<088>} {$chat[height]+1}
+		#SHOWME {<088> <128>$world_cap <068>Uptime: <168>$uptime_cap  <038>Reboot: <138>$reboot_cap  <fca>Lag: <fcb>$lag_cap  <228>Idle: $idle_cap<088> $mapstatus<088> $stepper<088> $areacap<088>} {$chat[height]+1}
 	}
 }
 
@@ -89,9 +102,11 @@
 		#screen clear square 21 1 -8 1
 	};
 	#if {$bot && $idle > $IdleLimit} {
-		.stop;
+		#if {$bot} {
+			.stop;
+			#delay {gohome} {go home} {100};
+		};
 		#var idling 1;
-		#delay {gohome} {go home} {100}
 	};
 	update_caption
 } {1}

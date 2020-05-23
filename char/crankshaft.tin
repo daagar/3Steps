@@ -12,6 +12,9 @@
 #var rounds[last_fight] 0
 #var rounds[total] 0
 
+#alias kk {kill $kstr}
+#alias k {kill %0}
+
 #alias {gxp} {
     #var rounds[total] 0;
     #var rounds[last_fight] 0;
@@ -19,6 +22,10 @@
     #showme <028>::GXP Counter Activated::<088>;
 }
 
+#if {!$my[incombat]} {
+    #gag {{HP: (\d+)\[(\d+)\]\((\d+)\) PWR: (\d+)\[(\d+)\]\(([\d\-]+)\) HT: \[(\d+)\%\] SI: \[([\d\.]+)\%\]}}
+}
+#gag {{HP: (\d+)\[(\d+)\]\((\d+)\) PWR: (\d+)\[(\d+)\]\(([\d\-]+)\) HT: \[(\d+)\%\] SI: \[([\d\.]+)\%\]}}
 #act {{HP: (\d+)\[(\d+)\]\((\d+)\) PWR: (\d+)\[(\d+)\]\(([\d\-]+)\) HT: \[(\d+)\%\] SI: \[([\d\.]+)\%\]}} {
     #var my[hp][current]	%2;
     #var my[hp][max]	%3;
@@ -31,18 +38,7 @@
     #format {my[glvl]} {%d} {$my[gxp][full]};
     #math {my[gxp][pct]} {($my[gxp][full]-$my[glvl])*100};
 
-    update_status;
-}
-
-#act {{C: \[([\d\.]+)(\w)\] TARG: (\d+)\%}} {
-    #var credits	%2%3;
-    #var enemy[hp]	%4;
-    
-}
-
-#alias {update_status} {
-    
-    #if {$my[gp1][current] > $my[gp1][max] * .95 && $my[gp2][current] < 3 && $my[hp][current] >= $my[hp][max] && $resumebot} {
+     #if {$my[gp1][current] > $my[gp1][max] * .95 && $my[gp2][current] < 3 && $my[hp][current] >= $my[hp][max] && $resumebot} {
         #echo {RESUME - Safe levels reached};
         #var resumebot 0;
         .resume;
@@ -71,6 +67,19 @@
             };
         } {0.5};
     };
+
+    update_status;
+}
+
+#gag {{C: \[([\d\.]+)(\w)\]}}
+#act {{C: \[([\d\.]+)(\w)\] TARG: (\d+)\%}} {
+    #var credits	%2%3;
+    #var enemy[hp]	%4;
+}
+
+#alias {update_status} {
+    
+   
 
     #if {"$cooler" == "on" || $corpses[cooler] > 0} {
         #format {sb1_cooler} {%+2s} {$corpses[cooler]};
@@ -128,37 +137,38 @@
         !wrap
     };
     
-    
-
     #if {$bot} {
         #if {$my[hp][current] < $my[hp][max] * .90} {
             #echo {<028>::STOPPING - Health threshold reached::<088>};
-            .stop;
+            .pause;
             #var resumebot 1;
         };
 
         #if {$my[gp1][current] < $my[gp1][max] * .4} {
             #echo {<028>::STOPPING - Power threshold reached::<088>};
-            .stop;
+            .pause;
             #var resumebot 1;
         };
 
         #if {$my[gp2][current] > 50} {
             #echo {<028>::STOPPING - Heat limit reached::<088>};
-            .stop;
+            .pause;
             #var resumebot 1;
+        } {
+            #if {$autokill} {ki};
         };
     };
 
 }
 
-#act {dealt the killing blow} {corpsetrig}
+#act {Crankshaft dealt the killing blow} {corpsetrig}
 
-#act {^The coffin is full!} {
+#alias {cco} {
     #if {$bot} {
-        .stop;
+        .pause;
         go morgue;
         donate coffin;
+        goback;
         #var resumebot 1;
     }
 }

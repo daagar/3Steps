@@ -5,51 +5,40 @@
 
 #alias {ba} {
 	#list {botcycle} {add} {%1};
-	botdraw
+	botdraw;
 }
 
 #alias {br} {
 	#list {botcycle} {del} {%1};
-	botdraw
+	botdraw;
 }
 
 #alias {thisarea} {
 	#list {botcycle} {get} {$cycle} {currentarea};
+	.pause;
 	go $currentarea;
-	#NOP #delay {1} {- $currentarea};
-	#delay {2} {ki}
-}
-
-#alias {nextarea_orig} {
-	#if {$cycle < &botcycle[]} {
-		#math cycle {$cycle+1}
-	} {
-		#var cycle 1
-	};
-	#list {botcycle} {get} {$cycle} {currentarea};
-	go $currentarea;
-	#NOP #delay {1} {- $currentarea};
-	#delay {2} {ki}
+	#delay {2} {.start};
 }
 
 #alias {nextarea} {
 	#math cycle {$cycle+1};
 	#if {$cycle <= &botcycle[]} {
 		#list {botcycle} {get} {$cycle} {currentarea};
+		.pause;
 		go $currentarea;
-		#NOP #delay {1} {- $currentarea};
-		#delay {2} {ki}
+		#delay {2} {.start};
 	} {
 		#var cycle 0;
-		#NOP killbot;
-		go home
-	}
+		.stop;
+		go home;
+	};
 
 }
 
 #alias {botclear} {
 	#var botcycle {};
-	#var cycle 0
+	#var cycle 0;
+	.stop;
 }
 
 #alias {bc} {

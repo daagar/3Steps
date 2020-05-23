@@ -9,11 +9,13 @@
 #var autogather 0
 #var autokill 0
 #var bot 0
+#var stepignore 0
 
 #alias {.stop} {
 	#var bot 0;
 	#var autokill 0;
 	#showme Bot Deactivated;
+	update_status;
 }
 
 #NOP Should only be called after already in the area to step through
@@ -21,7 +23,8 @@
 	#var bot 1;
 	#var autokill 1;
 	#showme Bot Activated;
-	ki;
+	update_status;
+	#var resumebot 1;
 }
 
 #alias {.resume} {
@@ -30,15 +33,19 @@
 		#showme Bot: Resuming;
 		ki;
 	} {
-		#showme Bot currently deactivated
+		#showme Bot currently deactivated;
 	};
+	update_status;
 }
 
 #alias {.pause} {
 	#if {$bot} {
 		#var autokill 0;
-		#showme Bot: Paused
-	}
+		#showme Bot: Paused;
+	} {
+		#showme Bot currently deactivated;
+	};
+	update_status;
 };
 
 #alias {si}{
@@ -62,7 +69,7 @@
 #act {AREA NAME: %1 [%2]} {
 	#var {area}{%1};
 
-	#if {$area == "Smurfland%*"} {#var area Smurfland};
+	#if {"$area" == "Smurfland%*"} {#var area Smurfland};
 
 	#if {$stepignore != 1}{
 		make_roomlist {$area};
@@ -90,19 +97,21 @@
 	#map list {roomarea}{%0}{variable}{my_roomlist};
 	#list {roomlist}{create}{*my_roomlist[]};
 	#list {roomlist}{size}{area_size};
-	#if {$do_return == 1}{
-	#nop If we are coming back to this room, use the return_room_index;
-		#var {room_index}{$return_room_index};
-		#var {do_return}{0};
-	}{
-	#nop Make the Initial kill_path;
-		#var {room_index}{1};
+	#if {$area_size > 1} {
+		#if {$do_return == 1}{
+		#nop If we are coming back to this room, use the return_room_index;
+			#var {room_index}{$return_room_index};
+			#var {do_return}{0};
+		}{
+		#nop Make the Initial kill_path;
+			#var {room_index}{1};
+		};
+		#if {${roomvnum} == ${roomlist[${room_index}]}}{
+			#math {room_index}{$room_index + 1};
+		};
+		make_killpath {${roomlist[${room_index}]}};
+		#unvar my_roomlist;
 	};
-	#if {${roomvnum} == ${roomlist[${room_index}]}}{
-		#math {room_index}{$room_index + 1};
-	};
-	make_killpath {${roomlist[${room_index}]}};
-	#unvar my_roomlist;
 }
 
 #alias {steptest}{
@@ -176,39 +185,40 @@
 		update_chat ${timestamp}<178>Biome<088>: $tkstr;
 		db_submit_chat ${dbtimestamp}Biome: $tkstr;
 	};
-	#regex {$tkstr}{%*attacking you%*}{#var tkstr &1};
-	#regex {$tkstr}{%*(%d\%)}{#var tkstr &1};
-	#regex {$tkstr}{%*attacking you%*}{#var tkstr &1};
-	#regex {$tkstr}{%* [%*]%*}{#var tkstr &1};
-	#regex {$tkstr}{[%*] %*}{#var tkstr &2};
-	#regex {$tkstr}{%*[%*]%*}{#var tkstr &1};
-	#regex {$tkstr}{everybody}{#var tkstr none;#math {critter_room}{$critter_room - 1}};
-	#regex {$tkstr}{under the control of}{#var tkstr none;#math {critter_room}{$critter_room - 1}};
-	#if {"$area" == "Summerset Warrens"}{
-		#regex {$tkstr}{cow}{#var tkstr cow};
-		#if {"$tkstr" != "cow"}{
-			#math {critter_room}{$critter_room - 1};
-			#var tkstr cow;
-		};
-	};
-	#regex {$tkstr}{betrayer}{
-		#var tkstr none;
-		#math {critter_room}{$critter_room - 1};
-	};
-	#regex {$tkstr}{broodling}{
-		#var tkstr none;
-		#math {critter_room}{$critter_room - 1};
-	};
-	#regex {$tkstr}{%* %w.$}{#var tkstr &2};
-	#regex {$tkstr}{%* %w$}{#var tkstr &2};
-	#regex {$tkstr}{%* %S$}{#var tkstr &1};
-	#regex {$tkstr}{%* %w.$}{#var tkstr &2};
-	#regex {$tkstr}{%w.$}{#var tkstr &1};
-	#if {"$tkstr" != "none"}{
-		#var kstr $tkstr;
-	};
-	#if {"$area" == "Changeling Biome" && $starter2 != 1 && $domove2 == 1}{
-		bscan;
+    #regex {$tkstr}{%* attacking you%*}{#var tkstr &1};
+    #regex {$tkstr}{%*(%d\%)}{#var tkstr &1};
+    #regex {$tkstr}{%*attacking you%*}{#var tkstr &1};
+    #regex {$tkstr}{%* [%*]%*}{#var tkstr &1};
+    #regex {$tkstr}{[%*] %*}{#var tkstr &2};
+    #regex {$tkstr}{%*[%*]%*}{#var tkstr &1};
+    #regex {$tkstr}{everybody}{#var tkstr none;#math {critter_room}{$critter_room - 1}};
+    #regex {$tkstr}{under the control of}{#var tkstr none;#math {critter_room}{$critter_room - 1}};
+    #if {"$area" == "Summerset Warrens"}{
+        #regex {$tkstr}{cow}{#var tkstr cow};
+        #if {"$tkstr" != "cow"}{
+            #math {critter_room}{$critter_room - 1};
+            #var tkstr cow;
+        };
+    };
+    #regex {$tkstr}{betrayer}{
+        #var tkstr none;
+        #math {critter_room}{$critter_room - 1};
+    };
+    #regex {$tkstr}{broodling}{
+        #var tkstr none;
+        #math {critter_room}{$critter_room - 1};
+    };
+    #regex {$tkstr}{%* %w.$}{#var tkstr &2};
+    #regex {$tkstr}{%* %w$}{#var tkstr &2};
+    #regex {$tkstr}{%* %S$}{#var tkstr &1};
+    #regex {$tkstr}{%* %w.$}{#var tkstr &2};
+    #regex {$tkstr}{%w.$}{#var tkstr &1};
+    #regex {$tkstr}{%* %w}{#var tkstr &2};
+    #if {"$tkstr" != "none"}{
+        #var kstr $tkstr;
+    };
+    #if {"$area" == "Changeling Biome" && $starter2 != 1 && $domove2 == 1}{
+        bscan;
 	} {
 		#if {$autokill} {
 			kk;
@@ -250,14 +260,14 @@
 #alias ki {
 	#if {$domove2 == 1}{
 		#var domove2 0;
-		#var starter2 0;
+		#NOP #var starter2 0;
 		#var player_room 0;
-		#var critter_room 0
+		#var critter_room 0;
 	}{
 		#var critter_room 0;
 		#var player_room 0;
 		#var domove2 1;
-		#var starter2 1;
+		#NOP #var starter2 1;
 		#if {$stepignore > 0}{
 			#var stepper2 0;
 			#map {flag}{static}{off};
@@ -293,7 +303,8 @@
 		#if {${path_index} > ${path_size}}{
 			#math {room_index}{${room_index} +1};
 			#if {$room_index > $area_size}{
-				#var {room_index}{1}
+				#var {room_index}{1};
+				nextarea;
 			};
 			make_killpath {${roomlist[${room_index}]}};
 		};
@@ -303,12 +314,14 @@
 			#math {room_num}{$room_num + 1};
 			${kill_path[${room_num}]};
 		} {
-		#nop {If we aren't specifying a manual path, we are wandering aimlessly};
+			#nop {If we aren't specifying a manual path, we are wandering aimlessly};
 			dirfunction $desired_dir;
 		};
 	};
 };
 
+#NOP Disabled code forces the bot to stay in a room until clear
+#NOP Normally, starter2 is used to 'ignore' stuff in current room and move on
 #alias kill-loop {
 	#if {$starter2 == 1}{
 		step_function;

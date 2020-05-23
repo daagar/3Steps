@@ -360,7 +360,7 @@
 	#if {"${my[form]}" == "white tail spider"}{
 		#var {my[desired][perform]}{bite};
 	}{
-		#var {my[desired][perform]}{off};
+		#var {my[desired][perform]}{morph};
 	};
 	#if {"${my[current][perform]}" != "${my[desired][perform]}"}{
 		!perform ${my[desired][perform]};
@@ -427,21 +427,23 @@
 	!wrap corpse;
 	!divvy;
 
-	#if {$bot} {
-		#if {$coffin_full} {
-			#showme <128>Doing autocoffin donate<099>;
-			.pause;
-			go morgue;
-			donate coffin;
-			#var coffin_full 0;
-			#delay {1} {goback};
-			#delay {3} {#var resumebot 1};
-		} {
-			#if {$my[gp1][current] < 80 || $my[gp2][current] < 80} {
+	#delay {1} {
+		#if {$bot} {
+			#if {$coffin_full} {
+				#showme <128>Doing autocoffin donate<099>;
 				.pause;
-				#var resumebot 1;
+				go morgue;
+				donate coffin;
+				#var coffin_full 0;
+				#delay {1} {goback};
+				#delay {3} {#var resumebot 1};
 			} {
-				#if {$autokill} {ki};
+				#if {$my[gp1][current] < 80 || $my[gp2][current] < 80} {
+					.pause;
+					#var resumebot 1;
+				} {
+					#if {$autokill} {ki};
+				};
 			};
 		};
 	};
