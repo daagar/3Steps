@@ -1,4 +1,4 @@
-C 35000
+C 60000
 
 V 2020
 
@@ -18,7 +18,7 @@ F 11
 
 G 0
 
-I 2900
+I 5743
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -12149,14 +12149,14 @@ E { 3447} {n} {n} {1} {0} {} {1.000} {}
 E { 4539} {w} {w} {8} {0} {} {1.000} {}
 E { 4540} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2731} {0} {} {summonerentrance} { } {} {} {} {} {} {1.000} {}
+R { 2731} {0} {<118>} {summonerentrance} { } {} {} {} {} {} {1.000} {}
 E { 2732} {enter} {sit chair;enter mirror} {0} {0} {} {1.000} {}
 E { 4496} {leave} {leave} {0} {0} {} {1.000} {}
 
-R { 2732} {0} {} {summoner} { } {} {} {summoner} {} {} {1.000} {}
+R { 2732} {0} {} {summoner} { } {You are in a round room somewhere in the middle of the tower.  The room is unadorned except for a brilliant circular staircase ascending into the upper reaches of the tower. There appears to be no exit back to the lower room from here. } {Tower} {summoner} {} {} {1.000} {}
 E { 2733} {u} {u} {16} {0} {} {1.000} {}
 
-R { 2733} {0} {} {2733} { } {} {} {} {} {} {1.000} {}
+R { 2733} {0} {} {2733} { } {You have reached the top of the tower.  This appears to be a workshop of a magical sort.  Along the east wall are assorted glass jars filled with all manners of odd items. To the west, north, and south, large mirrors frame the room, reflecting you and your surroundings with a surreal intensity. In the middle of the room is a waist-high bookshelf with many strange tomes.  The circular stairway you rose from is in the very center.  This is obviously the study of a very knowledgeable wizard. } {Tower} {} {} {} {1.000} {}
 E { 2732} {d} {d} {32} {0} {} {1.000} {}
 E { 2731} {enter} {enter mirror} {0} {0} {} {1.000} {}
 
@@ -26194,7 +26194,7 @@ E { 5741} {n} {n} {1} {0} {} {1.000} {}
 E { 5710} {s} {s} {4} {0} {} {1.000} {}
 E { 5738} {w} {w} {8} {0} {} {1.000} {}
 
-R { 5743} {0} {} {iceblue} { } {} {} {} {} {} {1.000} {}
+R { 5743} {0} {} {iceblue} { } {} {} {iceblue} {} {} {1.000} {}
 E {  152} {portal} {portal} {0} {0} {} {1.000} {}
 E { 5744} {s} {s} {4} {0} {} {1.000} {}
 
@@ -31933,7 +31933,7 @@ E { 6706} {s} {s} {4} {0} {} {1.000} {}
 R { 7042} {0} {} {7042} { } {} {} {} {} {} {1.000} {}
 E {  824} {n} {n} {1} {0} {} {1.000} {}
 
-R { 7043} {0} {} {veggie garden} { } {} {} {} {} {} {1.000} {}
+R { 7043} {0} {} {veggie garden} { } {} {} {veggie garden} {} {} {1.000} {}
 E {  796} {leave} {leave} {0} {0} {} {1.000} {}
 E { 7044} {ne} {ne} {3} {0} {} {1.000} {}
 
@@ -47815,83 +47815,86 @@ R { 9865} {4104} {} {9865} { } {} {} {} {} {} {1.000} {}
 E { 9863} {w} {w} {8} {0} {} {1.000} {}
 E {  167} {e} {e} {2} {0} {} {1.000} {}
 
-R { 9866} {0} {} {9866} { } {} {} {} {} {} {1.000} {}
+R { 9866} {0} {<118>} {9866} { } {} {} {} {} {} {1.000} {}
 E { 9864} {e} {e} {2} {0} {} {1.000} {}
 E { 9867} {enter} {enter} {0} {0} {} {1.000} {}
 
-R { 9867} {0} {} {observatory} { } {} {} {} {} {} {1.000} {}
+R { 9867} {0} {} {observatory} { } {The size of the observatory takes your breath away.  The ceiling to this enormous complex is nearly one hundred feet above your head, with a large opening in the center.  You notice quite a few people wandering about flashing their cameras and hollering at their siblings.  This must be one of the largest tourist attractions around. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9866} {leave} {leave} {0} {0} {} {1.000} {}
 E { 9868} {n} {n} {1} {0} {} {1.000} {}
 
-R { 9868} {0} {} {9868} { } {} {} {} {} {} {1.000} {}
+R { 9868} {0} {} {9868} { } {Working your way further into the observatory you have wandered into the main lobby.  A few desks clutter the center of the room, and many people rush by you busy in their endeavors.  As you glance down to make sure you are not stepping on anyone's shoes, the tiles on the floor grab your attention. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9867} {s} {s} {4} {0} {} {1.000} {}
 E { 9869} {e} {e} {2} {0} {} {1.000} {}
 E { 9875} {w} {w} {8} {0} {} {1.000} {}
 E { 9876} {n} {n} {1} {0} {} {1.000} {}
 
-R { 9869} {0} {} {9869} { } {} {} {} {} {} {1.000} {}
+R { 9869} {0} {} {9869} { } {A large bay window on the southern wall catches your attention as you enter the room.  Off to a corner in the room, you notice a few of the Observatory technicians and workers talking amongst themselves, but loud enough for you to hear portions of the conversation.  It might be wise to listen to them more closely.  Try not to make yourself too noticeable however, because they might not be happy when they find out you are listening. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9868} {w} {w} {8} {0} {} {1.000} {}
 E { 9870} {n} {n} {1} {0} {} {1.000} {}
 
-R { 9870} {0} {} {9870} { } {} {} {} {} {} {1.000} {}
+R { 9870} {0} {} {9870} { } {A medium-size planet display stands before you.  Looking inside you see a brown and orange tint colored planet floating within.  The planet Venus is often referred to as 'Earth's sister planet' because of its very similar nature.  Among all of the planets in the known solar system, Venus is the closest planet to view from the telescope and brightest in the night sky. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9869} {s} {s} {4} {0} {} {1.000} {}
 E { 9871} {n} {n} {1} {0} {} {1.000} {}
 E { 9876} {w} {w} {8} {0} {} {1.000} {}
 
-R { 9871} {0} {} {9871} { } {} {} {} {} {} {1.000} {}
+R { 9871} {0} {} {9871} { } {The largest planet known in the nine planet solar system lies before you in the glass casing surrounding the display.  Its known diameter is roughly eleven diameters bigger than the size of Earth.  Off to the east, the stairwell that has circled the ceiling connects with the floor of the Observatory lobby. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9870} {s} {s} {4} {0} {} {1.000} {}
 E { 9872} {w} {w} {8} {0} {} {1.000} {}
 E { 9880} {e} {e} {2} {0} {} {1.000} {}
 
-R { 9872} {0} {} {9872} { } {} {} {} {} {} {1.000} {}
+R { 9872} {0} {} {9872} { } {The ceiling high overhead is obstructed by the long telescopic lens of the great Observatory telescope before you.  You have heard rumors that this once used to be able to transport you to the stars above, but of course that is all rumor, and the Observatory has changed. This is the pillar piece of equipment when one wants to gaze into the sky and the stars above.  Perhaps you should give it a go. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9871} {e} {e} {2} {0} {} {1.000} {}
 E { 9873} {w} {w} {8} {0} {} {1.000} {}
 E { 9876} {s} {s} {4} {0} {} {1.000} {}
 E { 9878} {n} {n} {1} {0} {} {1.000} {}
 
-R { 9873} {0} {} {9873} { } {} {} {} {} {} {1.000} {}
+R { 9873} {0} {} {9873} { } {The moons of Neptune act differently in this display than the others you have see thus far.  The moon rotation is opposite the natural rotation of the planet on its axis.  The planet is surrounded by four dark rings that can barely be seen.  You wonder what it would be like to dwell upon this eighth planet from the sun. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9872} {e} {e} {2} {0} {} {1.000} {}
 E { 9874} {s} {s} {4} {0} {} {1.000} {}
+E { 9879} {n} {n} {1} {0} {} {1.000} {}
 
-R { 9874} {0} {} {9874} { } {} {} {} {} {} {1.000} {}
+R { 9874} {0} {} {9874} { } {Examining the glass case, you see a small replica of the planet Pluto and its moons rotating around.  You can only assume that the models are magnetically charged, which allows them to move around silently.  Small flashes of red light emitting from the case catch your attention.  The Observatory security system must be armed. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9873} {n} {n} {1} {0} {} {1.000} {}
 E { 9875} {s} {s} {4} {0} {} {1.000} {}
 E { 9876} {e} {e} {2} {0} {} {1.000} {}
 E { 9877} {w} {w} {8} {0} {} {1.000} {}
 
-R { 9875} {0} {} {9875} { } {} {} {} {} {} {1.000} {}
+R { 9875} {0} {} {9875} { } {You walk further along the lobby and see a large exhibit in front of you. A large circular ball representing the planet Mars, floats gently in the air and a few smaller ones rotate around it.  The large glass case that encloses the model, reflects out red laser beams that you assume is the security system of the Observatory.  There is nothing worse than when a tourist makes off with an entire solar system. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9874} {n} {n} {1} {0} {} {1.000} {}
 E { 9868} {e} {e} {2} {0} {} {1.000} {}
 
-R { 9876} {0} {} {9876} { } {} {} {} {} {} {1.000} {}
+R { 9876} {0} {} {9876} { } {The seventh planet from the sun is displayed here in a rather large glass case.  The planet turns and rotates and you notice that the rotation is unlike any of the other planets.  It turns in an extremely tilted fashion with its sixteen satellites that turn around it.  The greenish display is the largest of all the others that you have passed by.  Truly an impressive sight to behold. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9874} {w} {w} {8} {0} {} {1.000} {}
 E { 9872} {n} {n} {1} {0} {} {1.000} {}
 E { 9868} {s} {s} {4} {0} {} {1.000} {}
 E { 9870} {e} {e} {2} {0} {} {1.000} {}
 
-R { 9877} {0} {} {9877} { } {} {} {} {} {} {1.000} {}
+R { 9877} {0} {} {9877} { } {The whole observatory is flowing with tourists, and you feel a small sense of relief having found a small section where they have not yet infected.  A small cubicle lies to the north with a sliding glass door enclosing it from the lobby.  The office room does not seem to have a ceiling but it really does not need one.  You could easily peek through the glass if you felt a little curious. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9874} {e} {e} {2} {0} {} {1.000} {}
+E {13247} {n} {n} {1} {0} {} {1.000} {}
 
-R { 9878} {0} {} {moonrocks} { } {} {} {moonrocks} {} {} {1.000} {}
+R { 9878} {0} {} {moonrocks} { } {A small souvenir stand along the corner of the wall grabs your attention as you enter this section of the Observatory.  A whole line of products line the small shelves behind the stand.  A small sign tacked up on a solar poster lists the current items for sale.  You might as well take a look and get a little remembrance of your trip here. } {Carina's Observatory} {moonrocks} {} {} {1.000} {}
 E { 9872} {s} {s} {4} {0} {} {1.000} {}
 E { 9879} {w} {w} {8} {0} {} {1.000} {}
 
-R { 9879} {0} {} {9879} { } {} {} {} {} {} {1.000} {}
+R { 9879} {0} {} {9879} { } {The rings of Saturn are the most known of any of the other planets in the solar system, and depicting them perfectly is the static display appropriately named.  The hustle of traffic is lessened on this part of the lobby, yet still busy with activity.  The white walls glisten under the lights of the domed ceiling above. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9878} {e} {e} {2} {0} {} {1.000} {}
+E { 9873} {s} {s} {4} {0} {} {1.000} {}
 
-R { 9880} {0} {} {9880} { } {} {} {} {} {} {1.000} {}
+R { 9880} {0} {} {9880} { } {Walking into a small quartered-off section in the Observatory, you notice the stairwell that leads up and around the ceiling above.  As to where it leads is anyone's guess.  You should probably stay clear in case anyone wanders in and catches you going up.  The sounds of the tourists erupt from the west.  It looks as if yet another one of them had set off an alarm. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9871} {w} {w} {8} {0} {} {1.000} {}
 E { 9881} {stairs} {stairs} {0} {0} {} {1.000} {}
 
-R { 9881} {0} {} {9881} { } {} {} {} {} {} {1.000} {}
+R { 9881} {0} {} {9881} { } {The stairwell leads back down to the Observatory lobby here.  A small walkway leads further south along the ceiling as thin as twelve inch beams.  To make it any further down the path, you are going to need to hop on the beams one by one.  You look across the lobby and see the telescope that stretches up and out of the ceiling. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9880} {stairs} {stairs} {0} {0} {} {1.000} {}
 E { 9882} {s} {s} {4} {0} {} {1.000} {}
 
-R { 9882} {0} {} {9882} { } {} {} {} {} {} {1.000} {}
+R { 9882} {0} {} {9882} { } {Steadying yourself on the thin metal walkway from beam to beam, you warily make your way across.  A small metal platform to the west appears to have much better footing way up here at the roof of the Observatory.  Looking down only sends chills up your spine at the thought of tumbling down. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9881} {n} {n} {1} {0} {} {1.000} {}
 E { 9883} {w} {w} {8} {0} {} {1.000} {}
 
-R { 9883} {0} {} {9883} { } {} {} {} {} {} {1.000} {}
+R { 9883} {0} {} {9883} { } {You find yourself on a small metal platform just underneath the large retractable portion of the ceiling.  The domed roof you once looked up upon, now act as distant walls as you linger above the Observatory lobby. A small black box lies upon one of the beams that run from one side of the roof to the other.  You could most definitely reach the touchpad upon it and retract the lens cover from the telescope if need be. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9882} {e} {e} {2} {0} {} {1.000} {}
 
 R { 9884} {0} {} {9884} { } {} {} {} {} {} {1.000} {}
@@ -62230,3 +62233,6 @@ E {13246} {e} {e} {2} {0} {} {1.000} {}
 
 R {13246} {0} {} {A bandit camp (w)} { } {You are in a bandit camp. There is a large bonfire in the middle of the camp. Around it are three tents, perhaps where the bandits hang out. A path goes out of the camp to the west. Maple trees line up around the camp making a protective wall of safety from attacks. } {Mystic Forest} {} {} {} {1.000} {}
 E {13245} {w} {w} {8} {0} {} {1.000} {}
+
+R {13247} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 9877} {s} {s} {4} {0} {} {1.000} {}

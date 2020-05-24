@@ -241,6 +241,7 @@
 
 #alias goback {
         #map run $returnroom;
+        #var {room_num}{$returnpathroom};
         #var {do_return}{1};
 	rating;
 }
