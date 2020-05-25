@@ -78,6 +78,9 @@
 
 #act {AREA RATING -> %1 [%2]}{
 	#var {area}{%2};
+	#if {"$area" == "Changeling"}{
+		#var {area}{Changeling Biome}
+	};
 	#if {$stepignore != 1}{
 		make_roomlist {$area};
 	};
@@ -97,13 +100,11 @@
 	#map list {roomarea}{%0}{variable}{my_roomlist};
 	#list {roomlist}{create}{*my_roomlist[]};
 	#list {roomlist}{size}{area_size};
-	#if {$area_size > 1} {
+	#if {$area_size > 1}{
 		#if {$do_return == 1}{
-		#nop If we are coming back to this room, use the return_room_index;
 			#var {room_index}{$return_room_index};
 			#var {do_return}{0};
 		}{
-		#nop Make the Initial kill_path;
 			#var {room_index}{1};
 		};
 		#if {${roomvnum} == ${roomlist[${room_index}]}}{
@@ -185,7 +186,7 @@
 		#NOP 	#math {critter_room}{$critter_room - 1}
 		#NOP };
 	};
-	#if {"$guild" == "changeling" && "$area" == "Changeling Biome"}{
+	#if {"$tkstr" != "none" && "$guild" == "changeling" && "$area" == "Changeling Biome"}{
 		#format {timestamp} {%t} {[<268>%H<088>:<268>%M<088>] };
 		#format {dbtimestamp} {%t} {[%Y:%m:%d %H:%M:%S]};
 		update_chat ${timestamp}<178>Biome<088>: $tkstr;

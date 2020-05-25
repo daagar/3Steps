@@ -42,7 +42,7 @@
 	#showme { Room : $roomvnum} 62 -38;
 	#showme {} 63 -38;
 	#showme {$biome[roomshort]} 64 -38;
-	#if {$autobscan == 1}{
+	#if {$autobscan == 1 && "$area" == "Changeling Biome"}{
 		#delay {0.15}{
 			#var {domove2}{1};
 			step_function;
