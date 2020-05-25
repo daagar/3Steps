@@ -31,10 +31,12 @@
         #button {56;-5;56;-4}{
         	#math {form_number}{$form_number + 1}{};
         	db_query_biome ${form_list[${form_number}][form]};
+		show_biome_table;
 	};
         #button {56;-8;56;-7}{
         	#math {form_number}{$form_number - 1}{};
         	db_query_biome ${form_list[${form_number}][form]};
+		show_biome_table;
 	};
 	#showme {Form : $biome_results[$result_number][form]} 58 -38;
         #button {58;-40;58;-35}{db_list_biome form};
