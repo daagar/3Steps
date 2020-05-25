@@ -10,8 +10,10 @@
 #list {kill_path}{create}{$kill_path}
 #list {kill_path}{size}{max_room}
 
-#var manual_stepper 1
-#var stepignore 2
+#nop {The following uses the manual stepper.  Disabling
+	#var manual_stepper 1
+	#var stepignore 2
+};
 #var room_num 0
 
 #alias {autobscan}{
@@ -42,7 +44,7 @@
 	#showme { Room : $roomvnum} 62 -38;
 	#showme {} 63 -38;
 	#showme {$biome[roomshort]} 64 -38;
-	#if {$autobscan == 1}{
+	#if {$autobscan == 1 && "$area" == "Changeling Biome"}{
 		#delay {0.15}{
 			#var {domove2}{1};
 			step_function;

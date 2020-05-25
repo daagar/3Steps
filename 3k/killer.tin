@@ -35,7 +35,7 @@
 
 #act {AREA RATING -> %1 [%2]}{
 	#var {area}{%2};
-	#if {"$area" == "Changeling" && $roomvnum == 7313}{
+	#if {"$area" == "Changeling"}{
 		#var {area}{Changeling Biome}
 	};
 	#if {$stepignore != 1}{
@@ -142,7 +142,7 @@
 			#math {critter_room}{$critter_room - 1}
 		};
 	};
-	#if {"$guild" == "changeling" && "$area" == "Changeling Biome"}{
+	#if {"$tkstr" != "none" && "$guild" == "changeling" && "$area" == "Changeling Biome"}{
 		#format {timestamp} {%t} {[<268>%H<088>:<268>%M<088>] };
 		#format {dbtimestamp} {%t} {[%Y:%m:%d %H:%M:%S]};
 		update_chat ${timestamp}<178>Biome<088>: $tkstr;
