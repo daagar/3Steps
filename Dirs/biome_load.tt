@@ -10,7 +10,8 @@
 #list {kill_path}{create}{$kill_path}
 #list {kill_path}{size}{max_room}
 
-#var stepper 1
+#var manual_stepper 1
+#var stepignore 2
 #var room_num 0
 
 #alias {autobscan}{
@@ -41,6 +42,12 @@
 	#showme { Room : $roomvnum} 62 -38;
 	#showme {} 63 -38;
 	#showme {$biome[roomshort]} 64 -38;
+	#if {$autobscan == 1}{
+		#delay {0.15}{
+			#var {domove2}{1};
+			step_function;
+		};
+	};
 };
 
 #act {This %1 appears to be %2 but %3}{
@@ -57,9 +64,6 @@
 			db_submit_biome
 		}{
 			#line log {.tt/info/biome.txt}{$roomvnum - $room_short_desc - $critter_short_desc - %1 - %2 - %3};
-		};
-		#if {$autobscan == 1}{
-			#delay {0.15}{ki};
 		};
 		display_biome_scan;
 	}
@@ -78,9 +82,6 @@
 			db_submit_biome
 		}{
 			#line log {.tt/info/biome.txt}{$roomvnum - $room_short_desc - $critter_short_desc - %1 - %2 - %3};
-		};
-		#if {$autobscan == 1}{
-			#delay {0.15}{ki};
 		};
 		display_biome_scan;
 	}
@@ -101,9 +102,6 @@
 		}{
 			#line log {.tt/info/biome.txt}{$roomvnum - $room_short_desc - $critter_short_desc - %1 - %2 - %3};
 		};
-		#if {$autobscan == 1}{
-			#delay {0.15}{ki};
-		};
 		display_biome_scan;
 	}
 }
@@ -121,9 +119,6 @@
 			db_submit_biome
 		}{
 			#line log {.tt/info/biome.txt}{$roomvnum - $room_short_desc - $critter_short_desc - %1 - %2 - %3};
-		};
-		#if {$autobscan == 1}{
-			#delay {0.15}{ki};
 		};
 		display_biome_scan;
 	}
