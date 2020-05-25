@@ -139,6 +139,12 @@
 	#var starter2 0;
 }
 
+#act {gold coins.} {
+	#if {$player_room == 0} {
+        !divvy coins;
+    };
+}
+
 #alias {mysearch}{
 	#var {searchstring}{%0};
 	#echo {Searching for $searchstring};
@@ -165,11 +171,11 @@
 		};
 	};
 
-	#if {"$guild" == "changeling"}{
-		#NOP #regex {$tkstr}{chromatic cuckoo owlet}{
-		#NOP 	#var tkstr none
-		#NOP 	#math {critter_room}{$critter_room - 1}
-		#NOP };
+	#if {"$guild" == "changeling"} {
+		#regex {$tkstr}{small puddle of slime} {
+			#var tkstr none;
+			#math {critter_room}{$critter_room - 1};
+		};
 		#NOP #regex {$tkstr}{tiny translucent bombardier beetle}{
 		#NOP 	#var tkstr none;
 		#NOP 	#math {critter_room}{$critter_room - 1}
@@ -192,6 +198,7 @@
     #regex {$tkstr}{[%*] %*}{#var tkstr &2};
     #regex {$tkstr}{%*[%*]%*}{#var tkstr &1};
     #regex {$tkstr}{everybody}{#var tkstr none;#math {critter_room}{$critter_room - 1}};
+	#regex {$tkstr}{^%w, %w's %*.$}{#var tkstr none;#math {critter_room}{$critter_room - 1}};
     #regex {$tkstr}{under the control of}{#var tkstr none;#math {critter_room}{$critter_room - 1}};
     #if {"$area" == "Summerset Warrens"}{
         #regex {$tkstr}{cow}{#var tkstr cow};
@@ -219,10 +226,6 @@
     };
     #if {"$area" == "Changeling Biome" && $starter2 != 1 && $domove2 == 1}{
         bscan;
-	} {
-		#if {$autokill} {
-			kk;
-		}
 	};
 }{9};
 
@@ -334,6 +337,9 @@
 			};
 			#if {${critter_room} > 0}{
 				#var domove2 0;
+				#if {$autokill} {
+					kk;
+				};
 			}{
 				step_function;
 			};

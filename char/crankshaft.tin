@@ -142,22 +142,20 @@
             #echo {<028>::STOPPING - Health threshold reached::<088>};
             .pause;
             #var resumebot 1;
-        };
-
+        } 
         #if {$my[gp1][current] < $my[gp1][max] * .4} {
             #echo {<028>::STOPPING - Power threshold reached::<088>};
             .pause;
             #var resumebot 1;
-        };
-
+        }; 
         #if {$my[gp2][current] > 50} {
             #echo {<028>::STOPPING - Heat limit reached::<088>};
             .pause;
-            #var resumebot 1;
-        } {
-            #if {$autokill} {ki};
+                #var resumebot 1;
         };
     };
+
+    #if {$bot && $autokill && !$resumebot} {ki};
 
 }
 

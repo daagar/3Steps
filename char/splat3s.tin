@@ -1,3 +1,4 @@
+#class {splat} {kill}
 #class {splat} {open}
 
 #var guild changeling
@@ -427,25 +428,12 @@
 	!wrap corpse;
 	!divvy;
 
-	#delay {1} {
-		#if {$bot} {
-			#if {$coffin_full} {
-				#showme <128>Doing autocoffin donate<099>;
-				.pause;
-				go morgue;
-				donate coffin;
-				#var coffin_full 0;
-				#delay {1} {goback};
-				#delay {3} {#var resumebot 1};
-			} {
-				#if {$my[gp1][current] < 80 || $my[gp2][current] < 80} {
-					.pause;
-					#var resumebot 1;
-				} {
-					#if {$autokill} {ki};
-				};
-			};
-		};
+
+	#if {$my[gp1][current] < 80 || $my[gp2][current] < 80} {
+		.pause;
+		#var resumebot 1;
+	} {
+		#if {$autokill} {ki};
 	};
 };
 
@@ -454,7 +442,14 @@
 	#NOP !bioextract;
 	#NOP !give corpse to nobody;
 
-	#var coffin_full 1;
+	#NOP #var coffin_full 1;
+	#if {$bot} {
+        .pause;
+        go morgue;
+        donate coffin;
+        goback;
+        #var resumebot 1;
+    }
 };
 
 #alias fa {
