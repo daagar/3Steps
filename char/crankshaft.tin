@@ -164,9 +164,7 @@
 #alias {cco} {
     #if {$bot} {
         .pause;
-        go morgue;
-        donate coffin;
-        goback;
+        donatecoffin;
         #var resumebot 1;
     }
 }

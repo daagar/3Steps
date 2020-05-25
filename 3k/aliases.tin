@@ -39,6 +39,12 @@
 #alias {pt} {ptell}
 #alias {pth} {ptell -h}
 
+#alias {donatecoffin} {
+        go morgue;
+        !donate coffin;
+        goback;
+}
+
 #alias {nex}{
 	#if {"%1" != ""}{
 		#send {nex %0};

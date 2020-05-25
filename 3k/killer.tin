@@ -185,7 +185,7 @@
 		#NOP 	#math {critter_room}{$critter_room - 1}
 		#NOP };
 	};
-	#if {"$guild" == "changeling" && "$area" == "Changeling"}{
+	#if {"$guild" == "changeling" && "$area" == "Changeling Biome"}{
 		#format {timestamp} {%t} {[<268>%H<088>:<268>%M<088>] };
 		#format {dbtimestamp} {%t} {[%Y:%m:%d %H:%M:%S]};
 		update_chat ${timestamp}<178>Biome<088>: $tkstr;
@@ -224,7 +224,7 @@
     #if {"$tkstr" != "none"}{
         #var kstr $tkstr;
     };
-    #if {"$area" == "Changeling Biome" && $starter2 != 1 && $domove2 == 1}{
+    #if {"$area" == "Changeling Biome" && $autobscan == 1}{
         bscan;
 	};
 }{9};

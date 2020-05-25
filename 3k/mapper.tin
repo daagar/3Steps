@@ -108,13 +108,18 @@
 			}
 		};
 		#if {$roomname_len == 0} {
-			#map set roomname {%2 (%3)}
+			#if {"$area" == "Changeling Biome"} {
+				#regexp {$room} {%* \\x7B%*} {#var room {&1}};
+				#map set roomname {$room (%3)};
+			} {
+				#map set roomname {%2 (%3)};
+			};
 		};
 		#if {$roomarea_len == 0} {
 			#map set roomarea {$area};
 			#map set roomcolor
 		};
-		#if {$roomdesc_len == 0 || "$finding_here" == "on"} {
+		#if {($roomdesc_len == 0 || "$finding_here" == "on") && "$area" != "Changeling Biome"} {
 			#var longcap on;
 			#unvar long;
 			#act {%%1} {

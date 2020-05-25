@@ -445,9 +445,7 @@
 	#NOP #var coffin_full 1;
 	#if {$bot} {
         .pause;
-        go morgue;
-        donate coffin;
-        goback;
+        donatecoffin;
         #var resumebot 1;
     }
 };
