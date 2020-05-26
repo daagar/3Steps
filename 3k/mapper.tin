@@ -21,12 +21,13 @@
 	#format {roomarea_len}	{%L} {$roomarea};
 	#format {roomdesc_len}	{%L} {$roomdesc};
 	#math {name_len} {42-$roomvnum_len};
-	#format {name_trunc} {%.${name_len}s} {$roomname};
+	#format {name_trunc} {%.${name_len}s} {${roomname}};
+	#replace {name_trunc}{~Q~}{};
 	#unvar area_mapped;
 	#map list {} {} {} {$roomarea} {variable} {area_mapped};
 	#var {room_cnt} {&area_mapped[]};
-	#draw {tile} 16 -42 16 -1 {<020>$roomarea <140>(<120>$room_cnt<140>)<099>};
-	#draw {tile} 17 -42 17 -1 {<140>[<030>$roomvnum<140>] <130>$name_trunc<099>}
+	#draw {tile} 16 -42 16 -1 {<020>${roomarea} <140>(<120>${room_cnt}<140>)<099>};
+	#draw {tile} 17 -42 17 -1 {<140>[<030>${roomvnum}<140>] <130>${name_trunc}<099>}
 }
 
 #event {MAP UPDATED VTMAP} {
