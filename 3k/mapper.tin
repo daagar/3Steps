@@ -23,7 +23,6 @@
 	#format {roomdesc_len}	{%L} {$roomdesc};
 	#math {name_len} {42-$roomvnum_len};
 	#format {name_trunc} {%.${name_len}s} {${roomname}};
-	#replace {name_trunc}{~Q~}{};
 	#var {room_map_string}{<140>\[<030>${roomvnum}<140>\] <130>${name_trunc}<099>};
 	#format {room_map_string}{%.42s}{$room_map_string};
 	#unvar area_mapped;
