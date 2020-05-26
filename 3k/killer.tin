@@ -28,9 +28,7 @@
 
 #act {AREA NAME: %1 [%2]} {
 	#var {area}{%1};
-	#if {$stepignore != 1}{
-		make_roomlist {$area};
-	};
+	make_roomlist {$area};
 }
 
 #act {AREA RATING -> %1 [%2]}{
@@ -38,9 +36,7 @@
 	#if {"$area" == "Changeling"}{
 		#var {area}{Changeling Biome}
 	};
-	#if {$stepignore != 1}{
-		make_roomlist {$area};
-	};
+	make_roomlist {$area};
 }
 
 #alias {make_killpath}{
