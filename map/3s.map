@@ -18,7 +18,7 @@ F 11
 
 G 0
 
-I 11211
+I 10264
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -49411,7 +49411,7 @@ R {10258} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10257} {sw} {sw} {12} {0} {} {1.000} {}
 E {10259} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10259} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10259} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {10258} {sw} {sw} {12} {0} {} {1.000} {}
 E {10260} {ne} {ne} {3} {0} {} {1.000} {}
 E {10261} {nw} {nw} {9} {0} {} {1.000} {}
@@ -49419,57 +49419,62 @@ E {10261} {nw} {nw} {9} {0} {} {1.000} {}
 R {10260} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10259} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {10261} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10261} {0} {} {Mountains (se,ne,n)} { } {Mountains Sharp, craggy rocks make ground travel slow and twisted.  Sounds of wildlife abound, making you feel far from civilization.  Evergreen trees grow wherever they can find a fertile patch between the rocks.  Further to the north and northeast you can see that the mountains continue.   } {Mud} {} {} {} {1.000} {}
 E {10259} {se} {se} {6} {0} {} {1.000} {}
 E {10262} {n} {n} {1} {0} {} {1.000} {}
+E {10263} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10262} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10262} {0} {} {Mountains (nw,n,s,e)} { } {Mountains Mountains of various sizes surround you.  Sounds of wildlife abound, making you feel far from civilization.  There is a trail here, possibly of animal origin.  You follow it with your eyes but it quickly fades into the terrain.   } {Mud} {} {} {} {1.000} {}
 E {10261} {s} {s} {4} {0} {} {1.000} {}
 E {10263} {e} {e} {2} {0} {} {1.000} {}
+E {13267} {nw} {nw} {9} {0} {} {1.000} {}
+E {13268} {n} {n} {1} {0} {} {1.000} {}
 
-R {10263} {0} {} {blackfathom} { } {} {} {blackfathom} {} {} {1.000} {}
+R {10263} {0} {} {Mountains (sw,ne,w,enter)} { } {Mountains Mountains of various sizes surround you.  Evergreen trees grow wherever they can find a fertile patch between the rocks.  The air feels cool and refreshing as you travel through these higher elevations.  Further to the northeast you see a mountaintop, while to the west you see that the mountains continue.  A dark cave can be seen in the mountain that stands before you. } {Mud} {} {} {} {1.000} {}
 E {10262} {w} {w} {8} {0} {} {1.000} {}
 E {10264} {enter} {enter} {0} {0} {} {1.000} {}
+E {10261} {sw} {sw} {12} {0} {} {1.000} {}
+E {13269} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10264} {0} {} {acidloths} { } {} {} {acidloths} {} {} {1.000} {}
+R {10264} {0} {} {~Q~ Blackfathom ~Q~ (clockwise,leave,counterclockwise)} { } {This is the entrance to a system of caves known as Blackfathom. Although whispered about in some of Fantasy's more exotic taverns, little is known about this mysterious subterranean realm. It's very dark, the light from outside seemingly swallowed up as soon as you set foot inside. It's cold in here too. The temperature must be 20 degrees lower than it is out in the mountain sunshine. } {Blackfathom} {acidloths} {} {} {1.000} {}
 E {10263} {leave} {leave} {0} {0} {} {1.000} {}
 E {10265} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 E {10273} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 
-R {10265} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10265} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {The surrounding darkness leaves little to be seen as you wander this topmost level of Blackfathom. Your footsteps echo as they bounce along the rough-hewn rock walls and cavernous ceiling overhead. A slight breeze blows through the cave intermittently, the cool air sending a chill through your body. Every once in awhile, the ground crunches beneath your feet as you step on loose pebbles. } {Blackfathom} {} {} {} {1.000} {}
 E {10264} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {10266} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {10266} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10266} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {The surrounding darkness leaves little to be seen as you wander this topmost level of Blackfathom. Your footsteps echo as they bounce along the rough-hewn rock walls and cavernous ceiling overhead. A slight breeze blows through the cave intermittently, the cool air sending a chill through your body. Every once in awhile, the ground crunches beneath your feet as you step on loose pebbles. } {Blackfathom} {} {} {} {1.000} {}
 E {10265} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {10267} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {10267} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10267} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {The sound of condensation dripping into a puddle can be heard coming from somewhere in the darkness, but you can't make out exactly where. Cool air blows through the cavern, sending goosebumps along your flesh. There's an underground, earthy smell that wafts through this circle of Blackfathom, but a fainter, rotten stench can be detected as well. } {Blackfathom} {} {} {} {1.000} {}
 E {10266} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {10268} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {10268} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10268} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {The surrounding darkness leaves little to be seen as you wander this topmost level of Blackfathom. Your footsteps echo as they bounce along the rough-hewn rock walls and cavernous ceiling overhead. A slight breeze blows through the cave intermittently, the cool air sending a chill through your body. Every once in awhile, the ground crunches beneath your feet as you step on loose pebbles. } {Blackfathom} {} {} {} {1.000} {}
 E {10267} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {10269} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {10269} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10269} {0} {} {~Q~ Blackfathom ~Q~ (d,counterclockwise,clockwise)} { } {A set of wide stairs have been carved from the floor in this section of the cave. They lead downward, deeper into the depths of Blackfathom. Other than the stairs, this cavern looks much like those that surround it. The rough rock walls are cool to the touch and the ceiling yawns high overhead, lost in the darkness. The air drifting up from the staircase smells old and rotten. } {Blackfathom} {} {} {} {1.000} {}
 E {10268} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {10270} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 E {11323} {d} {d} {32} {0} {} {1.000} {}
 
-R {10270} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10270} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Only the dimmest of light manages to illuminate the uppermost circle of the underground realm known as Blackfathom. The stark caverns you wander were cut from the mountains a millennia ago and the rough-hewn walls are cool to the touch. The ground is relatively even and while you cannot see the ceiling, it seems to be quite high overhead based on the echo every sound makes. } {Blackfathom} {} {} {} {1.000} {}
 E {10269} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {10271} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {10271} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10271} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {The surrounding darkness leaves little to be seen as you wander this topmost level of Blackfathom. Your footsteps echo as they bounce along the rough-hewn rock walls and cavernous ceiling overhead. A slight breeze blows through the cave intermittently, the cool air sending a chill through your body. Every once in awhile, the ground crunches beneath your feet as you step on loose pebbles. } {Blackfathom} {} {} {} {1.000} {}
 E {10270} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {10272} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {10272} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10272} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Only the dimmest of light manages to illuminate the uppermost circle of the underground realm known as Blackfathom. The stark caverns you wander were cut from the mountains a millennia ago and the rough-hewn walls are cool to the touch. The ground is relatively even and while you cannot see the ceiling, it seems to be quite high overhead based on the echo every sound makes. } {Blackfathom} {} {} {} {1.000} {}
 E {10271} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {10273} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {10273} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10273} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {The surrounding darkness leaves little to be seen as you wander this topmost level of Blackfathom. Your footsteps echo as they bounce along the rough-hewn rock walls and cavernous ceiling overhead. A slight breeze blows through the cave intermittently, the cool air sending a chill through your body. Every once in awhile, the ground crunches beneath your feet as you step on loose pebbles. } {Blackfathom} {} {} {} {1.000} {}
 E {10272} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {10264} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
@@ -49533,7 +49538,7 @@ R {10288} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10287} {w} {w} {8} {0} {} {1.000} {}
 E {   51} {e} {e} {2} {0} {} {1.000} {}
 
-R {10289} {0} {} {detroit} { } {} {} {blackfathom} {} {} {1.000} {}
+R {10289} {0} {} {detroit} { } {} {} {} {} {} {1.000} {}
 E { 3637} {sleave} {#map leave;s;#map go 3637} {0} {0} {} {1.000} {}
 E {10290} {n} {n} {1} {0} {} {1.000} {}
 E {10435} {e} {e} {2} {0} {} {1.000} {}
@@ -54072,136 +54077,138 @@ E {11313} {s} {s} {4} {0} {} {1.000} {}
 E {11300} {e} {e} {2} {0} {} {1.000} {}
 E {11318} {w} {w} {8} {0} {} {1.000} {}
 
-R {11323} {0} {} {acidloths2} { } {} {} {} {} {} {1.000} {}
+R {11323} {0} {} {acidloths2} { } {A set of wide stairs have been carved from the rock and lead upward to the cavern floor above this one. Each of the stairs is long enough that it requires two of your strides to span it, a clear indicator that they were built for something much larger than a man. The surrounding rock walls are rough and cool to the touch, the chill in the air sapping any warmth they might possess. } {Blackfathom} {} {} {} {1.000} {}
 E {10269} {u} {u} {16} {0} {} {1.000} {}
 E {11324} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 E {11332} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 
-R {11324} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11324} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {The sound of dripping water echoes through the cavern as does the clumsy thudding of your footsteps. Stale, cold air hangs in the cave like a shroud and a faint stench of rot and decay emanates from somewhere up ahead. The darkness here on the second cirle of Blackfathom is even thicker than that above, its black embrace that much more dangerous. } {Blackfathom} {} {} {} {1.000} {}
 E {11323} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11325} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11325} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11325} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Your surroundings are cloaked in darkness, your pitiful light source barely able to illuminate anything beyond an arm's reach. This cavern was carved from the mountain a millennia ago and its stark emptiness serves as a reminder of your short and meaningless existence in comparison. The rock beneath your feet is slick with moisture, making your footing treacherous. } {Blackfathom} {} {} {} {1.000} {}
 E {11324} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11326} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11326} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11326} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Your surroundings are cloaked in darkness, your pitiful light source barely able to illuminate anything beyond an arm's reach. This cavern was carved from the mountain a millennia ago and its stark emptiness serves as a reminder of your short and meaningless existence in comparison. The rock beneath your feet is slick with moisture, making your footing treacherous. } {Blackfathom} {} {} {} {1.000} {}
 E {11325} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11327} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11327} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11327} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {The sound of dripping water echoes through the cavern as does the clumsy thudding of your footsteps. Stale, cold air hangs in the cave like a shroud and a faint stench of rot and decay emanates from somewhere up ahead. The darkness here on the second cirle of Blackfathom is even thicker than that above, its black embrace that much more dangerous. } {Blackfathom} {} {} {} {1.000} {}
 E {11326} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11328} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11328} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11328} {0} {} {~Q~ Blackfathom ~Q~ (d,counterclockwise,clockwise)} { } {Wide stairs have been carved into the rock floor, leading deeper into the dark depths of Blackfathom. Besides the stairs, this cave is very similar to those that surround it. Rough rock walls force travel in a circular direction no matter where you go and the ceiling is lost somewhere in the darkness overhead. The ground on which you tread is slick with condensation and there's a chilly bite to the air. } {Blackfathom} {} {} {} {1.000} {}
 E {11327} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11329} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 E {11333} {d} {d} {32} {0} {} {1.000} {}
 
-R {11329} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11329} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {The sound of dripping water echoes through the cavern as does the clumsy thudding of your footsteps. Stale, cold air hangs in the cave like a shroud and a faint stench of rot and decay emanates from somewhere up ahead. The darkness here on the second cirle of Blackfathom is even thicker than that above, its black embrace that much more dangerous. } {Blackfathom} {} {} {} {1.000} {}
 E {11328} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11330} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11330} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11330} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Your surroundings are cloaked in darkness, your pitiful light source barely able to illuminate anything beyond an arm's reach. This cavern was carved from the mountain a millennia ago and its stark emptiness serves as a reminder of your short and meaningless existence in comparison. The rock beneath your feet is slick with moisture, making your footing treacherous. } {Blackfathom} {} {} {} {1.000} {}
 E {11329} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11331} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11331} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11331} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {You nearly lose your footing on the slick rock of the cavern as you fumble around in the darkness. The air is cold enough to induce goosebumps and so thick, it feels like a wet blanket slowly trying to suffocate you. Sound echoes off the rough-hewn walls and high ceiling of the passage, combining with the darkness to create a strong sense of disorientation. } {Blackfathom} {} {} {} {1.000} {}
 E {11330} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11332} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11332} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11332} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {The sound of dripping water echoes through the cavern as does the clumsy thudding of your footsteps. Stale, cold air hangs in the cave like a shroud and a faint stench of rot and decay emanates from somewhere up ahead. The darkness here on the second cirle of Blackfathom is even thicker than that above, its black embrace that much more dangerous. } {Blackfathom} {} {} {} {1.000} {}
 E {11331} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11323} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11333} {0} {} {acidloths3} { } {} {} {} {} {} {1.000} {}
+R {11333} {0} {} {acidloths3} { } {A set of wide and well-worn stairs lead up from this level of Blackfathom to the one above. Although pitch black in here, your light source and a close inspection reveals deep scratch marks in the walls immediately surrounding the stairs. From the length and width of the marks, you can only surmise that something huge and powerful was dragged through here at some point, desperately trying to claw its way back. } {Blackfathom} {} {} {} {1.000} {}
 E {11328} {u} {u} {16} {0} {} {1.000} {}
 E {11334} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 E {11342} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 
-R {11334} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11334} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Darkness seems to be closing in on you, cutting off any escape to the light and open space beyond these caves. You're deep enough below ground that fresh air is all-but-forgotten and in its place is a stale mixture of recycled oxygen and foul stink that claws at your senses like a rotten corpse. Whatever lives down here clearly isn't human. This place is more like a Hell-ish prison than a home. } {Blackfathom} {} {} {} {1.000} {}
 E {11333} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11335} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11335} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11335} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {This cave is more narrow than those above, the walls threatening to crush you and bury you here deep beneath the earth. The ground is uneven and the air is stale and foul. An occasional low rumble can be felt throughout the caves, its source somewhere far away but powerful. There's no breeze to be found and the temperature seems to be rising the deeper you go within these passages. } {Blackfathom} {} {} {} {1.000} {}
 E {11334} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11336} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11336} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11336} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Darkness seems to be closing in on you, cutting off any escape to the light and open space beyond these caves. You're deep enough below ground that fresh air is all-but-forgotten and in its place is a stale mixture of recycled oxygen and foul stink that claws at your senses like a rotten corpse. Whatever lives down here clearly isn't human. This place is more like a Hell-ish prison than a home. } {Blackfathom} {} {} {} {1.000} {}
 E {11335} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11337} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11337} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11337} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {A throaty growl echoes through this passage, emanating from somewhere up ahead in the darkness. Your light source must struggle to pierce the ebony cloak that surrounds you. Anything more than a few inches away is lost in the blackness. As you travel deeper inside these caves, the air becomes harder and harder to breathe, full of a stale foulness that claws at the senses. } {Blackfathom} {} {} {} {1.000} {}
 E {11336} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11338} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11338} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11338} {0} {} {~Q~ Blackfathom ~Q~ (d,counterclockwise,clockwise)} { } {Another set of stairs lead down from this passage to one further below. Although so dark you can barely see your hand in front of your face, your light source reveals that several chunks have been ripped out of the walls surrounding the staircase. There are deep gouges along the stairs as well, suggesting a violent struggle took place here at some point. The air wafting up from the stairs is even fouler than that around you. } {Blackfathom} {} {} {} {1.000} {}
 E {11337} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11339} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 E {11343} {d} {d} {32} {0} {} {1.000} {}
 
-R {11339} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11339} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {This cave is more narrow than those above, the walls threatening to crush you and bury you here deep beneath the earth. The ground is uneven and the air is stale and foul. An occasional low rumble can be felt throughout the caves, its source somewhere far away but powerful. There's no breeze to be found and the temperature seems to be rising the deeper you go within these passages. } {Blackfathom} {} {} {} {1.000} {}
 E {11338} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11340} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11340} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11340} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {A throaty growl echoes through this passage, emanating from somewhere up ahead in the darkness. Your light source must struggle to pierce the ebony cloak that surrounds you. Anything more than a few inches away is lost in the blackness. As you travel deeper inside these caves, the air becomes harder and harder to breathe, full of a stale foulness that claws at the senses. } {Blackfathom} {} {} {} {1.000} {}
 E {11339} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11341} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11341} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11341} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {This cave is more narrow than those above, the walls threatening to crush you and bury you here deep beneath the earth. The ground is uneven and the air is stale and foul. An occasional low rumble can be felt throughout the caves, its source somewhere far away but powerful. There's no breeze to be found and the temperature seems to be rising the deeper you go within these passages. } {Blackfathom} {} {} {} {1.000} {}
 E {11340} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11342} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11342} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11342} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Darkness seems to be closing in on you, cutting off any escape to the light and open space beyond these caves. You're deep enough below ground that fresh air is all-but-forgotten and in its place is a stale mixture of recycled oxygen and foul stink that claws at your senses like a rotten corpse. Whatever lives down here clearly isn't human. This place is more like a Hell-ish prison than a home. } {Blackfathom} {} {} {} {1.000} {}
 E {11341} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11333} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11343} {0} {} {acidloths4} { } {} {} {} {} {} {1.000} {}
+R {11343} {0} {} {acidloths4} { } {A wide set of stairs rise up from this passage to the one above. It is so dark this far below the surface that your light source is nearly swallowed up by the surrounding inky blackness. Chunks of rock litter the floor of the cavern, ripped loose from the walls and making navigation that much more difficult. There's a stench in the air that is enough to make most men retch. } {Blackfathom} {} {} {} {1.000} {}
 E {11338} {u} {u} {16} {0} {} {1.000} {}
 E {11344} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 E {11354} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 
-R {11344} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11344} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {A foul odor permeates this cavern, filling your nostrils with its stench. The darkness is so complete that you have little chance of discovering the stench's source, but that may just be for the best. The ground beneath your feet is rocky and loose, making every step an adventure. Your light struggles to illuminate your way through this underground realm. } {Blackfathom} {} {} {} {1.000} {}
 E {11343} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11345} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11345} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11345} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Inky blackness threatens to entomb you here, deep beneath the surface and far away from home. The ground is full of jagged chunks of rock and gritty debris, all of which makes exploration of these passages that much more dangerous. The horrible stench that lingers in the air promises something foul and the deeper you travel within these caves, the more likely you are to find it. } {Blackfathom} {} {} {} {1.000} {}
 E {11344} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11346} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11346} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11346} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {A foul odor permeates this cavern, filling your nostrils with its stench. The darkness is so complete that you have little chance of discovering the stench's source, but that may just be for the best. The ground beneath your feet is rocky and loose, making every step an adventure. Your light struggles to illuminate your way through this underground realm. } {Blackfathom} {} {} {} {1.000} {}
 E {11345} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11347} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11347} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11347} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Every step through this rocky terrain in the utter darkness of this underground passage threatens bumps, bruises, or worse. Even with your light source, you cannot see anything beyond a couple inches away. The fetid stink in the air is enough to make you gag. The deeper you delve into these passages, the worse the stench becomes. Whatever lies at the bottom of Blackfathom must be truly horrific. } {Blackfathom} {} {} {} {1.000} {}
 E {11346} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11348} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11348} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11348} {0} {} {~Q~ Blackfathom ~Q~ (d,counterclockwise,clockwise)} { } {Descending from this passage is a wide set of stairs cut from the rock of the mountain that disappear into the utter blackness below. Rubble lies along the corners of the staircase, as if an earthquake or perhaps some massive beast tore the rock walls to pieces at some point in the distant past. There's no telling how much damage might lie below. Caution is advised. } {Blackfathom} {} {} {} {1.000} {}
 E {11347} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11349} {d} {d} {32} {0} {} {1.000} {}
 E {11351} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11349} {0} {} {acidloths5} { } {} {} {} {} {} {1.000} {}
+R {11349} {0} {} {acidloths5} { } {A wide set of ancient stairs cut from the broken cavern wall rise from this pitch black passage up to a higher passage above. The rock walls have been torn apart by some powerful past event, leaving rubble all over the cavern floor. An acrid smell wafts through the darkness, burning your nostrils and warning of something terrible in the vicinity. } {Blackfathom} {} {} {} {1.000} {}
 E {11348} {u} {u} {16} {0} {} {1.000} {}
 E {11350} {clockwise} {clockwise} {0} {0} {} {1.000} {}
+E {13248} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 
-R {11350} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11350} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {You're wandering the lowest circle of Blackfathom. The darkness cloaks your surroundings in a black that is so deep, it is sometimes difficult to determine if your eyes are open or closed. Sounds echo through the rocky corridor, an eerie keening punctuated by ear-splitting shrieks. There's a stench that is so foul, it makes the air nearly unbreathable. } {Blackfathom} {} {} {} {1.000} {}
 E {11349} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
+E {13249} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11351} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11351} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Every step through this rocky terrain in the utter darkness of this underground passage threatens bumps, bruises, or worse. Even with your light source, you cannot see anything beyond a couple inches away. The fetid stink in the air is enough to make you gag. The deeper you delve into these passages, the worse the stench becomes. Whatever lies at the bottom of Blackfathom must be truly horrific. } {Blackfathom} {} {} {} {1.000} {}
 E {11348} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11352} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11352} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11352} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Inky blackness threatens to entomb you here, deep beneath the surface and far away from home. The ground is full of jagged chunks of rock and gritty debris, all of which makes exploration of these passages that much more dangerous. The horrible stench that lingers in the air promises something foul and the deeper you travel within these caves, the more likely you are to find it. } {Blackfathom} {} {} {} {1.000} {}
 E {11351} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11353} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11353} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11353} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Every step through this rocky terrain in the utter darkness of this underground passage threatens bumps, bruises, or worse. Even with your light source, you cannot see anything beyond a couple inches away. The fetid stink in the air is enough to make you gag. The deeper you delve into these passages, the worse the stench becomes. Whatever lies at the bottom of Blackfathom must be truly horrific. } {Blackfathom} {} {} {} {1.000} {}
 E {11352} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11354} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
-R {11354} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11354} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {A foul odor permeates this cavern, filling your nostrils with its stench. The darkness is so complete that you have little chance of discovering the stench's source, but that may just be for the best. The ground beneath your feet is rocky and loose, making every step an adventure. Your light struggles to illuminate your way through this underground realm. } {Blackfathom} {} {} {} {1.000} {}
 E {11353} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {11343} {clockwise} {clockwise} {0} {0} {} {1.000} {}
 
@@ -62254,3 +62261,85 @@ E {13245} {w} {w} {8} {0} {} {1.000} {}
 
 R {13247} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 9877} {s} {s} {4} {0} {} {1.000} {}
+
+R {13248} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R {13249} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Even with the length of time you've explored these underground passages, your eyes have not adjusted to the utter darkness that surrounds you. The blackness down here is all-consuming. Chunks of rock litter the uneven ground, made apparent by your frequent stumbles as you navigate this cavern. Somewhere nearby, an awful shriek pierces the air, leaving you with goosebumps. } {Blackfathom} {} {} {} {1.000} {}
+E {11350} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
+E {13250} {clockwise} {clockwise} {0} {0} {} {1.000} {}
+
+R {13250} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Even with the length of time you've explored these underground passages, your eyes have not adjusted to the utter darkness that surrounds you. The blackness down here is all-consuming. Chunks of rock litter the uneven ground, made apparent by your frequent stumbles as you navigate this cavern. Somewhere nearby, an awful shriek pierces the air, leaving you with goosebumps. } {Blackfathom} {} {} {} {1.000} {}
+E {13249} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
+E {13251} {clockwise} {clockwise} {0} {0} {} {1.000} {}
+
+R {13251} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Even with the length of time you've explored these underground passages, your eyes have not adjusted to the utter darkness that surrounds you. The blackness down here is all-consuming. Chunks of rock litter the uneven ground, made apparent by your frequent stumbles as you navigate this cavern. Somewhere nearby, an awful shriek pierces the air, leaving you with goosebumps. } {Blackfathom} {} {} {} {1.000} {}
+E {13250} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
+E {13252} {clockwise} {clockwise} {0} {0} {} {1.000} {}
+
+R {13252} {0} {} {~Q~ Blackfathom ~Q~ (s,counterclockwise,clockwise)} { } {Rising above the rubble-strewn floor of this passage to the south is a massive door. Set in the inner cavern wall, the outline of the door is at least 20 feet tall and nearly as wide. Deep gouges mar the wall around the door, but the door itself is perfect, without a single scratch. On the left-hand side of the door, almost four feet from the ground is a keyhole. An eerie red light streams through the keyhole, like a warning of the Hell to be found inside. } {Blackfathom} {} {} {} {1.000} {}
+E {13251} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
+E {13253} {s} {s} {4} {0} {} {1.000} {}
+E {13254} {clockwise} {clockwise} {0} {0} {} {1.000} {}
+
+R {13253} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13252} {n} {n} {1} {0} {} {1.000} {}
+
+R {13254} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Even with the length of time you've explored these underground passages, your eyes have not adjusted to the utter darkness that surrounds you. The blackness down here is all-consuming. Chunks of rock litter the uneven ground, made apparent by your frequent stumbles as you navigate this cavern. Somewhere nearby, an awful shriek pierces the air, leaving you with goosebumps. } {Blackfathom} {} {} {} {1.000} {}
+E {13252} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
+E {13255} {clockwise} {clockwise} {0} {0} {} {1.000} {}
+
+R {13255} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {The ground rumbles beneath your feet as a horrible shriek echoes through this pitch black subterranean passage. Chunks of rock lie in your way, making every step in the darkness another opportunity to skin your knees or bruise your shins. The air in here is truly foul, every breath burning your nostrils with a fetid stench. Given the power of the odor, it would seem that its source is close by. } {Blackfathom} {} {} {} {1.000} {}
+E {13254} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
+E {13256} {clockwise} {clockwise} {0} {0} {} {1.000} {}
+
+R {13256} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {The ground rumbles beneath your feet as a horrible shriek echoes through this pitch black subterranean passage. Chunks of rock lie in your way, making every step in the darkness another opportunity to skin your knees or bruise your shins. The air in here is truly foul, every breath burning your nostrils with a fetid stench. Given the power of the odor, it would seem that its source is close by. } {Blackfathom} {} {} {} {1.000} {}
+E {13255} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
+E {13257} {clockwise} {clockwise} {0} {0} {} {1.000} {}
+
+R {13257} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {The ground rumbles beneath your feet as a horrible shriek echoes through this pitch black subterranean passage. Chunks of rock lie in your way, making every step in the darkness another opportunity to skin your knees or bruise your shins. The air in here is truly foul, every breath burning your nostrils with a fetid stench. Given the power of the odor, it would seem that its source is close by. } {Blackfathom} {} {} {} {1.000} {}
+E {13256} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
+E {13258} {clockwise} {clockwise} {0} {0} {} {1.000} {}
+
+R {13258} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,u,clockwise)} { } {A wide set of ancient stairs cut from the broken cavern wall rise from this pitch black passage up to a higher passage above. The rock walls have been torn apart by some powerful past event, leaving rubble all over the cavern floor. An acrid smell wafts through the darkness, burning your nostrils and warning of something terrible in the vicinity. } {Blackfathom} {} {} {} {1.000} {}
+E {13257} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
+E {13259} {u} {u} {16} {0} {} {1.000} {}
+E {13260} {clockwise} {clockwise} {0} {0} {} {1.000} {}
+
+R {13259} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13258} {d} {d} {32} {0} {} {1.000} {}
+
+R {13260} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {You're wandering the lowest circle of Blackfathom. The darkness cloaks your surroundings in a black that is so deep, it is sometimes difficult to determine if your eyes are open or closed. Sounds echo through the rocky corridor, an eerie keening punctuated by ear-splitting shrieks. There's a stench that is so foul, it makes the air nearly unbreathable. } {Blackfathom} {} {} {} {1.000} {}
+E {13258} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
+E {13261} {clockwise} {clockwise} {0} {0} {} {1.000} {}
+
+R {13261} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Even with the length of time you've explored these underground passages, your eyes have not adjusted to the utter darkness that surrounds you. The blackness down here is all-consuming. Chunks of rock litter the uneven ground, made apparent by your frequent stumbles as you navigate this cavern. Somewhere nearby, an awful shriek pierces the air, leaving you with goosebumps. } {Blackfathom} {} {} {} {1.000} {}
+E {13260} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
+E {13262} {clockwise} {clockwise} {0} {0} {} {1.000} {}
+
+R {13262} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Even with the length of time you've explored these underground passages, your eyes have not adjusted to the utter darkness that surrounds you. The blackness down here is all-consuming. Chunks of rock litter the uneven ground, made apparent by your frequent stumbles as you navigate this cavern. Somewhere nearby, an awful shriek pierces the air, leaving you with goosebumps. } {Blackfathom} {} {} {} {1.000} {}
+E {13261} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
+E {13263} {clockwise} {clockwise} {0} {0} {} {1.000} {}
+
+R {13263} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Even with the length of time you've explored these underground passages, your eyes have not adjusted to the utter darkness that surrounds you. The blackness down here is all-consuming. Chunks of rock litter the uneven ground, made apparent by your frequent stumbles as you navigate this cavern. Somewhere nearby, an awful shriek pierces the air, leaving you with goosebumps. } {Blackfathom} {} {} {} {1.000} {}
+E {13262} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
+E {13264} {clockwise} {clockwise} {0} {0} {} {1.000} {}
+
+R {13264} {0} {} {~Q~ Blackfathom ~Q~ (s,counterclockwise,clockwise)} { } {Rising above the rubble-strewn floor of this passage to the south is a massive door. Set in the inner cavern wall, the outline of the door is at least 20 feet tall and nearly as wide. Deep gouges mar the wall around the door, but the door itself is perfect, without a single scratch. On the left-hand side of the door, almost four feet from the ground is a keyhole. An eerie red light streams through the keyhole, like a warning of the Hell to be found inside. } {Blackfathom} {} {} {} {1.000} {}
+E {13263} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
+E {13265} {s} {s} {4} {0} {} {1.000} {}
+E {13266} {clockwise} {clockwise} {0} {0} {} {1.000} {}
+
+R {13265} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13264} {n} {n} {1} {0} {} {1.000} {}
+
+R {13266} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13264} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
+
+R {13267} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {10262} {se} {se} {6} {0} {} {1.000} {}
+
+R {13268} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {10262} {s} {s} {4} {0} {} {1.000} {}
+
+R {13269} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {10263} {sw} {sw} {12} {0} {} {1.000} {}
