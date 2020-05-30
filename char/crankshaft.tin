@@ -11,6 +11,7 @@
 #var have_corpse 0
 #var rounds[last_fight] 0
 #var rounds[total] 0
+#var my[incombat] 0
 
 #alias kk {kill $kstr}
 #alias k {kill %0}
@@ -22,10 +23,11 @@
     #showme <028>::GXP Counter Activated::<088>;
 }
 
-#if {!$my[incombat]} {
-    #gag {{HP: (\d+)\[(\d+)\]\((\d+)\) PWR: (\d+)\[(\d+)\]\(([\d\-]+)\) HT: \[(\d+)\%\] SI: \[([\d\.]+)\%\]}}
-}
-#gag {{HP: (\d+)\[(\d+)\]\((\d+)\) PWR: (\d+)\[(\d+)\]\(([\d\-]+)\) HT: \[(\d+)\%\] SI: \[([\d\.]+)\%\]}}
+#NOP #if {!$my[incombat]} {
+#NOP     #showme In combat!;
+#NOP     #gag {{HP: (\d+)\[(\d+)\]\((\d+)\) PWR: (\d+)\[(\d+)\]\(([\d\-]+)\) HT: \[(\d+)\%\] SI: \[([\d\.]+)\%\]}}
+#NOP }
+#NOP #gag {{HP: (\d+)\[(\d+)\]\((\d+)\) PWR: (\d+)\[(\d+)\]\(([\d\-]+)\) HT: \[(\d+)\%\] SI: \[([\d\.]+)\%\]}}
 #act {{HP: (\d+)\[(\d+)\]\((\d+)\) PWR: (\d+)\[(\d+)\]\(([\d\-]+)\) HT: \[(\d+)\%\] SI: \[([\d\.]+)\%\]}} {
     #var my[hp][current]	%2;
     #var my[hp][max]	%3;
@@ -69,12 +71,21 @@
     };
 
     update_status;
+
+    #if {!$my[incombat]} {
+        #line gag;
+    };
 }
 
+#NOP #if {!${my[incombat]}} {
+#NOP     #gag {{C: \[([\d\.]+)(\w)\]}}
+#NOP }
 #gag {{C: \[([\d\.]+)(\w)\]}}
+#NOP not currently firing, as TARG is a word, not a number
 #act {{C: \[([\d\.]+)(\w)\] TARG: (\d+)\%}} {
     #var credits	%2%3;
     #var enemy[hp]	%4;
+    #var my[incombat] 1;
 }
 
 #alias {update_status} {
@@ -110,6 +121,11 @@
     #format {corpses[inventory]}     {%+2s} {$corpses[inventory]};
     #format {corpses[coffin]}  {%+2s} {$corpses[coffin]};
     #format {corpses[freezer]} {%+2s} {$corpses[freezer]};
+
+    #if {$enemy[hp] > 0} {
+        #var my[incombat] 1;
+    };
+
     #if {"$draw[hpbar]" == "on"} {
         #showme {<088>HP:$hp/$hp_max PR:$gp1/$gp1_max HT:   $gp2\%    E:$ehealth\%    IC:<130>${corpses[inventory]}<088> ${sb1_cooler}} {-4};
         #showme {H:${my[hp][graph]} P:${my[gp1][graph]} HT:${my[gp2][graph]} E:${enemy[graph]} CF:<130>${corpses[coffin]}<088>${sb2_freezer}} {-3};
@@ -120,6 +136,8 @@
 }
 
 #alias {corpsetrig} {
+    #var enemy[hp] 0;
+    #var my[incombat] 0;
     #var rounds[last_fight] $mip[round];
     #math {rounds[total]} {$rounds[total]+$rounds[last_fight]};
 

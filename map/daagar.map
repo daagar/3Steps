@@ -18,7 +18,7 @@ F 8455
 
 G 0
 
-I 1
+I 1567
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -978,9 +978,9 @@ E {  162} {e} {e} {2} {0} {} {1.000} {}
 R {  158} {0} {} {A room in the dark castle (e)} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurfland} {} {} {} {1.000} {}
 E {  154} {e} {e} {2} {0} {} {1.000} {}
 
-R {  159} {513} {} {A room in the dark castle (w,out)} { } {This is some kind of laboratory. There's weird equipment lining the walls, covering all the tables, and scattered on the floor, too.  You notice a big black cauldron over the fire, with a thick blue smoke coming out of it.  That could explain the smell, but you don't want to get close enough to find out. } {Smurfland} {} {} {} {1.000} {}
+R {  159} {0} {} {A room in the dark castle (w,out)} { } {This is some kind of laboratory. There's weird equipment lining the walls, covering all the tables, and scattered on the floor, too.  You notice a big black cauldron over the fire, with a thick blue smoke coming out of it.  That could explain the smell, but you don't want to get close enough to find out. } {Smurfland} {} {} {} {1.000} {}
 E {  154} {w} {w} {8} {0} {} {1.000} {}
-E {   55} {out} {out} {0} {0} {} {1.000} {}
+E {   55} {out} {out} {0} {8} {} {1.000} {}
 
 R {  160} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
 
@@ -7699,6 +7699,7 @@ R { 1567} {0} {} {A road leading north-south (n,s)} {P} {You are on a road leadi
 E { 1566} {s} {s} {4} {0} {} {1.000} {}
 E { 3149} {n} {n} {1} {0} {} {1.000} {}
 E { 3649} {wrist puck} {wrist puck} {0} {0} {} {1.000} {}
+E { 4257} {enter} {enter} {0} {0} {} {1.000} {}
 
 R { 1568} {0} {} {A Cosmic Dishwasher (u,n,s)} {W} {You are abruptly doused with hot, soapy water.  Shaking your head you look around and shrink in fear.  You are in a giant dishwasher. A whirling rubber hose nearly takes your head off as you duck behind the silverware.  Some tarpits these turned out to be! } {Chaos} {} {} {} {1.000} {}
 E { 1566} {n} {n} {1} {0} {} {1.000} {}
@@ -19165,3 +19166,12 @@ R { 4255} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
 
 R { 4256} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
 E { 4254} {w} {w} {8} {0} {} {1.000} {}
+
+R { 4257} {0} {} {A Pathway of Earth (n,out)} { } {The pathway here is made of gravel. The shadows recede into the background as if summoned there. Looking to the north, you notice that a bit more life fills the area to the north.  A fair sized tree grows impossibly in the sunless environment. There appears to be a sign carved into its trunk. } {Terra's Terrific Treehouse} {} {} {} {1.000} {}
+E { 4258} {n} {n} {1} {0} {} {1.000} {}
+E { 1567} {out} {out} {0} {0} {} {1.000} {}
+
+R { 4258} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
+E { 4257} {s} {s} {4} {0} {} {1.000} {}
+
+R { 4259} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}

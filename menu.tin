@@ -15,6 +15,9 @@
 #var {my[alts][3][name]}{daagar};
 #var {my[alts][3][guild]}{changeling};
 
+#echo {4) Splat (3k - jedi)};
+#var {my[alts][4][name]}{splat};
+#var {my[alts][4][guild]}{jedi};
 
 
 #echo {};

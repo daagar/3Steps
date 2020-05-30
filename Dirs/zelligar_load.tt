@@ -22,6 +22,8 @@
 #act {You slip the key into the lock and unlock the door.} {open door;ki}
 #act {The door is already unlocked.} {ki}
 
+#act {^=M= Erig.} {ki;ki;}
+
 #var {area_items}{puppy}
 #list {area_items}{create}{$area_items}
 #list {area_items}{size}{all_area_items}

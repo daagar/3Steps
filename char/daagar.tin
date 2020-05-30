@@ -273,7 +273,7 @@
 	};
 
     #if {$my[adrenalize] != 1} {
-        #if {$my[sp][current] > 50} {
+        #if {$my[sp][current] > 50 && ("$my[form]" != "Slime" && "$my[form]" != "puddle of slime")} {
             !adrenalize on;
         };
     };
@@ -306,10 +306,10 @@
 		#NOP 	go home;
 		#NOP };
 	};
-	#NOP #if {$my[hp][current] < 1000}{
-	#NOP 	!morph;
-	#NOP 	!morph;
-	#NOP };
+	#if {$my[hp][current] < 1000}{
+		!morph;
+		!morph;
+	};
 	#math {my[gpdiff]}{$my[gp1][current] - $my[gp2][current]};
 	#if {$my[gpdiff] > 0} {
 		#if {$my[dissipate] != 1} {
@@ -457,7 +457,7 @@
 };
 
 #alias fa {
-        !fuse all black;
+        #NOP !fuse all black;
         !fuse all dark;
         !fuse all murky;
         !fuse all turbid;
@@ -465,14 +465,14 @@
         !fuse all milky;
         !fuse all opaque;
         !fuse all cloudy;
-        !fuse all foggy;
+        #NOP !fuse all foggy;
         !fuse all translucent;
         !fuse all transparent;
-        !fuse black and dark;
-        !fuse black and murky;
-        !fuse black and turbid;
-        !fuse black and milky;
-        !fuse black and opaque;
+        #NOP !fuse black and dark;
+        #NOP !fuse black and murky;
+        #NOP !fuse black and turbid;
+        #NOP !fuse black and milky;
+        #NOP !fuse black and opaque;
         !fuse dark and murky;
         !fuse dark and turbid;
         !fuse dark and milky;

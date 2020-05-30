@@ -71,19 +71,16 @@
 
 	#if {"$area" == "Smurfland%*"} {#var area Smurfland};
 
-	#if {$stepignore != 1}{
-		make_roomlist {$area};
-	};
+	make_roomlist {$area};
 }
 
 #act {AREA RATING -> %1 [%2]}{
 	#var {area}{%2};
 	#if {"$area" == "Changeling"}{
-		#var {area}{Changeling Biome}
+		#var {area}{Changeling Biome};
 	};
-	#if {$stepignore != 1}{
-		make_roomlist {$area};
-	};
+	
+	make_roomlist {$area};
 }
 
 #alias {make_killpath}{
@@ -229,6 +226,11 @@
         bscan;
 	};
 }{9};
+
+#NOP An already damaged mob is considered equiv to another player present
+#act {^=M= %*\[%*\]} {
+	#math {player_room}{$player_room + 1};
+}
 
 #act {^=P= %*} {
     #math {player_room}{$player_room + 1};

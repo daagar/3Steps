@@ -10,8 +10,8 @@
 #list {kill_path}{create}{$kill_path}
 #list {kill_path}{size}{max_room}
 
-#var manual_stepper 1
-#var stepignore 2
+#NOP #var manual_stepper 1
+#NOP #var stepignore 2
 #var room_num 0
 
 #alias {autobscan}{
