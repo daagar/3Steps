@@ -399,7 +399,8 @@ fb_default;
 		#math {path_index}{$path_index + 1};
 		#if {${path_index} > ${path_size}}{
 			#math {room_index}{${room_index} + 1};
-			#if {$room_index > $area_size}{
+			#math {tmp_size}{$area_size + 1};
+			#if {$room_index > $tmp_size}{
 				#if {$autoqueue == 1}{
 					#math {targetarea}{$my[areaselector][current] + 1};
 					#if {$targetarea > 6}{#var {targetarea}{1}};
@@ -407,8 +408,9 @@ fb_default;
 				}{
 					#var {room_index}{1}
 				};
+			}{
+				make_killpath {${roomlist[${room_index}]}};
 			};
-			make_killpath {${roomlist[${room_index}]}};
 		};
 	}{
 		#if {$manual_stepper == 1}{

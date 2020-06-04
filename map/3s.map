@@ -18,7 +18,7 @@ F 10
 
 G 0
 
-I 3936
+I 2719
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -12019,88 +12019,88 @@ R { 2698} {0} {} {2698} { } {The path ends at the castle gates which stand ruste
 E { 2697} {n} {n} {1} {0} {} {1.000} {}
 E { 2699} {enter} {enter;#read .tt/Dirs/garg_load.tt} {0} {0} {} {1.000} {}
 
-R { 2699} {0} {} {garg} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurfland} {garg} {} {} {1.000} {}
+R { 2699} {0} {} {In the dark castle (e,w,out,s)} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurf Castle} {garg} {} {} {1.000} {}
 E { 2700} {w} {w} {8} {0} {} {1.000} {}
 E { 2701} {e} {e} {2} {0} {} {1.000} {}
 E { 2702} {s} {s} {4} {0} {} {1.000} {}
 E { 2698} {out} {out;#read .tt/Dirs/garg_unload.tt} {0} {0} {} {1.000} {}
 
-R { 2700} {0} {} {2700} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurfland} {} {} {} {1.000} {}
+R { 2700} {0} {} {A room in the dark castle (e)} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2699} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2701} {0} {} {2701} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurfland} {} {} {} {1.000} {}
+R { 2701} {0} {} {} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2699} {w} {w} {8} {0} {} {1.000} {}
 
-R { 2702} {0} {} {2702} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurfland} {} {} {} {1.000} {}
+R { 2702} {0} {} {In the dark castle (e,w,n,s)} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2703} {w} {w} {8} {0} {} {1.000} {}
 E { 2704} {e} {e} {2} {0} {} {1.000} {}
 E { 2705} {s} {s} {4} {0} {} {1.000} {}
 E { 2699} {n} {n;#read .tt/Dirs/garg_load.tt} {1} {0} {} {1.000} {}
 
-R { 2703} {0} {} {2703} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurfland} {} {} {} {1.000} {}
+R { 2703} {0} {} {A room in the dark castle (e)} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2702} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2704} {0} {} {2704} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurfland} {} {} {} {1.000} {}
+R { 2704} {0} {} {A room in the dark castle (w)} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2702} {w} {w} {8} {0} {} {1.000} {}
 
-R { 2705} {0} {} {2705} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurfland} {} {} {} {1.000} {}
+R { 2705} {0} {} {The hallway of the dark castle (e,w,n,s)} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2702} {n} {n} {1} {0} {} {1.000} {}
 E { 2706} {w} {w} {8} {0} {} {1.000} {}
 E { 2707} {e} {e} {2} {0} {} {1.000} {}
 E { 2708} {s} {s} {4} {0} {} {1.000} {}
 
-R { 2706} {0} {} {2706} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurfland} {} {} {} {1.000} {}
+R { 2706} {0} {} {A room in the dark castle (e)} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2705} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2707} {0} {} {2707} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurfland} {} {} {} {1.000} {}
+R { 2707} {0} {} {A room in the dark castle (w)} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2705} {w} {w} {8} {0} {} {1.000} {}
 
-R { 2708} {0} {} {2708} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurfland} {} {} {} {1.000} {}
+R { 2708} {0} {} {The hallway of the dark castle (e,w,n,s)} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2705} {n} {n} {1} {0} {} {1.000} {}
 E { 2709} {w} {w} {8} {0} {} {1.000} {}
 E { 2710} {e} {e} {2} {0} {} {1.000} {}
 E { 2711} {s} {s} {4} {0} {} {1.000} {}
 
-R { 2709} {0} {} {2709} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurfland} {} {} {} {1.000} {}
+R { 2709} {0} {} {A room in the dark castle (e)} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2708} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2710} {0} {} {2710} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurfland} {} {} {} {1.000} {}
+R { 2710} {0} {} {A room in the dark castle (w)} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2708} {w} {w} {8} {0} {} {1.000} {}
 
-R { 2711} {0} {} {2711} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurfland} {} {} {} {1.000} {}
+R { 2711} {0} {} {The hallway of the dark castle (e,w,n,s)} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2708} {n} {n} {1} {0} {} {1.000} {}
 E { 2712} {w} {w} {8} {0} {} {1.000} {}
 E { 2713} {e} {e} {2} {0} {} {1.000} {}
 E { 2714} {s} {s} {4} {0} {} {1.000} {}
 
-R { 2712} {0} {} {2712} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here or just plain died. The only way out is back in the east. } {Smurfland} {} {} {} {1.000} {}
+R { 2712} {0} {} {A room in the dark castle (e)} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here or just plain died. The only way out is back in the east. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2711} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2713} {0} {} {2713} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurfland} {} {} {} {1.000} {}
+R { 2713} {0} {} {A room in the dark castle (w)} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2711} {w} {w} {8} {0} {} {1.000} {}
 
-R { 2714} {0} {} {2714} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurfland} {} {} {} {1.000} {}
+R { 2714} {0} {} {The hallway of the dark castle (e,w,n,s)} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2711} {n} {n} {1} {0} {} {1.000} {}
 E { 2715} {w} {w} {8} {0} {} {1.000} {}
 E { 2716} {e} {e} {2} {0} {} {1.000} {}
 E { 2717} {s} {s} {4} {0} {} {1.000} {}
 
-R { 2715} {0} {} {2715} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurfland} {} {} {} {1.000} {}
+R { 2715} {0} {} {A room in the dark castle (e)} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2714} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2716} {0} {} {gargamel} { } {This is some kind of laboratory. There's weird equipment lining the walls, covering all the tables, and scattered on the floor, too.  You notice a big black cauldron over the fire, with a thick blue smoke coming out of it.  That could explain the smell, but you don't want to get close enough to find out. } {Smurfland} {} {} {} {1.000} {}
+R { 2716} {0} {} {A room in the dark castle (out,w)} { } {This is some kind of laboratory. There's weird equipment lining the walls, covering all the tables, and scattered on the floor, too.  You notice a big black cauldron over the fire, with a thick blue smoke coming out of it.  That could explain the smell, but you don't want to get close enough to find out. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2714} {w} {w} {8} {0} {} {1.000} {}
 E {13270} {out} {out} {0} {0} {} {1.000} {}
 
-R { 2717} {0} {} {2717} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurfland} {} {} {} {1.000} {}
+R { 2717} {0} {} {The hallway of the dark castle (e,n,w)} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2714} {n} {n} {1} {0} {} {1.000} {}
 E { 2718} {w} {w} {8} {0} {} {1.000} {}
 E { 2719} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2718} {0} {} {2718} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurfland} {} {} {} {1.000} {}
+R { 2718} {0} {} {A room in the dark castle (e)} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2717} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2719} {0} {} {2719} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurfland} {} {} {} {1.000} {}
+R { 2719} {0} {} {A room in the dark castle (w)} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2717} {w} {w} {8} {0} {} {1.000} {}
 
 R { 2720} {0} {} {chaos shop} { } {} {} {} {} {} {1.000} {}
