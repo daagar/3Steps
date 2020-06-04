@@ -24,7 +24,7 @@
 	#button {28;-35;28;-33}{
 		si;
 	};
-	#draw rounded box 21 -41 26 -3 {     <prev> Area Selector <next>};
+	#draw rounded box 21 -41 26 -3 {     <<faa>prev<088>> Area Selector <<afa>next<088>>};
 	#button {22;-35;22;-29}{
 		#math {targetarea}{$my[areaselector][current] - 1};
 		go ${my[areaselector][${targetarea}][note]};
@@ -379,14 +379,31 @@ fb_default;
 	};
 }
 
+#alias {autoq}{
+	#if {$autoqueue == 1}{
+		#echo {No longer queueing};
+		#var autoqueue 0;
+	}{
+		#echo {Queueing};
+		#var autoqueue 1;
+	};
+};
+
+#var autoqueue 0;
+
 #alias {step_function}{
 	#if {${stepper2} == 1}{
 		${kill_path2[${path_index}]};
 		#math {path_index}{$path_index + 1};
 		#if {${path_index} > ${path_size}}{
-			#math {room_index}{${room_index} +1};
+			#math {room_index}{${room_index} + 1};
 			#if {$room_index > $area_size}{
-				#var {room_index}{1}
+				#if {$autoqueue == 1}{
+					#math {targetarea}{$my[areaselector][current] + 1};
+					go ${my[areaselector][${targetarea}][note]};
+				}{
+					#var {room_index}{1}
+				};
 			};
 			make_killpath {${roomlist[${room_index}]}};
 		};
@@ -394,7 +411,14 @@ fb_default;
 		#if {$manual_stepper == 1}{
 			#nop {If we aren't using the magic stepper, check for a manual path};
 			#math {room_num}{$room_num + 1};
-			${kill_path[${room_num}]};
+			#if {$room_num > $max_room}{
+				#if {$autoqueue == 1}{
+					#math {targetarea}{$my[areaselector][current] + 1};
+					go ${my[areaselector][${targetarea}][note]};
+				};
+			}{
+				${kill_path[${room_num}]};
+			};
 		}{
 		#nop {If we aren't specifying a manual path, we are wandering aimlessly};
 			dirfunction $desired_dir;
