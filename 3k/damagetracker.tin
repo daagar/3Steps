@@ -96,17 +96,18 @@
 #var {damagetracker[max]}{100};
 
 #alias {show_damage_table}{
-	#screen clear square 21 -42 42 -1;
-	#draw rounded box 21 -41 23 -3 {            Last 10 Kills    [<128>GO<088>]};
-	#button {22;-11;22;-8}{ki};
-	#draw rounded box 24 -41 26 -3;
-	#draw rounded box 27 -41 29 -3;
+	#screen clear square 27 -42 42 -1;
+	#draw rounded box 27 -41 29 -3 {            Last 10 Kills    [<128>KI<088>]};
+	#button {28;-11;28;-8}{ki};
 	#showme {<088>\u251C} 30 -41;
 	#showme {<088>\u2524} 30 -3;
 	#showme {  Foe   | Rnds | Tot. Dmg | Avg} 30 -38;
 	#draw rounded box 31 -41 42 -3;
+	show_area_selector
+#nop {
 	log_record_damage;
 	log_record_health;
+};
 	#if {"$guild" == "mages"}{
 		display_desired_summons;
 	};
