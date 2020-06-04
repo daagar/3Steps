@@ -240,7 +240,9 @@
 	#var {path_index}{0};
 	#var {room_index}{0};
 	#map get {roomarea}{area};
-	make_roomlist {${area}};
+	#if {"$area" != ""}{
+		make_roomlist {${area}};
+	};
 }
 
 #alias goback {
@@ -248,7 +250,9 @@
         #var {room_num}{$returnpathroom};
         #var {do_return}{1};
 	#map get {roomarea}{area};
-	make_roomlist {${area}};
+	#if {"$area" != ""}{
+		make_roomlist {${area}};
+	};
 }
 
 #alias {mapgo} {
