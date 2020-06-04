@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 11
+F 10
 
 G 0
 
-I 10264
+I 3936
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -559,7 +559,7 @@ R {   61} {0} {<118>} {61} { } {} {} {} {} {} {1.000} {}
 E {   60} {w} {w} {8} {0} {} {1.000} {}
 E {   62} {enter} {#read .tt/Dirs/aegis_load.tt;enter} {0} {0} {} {1.000} {}
 
-R {   62} {0} {} {Aegis Global - Level 1 (e,exit)} { } {The fact that you were able to enter this building unimpeded is a sure sign of trouble.  The broken glass that litters the tiled floor and the blood streaked across the flatscreen monitors that line the inner wall of this entrance confirm that something is most definitely amiss. This is the entry to Aegis Global, a defense contractor that is publically known to produce military armor and vehicles.  Privately, it's rumored that this megacorp produces some much more diabolical weapons. } {Aegis Global} {aegis} {} {} {1.000} {}
+R {   62} {0} {} {Aegis Global - Level 1 (e,exit)} { } {The fact that you were able to enter this building unimpeded is a sure sign of trouble.  The broken glass that litters the tiled floor and the blood streaked across the flatscreen monitors that line the inner wall of this entrance confirm that something is most definitely amiss. This is the entry to Aegis Global, a defense contractor that is publically known to produce military armor and vehicles.  Privately, it's rumored that this megacorp produces some much more diabolical weapons. } {Aegis Global} {aegisl1} {} {} {1.000} {}
 E {  176} {e} {e} {2} {0} {} {1.000} {}
 E {   61} {exit} {#read .tt/Dirs/aegis_unload.tt;exit} {0} {0} {} {1.000} {}
 E {12420} {stairs} {stairs} {0} {0} {} {1.000} {}
@@ -3371,38 +3371,38 @@ R {  608} {0} {} {608} {b} {} {} {} {} {} {1.000} {}
 E {  171} {w} {w} {8} {0} {} {1.000} {}
 E { 3112} {e} {e} {2} {0} {} {1.000} {}
 
-R {  609} {0} {} {mages} { } {In a magnificent hall. You have stepped into a magnificent shining hall. Above you at a great height is a domed ceiling. The floor is made out of thousands of small stone tiles, each of them sparkling with a magical shine. At the center of the room is a onyx brazier holding a strange blue flame which seems to respond to your movement. The granite walls surrounding the hall are inset with many white pillars reaching to support the dome above. In the northern end of the hall you see a pure white stair leading up to the levels above you, and beyond that what appears to be the entrance to a shop. There are two small alcoves to the east and west. } {mages} {mages} {} {} {1.000} {}
+R {  609} {0} {} {In a magnificent hall (e,out,n,w,u)} { } {In a magnificent hall. You have stepped into a magnificent shining hall. Above you at a great height is a domed ceiling. The floor is made out of thousands of small stone tiles, each of them sparkling with a magical shine. At the center of the room is a onyx brazier holding a strange blue flame which seems to respond to your movement. The granite walls surrounding the hall are inset with many white pillars reaching to support the dome above. In the northern end of the hall you see a pure white stair leading up to the levels above you, and beyond that what appears to be the entrance to a shop. There are two small alcoves to the east and west. } {Mages} {mages} {} {} {1.000} {}
 E {  610} {out} {out} {0} {0} {} {1.000} {}
 E {  623} {u} {u} {16} {0} {} {1.000} {}
 E {  625} {n} {n} {1} {0} {} {1.000} {}
 E {12202} {w} {w} {8} {0} {} {1.000} {}
 E {12418} {e} {e} {2} {0} {} {1.000} {}
 
-R {  610} {0} {} {610} { } {Before the main guild tower. You have reached the main tower of this place. The size is impressive and as you look up you cannot see the top of it. It shines with a silver aura and you feel it warm your skin as you approach it. Several mages enter and leave the tower and most of them appear to be in a hurry. Looking towards the south you see the portal far away which you know leads out of the guild. } {mages} {} {} {} {1.000} {}
+R {  610} {0} {} {Before the main guild tower. (enter,e,s,w,n)} { } {Before the main guild tower. You have reached the main tower of this place. The size is impressive and as you look up you cannot see the top of it. It shines with a silver aura and you feel it warm your skin as you approach it. Several mages enter and leave the tower and most of them appear to be in a hurry. Looking towards the south you see the portal far away which you know leads out of the guild. } {Mages} {} {} {} {1.000} {}
 E {  611} {w} {w} {8} {0} {} {1.000} {}
 E {  616} {n} {n} {1} {0} {} {1.000} {}
 E {  626} {s} {s} {4} {0} {} {1.000} {}
 E { 5377} {e} {e} {2} {0} {} {1.000} {}
 E {  609} {enter} {enter;embrace flame} {0} {0} {} {1.000} {}
 
-R {  611} {0} {} {611} { } {A Narrow Path. You are standing just to the west of the huge main tower which soars above you. For some reason this place is empty of mages. There is no one casting spells here or talking about the foul beasts and monsters they have fought and killed. All around you you can barely make out the smaller towers and beyond them the dark energy field. Beside the path you see a small stone. } {mages} {} {} {} {1.000} {}
+R {  611} {0} {} {A Narrow Path (e,ne,se,w)} { } {A Narrow Path. You are standing just to the west of the huge main tower which soars above you. For some reason this place is empty of mages. There is no one casting spells here or talking about the foul beasts and monsters they have fought and killed. All around you you can barely make out the smaller towers and beyond them the dark energy field. Beside the path you see a small stone. } {Mages} {} {} {} {1.000} {}
 E {  610} {e} {e} {2} {0} {} {1.000} {}
 E {  612} {w} {w} {8} {0} {} {1.000} {}
 E {  616} {ne} {ne} {3} {0} {} {1.000} {}
 E {  626} {se} {se} {6} {0} {} {1.000} {}
 E { 6550} {honor skills} {honor skills} {0} {0} {} {1.000} {}
 
-R {  612} {0} {} {612} { } {A Narrow Path. You are standing on a narrow path some distance from any of the towers. Far to the north you can see a small green tower, to the west is a silver tower, and to the south a red tower. The much larger main tower is more easily visible to the east. At the edge of the glade the perimeter energy field holds back the darkness. Many mages are wandering in this area, displaying a variety of symbols. You notice a large group from the Crimson Rose giving a display of powers which clearly involves various forms of magic. You can see a small spring near the road bubbling quietly and letting clear water run over the area. } {mages} {} {} {} {1.000} {}
+R {  612} {0} {} {A Narrow Path (e,w)} { } {A Narrow Path. You are standing on a narrow path some distance from any of the towers. Far to the north you can see a small green tower, to the west is a silver tower, and to the south a red tower. The much larger main tower is more easily visible to the east. At the edge of the glade the perimeter energy field holds back the darkness. Many mages are wandering in this area, displaying a variety of symbols. You notice a large group from the Crimson Rose giving a display of powers which clearly involves various forms of magic. You can see a small spring near the road bubbling quietly and letting clear water run over the area. } {Mages} {} {} {} {1.000} {}
 E {  611} {e} {e} {2} {0} {} {1.000} {}
 E {  613} {w} {w} {8} {0} {} {1.000} {}
 
-R {  613} {0} {} {613} { } {Close to the silver tower. You are standing on a road slightly to the east of the Platinum Star tower. A sense of balance and harmony pervades the air and the mages that walk around here appear to be all at one with their surroundings. You see many wearing the symbol of the Platinum Star. Surrounding you, are a total of seven towers with the biggest located in the exact center of this place. Around the perimeter is a pulsating energy field. } {mages} {} {} {} {1.000} {}
+R {  613} {0} {} {Close to the silver tower (e,ne,se,w)} { } {Close to the silver tower. You are standing on a road slightly to the east of the Platinum Star tower. A sense of balance and harmony pervades the air and the mages that walk around here appear to be all at one with their surroundings. You see many wearing the symbol of the Platinum Star. Surrounding you, are a total of seven towers with the biggest located in the exact center of this place. Around the perimeter is a pulsating energy field. } {Mages} {} {} {} {1.000} {}
 E {  612} {e} {e} {2} {0} {} {1.000} {}
 E {  614} {w} {w} {8} {0} {} {1.000} {}
 E { 7180} {se} {se} {6} {0} {} {1.000} {}
 E { 7185} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {  614} {0} {} {614} { } {The glade of the silver tower. You are standing before the great Platinum Star tower. It is magnificent, although not particularly high, and you doubt it could contain more than a few levels. Mages bearing the sign of the Platinum Star are sporadically entering and leaving the tower. Some appear to be in a great hurry while others are walking slowly and taking a much more leisurely pace. The magical aura of the tower seems to have a nullifying effect on magic around it and there are no mages chanting or casting spells in its immediate vicinity. Glancing around you see several other similar towers some distance away. A large and grand tower stands prominently to the east and you guess from its ostentatiousness that it probably houses the mage administration. The energy field which runs around this entire area has clearly withered and weakened in this glade. } {mages} {} {} {} {1.000} {}
+R {  614} {0} {} {The glade of the silver tower (e,enter,w)} { } {The glade of the silver tower. You are standing before the great Platinum Star tower. It is magnificent, although not particularly high, and you doubt it could contain more than a few levels. Mages bearing the sign of the Platinum Star are sporadically entering and leaving the tower. Some appear to be in a great hurry while others are walking slowly and taking a much more leisurely pace. The magical aura of the tower seems to have a nullifying effect on magic around it and there are no mages chanting or casting spells in its immediate vicinity. Glancing around you see several other similar towers some distance away. A large and grand tower stands prominently to the east and you guess from its ostentatiousness that it probably houses the mage administration. The energy field which runs around this entire area has clearly withered and weakened in this glade. } {Mages} {} {} {} {1.000} {}
 E {  613} {e} {e} {2} {0} {} {1.000} {}
 E {  615} {enter} {enter} {0} {0} {} {1.000} {}
 E {12437} {w} {w} {8} {0} {} {1.000} {}
@@ -3410,7 +3410,7 @@ E {12437} {w} {w} {8} {0} {} {1.000} {}
 R {  615} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {  614} {out} {out} {0} {0} {} {1.000} {}
 
-R {  616} {0} {} {616} { } {A Fork In The Path. You are standing just to the north of the main guild tower. Many mages wander along the path on their way to conduct business in the main tower, or to return to their schools. In particular you notice a group wearing the symbol of the Platinum Star. Around the large central tower are the six smaller towers of each of the schools. You can feel the magic that permeates the area, and in one place, next to the path, you can see the field focused to illuminate the grass with a golden aura. } {mages} {} {} {} {1.000} {}
+R {  616} {0} {} {A Fork In The Path (s,ne,nw,sw,se)} { } {A Fork In The Path. You are standing just to the north of the main guild tower. Many mages wander along the path on their way to conduct business in the main tower, or to return to their schools. In particular you notice a group wearing the symbol of the Platinum Star. Around the large central tower are the six smaller towers of each of the schools. You can feel the magic that permeates the area, and in one place, next to the path, you can see the field focused to illuminate the grass with a golden aura. } {Mages} {} {} {} {1.000} {}
 E {  610} {s} {s} {4} {0} {} {1.000} {}
 E {  617} {nw} {nw} {9} {0} {} {1.000} {}
 E {  620} {ne} {ne} {3} {0} {} {1.000} {}
@@ -3418,13 +3418,13 @@ E { 5377} {se} {se} {6} {0} {} {1.000} {}
 E {  611} {sw} {sw} {12} {0} {} {1.000} {}
 E { 6551} {step into pentagram} {step into pentagram} {0} {0} {} {1.000} {}
 
-R {  617} {0} {} {617} { } {Close to the green tower. You are standing in a place slightly to the southeast of the Tyrian Vines tower. Most mages here are wearing some kind of symbol to show that they belong to the school of the Tyrian Vines. Far to the east you see another tower but you will need to move close in order to study it better. However, you can make out a white color emanating from it. The lush grass here is dotted by mages who are using their magical skills in most wonderful way. Their display is most intriguing and you can't help watching for a while. Besides the tower to the northwest, you see six other towers around the glade but the bigger one, standing in the center, catches your eye. A path wandering off to the southeast leads towards it. Surrounding the glade you see a dark radiating field of pure energy. } {mages} {} {} {} {1.000} {}
+R {  617} {0} {} {Close to the green tower (nw,sw,e,se)} { } {Close to the green tower. You are standing in a place slightly to the southeast of the Tyrian Vines tower. Most mages here are wearing some kind of symbol to show that they belong to the school of the Tyrian Vines. Far to the east you see another tower but you will need to move close in order to study it better. However, you can make out a white color emanating from it. The lush grass here is dotted by mages who are using their magical skills in most wonderful way. Their display is most intriguing and you can't help watching for a while. Besides the tower to the northwest, you see six other towers around the glade but the bigger one, standing in the center, catches your eye. A path wandering off to the southeast leads towards it. Surrounding the glade you see a dark radiating field of pure energy. } {Mages} {} {} {} {1.000} {}
 E {  616} {se} {se} {6} {0} {} {1.000} {}
 E {  618} {nw} {nw} {9} {0} {} {1.000} {}
 E { 7184} {e} {e} {2} {0} {} {1.000} {}
 E { 7185} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {  618} {0} {} {618} { } {The glade of the green tower. Before you stands a small but beautiful tower. As you look around the glade, you notice mages wearing the symbol of the Bright Rift entering and leaving the tower. The area around is serene: no spells are being cast and no chanting can be heard. You can almost feel in the air the magic which flows from the ancient tower and consumes any form of power in its vicinity. The tower rises above the path, no form of imperfection marring its smooth green stones. Besides this tower, you can see five similar ones rising from each corner of the hexagonal road back to the southeast. You can also see the huge central tower standing alone in the middle, its massive size and pretentious appearance make it clear that it houses the mage administration. The energy field that runs around this entire area has clearly withered and weakened in this glade. } {mages} {} {} {} {1.000} {}
+R {  618} {0} {} {The glade of the green tower (nw,enter,se)} { } {The glade of the green tower. Before you stands a small but beautiful tower. As you look around the glade, you notice mages wearing the symbol of the Bright Rift entering and leaving the tower. The area around is serene: no spells are being cast and no chanting can be heard. You can almost feel in the air the magic which flows from the ancient tower and consumes any form of power in its vicinity. The tower rises above the path, no form of imperfection marring its smooth green stones. Besides this tower, you can see five similar ones rising from each corner of the hexagonal road back to the southeast. You can also see the huge central tower standing alone in the middle, its massive size and pretentious appearance make it clear that it houses the mage administration. The energy field that runs around this entire area has clearly withered and weakened in this glade. } {Mages} {} {} {} {1.000} {}
 E {  617} {se} {se} {6} {0} {} {1.000} {}
 E {  619} {enter} {enter;study} {0} {0} {} {1.000} {}
 E {12436} {nw} {nw} {9} {0} {} {1.000} {}
@@ -3433,13 +3433,13 @@ R {  619} {0} {<118>} {619} { } {} {} {} {} {} {1.000} {}
 E {  618} {out} {out} {0} {0} {} {1.000} {}
 E {12041} {u} {u} {16} {0} {} {1.000} {}
 
-R {  620} {0} {} {620} { } {Close to the white tower. You are standing on a road slightly to the southwest of the Flaming Palm tower and several of the mages around you are wearing the symbol of the Flaming Palm on their robes. Further away and to the northwest you can see the large green tower of the Tyrian Vines. To the southeast is another tower but from this distance all you can make out is its irregular outline. A path leaves the road here and travels southwest towards the largest of the towers. Surrounding everything is the familiar dark energy field. } {mages} {} {} {} {1.000} {}
+R {  620} {0} {} {Close to the white tower (sw,ne,se,w)} { } {Close to the white tower. You are standing on a road slightly to the southwest of the Flaming Palm tower and several of the mages around you are wearing the symbol of the Flaming Palm on their robes. Further away and to the northwest you can see the large green tower of the Tyrian Vines. To the southeast is another tower but from this distance all you can make out is its irregular outline. A path leaves the road here and travels southwest towards the largest of the towers. Surrounding everything is the familiar dark energy field. } {Mages} {} {} {} {1.000} {}
 E {  616} {sw} {sw} {12} {0} {} {1.000} {}
 E {  621} {ne} {ne} {3} {0} {} {1.000} {}
 E { 7183} {se} {se} {6} {0} {} {1.000} {}
 E { 7184} {w} {w} {8} {0} {} {1.000} {}
 
-R {  621} {0} {} {621} { } {The glade of the white tower. You have reached the fabled white tower of the Flaming Palm. It soars high above you and the perfect white stones fit together forming a seamless surface. Everywhere you look you see mages wearing the symbol of this school, although you see no one chanting or casting any spells\; it is almost as if being so close to the tower disrupts the mental ability to cast spells correctly. Glancing around you see several other towers rising to the southwest. A large tower in the guild center is apparently the main building. It no doubt holds the offices of the guild paper pushers given its excessively lavish appearance. Surrounding the glade you see a shimmering energy field of some kind holding back the darkness beyond. The power of the tower appears to have weakened the field here. } {mages} {} {} {} {1.000} {}
+R {  621} {0} {} {The glade of the white tower (ne,sw,enter)} { } {The glade of the white tower. You have reached the fabled white tower of the Flaming Palm. It soars high above you and the perfect white stones fit together forming a seamless surface. Everywhere you look you see mages wearing the symbol of this school, although you see no one chanting or casting any spells\; it is almost as if being so close to the tower disrupts the mental ability to cast spells correctly. Glancing around you see several other towers rising to the southwest. A large tower in the guild center is apparently the main building. It no doubt holds the offices of the guild paper pushers given its excessively lavish appearance. Surrounding the glade you see a shimmering energy field of some kind holding back the darkness beyond. The power of the tower appears to have weakened the field here. } {Mages} {} {} {} {1.000} {}
 E {  620} {sw} {sw} {12} {0} {} {1.000} {}
 E {  622} {enter} {enter} {0} {0} {} {1.000} {}
 E {12432} {ne} {ne} {3} {0} {} {1.000} {}
@@ -3447,21 +3447,21 @@ E {12432} {ne} {ne} {3} {0} {} {1.000} {}
 R {  622} {0} {<118>} {622} { } {} {} {} {} {} {1.000} {}
 E {  621} {out} {out} {0} {0} {} {1.000} {}
 
-R {  623} {0} {} {623} { } {Inside the main guild room. Your mind fills with peace and tranquility as you enter this pure white room. It is made strictly out of the finest white marble and the walls around you sparkle with magical energy. You see doors and hallways leading off in most directions. You also notice that the slim stairway continues upwards deeper inside the tower. Many mages train their abilities here and one of them advises you to type "cost" for more information about it. Standing next to the smooth wall is a board where mages can post things that are on their mind. There's a small placard here. Commands: advance [level,str,con,int,wis,dex,cha]           cost, tally, required, questansi,           list [name -or- # -or- short] } {mages} {mage advancement} {} {} {1.000} {}
+R {  623} {0} {} {Inside the main guild room (u,d,n,w,e)} { } {Inside the main guild room. Your mind fills with peace and tranquility as you enter this pure white room. It is made strictly out of the finest white marble and the walls around you sparkle with magical energy. You see doors and hallways leading off in most directions. You also notice that the slim stairway continues upwards deeper inside the tower. Many mages train their abilities here and one of them advises you to type "cost" for more information about it. Standing next to the smooth wall is a board where mages can post things that are on their mind. There's a small placard here. Commands: advance [level,str,con,int,wis,dex,cha]           cost, tally, required, questansi,           list [name -or- # -or- short] } {Mages} {mage advancement} {} {} {1.000} {}
 E {  609} {d} {d} {32} {0} {} {1.000} {}
 E {  624} {n} {n} {1} {0} {} {1.000} {}
 E { 6553} {u} {u} {16} {0} {} {1.000} {}
 E { 6609} {e} {e;sit on chair} {2} {0} {} {1.000} {}
 E {12423} {w} {w} {8} {0} {} {1.000} {}
 
-R {  624} {0} {} {624} { } {Deep inside the mage guild. As you enter this quiet study your nostrils are filled with the scent of burning wood. You hear it crackle and as your eyes adjust themselves to the dim light, you see an old fireplace in the northeast corner of the room. It sheds flickering light across the room, making everything dance in the light of its flames. The walls are covered with books of all different kinds and you recognize a lot of them from when you were first taught the art of magic. None of the books appear to be of great value and you realize that this is just a small study. A small stairway leads up to the west to what appears to be a small balcony. As you gaze at it, you see faint daylight, but you will have to move closer in order to make anything out. The floor is covered by a red velvet carpet and it strikes you as slightly odd considering the main guild room was in white marble. Standing in the southwestern corner is a big comfortable chair. } {mages} {} {} {} {1.000} {}
+R {  624} {0} {} {Deep inside the mage guild (s,w)} { } {Deep inside the mage guild. As you enter this quiet study your nostrils are filled with the scent of burning wood. You hear it crackle and as your eyes adjust themselves to the dim light, you see an old fireplace in the northeast corner of the room. It sheds flickering light across the room, making everything dance in the light of its flames. The walls are covered with books of all different kinds and you recognize a lot of them from when you were first taught the art of magic. None of the books appear to be of great value and you realize that this is just a small study. A small stairway leads up to the west to what appears to be a small balcony. As you gaze at it, you see faint daylight, but you will have to move closer in order to make anything out. The floor is covered by a red velvet carpet and it strikes you as slightly odd considering the main guild room was in white marble. Standing in the southwestern corner is a big comfortable chair. } {Mages} {} {} {} {1.000} {}
 E {  623} {s} {s} {4} {0} {} {1.000} {}
 E {12431} {w} {w} {8} {0} {} {1.000} {}
 
-R {  625} {0} {} {mage shop} { } {This is Harthearvorin's workshop, where the old enchanter experiments with various new, and sometimes unstable, Theorems. In exchange for some help with funding the expensive materials necessary, Harthearvorin is very happy to provide other Magi with strange objects and unusual magicks, and has sometimes even been known to teach from his vast collection of spells. Type 'list' to see what he has available. You can also type: 'buy <#> <item>', like: 'buy 12 2' to buy 12 of #2. You can also 'donate' coins to help with Harthearvorin's experiments. } {mages} {mage shop} {} {} {1.000} {}
+R {  625} {0} {} {Harthearvorin's Workshop (s)} { } {This is Harthearvorin's workshop, where the old enchanter experiments with various new, and sometimes unstable, Theorems. In exchange for some help with funding the expensive materials necessary, Harthearvorin is very happy to provide other Magi with strange objects and unusual magicks, and has sometimes even been known to teach from his vast collection of spells. Type 'list' to see what he has available. You can also type: 'buy <#> <item>', like: 'buy 12 2' to buy 12 of #2. You can also 'donate' coins to help with Harthearvorin's experiments. } {Mages} {mage shop} {} {} {1.000} {}
 E {  609} {s} {s} {4} {0} {} {1.000} {}
 
-R {  626} {0} {} {626} { } {Before a magical gateway. You are in a magical place just south of the huge tower. You look around in awe at the fantastic show of power put on by the mages all around you. Gazing at your surroundings you see seven towers. Six of them are located at the corners of a hexagonal road, while the most imposing one rises in the exact centre of the hexagon, just to the north. Further away, at the edges of the glade is a pulsating field which seems to be keeping the other world out\; or could it be keeping the magic in? A shimmering portal rises before you. } {mages} {} {} {} {1.000} {}
+R {  626} {0} {} {Before a magical gateway (n,exit,ne,nw,sw,se)} { } {Before a magical gateway. You are in a magical place just south of the huge tower. You look around in awe at the fantastic show of power put on by the mages all around you. Gazing at your surroundings you see seven towers. Six of them are located at the corners of a hexagonal road, while the most imposing one rises in the exact centre of the hexagon, just to the north. Further away, at the edges of the glade is a pulsating field which seems to be keeping the other world out\; or could it be keeping the magic in? A shimmering portal rises before you. } {Mages} {} {} {} {1.000} {}
 E {  610} {n} {n} {1} {0} {} {1.000} {}
 E {  627} {se} {se} {6} {0} {} {1.000} {}
 E {  630} {sw} {sw} {12} {0} {} {1.000} {}
@@ -3469,27 +3469,27 @@ E { 3959} {exit} {exit} {0} {0} {} {1.000} {}
 E { 5377} {ne} {ne} {3} {0} {} {1.000} {}
 E {  611} {nw} {nw} {9} {0} {} {1.000} {}
 
-R {  627} {0} {} {627} { } {Close to the black tower. A small path joins the road here, leading southeast to the Black Pearl tower. Not surprisingly, most of the mages in the area wear the symbol of the Empyrean Arch on their robes. The road continues from here towards the west and northeast and a second path provides access to the large central tower to the northwest. The energy field lies just beyond the black tower and keeps the darkness from entering the realm. } {mages} {} {} {} {1.000} {}
+R {  627} {0} {} {Close to the black tower (nw,ne,se,w)} { } {Close to the black tower. A small path joins the road here, leading southeast to the Black Pearl tower. Not surprisingly, most of the mages in the area wear the symbol of the Empyrean Arch on their robes. The road continues from here towards the west and northeast and a second path provides access to the large central tower to the northwest. The energy field lies just beyond the black tower and keeps the darkness from entering the realm. } {Mages} {} {} {} {1.000} {}
 E {  626} {nw} {nw} {9} {0} {} {1.000} {}
 E {  628} {se} {se} {6} {0} {} {1.000} {}
 E { 7181} {w} {w} {8} {0} {} {1.000} {}
 E { 7182} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {  628} {0} {<118>} {628} { } {} {} {} {} {} {1.000} {}
+R {  628} {0} {} {The glade of the black tower (nw,enter,se)} { } {The glade of the black tower. You have reached the fabled Black Pearl tower. It reaches high above you and everywhere you look you see mages wearing the symbol of this school. Several enter and leave the black tower and appear to be in a great hurry for some unknown reason. Although there are a number of mages in this area, not one is casting or chanting spells here. It is almost as if the tower suppresses the mental ability to cast spells correctly. Glancing around you see several other towers standing towards the northwest. The huge central tower stands in the center of the guild and is apparently the main building. The energy field that runs around this entire area has clearly withered and weakened in this glade. } {Mages} {} {} {} {1.000} {}
 E {  627} {nw} {nw} {9} {0} {} {1.000} {}
 E {  629} {enter} {enter} {0} {0} {} {1.000} {}
 E { 7186} {se} {se} {6} {0} {} {1.000} {}
 
-R {  629} {0} {} {629} { } {} {} {} {} {} {1.000} {}
+R {  629} {0} {<118>} {629} { } {} {} {} {} {} {1.000} {}
 E {  628} {out} {out} {0} {0} {} {1.000} {}
 
-R {  630} {0} {} {630} { } {Close to the red tower. You are standing slightly to the northeast of the Crimson Rose tower. Many of the mages here are wearing crimson colored robes and have symbols that clearly resemble the Crimson Rose itself. These mages have a unique technique and are providing a colorful show just in front of you. Seven towers stand in the glade but it is the tallest one, rising in the center, which catches your eye. Smaller towers surround this large tower, and beyond these is a dark pulsating energy field. } {mages} {} {} {} {1.000} {}
+R {  630} {0} {} {Close to the red tower (ne,sw,e,nw)} { } {Close to the red tower. You are standing slightly to the northeast of the Crimson Rose tower. Many of the mages here are wearing crimson colored robes and have symbols that clearly resemble the Crimson Rose itself. These mages have a unique technique and are providing a colorful show just in front of you. Seven towers stand in the glade but it is the tallest one, rising in the center, which catches your eye. Smaller towers surround this large tower, and beyond these is a dark pulsating energy field. } {Mages} {} {} {} {1.000} {}
 E {  626} {ne} {ne} {3} {0} {} {1.000} {}
 E {  631} {sw} {sw} {12} {0} {} {1.000} {}
 E { 7180} {nw} {nw} {9} {0} {} {1.000} {}
 E { 7181} {e} {e} {2} {0} {} {1.000} {}
 
-R {  631} {0} {} {631} { } {The glade of the red tower. You are standing at the base of the red tower of the school of the Crimson Rose. As you look around the area, mages wearing the symbol of the Rose enter and leave the tower. Despite the significant amount of activity at this tower you notice that not a single one is chanting an incantation or casting a spell. It is almost as if the mere presence of the tower somehow nullifies all magic around it. You can see five others towards the northeast standing in each corner of the hexagon. A ludicrously ornate one rises supremely in the exact center of the guild and you know this must be the headquarters of the mage admin as no one else would have the resources to waste. The energy field that beams brightly at other places just shimmers dully near the tower as the power flowing from the walls has eroded it with time. } {mages} {} {} {} {1.000} {}
+R {  631} {0} {} {The glade of the red tower (sw,ne,enter)} { } {The glade of the red tower. You are standing at the base of the red tower of the school of the Crimson Rose. As you look around the area, mages wearing the symbol of the Rose enter and leave the tower. Despite the significant amount of activity at this tower you notice that not a single one is chanting an incantation or casting a spell. It is almost as if the mere presence of the tower somehow nullifies all magic around it. You can see five others towards the northeast standing in each corner of the hexagon. A ludicrously ornate one rises supremely in the exact center of the guild and you know this must be the headquarters of the mage admin as no one else would have the resources to waste. The energy field that beams brightly at other places just shimmers dully near the tower as the power flowing from the walls has eroded it with time. } {Mages} {} {} {} {1.000} {}
 E {  630} {ne} {ne} {3} {0} {} {1.000} {}
 E {  632} {enter} {enter} {0} {0} {} {1.000} {}
 E {12438} {sw} {sw} {12} {0} {} {1.000} {}
@@ -12019,87 +12019,88 @@ R { 2698} {0} {} {2698} { } {The path ends at the castle gates which stand ruste
 E { 2697} {n} {n} {1} {0} {} {1.000} {}
 E { 2699} {enter} {enter;#read .tt/Dirs/garg_load.tt} {0} {0} {} {1.000} {}
 
-R { 2699} {0} {<118>} {garg} { } {} {} {garg} {} {} {1.000} {}
+R { 2699} {0} {} {garg} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurfland} {garg} {} {} {1.000} {}
 E { 2700} {w} {w} {8} {0} {} {1.000} {}
 E { 2701} {e} {e} {2} {0} {} {1.000} {}
 E { 2702} {s} {s} {4} {0} {} {1.000} {}
 E { 2698} {out} {out;#read .tt/Dirs/garg_unload.tt} {0} {0} {} {1.000} {}
 
-R { 2700} {0} {} {2700} { } {} {} {} {} {} {1.000} {}
+R { 2700} {0} {} {2700} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurfland} {} {} {} {1.000} {}
 E { 2699} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2701} {0} {} {2701} { } {} {} {} {} {} {1.000} {}
+R { 2701} {0} {} {2701} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurfland} {} {} {} {1.000} {}
 E { 2699} {w} {w} {8} {0} {} {1.000} {}
 
-R { 2702} {0} {} {2702} { } {} {} {} {} {} {1.000} {}
+R { 2702} {0} {} {2702} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurfland} {} {} {} {1.000} {}
 E { 2703} {w} {w} {8} {0} {} {1.000} {}
 E { 2704} {e} {e} {2} {0} {} {1.000} {}
 E { 2705} {s} {s} {4} {0} {} {1.000} {}
 E { 2699} {n} {n;#read .tt/Dirs/garg_load.tt} {1} {0} {} {1.000} {}
 
-R { 2703} {0} {} {2703} { } {} {} {} {} {} {1.000} {}
+R { 2703} {0} {} {2703} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurfland} {} {} {} {1.000} {}
 E { 2702} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2704} {0} {} {2704} { } {} {} {} {} {} {1.000} {}
+R { 2704} {0} {} {2704} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurfland} {} {} {} {1.000} {}
 E { 2702} {w} {w} {8} {0} {} {1.000} {}
 
-R { 2705} {0} {} {2705} { } {} {} {} {} {} {1.000} {}
+R { 2705} {0} {} {2705} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurfland} {} {} {} {1.000} {}
 E { 2702} {n} {n} {1} {0} {} {1.000} {}
 E { 2706} {w} {w} {8} {0} {} {1.000} {}
 E { 2707} {e} {e} {2} {0} {} {1.000} {}
 E { 2708} {s} {s} {4} {0} {} {1.000} {}
 
-R { 2706} {0} {} {2706} { } {} {} {} {} {} {1.000} {}
+R { 2706} {0} {} {2706} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurfland} {} {} {} {1.000} {}
 E { 2705} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2707} {0} {} {2707} { } {} {} {} {} {} {1.000} {}
+R { 2707} {0} {} {2707} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurfland} {} {} {} {1.000} {}
 E { 2705} {w} {w} {8} {0} {} {1.000} {}
 
-R { 2708} {0} {} {2708} { } {} {} {} {} {} {1.000} {}
+R { 2708} {0} {} {2708} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurfland} {} {} {} {1.000} {}
 E { 2705} {n} {n} {1} {0} {} {1.000} {}
 E { 2709} {w} {w} {8} {0} {} {1.000} {}
 E { 2710} {e} {e} {2} {0} {} {1.000} {}
 E { 2711} {s} {s} {4} {0} {} {1.000} {}
 
-R { 2709} {0} {} {2709} { } {} {} {} {} {} {1.000} {}
+R { 2709} {0} {} {2709} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurfland} {} {} {} {1.000} {}
 E { 2708} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2710} {0} {} {2710} { } {} {} {} {} {} {1.000} {}
+R { 2710} {0} {} {2710} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurfland} {} {} {} {1.000} {}
 E { 2708} {w} {w} {8} {0} {} {1.000} {}
 
-R { 2711} {0} {} {2711} { } {} {} {} {} {} {1.000} {}
+R { 2711} {0} {} {2711} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurfland} {} {} {} {1.000} {}
 E { 2708} {n} {n} {1} {0} {} {1.000} {}
 E { 2712} {w} {w} {8} {0} {} {1.000} {}
 E { 2713} {e} {e} {2} {0} {} {1.000} {}
 E { 2714} {s} {s} {4} {0} {} {1.000} {}
 
-R { 2712} {0} {} {2712} { } {} {} {} {} {} {1.000} {}
+R { 2712} {0} {} {2712} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here or just plain died. The only way out is back in the east. } {Smurfland} {} {} {} {1.000} {}
 E { 2711} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2713} {0} {} {2713} { } {} {} {} {} {} {1.000} {}
+R { 2713} {0} {} {2713} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurfland} {} {} {} {1.000} {}
 E { 2711} {w} {w} {8} {0} {} {1.000} {}
 
-R { 2714} {0} {} {2714} { } {} {} {} {} {} {1.000} {}
+R { 2714} {0} {} {2714} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurfland} {} {} {} {1.000} {}
 E { 2711} {n} {n} {1} {0} {} {1.000} {}
 E { 2715} {w} {w} {8} {0} {} {1.000} {}
 E { 2716} {e} {e} {2} {0} {} {1.000} {}
 E { 2717} {s} {s} {4} {0} {} {1.000} {}
 
-R { 2715} {0} {} {2715} { } {} {} {} {} {} {1.000} {}
+R { 2715} {0} {} {2715} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurfland} {} {} {} {1.000} {}
 E { 2714} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2716} {0} {} {gargamel} { } {} {} {} {} {} {1.000} {}
+R { 2716} {0} {} {gargamel} { } {This is some kind of laboratory. There's weird equipment lining the walls, covering all the tables, and scattered on the floor, too.  You notice a big black cauldron over the fire, with a thick blue smoke coming out of it.  That could explain the smell, but you don't want to get close enough to find out. } {Smurfland} {} {} {} {1.000} {}
 E { 2714} {w} {w} {8} {0} {} {1.000} {}
+E {13270} {out} {out} {0} {0} {} {1.000} {}
 
-R { 2717} {0} {} {2717} { } {} {} {} {} {} {1.000} {}
+R { 2717} {0} {} {2717} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurfland} {} {} {} {1.000} {}
 E { 2714} {n} {n} {1} {0} {} {1.000} {}
 E { 2718} {w} {w} {8} {0} {} {1.000} {}
 E { 2719} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2718} {0} {} {2718} { } {} {} {} {} {} {1.000} {}
+R { 2718} {0} {} {2718} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurfland} {} {} {} {1.000} {}
 E { 2717} {e} {e} {2} {0} {} {1.000} {}
 
-R { 2719} {0} {} {2719} { } {} {} {} {} {} {1.000} {}
+R { 2719} {0} {} {2719} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the west. } {Smurfland} {} {} {} {1.000} {}
 E { 2717} {w} {w} {8} {0} {} {1.000} {}
 
 R { 2720} {0} {} {chaos shop} { } {} {} {} {} {} {1.000} {}
@@ -17913,7 +17914,7 @@ E { 3929} {n} {n} {1} {0} {} {1.000} {}
 E { 3931} {play diablo 2} {play diablo 2} {0} {0} {} {1.000} {}
 E {11885} {play ultima online} {play ultima online} {0} {0} {} {1.000} {}
 
-R { 3931} {0} {} {3931} { } {} {} {} {} {} {1.000} {}
+R { 3931} {0} {<118>} {3931} { } {} {} {} {} {} {1.000} {}
 E { 3930} {windows} {windows} {0} {0} {} {1.000} {}
 E { 3932} {normal} {normal} {0} {0} {} {1.000} {}
 E { 3933} {nightmare} {nightmare} {0} {0} {} {1.000} {}
@@ -17940,9 +17941,12 @@ R { 3935} {0} {} {d2hell} { } {} {} {} {} {} {1.000} {}
 E { 3934} {normal} {normal} {0} {0} {} {1.000} {}
 E {11558} {travel inner cloister} {travel inner cloister} {0} {0} {} {1.000} {}
 
-R { 3936} {0} {} {d2hell} { } {} {} {d2hell} {} {} {1.000} {}
+R { 3936} {0} {} {d2hell} { } {You are at the rogue encampment. This quiet outpost is on the edge of a vast wilderness, covered in a blanket of eerie fog. Various buildings surround you, with a few individuals roaming the street. A large wagon sits in the center of town, and an interesting looking hut lies a short walk away. } {Diablo2 Normal 20+ Nightmare 40+ Hell 60+.} {d2hell} {} {} {1.000} {}
 E { 3931} {menu} {menu} {0} {0} {} {1.000} {}
 E {11966} {portal} {portal} {0} {0} {} {1.000} {}
+E {13405} {path} {path} {0} {0} {} {1.000} {}
+E {13406} {hut} {hut} {0} {0} {} {1.000} {}
+E {13407} {training} {training} {0} {0} {} {1.000} {}
 
 R { 3937} {0} {} {wwf} { } {} {} {} {} {} {1.000} {}
 E { 3916} {reality} {reality} {0} {0} {} {1.000} {}
@@ -24602,24 +24606,24 @@ E { 3998} {n} {n} {1} {0} {} {1.000} {}
 R { 5376} {0} {} {gypsy} { } {} {} {gypsy} {} {} {1.000} {}
 E { 4746} {w} {w} {8} {0} {} {1.000} {}
 
-R { 5377} {0} {} {5377} { } {A Narrow Path. You are on a path which leads eastwards away from the huge tower looming just to the west of you. To the southwest, you can easily see the huge swirling portal and ahead lies the broken outline of the strange eastern tower. The path is quite busy, with mages traveling to and from the main tower but none are using any magic or magical devices. To the north of the path you notice several unusually large bushes. } {mages} {} {} {} {1.000} {}
+R { 5377} {0} {} {A Narrow Path (sw,nw,e,w)} { } {A Narrow Path. You are on a path which leads eastwards away from the huge tower looming just to the west of you. To the southwest, you can easily see the huge swirling portal and ahead lies the broken outline of the strange eastern tower. The path is quite busy, with mages traveling to and from the main tower but none are using any magic or magical devices. To the north of the path you notice several unusually large bushes. } {Mages} {} {} {} {1.000} {}
 E {  626} {sw} {sw} {12} {0} {} {1.000} {}
 E {  610} {w} {w} {8} {0} {} {1.000} {}
 E { 5378} {e} {e} {2} {0} {} {1.000} {}
 E {  616} {nw} {nw} {9} {0} {} {1.000} {}
 E { 6552} {smell flower} {smell flower} {0} {0} {} {1.000} {}
 
-R { 5378} {0} {} {5378} { } {A Narrow Path. You are standing on a narrow path some distance from any of the towers. Far to the north you can see a small white tower, to the east a tower which appears to be strangely run-down, while the tower to the south is clearly black. The path you are on leads from the road to the east westwards towards the huge main tower of the guild. A group of mages wearing the symbol of the Black Pearl are talking here and providing a magnificent display of powers. In the distance, the dark and threatening energy field holds back the outside world. } {mages} {} {} {} {1.000} {}
+R { 5378} {0} {} {A Narrow Path (w,e)} { } {A Narrow Path. You are standing on a narrow path some distance from any of the towers. Far to the north you can see a small white tower, to the east a tower which appears to be strangely run-down, while the tower to the south is clearly black. The path you are on leads from the road to the east westwards towards the huge main tower of the guild. A group of mages wearing the symbol of the Black Pearl are talking here and providing a magnificent display of powers. In the distance, the dark and threatening energy field holds back the outside world. } {Mages} {} {} {} {1.000} {}
 E { 5377} {w} {w} {8} {0} {} {1.000} {}
 E { 5379} {e} {e} {2} {0} {} {1.000} {}
 
-R { 5379} {0} {} {5379} { } {Close to the ruined tower. The road turns here and heads off to the northwest and southwest. A small path leads away from the road to the west towards the large central tower, and also wanders east towards an old, ruined tower. In stark contrast to the other towers, the area around this tower is completely deserted and there is no chanting or talking or indeed any sounds of life. The only thing that appears normal is the strength of the energy field holding back the darkness beyond. } {mages} {} {} {} {1.000} {}
+R { 5379} {0} {} {Close to the ruined tower (e,nw,sw,w)} { } {Close to the ruined tower. The road turns here and heads off to the northwest and southwest. A small path leads away from the road to the west towards the large central tower, and also wanders east towards an old, ruined tower. In stark contrast to the other towers, the area around this tower is completely deserted and there is no chanting or talking or indeed any sounds of life. The only thing that appears normal is the strength of the energy field holding back the darkness beyond. } {Mages} {} {} {} {1.000} {}
 E { 5378} {w} {w} {8} {0} {} {1.000} {}
 E { 5380} {e} {e} {2} {0} {} {1.000} {}
 E { 7182} {sw} {sw} {12} {0} {} {1.000} {}
 E { 7183} {nw} {nw} {9} {0} {} {1.000} {}
 
-R { 5380} {0} {} {5380} { } {The glade of the ruined tower. You are standing before the burnt husk of an ancient tower. It looks like the skeleton of a huge structure that was almost completely destroyed a very long time ago. Judging by the radius of the base, this tower must have been tremendously tall. Even though the stones and timber are clearly ancient and the devastation must have occurred in ages past, the smell of burning flesh and burning wood still pervades the air. It appears as if the remains of the fire will always be here as the mages have not attempted to restore this tower. Looking back to the west you see several towers rise above the green grasses and you feel a wish to leave this dreaded place. } {mages} {} {} {} {1.000} {}
+R { 5380} {0} {} {The glade of the ruined tower (enter,w)} { } {The glade of the ruined tower. You are standing before the burnt husk of an ancient tower. It looks like the skeleton of a huge structure that was almost completely destroyed a very long time ago. Judging by the radius of the base, this tower must have been tremendously tall. Even though the stones and timber are clearly ancient and the devastation must have occurred in ages past, the smell of burning flesh and burning wood still pervades the air. It appears as if the remains of the fire will always be here as the mages have not attempted to restore this tower. Looking back to the west you see several towers rise above the green grasses and you feel a wish to leave this dreaded place. } {Mages} {} {} {} {1.000} {}
 E { 5379} {w} {w} {8} {0} {} {1.000} {}
 E { 7200} {enter} {enter} {0} {0} {} {1.000} {}
 
@@ -29566,7 +29570,7 @@ E { 6532} {s} {s} {4} {0} {} {1.000} {}
 R { 6532} {0} {} {6532} { } {} {} {} {} {} {1.000} {}
 E { 6531} {n} {n} {1} {0} {} {1.000} {}
 
-R { 6533} {0} {} {6533} { } {A stairway rises above you, spiralling up into the darkness and gloom. Constructed of the same pale grey blocks of stone as the rest of the tower, it is lit by floating points of light, arranged at regular intervals along the inside of the vast open column that is the stairwell. From above, you can hear the bustle of a large number of people. } {Tower of the Clenched Light} {} {} {} {1.000} {}
+R { 6533} {0} {} {6533} { } {A stairway rises above you, spiralling up into the darkness and gloom. Constructed of the same pale grey blocks of stone as the rest of the tower, it is lit by floating points of light, arranged at regular intervals along the inside of the vast open column that is the stairwell. From above, you can hear the bustle of a large number of people. } {Tower of the Clenched Light} {clight} {} {} {1.000} {}
 E { 6517} {nw} {nw} {9} {0} {} {1.000} {}
 E { 6534} {u} {u} {16} {0} {} {1.000} {}
 E {12687} {se} {se} {6} {0} {} {1.000} {}
@@ -29667,11 +29671,11 @@ E {  616} {out} {out} {0} {0} {} {1.000} {}
 R { 6552} {0} {<118>} {mage offense} { } {} {} {mage offense} {} {} {1.000} {}
 E { 5377} {out} {out} {0} {0} {} {1.000} {}
 
-R { 6553} {0} {} {6553} { } {The Library and Observatory. Magnificent hardwood bookshelves line the walls. Volumes and volumes of collected knowledge, more than you can easily count. Some of the books describe the most fantastic beasts as recalled by mages after their adventures in the realms, some seem so incredible the stories are hard to believe. Other books describe recipes for incantations, or simply the historical recollections of the world. In the center of the room is a huge telescope. } {mages} {} {} {} {1.000} {}
+R { 6553} {0} {} {The Library and Observatory (u,d)} { } {The Library and Observatory. Magnificent hardwood bookshelves line the walls. Volumes and volumes of collected knowledge, more than you can easily count. Some of the books describe the most fantastic beasts as recalled by mages after their adventures in the realms, some seem so incredible the stories are hard to believe. Other books describe recipes for incantations, or simply the historical recollections of the world. In the center of the room is a huge telescope. } {Mages} {} {} {} {1.000} {}
 E {  623} {d} {d} {32} {0} {} {1.000} {}
 E { 6554} {u} {u} {16} {0} {} {1.000} {}
 
-R { 6554} {0} {} {mage imbue} { } {The intersection of the Material and the Astral. You stand here simultaneously on two planes. In the Material, you are on the pinnacle of a great tower, the chatter of other magi and the distant actinic flash of spells coming from floors below you.  In the Astral, you are on the tip of a great mountain, clouds wreathing the vast bulk of stone beneath you and howling supernal dream-winds cleansing you of thought and history. The planes overlap here in mind-bending layers, the Veil thinner here than anywhere else in the world. This might be a good place to <meditate>, or to <scour> your spirit with astral powers. } {mages} {mage imbue} {} {} {1.000} {}
+R { 6554} {0} {} {The intersection of the Material and the Astral (d)} { } {The intersection of the Material and the Astral. You stand here simultaneously on two planes. In the Material, you are on the pinnacle of a great tower, the chatter of other magi and the distant actinic flash of spells coming from floors below you.  In the Astral, you are on the tip of a great mountain, clouds wreathing the vast bulk of stone beneath you and howling supernal dream-winds cleansing you of thought and history. The planes overlap here in mind-bending layers, the Veil thinner here than anywhere else in the world. This might be a good place to <meditate>, or to <scour> your spirit with astral powers. } {Mages} {mage imbue} {} {} {1.000} {}
 E { 6553} {d} {d} {32} {0} {} {1.000} {}
 E { 6472} {rift} {rift} {0} {0} {} {1.000} {}
 
@@ -29925,7 +29929,7 @@ R { 6608} {4104} {} {6608} { } {} {} {} {} {} {1.000} {}
 E { 6607} {se} {se} {6} {0} {} {1.000} {}
 E { 6491} {nw} {nw} {9} {0} {} {1.000} {}
 
-R { 6609} {0} {} {6609} { } {The Bright Sunroom. The walls of this room radiate a bright white light, almost as if you were sitting in the very center of the sun itself. The glow is also warm, and beads of perspiration begin to form on your forehead. In the exact center of the room, someone has placed a large journal, in which mages scribble messages to one another. Painted on the north wall is a lovely mural of a peaceful town. A number of huge couches and an ornate rocking chair are placed around the room, and give it a comfortable feeling. This is a nice place to relax and chat with friends. } {mages} {} {} {} {1.000} {}
+R { 6609} {0} {} {The Bright Sunroom (w)} { } {The Bright Sunroom. The walls of this room radiate a bright white light, almost as if you were sitting in the very center of the sun itself. The glow is also warm, and beads of perspiration begin to form on your forehead. In the exact center of the room, someone has placed a large journal, in which mages scribble messages to one another. Painted on the north wall is a lovely mural of a peaceful town. A number of huge couches and an ornate rocking chair are placed around the room, and give it a comfortable feeling. This is a nice place to relax and chat with friends. } {Mages} {} {} {} {1.000} {}
 E {  623} {w} {stand;w} {8} {0} {} {1.000} {}
 
 R { 6610} {0} {} {6610} { } {} {} {} {} {} {1.000} {}
@@ -32495,38 +32499,38 @@ E { 7177} {n} {n} {1} {0} {} {1.000} {}
 R { 7179} {0} {} {7179} { } {} {} {} {} {} {1.000} {}
 E {   68} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7180} {0} {} {7180} { } {A Straight Road. You are standing on a road in the magical glade. The road leads to either the northwest or southeast. Several mages in the area are producing an incredible display of power and skill. Seven towers stand around the glade, six of which form a hexagon around the larger tower rising in the exact center. Surrounding the outer towers is a dark pulsating field which fills you with a feeling of dread. } {mages} {} {} {} {1.000} {}
+R { 7180} {0} {} {A Straight Road (se,nw)} { } {A Straight Road. You are standing on a road in the magical glade. The road leads to either the northwest or southeast. Several mages in the area are producing an incredible display of power and skill. Seven towers stand around the glade, six of which form a hexagon around the larger tower rising in the exact center. Surrounding the outer towers is a dark pulsating field which fills you with a feeling of dread. } {Mages} {} {} {} {1.000} {}
 E {  613} {nw} {nw} {9} {0} {} {1.000} {}
 E {  630} {se} {se} {6} {0} {} {1.000} {}
 
-R { 7181} {0} {} {7181} { } {A Straight Road. You are standing directly to the south of the huge portal, although there is no path leading straight there. Mages cluster in the area and provide an incredible display of power and skill. Seven towers stand around you, six marking the corners of the hexagonal road upon which you are traveling. The seventh is much larger than the others and rises directly to the north of you beyond the portal. All around the glade lies a dark and ominous energy field which holds back the darkness beyond the towers. An old shed stands close to the trail here, but time has taken its toll and the shed is worn and cracked with age. } {mages} {} {} {} {1.000} {}
+R { 7181} {0} {} {A Straight Road (w,e)} { } {A Straight Road. You are standing directly to the south of the huge portal, although there is no path leading straight there. Mages cluster in the area and provide an incredible display of power and skill. Seven towers stand around you, six marking the corners of the hexagonal road upon which you are traveling. The seventh is much larger than the others and rises directly to the north of you beyond the portal. All around the glade lies a dark and ominous energy field which holds back the darkness beyond the towers. An old shed stands close to the trail here, but time has taken its toll and the shed is worn and cracked with age. } {Mages} {} {} {} {1.000} {}
 E {  630} {w} {w} {8} {0} {} {1.000} {}
 E {  627} {e} {e} {2} {0} {} {1.000} {}
 E { 7199} {enter shed} {remove boards;cast comprehend;call out play;enter shed;open drawer;search drawer} {0} {0} {} {1.000} {}
 
-R { 7182} {0} {} {7182} { } {A Straight Road. The road runs from the northeast to the southwest. There are many mages here, most of whom are wearing the symbol of the black pearl and providing a display of incredible power and skill. Six towers stand around you, accentuating the corners of the hexagonal road, and a large main tower rises in the exact center. The perimeter of the area is defined by a black and ominous energy field. } {mages} {} {} {} {1.000} {}
+R { 7182} {0} {} {A Straight Road (sw,ne)} { } {A Straight Road. The road runs from the northeast to the southwest. There are many mages here, most of whom are wearing the symbol of the black pearl and providing a display of incredible power and skill. Six towers stand around you, accentuating the corners of the hexagonal road, and a large main tower rises in the exact center. The perimeter of the area is defined by a black and ominous energy field. } {Mages} {} {} {} {1.000} {}
 E {  627} {sw} {sw} {12} {0} {} {1.000} {}
 E { 5379} {ne} {ne} {3} {0} {} {1.000} {}
 
-R { 7183} {0} {} {7183} { } {A Straight Road. You are in the magical glade, standing on a road running from the northwest to the southeast. To the west is the huge central tower, and other smaller towers rise to the north and to the southeast. Mages scattered around the area are performing an incredible show of power and skill. Surrounding the towers, paths, and roads, is a pulsating energy field holding back the darkness beyond. Next to the road stands an old well. } {mages} {} {} {} {1.000} {}
+R { 7183} {0} {} {A Straight Road (se,nw)} { } {A Straight Road. You are in the magical glade, standing on a road running from the northwest to the southeast. To the west is the huge central tower, and other smaller towers rise to the north and to the southeast. Mages scattered around the area are performing an incredible show of power and skill. Surrounding the towers, paths, and roads, is a pulsating energy field holding back the darkness beyond. Next to the road stands an old well. } {Mages} {} {} {} {1.000} {}
 E { 5379} {se} {se} {6} {0} {} {1.000} {}
 E {  620} {nw} {nw} {9} {0} {} {1.000} {}
 E { 7205} {climb down well} {clean stones;push stone;climb down well} {0} {0} {} {1.000} {}
 
-R { 7184} {0} {} {7184} { } {A Straight Road. You are standing on an east-west road. Mages dot the area and display an incredible and amazing show of power and skill. Seven towers stand around you all branching off from the corners of the hexagonally shaped road. Surrounding this place is a dark and ominous pulsating field. } {mages} {} {} {} {1.000} {}
+R { 7184} {0} {} {A Straight Road (e,w)} { } {A Straight Road. You are standing on an east-west road. Mages dot the area and display an incredible and amazing show of power and skill. Seven towers stand around you all branching off from the corners of the hexagonally shaped road. Surrounding this place is a dark and ominous pulsating field. } {Mages} {} {} {} {1.000} {}
 E {  620} {e} {e} {2} {0} {} {1.000} {}
 E {  617} {w} {w} {8} {0} {} {1.000} {}
 
-R { 7185} {0} {} {7185} { } {A Straight Road. You are standing on a road which leads from the southwest direction towards the northeast. There are a lot of mages here most of whom are wearing on their robes either the symbol of the Platinum Star or the symbol of the Tyrian Vines. They are putting on quite a show of magical powers. Looking towards the east you see a big tower although you cannot go directly towards it from here. Other towers are nearby to the north and to the southwest. Encompassing the area is a dark and foreboding energy field which occasionally flashes brightly. Standing next to the road is an old tree. } {mages} {} {} {} {1.000} {}
+R { 7185} {0} {} {A Straight Road (ne,sw)} { } {A Straight Road. You are standing on a road which leads from the southwest direction towards the northeast. There are a lot of mages here most of whom are wearing on their robes either the symbol of the Platinum Star or the symbol of the Tyrian Vines. They are putting on quite a show of magical powers. Looking towards the east you see a big tower although you cannot go directly towards it from here. Other towers are nearby to the north and to the southwest. Encompassing the area is a dark and foreboding energy field which occasionally flashes brightly. Standing next to the road is an old tree. } {Mages} {} {} {} {1.000} {}
 E {  617} {ne} {ne} {3} {0} {} {1.000} {}
 E {  613} {sw} {sw} {12} {0} {} {1.000} {}
 E { 7209} {climb tree} {#20 climb tree;cast levitate;search nest} {0} {0} {} {1.000} {}
 
-R { 7186} {0} {} {7186} { } {} {} {} {} {} {1.000} {}
+R { 7186} {0} {} {Lost in darkness (nw)} { } {Lost in darkness. You are in the darkness outside the boundaries of the safe glade. A chill runs through your body and you start to wonder if this was a wise decision. You look back at the glade and feel a longing for warmth and safety once more. Ahead of you the darkness and mist stretch forward as far as you can see. } {Mages} {} {} {} {1.000} {}
 E {  628} {nw} {nw} {9} {0} {} {1.000} {}
 E { 7187} {ne} {ne} {3} {0} {} {1.000} {}
 
-R { 7187} {0} {} {7187} { } {} {} {} {} {} {1.000} {}
+R { 7187} {0} {<118>} {7187} { } {} {} {} {} {} {1.000} {}
 E { 7186} {sw} {sw} {12} {0} {} {1.000} {}
 E { 7188} {e} {e} {2} {0} {} {1.000} {}
 
@@ -55199,15 +55203,18 @@ R {11589} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11588} {w} {w} {8} {0} {} {1.000} {}
 E {11590} {se} {se} {6} {0} {} {1.000} {}
 
-R {11590} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11590} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {11589} {nw} {nw} {9} {0} {} {1.000} {}
 E {11591} {e} {e} {2} {0} {} {1.000} {}
 
-R {11591} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11591} {0} {} {The Dead Moors (se,n,s,w,e)} { } {The Dead Moors Fog rolls across the fen, blinding you in a misty haze.  Damp rot has turned the floor of this fen into putrid muck.  Sharp-bladed sedges crowd between the bushes, like hidden knives ready to cut you.   } {The Shadowlands} {} {} {} {1.000} {}
 E {11590} {w} {w} {8} {0} {} {1.000} {}
 E {11592} {e} {e} {2} {0} {} {1.000} {}
+E {13367} {se} {se} {6} {0} {} {1.000} {}
+E {13374} {n} {n} {1} {0} {} {1.000} {}
+E {13375} {s} {s} {4} {0} {} {1.000} {}
 
-R {11592} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11592} {0} {} {The Dead Moors (n,w)} { } {The Dead Moors Brown moss covers nearly every inch of the marsh, obscuring both shape and detail.  A haze of gloomy fog obscures the details of the surrounding marsh.  Damp rot has turned the floor of this marsh into putrid muck.   } {The Shadowlands} {} {} {} {1.000} {}
 E {11591} {w} {w} {8} {0} {} {1.000} {}
 E {11599} {n} {n} {1} {0} {} {1.000} {}
 
@@ -55236,7 +55243,7 @@ E {11598} {d} {d} {32} {0} {} {1.000} {}
 R {11598} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11597} {u} {u} {16} {0} {} {1.000} {}
 
-R {11599} {0} {} {black ooze} { } {} {} {black ooze} {} {} {1.000} {}
+R {11599} {0} {} {black ooze} { } {The Hollows Stones mark a pathway through the muck, each clearly set with the purpose of guiding travelers deeper into the defile.  The land rising on both sides of this treacherous defile blocks retreat in those directions.  This dark defile winds its way through the heart of the Shadowlands.   } {The Shadowlands} {black ooze} {} {} {1.000} {}
 E {11592} {s} {s} {4} {0} {} {1.000} {}
 E {11882} {n} {n} {1} {0} {} {1.000} {}
 
@@ -56409,16 +56416,17 @@ E {11879} {ne} {ne} {3} {0} {} {1.000} {}
 R {11881} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11878} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {11882} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11882} {0} {} {The Hollows (s,e)} { } {The Hollows A route through the defile has been clearly marked via a series of flat black stones.  Land rises steeply on both sides of the defile, preventing you from moving in those directions.  This narrow defile twists and turns its way toward the very center of the Shadowlands.   } {The Shadowlands} {} {} {} {1.000} {}
 E {11599} {s} {s} {4} {0} {} {1.000} {}
 E {11883} {e} {e} {2} {0} {} {1.000} {}
 
-R {11883} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11883} {0} {} {The Hollows (e,w)} { } {The Hollows This slender gorge angles back and forth through the middle of the surrounding higher ground.  A route through the gorge has been clearly marked via a series of flat black stones.  The slope on either side of the gorge is much too steep to climb.   } {The Shadowlands} {} {} {} {1.000} {}
 E {11882} {w} {w} {8} {0} {} {1.000} {}
 E {11884} {e} {e} {2} {0} {} {1.000} {}
 
-R {11884} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11884} {0} {} {The Hollows (sw,w)} { } {The Hollows This narrow gorge twists and turns its way toward the very center of the Shadowlands.  Land rises steeply on both sides of the gorge, preventing you from moving in those directions.  A route through the gorge has been clearly marked via a series of flat black stones.   } {The Shadowlands} {} {} {} {1.000} {}
 E {11883} {w} {w} {8} {0} {} {1.000} {}
+E {13368} {sw} {sw} {12} {0} {} {1.000} {}
 
 R {11885} {0} {} {Entrance to the Dungeon of Shame (e,exit)} { } {An overwhelming sense of danger pervades the entrance to this cave system. To one side lies a gaping hole and pathway back toward the exit from this place while the other leads deeper into the unknown. The ground beneath you seems to be made of a light gray clay and packed tight. The walls are rough and craggy, almost like you could mine them if you had the right tool. } {Ultima Online} {uo1} {} {} {1.000} {}
 E { 3930} {exit} {exit} {0} {0} {} {1.000} {}
@@ -56751,7 +56759,7 @@ E {11963} {u} {u} {16} {0} {} {1.000} {}
 R {11965} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11084} {door} {door} {0} {0} {} {1.000} {}
 
-R {11966} {0} {<128>} {} { } {} {} {} {} {} {1.000} {}
+R {11966} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 3936} {portal} {portal} {0} {0} {} {1.000} {}
 E {11967} {s} {s} {4} {0} {} {1.000} {}
 
@@ -57849,7 +57857,7 @@ R {12201} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {12200} {e} {e} {2} {0} {} {1.000} {}
 E {12204} {w} {w} {8} {0} {} {1.000} {}
 
-R {12202} {0} {} {A Cosy Closet (e)} { } {A Cosy Closet. This is a small alcove set to one side of the main entrance hall to the guild rooms. There is a small magical box here which appears to be able to contain a tremendous amount of equipment. By placing items in the box, Mages can store things for their later use or for assisting other members of the guild. } {mages} {} {} {} {1.000} {}
+R {12202} {0} {} {A Cosy Closet (e)} { } {A Cosy Closet. This is a small alcove set to one side of the main entrance hall to the guild rooms. There is a small magical box here which appears to be able to contain a tremendous amount of equipment. By placing items in the box, Mages can store things for their later use or for assisting other members of the guild. } {Mages} {} {} {} {1.000} {}
 E {  609} {e} {e} {2} {0} {} {1.000} {}
 
 R {12203} {0} {} {} { } {} {} {} {} {} {1.000} {}
@@ -58715,7 +58723,7 @@ R {12416} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 R {12417} {0} {} {} { } {} {} {jedi armory} {} {} {1.000} {}
 E { 5527} {w} {w} {8} {0} {} {1.000} {}
 
-R {12418} {0} {} {A Dusty Alcove (w)} { } {A Dusty Alcove. There are two alcoves set to the sides of the main entrance hall, this one and another symmetrically opposite. There is a small box here which serves as a place to store disjunction items collected by mages all over the Three Kingdoms. } {mages} {} {} {} {1.000} {}
+R {12418} {0} {} {A Dusty Alcove (w)} { } {A Dusty Alcove. There are two alcoves set to the sides of the main entrance hall, this one and another symmetrically opposite. There is a small box here which serves as a place to store disjunction items collected by mages all over the Three Kingdoms. } {Mages} {} {} {} {1.000} {}
 E {  609} {w} {w} {8} {0} {} {1.000} {}
 
 R {12419} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
@@ -58726,7 +58734,7 @@ R {12421} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
 R {12422} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
-R {12423} {0} {} {Swirling Vapors (e)} { } {You stand on the edge of the world, behind you the warmth of the mage tower and in front of a mass of swirling vapors and clouds from another world or other dimension.  Clearly a tremendous spell has been cast to bring this link into existence.  Now and again, small objects such as pebbles and stones are flung from the vapors and clatter to the floor.  You wonder if this room is part of the construction of the wonderful telekinesis or secure shelter spells, linking this existence with another plane. } {mages} {} {} {} {1.000} {}
+R {12423} {0} {} {Swirling Vapors (e)} { } {You stand on the edge of the world, behind you the warmth of the mage tower and in front of a mass of swirling vapors and clouds from another world or other dimension.  Clearly a tremendous spell has been cast to bring this link into existence.  Now and again, small objects such as pebbles and stones are flung from the vapors and clatter to the floor.  You wonder if this room is part of the construction of the wonderful telekinesis or secure shelter spells, linking this existence with another plane. } {Mages} {} {} {} {1.000} {}
 E {  623} {e} {e} {2} {0} {} {1.000} {}
 
 R {12424} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
@@ -58743,10 +58751,10 @@ R {12429} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
 R {12430} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
-R {12431} {0} {} {On a small balcony (e)} { } {As you step out from the darkness in the study, your body is engulfed in warm and bright sunlight. For a moment your eyes becomes watery but in seconds your sight returns to normal. The balcony is made out of white marble and feels warm at your touch. You gaze at the wonderful view that is before you and it is truly breathtaking. To the east you see the small staircase leading back down into the tower itself. } {mages} {} {} {} {1.000} {}
+R {12431} {0} {} {On a small balcony (e)} { } {As you step out from the darkness in the study, your body is engulfed in warm and bright sunlight. For a moment your eyes becomes watery but in seconds your sight returns to normal. The balcony is made out of white marble and feels warm at your touch. You gaze at the wonderful view that is before you and it is truly breathtaking. To the east you see the small staircase leading back down into the tower itself. } {Mages} {} {} {} {1.000} {}
 E {  624} {e} {e} {2} {0} {} {1.000} {}
 
-R {12432} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {12432} {0} {} {Lost in darkness (sw)} { } {Lost in darkness. You are in the darkness outside the boundaries of the safe glade. A chill runs through your body and you start to wonder if this was a wise decision. You look back at the glade and feel a longing for warmth and safety once more. Ahead of you the darkness and mist stretch forward as far as you can see. } {Mages} {} {} {} {1.000} {}
 E {  621} {sw} {sw} {12} {0} {} {1.000} {}
 
 R {12433} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
@@ -58755,13 +58763,13 @@ R {12434} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
 R {12435} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
-R {12436} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {12436} {0} {} {Lost in darkness (se)} { } {Lost in darkness. You are in the darkness outside the boundaries of the safe glade. A chill runs through your body and you start to wonder if this was a wise decision. You look back at the glade and feel a longing for warmth and safety once more. Ahead of you the darkness and mist stretch forward as far as you can see. } {Mages} {} {} {} {1.000} {}
 E {  618} {se} {se} {6} {0} {} {1.000} {}
 
-R {12437} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {12437} {0} {} {Lost in darkness (e)} { } {Lost in darkness. You are in the darkness outside the boundaries of the safe glade. A chill runs through your body and you start to wonder if this was a wise decision. You look back at the glade and feel a longing for warmth and safety once more. Ahead of you the darkness and mist stretch forward as far as you can see. } {Mages} {} {} {} {1.000} {}
 E {  614} {e} {e} {2} {0} {} {1.000} {}
 
-R {12438} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {12438} {0} {} {Lost in darkness (ne)} { } {Lost in darkness. You are in the darkness outside the boundaries of the safe glade. A chill runs through your body and you start to wonder if this was a wise decision. You look back at the glade and feel a longing for warmth and safety once more. Ahead of you the darkness and mist stretch forward as far as you can see. } {Mages} {} {} {} {1.000} {}
 E {  631} {ne} {ne} {3} {0} {} {1.000} {}
 
 R {12439} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
@@ -59868,8 +59876,12 @@ E { 6535} {ne} {ne} {3} {0} {} {1.000} {}
 R {12696} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 6535} {nw} {nw} {9} {0} {} {1.000} {}
 
-R {12697} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {12697} {0} {} {A Grand, Spiralling Stairwell (d,ne,nw,sw,se)} { } {A stairway rises and descends, spiralling into the darkness and gloom. Constructed of the same pale grey blocks of stone as the rest of the tower, it is lit by floating points of light, arranged at regular intervals along the inside of the vast open column that is the stairwell. The matter that composes this world is thin here, and ascending any further would take you not just higher up the Tower, but also into realms of the Astral inhospitable to human life. You will not be able to go further up without powerful Magicks. } {Tower of the Clenched Light} {} {} {} {1.000} {}
 E { 6536} {d} {d} {32} {0} {} {1.000} {}
+E {13271} {nw} {nw} {9} {0} {} {1.000} {}
+E {13274} {ne} {ne} {3} {0} {} {1.000} {}
+E {13275} {sw} {sw} {12} {0} {} {1.000} {}
+E {13276} {se} {se} {6} {0} {} {1.000} {}
 
 R {12698} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 6536} {sw} {sw} {12} {0} {} {1.000} {}
@@ -62343,3 +62355,577 @@ E {10262} {s} {s} {4} {0} {} {1.000} {}
 
 R {13269} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {10263} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {13270} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R {13271} {0} {} {Reading section (se,n,w)} { } {Reading section The bright light in this room shines down from sinuous coils that hover magically in the air.  A few low tables stand scattered around the area, surrounded by stacks of cushions.  Shadows gather heavily just outside the range of the lights, cloaking much of the shelves that stretch away to the distant walls.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {12697} {se} {se} {6} {0} {} {1.000} {}
+E {13272} {n} {n} {1} {0} {} {1.000} {}
+E {13273} {w} {w} {8} {0} {} {1.000} {}
+
+R {13272} {0} {} {Reading section (s,n,w)} { } {Reading section A few low tables stand scattered around the area, surrounded by stacks of cushions.  Shadows gather heavily just outside the range of the lights, cloaking much of the shelves that stretch away to the distant walls.  Coils of sorcerous light hang suspended in empty air, casting a bright but unnatural glow.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13271} {s} {s} {4} {0} {} {1.000} {}
+E {13300} {n} {n} {1} {0} {} {1.000} {}
+E {13301} {w} {w} {8} {0} {} {1.000} {}
+
+R {13273} {0} {} {Reading section (w,e)} { } {Reading section Shadows gather heavily just outside the range of the lights, cloaking much of the shelves that stretch away to the distant walls.  A few low tables stand scattered around the area, surrounded by stacks of cushions.  This area is well-lit by a few hanging coils of sorcerous light, providing more than adequate illumination for reading.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13271} {e} {e} {2} {0} {} {1.000} {}
+E {13329} {w} {w} {8} {0} {} {1.000} {}
+
+R {13274} {0} {} {Reading section (sw,n,e)} { } {Reading section This area is well-lit by a few hanging coils of sorcerous light, providing more than adequate illumination for reading.  Piles of plush cushions surround a selection of low-slung, oddly shaped reading tables. Heavily laden shelves stretch out around you, shadows cloaking the details of the books that line their surfaces.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {12697} {sw} {sw} {12} {0} {} {1.000} {}
+E {13326} {e} {e} {2} {0} {} {1.000} {}
+E {13307} {n} {n} {1} {0} {} {1.000} {}
+
+R {13275} {0} {} {Reading section (ne,s,w)} { } {Reading section This area is well-lit by a few hanging coils of sorcerous light, providing more than adequate illumination for reading.  Piles of plush cushions surround a selection of low-slung, oddly shaped reading tables. Shadows gather heavily just outside the range of the lights, cloaking much of the shelves that stretch away to the distant walls.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {12697} {ne} {ne} {3} {0} {} {1.000} {}
+E {13291} {s} {s} {4} {0} {} {1.000} {}
+E {13292} {w} {w} {8} {0} {} {1.000} {}
+
+R {13276} {0} {} {Reading section (nw,e,s)} { } {Reading section Coils of sorcerous light hang suspended in empty air, casting a bright but unnatural glow.  There are a few clusters of low tables here, along with many heavy cushions on the floor.  Heavily laden shelves stretch out around you, shadows cloaking the details of the books that line their surfaces.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {12697} {nw} {nw} {9} {0} {} {1.000} {}
+E {13277} {e} {e} {2} {0} {} {1.000} {}
+E {13278} {s} {s} {4} {0} {} {1.000} {}
+
+R {13277} {0} {} {Reading section (e,w)} { } {Reading section Shadows gather heavily just outside the range of the lights, cloaking much of the shelves that stretch away to the distant walls.  This area is well-lit by a few hanging coils of sorcerous light, providing more than adequate illumination for reading.  Piles of plush cushions surround a selection of low-slung, oddly shaped reading tables.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13276} {w} {w} {8} {0} {} {1.000} {}
+E {13279} {e} {e} {2} {0} {} {1.000} {}
+
+R {13278} {0} {} {Reading section (e,s,n)} { } {Reading section Shadows gather heavily just outside the range of the lights, cloaking much of the shelves that stretch away to the distant walls.  Coils of sorcerous light hang suspended in empty air, casting a bright but unnatural glow.  A few low tables stand scattered around the area, surrounded by stacks of cushions.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13276} {n} {n} {1} {0} {} {1.000} {}
+E {13298} {s} {s} {4} {0} {} {1.000} {}
+E {13299} {e} {e} {2} {0} {} {1.000} {}
+
+R {13279} {0} {} {Library of the Clenched Light - Special Collections (e,n} { } {Library of the Clenched Light - Special Collections Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.  Here in the special collections section of the library, a small statuette is displayed.  A luxurious carpet, dyed in magnificent colors, covers the floor here.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13277} {w} {w} {8} {0} {} {1.000} {}
+E {13280} {e} {e} {2} {0} {} {1.000} {}
+E {13325} {n} {n} {1} {0} {} {1.000} {}
+
+R {13280} {0} {} {Library of the Clenched Light - Special Collections (e,w} { } {Library of the Clenched Light - Special Collections This is the special collections section of the library, and a knotted rope is displayed on the shelves here.  The air here is stale and musty, smelling of old books and dry, preserved leather.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13279} {w} {w} {8} {0} {} {1.000} {}
+E {13281} {e} {e} {2} {0} {} {1.000} {}
+
+R {13281} {0} {} {Library of the Clenched Light - Special Collections (s,w} { } {Library of the Clenched Light - Special Collections Here in the special collections section of the library, a carved and broken staff is displayed on the shelves.  The air here is stale and musty, smelling of old books and dry, preserved leather.  Rows upon rows of shelves are arrayed here, stretching into the distant gloom.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13280} {w} {w} {8} {0} {} {1.000} {}
+E {13282} {s} {s} {4} {0} {} {1.000} {}
+
+R {13282} {0} {} {Library of the Clenched Light - Special Collections (s,n} { } {Library of the Clenched Light - Special Collections Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.  Here in the special collections section of the library, a small statuette is displayed.  Dust puffs up with each of your steps - this place has not been visited in quite a long while.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13281} {n} {n} {1} {0} {} {1.000} {}
+E {13283} {s} {s} {4} {0} {} {1.000} {}
+E {13363} {w} {w} {8} {0} {} {1.000} {}
+
+R {13283} {0} {} {Library of the Clenched Light - Special Collections (s,n} { } {Library of the Clenched Light - Special Collections Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.  Dust puffs up with each of your steps - this place has not been visited in quite a long while.  Here in the special collections section of the library, the shelves are loaded with old papers.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13282} {n} {n} {1} {0} {} {1.000} {}
+E {13284} {s} {s} {4} {0} {} {1.000} {}
+E {13364} {w} {w} {8} {0} {} {1.000} {}
+
+R {13284} {0} {} {Library of the Clenched Light - Special Collections (s,n} { } {Library of the Clenched Light - Special Collections Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.  The air here is stale and musty, smelling of old books and dry, preserved leather.  Here in the special collections section of the library, a small statuette is displayed.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13283} {n} {n} {1} {0} {} {1.000} {}
+E {13285} {s} {s} {4} {0} {} {1.000} {}
+E {13290} {w} {w} {8} {0} {} {1.000} {}
+
+R {13285} {0} {} {Library of the Clenched Light - Special Collections (w,n} { } {Library of the Clenched Light - Special Collections Rows upon rows of shelves are arrayed here, stretching into the distant gloom.  Dust puffs up with each of your steps - this place has not been visited in quite a long while.  Here in the special collections section of the library, the shelves are loaded with old papers.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13284} {n} {n} {1} {0} {} {1.000} {}
+E {13286} {w} {w} {8} {0} {} {1.000} {}
+
+R {13286} {0} {} {Library of the Clenched Light - Special Collections (e,w} { } {Library of the Clenched Light - Special Collections The floor is the same pale stone as the rest of the tower, and covered with a thin but surprisingly clean rug.  This is the special collections section of the library, and a set of quills is displayed on the shelves here.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13285} {e} {e} {2} {0} {} {1.000} {}
+E {13287} {w} {w} {8} {0} {} {1.000} {}
+
+R {13287} {0} {} {Library of the Clenched Light - Special Collections (e,w} { } {Library of the Clenched Light - Special Collections Rows upon rows of shelves are arrayed here, stretching into the distant gloom.  This is the special collections section of the library, and a knotted rope is displayed on the shelves here.  Dust puffs up with each of your steps - this place has not been visited in quite a long while.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13286} {e} {e} {2} {0} {} {1.000} {}
+E {13288} {w} {w} {8} {0} {} {1.000} {}
+
+R {13288} {0} {} {Library of the Clenched Light - Special Collections (e,w} { } {Library of the Clenched Light - Special Collections This is the special collections section of the library, and a set of quills is displayed on the shelves here.  A luxurious carpet, dyed in magnificent colors, covers the floor here.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13287} {e} {e} {2} {0} {} {1.000} {}
+E {13289} {w} {w} {8} {0} {} {1.000} {}
+
+R {13289} {0} {} {Library of the Clenched Light - Special Collections (e,n} { } {Library of the Clenched Light - Special Collections A luxurious carpet, dyed in magnificent colors, covers the floor here.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.  This is the special collections section of the library, and a set of quills is displayed on the shelves here.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13288} {e} {e} {2} {0} {} {1.000} {}
+
+R {13290} {0} {} {Library of the Clenched Light - Special Collections (e,w} { } {Library of the Clenched Light - Special Collections Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.  This is the special collections section of the library, and a knotted rope is displayed on the shelves here.  The air here is stale and musty, smelling of old books and dry, preserved leather.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13284} {e} {e} {2} {0} {} {1.000} {}
+
+R {13291} {0} {} {Reading section (s,n,w)} { } {Reading section Out of the range of the lights, shelves stretch all the way to the distant walls.  This area is well-lit by a few hanging coils of sorcerous light, providing more than adequate illumination for reading.  There are a few clusters of low tables here, along with many heavy cushions on the floor.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13275} {n} {n} {1} {0} {} {1.000} {}
+E {13293} {s} {s} {4} {0} {} {1.000} {}
+E {13294} {w} {w} {8} {0} {} {1.000} {}
+
+R {13292} {0} {} {Reading section (w,e)} { } {Reading section The bright light in this room shines down from sinuous coils that hover magically in the air.  Piles of plush cushions surround a selection of low-slung, oddly shaped reading tables.  Heavily laden shelves stretch out around you, shadows cloaking the details of the books that line their surfaces.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13275} {e} {e} {2} {0} {} {1.000} {}
+E {13348} {w} {w} {8} {0} {} {1.000} {}
+
+R {13293} {0} {} {Library of the Clenched Light (e,s,n,w)} { } {Library of the Clenched Light You can hear a heated, but hushed, argument from few rows over.  A few of the shelves here hold volumes of darkly-bound books, their contents impenetrable.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13291} {n} {n} {1} {0} {} {1.000} {}
+E {13295} {e} {e} {2} {0} {} {1.000} {}
+E {13296} {s} {s} {4} {0} {} {1.000} {}
+E {13297} {w} {w} {8} {0} {} {1.000} {}
+
+R {13294} {0} {} {Reading section (w,e)} { } {Reading section Coils of sorcerous light hang suspended in empty air, casting a bright but unnatural glow.  There are a few clusters of low tables here, along with many heavy cushions on the floor.  Heavily laden shelves stretch out around you, shadows cloaking the details of the books that line their surfaces.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13291} {e} {e} {2} {0} {} {1.000} {}
+E {13354} {w} {w} {8} {0} {} {1.000} {}
+
+R {13295} {0} {} {Hallway (e,w)} { } {Hallway This hallway connects the various large rooms, here on the fifth floor of the Tower of the Clenched Light. It is built of elegant arches of the same stone that form the rest of the Tower, the great sweeps of pale marble somehow ghostly and radiant in the gloom. Currents of dark air gust through, channeled by the architecture into pleasant breezes.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13293} {w} {w} {8} {0} {} {1.000} {}
+E {13298} {e} {e} {2} {0} {} {1.000} {}
+
+R {13296} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13293} {n} {n} {1} {0} {} {1.000} {}
+E {13361} {w} {w} {8} {0} {} {1.000} {}
+
+R {13297} {0} {} {Library of the Clenched Light (w,e)} { } {Library of the Clenched Light A few of the shelves here hold volumes of darkly-bound books, their contents impenetrable.  You hear the pad of slippered feet from the next row.  Rows upon rows of shelves are arrayed here, stretching into the distant gloom.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13293} {e} {e} {2} {0} {} {1.000} {}
+E {13355} {w} {w} {8} {0} {} {1.000} {}
+
+R {13298} {0} {} {Library of the Clenched Light - Special Collections (e,s} { } {Library of the Clenched Light - Special Collections This is the special collections section of the library, and the shelves are loaded with odd documents.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.  The air here is stale and musty, smelling of old books and dry, preserved leather.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13295} {w} {w} {8} {0} {} {1.000} {}
+E {13278} {n} {n} {1} {0} {} {1.000} {}
+E {13366} {e} {e} {2} {0} {} {1.000} {}
+
+R {13299} {0} {} {Reading section (w,e)} { } {Reading section Out of the range of the lights, shelves stretch all the way to the distant walls.  The bright light in this room shines down from sinuous coils that hover magically in the air.  A few low tables stand scattered around the area, surrounded by stacks of cushions.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13278} {w} {w} {8} {0} {} {1.000} {}
+E {13362} {e} {e} {2} {0} {} {1.000} {}
+
+R {13300} {0} {} {Library of the Clenched Light (e,s,n,w)} { } {Library of the Clenched Light This place is simultaneously stifling and drafty, somehow combining the worst aspects of wet and cold.  Scrolls of parchment and fine vellum fill the shelves, all carefully rolled and stacked.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13272} {s} {s} {4} {0} {} {1.000} {}
+E {13302} {e} {e} {2} {0} {} {1.000} {}
+E {13303} {n} {n} {1} {0} {} {1.000} {}
+E {13304} {w} {w} {8} {0} {} {1.000} {}
+
+R {13301} {0} {} {Reading section (w,e)} { } {Reading section The bright light in this room shines down from sinuous coils that hover magically in the air.  Heavily laden shelves stretch out around you, shadows cloaking the details of the books that line their surfaces.  A few low tables stand scattered around the area, surrounded by stacks of cushions.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13272} {e} {e} {2} {0} {} {1.000} {}
+E {13336} {w} {w} {8} {0} {} {1.000} {}
+
+R {13302} {0} {} {Hallway (e,w)} { } {Hallway This hallway connects the various large rooms, here on the fifth floor of the Tower of the Clenched Light. It is built of elegant arches of the same stone that form the rest of the Tower, the great sweeps of pale marble somehow ghostly and radiant in the gloom. Currents of dark air gust through, channeled by the architecture into pleasant breezes.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13300} {w} {w} {8} {0} {} {1.000} {}
+E {13305} {e} {e} {2} {0} {} {1.000} {}
+
+R {13303} {0} {} {Library of the Clenched Light (n,s,w)} { } {Library of the Clenched Light Scrolls of parchment and fine vellum fill the shelves, all carefully rolled and stacked.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.  The floor is the same pale stone as the rest of the tower, and covered with a thin but surprisingly clean rug.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13300} {s} {s} {4} {0} {} {1.000} {}
+E {13343} {w} {w} {8} {0} {} {1.000} {}
+E {13344} {n} {n} {1} {0} {} {1.000} {}
+
+R {13304} {0} {} {Library of the Clenched Light (w,e)} { } {Library of the Clenched Light This place is simultaneously stifling and drafty, somehow combining the worst aspects of wet and cold.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.  Scrolls of parchment and fine vellum fill the shelves, all carefully rolled and stacked.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13300} {e} {e} {2} {0} {} {1.000} {}
+E {13337} {w} {w} {8} {0} {} {1.000} {}
+
+R {13305} {0} {} {Library of the Clenched Light (e,s,n,w)} { } {Library of the Clenched Light The shelves are filled with a mess of journals, many of the journals jumbled or lying on the floor.  You can hear a heated, but hushed, argument from few rows over.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13302} {w} {w} {8} {0} {} {1.000} {}
+E {13306} {e} {e} {2} {0} {} {1.000} {}
+E {13307} {s} {s} {4} {0} {} {1.000} {}
+E {13308} {n} {n} {1} {0} {} {1.000} {}
+
+R {13306} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13305} {w} {w} {8} {0} {} {1.000} {}
+
+R {13307} {0} {} {Reading section (e,s,n)} { } {Reading section Shadows gather heavily just outside the range of the lights, cloaking much of the shelves that stretch away to the distant walls.  The bright light in this room shines down from sinuous coils that hover magically in the air.  There are a few clusters of low tables here, along with many heavy cushions on the floor.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13305} {n} {n} {1} {0} {} {1.000} {}
+E {13274} {s} {s} {4} {0} {} {1.000} {}
+E {13328} {e} {e} {2} {0} {} {1.000} {}
+
+R {13308} {0} {} {Library of the Clenched Light (e,s,n)} { } {Library of the Clenched Light Folders fill the shelves, some thin, others stuffed to overflowing with various papers.  You can hear a heated, but hushed, argument from few rows over.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13305} {s} {s} {4} {0} {} {1.000} {}
+E {13309} {e} {e} {2} {0} {} {1.000} {}
+E {13310} {n} {n} {1} {0} {} {1.000} {}
+
+R {13309} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13308} {w} {w} {8} {0} {} {1.000} {}
+
+R {13310} {0} {} {Library of the Clenched Light (s,e)} { } {Library of the Clenched Light Journals fill the shelves, each meticulously and chronologically ordered.  Rows upon rows of shelves are arrayed here, stretching into the distant gloom.  Someone hidden by the shelves of books mutters something to himself.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13308} {s} {s} {4} {0} {} {1.000} {}
+E {13311} {e} {e} {2} {0} {} {1.000} {}
+
+R {13311} {0} {} {Library of the Clenched Light (e,w)} { } {Library of the Clenched Light The shelves are filled with a mess of journals, many of the journals jumbled or lying on the floor.  Rows upon rows of shelves are arrayed here, stretching into the distant gloom.  You can hear a heated, but hushed, argument from few rows over.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13310} {w} {w} {8} {0} {} {1.000} {}
+E {13312} {e} {e} {2} {0} {} {1.000} {}
+
+R {13312} {0} {} {Library of the Clenched Light (e,w)} { } {Library of the Clenched Light Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.  You can hear a heated, but hushed, argument from few rows over.  Folders fill the shelves, some thin, others stuffed to overflowing with various papers.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13311} {w} {w} {8} {0} {} {1.000} {}
+E {13313} {e} {e} {2} {0} {} {1.000} {}
+
+R {13313} {0} {} {Library of the Clenched Light (e,w)} { } {Library of the Clenched Light You can hear a heated, but hushed, argument from few rows over.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.  The shelves are filled with a mess of journals, many of the journals jumbled or lying on the floor.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13312} {w} {w} {8} {0} {} {1.000} {}
+E {13314} {e} {e} {2} {0} {} {1.000} {}
+
+R {13314} {0} {} {Library of the Clenched Light (s,w)} { } {Library of the Clenched Light Journals fill the shelves, each meticulously and chronologically ordered.  You hear the pad of slippered feet from the next row.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13313} {w} {w} {8} {0} {} {1.000} {}
+E {13315} {s} {s} {4} {0} {} {1.000} {}
+
+R {13315} {0} {} {Library of the Clenched Light (s,n,w)} { } {Library of the Clenched Light You can hear a heated, but hushed, argument from few rows over.  Folders fill the shelves, some thin, others stuffed to overflowing with various papers.  Rows upon rows of shelves are arrayed here, stretching into the distant gloom.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13314} {n} {n} {1} {0} {} {1.000} {}
+E {13316} {s} {s} {4} {0} {} {1.000} {}
+E {13317} {w} {w} {8} {0} {} {1.000} {}
+
+R {13316} {0} {} {Library of the Clenched Light (s,n,w)} { } {Library of the Clenched Light Someone hidden by the shelves of books mutters something to himself.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.  Folders fill the shelves, some thin, others stuffed to overflowing with various papers.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13315} {n} {n} {1} {0} {} {1.000} {}
+E {13319} {s} {s} {4} {0} {} {1.000} {}
+E {13320} {w} {w} {8} {0} {} {1.000} {}
+
+R {13317} {0} {} {Library of the Clenched Light (e,w)} { } {Library of the Clenched Light Rows upon rows of shelves are arrayed here, stretching into the distant gloom.  The shelves are filled with a mess of journals, many of the journals jumbled or lying on the floor.  Someone hidden by the shelves of books mutters something to himself.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13315} {e} {e} {2} {0} {} {1.000} {}
+E {13318} {w} {w} {8} {0} {} {1.000} {}
+
+R {13318} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13317} {e} {e} {2} {0} {} {1.000} {}
+
+R {13319} {0} {} {Library of the Clenched Light (s,n,w)} { } {Library of the Clenched Light You hear the pad of slippered feet from the next row.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.  Journals fill the shelves, each meticulously and chronologically ordered.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13316} {n} {n} {1} {0} {} {1.000} {}
+E {13321} {s} {s} {4} {0} {} {1.000} {}
+E {13322} {w} {w} {8} {0} {} {1.000} {}
+
+R {13320} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13316} {e} {e} {2} {0} {} {1.000} {}
+
+R {13321} {0} {} {Library of the Clenched Light (w,n)} { } {Library of the Clenched Light Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.  You can hear a heated, but hushed, argument from few rows over.  The shelves are filled with a mess of journals, many of the journals jumbled or lying on the floor.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13319} {n} {n} {1} {0} {} {1.000} {}
+E {13323} {w} {w} {8} {0} {} {1.000} {}
+
+R {13322} {0} {} {Library of the Clenched Light (e,w)} { } {Library of the Clenched Light Rows upon rows of shelves are arrayed here, stretching into the distant gloom.  You can hear a heated, but hushed, argument from few rows over.  Journals fill the shelves, each meticulously and chronologically ordered.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13319} {e} {e} {2} {0} {} {1.000} {}
+E {13327} {w} {w} {8} {0} {} {1.000} {}
+
+R {13323} {0} {} {Library of the Clenched Light (e,w)} { } {Library of the Clenched Light Rows upon rows of shelves are arrayed here, stretching into the distant gloom.  The shelves are filled with a mess of journals, many of the journals jumbled or lying on the floor.  You hear the pad of slippered feet from the next row.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13321} {e} {e} {2} {0} {} {1.000} {}
+E {13324} {w} {w} {8} {0} {} {1.000} {}
+
+R {13324} {0} {} {Library of the Clenched Light (s,w,e)} { } {Library of the Clenched Light Journals fill the shelves, each meticulously and chronologically ordered.  You can hear a heated, but hushed, argument from few rows over.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13323} {e} {e} {2} {0} {} {1.000} {}
+E {13325} {s} {s} {4} {0} {} {1.000} {}
+E {13326} {w} {w} {8} {0} {} {1.000} {}
+
+R {13325} {0} {} {Hallway (n,s)} { } {Hallway This hallway connects the various large rooms, here on the fifth floor of the Tower of the Clenched Light. It is built of elegant arches of the same stone that form the rest of the Tower, the great sweeps of pale marble somehow ghostly and radiant in the gloom. Currents of dark air gust through, channeled by the architecture into pleasant breezes.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13324} {n} {n} {1} {0} {} {1.000} {}
+E {13279} {s} {s} {4} {0} {} {1.000} {}
+
+R {13326} {0} {} {Reading section (e,w)} { } {Reading section There are a few clusters of low tables here, along with many heavy cushions on the floor.  The bright light in this room shines down from sinuous coils that hover magically in the air.  Shadows gather heavily just outside the range of the lights, cloaking much of the shelves that stretch away to the distant walls.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13324} {e} {e} {2} {0} {} {1.000} {}
+E {13274} {w} {w} {8} {0} {} {1.000} {}
+
+R {13327} {0} {} {Library of the Clenched Light (e,w)} { } {Library of the Clenched Light Rows upon rows of shelves are arrayed here, stretching into the distant gloom.  You hear the pad of slippered feet from the next row.  Journals fill the shelves, each meticulously and chronologically ordered.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13322} {e} {e} {2} {0} {} {1.000} {}
+E {13328} {w} {w} {8} {0} {} {1.000} {}
+
+R {13328} {0} {} {Reading section (e,w)} { } {Reading section Piles of plush cushions surround a selection of low-slung, oddly shaped reading tables.  The bright light in this room shines down from sinuous coils that hover magically in the air.  Out of the range of the lights, shelves stretch all the way to the distant walls.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13327} {e} {e} {2} {0} {} {1.000} {}
+E {13307} {w} {w} {8} {0} {} {1.000} {}
+
+R {13329} {0} {} {Library of the Clenched Light (s,w,e)} { } {Library of the Clenched Light This place is simultaneously stifling and drafty, somehow combining the worst aspects of wet and cold.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.  Unbound sheaves of paper are stacked here, filling the shelves.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13273} {e} {e} {2} {0} {} {1.000} {}
+E {13330} {s} {s} {4} {0} {} {1.000} {}
+E {13331} {w} {w} {8} {0} {} {1.000} {}
+
+R {13330} {0} {} {Hallway (n,s)} { } {Hallway This hallway connects the various large rooms, here on the fifth floor of the Tower of the Clenched Light. It is built of elegant arches of the same stone that form the rest of the Tower, the great sweeps of pale marble somehow ghostly and radiant in the gloom. Currents of dark air gust through, channeled by the architecture into pleasant breezes.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13329} {n} {n} {1} {0} {} {1.000} {}
+E {13348} {s} {s} {4} {0} {} {1.000} {}
+
+R {13331} {0} {} {Library of the Clenched Light (w,e)} { } {Library of the Clenched Light Books fill the shelves, thick and intimidating, most appearing to be incredibly ancient.  Rows upon rows of shelves are arrayed here, stretching into the distant gloom.  A luxurious carpet, dyed in magnificent colors, covers the floor here.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13329} {e} {e} {2} {0} {} {1.000} {}
+E {13332} {w} {w} {8} {0} {} {1.000} {}
+
+R {13332} {0} {} {Library of the Clenched Light (e,n)} { } {Library of the Clenched Light The floor is the same pale stone as the rest of the tower, and covered with a thin but surprisingly clean rug.  Scrolls of parchment and fine vellum fill the shelves, all carefully rolled and stacked.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13331} {e} {e} {2} {0} {} {1.000} {}
+E {13333} {n} {n} {1} {0} {} {1.000} {}
+
+R {13333} {0} {} {Library of the Clenched Light (e,s,n)} { } {Library of the Clenched Light A luxurious carpet, dyed in magnificent colors, covers the floor here.  Books fill the shelves, thick and intimidating, most appearing to be incredibly ancient.  Rows upon rows of shelves are arrayed here, stretching into the distant gloom.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13332} {s} {s} {4} {0} {} {1.000} {}
+E {13334} {e} {e} {2} {0} {} {1.000} {}
+E {13335} {n} {n} {1} {0} {} {1.000} {}
+
+R {13334} {0} {} {Library of the Clenched Light (w,e)} { } {Library of the Clenched Light Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.  The air here is stale and musty, smelling of old books and dry, preserved leather.  Books fill the shelves, thick and intimidating, most appearing to be incredibly ancient.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13333} {w} {w} {8} {0} {} {1.000} {}
+E {13336} {e} {e} {2} {0} {} {1.000} {}
+
+R {13335} {0} {} {Library of the Clenched Light (n,s,e)} { } {Library of the Clenched Light Rows upon rows of shelves are arrayed here, stretching into the distant gloom.  Scrolls of parchment and fine vellum fill the shelves, all carefully rolled and stacked.  The air here is stale and musty, smelling of old books and dry, preserved leather.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13333} {s} {s} {4} {0} {} {1.000} {}
+E {13338} {e} {e} {2} {0} {} {1.000} {}
+E {13339} {n} {n} {1} {0} {} {1.000} {}
+
+R {13336} {0} {} {Library of the Clenched Light (w,e)} { } {Library of the Clenched Light Dust puffs up with each of your steps - this place has not been visited in quite a long while.  Books fill the shelves, thick and intimidating, most appearing to be incredibly ancient.  Rows upon rows of shelves are arrayed here, stretching into the distant gloom.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13334} {w} {w} {8} {0} {} {1.000} {}
+E {13301} {e} {e} {2} {0} {} {1.000} {}
+
+R {13337} {0} {} {Library of the Clenched Light (w,e)} { } {Library of the Clenched Light Scrolls of parchment and fine vellum fill the shelves, all carefully rolled and stacked.  Rows upon rows of shelves are arrayed here, stretching into the distant gloom.  The floor is the same pale stone as the rest of the tower, and covered with a thin but surprisingly clean rug.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13304} {e} {e} {2} {0} {} {1.000} {}
+E {13338} {w} {w} {8} {0} {} {1.000} {}
+
+R {13338} {0} {} {Library of the Clenched Light (w,e)} { } {Library of the Clenched Light Scrolls of parchment and fine vellum fill the shelves, all carefully rolled and stacked.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.  The floor is the same pale stone as the rest of the tower, and covered with a thin but surprisingly clean rug.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13337} {e} {e} {2} {0} {} {1.000} {}
+E {13335} {w} {w} {8} {0} {} {1.000} {}
+
+R {13339} {0} {} {Library of the Clenched Light (e,s,n)} { } {Library of the Clenched Light Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.  Books fill the shelves, thick and intimidating, most appearing to be incredibly ancient.  The air here is stale and musty, smelling of old books and dry, preserved leather.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13335} {s} {s} {4} {0} {} {1.000} {}
+E {13340} {e} {e} {2} {0} {} {1.000} {}
+E {13341} {n} {n} {1} {0} {} {1.000} {}
+
+R {13340} {0} {} {Library of the Clenched Light (e,w)} { } {Library of the Clenched Light Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.  Books fill the shelves, thick and intimidating, most appearing to be incredibly ancient.  The floor is the same pale stone as the rest of the tower, and covered with a thin but surprisingly clean rug.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13339} {w} {w} {8} {0} {} {1.000} {}
+E {13342} {e} {e} {2} {0} {} {1.000} {}
+
+R {13341} {0} {} {Library of the Clenched Light (s,e)} { } {Library of the Clenched Light Rows upon rows of shelves are arrayed here, stretching into the distant gloom.  Unbound sheaves of paper are stacked here, filling the shelves.  The air here is stale and musty, smelling of old books and dry, preserved leather.  A few pages from some book have fallen onto the ground here. } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13339} {s} {s} {4} {0} {} {1.000} {}
+E {13347} {e} {e} {2} {0} {} {1.000} {}
+
+R {13342} {0} {} {Library of the Clenched Light (e,w)} { } {Library of the Clenched Light Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.  Scrolls of parchment and fine vellum fill the shelves, all carefully rolled and stacked.  Dust puffs up with each of your steps - this place has not been visited in quite a long while.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13340} {w} {w} {8} {0} {} {1.000} {}
+E {13343} {e} {e} {2} {0} {} {1.000} {}
+
+R {13343} {0} {} {Library of the Clenched Light (e,w)} { } {Library of the Clenched Light Dust puffs up with each of your steps - this place has not been visited in quite a long while.  Rows upon rows of shelves are arrayed here, stretching into the distant gloom.  Scrolls of parchment and fine vellum fill the shelves, all carefully rolled and stacked.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13342} {w} {w} {8} {0} {} {1.000} {}
+E {13303} {e} {e} {2} {0} {} {1.000} {}
+
+R {13344} {0} {} {Library of the Clenched Light (s,w)} { } {Library of the Clenched Light Dust puffs up with each of your steps - this place has not been visited in quite a long while.  Unbound sheaves of paper are stacked here, filling the shelves.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13303} {s} {s} {4} {0} {} {1.000} {}
+E {13345} {w} {w} {8} {0} {} {1.000} {}
+
+R {13345} {0} {} {Library of the Clenched Light (e,w)} { } {Library of the Clenched Light The floor is the same pale stone as the rest of the tower, and covered with a thin but surprisingly clean rug.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.  Books fill the shelves, thick and intimidating, most appearing to be incredibly ancient.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13344} {e} {e} {2} {0} {} {1.000} {}
+E {13346} {w} {w} {8} {0} {} {1.000} {}
+
+R {13346} {0} {} {Library of the Clenched Light (e,w)} { } {Library of the Clenched Light Dust puffs up with each of your steps - this place has not been visited in quite a long while.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.  Books fill the shelves, thick and intimidating, most appearing to be incredibly ancient.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13345} {e} {e} {2} {0} {} {1.000} {}
+E {13347} {w} {w} {8} {0} {} {1.000} {}
+
+R {13347} {0} {} {Library of the Clenched Light (e,w)} { } {Library of the Clenched Light The air here is stale and musty, smelling of old books and dry, preserved leather.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.  Scrolls of parchment and fine vellum fill the shelves, all carefully rolled and stacked.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13346} {e} {e} {2} {0} {} {1.000} {}
+E {13341} {w} {w} {8} {0} {} {1.000} {}
+
+R {13348} {0} {} {Library of the Clenched Light (n,w,e)} { } {Library of the Clenched Light You can hear a heated, but hushed, argument from few rows over.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.  A few of the shelves here hold volumes of darkly-bound books, their contents impenetrable.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13292} {e} {e} {2} {0} {} {1.000} {}
+E {13330} {n} {n} {1} {0} {} {1.000} {}
+E {13349} {w} {w} {8} {0} {} {1.000} {}
+
+R {13349} {0} {} {Library of the Clenched Light (w,e)} { } {Library of the Clenched Light You can hear a heated, but hushed, argument from few rows over.  Books fill the shelves, gorgeously bound in dark leather.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13348} {e} {e} {2} {0} {} {1.000} {}
+E {13350} {w} {w} {8} {0} {} {1.000} {}
+
+R {13350} {0} {} {Library of the Clenched Light (s,e)} { } {Library of the Clenched Light You hear the pad of slippered feet from the next row.  Books fill the shelves, gorgeously bound in dark leather.  Rows upon rows of shelves are arrayed here, stretching into the distant gloom.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13349} {e} {e} {2} {0} {} {1.000} {}
+E {13351} {s} {s} {4} {0} {} {1.000} {}
+
+R {13351} {0} {} {Library of the Clenched Light (e,s,n)} { } {Library of the Clenched Light The shelves here are filled with books, all masterfully bound and neatly arranged.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.  You can hear a heated, but hushed, argument from few rows over.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13350} {n} {n} {1} {0} {} {1.000} {}
+E {13352} {e} {e} {2} {0} {} {1.000} {}
+E {13353} {s} {s} {4} {0} {} {1.000} {}
+
+R {13352} {0} {} {Library of the Clenched Light (w,e)} { } {Library of the Clenched Light You hear the pad of slippered feet from the next row.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.  Books fill the shelves, gorgeously bound in dark leather.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13351} {w} {w} {8} {0} {} {1.000} {}
+E {13354} {e} {e} {2} {0} {} {1.000} {}
+
+R {13353} {0} {} {Library of the Clenched Light (e,s,n)} { } {Library of the Clenched Light You hear the pad of slippered feet from the next row.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.  Books fill the shelves, gorgeously bound in dark leather.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13351} {n} {n} {1} {0} {} {1.000} {}
+E {13356} {e} {e} {2} {0} {} {1.000} {}
+E {13357} {s} {s} {4} {0} {} {1.000} {}
+
+R {13354} {0} {} {Library of the Clenched Light (w,e)} { } {Library of the Clenched Light A few of the shelves here hold volumes of darkly-bound books, their contents impenetrable.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.  Someone hidden by the shelves of books mutters something to himself.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13352} {w} {w} {8} {0} {} {1.000} {}
+E {13294} {e} {e} {2} {0} {} {1.000} {}
+
+R {13355} {0} {} {Library of the Clenched Light (w,e)} { } {Library of the Clenched Light A few of the shelves here hold volumes of darkly-bound books, their contents impenetrable.  Rows upon rows of shelves are arrayed here, stretching into the distant gloom.  You hear the pad of slippered feet from the next row.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13297} {e} {e} {2} {0} {} {1.000} {}
+E {13356} {w} {w} {8} {0} {} {1.000} {}
+
+R {13356} {0} {} {Library of the Clenched Light (w,e)} { } {Library of the Clenched Light Rows upon rows of shelves are arrayed here, stretching into the distant gloom.  You can hear a heated, but hushed, argument from few rows over.  A few of the shelves here hold volumes of darkly-bound books, their contents impenetrable.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13355} {e} {e} {2} {0} {} {1.000} {}
+E {13353} {w} {w} {8} {0} {} {1.000} {}
+
+R {13357} {0} {} {Library of the Clenched Light (e,s,n)} { } {Library of the Clenched Light A few of the shelves here hold volumes of darkly-bound books, their contents impenetrable.  Rows upon rows of shelves are arrayed here, stretching into the distant gloom.  You hear the pad of slippered feet from the next row.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13353} {n} {n} {1} {0} {} {1.000} {}
+E {13358} {e} {e} {2} {0} {} {1.000} {}
+E {13359} {s} {s} {4} {0} {} {1.000} {}
+
+R {13358} {0} {} {Library of the Clenched Light (e,w)} { } {Library of the Clenched Light The shelves here are filled with books, all masterfully bound and neatly arranged.  You hear the pad of slippered feet from the next row.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13357} {w} {w} {8} {0} {} {1.000} {}
+E {13360} {e} {e} {2} {0} {} {1.000} {}
+
+R {13359} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13357} {n} {n} {1} {0} {} {1.000} {}
+
+R {13360} {0} {} {Library of the Clenched Light (e,w)} { } {Library of the Clenched Light Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.  The shelves here are filled with books, all masterfully bound and neatly arranged.  You can hear a heated, but hushed, argument from few rows over.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13358} {w} {w} {8} {0} {} {1.000} {}
+E {13361} {e} {e} {2} {0} {} {1.000} {}
+
+R {13361} {0} {} {Library of the Clenched Light (e,w)} { } {Library of the Clenched Light A few of the shelves here hold volumes of darkly-bound books, their contents impenetrable.  You hear the pad of slippered feet from the next row.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13360} {w} {w} {8} {0} {} {1.000} {}
+E {13296} {e} {e} {2} {0} {} {1.000} {}
+
+R {13362} {0} {} {Library of the Clenched Light - Special Collections (w,e} { } {Library of the Clenched Light - Special Collections Here in the special collections section of the library, a small statuette is displayed.  A luxurious carpet, dyed in magnificent colors, covers the floor here.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13299} {w} {w} {8} {0} {} {1.000} {}
+E {13363} {e} {e} {2} {0} {} {1.000} {}
+
+R {13363} {0} {} {Library of the Clenched Light - Special Collections (w,e} { } {Library of the Clenched Light - Special Collections The air here is stale and musty, smelling of old books and dry, preserved leather.  Here in the special collections section of the library, a small statuette is displayed.  Laid out in incredibly precise lines are rows of shelves, each loaded to maximum capacity.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13362} {w} {w} {8} {0} {} {1.000} {}
+E {13282} {e} {e} {2} {0} {} {1.000} {}
+
+R {13364} {0} {} {Library of the Clenched Light - Special Collections (w,e} { } {Library of the Clenched Light - Special Collections Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.  Here in the special collections section of the library, the shelves are loaded with old papers.  Dust puffs up with each of your steps - this place has not been visited in quite a long while.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13283} {e} {e} {2} {0} {} {1.000} {}
+E {13365} {w} {w} {8} {0} {} {1.000} {}
+
+R {13365} {0} {} {Library of the Clenched Light - Special Collections (w,e} { } {Library of the Clenched Light - Special Collections Here in the special collections section of the library, a carved and broken staff is displayed on the shelves.  The air here is stale and musty, smelling of old books and dry, preserved leather.  Rows upon rows of shelves are arrayed here, stretching into the distant gloom.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13364} {e} {e} {2} {0} {} {1.000} {}
+E {13366} {w} {w} {8} {0} {} {1.000} {}
+
+R {13366} {0} {} {Library of the Clenched Light - Special Collections (w,e} { } {Library of the Clenched Light - Special Collections This is the special collections section of the library, and a knotted rope is displayed on the shelves here.  Shelves of pale fibrous wood are arranged in neat rows here, heavily laden.  The floor is the same pale stone as the rest of the tower, and covered with a thin but surprisingly clean rug.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
+E {13365} {e} {e} {2} {0} {} {1.000} {}
+E {13298} {w} {w} {8} {0} {} {1.000} {}
+
+R {13367} {0} {} {The Black Forest (nw,e,s)} { } {The Black Forest Sticks and other debris are stuck in the webs, frozen in place for who knows how long.  This stark wood bares little resemblance to any wood you've seen before.  Everything is dead and veiled in cobwebs.  A stinking breeze wafts through the trees, leaving the cobwebs to shimmy like ghosts.   } {The Shadowlands} {} {} {} {1.000} {}
+E {11591} {nw} {nw} {9} {0} {} {1.000} {}
+E {13376} {e} {e} {2} {0} {} {1.000} {}
+E {13377} {s} {s} {4} {0} {} {1.000} {}
+
+R {13368} {0} {} {The Hollows (e,ne)} { } {The Hollows This slender ravine angles back and forth through the middle of the surrounding higher ground.  The slope on either side of the ravine is much too steep to climb.  The path you tread is designated by a line of stones set firmly in the muck.   } {The Shadowlands} {} {} {} {1.000} {}
+E {11884} {ne} {ne} {3} {0} {} {1.000} {}
+E {13369} {e} {e} {2} {0} {} {1.000} {}
+
+R {13369} {0} {} {The Hollows (s,w)} { } {The Hollows This dark valley winds its way through the heart of the Shadowlands.  Flat black stones are set in the muck underfoot, providing a path to follow.  The earthen walls that box you into this valley are steep and treacherous.   } {The Shadowlands} {} {} {} {1.000} {}
+E {13368} {w} {w} {8} {0} {} {1.000} {}
+E {13370} {s} {s} {4} {0} {} {1.000} {}
+
+R {13370} {0} {} {The Hollows (se,n)} { } {The Hollows A route through the defile has been clearly marked via a series of flat black stones.  This slender defile angles back and forth through the middle of the surrounding higher ground.  The earthen walls that box you into this defile are steep and treacherous.   } {The Shadowlands} {} {} {} {1.000} {}
+E {13369} {n} {n} {1} {0} {} {1.000} {}
+E {13371} {se} {se} {6} {0} {} {1.000} {}
+
+R {13371} {0} {} {The Hollows (w,nw)} { } {The Hollows This narrow gorge twists and turns its way toward the very center of the Shadowlands.  Land rises steeply on both sides of the gorge, preventing you from moving in those directions.  The path you tread is designated by a line of stones set firmly in the muck.   } {The Shadowlands} {} {} {} {1.000} {}
+E {13370} {nw} {nw} {9} {0} {} {1.000} {}
+E {13372} {w} {w} {8} {0} {} {1.000} {}
+
+R {13372} {0} {} {The Hollows (d,e)} { } {The Hollows The winding route of the hollows ends to the west in a deep pit. It's too dark to see what might lie at the bottom of the pit, but the stench of death that emanates from it is almost overwhelming. Across the chasm rises the black tower of the Necromancer who rules this land. } {The Shadowlands} {} {} {} {1.000} {}
+E {13371} {e} {e} {2} {0} {} {1.000} {}
+E {13373} {d} {d} {32} {0} {} {1.000} {}
+
+R {13373} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13372} {u} {u} {16} {0} {} {1.000} {}
+
+R {13374} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {11591} {s} {s} {4} {0} {} {1.000} {}
+
+R {13375} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {11591} {n} {n} {1} {0} {} {1.000} {}
+
+R {13376} {0} {} {The Black Forest (s,w)} { } {The Black Forest Sticks and other debris are stuck in the webs, frozen in place for who knows how long.  A sudden gale sends the surrounding spiderwebs into a billowing cloud of viscid death.  The leafless trees of this woodland are draped in giant cobwebs.   } {The Shadowlands} {} {} {} {1.000} {}
+E {13367} {w} {w} {8} {0} {} {1.000} {}
+E {13378} {s} {s} {4} {0} {} {1.000} {}
+
+R {13377} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13367} {n} {n} {1} {0} {} {1.000} {}
+E {13378} {e} {e} {2} {0} {} {1.000} {}
+
+R {13378} {0} {} {The Black Forest (e,s,n,w)} { } {The Black Forest Some of the webs are stretched between the tree trunks, forming walls that prevent travel in that direction.  The leafless trees of this forest are draped in giant cobwebs.  A gust of wind shakes the nearby branches, jostling the clinging webs so that they appear to be alive.   } {The Shadowlands} {} {} {} {1.000} {}
+E {13376} {n} {n} {1} {0} {} {1.000} {}
+E {13379} {e} {e} {2} {0} {} {1.000} {}
+E {13380} {s} {s} {4} {0} {} {1.000} {}
+E {13377} {w} {w} {8} {0} {} {1.000} {}
+
+R {13379} {0} {} {The Black Forest (e,s,w)} { } {The Black Forest The wraith-like trees of this forest are covered in a thick layer of spiderwebs.  The ropy webs are longer, larger, and stickier than any you've encountered in the past.  A stinking breeze wafts through the trees, leaving the cobwebs to shimmy like ghosts.   } {The Shadowlands} {} {} {} {1.000} {}
+E {13378} {w} {w} {8} {0} {} {1.000} {}
+E {13381} {e} {e} {2} {0} {} {1.000} {}
+E {13382} {s} {s} {4} {0} {} {1.000} {}
+
+R {13380} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13378} {n} {n} {1} {0} {} {1.000} {}
+
+R {13381} {0} {} {The Black Forest (e,ne,s,w)} { } {The Black Forest A foul wind whispers through the forest, causing the spiderwebs around you to billow.  Sticks and other debris are stuck in the webs, frozen in place for who knows how long.  The leafless trees of this forest are draped in giant cobwebs.   } {The Shadowlands} {} {} {} {1.000} {}
+E {13379} {w} {w} {8} {0} {} {1.000} {}
+E {13383} {e} {e} {2} {0} {} {1.000} {}
+E {13384} {ne} {ne} {3} {0} {} {1.000} {}
+E {13385} {s} {s} {4} {0} {} {1.000} {}
+
+R {13382} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13379} {n} {n} {1} {0} {} {1.000} {}
+
+R {13383} {0} {} {The Black Forest (e,w,n,s,se)} { } {The Black Forest The webs are dark gray in color and extremely sticky.  The wraith-like trees of this forest are covered in a thick layer of spiderwebs.  A stinking breeze wafts through the trees, leaving the cobwebs to shimmy like ghosts.   } {The Shadowlands} {} {} {} {1.000} {}
+E {13381} {w} {w} {8} {0} {} {1.000} {}
+E {13384} {n} {n} {1} {0} {} {1.000} {}
+E {13388} {e} {e} {2} {0} {} {1.000} {}
+E {13402} {s} {s} {4} {0} {} {1.000} {}
+E {13403} {se} {se} {6} {0} {} {1.000} {}
+
+R {13384} {0} {} {The Black Forest (e,n,s,sw,se)} { } {The Black Forest A gust of wind shakes the nearby branches, jostling the clinging webs so that they appear to be alive.  The webs are woven so tight, they look like gray flesh clinging to the wooden skeletons of the trees.  Giant spiderwebs have choked the life from all the surrounding trees in this dreary wood.   } {The Shadowlands} {} {} {} {1.000} {}
+E {13381} {sw} {sw} {12} {0} {} {1.000} {}
+E {13386} {e} {e} {2} {0} {} {1.000} {}
+E {13387} {n} {n} {1} {0} {} {1.000} {}
+E {13383} {s} {s} {4} {0} {} {1.000} {}
+E {13388} {se} {se} {6} {0} {} {1.000} {}
+
+R {13385} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13381} {n} {n} {1} {0} {} {1.000} {}
+
+R {13386} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13384} {w} {w} {8} {0} {} {1.000} {}
+E {13387} {nw} {nw} {9} {0} {} {1.000} {}
+
+R {13387} {0} {} {The Black Forest (e,se,s,n)} { } {The Black Forest The leafless trees of this wood are draped in giant cobwebs.  The webs are woven so tight, they look like gray flesh clinging to the wooden skeletons of the trees.  A stinking breeze wafts through the trees, leaving the cobwebs to shimmy like ghosts.   } {The Shadowlands} {} {} {} {1.000} {}
+E {13384} {s} {s} {4} {0} {} {1.000} {}
+E {13389} {e} {e} {2} {0} {} {1.000} {}
+E {13386} {se} {se} {6} {0} {} {1.000} {}
+E {13390} {n} {n} {1} {0} {} {1.000} {}
+
+R {13388} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13384} {nw} {nw} {9} {0} {} {1.000} {}
+E {13383} {w} {w} {8} {0} {} {1.000} {}
+
+R {13389} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13387} {w} {w} {8} {0} {} {1.000} {}
+
+R {13390} {0} {} {The Grimorian Hills (e,s,n,w)} { } {The Grimorian Hills These knolls are pure evil.  The necromancer that dwells in this land has ruined it for all time.  Dark rainclouds blot out the sun.  The air is thick with moisture.  Mud coats these knolls, the drizzle of rain soaking every inch of ground.   } {The Shadowlands} {} {} {} {1.000} {}
+E {13387} {s} {s} {4} {0} {} {1.000} {}
+E {13391} {e} {e} {2} {0} {} {1.000} {}
+E {13392} {n} {n} {1} {0} {} {1.000} {}
+E {13393} {w} {w} {8} {0} {} {1.000} {}
+
+R {13391} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13390} {w} {w} {8} {0} {} {1.000} {}
+
+R {13392} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13390} {s} {s} {4} {0} {} {1.000} {}
+E {13394} {w} {w} {8} {0} {} {1.000} {}
+
+R {13393} {0} {} {The Grimorian Hills (e,n)} { } {The Grimorian Hills Thunderheads threaten in the distance.  A crack of lightning temporarily cuts through the gloom.  Everything that walks this cursed land is a creature of darkness.  You will become the same if you do not leave.  Everywhere you look, these knolls are saturated with rain.  Mud coats the ground in all directions.   } {The Shadowlands} {} {} {} {1.000} {}
+E {13390} {e} {e} {2} {0} {} {1.000} {}
+E {13394} {n} {n} {1} {0} {} {1.000} {}
+
+R {13394} {0} {} {The Grimorian Hills (e,nw,s,n)} { } {The Grimorian Hills Everything that walks this cursed land is a creature of darkness.  You will become the same if you do not leave.  Dark rainclouds blot out the sun.  The air is thick with moisture.  Everywhere you look, these hills are saturated with rain.  Mud coats the ground in all directions.   } {The Shadowlands} {} {} {} {1.000} {}
+E {13393} {s} {s} {4} {0} {} {1.000} {}
+E {13392} {e} {e} {2} {0} {} {1.000} {}
+E {13395} {nw} {nw} {9} {0} {} {1.000} {}
+E {13396} {n} {n} {1} {0} {} {1.000} {}
+
+R {13395} {0} {} {The Grimorian Hills (e,se,n,w)} { } {The Grimorian Hills The storm overhead pounds this land with relentless precipitation.  Everywhere you look, these hillocks are saturated with rain.  Mud coats the ground in all directions.  An air of dread descends upon you.  You should leave.   } {The Shadowlands} {} {} {} {1.000} {}
+E {13394} {se} {se} {6} {0} {} {1.000} {}
+E {13396} {e} {e} {2} {0} {} {1.000} {}
+E {13397} {n} {n} {1} {0} {} {1.000} {}
+E {13398} {w} {w} {8} {0} {} {1.000} {}
+
+R {13396} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13394} {s} {s} {4} {0} {} {1.000} {}
+E {13395} {w} {w} {8} {0} {} {1.000} {}
+
+R {13397} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13395} {s} {s} {4} {0} {} {1.000} {}
+
+R {13398} {0} {} {The Grimorian Hills (e,n,w)} { } {The Grimorian Hills Everywhere you tread in these dismal slopes, the ground is slick with rainwater.  These slopes are cursed.  There is nothing here but fear and death.  Thunderheads threaten in the distance.  A crack of lightning temporarily cuts through the gloom.   } {The Shadowlands} {} {} {} {1.000} {}
+E {13395} {e} {e} {2} {0} {} {1.000} {}
+E {13399} {n} {n} {1} {0} {} {1.000} {}
+E {13400} {w} {w} {8} {0} {} {1.000} {}
+
+R {13399} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13398} {s} {s} {4} {0} {} {1.000} {}
+
+R {13400} {0} {} {The Dead Moors (e,w)} { } {The Dead Moors Fog rolls across the wetland, blinding you in a misty haze.  The soggy floor of the wetland squelches beneath your every step.  Web-like moss covers nearby shrubs, cloaking their true forms.   } {The Shadowlands} {} {} {} {1.000} {}
+E {13398} {e} {e} {2} {0} {} {1.000} {}
+E {13401} {w} {w} {8} {0} {} {1.000} {}
+
+R {13401} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13400} {e} {e} {2} {0} {} {1.000} {}
+
+R {13402} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13383} {n} {n} {1} {0} {} {1.000} {}
+
+R {13403} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13383} {nw} {nw} {9} {0} {} {1.000} {}
+
+R {13405} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R {13406} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R {13407} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
