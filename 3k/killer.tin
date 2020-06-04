@@ -406,7 +406,9 @@ fb_default;
 					#var {room_index}{1}
 				};
 			}{
-				make_killpath {${roomlist[${room_index}]}};
+				#if {$room_index <= $area_size}{
+					make_killpath {${roomlist[${room_index}]}};
+				};
 			};
 		};
 	}{
