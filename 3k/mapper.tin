@@ -242,6 +242,8 @@
 	#map get {roomarea}{area};
 	#if {"$area" != ""}{
 		make_roomlist {${area}};
+	}{
+		rating;
 	};
 }
 
@@ -252,7 +254,9 @@
 	#map get {roomarea}{area};
 	#if {"$area" != ""}{
 		make_roomlist {${area}};
-	};
+	}{
+		rating;
+	};;
 }
 
 #alias {mapgo} {
