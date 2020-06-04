@@ -411,7 +411,14 @@ fb_default;
 		#if {$manual_stepper == 1}{
 			#nop {If we aren't using the magic stepper, check for a manual path};
 			#math {room_num}{$room_num + 1};
-			${kill_path[${room_num}]};
+			#if {$room_num > $max_room}{
+				#if {$autoqueue == 1}{
+					#math {targetarea}{$my[areaselector][current] + 1};
+					go ${my[areaselector][${targetarea}][note]};
+				};
+			}{
+				${kill_path[${room_num}]};
+			};
 		}{
 		#nop {If we aren't specifying a manual path, we are wandering aimlessly};
 			dirfunction $desired_dir;
