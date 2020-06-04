@@ -120,8 +120,8 @@
 	#var {my[areaselector][5]}{$my[areaselector][6]};
 	#var {my[areaselector][6][name]}{${newarea[$room]}};
 	#var {my[areaselector][6][note]}{${notes[$room]}};
+	#var {my[areaselector][current]}{0};
 	show_area_selector;
-	#var {my[currentarea]}{0};
 };
 
 #alias {fb_default}{
