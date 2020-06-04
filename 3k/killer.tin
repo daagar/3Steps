@@ -161,9 +161,6 @@ fb_default;
 
 #act {AREA RATING -> %1 [%2]}{
 	#var {area}{%2};
-	#if {"$area" == "Changeling"}{
-		#var {area}{Changeling Biome}
-	};
 	make_roomlist {$area};
 }
 
