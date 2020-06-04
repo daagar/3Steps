@@ -31,6 +31,7 @@
 	};
 	#button {22;-14;22;-8}{
 		#math {targetarea}{$my[areaselector][current] + 1};
+		#if {$targetarea > 6}{#var {targetarea}{1}};
 		go ${my[areaselector][${targetarea}][note]};
 	};
 	#var {areaselector_len}{14};
@@ -400,6 +401,7 @@ fb_default;
 			#if {$room_index > $area_size}{
 				#if {$autoqueue == 1}{
 					#math {targetarea}{$my[areaselector][current] + 1};
+					#if {$targetarea > 6}{#var {targetarea}{1}};
 					go ${my[areaselector][${targetarea}][note]};
 				}{
 					#var {room_index}{1}
@@ -414,6 +416,7 @@ fb_default;
 			#if {$room_num > $max_room}{
 				#if {$autoqueue == 1}{
 					#math {targetarea}{$my[areaselector][current] + 1};
+					#if {$targetarea > 6}{#var {targetarea}{1}};
 					go ${my[areaselector][${targetarea}][note]};
 				};
 			}{
