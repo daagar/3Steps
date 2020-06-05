@@ -413,12 +413,10 @@ fb_default;
 		#if {${path_index} > ${path_size}}{
 			#math {room_index}{${room_index} + 1};
 			#math {tmp_size}{$area_size + 1};
-			#if {$room_index > $area_size}{
+			#if {$room_index > $tmp_size}{
 				#if {$autoqueue == 1}{
 					#math {targetarea}{$my[areaselector][current] + 1};
 					#if {$targetarea > 6}{#var {targetarea}{1}};
-					#var {starter2}{0};
-					#var {domove2}{0};
 					go ${my[areaselector][${targetarea}][note]};
 					rating;
 				}{
