@@ -637,7 +637,7 @@ show_damage_selector
 		#regex {$mip[gline][2]}{Accelerated Healing}{
 			#nop;
 		}{
-			#nop {!focus accelerated healing;}
+			!focus accelerated healing;
 		};
 	};
 	#var {my[damagetracker][guildstring]}{${guild}/${subguild} - ${my[desired][weapon]} - ${my[desired][mode]}/${my[desired][spell]}/${my[damage][type]}};
@@ -716,4 +716,15 @@ show_damage_selector
 	};
 }
 
+#alias set_default_areas {
+	fbq garg;
+	fbq balthazar;
+	fbq smurf swamp;
+	fbq arcanarton;
+	fbq pol;
+	fbq mahjongg;
+	autoq;
+}
+
+set_default_areas
 #class {fleebity} {close}

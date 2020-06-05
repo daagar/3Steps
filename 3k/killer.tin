@@ -159,6 +159,18 @@
 	show_area_selector;
 };
 
+#alias {fbnext}{
+	#math {targetarea}{${areaselector[current]} + 1};
+	#if {$targetarea > ${queue_size}}{#var targetarea 1};
+	go ${areaselector[roomnote][${targetarea}]};
+};
+
+#alias {fbprev}{
+	#math {targetarea}{${areaselector[current]} - 1};
+	#if {$targetarea < 1}{#var targetarea ${queue_size}};
+	go ${areaselector[roomnote][${targetarea}]};
+};
+
 fb_default;
 
 #alias {si}{
