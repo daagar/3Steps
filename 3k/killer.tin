@@ -341,7 +341,12 @@
 			#if {${critter_room} > 0}{
 				#var domove2 0;
 				#if {$autokill} {
-					kk;
+					#if {"$mud" == "3s"} {
+						#math {kill_delay} {1d4};
+						#delay {$kill_delay} {kk};
+					} {
+						kk;
+					};
 				};
 			}{
 				step_function;

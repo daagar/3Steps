@@ -1,0 +1,5 @@
+#CLASS {drawvar} OPEN
+
+#VARIABLE         {draw}  {{alert}{on}{canvas}{on}{caption}{on}{chat}{on}{exitpanel}{on}{gline}{on}{hpbar}{on}{map}{on}{pokedex}{off}}
+
+#CLASS {drawvar} CLOSE
