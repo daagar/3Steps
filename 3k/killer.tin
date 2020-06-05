@@ -48,6 +48,133 @@
 	update_status;
 };
 
+
+
+#alias {show_area_selector}{
+	#screen clear square 21 -42 26 -1;
+	#if {${stepignore} == 2}{
+		#showme {[<128>S<088>]} 28 -35;
+	}{
+		#if {${stepignore} == 1}{
+			#showme {[<128>W<088>]} 28 -35;
+		}{
+			#showme {[<128>M<088>]} 28 -35;
+		};
+	};
+	#button {28;-35;28;-33}{
+		si;
+	};
+	#draw rounded box 21 -41 26 -3 {     <<faa>prev<088>> Area Selector <<afa>next<088>>};
+	#button {22;-35;22;-29}{
+		#math {targetarea}{$my[areaselector][current] - 1};
+		#if {$targetarea < 1}{#var {targetarea}{6}};
+		go ${my[areaselector][${targetarea}][note]};
+	};
+	#button {22;-14;22;-8}{
+		#math {targetarea}{$my[areaselector][current] + 1};
+		#if {$targetarea > 6}{#var {targetarea}{1}};
+		go ${my[areaselector][${targetarea}][note]};
+	};
+	#var {areaselector_len}{14};
+	#format {my[areaselector][1][trunc]}{%-${areaselector_len}s}{${my[areaselector][1][name]}};
+	#format {my[areaselector][1][trunc]}{%.${areaselector_len}s}{${my[areaselector][1][trunc]}};
+	#format {my[areaselector][2][trunc]}{%+${areaselector_len}s}{${my[areaselector][2][name]}};
+	#format {my[areaselector][2][trunc]}{%.${areaselector_len}s}{${my[areaselector][2][trunc]}};
+	#format {my[areaselector][3][trunc]}{%-${areaselector_len}s}{${my[areaselector][3][name]}};
+	#format {my[areaselector][3][trunc]}{%.${areaselector_len}s}{${my[areaselector][3][trunc]}};
+	#format {my[areaselector][4][trunc]}{%+${areaselector_len}s}{${my[areaselector][4][name]}};
+	#format {my[areaselector][4][trunc]}{%.${areaselector_len}s}{${my[areaselector][4][trunc]}};
+	#format {my[areaselector][5][trunc]}{%-${areaselector_len}s}{${my[areaselector][5][name]}};
+	#format {my[areaselector][5][trunc]}{%.${areaselector_len}s}{${my[areaselector][5][trunc]}};
+	#format {my[areaselector][6][trunc]}{%+${areaselector_len}s}{${my[areaselector][6][name]}};
+	#format {my[areaselector][6][trunc]}{%.${areaselector_len}s}{${my[areaselector][6][trunc]}};
+	#if {"$area" == "${my[areaselector][1][name]}"}{
+		#var {my[areaselector][1][trunc]}{<128>${my[areaselector][1][trunc]}<088>};
+		#var {my[areaselector][current]}{1};
+	};
+	#if {"$area" == "${my[areaselector][2][name]}"}{
+		#var {my[areaselector][2][trunc]}{<128>${my[areaselector][2][trunc]}<088>};
+		#var {my[areaselector][current]}{2};
+	};
+	#if {"$area" == "${my[areaselector][3][name]}"}{
+		#var {my[areaselector][3][trunc]}{<128>${my[areaselector][3][trunc]}<088>};
+		#var {my[areaselector][current]}{3};
+	};
+	#if {"$area" == "${my[areaselector][4][name]}"}{
+		#var {my[areaselector][4][trunc]}{<128>${my[areaselector][4][trunc]}<088>};
+		#var {my[areaselector][current]}{4};
+	};
+	#if {"$area" == "${my[areaselector][5][name]}"}{
+		#var {my[areaselector][5][trunc]}{<128>${my[areaselector][5][trunc]}<088>};
+		#var {my[areaselector][current]}{5};
+	};
+	#if {"$area" == "${my[areaselector][6][name]}"}{
+		#var {my[areaselector][6][trunc]}{<128>${my[areaselector][6][trunc]}<088>};
+		#var {my[areaselector][current]}{6};
+	};
+	#showme {[${my[areaselector][1][trunc]}] [${my[areaselector][2][trunc]}]} 23 -38;
+	#button {23;-39;23;-23}{
+		#showme {Proceeding to ${my[areaselector][1][name]}};
+		go ${my[areaselector][1][note]};
+	};
+	#button {23;-25;23;-9}{
+		#showme {Proceeding to ${my[areaselector][2][name]}};
+		go ${my[areaselector][2][note]};
+	};
+	#showme {[${my[areaselector][3][trunc]}] [${my[areaselector][4][trunc]}]} 24 -38;
+	#button {24;-39;24;-25}{
+		#showme {Proceeding to ${my[areaselector][3][name]}};
+		go ${my[areaselector][3][note]};
+	};
+	#button {24;-25;24;-9}{
+		#showme {Proceeding to ${my[areaselector][4][name]}};
+		go ${my[areaselector][4][note]};
+	};
+	#showme {[${my[areaselector][5][trunc]}] [${my[areaselector][6][trunc]}]} 25 -38;
+	#button {25;-39;25;-25}{
+		#showme {Proceeding to ${my[areaselector][5][name]}};
+		go ${my[areaselector][5][note]};
+	};
+	#button {25;-25;25;-9}{
+		#showme {Proceeding to ${my[areaselector][6][name]}};
+		go ${my[areaselector][6][note]};
+	};
+};
+
+#alias {fbq}{
+	#unvar notes;
+	#unvar newarea;
+	#if {"%1" != ""}{
+		#map list {roomnote}{%i%*%0%*}{variable}{noterooms};
+	}{
+		#var {my[areaselector]};
+	};
+	#foreach {*noterooms[]}{room}{
+		#map get {roomnote}{notes[$room]}{$room};
+		#map get {roomarea}{newarea[$room]}{$room};
+	};
+	#var {my[areaselector][1]}{$my[areaselector][2]};
+	#var {my[areaselector][2]}{$my[areaselector][3]};
+	#var {my[areaselector][3]}{$my[areaselector][4]};
+	#var {my[areaselector][4]}{$my[areaselector][5]};
+	#var {my[areaselector][5]}{$my[areaselector][6]};
+	#var {my[areaselector][6][name]}{${newarea[$room]}};
+	#var {my[areaselector][6][note]}{${notes[$room]}};
+	#var {my[areaselector][current]}{0};
+	show_area_selector;
+};
+
+#alias {fb_default}{
+	fbq donuts;
+	fbq uo1;
+	fbq ccows;
+	fbq d2hell;
+	fbq aegisl1;
+	fbq acidloths;
+};
+
+fb_default;
+
 #alias {si}{
 	#if {$stepignore != 1}{
 		#if {$manual_stepper != 1}{
@@ -64,6 +191,7 @@
 		#var manual_stepper 0;
 		#var stepignore 0;
 	};
+	show_area_selector;
 };
 
 #act {AREA NAME: %1 [%2]} {
@@ -302,25 +430,54 @@
 	};
 }
 
+#alias {autoq}{
+	#if {$autoqueue == 1}{
+		#echo {No longer queueing};
+		#var autoqueue 0;
+	}{
+		#echo {Queueing};
+		#var autoqueue 1;
+	};
+};
+
+#var autoqueue 0;
+
 #alias {step_function}{
 	#if {${stepper2} == 1}{
 		${kill_path2[${path_index}]};
 		#math {path_index}{$path_index + 1};
 		#if {${path_index} > ${path_size}}{
-			#math {room_index}{${room_index} +1};
-			#if {$room_index > $area_size}{
-				#var {room_index}{1};
-				nextarea;
+			#math {room_index}{${room_index} + 1};
+			#math {tmp_size}{$area_size + 1};
+			#if {$room_index > $tmp_size}{
+				#if {$autoqueue == 1}{
+					#math {targetarea}{$my[areaselector][current] + 1};
+					#if {$targetarea > 6}{#var {targetarea}{1}};
+					go ${my[areaselector][${targetarea}][note]};
+				}{
+					#var {room_index}{1}
+				};
+			}{
+				#if {$room_index <= $area_size}{
+					make_killpath {${roomlist[${room_index}]}};
+				};
 			};
-			make_killpath {${roomlist[${room_index}]}};
 		};
 	} {
 		#if {$manual_stepper == 1}{
 			#nop {If we aren't using the magic stepper, check for a manual path};
 			#math {room_num}{$room_num + 1};
-			${kill_path[${room_num}]};
-		} {
-			#nop {If we aren't specifying a manual path, we are wandering aimlessly};
+			#if {$room_num > $max_room}{
+				#if {$autoqueue == 1}{
+					#math {targetarea}{$my[areaselector][current] + 1};
+					#if {$targetarea > 6}{#var {targetarea}{1}};
+					go ${my[areaselector][${targetarea}][note]};
+				};
+			}{
+				${kill_path[${room_num}]};
+			};
+		}{
+		#nop {If we aren't specifying a manual path, we are wandering aimlessly};
 			dirfunction $desired_dir;
 		};
 	};

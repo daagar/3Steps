@@ -23,13 +23,18 @@
 	#map {get} {ROOMDESC} {roomdesc};
 	#format {roomname_len}	{%L} {$roomname};
 	#format {roomvnum_len}	{%L} {$roomvnum};
+	#math {roomvnum_len}{$roomvnum_len + 4};
 	#format {roomarea_len}	{%L} {$roomarea};
 	#format {roomdesc_len}	{%L} {$roomdesc};
-	#math {name_len} {42-$roomvnum_len-3};
-	#format {name_trunc} {%.${name_len}s} {$roomname};
+	#math {name_len} {42-$roomvnum_len};
+	#format {name_trunc} {%.${name_len}s} {${roomname}};
+	#var {room_map_string}{<140>\[<030>${roomvnum}<140>\] <130>${name_trunc}<099>};
+	#format {room_map_string}{%.42s}{$room_map_string};
 	#unvar area_mapped;
 	#map list {} {} {} {$roomarea} {variable} {area_mapped};
 	#var {room_cnt} {&area_mapped[]};
+	#draw {tile} 16 -42 16 -1 {<020>${roomarea} <140>(<120>${room_cnt}<140>)<099>};
+	#draw {tile} 17 -42 17 -1 {${room_map_string}}
 	#if {"$draw[map]" == "on"} {
 		#draw {tile} $map[height]-1 -$map[width] $map[height]-1 -1 {<020>$roomarea <140>(<120>$room_cnt<140>)<099>};
 		#draw {tile} $map[height] -$map[width] $map[height] -1 {<140>[<030>$roomvnum<140>] <130>$name_trunc<099>}
@@ -254,14 +259,24 @@
 	#var {return_room_index}{${room_index}};
 	#var {path_index}{0};
 	#var {room_index}{0};
-	rating;
+	#map get {roomarea}{area};
+	#if {"$area" != ""}{
+		make_roomlist {${area}};
+	}{
+		rating;
+	};
 }
 
 #alias goback {
     #map run $returnroom;
-	#var {room_num} {$returnpathroom};
-    #var {do_return} {1};
-	rating;
+    #var {room_num}{$returnpathroom};
+    #var {do_return}{1};
+	#map get {roomarea}{area};
+	#if {"$area" != ""}{
+		make_roomlist {${area}};
+	}{
+		rating;
+	};
 }
 
 #alias {mapgo} {
