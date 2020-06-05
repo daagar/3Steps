@@ -362,9 +362,9 @@
 		#send {alias fs focus force storm};
 		!draw ${my[desired][weapon]};
 		!focus force trance /off;
-		!focus mode /guide;
-		#var {my[desired][mode]}{guide};
-		#var {my[desired][modeshort]}{g};
+		!focus mode /flurry;
+		#var {my[desired][mode]}{flurry};
+		#var {my[desired][modeshort]}{f};
 		#var {my[desired][spell]}{force storm};
 		#delay {2}{!focus force trance /fs,repeat};
 		#var {my[damage][type]}{force storm};
