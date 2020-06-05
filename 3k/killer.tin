@@ -156,11 +156,13 @@ fb_default;
 
 #act {AREA NAME: %1 [%2]} {
 	#var {area}{%1};
+	show_area_selector;
 	make_roomlist {$area};
 }
 
 #act {AREA RATING -> %1 [%2]}{
 	#var {area}{%2};
+	show_area_selector;
 	make_roomlist {$area};
 }
 
@@ -401,6 +403,8 @@ fb_default;
 				#if {$autoqueue == 1}{
 					#math {targetarea}{$my[areaselector][current] + 1};
 					#if {$targetarea > 6}{#var {targetarea}{1}};
+					#var {room_index}{1};
+					#var {path_index}{1};
 					go ${my[areaselector][${targetarea}][note]};
 				}{
 					#var {room_index}{1}
@@ -419,6 +423,7 @@ fb_default;
 				#if {$autoqueue == 1}{
 					#math {targetarea}{$my[areaselector][current] + 1};
 					#if {$targetarea > 6}{#var {targetarea}{1}};
+					#var {room_num}{1};
 					go ${my[areaselector][${targetarea}][note]};
 				};
 			}{

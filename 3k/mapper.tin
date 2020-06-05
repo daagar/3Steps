@@ -242,6 +242,7 @@
 	#map get {roomarea}{area};
 	#if {"$area" != ""}{
 		make_roomlist {${area}};
+		show_area_selector;
 	}{
 		rating;
 	};
