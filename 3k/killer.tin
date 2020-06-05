@@ -158,12 +158,26 @@ fb_default;
 	#var {area}{%1};
 	show_area_selector;
 	make_roomlist {$area};
+	#if {$autoqueue == 1}{
+		#map get {roomarea}{my_area};
+		#if {"$my_area" != ""}{
+			#var {area}{$my_area};
+		};
+		ki;
+	};
 }
 
 #act {AREA RATING -> %1 [%2]}{
 	#var {area}{%2};
 	show_area_selector;
 	make_roomlist {$area};
+	#if {$autoqueue == 1}{
+		#map get {roomarea}{my_area};
+		#if {"$my_area" != ""}{
+			#var {area}{$my_area};
+		};
+		ki;
+	};
 }
 
 #alias {make_killpath}{
@@ -406,6 +420,7 @@ fb_default;
 					#var {starter2}{0};
 					#var {domove2}{0};
 					go ${my[areaselector][${targetarea}][note]};
+					rating;
 				}{
 					#var {room_index}{1}
 					make_killpath {${roomlist[${room_index}]}};
