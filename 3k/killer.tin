@@ -13,6 +13,12 @@
 #var {areaselector[max]}{6};
 
 #NOP Added for all the bots in the room.
+#alias {.stop} {
+	#var bot 0;
+	#var autokill 0;
+	#showme Bot Deactivated;
+	update_status;
+}
 #NOP Should only be called after already in the area to step through
 #alias {.start} {
 	#var bot 1;
