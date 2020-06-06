@@ -155,7 +155,21 @@
                 	#if {"$mapping" == "on"}{
                 		#delay {0.15}{kill-loop};
                 	}{
-                                #delay {0.05}{kill-loop};
+				#if {$autoqueue == 1}{
+					#if {$room_index <= $area_size}{
+                                		#delay {0.05}{kill-loop};
+                                	}{
+						#var domove2 0;
+						#var starter2 0;
+						#math {targetarea}{${areaselector[current]} +1};
+						#if {$targetarea > $queue_size}{#var {targetarea}{1}};
+						#var {do_queue2}{1};
+						go {$areaselector[roomnote][${targetarea}]};
+						rating;
+					};
+				}{
+                                	#delay {0.05}{kill-loop};
+                                };
                 	};
                 };
 	}{
