@@ -1,6 +1,27 @@
 #alias {show_damage_selector}{
 	#draw {rounded}{box}43 -41 56 -3;
 	#showme {Jedi Damage Selector} 43 -31;
+	#if {"${my[damage][type]}" == "dark suggestion"}{
+		#showme {<faa>Dark Suggestion<088>} 44 -38;
+	}{
+		#showme {Dark Suggestion} 44 -38;
+	};
+	#button {44;-40;44;-4}{
+		#if {"subguild" != "krath"}{
+			#echo {Sorry!  Krath Only};
+		}{
+			#send {alias ds focus dark suggestion};
+			!draw ${my[desired][weapon]};
+			!focus force trance /off;
+			!focus mode /guide;
+			#var {my[desired][mode]}{guide};
+			#var {my[desired][modeshort]}{g};
+			#var {my[desired][spell]}{dark suggestion};
+			#delay {2}{!focus force trance /ds,repeat};
+			#var {my[damage][type]}{dark suggestion};
+			show_damage_selector;
+		};
+	};
 	#showme {Injure-Kill} 45 -38;
 	#if {"${my[damage][type]}" == "boil"}{
 		#showme {<faa> Boil    : Fire<088>} 46 -38;
@@ -214,13 +235,17 @@
 		#showme {Offhand Blaster} 60 -38;
 	};
 	#button {61;-40;61;-20}{
-		#var {my[desired][weapon]}{offhand blaster};
-		!sheath;
-		!draw ${my[desired][weapon]};
-		#var {my[desired][mode]}{aimed};
-		#var {my[desired][modeshort]}{a};
-		!focus mode /aimed;
-		show_mode_selector;
+		#if {"$subguild" != "teepo}{
+			#echo {Sorry Teepo Only!};
+		}{
+			#var {my[desired][weapon]}{offhand blaster};
+			!sheath;
+			!draw ${my[desired][weapon]};
+			#var {my[desired][mode]}{aimed};
+			#var {my[desired][modeshort]}{a};
+			!focus mode /aimed;
+			show_mode_selector;
+		};
 	};
 	#if {"${my[desired][weapon]}" == "lightsaber"}{
 		#showme {<faa>LightSaber<088>} 61 -38;

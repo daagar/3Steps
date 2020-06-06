@@ -26,6 +26,18 @@
 }
 
 #NOP Added for all the bots in the room.
+#alias {autok}{
+	#if {$autokill == 1}{
+		#var autokill 0;
+		#echo {Not Auto-attacking};
+		show_area_selector;
+	}{
+		#var autokill 1;
+		#echo {Auto-attacking};
+		show_area_selector;
+	};
+};
+
 #alias {.stop} {
 	#var bot 0;
 	#var autokill 0;
@@ -74,7 +86,7 @@
 		#if {$targetarea < 1}{#var targetarea ${queue_size}};
 		go ${areaselector[roomnote][${targetarea}]};
 	};
-	#button {21;-14;21;-10}{
+	#button {21;-14;21;-11}{
 		#math {targetarea}{${areaselector[current]} + 1};
 		#if {$targetarea > ${queue_size}}{#var targetarea 1};
 		go ${areaselector[roomnote][${targetarea}]};
@@ -89,10 +101,22 @@
 		};
 	};
 	#button {21;-36;21;-33}{si};
-	#showme {[<128>GO<088>]} 22 -24;
-	#button {22;-24;22;-21}{ki};
-	#showme {[<128>K<088>]} 21 -10;
-	#button {21;-10;21;-8}{kk};
+	#if {${autoqueue} == 1}{
+		#showme {[<128>Q<088>]} 21 -10;
+	}{
+		#showme {[<faa>Q<088>]} 21 -10;
+	};
+	#button {21;-10;21;-7}{autoq};
+	#showme {[<128>GO<088>]} 22 -29;
+	#button {22;-29;22;-26}{ki};
+	#showme {[<128>KK<088>]} 22 -18;
+	#button {22;-18;22;-13}{kk};
+	#if {${autokill} == 1}{
+		#showme {[<128>A<088>]} 22 -7;
+	}{
+		#showme {[<faa>M<088>]} 22 -7;
+	};
+	#button {22;-7;22;-5}{autok};
 	#math {areaselector[start]}{${areaselector[rows]} * ${areaselector[page]}};
 	#math {areaselector[end]}{${areaselector[rows]} * ${areaselector[page]} - ${areaselector[rows]} + 1};
 	#line sub {var} #draw {tile} 23 -35 28 -4 ${areaselector[text][-$areaselector[start]..-$areaselector[end]]};
@@ -194,7 +218,6 @@
 	go ${areaselector[roomnote][${targetarea}]};
 };
 
-#NOP fb_default;
 
 #alias {si}{
 	#if {$stepignore != 1}{
@@ -470,13 +493,13 @@
 	#if {$autoqueue == 1}{
 		#echo {No longer queueing};
 		#var autoqueue 0;
+		show_area_selector;
 	}{
 		#echo {Queueing};
 		#var autoqueue 1;
+		show_area_selector;
 	};
 };
-
-#var autoqueue 0;
 
 #alias {step_function}{
 	#if {${stepper2} == 1}{
@@ -541,9 +564,9 @@
 				#if {$autokill} {
 					#if {"$mud" == "3s"} {
 						#math {kill_delay} {1d4};
-						#delay {$kill_delay} {kk};
+						#delay {$kill_delay} {kill $kstr};
 					} {
-						kk;
+						kill $kstr;
 					};
 				};
 			}{
