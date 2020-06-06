@@ -136,7 +136,8 @@
 #NOP }
 
 #if {"$draw[canvas]" == "on"} {
-	botdraw;
+	#NOP botdraw;
+	show_area_selector;
 };
 
 #if {"$draw[map]" == "on"} {

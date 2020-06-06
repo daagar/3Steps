@@ -15,7 +15,7 @@
 	#read .tt/3k/aliases.tin;
 	#read .tt/3k/ansi.tin;
 	#read .tt/3k/assemble.tin;
-	#read .tt/3k/bots/bot_cycle.tin;
+	#NOP #read .tt/3k/bots/bot_cycle.tin;
 	#NOP #read .tt/3k/bots/bot_load.tin;
 	#read .tt/3k/corpses.tin;
 	#read .tt/3k/dog.tin;

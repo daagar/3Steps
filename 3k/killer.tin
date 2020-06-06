@@ -1,3 +1,6 @@
+#class killer {kill}
+#class killer {open}
+
 #var critter_room 0 
 #var player_room 0
 #var starter 0
@@ -49,28 +52,30 @@
 };
 
 
-
+#math selector[top] $chat[height]+$caption[height]+$exitpanel[height]+1;
+#math selector[bottom] $selector[top]+5;
 #alias {show_area_selector}{
-	#screen clear square 21 -42 26 -1;
-	#if {${stepignore} == 2}{
-		#showme {[<128>S<088>]} 28 -35;
-	}{
-		#if {${stepignore} == 1}{
-			#showme {[<128>W<088>]} 28 -35;
-		}{
-			#showme {[<128>M<088>]} 28 -35;
-		};
-	};
-	#button {28;-35;28;-33}{
-		si;
-	};
-	#draw rounded box 21 -41 26 -3 {     <<faa>prev<088>> Area Selector <<afa>next<088>>};
-	#button {22;-35;22;-29}{
+
+	#screen clear square $selector[top] -$right_split+1 $selector[bottom] -1;
+	#NOP #if {${stepignore} == 2}{
+	#NOP 	#showme {[<128>S<088>]} 28 -35;
+	#NOP }{
+	#NOP 	#if {${stepignore} == 1}{
+	#NOP 		#showme {[<128>W<088>]} 28 -35;
+	#NOP 	}{
+	#NOP 		#showme {[<128>M<088>]} 28 -35;
+	#NOP 	};
+	#NOP };
+	#NOP #button {28;-35;28;-33}{
+	#NOP 	si;
+	#NOP };
+	#draw rounded box $selector[top] -$right_split+2 $selector[bottom] -3 {     <<faa>prev<088>> Area Selector <<afa>next<088>>};
+	#button {$selector[top]+1;-$right_split+7; $selector[top]+1;-29}{
 		#math {targetarea}{$my[areaselector][current] - 1};
 		#if {$targetarea < 1}{#var {targetarea}{6}};
 		go ${my[areaselector][${targetarea}][note]};
 	};
-	#button {22;-14;22;-8}{
+	#button {$selector[top]+1;-14;$selector[top]+1;-8}{
 		#math {targetarea}{$my[areaselector][current] + 1};
 		#if {$targetarea > 6}{#var {targetarea}{1}};
 		go ${my[areaselector][${targetarea}][note]};
@@ -112,30 +117,30 @@
 		#var {my[areaselector][6][trunc]}{<128>${my[areaselector][6][trunc]}<088>};
 		#var {my[areaselector][current]}{6};
 	};
-	#showme {[${my[areaselector][1][trunc]}] [${my[areaselector][2][trunc]}]} 23 -38;
-	#button {23;-39;23;-23}{
+	#showme {[${my[areaselector][1][trunc]}] [${my[areaselector][2][trunc]}]} $selector[top]+2 -38;
+	#button {$selector[top]+2;-39;$selector[top]+2;-23}{
 		#showme {Proceeding to ${my[areaselector][1][name]}};
 		go ${my[areaselector][1][note]};
 	};
-	#button {23;-25;23;-9}{
+	#button {$selector[top]+2;-25;$selector[top]+2;-9}{
 		#showme {Proceeding to ${my[areaselector][2][name]}};
 		go ${my[areaselector][2][note]};
 	};
-	#showme {[${my[areaselector][3][trunc]}] [${my[areaselector][4][trunc]}]} 24 -38;
-	#button {24;-39;24;-25}{
+	#showme {[${my[areaselector][3][trunc]}] [${my[areaselector][4][trunc]}]} $selector[top]+3 -38;
+	#button {$selector[top]+3;-39;$selector[top]+3;-25}{
 		#showme {Proceeding to ${my[areaselector][3][name]}};
 		go ${my[areaselector][3][note]};
 	};
-	#button {24;-25;24;-9}{
+	#button {$selector[top]+3;-25;$selector[top]+3;-9}{
 		#showme {Proceeding to ${my[areaselector][4][name]}};
 		go ${my[areaselector][4][note]};
 	};
-	#showme {[${my[areaselector][5][trunc]}] [${my[areaselector][6][trunc]}]} 25 -38;
-	#button {25;-39;25;-25}{
+	#showme {[${my[areaselector][5][trunc]}] [${my[areaselector][6][trunc]}]} $selector[top]+4 -38;
+	#button {$selector[top]+4;-39;$selector[top]+4;-25}{
 		#showme {Proceeding to ${my[areaselector][5][name]}};
 		go ${my[areaselector][5][note]};
 	};
-	#button {25;-25;25;-9}{
+	#button {$selector[top]+4;-25;$selector[top]+4;-9}{
 		#showme {Proceeding to ${my[areaselector][6][name]}};
 		go ${my[areaselector][6][note]};
 	};
@@ -173,7 +178,7 @@
 	fbq acidloths;
 };
 
-fb_default;
+#NOP fb_default;
 
 #alias {si}{
 	#if {$stepignore != 1}{
@@ -562,3 +567,4 @@ fb_default;
 	};
 }
 
+#class killer {close}
