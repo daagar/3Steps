@@ -1,127 +1,9 @@
 #class {fl} {open}
 
 #var guild changeling
-#NOP MYSQL CONNECTOR STUFF
 
-#alias {disable_biome}{
-	#if {${my[config][db][biome]} == 1}{
-		#var {my[config][db][biome]}{0};
-		#echo {Biome Disabled};
-		#unvar biome_results;
-		#unvar form_list;
-	}{
-		#var {my[config][db][biome]}{1};
-		#echo {Biome Enabled};
-	};
-};
+#read .tt/3s/pokedex.tin
 
-#alias {show_current_form_table}{
-        #draw {rounded}{box} 47 -41 54 -3 {Current Form Stats:};
-	#showme {Form : ${my[form]}} 49 -38;
-        db_query_single_form ${my[form]};
-	#showme {  Major : ${form_results[1][major]}} 50 -38;
-	#showme {  Minor : ${form_results[1][minor]}} 51 -38;
-	#showme {     FF : ${my[ff][level]}} 52 -38;
-	#showme {Avg Dam : ${form_avg[1][avg(damage)]}} 53 -38;
-}
-
-#alias {show_biome_table}{
-	#format {padded_form}{%+3s}{$form_number};
-        #draw {rounded}{box} 55 -41 65 -3 {   Pokedex Results   (${padded_form}/${all_forms}): << >>};
-        #button {56;-5;56;-4}{
-        	#math {form_number}{$form_number + 1}{};
-        	db_query_biome ${form_list[${form_number}][form]};
-		show_biome_table;
-	};
-        #button {56;-8;56;-7}{
-        	#math {form_number}{$form_number - 1}{};
-        	db_query_biome ${form_list[${form_number}][form]};
-		show_biome_table;
-	};
-	#showme {Form : $biome_results[$result_number][form]} 58 -38;
-        #button {58;-40;58;-35}{db_list_biome form};
-	#showme { Type : $biome_results[$result_number][formtype]} 59 -38;
-        #button {59;-40;59;-35}{db_list_biome formtype};
-	#showme { Major: $biome_results[$result_number][major]} 60 -38;
-        #button {60;-40;60;-35}{db_list_biome major};
-	#showme { Minor: $biome_results[$result_number][minor]} 61 -38;
-        #button {61;-40;61;-35}{db_list_biome minor};
-	#format {padded_room}{%-9s}{${biome_results[$result_number][roomvnum]}};
-	#showme { Room : $padded_room  (${result_number}/${result_size})} 62 -38;
-        #button {62;-40;62;-35}{db_list_biome roomvnum};
-        #if {"${biome_results[$result_number][form]}" != ""}{
-		#replace {biome_results[$result_number][roomshort]}{ x7Bnightx7D}{ \x7Bnight\x7D};
-		#replace {biome_results[$result_number][roomshort]}{ x7Bdayx7D}{ \x7Bday\x7D};
-		#replace {biome_results[$result_number][roomshort]}{ x7Bduskx7D}{ \x7Bdusk\x7D};
-		#replace {biome_results[$result_number][roomshort]}{ x7Bdawnx7D}{ \x7Bdawn\x7D};
-	};
-        #showme {       [ <128>GO<088> ]      [<faa>-<088>][<afa>+<088>]} 63 -38;
-        #button {63;-16;63;-14}{bnext};
-        #button {63;-19;63;-17}{bprev};
-        #button {63;-34;63;-26}{biomego};
-	#showme {$biome_results[$result_number][roomshort]} 64 -38;
-        #button {64;-40;64;-35}{db_list_biome roomshort};
-};
-
-#alias {db_submit_biome}{
-	#if {${my[config][db][biome]} == 1}{
-        	db_submit {db_return}{%s}{insert into biome (timestamp, roomvnum, roomshort, form, formtype, major, minor) VALUES (`$dbtimestamp`,`$roomvnum`, `$biome[roomshort]`, `$biome[form]`, `$biome[formtype]`, `$biome[major]`, `$biome[minor]`)};
-	};
-};
-
-#alias {db_list_biome}{
-	#if {${my[config][db][biome]} == 1}{
-        	db_submit {form_list}{%s}{select distinct form from biome order by %0 asc;};
-	};
-	#list {form_list}{size}{all_forms};
-        #var {form_number}{1};
-        db_query_biome ${form_list[${form_number}][form]}
-};
-
-#alias {db_query_biome}{
-	#if {${my[config][db][biome]} == 1}{
-        	db_submit {biome_results}{%s}{select distinct roomvnum, roomshort, form, formtype, major, minor from biome where form = `%0` order by timestamp desc limit 100;};
-	};
-        #var {result_number}{1};
-        #list {biome_results}{size}{result_size};
-};
-
-#alias {db_query_single_form}{
-	#if {${my[config][db][biome]} == 1}{
-        	db_submit {form_results}{%s}{select form, formtype, major, minor from biome where form = `a %0` or form = `an %0` limit 1;};
-	};
-};
-
-#alias {db_query_form_damage}{
-	#if {${my[config][db][biome]} == 1}{
-        	db_submit {form_avg}{%s}{select guildstring, avg(damage) from (select guildstring, damage from damage_log where guildstring = `$guild ($my[form]($my[ff][level]))` order by timestamp desc limit 1000)var1;};
-	};
-	show_current_form_table;
-};
-
-#ticker {form_damage}{show_biome_table;db_query_form_damage}{30};
-	
-#alias {bnext}{
-        #math {result_number}{$result_number + 1};
-        #if {$result_number > $result_size}{#var {result_number}{$result_size}};
-        show_biome_table;
-};
-
-#alias {bprev}{
-        #math {result_number}{$result_number - 1};
-        #if {$result_number == 0}{#var {result_number}{1}};
-        show_biome_table;
-};
-
-#alias {biomego}{
-	#map flag static on;
-        #map run ${biome_results[$result_number][roomvnum]};
-	#math {result_number}{$result_number + 1};
-        show_biome_table;
-};
-
-
-#NOP END OF MYSQL
 #alias {autope}{
 	#if {$my[autopersevere] != 1}{
 		#var {my[autopersevere]} {1};
@@ -145,18 +27,6 @@
 #gag {^You instinctively know that biting this being would have no effect.}
 #gag {^You are not able to bite anything at this time!}
 #gag {%1 writhes in pain as its flesh slowly rots!}
-
-#alias {select_current_form_biome}{
-	#loop {1}{$all_forms}{index}{
-		#regex {$form_list[${index}][form]}{${my[form]}}{
-			#var {current_index}{$index};
-		};
-	};
-	#var {form_number}{$current_index};
-        db_query_biome ${form_list[${form_number}][form]};
-	show_biome_table;
-};
-
 
 #gag {Energy pours into you, rejuvenating lost stamina and protoplasm!}
 #gag {You resume accelerating your natural regeneration.}
