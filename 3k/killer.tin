@@ -26,6 +26,12 @@
 }
 
 #NOP Added for all the bots in the room.
+#alias {.stop} {
+	#var bot 0;
+	#var autokill 0;
+	#showme Bot Deactivated;
+	update_status;
+}
 #NOP Should only be called after already in the area to step through
 #alias {.start} {
 	#var bot 1;
@@ -60,50 +66,42 @@
 #math selector[top] $chat[height]+$caption[height]+$exitpanel[height]+1;
 #math selector[bottom] $selector[top]+8;
 #alias {show_area_selector}{
-	#screen clear square $selector[top] -42 $selector[bottom] -1;
-	#NOP #if {${stepignore} == 2}{
-	#NOP 	#showme {[<128>S<088>]} 30 -35;
-	#NOP }{
-	#NOP 	#if {${stepignore} == 1}{
-	#NOP 		#showme {[<128>W<088>]} 30 -35;
-	#NOP 	}{
-	#NOP 		#showme {[<128>M<088>]} 30 -35;
-	#NOP 	};
-	#NOP };
-	#NOP #button {30;-35;30;-33}{si};
-	#NOP #showme {[<128>KI<088>]} 30 -15;
-	#NOP #button {30;-15;30;-12}{ki};
-	#NOP #showme {[<128>KK<088>]} 30 -8;
-	#NOP #button {30;-8;30;-5}{kk};
-	
-	#draw <128> top left jointed corner $selector[top] -41 $selector[top] -40;
-	#draw <128> line $selector[top] -40 $selector[top] -33;
-	#draw <128> tile $selector[top] -32 $selector[top] -5 {[<099><<<128>] Area Selector [<099>>><128>]};
-	#draw <128> line $selector[top] -9 $selector[top] -3;
-	#draw <128> jointed bottom left right side $selector[top] -41 $selector[bottom] -2;
-	#draw <128> top right jointed corner $selector[top] -2 $selector[top] -2;
-	
-	#NOP #draw {tile} $selector[top] -41 $selector[bottom] -3 {     <<faa>prev<088>> Area Selector <<afa>next<088>>};
-	
-	#button {$selector[top]+1;-35;$selector[top]+1;-29}{
+	#screen clear square 21 -42 29 -1;
+	#draw rounded box 21 -41 29 -3;
+	#showme {[<<] Area Selector [>>]} 21 -33;
+	#button {21;-33;21;-29}{
 		#math {targetarea}{${areaselector[current]} - 1};
 		#if {$targetarea < 1}{#var targetarea ${queue_size}};
 		go ${areaselector[roomnote][${targetarea}]};
 	};
-	#button {$selector[top]+1;-14;$selector[top]+1;-8}{
+	#button {21;-14;21;-10}{
 		#math {targetarea}{${areaselector[current]} + 1};
 		#if {$targetarea > ${queue_size}}{#var targetarea 1};
 		go ${areaselector[roomnote][${targetarea}]};
 	};
+	#if {${stepignore} == 2}{
+		#showme {[<128>S<088>]} 21 -36;
+	}{
+		#if {${stepignore} == 1}{
+			#showme {[<128>W<088>]} 21 -36;
+		}{
+			#showme {[<128>M<088>]} 21 -36;
+		};
+	};
+	#button {21;-36;21;-33}{si};
+	#showme {[<128>GO<088>]} 22 -24;
+	#button {22;-24;22;-21}{ki};
+	#showme {[<128>K<088>]} 21 -10;
+	#button {21;-10;21;-8}{kk};
 	#math {areaselector[start]}{${areaselector[rows]} * ${areaselector[page]}};
 	#math {areaselector[end]}{${areaselector[rows]} * ${areaselector[page]} - ${areaselector[rows]} + 1};
-	#line sub {var} #draw {tile} $selector[top]+2 -37 $selector[bottom]-1 -4 ${areaselector[text][-$areaselector[start]..-$areaselector[end]]};
-	#var {start_row}{$selector[top]+1};
+	#line sub {var} #draw {tile} 23 -35 28 -4 ${areaselector[text][-$areaselector[start]..-$areaselector[end]]};
+	#var {start_row}{22};
 	#var {areaselector[current]}{0};
 	#if {$queue_size > 0}{
 		#loop {1}{${queue_size}}{queue_count}{
 			#math {indicator}{$start_row + $queue_count};
-			#showme { ${queue_count}. } ${indicator} -39;
+			#showme {${queue_count}.} ${indicator} -38;
 			#if {"${area}" == "${areaselector[roomarea][${queue_count}]}"}{
 				#showme {<abe>><099>} ${indicator} -40;
 				#var {areaselector[current]}{${queue_count}};
@@ -139,8 +137,8 @@
 #alias {fbq}{
 	#unvar notes;
 	#unvar newarea;
-	#var {note_len} {8};
-	#var {name_len} {17};
+	#var {name_len}{16};
+	#var {note_len}{8};
 	#if {"%1" != ""}{
 		#map list {roomnote}{%i%*%0%*}{variable}{noterooms};
 		#foreach {*noterooms[]}{room}{
@@ -158,7 +156,7 @@
 		};
 		#list {areaselector[text]}{size}{queue_size};
 		#math {queue_size}{$queue_size + 1};
-		#list areaselector[text] ins -1 {  ${note_trunc} | ${name_trunc} \[<faa>-<088>\]};
+		#list areaselector[text] ins -1 {${note_trunc} | ${name_trunc} \[<faa>-<088>\]};
 		#list areaselector[roomarea] ins -1 {${newarea[${room}]}};
 		#list areaselector[roomnote] ins -1 {${notes[${room}]}};
 		show_area_selector;
@@ -442,7 +440,9 @@
 			#var stepper2 0;
 			#map {flag}{static}{off};
 		}{
-			make_killpath {${roomlist[${room_index}]}};
+			#if {$room_index <= $area_size}{
+				make_killpath {${roomlist[${room_index}]}};
+			};
 			#var stepper2 1;
 		};
 		#if {"$guild" == "angel" && $my[desecrate] == 1}{

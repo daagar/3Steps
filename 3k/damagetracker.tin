@@ -97,14 +97,10 @@
 
 #alias {show_damage_table}{
 	#screen clear square 30 -42 42 -1;
-	#showme {            Last 8 Kills} 30 -41;
-	#button {28;-11;28;-8}{ki};
-	#showme {<088>\u251C} 30 -41;
-	#showme {<088>\u2524} 30 -3;
-	#showme {<088>\u251C} 31 -41;
-	#showme {<088>\u2524} 31 -3;
+	#draw rounded box 30 -41 42 -3;
+	#showme {Last 8 Kills} 30 -28;
 	#showme {  Foe   | Rnds | Tot. Dmg | Avg} 31 -38;
-	#draw rounded box 32 -41 42 -3;
+	#draw {line} 32 -40 32 -4;
 	show_area_selector
 #nop {
 	log_record_damage;
