@@ -16,11 +16,11 @@
 #var stepper 1
 #var room_num 0
 
-#act {You sweep your hand over {one|some} of the higher shelves} {take gloves;keep gloves;ki}
-#act {You reach in and snatch the key from the deadly acid.} {keep key;ki}
-#act {There is no key here.} {ki}
-#act {You slip the key into the lock and unlock the door.} {open door;ki}
-#act {The door is already unlocked.} {ki}
+#act {You sweep your hand over {one|some} of the higher shelves} {take gloves;keep gloves;ki;ki}
+#act {You reach in and snatch the key from the deadly acid.} {keep key;ki;ki}
+#act {There is no key here.} {ki;ki}
+#act {You slip the key into the lock and unlock the door.} {open door;ki;ki}
+#act {The door is already unlocked.} {ki;ki}
 
 #act {^=M= Erig.} {ki;ki;}
 

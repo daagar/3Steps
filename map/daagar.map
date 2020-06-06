@@ -18,7 +18,7 @@ F 8455
 
 G 0
 
-I 4278
+I 677
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -3573,7 +3573,7 @@ E {  678} {e} {e} {2} {0} {} {1.000} {}
 E {  698} {n} {n} {1} {0} {} {1.000} {}
 E {  523} {w} {w} {8} {0} {} {1.000} {}
 
-R {  677} {0} {} {Zelligar's Castle (n,leave)} { } {You stand in the first room of what appears to be an abandoned castle.  Made of hard, dark stone, the walls of this castle are crumbling.  Dust and dirt have accumulated on the floor and the tapestries that line the walls are in tatters.  Perhaps once a great castle, it is clear that it is no longer cared for.  There is a hallway to the north that leads to the heart of the castle and a staircase to the northwest and northeast that lead to a parapet that surrounds the perimeter of the castle. } {$area} {zelligars} {} {} {1.000} {}
+R {  677} {0} {} {Zelligar's Castle (n,leave)} { } {You stand in the first room of what appears to be an abandoned castle.  Made of hard, dark stone, the walls of this castle are crumbling.  Dust and dirt have accumulated on the floor and the tapestries that line the walls are in tatters.  Perhaps once a great castle, it is clear that it is no longer cared for.  There is a hallway to the north that leads to the heart of the castle and a staircase to the northwest and northeast that lead to a parapet that surrounds the perimeter of the castle. } {Zelligar's Castle} {zelligars} {} {} {1.000} {}
 E { 2747} {n} {n} {1} {0} {} {1.000} {}
 E {  667} {leave} {leave;#read .tt/Dirs/zelligar_unload.tt} {0} {0} {} {1.000} {}
 
