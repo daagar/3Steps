@@ -14,6 +14,10 @@
 #var bot 0
 #var stepignore 0
 
+#var {areaselector[rows]}{6}
+#var {areaselector[page]}{1};
+#var {areaselector[max]}{6};
+
 #alias {.stop} {
 	#var bot 0;
 	#var autokill 0;
@@ -21,6 +25,7 @@
 	update_status;
 }
 
+#NOP Added for all the bots in the room.
 #NOP Should only be called after already in the area to step through
 #alias {.start} {
 	#var bot 1;
@@ -55,100 +60,77 @@
 #math selector[top] $chat[height]+$caption[height]+$exitpanel[height]+1;
 #math selector[bottom] $selector[top]+5;
 #alias {show_area_selector}{
-
-	#screen clear square $selector[top] -$right_split+1 $selector[bottom] -1;
-	#NOP #if {${stepignore} == 2}{
-	#NOP 	#showme {[<128>S<088>]} 28 -35;
-	#NOP }{
-	#NOP 	#if {${stepignore} == 1}{
-	#NOP 		#showme {[<128>W<088>]} 28 -35;
-	#NOP 	}{
-	#NOP 		#showme {[<128>M<088>]} 28 -35;
-	#NOP 	};
-	#NOP };
-	#NOP #button {28;-35;28;-33}{
-	#NOP 	si;
-	#NOP };
-	#draw rounded box $selector[top] -$right_split+2 $selector[bottom] -3 {     <<faa>prev<088>> Area Selector <<afa>next<088>>};
-	#button {$selector[top]+1;-$right_split+7; $selector[top]+1;-29}{
-		#math {targetarea}{$my[areaselector][current] - 1};
-		#if {$targetarea < 1}{#var {targetarea}{6}};
-		go ${my[areaselector][${targetarea}][note]};
+	#screen clear square 21 -42 29 -1;
+	#if {${stepignore} == 2}{
+		#showme {[<128>S<088>]} 30 -35;
+	}{
+		#if {${stepignore} == 1}{
+			#showme {[<128>W<088>]} 30 -35;
+		}{
+			#showme {[<128>M<088>]} 30 -35;
+		};
 	};
-	#button {$selector[top]+1;-14;$selector[top]+1;-8}{
-		#math {targetarea}{$my[areaselector][current] + 1};
-		#if {$targetarea > 6}{#var {targetarea}{1}};
-		go ${my[areaselector][${targetarea}][note]};
+	#button {30;-35;30;-33}{si};
+	#showme {[<128>KI<088>]} 30 -15;
+	#button {30;-15;30;-12}{ki};
+	#showme {[<128>KK<088>]} 30 -8;
+	#button {30;-8;30;-5}{kk};
+	#draw rounded box 21 -41 29 -3 {     <<faa>prev<088>> Area Selector <<afa>next<088>>};
+	#button {22;-35;22;-29}{
+		#math {targetarea}{${areaselector[current]} - 1};
+		#if {$targetarea < 1}{#var targetarea ${queue_size}};
+		go ${areaselector[roomnote][${targetarea}]};
 	};
-	#var {areaselector_len}{14};
-	#format {my[areaselector][1][trunc]}{%-${areaselector_len}s}{${my[areaselector][1][name]}};
-	#format {my[areaselector][1][trunc]}{%.${areaselector_len}s}{${my[areaselector][1][trunc]}};
-	#format {my[areaselector][2][trunc]}{%+${areaselector_len}s}{${my[areaselector][2][name]}};
-	#format {my[areaselector][2][trunc]}{%.${areaselector_len}s}{${my[areaselector][2][trunc]}};
-	#format {my[areaselector][3][trunc]}{%-${areaselector_len}s}{${my[areaselector][3][name]}};
-	#format {my[areaselector][3][trunc]}{%.${areaselector_len}s}{${my[areaselector][3][trunc]}};
-	#format {my[areaselector][4][trunc]}{%+${areaselector_len}s}{${my[areaselector][4][name]}};
-	#format {my[areaselector][4][trunc]}{%.${areaselector_len}s}{${my[areaselector][4][trunc]}};
-	#format {my[areaselector][5][trunc]}{%-${areaselector_len}s}{${my[areaselector][5][name]}};
-	#format {my[areaselector][5][trunc]}{%.${areaselector_len}s}{${my[areaselector][5][trunc]}};
-	#format {my[areaselector][6][trunc]}{%+${areaselector_len}s}{${my[areaselector][6][name]}};
-	#format {my[areaselector][6][trunc]}{%.${areaselector_len}s}{${my[areaselector][6][trunc]}};
-	#if {"$area" == "${my[areaselector][1][name]}"}{
-		#var {my[areaselector][1][trunc]}{<128>${my[areaselector][1][trunc]}<088>};
-		#var {my[areaselector][current]}{1};
+	#button {22;-14;22;-8}{
+		#math {targetarea}{${areaselector[current]} + 1};
+		#if {$targetarea > ${queue_size}}{#var targetarea 1};
+		go ${areaselector[roomnote][${targetarea}]};
 	};
-	#if {"$area" == "${my[areaselector][2][name]}"}{
-		#var {my[areaselector][2][trunc]}{<128>${my[areaselector][2][trunc]}<088>};
-		#var {my[areaselector][current]}{2};
+	#math {areaselector[start]}{${areaselector[rows]} * ${areaselector[page]}};
+	#math {areaselector[end]}{${areaselector[rows]} * ${areaselector[page]} - ${areaselector[rows]} + 1};
+	#line sub {var} #draw {tile} 23 -37 28 -4 ${areaselector[text][-$areaselector[start]..-$areaselector[end]]};
+	#var {start_row}{22};
+	#var {areaselector[current]}{0};
+	#if {$queue_size > 0}{
+		#loop {1}{${queue_size}}{queue_count}{
+			#math {indicator}{$start_row + $queue_count};
+			#showme {${queue_count})} ${indicator} -39;
+			#if {"${area}" == "${areaselector[roomarea][${queue_count}]}"}{
+				#showme {>} ${indicator} -40;
+				#var {areaselector[current]}{${queue_count}};
+			};
+		};
 	};
-	#if {"$area" == "${my[areaselector][3][name]}"}{
-		#var {my[areaselector][3][trunc]}{<128>${my[areaselector][3][trunc]}<088>};
-		#var {my[areaselector][current]}{3};
+	#button {23;-36;23;-34}{
+		fbrm 1;
+		show_area_selector;
 	};
-	#if {"$area" == "${my[areaselector][4][name]}"}{
-		#var {my[areaselector][4][trunc]}{<128>${my[areaselector][4][trunc]}<088>};
-		#var {my[areaselector][current]}{4};
+	#button {24;-36;24;-34}{
+		fbrm 2;
+		show_area_selector;
 	};
-	#if {"$area" == "${my[areaselector][5][name]}"}{
-		#var {my[areaselector][5][trunc]}{<128>${my[areaselector][5][trunc]}<088>};
-		#var {my[areaselector][current]}{5};
+	#button {25;-36;25;-34}{
+		fbrm 3;
+		show_area_selector;
 	};
-	#if {"$area" == "${my[areaselector][6][name]}"}{
-		#var {my[areaselector][6][trunc]}{<128>${my[areaselector][6][trunc]}<088>};
-		#var {my[areaselector][current]}{6};
+	#button {26;-36;26;-34}{
+		fbrm 4;
+		show_area_selector;
 	};
-	#showme {[${my[areaselector][1][trunc]}] [${my[areaselector][2][trunc]}]} $selector[top]+2 -38;
-	#button {$selector[top]+2;-39;$selector[top]+2;-23}{
-		#showme {Proceeding to ${my[areaselector][1][name]}};
-		go ${my[areaselector][1][note]};
+	#button {27;-36;27;-34}{
+		fbrm 5;
+		show_area_selector;
 	};
-	#button {$selector[top]+2;-25;$selector[top]+2;-9}{
-		#showme {Proceeding to ${my[areaselector][2][name]}};
-		go ${my[areaselector][2][note]};
-	};
-	#showme {[${my[areaselector][3][trunc]}] [${my[areaselector][4][trunc]}]} $selector[top]+3 -38;
-	#button {$selector[top]+3;-39;$selector[top]+3;-25}{
-		#showme {Proceeding to ${my[areaselector][3][name]}};
-		go ${my[areaselector][3][note]};
-	};
-	#button {$selector[top]+3;-25;$selector[top]+3;-9}{
-		#showme {Proceeding to ${my[areaselector][4][name]}};
-		go ${my[areaselector][4][note]};
-	};
-	#showme {[${my[areaselector][5][trunc]}] [${my[areaselector][6][trunc]}]} $selector[top]+4 -38;
-	#button {$selector[top]+4;-39;$selector[top]+4;-25}{
-		#showme {Proceeding to ${my[areaselector][5][name]}};
-		go ${my[areaselector][5][note]};
-	};
-	#button {$selector[top]+4;-25;$selector[top]+4;-9}{
-		#showme {Proceeding to ${my[areaselector][6][name]}};
-		go ${my[areaselector][6][note]};
+	#button {28;-36;28;-34}{
+		fbrm 6;
+		show_area_selector;
 	};
 };
 
 #alias {fbq}{
 	#unvar notes;
 	#unvar newarea;
+	#var {name_len}{12};
 	#if {"%1" != ""}{
 		#map list {roomnote}{%i%*%0%*}{variable}{noterooms};
 	}{
@@ -158,14 +140,20 @@
 		#map get {roomnote}{notes[$room]}{$room};
 		#map get {roomarea}{newarea[$room]}{$room};
 	};
-	#var {my[areaselector][1]}{$my[areaselector][2]};
-	#var {my[areaselector][2]}{$my[areaselector][3]};
-	#var {my[areaselector][3]}{$my[areaselector][4]};
-	#var {my[areaselector][4]}{$my[areaselector][5]};
-	#var {my[areaselector][5]}{$my[areaselector][6]};
-	#var {my[areaselector][6][name]}{${newarea[$room]}};
-	#var {my[areaselector][6][note]}{${notes[$room]}};
-	#var {my[areaselector][current]}{0};
+	#format {note_trunc}{%-${name_len}s}{${notes[${room}]}};
+	#format {note_trunc}{%.${name_len}s}{${note_trunc}};
+	#format {name_trunc}{%-${name_len}s}{${newarea[${room}]}};
+	#format {name_trunc}{%.${name_len}s}{${name_trunc}};
+	#if {&areaselector[text][] >= ${areaselector[max]}}{
+		#list areaselector[text] del 1;
+		#list areaselector[roomarea] del 1;
+		#list areaselector[roomnote] del 1;
+	};
+	#list {areaselector[text]}{size}{queue_size};
+	#math {queue_size}{$queue_size + 1};
+	#list areaselector[text] ins -1 {\[<faa>-<088>\] ${note_trunc} | ${name_trunc}};
+	#list areaselector[roomarea] ins -1 {${newarea[${room}]}};
+	#list areaselector[roomnote] ins -1 {${notes[${room}]}};
 	show_area_selector;
 };
 
@@ -178,7 +166,27 @@
 	fbq acidloths;
 };
 
-#NOP fb_default;
+#alias {fbrm}{
+	#list areaselector[text] del %0;
+	#list areaselector[roomarea] del %0;
+	#list areaselector[roomnote] del %0;
+	#list {areaselector[text]}{size}{queue_size};
+	show_area_selector;
+};
+
+#alias {fbnext}{
+	#math {targetarea}{${areaselector[current]} + 1};
+	#if {$targetarea > ${queue_size}}{#var targetarea 1};
+	go ${areaselector[roomnote][${targetarea}]};
+};
+
+#alias {fbprev}{
+	#math {targetarea}{${areaselector[current]} - 1};
+	#if {$targetarea < 1}{#var targetarea ${queue_size}};
+	go ${areaselector[roomnote][${targetarea}]};
+};
+
+fb_default;
 
 #alias {si}{
 	#if {$stepignore != 1}{
@@ -201,19 +209,36 @@
 
 #act {AREA NAME: %1 [%2]} {
 	#var {area}{%1};
+	show_area_selector;
 
 	#if {"$area" == "Smurfland%*"} {#var area Smurfland};
 
 	make_roomlist {$area};
+	#if {$do_queue2 == 1}{
+		#map get {roomarea}{my_area};
+		#if {"$my_area" != ""}{
+			#var {area}{$my_area};
+		};
+		ki;
+	};
 }
 
 #act {AREA RATING -> %1 [%2]}{
 	#var {area}{%2};
+	show_area_selector;
 	#if {"$area" == "Changeling"}{
 		#var {area}{Changeling Biome};
 	};
 	
 	make_roomlist {$area};
+	#if {$do_queue2 == 1}{
+		#map get {roomarea}{my_area};
+		#if {"$my_area" != ""}{
+			#var {area}{$my_area};
+		};
+		#var do_queue2 0;
+		ki;
+	};
 }
 
 #alias {make_killpath}{
@@ -455,12 +480,15 @@
 			#math {room_index}{${room_index} + 1};
 			#math {tmp_size}{$area_size + 1};
 			#if {$room_index > $tmp_size}{
+				#var {room_index}{1};
 				#if {$autoqueue == 1}{
-					#math {targetarea}{$my[areaselector][current] + 1};
-					#if {$targetarea > 6}{#var {targetarea}{1}};
-					go ${my[areaselector][${targetarea}][note]};
+					#math {targetarea}{${areaselector[current]} + 1};
+					#if {${targetarea} > ${queue_size}}{#var {targetarea}{1}};
+					#var {do_queue2}{1};
+					go ${areaselector[roomnote][${targetarea}]};
+					rating;
 				}{
-					#var {room_index}{1}
+					make_killpath {${roomlist[${room_index}]}};
 				};
 			}{
 				#if {$room_index <= $area_size}{
@@ -476,6 +504,8 @@
 				#if {$autoqueue == 1}{
 					#math {targetarea}{$my[areaselector][current] + 1};
 					#if {$targetarea > 6}{#var {targetarea}{1}};
+					#var {room_num}{1};
+					#var {starter2}{0};
 					go ${my[areaselector][${targetarea}][note]};
 				};
 			}{

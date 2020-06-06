@@ -91,18 +91,20 @@
         #system {echo "$my[damagetracker][guildstring] - $my[damagetracker][targetstring] -> $my[damagetracker][hits] times -> $my[damagetracker][damage] ($my[damagetracker][average] Avg)" >> .tt/logs/${guild}-damagehistory.txt};
 };
 
-#var {damagetracker[rows]}{10};
+#var {damagetracker[rows]}{9};
 #var {damagetracker[page]}{1};
 #var {damagetracker[max]}{100};
 
 #alias {show_damage_table}{
-	#screen clear square 27 -42 42 -1;
-	#draw rounded box 27 -41 29 -3 {            Last 10 Kills    [<128>KI<088>]};
+	#screen clear square 30 -42 42 -1;
+	#showme {            Last 8 Kills} 30 -41;
 	#button {28;-11;28;-8}{ki};
 	#showme {<088>\u251C} 30 -41;
 	#showme {<088>\u2524} 30 -3;
-	#showme {  Foe   | Rnds | Tot. Dmg | Avg} 30 -38;
-	#draw rounded box 31 -41 42 -3;
+	#showme {<088>\u251C} 31 -41;
+	#showme {<088>\u2524} 31 -3;
+	#showme {  Foe   | Rnds | Tot. Dmg | Avg} 31 -38;
+	#draw rounded box 32 -41 42 -3;
 	show_area_selector
 #nop {
 	log_record_damage;
@@ -117,7 +119,7 @@
 	};
         #math damagetracker[start]       {$damagetracker[rows] * $damagetracker[page]};
         #math damagetracker[end]         {$damagetracker[rows] * $damagetracker[page] - $damagetracker[rows] + 1};
-        #line sub {var} #draw {tile} 32 -39 41 -4 $damagetracker[log][-$damagetracker[start]..-$damagetracker[end]];
+        #line sub {var} #draw {tile} 33 -39 41 -4 $damagetracker[log][-$damagetracker[start]..-$damagetracker[end]];
 };
 
 show_damage_table
