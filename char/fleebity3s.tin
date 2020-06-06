@@ -1,7 +1,7 @@
 #class {fleebity} {open}
 
 #var guild jedi
-#var subguild baadu
+#var subguild krath
 #read .tt/3s/jedimode.tin
 
 #gag {Your shot hit}
@@ -54,6 +54,9 @@
 #gag {^You feel your bones knitting together.}
 #gag {^The healing power of the Force flows through you.}
 #gag {^The Force courses through you, mending your body.}
+#gag {^Bolts of crackling energy lance from your fingers into}
+#gag {^Shards of ice lance from your fingers and burst into}
+#gag {^The smell of ozone fills the room as your Force Lightning}
 
 #gag {^You clutch %1 heart with the Force}
 #gag {^the very life from %1.}
@@ -191,6 +194,17 @@
 	#var {my[damage][type]}{cardiac};
 	#delay {2}{!focus force trance /tk,repeat};
 };
+#alias {ftli}{
+	#send {alias fli focus force lightning};
+	#var {my[desired][spell]}{force lightning};
+	!draw ${my[desired][weapon]};
+	!focus force trance /off;
+	!focus mode /flurry;
+	#var {my[desired][mode]}{flurry};
+	#var {my[desired][modeshort]}{f};
+	#var {my[damage][type]}{force lightning};
+	#delay {2}{!focus force trance /fli,repeat};
+};
 
 #alias {switchw}{
 	#if {"${my[desired][weapon]}" == "lightsaber"}{
@@ -229,10 +243,10 @@
 };
 
 #nop Set default mode to ipain/guide
-#delay {2}{ftik}
+#delay {2}{ftli}
 #var {my[cleanse][status]}{0};
 #var {my[cloud][threshold]}{50};
-#var {my[desired][weapon]}{lightsaber};
+#var {my[desired][weapon]}{lightdaggers};
 #var {my[desired][mode]}{guide};
 #var {my[damage][type]}{boil};
 
@@ -292,7 +306,7 @@
 		};
                 #if {$my[mindblock] != 1}{
                         !focus mindblock;
-                        #delay {confusion}{!focus confusion}{20};
+                        #delay {confusion}{!focus confusion}{30};
                         #var {my[mindblock]}{1};
                 };
 	}{
@@ -438,9 +452,9 @@
 	fbq garg;
 	fbq balthazar;
 	fbq smurf swamp;
-	fbq arcanarton;
 	fbq pol;
 	fbq mahjongg;
+	fbq ccows;
 	autoq;
 }
 
