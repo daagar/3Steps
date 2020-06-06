@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 10
+F 11
 
 G 0
 
-I 3030
+I 4061
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -18453,7 +18453,7 @@ R { 4060} {0} {} {4060} { } {  	Forest of Despair (path) Dark overhanging branch
 E { 4061} {n} {n} {1} {0} {} {1.000} {}
 E { 4059} {s} {s;#read .tt/Dirs/pol_load.tt} {4} {0} {} {1.000} {}
 
-R { 4061} {0} {<118>} {4061} { } {} {Portal Of Life} {} {} {} {1.000} {}
+R { 4061} {0} {} {4061} { } {} {Portal Of Life} {} {} {} {1.000} {}
 E { 4060} {s} {s} {4} {0} {} {1.000} {}
 E { 4062} {ne} {ne} {3} {0} {} {1.000} {}
 E { 2851} {nw} {nw} {9} {0} {} {1.000} {}

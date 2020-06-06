@@ -229,13 +229,16 @@
 };
 
 
-#nop Set default mode to ipain/guide
+#nop Set default mode to injure-kill/guide
 #delay {2}{ftik}
 #var {my[cleanse][status]}{0};
 #var {my[cloud][threshold]}{50};
 #var {my[desired][weapon]}{lightsaber};
 #var {my[desired][mode]}{guide};
 #var {my[damage][type]}{boil};
+fbq uo1
+fbq aegisl1
+fbq d2hell
 
 
 #nop {focus hpconfigure /HP: #hp/#mhp SP: #sp/#msp C: #c F: #f M: #sm/#%c D: #dn/#ng P: #df E: #es GXP: #gxp}
