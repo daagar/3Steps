@@ -124,28 +124,28 @@
 	#var {name_len}{12};
 	#if {"%1" != ""}{
 		#map list {roomnote}{%i%*%0%*}{variable}{noterooms};
+		#foreach {*noterooms[]}{room}{
+			#map get {roomnote}{notes[$room]}{$room};
+			#map get {roomarea}{newarea[$room]}{$room};
+		};
+		#format {note_trunc}{%-${name_len}s}{${notes[${room}]}};
+		#format {note_trunc}{%.${name_len}s}{${note_trunc}};
+		#format {name_trunc}{%-${name_len}s}{${newarea[${room}]}};
+		#format {name_trunc}{%.${name_len}s}{${name_trunc}};
+		#if {&areaselector[text][] >= ${areaselector[max]}}{
+			#list areaselector[text] del 1;
+			#list areaselector[roomarea] del 1;
+			#list areaselector[roomnote] del 1;
+		};
+		#list {areaselector[text]}{size}{queue_size};
+		#math {queue_size}{$queue_size + 1};
+		#list areaselector[text] ins -1 {\[<faa>-<088>\] ${note_trunc} | ${name_trunc}};
+		#list areaselector[roomarea] ins -1 {${newarea[${room}]}};
+		#list areaselector[roomnote] ins -1 {${notes[${room}]}};
+		show_area_selector;
 	}{
-		#var {my[areaselector]};
+		#var {areaselector[text]};
 	};
-	#foreach {*noterooms[]}{room}{
-		#map get {roomnote}{notes[$room]}{$room};
-		#map get {roomarea}{newarea[$room]}{$room};
-	};
-	#format {note_trunc}{%-${name_len}s}{${notes[${room}]}};
-	#format {note_trunc}{%.${name_len}s}{${note_trunc}};
-	#format {name_trunc}{%-${name_len}s}{${newarea[${room}]}};
-	#format {name_trunc}{%.${name_len}s}{${name_trunc}};
-	#if {&areaselector[text][] >= ${areaselector[max]}}{
-		#list areaselector[text] del 1;
-		#list areaselector[roomarea] del 1;
-		#list areaselector[roomnote] del 1;
-	};
-	#list {areaselector[text]}{size}{queue_size};
-	#math {queue_size}{$queue_size + 1};
-	#list areaselector[text] ins -1 {\[<faa>-<088>\] ${note_trunc} | ${name_trunc}};
-	#list areaselector[roomarea] ins -1 {${newarea[${room}]}};
-	#list areaselector[roomnote] ins -1 {${notes[${room}]}};
-	show_area_selector;
 };
 
 #alias {fb_default}{
