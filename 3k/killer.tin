@@ -207,6 +207,7 @@ fb_default;
 		#if {"$my_area" != ""}{
 			#var {area}{$my_area};
 		};
+		#var do_queue2 0;
 		ki;
 	};
 }
