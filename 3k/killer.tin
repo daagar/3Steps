@@ -9,6 +9,16 @@
 #var autogather 0
 #var autokill 0
 
+#nop {Make a global blacklist of critters to not stop on since they are followers, etc};
+#var {global_blacklist}{everybody;under the control of;betrayer;broodling;chromatic cuckoo owlet;tiny translucent;gemini}
+
+#alias {make_global_blacklist}{
+	#list {global[blacklist]}{create}{$global_blacklist};
+	#list {global[blacklist]}{size}{global_blacklist_size};
+};
+
+make_global_blacklist
+
 #var {areaselector[rows]}{6}
 #var {areaselector[page]}{1};
 #var {areaselector[max]}{6};
@@ -279,6 +289,14 @@
 		make_killpath {${roomlist[${room_index}]}};
 		#unvar my_roomlist;
 	};
+	#if {"$blacklist" != ""}{
+		#list {critter[blacklist]}{create}{$blacklist};
+		#list {critter[blacklist]}{size}{blacklist_size};
+	};
+	#if {"$whitelist" != ""}{
+		#list {critter[whitelist]}{create}{$whitelist};
+		#list {critter[whitelist]}{size}{whitelist_size};
+	};
 }
 
 #alias {steptest}{
@@ -337,20 +355,6 @@
 			#echo {***** Found $searchstring in room $foundroom****}
 		};
 	};
-	#if {"$guild" == "changeling"}{
-		#regex {$tkstr}{chromatic cuckoo owlet}{
-			#var tkstr none
-			#math {critter_room}{$critter_room - 1}
-		};
-		#regex {$tkstr}{tiny translucent bombardier beetle}{
-			#var tkstr none;
-			#math {critter_room}{$critter_room - 1}
-		};
-		#regex {$tkstr}{tiny translucent wandering spider}{
-			#var tkstr none;
-			#math {critter_room}{$critter_room - 1}
-		};
-	};
 	#if {"$tkstr" != "none" && "$guild" == "changeling" && "$area" == "Changeling Biome"}{
 		#format {timestamp} {%t} {[<268>%H<088>:<268>%M<088>] };
 		#format {dbtimestamp} {%t} {[%Y:%m:%d %H:%M:%S]};
@@ -363,22 +367,33 @@
 	#regex {$tkstr}{%* [%*]%*}{#var tkstr &1};
 	#regex {$tkstr}{[%*] %*}{#var tkstr &2};
 	#regex {$tkstr}{%*[%*]%*}{#var tkstr &1};
-	#regex {$tkstr}{everybody}{#var tkstr none;#math {critter_room}{$critter_room - 1}};
-	#regex {$tkstr}{under the control of}{#var tkstr none;#math {critter_room}{$critter_room - 1}};
-	#if {"$area" == "Summerset Warrens"}{
-		#regex {$tkstr}{cow}{#var tkstr cow};
-		#if {"$tkstr" != "cow"}{
-			#math {critter_room}{$critter_room - 1};
-			#var tkstr cow;
+	#if {"${critter[blacklist]}" != ""}{
+		#loop {1}{$blacklist_size}{critter_count}{
+			#regex {$tkstr}{${critter[blacklist][${critter_count}]}}{
+				#var tkstr none;
+				#math {critter_room}{$critter_room - 1};
+			};
 		};
 	};
-	#regex {$tkstr}{betrayer}{
-		#var tkstr none;
-		#math {critter_room}{$critter_room - 1};
+	#if {"${global[blacklist]}" != ""}{
+		#loop {1}{$global_blacklist_size}{critter_count}{
+			#regex {$tkstr}{${global[blacklist][${critter_count}]}}{
+				#var tkstr none;
+				#math {critter_room}{$critter_room - 1};
+			};
+		};
 	};
-	#regex {$tkstr}{broodling}{
-		#var tkstr none;
-		#math {critter_room}{$critter_room - 1};
+	#var wtkstr {none};
+	#if {"${critter[whitelist]}" != ""}{
+		#loop {1}{$whitelist_size}{critter_count}{
+			#regex {$tkstr}{${critter[whitelist][${critter_count}]}}{
+				#var {wtkstr}{$tkstr};
+			};
+		};
+		#if {"$wtkstr" == "none"}{
+			#var tkstr none;
+			#math {critter_room}{$critter_room - 1};
+		};
 	};
 	#regex {$tkstr}{%* %w.$}{#var tkstr &2};
 	#regex {$tkstr}{%* %w$}{#var tkstr &2};
