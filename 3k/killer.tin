@@ -293,7 +293,7 @@ make_global_blacklist
 		#list {critter[blacklist]}{create}{$blacklist};
 		#list {critter[blacklist]}{size}{blacklist_size};
 	};
-	#if {"$whitelist" != ""}{
+	#if {"${whitelist}" != ""}{
 		#list {critter[whitelist]}{create}{$whitelist};
 		#list {critter[whitelist]}{size}{whitelist_size};
 	};
@@ -391,6 +391,7 @@ make_global_blacklist
 			};
 		};
 		#if {"$wtkstr" == "none"}{
+			#var {$tkstr is not on the whitelist};
 			#var tkstr none;
 			#math {critter_room}{$critter_room - 1};
 		};

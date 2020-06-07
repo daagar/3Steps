@@ -244,16 +244,16 @@
 	#if {"$mapping" == "on"}{
 		mapoff;
 	};
-	#if {"$blacklist" != ""}{
+	#if {"${blacklist}" != ""}{
 		#unvar {blacklist};
 	};
-	#if {"$critter[blacklist]" != ""}{
+	#if {"${critter[blacklist]}" != ""}{
 		#unvar {critter[blacklist]};
 	};
-	#if {"$whitelist" != ""}{
+	#if {"${whitelist}" != ""}{
 		#unvar {whitelist};
 	};
-	#if {"$critter[whitelist]" != ""}{
+	#if {"${critter[whitelist]}" != ""}{
 		#unvar {critter[whitelist]};
 	};
         #map flag static on;
