@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 11
+F 10
 
 G 0
 
-I 4061
+I 5743
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} { }
+L {UNICODE GRAPHICS} {NO DIAGONAL} {}
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -977,7 +977,7 @@ R {  151} {0} {} {151} { } {} {} {} {} {} {1.000} {}
 E {  150} {n} {n} {1} {0} {} {1.000} {}
 E {  152} {s} {s} {4} {0} {} {1.000} {}
 
-R {  152} {0} {} {152} { } {} {} {} {} {} {1.000} {}
+R {  152} {0} {<118>} {152} { } {} {} {} {} {} {1.000} {}
 E {  151} {n} {n} {1} {0} {} {1.000} {}
 E {  153} {s} {s} {4} {0} {} {1.000} {}
 E { 5743} {portal} {portal} {0} {0} {} {1.000} {}
@@ -26198,15 +26198,15 @@ E { 5741} {n} {n} {1} {0} {} {1.000} {}
 E { 5710} {s} {s} {4} {0} {} {1.000} {}
 E { 5738} {w} {w} {8} {0} {} {1.000} {}
 
-R { 5743} {0} {} {iceblue} { } {} {} {iceblue} {} {} {1.000} {}
+R { 5743} {0} {} {iceblue} { } {You are traveling through a valley of pure ice.  Sun blasts off the ice almost blinding you completely.  You see a shimmering portal here. } {Land of the Ice People} {iceblue} {} {} {1.000} {}
 E {  152} {portal} {portal} {0} {0} {} {1.000} {}
 E { 5744} {s} {s} {4} {0} {} {1.000} {}
 
-R { 5744} {0} {} {5744} { } {} {} {} {} {} {1.000} {}
+R { 5744} {0} {} {5744} { } {You are traveling through a valley of pure ice.  Sun blasts off the ice almost blinding you completely. } {Land of the Ice People} {} {} {} {1.000} {}
 E { 5743} {n} {n} {1} {0} {} {1.000} {}
 E { 5745} {s} {s} {4} {0} {} {1.000} {}
 
-R { 5745} {0} {} {5745} { } {} {} {} {} {} {1.000} {}
+R { 5745} {0} {<118>} {5745} { } {} {} {} {} {} {1.000} {}
 E { 5744} {n} {n} {1} {0} {} {1.000} {}
 E { 5746} {s} {s} {4} {0} {} {1.000} {}
 

@@ -15,6 +15,5 @@
 #list {area_items}{size}{all_area_items}
 
 #var stepper 1
-#var room_num 0
 
 

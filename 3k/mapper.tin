@@ -265,6 +265,7 @@
 	#var {return_room_index}{${room_index}};
 	#var {path_index}{0};
 	#var {room_index}{0};
+	#var {room_num}{0};
 	#map get {roomarea}{area};
 	#if {"$area" != ""}{
 		make_roomlist {${area}};

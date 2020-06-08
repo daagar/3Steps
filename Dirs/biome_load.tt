@@ -14,7 +14,6 @@
 	#var manual_stepper 1
 	#var stepignore 2
 };
-#var room_num 0
 
 #alias {autobscan}{
 	#if {$autobscan == 1}{
