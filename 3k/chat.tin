@@ -5,9 +5,9 @@
         #format {datestamp} {%t} {%Y-%m-%d.log};
 	#format {timestamp} {%t} {[<268>%H<088>:<268>%M<088>] };
 	#regex {"$world"} {3s} {
-		#line log /tintin/logs/3s.chat {$timestamp\}
+		#line log ${logpath}/3s.chat {$timestamp\}
 	} {
-		#line log /tintin/logs/3k.chat {$timestamp\}
+		#line log ${logpath}/3k.chat {$timestamp\}
 	};
         -xchatlog
         }
@@ -35,8 +35,8 @@
 		#var {dbmess}{%0};
 		db_submit_chat $dbmess;
 	}{
-		#line log {/tintin/logs/3s.chat} {$timestamp\};
-		#line log {/tintin/logs/3s.chat} {<178>To &3<088>: &4};
+		#line log {${logpath}/3s.chat} {$timestamp\};
+		#line log {${logpath}/3s.chat} {<178>To &3<088>: &4};
 	};
 	update_chat ${timestamp}<178>%0<088>;
 }{1};

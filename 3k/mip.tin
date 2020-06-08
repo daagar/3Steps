@@ -463,7 +463,7 @@
 		};
 		#unvar db_chat_query;
 	}{
-		#script {tail -n 99 /tintin/logs/3s.chat | awk '{print "#list chat[log] ins -1 {"$0"}"}'};
+		#script {tail -n 99 ${logpath}/3s.chat | awk '{print "#list chat[log] ins -1 {"$0"}"}'};
 	};
 	show_chat;
 };
@@ -502,8 +502,8 @@
 					#var {dbmess}{To &3: &4};
 					db_submit_chat $dbmess;
 				}{
-					#line log {/tintin/logs/3s.chat} {$timestamp\};
-					#line log {/tintin/logs/3s.chat} {<178>To &3<088>: &4};
+					#line log {${logpath}/3s.chat} {$timestamp\};
+					#line log {${logpath}/3s.chat} {<178>To &3<088>: &4};
 				};
 				update_chat ${timestamp}<178>To &3<088>: &4;
 			} {
@@ -513,8 +513,8 @@
 					#var {dbmess}{&3: &4};
 					db_submit_chat $dbmess;
 				}{
-					#line log {/tintin/logs/3s.chat} {$timestamp\};
-					#line log {/tintin/logs/3s.chat} {<178>&3<088>: &4};
+					#line log {${logpath}/3s.chat} {$timestamp\};
+					#line log {${logpath}/3s.chat} {<178>&3<088>: &4};
 				};
 				update_chat ${timestamp}<178>&3<088>: &4;
 
@@ -637,8 +637,8 @@
 			#var {dbmess}{$mip[comm][data]};
 			db_submit_chat $dbmess;
 		}{
-			#line log {/tintin/logs/3s.chat} {$timestamp\};
-			#line log {/tintin/logs/3s.chat} {$mip[comm][cdata]};
+			#line log {${logpath}/3s.chat} {$timestamp\};
+			#line log {${logpath}/3s.chat} {$mip[comm][cdata]};
 		};
 		update_chat ${timestamp}$mip[comm][cdata];
 		#if {$idle <= 900} {
