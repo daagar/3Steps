@@ -1,51 +1,7 @@
 #class {floo} {open}
 
 #var guild jedi
-
-#gag {Your shot hit}
-#gag {The Force flows through you, mending your wounds.}
-#gag {The power of the Force soothes your pain.}
-#gag {Your bleeding slows as you feel healing energy flow through you.}
-#gag {Your bones knit together as the Force flows through you.}
-#gag {The Force washes away your pain.}
-#gag {Your wounds close as the Force courses through you.}
-#gag {The power of the Force rejuvenates you.}
-#gag {You feel your pain ebb.}
-#gag {The power of the Force eases your pain.}
-#gag {Your pain fades as the Force flows through you.}
-#gag {The power of the Force soothes your pain.}
-#gag {Your bruises fade as healing energy flows through you.}
-#gag {The healing power of the Force eases your pain.}
-#gag {The healing power of the Force clears your mind.}
-#gag {Your thoughts gain strength as the healing energy flows through you.}
-#gag {The power of the Force refreshes your mind.}
-#gag {You reach out with the force and deflect the attack!}
-#gag {The Force pours through your mind, strengthening it}
-#gag {The Force flows through you, buttressing your thoughts.}
-#gag {Your failing consciousness is bolstered by the soothing energy.}
-#gag {Your mind is as strong as it can be.}
-
-#alias at {!focus dissipate on attack}
-#alias c {#10 !focus confusion}
-#alias co {!focus absorb energy}
-#alias gfs {!focus greater force shield}
-#alias gs {!focus guild stats /long}
-#alias gs2 {!focus skill list /short}
-#alias gs3 {!focus skill list /trainable}
-#alias h {!focus reduce injury}
-#alias jskills {!focus skill list}
-#alias mb {!focus mindblock}
-#alias pp {!focus cloud mind}
-#alias pstats {!focus login stats}
-#alias rcost {!focus check /cost}
-#alias kk {kill $kstr;!focus target on $kstr}
-#alias k {kill %0;!focus target on %0}
-#alias lt talk %0
-#alias ch com 
-#alias chist com -h
-#alias gwho jedis
-#alias pt ptell %0
-#alias ps members
+#var subguild teepo
 
 #nop {focus hpconfigure /HP: #hp/#mhp SP: #sp/#msp C: #c F: #f M: #sm/#%c D: #dn/#ng P: #df E: #es GXP: #gxp}
 #gag {HP: %2/%3 SP: %4/%5 C: %6 F: %7 M: %8/%9 D:%10/%11 P: %12 E: %14GXP:%13}
@@ -165,21 +121,6 @@
 	#showme {$mip[gline][2]} {-6};
 	#showme {$mip[gline][1]} {-7};
 }
-
-#alias {corpsetrig} {
-	!wrap corpse;
-	!divvy;
-}
-
-#alias {cco}{
-	!unwrap corpse;
-	#if {"$my[autocorpse][method]" == "guild"}{
-		!focus absorb energy;
-	};
-	#if {"$my[autocorpse][method]" == "nex"}{
-		!orare;
-	};
-};
 
 #act {Floo dealt the killing blow to %1.} {
 	log_damage_no_numbers %1;

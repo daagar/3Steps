@@ -10,6 +10,5 @@
 #list {kill_path}{size}{max_room}
 
 #var stepper 1
-#var room_num 0
 
 
