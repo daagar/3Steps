@@ -30,9 +30,11 @@
 #PATHDIR          {u}	{d}	{16}
 #PATHDIR          {w}	{e}	{8}
 
+#var {logpath}{/tintin/logs};
+
 #EVENT {SESSION CONNECTED} {
 	#var world {%0};
-	#format logfile {/tintin/logs/%0_%t.log} {%Y%m%d};
+	#format logfile {${logpath}/%0_%t.log} {%Y%m%d};
 	#LOG {APPEND} {$logfile};
 	#read .tt/start.tin;
 	#read .tt/char/%0.tin;
