@@ -333,7 +333,7 @@
 	}{
 		#showme {Offhand Blaster} 60 -38;
 	};
-	#button {61;-40;61;-20}{
+	#button {60;-40;60;-20}{
 		#if {"$subguild" != "teepo"}{
 			#echo {Sorry Teepo Only!};
 		}{
