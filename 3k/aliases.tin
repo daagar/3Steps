@@ -1,5 +1,10 @@
 #class {aliases} {open}
 
+#alias {mob}{
+	#unticker {damage_selector};
+	#unticker {damage_table};
+	#read .tt/3k/draw.tin;
+};
 
 /* MySQL Aliases */
 
