@@ -43,6 +43,8 @@
 	#NOP #read .tt/3k/damagetracker.tin;
 	#NOP #delay {ansi}{#read .tt/3k/ansi_setup.tin}{2};
 	#script {cat .tt/map/lastroom.tt}
+
+	show_area_selector;
 	
 }
 

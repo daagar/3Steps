@@ -1,5 +1,5 @@
 #class killer {kill}
-#class killer {open}
+#class killer {open} 
 
 #var critter_room 0 
 #var player_room 0
@@ -17,13 +17,6 @@
 #var {areaselector[rows]}{6}
 #var {areaselector[page]}{1};
 #var {areaselector[max]}{6};
-
-#alias {.stop} {
-	#var bot 0;
-	#var autokill 0;
-	#showme Bot Deactivated;
-	update_status;
-}
 
 #NOP Added for all the bots in the room.
 #alias {autok}{
@@ -43,6 +36,7 @@
 	#var autokill 0;
 	#showme Bot Deactivated;
 	update_status;
+	show_area_selector;
 }
 #NOP Should only be called after already in the area to step through
 #alias {.start} {
@@ -51,6 +45,7 @@
 	#showme Bot Activated;
 	update_status;
 	#var resumebot 1;
+	show_area_selector;
 }
 
 #alias {.resume} {
@@ -78,49 +73,51 @@
 #math selector[top] $chat[height]+$caption[height]+$exitpanel[height]+1;
 #math selector[bottom] $selector[top]+8;
 #alias {show_area_selector}{
-	#screen clear square 21 -42 29 -1;
-	#draw rounded box 21 -41 29 -3;
-	#showme {[<<] Area Selector [>>]} 21 -33;
-	#button {21;-33;21;-29}{
+	#screen clear square $selector[top] -42 $selector[bottom] -1;
+	#draw <128> rounded box $selector[top] -41 $selector[bottom] -3;
+	#NOP #showme {<128>[<099><<<128>]-[<099>Area Selector<128>]-[<099>>><128>]<099>} $selector[top] -33;
+	#showme {<128>[<099>Area Selector<128>]<099>} $selector[top] -39;
+	#showme {<128>[<099><<<128>][<099>>><128>]<099>} $selector[top] -12;
+	#button {$selector[top];-7;$selector[top];-5}{
 		#math {targetarea}{${areaselector[current]} - 1};
 		#if {$targetarea < 1}{#var targetarea ${queue_size}};
 		go ${areaselector[roomnote][${targetarea}]};
 	};
-	#button {21;-14;21;-11}{
+	#button {$selector[top];-14;$selector[top];-11}{
 		#math {targetarea}{${areaselector[current]} + 1};
 		#if {$targetarea > ${queue_size}}{#var targetarea 1};
 		go ${areaselector[roomnote][${targetarea}]};
 	};
-	#if {${stepignore} == 2}{
-		#showme {[<128>S<088>]} 21 -36;
-	}{
-		#if {${stepignore} == 1}{
-			#showme {[<128>W<088>]} 21 -36;
-		}{
-			#showme {[<128>M<088>]} 21 -36;
-		};
-	};
-	#button {21;-36;21;-33}{si};
+	#NOP #if {${stepignore} == 2}{
+	#NOP 	#showme {[<128>S<088>]} $selector[top] -36;
+	#NOP }{
+	#NOP 	#if {${stepignore} == 1}{
+	#NOP 		#showme {[<128>W<088>]} $selector[top] -36;
+	#NOP 	}{
+	#NOP 		#showme {[<128>M<088>]} $selector[top] -36;
+	#NOP 	};
+	#NOP };
+	#NOP #button {$selector[top];-36;$selector[top];-33}{si};
 	#if {${autoqueue} == 1}{
-		#showme {[<128>Q<088>]} 21 -10;
+		#showme {[<128>Q<088>]} $selector[top]+1 -7;
 	}{
-		#showme {[<faa>Q<088>]} 21 -10;
+		#showme {[<faa>Q<088>]} $selector[top]+1 -7;
 	};
-	#button {21;-10;21;-7}{autoq};
-	#showme {[<128>GO<088>]} 22 -29;
-	#button {22;-29;22;-26}{ki};
-	#showme {[<128>KK<088>]} 22 -18;
-	#button {22;-18;22;-13}{kk};
-	#if {${autokill} == 1}{
-		#showme {[<128>A<088>]} 22 -7;
-	}{
-		#showme {[<faa>M<088>]} 22 -7;
-	};
-	#button {22;-7;22;-5}{autok};
+	#button {$selector[top]+1;-7;$selector[top]+1;-5}{autoq};
+	#NOP #showme {[<128>GO<088>]} $selector[top]+1 -29;
+	#NOP #button {$selector[top]+1;-29;$selector[top]+1;-26}{ki};
+	#NOP #showme {[<128>KK<088>]} $selector[top]+1 -18;
+	#NOP #button {$selector[top]+1;-18;$selector[top]+1;-13}{kk};
+	#NOP #if {${autokill} == 1}{
+	#NOP 	#showme {[<128>A<088>]} $selector[top]+1 -7;
+	#NOP }{
+	#NOP 	#showme {[<faa>M<088>]} $selector[top]+1 -7;
+	#NOP };
+	#NOP #button {$selector[top]+1;-7;$selector[top]+1;-5}{autok};
 	#math {areaselector[start]}{${areaselector[rows]} * ${areaselector[page]}};
 	#math {areaselector[end]}{${areaselector[rows]} * ${areaselector[page]} - ${areaselector[rows]} + 1};
-	#line sub {var} #draw {tile} 23 -35 28 -4 ${areaselector[text][-$areaselector[start]..-$areaselector[end]]};
-	#var {start_row}{22};
+	#line sub {var} #draw {tile} $selector[top]+2 -35 $selector[bottom]-1 -4 ${areaselector[text][-$areaselector[start]..-$areaselector[end]]};
+	#var {start_row}{$selector[top]+1};
 	#var {areaselector[current]}{0};
 	#if {$queue_size > 0}{
 		#loop {1}{${queue_size}}{queue_count}{
