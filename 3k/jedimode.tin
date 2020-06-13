@@ -1,3 +1,70 @@
+#gag {^%1 sparks fly from your %1 as you strike your foe.}
+#gag {Your shot hit}
+#gag {The Force flows through you, mending your wounds.}
+#gag {The power of the Force soothes your pain.}
+#gag {Your bleeding slows as you feel healing energy flow through you.}
+#gag {Your bones knit together as the Force flows through you.}
+#gag {The Force washes away your pain.}
+#gag {Your wounds close as the Force courses through you.}
+#gag {The power of the Force rejuvenates you.}
+#gag {You feel your pain ebb.}
+#gag {The power of the Force eases your pain.}
+#gag {Your pain fades as the Force flows through you.}
+#gag {The power of the Force soothes your pain.}
+#gag {Your bruises fade as healing energy flows through you.}
+#gag {The healing power of the Force eases your pain.}
+#gag {The healing power of the Force clears your mind.}
+#gag {Your thoughts gain strength as the healing energy flows through you.}
+#gag {The power of the Force refreshes your mind.}
+#gag {You reach out with the force and deflect the attack!}
+#gag {The Force pours through your mind, strengthening it}
+#gag {The Force flows through you, buttressing your thoughts.}
+#gag {Your failing consciousness is bolstered by the soothing energy.}
+#gag {You are not in need of aid.}
+#gag {It is too soon to draw healing energies from the Force}
+#gag {^%s$}
+#gag {^You grasp at the Force within %1 to %2}
+#gag {^You twist the Force and send %1 %2};
+#gag {^The Force guides your actions.}
+#gag {^You try and sidestep the attack and only partially succeed.}
+#gag {^You try to leap aside and are sent sprawling in the dust.}
+#gag {^You lose focus and miss deflecting the attack!}
+#gag {^You spin aside but only manage to escape the worst of the attack.}
+#gag {^You leap away from your opponent's attack!}
+#gag {^You try to tumble to safety but get struck a glancing blow}
+#gag {^Your mind is as strong as it can be.}
+#gag {^pain.%s$}
+#gag {^You spin away from a lethal blow!}
+#gag {^You dive to the ground and roll away from your foe's attack!}
+#gag {^You deftly sidestep a deadly strike!}
+#gag {^Your thumbs are too tired to gouge right now}
+#gag {^You feel rejuvenated by the power of the force}
+#gag {^Raw power flows out of your body, causing it to shimmer with light.}
+#gag {^You feel your body regenerating.}
+#gag {^The clash of combat interrupts your concentration.}
+#gag {^You feel rejuvenated by the power of the Force.}
+#gag {^Your wounds mend as healing energy washes over you.}
+#gag {^Your pain ebbs as your wounds mend.}
+#gag {^Power flows through you, healing your wounds.}
+#gag {^You feel your bones knitting together.}
+#gag {^The healing power of the Force flows through you.}
+#gag {^The Force courses through you, mending your body.}
+#gag {^You clutch %1 heart with the Force}
+#gag {^the very life from %1.}
+#gag {^very life from %1.}
+#gag {^life from %1.}
+#gag {^from %1.}
+#gag {^him.}
+#gag {^it.}
+#gag {^her.}
+#gag {You twist the Force within %1 to cause massive hemorrhaging.}
+#gag {^You concentrate on your metabolism and free your body of}
+#gag {^the harsh toxins within it.}
+#gag {^You begin to control your pain.}
+#gag {^You pull out your holocron and study it.}
+#gag {^You prepare your mind to draw upon the force.}
+#gag {^You already have your %1 drawn.}
+
 #alias {show_damage_selector}{
 	#draw {rounded}{box}43 -41 56 -3;
 	#showme {Jedi Damage Selector} 43 -31;
@@ -7,17 +74,25 @@
 		#showme {Dark Suggestion} 44 -38;
 	};
 	#button {44;-40;44;-4}{
-		#if {"subguild" != "krath"}{
+		#if {"$subguild" != "krath"}{
 			#echo {Sorry!  Krath Only};
 		}{
-			#send {alias ds focus dark suggestion};
+			#send {alias dospell focus dark suggestion};
 			!draw ${my[desired][weapon]};
 			!focus force trance /off;
-			!focus mode /guide;
-			#var {my[desired][mode]}{guide};
-			#var {my[desired][modeshort]}{g};
+			#if {"${my[desired][weapon]}" == "lightdaggers"}{
+				!draw ${my[desired][weapon]};
+				#var {my[desired][mode]}{flurry};
+				#var {my[desired][modeshort]}{f};
+				!focus mode /flurry;
+			}{
+				!draw ${my[desired][weapon]};
+				#var {my[desired][mode]}{guide};
+				#var {my[desired][modeshort]}{g};
+				!focus mode /guide;
+			};
 			#var {my[desired][spell]}{dark suggestion};
-			#delay {2}{!focus force trance /ds,repeat};
+			#delay {2}{!focus force trance /dospell,repeat};
 			#var {my[damage][type]}{dark suggestion};
 			show_damage_selector;
 		};
@@ -29,7 +104,7 @@
 		#showme { Boil    : Fire} 46 -38;
 	};
 	#button {46;-40;46;-4}{
-		#send {alias ik focus injure-kill for boil};
+		#send {alias dospell focus injure-kill for boil};
 		!focus force trance /off;
 		#if {"${my[desired][weapon]}" == "lightdaggers"}{
 			!draw ${my[desired][weapon]};
@@ -43,7 +118,7 @@
 			!focus mode /guide;
 		};
 		#var {my[desired][spell]}{injure-kill};
-		#delay {2}{!focus force trance /ik,repeat};
+		#delay {2}{!focus force trance /dospell,repeat};
 		#var {my[damage][type]}{boil};
 		show_damage_selector;
 	};
@@ -53,7 +128,7 @@
 		#showme { Strangle: Mind} 47 -38;
 	};
 	#button {47;-40;47;-4}{
-		#send {alias ik focus injure-kill for strangle};
+		#send {alias dospell focus injure-kill for strangle};
 		!focus force trance /off;
 		#if {"${my[desired][weapon]}" == "lightdaggers"}{
 			!draw ${my[desired][weapon]};
@@ -67,7 +142,7 @@
 			!focus mode /guide;
 		};
 		#var {my[desired][spell]}{injure-kill};
-		#delay {2}{!focus force trance /ik,repeat};
+		#delay {2}{!focus force trance /dospell,repeat};
 		#var {my[damage][type]}{strangle};
 		show_damage_selector;
 	};
@@ -77,7 +152,7 @@
 		#showme { Crumble : Blunt} 48 -38;
 	};
 	#button {48;-40;48;-4}{
-		#send {alias ik focus injure-kill for crumble};
+		#send {alias dospell focus injure-kill for crumble};
 		#if {"${my[desired][weapon]}" == "lightdaggers"}{
 			!draw ${my[desired][weapon]};
 			#var {my[desired][mode]}{flurry};
@@ -90,7 +165,7 @@
 			!focus mode /guide;
 		};
 		#var {my[desired][spell]}{injure-kill};
-		#delay {2}{!focus force trance /ik,repeat};
+		#delay {2}{!focus force trance /dospell,repeat};
 		#var {my[damage][type]}{crumble};
 		show_damage_selector;
 	};
@@ -101,14 +176,14 @@
 		#showme { Asphyxiate: Poison} 50 -38;
 	};
 	#button {50;-40;50;-4}{
-		#send {alias tk focus telekinetic kill for asphyxiate};
+		#send {alias dospell focus telekinetic kill for asphyxiate};
 		!draw ${my[desired][weapon]};
 		!focus force trance /off;
 		!focus mode /flurry;
 		#var {my[desired][mode]}{flurry};
 		#var {my[desired][modeshort]}{f};
 		#var {my[desired][spell]}{telekinetic kill};
-		#delay {2}{!focus force trance /tk,repeat};
+		#delay {2}{!focus force trance /dospell,repeat};
 		#var {my[damage][type]}{asphyxiate};
 		show_damage_selector;
 	};
@@ -118,14 +193,14 @@
 		#showme { Cardiac   : Energy} 51 -38;
 	};
 	#button {51;-40;51;-4}{
-		#send {alias tk focus telekinetic kill for cardiac};
+		#send {alias dospell focus telekinetic kill for cardiac};
 		!draw ${my[desired][weapon]};
 		!focus force trance /off;
 		!focus mode /flurry;
 		#var {my[desired][mode]}{flurry};
 		#var {my[desired][modeshort]}{f};
 		#var {my[desired][spell]}{telekinetic kill};
-		#delay {2}{!focus force trance /tk,repeat};
+		#delay {2}{!focus force trance /dospell,repeat};
 		#var {my[damage][type]}{cardiac};
 		show_damage_selector;
 	};
@@ -135,14 +210,14 @@
 		#showme { Hemorrhage: Mind} 52 -38;
 	};
 	#button {52;-40;52;-4}{
-		#send {alias tk focus telekinetic kill for hemorrhage};
+		#send {alias dospell focus telekinetic kill for hemorrhage};
 		!draw ${my[desired][weapon]};
 		!focus force trance /off;
 		!focus mode /flurry;
 		#var {my[desired][mode]}{flurry};
 		#var {my[desired][modeshort]}{f};
 		#var {my[desired][spell]}{telekinetic kill};
-		#delay {2}{!focus force trance /tk,repeat};
+		#delay {2}{!focus force trance /dospell,repeat};
 		#var {my[damage][type]}{hemorrhage};
 		show_damage_selector;
 	};
@@ -152,14 +227,14 @@
 		#showme {Force Storm} 53 -38;
 	};
 	#button {53;-40;53;-4}{
-		#send {alias fs focus force storm};
+		#send {alias dospell focus force storm};
 		!draw ${my[desired][weapon]};
 		!focus force trance /off;
 		!focus mode /flurry;
 		#var {my[desired][mode]}{flurry};
 		#var {my[desired][modeshort]}{f};
 		#var {my[desired][spell]}{force storm};
-		#delay {2}{!focus force trance /fs,repeat};
+		#delay {2}{!focus force trance /dospell,repeat};
 		#var {my[damage][type]}{force storm};
 		show_damage_selector;
 	};
@@ -168,16 +243,17 @@
 	}{
 		#showme {Force Lightning} 54 -38;
 	};
-	#button {54;-40;54;-4}{
-		#send {alias fli focus force lightning};
+	#button {54;-40;54;-25}{
+		#send {alias dospell focus force lightning};
 		!draw ${my[desired][weapon]};
 		!focus force trance /off;
 		!focus mode /flurry;
 		#var {my[desired][mode]}{flurry};
 		#var {my[desired][modeshort]}{f};
 		#var {my[desired][spell]}{force lightning};
-		#delay {2}{!focus force trance /fli,repeat};
+		#delay {2}{!focus force trance /dospell,repeat};
 		#var {my[damage][type]}{force lightning};
+		#var {my[damage][style]}{single};
 		show_damage_selector;
 	};
 	#if {"${my[damage][type]}" == "freeze winds"}{
@@ -185,16 +261,39 @@
 	}{
 		#showme {Freeze Winds} 55 -38;
 	};
-	#button {55;-40;55;-4}{
-		#send {alias fwi focus freeze winds};
+	#button {55;-40;55;-25}{
+		#send {alias dospell focus freeze winds};
 		!draw ${my[desired][weapon]};
 		!focus force trance /off;
 		!focus mode /flurry;
 		#var {my[desired][mode]}{flurry};
 		#var {my[desired][modeshort]}{f};
 		#var {my[desired][spell]}{freeze winds};
-		#delay {2}{!focus force trance /fwi,repeat};
+		#delay {2}{!focus force trance /dospell,repeat};
 		#var {my[damage][type]}{freeze winds};
+		#var {my[damage][style]}{single};
+		show_damage_selector;
+	};
+	#if {"${my[damage][style]}" == "room"}{
+		#showme {<faa>room<088>} 54 -18;
+	}{
+		#showme {room} 54 -18;
+	};
+	#button {54;-18;54;-3}{
+		#send {alias dospell focus ${my[desired][spell]} on room};
+		#delay {2}{!focus force trance /dospell,repeat};
+		#var {my[damage][style]}{room};
+		show_damage_selector;
+	};
+	#if {"${my[damage][style]}" == "single"}{
+		#showme {<faa>single<088>} 55 -18;
+	}{
+		#showme {single} 55 -18;
+	};
+	#button {55;-18;55;-3}{
+		#send {alias dospell focus ${my[desired][spell]}};
+		#delay {2}{!focus force trance /dospell,repeat};
+		#var {my[damage][style]}{single};
 		show_damage_selector;
 	};
 	show_mode_selector;
@@ -234,8 +333,8 @@
 	}{
 		#showme {Offhand Blaster} 60 -38;
 	};
-	#button {61;-40;61;-20}{
-		#if {"$subguild" != "teepo}{
+	#button {60;-40;60;-20}{
+		#if {"$subguild" != "teepo"}{
 			#echo {Sorry Teepo Only!};
 		}{
 			#var {my[desired][weapon]}{offhand blaster};
@@ -323,3 +422,236 @@
 
 #ticker {damage_selector}{show_damage_selector}{4};
 show_damage_selector
+
+#alias at {!focus dissipate on attack}
+#alias c {#10 !focus confusion}
+#alias co {!focus absorb energy}
+#alias gfs {!focus greater force shield}
+#alias gs {!focus guild stats /long}
+#alias gs2 {!focus skill list /short}
+#alias gs3 {!focus skill list /trainable}
+#alias h {!focus reduce injury}
+#alias jskills {!focus skill list}
+#alias mb {!focus mindblock}
+#alias pp {!focus cloud mind}
+#alias pstats {!focus login stats}
+#alias rcost {!focus check /cost}
+#alias kk {kill $kstr}
+#alias ka {focus force taunt for all};
+#alias k {kill %0}
+#alias lt talk %0
+#alias ch com 
+#alias chist com -h
+#alias gwho jedis
+#alias pt ptell %0
+#alias ps members
+
+#act {You are fully rejuvenated and thus exit your trance}{
+	#var {my[cleanse][status]}{0};
+};
+
+#act {You have no need to enter a hibernation trance.}{
+	#var {my[cleanse][status]}{0};
+};
+
+#act {You abruptly exit your hibernation trance.}{
+	#var {my[cleanse][status]}{0};
+};
+
+#alias {ppp}{
+	#10 {!focus cloud mind};
+};
+
+#alias {g}{
+	!draw ${my[desired][weapon]};
+	!focus mode /guide;
+	#var {my[desired][mode]}{guide};
+	#var {my[desired][modeshort]}{g};
+	show_damage_selector;
+};
+
+#alias {fl}{
+	!draw ${my[desired][weapon]};
+	!focus mode /flurry;
+	#var {my[desired][mode]}{flurry};
+	#var {my[desired][modeshort]}{f};
+	show_damage_selector;
+};
+
+#alias {de}{
+	!draw ${my[desired][weapon]};
+	!focus mode /deflect;
+	#var {my[desired][mode]}{deflect};
+	#var {my[desired][modeshort]}{d};
+	show_damage_selector;
+};
+
+#alias {hh}{
+	!sheath;
+	!focus hand to hand;
+	#var {my[desired][mode]}{hand to hand};
+	#var {my[desired][modeshort]}{h};
+	#var {my[desired][weapon]}{none};
+	show_damage_selector;
+};
+
+#alias {ftik}{
+	#send {alias dospell focus injure-kill for strangle};
+	#var {my[damage][type]}{strangle};
+	!draw ${my[desired][weapon]};
+	!focus force trance /off;
+	#if {"${my[desired][weapon]}" == "lightdaggers"}{
+		#var {my[desired][mode]}{flurry};
+		#var {my[desired][modeshort]}{f};
+		!focus mode /flurry;
+	}{
+		#var {my[desired][mode]}{guide};
+		#var {my[desired][modeshort]}{g};
+		!focus mode /guide;
+	};
+	#var {my[desired][spell]}{injure-kill};
+	#delay {2}{!focus force trance /dospell,repeat};
+	show_damage_selector;
+};
+
+#alias {fti}{
+	!draw ${my[desired][weapon]};
+	!focus force trance /off;
+	#send {alias dospell focus inflict pain for pain};
+	#if {"${my[desired][weapon]}" == "lightdaggers"}{
+		#var {my[desired][mode]}{flurry};
+		#var {my[desired][modeshort]}{f};
+		!focus mode /flurry;
+	}{
+		#var {my[desired][mode]}{guide};
+		#var {my[desired][modeshort]}{g};
+		!focus mode /guide;
+	};
+	#var {my[desired][spell]}{ipain};
+	#delay {2}{!focus force trance /dospell,repeat};
+	show_damage_selector;
+};
+
+#alias {fttk}{
+	#send {alias dospell focus telekinetic kill for cardiac};
+	#var {my[desired][spell]}{telekinetic kill};
+	!draw ${my[desired][weapon]};
+	!focus force trance /off;
+	!focus mode /flurry;
+	#var {my[desired][mode]}{flurry};
+	#var {my[desired][modeshort]}{f};
+	#var {my[damage][type]}{cardiac};
+	#delay {2}{!focus force trance /dospell,repeat};
+	show_damage_selector;
+};
+
+#alias {ftli}{
+	#send {alias dospell focus force lightning};
+	#var {my[desired][spell]}{force lightning};
+	!draw ${my[desired][weapon]};
+	!focus force trance /off;
+	!focus mode /flurry;
+	#var {my[desired][mode]}{flurry};
+	#var {my[desired][modeshort]}{f};
+	#var {my[damage][type]}{force lightning};
+	#var {my[damage][style]}{single};
+	#delay {2}{!focus force trance /dospell,repeat};
+	show_damage_selector;
+};
+
+#alias {ftwi}{
+	#send {alias fwi focus freeze winds};
+	#var {my[desired][spell]}{freeze winds};
+	!draw ${my[desired][weapon]};
+	!focus force trance /off;
+	!focus mode /flurry;
+	#var {my[desired][mode]}{flurry};
+	#var {my[desired][modeshort]}{f};
+	#var {my[damage][type]}{freeze winds};
+	#var {my[damage][style]}{single};
+	#delay {2}{!focus force trance /fwi,repeat};
+	show_damage_selector;
+};
+
+#alias {switchw}{
+	#if {"${my[desired][weapon]}" == "lightsaber"}{
+		#echo {Light Daggers};
+		#var {my[desired][weapon]}{lightdaggers};
+		fttk;
+	}{
+		#if {"${my[desired][weapon]}" == "lightdaggers"}{
+			#echo {Light Staff};
+			#var {my[desired][weapon]}{lightstaff};
+			ftik;
+		}{
+			#echo {Light Saber};
+			#var {my[desired][weapon]}{lightsaber};
+		};
+	};
+	!sheath;
+	!draw ${my[desired][weapon]};
+	show_damage_selector;
+};
+			
+
+
+#alias {ftd}{
+	!draw ${my[desired][weapon]};
+	#send {alias dospell focus inflict pain for pain};
+	!focus force trance /off;
+	!focus mode /deflect;
+	#var {my[desired][mode]}{deflect};
+	#var {my[desired][modeshort]}{d};
+	#var {my[desired][spell]}{ipain};
+	#delay {2}{!focus force trance /dospell,repeat};
+	show_damage_selector;
+};
+
+#alias {ftr}{
+	!focus force trance /off;
+	#var {my[desired][spell]}{none};
+	show_damage_selector;
+};
+
+#act {^You begin the meditation exercises to cleanse your soul!}{
+	#var {my[cleanse][status]}{1};
+};
+
+#act {^Your meditation has cleared your soul of the pull of}{
+	#var {my[cleanse][status]}{0};
+};
+
+#alias {do_cleanse}{
+	!focus cleanse;
+	#var {my[cleanse][status]} {1};
+};
+
+#alias {do_htrance}{
+	!focus hibernation trance;
+	#var {my[cleanse][status]}{1};
+};
+
+#alias {corpsetrig} {
+	!wrap corpse;
+	!focus absorb energy;
+	!divvy;
+	do_htrance;
+}
+
+#alias {cl}{
+	do_cleanse;
+};
+
+#alias {ht}{
+	do_htrance;
+};
+
+#alias {cco}{
+	!unwrap corpse;
+	#if {"$my[autocorpse][method]" == "guild"}{
+		!focus absorb energy;
+	};
+	#if {"$my[autocorpse][method]" == "nex"}{
+		!orare;
+	};
+};

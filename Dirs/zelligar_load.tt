@@ -14,7 +14,6 @@
 #list {kill_path}{size}{max_room}
 
 #var stepper 1
-#var room_num 0
 
 #act {You sweep your hand over {one|some} of the higher shelves} {take gloves;keep gloves;ki;ki}
 #act {You reach in and snatch the key from the deadly acid.} {keep key;ki;ki}

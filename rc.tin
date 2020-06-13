@@ -30,9 +30,11 @@
 #PATHDIR          {u}	{d}	{16}
 #PATHDIR          {w}	{e}	{8}
 
+#var {logpath}{/tintin/logs};
+
 #EVENT {SESSION CONNECTED} {
 	#var world {%0};
-	#format logfile {.tt/logs/%0_%t.log} {%Y%m%d};
+	#format logfile {${logpath}/%0_%t.log} {%Y%m%d};
 	#LOG {APPEND} {$logfile};
 	#read .tt/start.tin;
 	#read .tt/char/%0.tin;
@@ -45,7 +47,7 @@
         #zap;
         #read .tt/start.tin;
         #if {"%0" == ""} {
-                connect inix
+                connect floobi3s
         } {
                 connect %0
         }
@@ -73,3 +75,5 @@
         $ses_name;
         #read .tt/.pass
 }
+
+#read .tt/menu.tin

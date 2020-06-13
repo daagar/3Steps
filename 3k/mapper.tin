@@ -259,18 +259,31 @@
 }
 
 #alias {go} {
-    #if {"$mapping" == "on"}{
-        mapoff;
-    };
-    #map flag static on;
-    #var domove2 0;
-    #map find {roomnote} {%0%*};
-    #map get roomvnum returnroom;
-    #var returnpathroom $room_num;
+	#if {"$mapping" == "on"}{
+		mapoff;
+	};
+	#if {"${blacklist}" != ""}{
+		#unvar {blacklist};
+	};
+	#if {"${critter[blacklist]}" != ""}{
+		#unvar {critter[blacklist]};
+	};
+	#if {"${whitelist}" != ""}{
+		#unvar {whitelist};
+	};
+	#if {"${critter[whitelist]}" != ""}{
+		#unvar {critter[whitelist]};
+	};
+        #map flag static on;
+        #var domove2 0;
+	#map find {roomnote} {%0%*};
+        #map get roomvnum returnroom;
+        #var returnpathroom $room_num;
 	#path run;
 	#var {return_room_index}{${room_index}};
 	#var {path_index}{0};
 	#var {room_index}{0};
+	#var {room_num}{0};
 	#map get {roomarea}{area};
 	#if {"$area" != ""}{
 		make_roomlist {${area}};
