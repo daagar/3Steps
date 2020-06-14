@@ -513,6 +513,7 @@ make_global_blacklist
 					rating;
 				}{
 					make_killpath {${roomlist[${room_index}]}};
+					step_function;
 				};
 			}{
 				#if {$room_index <= $area_size}{

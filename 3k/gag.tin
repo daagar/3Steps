@@ -230,6 +230,7 @@
 #gag {^A bolt of energy slams into you!}
 #gag {^Explosions erupt across your body!}
 #gag {^The elemental strikes you with lightning!}
+#gag {^The kraken blasts you with ice!}
 
 #NOP JEDI GAG
 #gag {COMBAT TIME VERY LONG.. YOU NEED TO FINISH THIS SUCKER UP!}

@@ -14,4 +14,7 @@
 #NOP Zelligars
 #act {Zelligar molds some magical clay into a %*} {update_chat %0}
 
+#NOP Shansabyk
+#act {A flash of energy emanates from Shansabyk's body.}{update_chat %0};
+
 #class {mob_monitors} {close}

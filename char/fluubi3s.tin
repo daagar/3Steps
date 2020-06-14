@@ -7,8 +7,8 @@
 #read .tt/api/udefine.tin
 #read .tt/api/stocks.tin
 
-#read .tt/3k/fodoor.tin
-#read .tt/3k/rtick.tin
+#alias kk {kill $kstr}
+
 
 #var guild juggernaut
 #var clan 0
@@ -28,23 +28,6 @@
 	#var {clan_max}		{%11};
 	#var {reset}		{%12};
 	#var {gxp}		{%13};
-	#if {$my[gp1][current] < 60} {stimheal};
-	#if {$my[gp1][current] < 50} {stimheal};
-	#if {$my[gp1][current] < 40} {stimheal};
-	#if {$my[gp1][current] < 30} {stimheal};
-	#if {$my[gp1][current] < 20} {stimheal};
-	#if {$my[gp1][current] < 25} {#bell};
-	#if {$my[gp1][current] < 95 && $my[sp][current] > 50} {
-		#if {$my[gp2][current] > 70} {!dissipate};
-		!transpose max;
-	};
-	#if {$reset >= 95} {
-		#if {$clan > 0} {
-			frenzy
-		}; #elseif {$nukes > 0 && $mip[round] > 0 && $bot} {
-			fire $nukes $mobname
-		}
-	}
 }
 
 #gag {{^Ammo:\[(\d+)?/?(\d+)?/?(\d+)?/?(\d+)?/?(\d+)?\] E:([\d\w]+)?\%?}}
@@ -55,22 +38,15 @@
 	#var {ammo[4]}	{%5};
 	#var {ammo[5]}	{%6};
 	#var {ehealth}	{%7};
-	#format {ammo_len} {%L} {$ammo};
-	#if {"$ammo_buy" == "on" && $ammo_len > 0} {
-		#if {$ammo[1] < 100} {
-			!truck ammo vbuy $weapon_type $ammo_type 1 $ammo_buy_amount
-		}; #elseif {$ammo[2] < 100} {
-			!truck ammo vbuy $weapon_type $ammo_type 2 $ammo_buy_amount
-		}; #elseif {$ammo[3] < 100} {
-			!truck ammo vbuy $weapon_type $ammo_type 3 $ammo_buy_amount
-		}; #elseif {$ammo[4] < 100} {
-			!truck ammo vbuy $weapon_type $ammo_type 4 $ammo_buy_amount
-		}; #elseif {$ammo[5] < 100} {
-			!truck ammo vbuy $weapon_type $ammo_type 5 $ammo_buy_amount
-		}
+	#if {%7 == 0}{
+		#var my[incombat] {0};
+	}{
+		#var my[incombat] {1};
 	};
-	#if {$shp > 0 && $shp < 9} {dismiss};
-	#if {"$saf" == "No"} {support assault fire};
+	#if {${my[incombat]} == 1}{
+		#math {my[damagetracker][rounds]}{$my[damagetracker][rounds] +1 };
+	};
+	#format {ammo_len} {%L} {$ammo};
 }
 
 #alias {update_status} {
@@ -190,7 +166,8 @@
 
 
 /* Aliases */
-#alias corpsetrig {#nop}
+#alias {cco}{unwrap corpse;fdeener};
+#alias corpsetrig {wrap corpse;divvy}
 
 #alias ff {fire 5 $mobname}
 

@@ -18,7 +18,7 @@ F 11
 
 G 0
 
-I 11931
+I 62
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -557,11 +557,11 @@ E {   61} {e} {e} {2} {0} {} {1.000} {}
 
 R {   61} {0} {<118>} {61} { } {} {} {} {} {} {1.000} {}
 E {   60} {w} {w} {8} {0} {} {1.000} {}
-E {   62} {enter} {#read .tt/Dirs/aegis_load.tt;enter} {0} {0} {} {1.000} {}
+E {   62} {enter} {enter} {0} {0} {} {1.000} {}
 
 R {   62} {0} {} {Aegis Global - Level 1 (e,exit)} { } {The fact that you were able to enter this building unimpeded is a sure sign of trouble.  The broken glass that litters the tiled floor and the blood streaked across the flatscreen monitors that line the inner wall of this entrance confirm that something is most definitely amiss. This is the entry to Aegis Global, a defense contractor that is publically known to produce military armor and vehicles.  Privately, it's rumored that this megacorp produces some much more diabolical weapons. } {Aegis Global - Level 1} {aegisl1} {} {} {1.000} {}
 E {  176} {e} {e} {2} {0} {} {1.000} {}
-E {   61} {exit} {#read .tt/Dirs/aegis_unload.tt;exit} {0} {0} {} {1.000} {}
+E {   61} {exit} {exit} {0} {0} {} {1.000} {}
 E {12420} {stairs} {stairs} {0} {0} {} {1.000} {}
 E {12433} {enter} {enter} {0} {0} {} {1.000} {}
 E {12434} {camp} {camp} {0} {0} {} {1.000} {}
@@ -1010,20 +1010,25 @@ E {  118} {w} {w} {8} {0} {} {1.000} {}
 E {  159} {e} {e} {2} {0} {} {1.000} {}
 E {11018} {s} {s} {4} {0} {} {1.000} {}
 
-R {  159} {0} {} {159} { } {} {} {} {} {} {1.000} {}
+R {  159} {0} {<118>} {159} { } {} {} {} {} {} {1.000} {}
 E {  158} {w} {w} {8} {0} {} {1.000} {}
 E {  160} {enter} {enter} {0} {0} {} {1.000} {}
 E {11061} {e} {e} {2} {0} {} {1.000} {}
 
-R {  160} {0} {} {magetower} { } {} {} {magetower} {} {} {1.000} {}
+R {  160} {0} {} {magetower} { } {You are in the entrance to a large, ornate tower.  A chandelier hangs overhead and doors lead off to the north and east.  There is a coat room to the west and a stairway leading up. } {Mage Tower} {magetower} {} {} {1.000} {}
 E {  159} {leave} {leave} {0} {0} {} {1.000} {}
 E {  161} {u} {u} {16} {0} {} {1.000} {}
+E {13412} {n} {n} {1} {0} {} {1.000} {}
+E {13413} {w} {w} {8} {0} {} {1.000} {}
+E {13414} {e} {e} {2} {0} {} {1.000} {}
 
-R {  161} {0} {} {161} { } {} {} {} {} {} {1.000} {}
+R {  161} {0} {} {161} { } {You are on the second floor of the tower.  There is a door leading north and another leading south.  You can see the chandelier quite well from this position as well as the entry way below.  A swirling mass of energy obscures the west wall.  It appears to be a magical portal. } {Mage Tower} {} {} {} {1.000} {}
 E {  160} {d} {d} {32} {0} {} {1.000} {}
 E {  162} {n} {n} {1} {0} {} {1.000} {}
+E {13404} {s} {s} {4} {0} {} {1.000} {}
+E {13411} {portal} {portal} {0} {0} {} {1.000} {}
 
-R {  162} {0} {} {162} { } {} {} {hc mage} {} {} {1.000} {}
+R {  162} {0} {} {162} { } {You are in a large, open laboratory.  It takes up half of the tower on this level.  There are beakers and cauldrons, potions, scrolls, and all sorts of unrecognizable devices lining tables, chairs, the floor the wall and in some cases just hanging in the air.  Vapors rise out of some of the concoctions and flames from others, this doesn't look like a good place for you to be. } {Mage Tower} {hc mage} {} {} {1.000} {}
 E {  161} {s} {s} {4} {0} {} {1.000} {}
 
 R {  163} {0} {} {163} { } {} {} {} {} {} {1.000} {}
@@ -18118,9 +18123,10 @@ E { 3978} {e} {e} {2} {0} {} {1.000} {}
 R { 3978} {0} {} {3978} { } {} {} {} {} {} {1.000} {}
 E { 3977} {w} {w} {8} {0} {} {1.000} {}
 
-R { 3979} {0} {} {chaos laboratory} { } {} {} {} {} {} {1.000} {}
+R { 3979} {0} {<118>} {chaos laboratory} { } {} {} {} {} {} {1.000} {}
 E {12249} {n} {n} {1} {0} {} {1.000} {}
 E { 3980} {w} {w} {8} {0} {} {1.000} {}
+E {13419} {enter} {enter} {0} {0} {} {1.000} {}
 
 R { 3980} {0} {} {intradimensional bucket} { } {} {} {} {} {} {1.000} {}
 E { 3979} {e} {e} {2} {0} {} {1.000} {}
@@ -28668,7 +28674,7 @@ R { 6324} {0} {} {6324} { } {} {} {} {} {} {1.000} {}
 E { 6323} {e} {e} {2} {0} {} {1.000} {}
 E { 6325} {w} {w} {8} {0} {} {1.000} {}
 
-R { 6325} {0} {<128>} {westersea} { } {} {} {westersea} {} {} {1.000} {}
+R { 6325} {0} {<118>} {westersea} { } {} {} {westersea} {} {} {1.000} {}
 E { 6324} {e} {e} {2} {0} {} {1.000} {}
 E {11642} {d} {d} {32} {0} {} {1.000} {}
 E {11718} {in} {in} {0} {0} {} {1.000} {}
@@ -28872,34 +28878,35 @@ E { 5663} {s} {s} {4} {0} {} {1.000} {}
 R { 6369} {0} {} {6369} { } {} {} {} {} {} {1.000} {}
 E { 5661} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 6370} {0} {} {6370} { } {} {} {} {} {} {1.000} {}
+R { 6370} {0} {} {6370} { } {You stand before a gigantic metal structure. This building can be none other then the Juggernauts compound. The thick metal walls are topped with guard towers and automated weaponry. Soldiers walk by on patrol and a pair stand guard at the main entrance. } {Juggernaut} {} {} {} {1.000} {}
 E {    9} {sw} {sw} {12} {0} {} {1.000} {}
 E { 6371} {n} {n} {1} {0} {} {1.000} {}
 
-R { 6371} {0} {} {6371} { } {} {} {} {} {} {1.000} {}
+R { 6371} {0} {} {6371} { } {The recruitment office is dominated by a large, central desk. The desk is resting atop a slightly raised platform towards the back of the room. You can leave the guild here by typing leave the juggernauts. You can extend an invitation to another non juggernaut using the recruit command. A doorway to the east leads outside the compound and up a winding mountain road. **NOTE** You may type 'join' to join without a recruiter. } {Juggernaut} {} {} {} {1.000} {}
 E { 6370} {s} {s} {4} {0} {} {1.000} {}
 E { 6372} {n} {n} {1} {0} {} {1.000} {}
+E {13456} {e} {e} {2} {0} {} {1.000} {}
 
-R { 6372} {0} {<128>} {juggers} { } {} {} {juggers} {} {} {1.000} {}
+R { 6372} {0} {} {juggers} { } {You are inside the giant metal structure that houses the Juggernaut's ground facilities. The metal hallways are spotless, the ceiling featureless, and the floors smudgeless. The cleaning robots have really outdone themselves. Many engineers and warriors are seen entering and leaving this area of the guild. This hallway is lined with the same titanium plating that is throughout this level. All the action seems to be north of here. } {Juggernaut} {juggers} {} {} {1.000} {}
 E { 6371} {s} {s} {4} {0} {} {1.000} {}
 E { 6373} {n} {n} {1} {0} {} {1.000} {}
 E { 6374} {e} {e} {2} {0} {} {1.000} {}
 E { 6382} {w} {w} {8} {0} {} {1.000} {}
 
-R { 6373} {0} {} {jugger box} {S} {} {} {} {} {} {1.000} {}
+R { 6373} {0} {<118>} {jugger box} {S} {} {} {} {} {} {1.000} {}
 E { 6372} {s} {s} {4} {0} {} {1.000} {}
 
-R { 6374} {0} {} {6374} { } {} {} {} {} {} {1.000} {}
+R { 6374} {0} {} {6374} { } {The whole length of the corridor is wider than most in the rest of the guild. Several of the lighter mechs and vehicles use this hallway to access the non clan dropship hangar. There are lines designating where it is safe to walk for normal traffic like solitary warriors and workers. } {Juggernaut} {} {} {} {1.000} {}
 E { 6372} {w} {w} {8} {0} {} {1.000} {}
 E { 6375} {ne} {ne} {3} {0} {} {1.000} {}
 E { 6390} {se} {se} {6} {0} {} {1.000} {}
 
-R { 6375} {0} {} {6375} { } {} {} {} {} {} {1.000} {}
+R { 6375} {0} {} {6375} { } {A couple light all-terrain vehicles and a heavy loader carrying six unmanned elemental suits pass you by. A couple workers are talking about a new upgrade that they have been developing. A conveyor belt system, going both north and south, carries the normal traffic to reduce the chance of an accident. To the west you see several technicians working on a few battle worn suits. } {Juggernaut} {} {} {} {1.000} {}
 E { 6374} {sw} {sw} {12} {0} {} {1.000} {}
 E { 6376} {n} {n} {1} {0} {} {1.000} {}
 E { 6385} {w} {w} {8} {0} {} {1.000} {}
 
-R { 6376} {0} {} {6376} { } {} {} {} {} {} {1.000} {}
+R { 6376} {0} {<118>} {6376} { } {} {} {} {} {} {1.000} {}
 E { 6375} {s} {s} {4} {0} {} {1.000} {}
 E { 6377} {nw} {nw} {9} {0} {} {1.000} {}
 
@@ -28925,7 +28932,7 @@ E { 6380} {n} {n} {1} {0} {} {1.000} {}
 E { 6382} {se} {se} {6} {0} {} {1.000} {}
 E { 6389} {e} {e} {2} {0} {} {1.000} {}
 
-R { 6382} {0} {} {6382} { } {} {} {} {} {} {1.000} {}
+R { 6382} {0} {<118>} {6382} { } {} {} {} {} {} {1.000} {}
 E { 6381} {nw} {nw} {9} {0} {} {1.000} {}
 E { 6372} {e} {e} {2} {0} {} {1.000} {}
 
@@ -28937,7 +28944,7 @@ R { 6384} {4104} {} {6384} { } {} {} {} {} {} {1.000} {}
 E { 6383} {w} {w} {8} {0} {} {1.000} {}
 E {    9} {e} {e} {2} {0} {} {1.000} {}
 
-R { 6385} {0} {} {jugger regen} {M} {} {} {} {} {} {1.000} {}
+R { 6385} {0} {} {Medical Bay (e)} {M} {A medical bay } {Juggernaut} {jugger regen} {} {} {1.000} {}
 E { 6375} {e} {e} {2} {0} {} {1.000} {}
 
 R { 6386} {0} {} {6386} { } {} {} {} {} {} {1.000} {}
@@ -28954,11 +28961,11 @@ E { 6387} {n} {n} {1} {0} {} {1.000} {}
 R { 6389} {0} {<128>} {jugger ammo} {A} {} {} {A} {} {} {1.000} {}
 E { 6381} {w} {w} {8} {0} {} {1.000} {}
 
-R { 6390} {0} {} {6390} { } {} {} {} {} {} {1.000} {}
+R { 6390} {0} {} {6390} { } {You are standing at a large flat landing pad that extends outside the ground base. The pad is elevated high above the ground, making the doors leading back into the structure the only way to return. } {Juggernaut} {} {} {} {1.000} {}
 E { 6374} {nw} {nw} {9} {0} {} {1.000} {}
 E { 6391} {board} {board} {0} {0} {} {1.000} {}
 
-R { 6391} {0} {} {6391} { } {} {} {} {} {} {1.000} {}
+R { 6391} {0} {<118>} {6391} { } {} {} {} {} {} {1.000} {}
 E { 6390} {board} {board} {0} {0} {} {1.000} {}
 E { 6392} {n} {n} {1} {0} {} {1.000} {}
 
@@ -47823,7 +47830,7 @@ R { 9866} {0} {<118>} {9866} { } {} {} {} {} {} {1.000} {}
 E { 9864} {e} {e} {2} {0} {} {1.000} {}
 E { 9867} {enter} {enter} {0} {0} {} {1.000} {}
 
-R { 9867} {0} {} {observatory} { } {The size of the observatory takes your breath away.  The ceiling to this enormous complex is nearly one hundred feet above your head, with a large opening in the center.  You notice quite a few people wandering about flashing their cameras and hollering at their siblings.  This must be one of the largest tourist attractions around. } {Carina's Observatory} {} {} {} {1.000} {}
+R { 9867} {0} {} {<-> Observatory entrance <-> (n,leave)} { } {The size of the observatory takes your breath away.  The ceiling to this enormous complex is nearly one hundred feet above your head, with a large opening in the center.  You notice quite a few people wandering about flashing their cameras and hollering at their siblings.  This must be one of the largest tourist attractions around. } {Carina's Observatory} {observatory} {} {} {1.000} {}
 E { 9866} {leave} {leave} {0} {0} {} {1.000} {}
 E { 9868} {n} {n} {1} {0} {} {1.000} {}
 
@@ -55419,289 +55426,295 @@ E {11634} {sw} {sw} {12} {0} {} {1.000} {}
 R {11641} {0} {<128>} {} { } {} {} {} {} {} {1.000} {}
 E {11638} {se} {se} {6} {0} {} {1.000} {}
 
-R {11642} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11642} {0} {} {At a sewer entrance (u,w)} { } {You've reached one of the sewer entrances. Standing knee-deep in foul smelling murky water you try to get your bearings. The cramped passageway leads onward to the west and due to the darkness below it's impossible to see what's up ahead. A steel ladder mounted on the eastern stone wall leads up to the daylight. } {The City of Westersea (Sewer)} {wsewer} {} {} {1.000} {}
 E { 6325} {u} {u} {16} {0} {} {1.000} {}
 E {11643} {w} {w} {8} {0} {} {1.000} {}
 
-R {11643} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11643} {0} {} {Somewhere in the sewer (w,e)} { } {The smell of the sewer is enough to drive anyone insane. It makes you dizzy, causes your eyes to tear up and lately, your skin has started to itch something fierce. The dark tunnel section you're passing through continues off in an eastern to western direction and kneeling down in the murky water to peer ahead yields nothing but complete and utter darkness.  } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11642} {e} {e} {2} {0} {} {1.000} {}
 E {11644} {w} {w} {8} {0} {} {1.000} {}
 
-R {11644} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11644} {0} {} {Somewhere in the sewer (w,e)} { } {Your mood worsens as you plod along knee-deep in the greenish water. Occasionally something under the water brushes up against your leg. As you try not to think about what sort of creature it may be your nose is assaulted with the sick heavy odor of this sewer. The dark brick walls surround you on all sides except to the east and west where the sewer continues. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11643} {e} {e} {2} {0} {} {1.000} {}
 E {11645} {w} {w} {8} {0} {} {1.000} {}
 
-R {11645} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11645} {0} {} {Somewhere in the sewer (w,e)} { } {Something slimy falls on you as you journey through the sewer. Looking up you see large pipes ending right above you. Every now and then something falls from them and vanishes in the murky water below. The narrow walls surrounding you makes the sound of your travels distorted and the heavy putrid odor envelops you in a shroud of sickness and disease. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11644} {e} {e} {2} {0} {} {1.000} {}
 E {11646} {w} {w} {8} {0} {} {1.000} {}
 
-R {11646} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11646} {0} {} {At a sewer tunnel fork (sw,w,e)} { } {You've reached a branch in the sewer system. It continues off in the eastward, westward, and southwestward directions. No direction looks particularly different than any other. There are no lights anywhere as lighting a match would be potentially hazardous due to the fumes emanating from all the waste. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11645} {e} {e} {2} {0} {} {1.000} {}
 E {11647} {sw} {sw} {12} {0} {} {1.000} {}
 E {11674} {w} {w} {8} {0} {} {1.000} {}
 
-R {11647} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11647} {0} {} {At a sewer junction (w,ne,se)} { } {You're standing in the middle of another sewer junction. The cramped tunnels continue off in the northeastern, western, and southeastern directions. Above you are several pipes and they snake their way across the ceiling from this room to others. As you glance up, you bump into something under water and almost lose your balance. Grumbling, you continue onward. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11646} {ne} {ne} {3} {0} {} {1.000} {}
 E {11648} {se} {se} {6} {0} {} {1.000} {}
 E {11673} {w} {w} {8} {0} {} {1.000} {}
 
-R {11648} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11648} {0} {} {Somewhere in the sewer (s,nw)} { } {As you enter this part of the sewer you are forced to duck your head. It appears as if the ceiling is running a lot lower here than in other areas. To make matters worse, the walls are also closer to each other than before and as you push through, you notice a green film of slime coating your whole side. As you stop to remove the slimy substance, you think you can hear muffled voices coming from above. Perhaps the outside isn't that far away. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11647} {nw} {nw} {9} {0} {} {1.000} {}
 E {11649} {s} {s} {4} {0} {} {1.000} {}
 
-R {11649} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11649} {0} {} {Somewhere in the sewer (se,n)} { } {Knee deep in the green slimy watery goo, you stumble onward. The dark stone passage that surrounds you shows no signs of ever changing and your surroundings are starting to become monotonous. Pipes of different shapes have been mounted to the walls and to the ceiling and every now and then you can hear a faint hissing sound coming from them. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11648} {n} {n} {1} {0} {} {1.000} {}
 E {11650} {se} {se} {6} {0} {} {1.000} {}
 
-R {11650} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11650} {0} {} {Somewhere in the sewer (s,nw)} { } {The narrow tunnel continues onward in a southern to northwestern direction. It looks exactly the same as every other place down here and you are beginning to lose your bearings. As you look to the south you think you can hear muffled sounds coming from that direction. Maybe an exit can be found in that direction? } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11649} {nw} {nw} {9} {0} {} {1.000} {}
 E {11651} {s} {s} {4} {0} {} {1.000} {}
 
-R {11651} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11651} {0} {} {At a sewer entrance (w,u,n)} { } {You're standing in the southeastern exit of the sewer. Above you lies a metal grate which can be lifted from the inside. A metal ladder has been mounted to one of the walls allowing easy access to the grate. As you look up, you think you can see people and even some guards through the narrow cracks. The sewer itself consists of dark, almost pitch black walls and a few feet of murky water covers the bottom. Mounted on the ceiling as well as the walls are several pipes from which you can hear a faint gurgling sound. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11650} {n} {n} {1} {0} {} {1.000} {}
 E {11652} {w} {w} {8} {0} {} {1.000} {}
+E {13424} {u} {u} {16} {0} {} {1.000} {}
 
-R {11652} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11652} {0} {} {Somewhere in the sewer (w,e)} { } {As you wade through out the sewer you suddenly sink down to your waist in gooey water. Apparently, the murky liquid has gathered here for some reason and is a lot deeper than other places. You grit your teeth and try to avoid the water with your head as much as possible. The dark sewer tunnel continues off to the east and west and there are no signs of what lies ahead. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11651} {e} {e} {2} {0} {} {1.000} {}
 E {11653} {w} {w} {8} {0} {} {1.000} {}
 
-R {11653} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11653} {0} {} {Somewhere in the sewer (w,e)} { } {The darkness of the sewer is getting to you. Even though you should be able to see it feels like the depressing environment is getting to you and occasionally you find yourself feeling your way foward regardless. The water which reaches your ankles is so dark and murky here that you can't make out anything. Every now and then something bumps up against your feet and you try your best to avoid thinking of what it might be. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11652} {e} {e} {2} {0} {} {1.000} {}
 E {11654} {w} {w} {8} {0} {} {1.000} {}
 
-R {11654} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11654} {0} {} {Somewhere in the sewer (w,e)} { } {A muffled scream followed by a large splash echoes throughout the dark tunnels. You try to locate the source but all sounds are heavily distorted making it an impossible task. The dark tunnel surrounding you continues off in an eastern to western direction. With no clear light you can't make out anything besides a few feet ahead of you. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11653} {e} {e} {2} {0} {} {1.000} {}
 E {11655} {w} {w} {8} {0} {} {1.000} {}
 
-R {11655} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11655} {0} {} {Somewhere in the sewer (e,nw)} { } {The dark stony tunnel takes a sudden turn here and while knee deep in slimy water you almost run straight into the wall. All around you the splashing of your feet reverberate back to you in a distorted fashion. Glancing up towards the ceiling, you barely make out a series of pipes that leads in an eastern to northwestern direction. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11654} {e} {e} {2} {0} {} {1.000} {}
 E {11656} {nw} {nw} {9} {0} {} {1.000} {}
 
-R {11656} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11656} {0} {} {Somewhere in the sewer (w,se)} { } {As you enter this room you can't help but think 'another room, another place to get even slimier'. These rooms are all starting to look the same to you. With no real visible landmarks, it's extremely easy to get lost. As you stop to get your bearings, you notice the cold murky water slowly shifting back and forth as if someone or something was moving about close by. Pipes coming from the southeast arc down and lead directly into the stone wall. As you stand still you can hear a faint hissing sound coming from somewhere deep inside. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11655} {se} {se} {6} {0} {} {1.000} {}
 E {11657} {w} {w} {8} {0} {} {1.000} {}
 
-R {11657} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11657} {0} {} {Somewhere in the sewer (w,e)} { } {Moving around in the cramped tunnel you frequently bump into objects with your feet. As the light is close to nothing, there is no way for you to see what exactly you are bumping into. The thick and now familiar dark stone wall offers no hints about your whereabouts and not a single sound penetrates from the outside. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11656} {e} {e} {2} {0} {} {1.000} {}
 E {11658} {w} {w} {8} {0} {} {1.000} {}
 
-R {11658} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11658} {0} {} {Somewhere in the sewer (nw,e)} { } {The dark sewer tunnel floor here is slightly angled towards the southwest, causing a small fall of water across the area. Rusty old pipes hang down from the ceiling and they continue off in a northwestern to eastern direction. Even though you are completely and utterly soaked in foul watery slime you are not at all cold. Of course, the warm temperature also does wonders for the odor down here. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11657} {e} {e} {2} {0} {} {1.000} {}
 E {11659} {nw} {nw} {9} {0} {} {1.000} {}
 
-R {11659} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11659} {0} {} {At a sewer junction (se,w,ne)} { } {As you arrive at this intersection, you can't but marvel over the fact that everything looks exactly the same. The cramped tunnel branches off in several directions. Kneeling down in the lukewarm gritty water, you peer off into the different branches. Seeing nothing you recognize you sigh to yourself and stand back up. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11658} {se} {se} {6} {0} {} {1.000} {}
 E {11660} {w} {w} {8} {0} {} {1.000} {}
 E {11669} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {11660} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11660} {0} {} {Somewhere in the sewer (w,e)} { } {As you've reached a bit deeper in the sewer you start to notice little things. Such as this tunnel seems to lean towards the east and there seems to be only a mild frequency of dripping slime. Important facts such as where you are and how you get out completely eludes you though. Making matters worse, the slanted tunnel floor makes the oily water flow even quicker and it completely surrounds your lower body. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11659} {e} {e} {2} {0} {} {1.000} {}
 E {11661} {w} {w} {8} {0} {} {1.000} {}
 
-R {11661} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11661} {0} {} {Somewhere in the sewer (w,e)} { } {As you journey onward in the pitch black sewer maze, you every now and then think you hear muffled sounds coming from above. As you examine the rocky ceiling you don't see any signs of an opening or the like. Only dark semi-broken pipes which snake their way across in an eastern to western direction. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11660} {e} {e} {2} {0} {} {1.000} {}
 E {11662} {w} {w} {8} {0} {} {1.000} {}
 
-R {11662} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11662} {0} {} {Somewhere in the sewer (nw,e)} { } {You stare around in absolute disbelief. You've managed to reach an area in the sewer that smells even worse than anything you've encountered down here. Trying for a brief moment to locate the source of the smell, you quickly give up and start to focus on keeping down your lunch instead. Half choking and gagging you press on through the cramped sewer tunnel. Someone has put up a makeshift stand here which looks very out of place. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11661} {e} {e} {2} {0} {} {1.000} {}
 E {11663} {nw} {nw} {9} {0} {} {1.000} {}
 
-R {11663} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11663} {0} {} {Somewhere in the sewer (w,se)} { } {As you enter another part of the dark sewer, you suddenly realize that this part isn't dark at all. Glancing up you see several rays of light which are shining down into the murky darkness. Using the newfound light you manage to actually get a good look at one of these rooms. The rusty pipes in the ceiling seem to be connected to the many drainage holes above and snake their way from above to here below. The stone walls are long since colored black by all the waste that's been dumped. Glancing down you finally get a good look at the murky water. With a shock you realize that it doesn't even resemble water. Sticky gooey substance is more like it. Several unrecognizable things float around in the water. Swallowing hard you quickly decide that you prefer the darkness. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11662} {se} {se} {6} {0} {} {1.000} {}
 E {11664} {w} {w} {8} {0} {} {1.000} {}
 
-R {11664} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11664} {0} {} {Somewhere in the sewer (w,e)} { } {You have to walk sideways and semi-crouched down to even fit in this snug passageway. Thick stony walls all coated by an unknown slimy substance surround you and you are frequently forced to move against it. The floor is partially covered by similar water like everywhere else down here, but it at least doesn't appear to be as high. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11663} {e} {e} {2} {0} {} {1.000} {}
 E {11665} {w} {w} {8} {0} {} {1.000} {}
 
-R {11665} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11665} {0} {} {At a sewer junction (sw,e,n)} { } {Traveling along the almost pitch black corridors, you are interrupted by distorted sound coming from somewhere close. It bounces on and off the walls surrounding you so it's impossible to locate the exact direction. The tunnels which splits here in an intersection continues off in eastern, northern, and southwestern directions. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11664} {e} {e} {2} {0} {} {1.000} {}
 E {11666} {sw} {sw} {12} {0} {} {1.000} {}
 E {11667} {n} {n} {1} {0} {} {1.000} {}
 
-R {11666} {0} {<128>} {} { } {} {} {} {} {} {1.000} {}
+R {11666} {0} {} {At a sewer entrance (u,ne)} { } {You're standing in the southwestern entrance of the town sewer. Glancing up, you see a metal grate high above you. It's too high for you to make out any proper details about the outside. Some daylight trickles through and casts an eerie display of light along the sewer walls. A small, very scrawny looking iron ladder has been mounted to the southern wall, allowing access to the metal grate above. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11665} {ne} {ne} {3} {0} {} {1.000} {}
+E {13425} {u} {u} {16} {0} {} {1.000} {}
 
-R {11667} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11667} {0} {} {Somewhere in the sewer (nw,s)} { } {As soon as you enter this part of the sewer system you hear a loud grating sound, as if hard iron was moved against stone. Peering into the darkness, you fail to locate the source of the sound. The black tunnel leads onward in a straight northwest to southern direction. High above you hang partially broken pipes which wind their way across the stone ceiling as they vanish into other parts of the sewer. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11665} {s} {s} {4} {0} {} {1.000} {}
 E {11668} {nw} {nw} {9} {0} {} {1.000} {}
 
-R {11668} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11668} {0} {} {At a dead end (se)} { } {You've reached a dead end. The stony walls around you clearly move as if it was continuing in a western direction but another wall simply blocks your progress. Glancing up you notice pipes moving across the ceiling and some seem to vanish in the darkness above the western wall. Looking down, you see movement in the murky water as if it was flowing in here from somewhere else. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11667} {se} {se} {6} {0} {} {1.000} {}
 
-R {11669} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11669} {0} {} {Somewhere in the sewer (ne,sw)} { } {You're wading through the tepid water and are following the tunnel in a northeastern to southwestern direction. Stony walls surround you and there is not a single sound that can be heard besides your own splashing. Every now and then something drips down onto you and with a small shudder of disgust you try your best to avoid thinking of what it could be. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11659} {sw} {sw} {12} {0} {} {1.000} {}
 E {11670} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {11670} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11670} {0} {} {Somewhere in the sewer (e,sw)} { } {As you walk through the dark corridor you suddenly sink down deep. Being underwater in this slimy cesspool sends panic down your spine. As you are scrambling for air you finally find a place for your feet and with a combined effort of feet and arms you manage to get out of the strange hole. As you back off from the centre of the room you take caution not to fall back in. You notice nothing on the surface that would even remotely hint of this potential deadly trap. You shudder to think that other rooms down here might be similar to this. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11669} {sw} {sw} {12} {0} {} {1.000} {}
 E {11671} {e} {e} {2} {0} {} {1.000} {}
 
-R {11671} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11671} {0} {} {Somewhere in the sewer (e,w)} { } {Entering this part of the tunnel you immediately notice that it is actually fairly spacious. Glancing up, you see several broken pipes in the ceiling and there appears to be something dripping from one of them. High up in the opposite corner you think you see a sliver of light. Perhaps there is a drainage that leads directly into this room from above. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11670} {w} {w} {8} {0} {} {1.000} {}
 E {11672} {e} {e} {2} {0} {} {1.000} {}
 
-R {11672} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11672} {0} {} {Somewhere in the sewer (e,w)} { } {High ripples dance across the murky surface as you enter this part of the sewer system. Someone or something must have just recently passed through. You stare out over the darkness trying to see anything, but whatever it was is now gone. As you focus on something else for a moment, you forgot the pungent smell that is all around you and once more it hits you with full force. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11671} {w} {w} {8} {0} {} {1.000} {}
 E {11673} {e} {e} {2} {0} {} {1.000} {}
 
-R {11673} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11673} {0} {} {Somewhere in the sewer (w,e)} { } {Dark and extremely smelly tunnels are starting to really bother you. Stumbling along the water, you frequently bump into things beneath its murky surface. Combined with the slimy things that fall down on you occasionally, there is not a single item on you that is not covered with goo and waste. Glancing around you sees nothing that even resembles landmarks and these tunnels all look the same. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11672} {w} {w} {8} {0} {} {1.000} {}
 E {11647} {e} {e} {2} {0} {} {1.000} {}
 
-R {11674} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11674} {0} {} {Somewhere in the sewer (w,e)} { } {A thin haze of strange of fumes seems to float across the murky water. This must be the result of all the waste rotting down here. The stone walls surrounding you has long since stained almost completely black and the stench that lingers in the air is beyond anything you've ever encountered. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11646} {e} {e} {2} {0} {} {1.000} {}
 E {11675} {w} {w} {8} {0} {} {1.000} {}
 
-R {11675} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11675} {0} {} {Somewhere in the sewer (nw,e)} { } {Silence. Complete and utter silence. Having wandered down here for some time you have gotten used to quirky pipes, the echoing of dripping water, and other strange things. Yet here everything is completely silent. Even the sound from your body splashing in the lukewarm water is somehow absorbed into the air. Looking around, you don't detect anything strange or even unusual about this part of the sewer. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11674} {e} {e} {2} {0} {} {1.000} {}
 E {11676} {nw} {nw} {9} {0} {} {1.000} {}
 
-R {11676} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11676} {0} {} {Somewhere in the sewer (se,w)} { } {You fumble your way in almost complete darkness. After having bumped into stone walls for quite some time you finally manage to make out that this cramped part of the sewer stretches on in a western to southeastern direction. As most other areas down here, lukewarm water fills the lower few feet of the tunnel. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11675} {se} {se} {6} {0} {} {1.000} {}
 E {11677} {w} {w} {8} {0} {} {1.000} {}
 
-R {11677} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11677} {0} {} {Somewhere in the sewer (nw,e)} { } {You've entered a very dark part of the sewer. You can barely see your hands in front of your eyes. Without warning something slithers past your legs. You plunge your hand down in pure reflex and for a moment you wrap your hands around something wet and squishy. Shuddering, you let go and wipe your now slimy hand on your already slimy clothes.  } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11676} {e} {e} {2} {0} {} {1.000} {}
 E {11678} {nw} {nw} {9} {0} {} {1.000} {}
 
-R {11678} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11678} {0} {} {Somewhere in the sewer (se,n)} { } {It seems like you've been underground forever. The drab looking sewer scenery is starting to become really tedious. All the stone walls look the same and even though the water changes consistency every now and then, it's hardly enough to spark your undivided attention. From above, a fine mist of foul-smelling water showers you making a bad situation worse. The dark tunnel continues off in a northern to southeastern direction.  } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11677} {se} {se} {6} {0} {} {1.000} {}
 E {11679} {n} {n} {1} {0} {} {1.000} {}
 
-R {11679} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11679} {0} {} {At a sewer junction (s,e)} { } {This used to be an intersection but the opening to the west has been walled shut. The work is fairly new since the color of the bricks is only light brown instead of almost pitch black. The murky water is only a few inches off the ground here and for the first time in a very long time your lower legs are not completely submerged in water. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11678} {s} {s} {4} {0} {} {1.000} {}
 E {11680} {e} {e} {2} {0} {} {1.000} {}
 
-R {11680} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11680} {0} {} {Somewhere in the sewer (nw,w)} { } {You've reached what first appears to be a dead end. After a few minutes of closer examination you see an opening in the northwestern wall. Someone or something has broken through and small pieces of stone and brick lie scattered along the opening. High above you are big dark pipes and several of them contains large holes, allowing filthy waste water to fall into the sewer like some kind of disgusting waterfall. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11679} {w} {w} {8} {0} {} {1.000} {}
 E {11681} {nw} {nw} {9} {0} {} {1.000} {}
 
-R {11681} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11681} {0} {} {Somewhere in the sewer (se,ne)} { } {This smaller subsection of the sewer originally continued in a northeastern to southwestern direction. However, a fairly new looking wall has been put here to prevent any traveler from continuing to the southwest. Looking around, you see a makeshift exit in the southeastern wall. It appears to be the only other exit besides the northeastern one.  } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11680} {se} {se} {6} {0} {} {1.000} {}
 E {11682} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {11682} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11682} {0} {} {At a sewer junction (sw,w,e)} { } {You're in a fairly large intersection. The main tunnel continues in an eastern to western direction while a smaller tunnel branch off towards the southwest. From the east a clear grating sound can be heard, as if rough metal was scraping against stone. The tunnel is filled with a few feet of murky slow moving water that does nothing to enhance the atmosphere down here. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11681} {sw} {sw} {12} {0} {} {1.000} {}
 E {11683} {e} {e} {2} {0} {} {1.000} {}
 E {11684} {w} {w} {8} {0} {} {1.000} {}
 
-R {11683} {0} {<128>} {} { } {} {} {} {} {} {1.000} {}
+R {11683} {0} {} {At a sewer entrance (u,w)} { } {You're standing knee deep in murky lukewarm water. This room must be one of the many entrances leading in and out of the sewer system. A sturdy iron ladder has been mounted against the northern wall and looking up, you see a metal grate covering the exit. The dark sewer continues of in a western direction.  } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11682} {w} {w} {8} {0} {} {1.000} {}
+E {13426} {u} {u} {16} {0} {} {1.000} {}
 
-R {11684} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11684} {0} {} {Somewhere in the sewer (w,e)} { } {A faint rhythmic thumping sound can be heard in this area. It's like the walls resound with the strange noise and for a brief moment you consider the possibility of a cave-in. The idea of being trapped in this extremely smelly sewer for the rest of your life isn't that appealing so you decide to move on.  } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11682} {e} {e} {2} {0} {} {1.000} {}
 E {11685} {w} {w} {8} {0} {} {1.000} {}
 
-R {11685} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11685} {0} {} {Somewhere in the sewer (w,e)} { } {Plodding along in the lukewarm water, your mood definitely worsens by every minute you spend down here. The drab stone walls look identical to anywhere else down here and the ceiling is once more filled with its rusty, half-broken pipes. As you look up something wet and gooey drips down on your body. Shuddering, you grumble to yourself. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11684} {e} {e} {2} {0} {} {1.000} {}
 E {11686} {w} {w} {8} {0} {} {1.000} {}
 
-R {11686} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11686} {0} {} {Somewhere in the sewer (w,e)} { } {The long narrow stone tunnel continues in an eastern to western direction. As you enter, you hear the sound of combat coming from a nearby area and the murky water which covers the ground appears to bubble and churn violently. Taking a moment to look around, you fail to detect the exact source but it's most definitely close by. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11685} {e} {e} {2} {0} {} {1.000} {}
 E {11687} {w} {w} {8} {0} {} {1.000} {}
 
-R {11687} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11687} {0} {} {Somewhere in the sewer (w,e)} { } {As you enter you immmediately notice that the normally calm water now bubbles violently and waves crash with fury against the stone walls. Slimy water drips down from the higher parts of the walls and even from the lower parts of the ceiling. Something is going on underneath the water and you are rather hesitant to find out what. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11686} {e} {e} {2} {0} {} {1.000} {}
 E {11688} {w} {w} {8} {0} {} {1.000} {}
 
-R {11688} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11688} {0} {} {Somewhere in the sewer (sw,e)} { } {Screams and loud scratches from somewhere close reverberate throughout the pitch black sewer. The water ripples violently as if something was just recently sucked down from a nearby area. Tensed, you check your equipment preparing for the worst. Large gobs of grit and goo drop down from above sending shivers down your spine as you carefully watch your surroundings. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11687} {e} {e} {2} {0} {} {1.000} {}
 E {11689} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {11689} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11689} {0} {} {Somewhere in the sewer (sw,ne)} { } {You're in a small sub-section of the sewer tunnel system. It leads in a northeastern to southwestern direction. The gloomy pitch plack walls surround you in every direction. The lower part of the tunnel consists of slimy lukewarm water that gently ripples as you move around. By now you are almost used to the dreadful smell. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11688} {ne} {ne} {3} {0} {} {1.000} {}
 E {11690} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {11690} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11690} {0} {} {At a sewer junction (ne,w,e)} { } {You've reached another of the many intersections found down here in the sewer. The large tunnel continues in an eastern to western direction while a smaller tunnel branches off to the northeast. Several pipes hang down from the ceiling as they appear to have erupted from the inside. There are several iron mounts along the sewer walls which catch your attention. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11689} {ne} {ne} {3} {0} {} {1.000} {}
 E {11691} {e} {e} {2} {0} {} {1.000} {}
 E {11695} {w} {w} {8} {0} {} {1.000} {}
 
-R {11691} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11691} {0} {} {Somewhere in the sewer (w,e)} { } {Immediately as you enter this part of the sewer, you notice large marks on each side of the stone wall. The pipes that would normally be whole in the ceiling are now cracked and broken. You see several large chunks of stone that lie across the stony floor and its causing the water to flow in irregular patterns. You can hear a loud growling sound reverberate from the east. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11690} {w} {w} {8} {0} {} {1.000} {}
 E {11692} {e} {e} {2} {0} {} {1.000} {}
 
-R {11692} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11692} {0} {} {Somewhere in the sewer (se,w)} { } {Clouds of dust fill the area and a very fine layer of it floats across the rippling water. Something big moved through this area recently. Broken metal pipes hang down from the ceiling and they are bent as if they were made from thin pieces of straw. Large pieces of stone have been torn from the blackened wall. It almost looks like scratch marks. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11691} {w} {w} {8} {0} {} {1.000} {}
 E {11693} {se} {se} {6} {0} {} {1.000} {}
 
-R {11693} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11693} {0} {} {Somewhere in the sewer (nw,e)} { } {The tunnel quickly shifts direction from a northwestern to eastern direction. Whatever moved through here didn't stop and crashed straight into the southeastern wall, causing a large crater to form. Large lumps of broken stone have formed below the impact mark and the greasy water below has already started to seep through the cracks. A guttering roar can be heard from the southeast and it's clear that you are very close to the source. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11692} {nw} {nw} {9} {0} {} {1.000} {}
 E {11694} {e} {e} {2} {0} {} {1.000} {}
 
-R {11694} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11694} {0} {} {At a large, very deep hole (d,w)} { } {You're standing by the edge of a large hole. As you tentatively lean over to get a better view, you slip and almost fall in. A shimmering of faint green light shines from below and it's causing the greasy flowing water to glitter radiantly. Broken bricks lie scattered along the rim of the hole and whoever or whatever caused this to happen must have been through recently. A faint odor that is different from the normal sewer stench emanate from the cavity.  } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11693} {w} {w} {8} {0} {} {1.000} {}
 E {11712} {d} {d} {32} {0} {} {1.000} {}
 
-R {11695} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11695} {0} {} {Somewhere in the sewer (w,e)} { } {This large tunnel looks to be one of the main corridors in the sewer. The water is slowly flowing along the floor and the musty smell lies heavily through out the area. Looking over the stone walls you are surprised as you see old iron mounts here and there. They were probably used for torches long time ago but are now completely empty. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11690} {e} {e} {2} {0} {} {1.000} {}
 E {11696} {w} {w} {8} {0} {} {1.000} {}
 
-R {11696} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11696} {0} {} {At a sewer junction (se,nw,e)} { } {You come upon a relatively large underground intersection. Two smaller forks branch out in a northwestern to southeastern direction while a large tunnel continues off to the east. Plodding through the gloomy surroundings you notice a distinct dripping sound. Bending over in the murky water you peer into each tunnel fork. You fail to detect the source of the sound. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11695} {e} {e} {2} {0} {} {1.000} {}
 E {11697} {nw} {nw} {9} {0} {} {1.000} {}
 E {11702} {se} {se} {6} {0} {} {1.000} {}
 
-R {11697} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11697} {0} {} {Somewhere in the sewer (n,se)} { } {The dark sewer corridor continues in a southeastern to northern direction. Stepping tentatively in the lukewarm water you slowly make your way through the area. You notice that water is slowly moving in a northern direction, as if the floor was sloping towards the north. The sound of something dripping echoes throughout the sewer but the sound is too distorted for you to make out any source. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11696} {se} {se} {6} {0} {} {1.000} {}
 E {11698} {n} {n} {1} {0} {} {1.000} {}
 
-R {11698} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11698} {0} {} {Somewhere in the sewer (w,s)} { } {As you enter this part of the sewer system you immediately detect a change of water flow. It's as disgusting as everywhere else but it's clearly moving in a western direction. Busted pipes above drip down oily water on you and by now you've given up trying to even avoid it. Looking in each direction of the corridor you fail to make out anything in the darkness. There is no saying what might lie ahead. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11697} {s} {s} {4} {0} {} {1.000} {}
 E {11699} {w} {w} {8} {0} {} {1.000} {}
 
-R {11699} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11699} {0} {} {Somewhere in the sewer (e,w)} { } {The dark tunnel is sloping rather severely to the west and the water seems to rush with an increasing speed in that direction. It's not strong enough to throw you off balance but it's definitely noticeable. With the increased speed of the water your legs more frequently come in contact with strange soggy objects underwater. Trying not to think about what it might be you keep on going. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11698} {e} {e} {2} {0} {} {1.000} {}
 E {11700} {w} {w} {8} {0} {} {1.000} {}
 
-R {11700} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11700} {0} {} {Somewhere in the sewer (w,e)} { } {The water is very hazardous in this area. You frequently lose your balance and are forced to use your hands to steady yourself. It's flowing rapidly in an eastern to western direction. Bits and pieces bump into your legs and every now and then something sharp hits you. It's not strong enough to draw blood but it's definitely painful. All around you the dark corridor continues and shows no hint or sign of what might lie ahead in either direction. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11699} {e} {e} {2} {0} {} {1.000} {}
 E {11701} {w} {w} {8} {0} {} {1.000} {}
 
-R {11701} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11701} {0} {} {At a sewer entrance (u,e)} { } {You're standing in the northwestern corner of the sewer. Murky water that smells like last month's garbage moves rapidly in an eastern to western direction. It looks as if it's vanishing into a large pipe mounted in the western wall. Surrounding the water is a dry ledge which you are currently standing on and you can follow it to a safer place to the east. Unfortunately, it looks like the ledge vanishes and to move further in the sewer you'd have to wade through the lukewarm disgusting water. Mounted on the northern wall is a rusty iron ladder which leads up to the city streets. Looking up you see an iron grate covering the exit. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11700} {e} {e} {2} {0} {} {1.000} {}
+E {13427} {u} {u} {16} {0} {} {1.000} {}
 
-R {11702} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11702} {0} {} {Somewhere in the sewer (nw,w)} { } {Just as you enter the room you see large ripples that dance across the oily watery surface. Clearly someone was just in here before you. As you peer into the darkness you fail to see anyone or anything. The tunnel is taking a rather sudden change of direction here. Broken pipes snake their way across the ceiling, while others arc outwards, connecting to a nearby wall. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11696} {nw} {nw} {9} {0} {} {1.000} {}
 E {11703} {w} {w} {8} {0} {} {1.000} {}
 
-R {11703} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11703} {0} {} {Somewhere in the sewer (w,e)} { } {Immediately as you enter this area you notice a steady stream of water coming from a large hole in the ceiling. As you move about, you notice that the water in this part isn't nearly as gritty and disgusting as the other areas. The smell is also a great deal better. No way near pleasant, but better never the less. The cramped corridor continues onward in an eastern to western direction. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11702} {e} {e} {2} {0} {} {1.000} {}
 E {11704} {w} {w} {8} {0} {} {1.000} {}
 
-R {11704} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11704} {0} {} {Somewhere in the sewer (sw,e)} { } {This part of the sewer appears to have had a fairly recent cave-in. Stone bricks lie in the center of the tunnel and you have to step over them to pass. The only positive with this is that the fallen stone has actually caused a small island to form. Standing on the island of stone gives you a break from all the warm gooey water for a while. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11703} {e} {e} {2} {0} {} {1.000} {}
 E {11705} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {11705} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11705} {0} {} {Somewhere in the sewer (sw,ne)} { } {The narrow sewer tunnel continues in a northeast to southwestern direction. To the southwest you think it opens up into a wider area. The stony walls that surround you are black with both age and decay and the smell down here is truly horrible. Covering the stony floor is several feet of murky slimy water which does nothing to improve the setting. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11704} {ne} {ne} {3} {0} {} {1.000} {}
 E {11706} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {11706} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11706} {0} {} {At a sewer junction (ne,w,e)} { } {Stumbling on something squishy underwater, you almost lose your balance and fall into the murky goo. Feeling with your feet, whatever you stumbled on is now gone. The tunnel here branches off in several directions. The smallest branch seems to lead off to the northeast while the wider tunnel path continues in an eastern to western direction. Peering into each fork, you fail to see any hints on where they might lead. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11705} {ne} {ne} {3} {0} {} {1.000} {}
 E {11707} {w} {w} {8} {0} {} {1.000} {}
+E {13428} {e} {e} {2} {0} {} {1.000} {}
 
-R {11707} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11707} {0} {} {Somewhere in the sewer (w,e)} { } {The fairly wide sewer tunnel continues in an eastern to western fashion. Warm, slimy water covers the bottom and your feet and legs are soaked completely. As you wade through the gooey mess, you frequently bump into things underwater. Trying not to pay it any mind, its starting to trouble you, especially when some of the things move around. High above you are several pipes running across the dark ceiling and they seem to all lead out into other parts of the sewer. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11706} {e} {e} {2} {0} {} {1.000} {}
 E {11708} {w} {w} {8} {0} {} {1.000} {}
 
-R {11708} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11708} {0} {} {Somewhere in the sewer (w,e)} { } {A large rusted pipe hangs down from the ceiling and looking up you see several other that are in similar condition. Originally, it looks as if they were hung tight to the ceiling of the sewer but rust and time has sagged them down and they hang like limp dead limbs. The large rust stains have colored the greasy water light orange. The dark tunnel system continues off in an eastern to western direction. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11707} {e} {e} {2} {0} {} {1.000} {}
 E {11709} {w} {w} {8} {0} {} {1.000} {}
 
-R {11709} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11709} {0} {} {Somewhere in the sewer (w,e)} { } {Loud voices echo through the murky chamber. Because the sounds are all extremely distorted down here it's very hard, if not impossible, to locate the source. As you stop and listen for a while you think you can hear another low grating sound, almost if metal was rubbed against stone. Focusing on the current tunnel section you don't notice anything that catches your eye. The monotonous surroundings continue off into the darkness. } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11708} {e} {e} {2} {0} {} {1.000} {}
 E {11710} {w} {w} {8} {0} {} {1.000} {}
 
-R {11710} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11710} {0} {} {At a sewer entrance (u,e)} { } {You're standing beneath the western sewer entrance. Looking up, you see a silvery metal grate covering the snug entrance hole. A fairly sturdy, although very rusty, ladder has been mounted to the western wall. Some daylight appears to trickle down through the cracks in the grate. However, it does very little to light up the area. In fact it's quite the opposite as your eyes are constantly working to get used to the darkness down here.  } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
 E {11709} {e} {e} {2} {0} {} {1.000} {}
+E {13429} {u} {u} {16} {0} {} {1.000} {}
 
 R {11711} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 4958} {d} {d} {32} {0} {} {1.000} {}
 E {11780} {u} {u} {16} {0} {} {1.000} {}
 
-R {11712} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11712} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {11694} {u} {u} {16} {0} {} {1.000} {}
 E {11713} {d} {d} {32} {0} {} {1.000} {}
 
@@ -56488,109 +56501,109 @@ E {11897} {n} {n} {1} {0} {} {1.000} {}
 E {11899} {portal} {portal} {0} {0} {} {1.000} {}
 E {11942} {w} {w} {8} {0} {} {1.000} {}
 
-R {11899} {0} {} {At a portal before a bridge (s,portal)} { } {The portal is hovering over a square platform made of countless individual stone blocks. The platform is tucked away into a corner of smooth rock walls, with stalagmites on one side. The room opens up into a wider space with a wide river running parallel to the portal, and a long bridge extends across the river. The immediate area seems peaceful, but you can make out shapes on the other side of the river. } {Ultima Online} {uo2} {} {} {1.000} {}
+R {11899} {0} {} {At a portal before a bridge (s,portal)} { } {The portal is hovering over a square platform made of countless individual stone blocks. The platform is tucked away into a corner of smooth rock walls, with stalagmites on one side. The room opens up into a wider space with a wide river running parallel to the portal, and a long bridge extends across the river. The immediate area seems peaceful, but you can make out shapes on the other side of the river. } {Ultima Online 2} {uo2} {} {} {1.000} {}
 E {11898} {portal} {portal} {0} {0} {} {1.000} {}
 E {11900} {s} {s} {4} {0} {} {1.000} {}
 
-R {11900} {0} {} {On a bridge (n,s)} { } {The bridge is made of wood and chains, appears roughly 60 feet in length and stands about 20 feet above the water. There are two posts on each side of the bridge, which anchor the chain guard rail and relieve the weight from the bridge. } {Ultima Online} {} {} {} {1.000} {}
+R {11900} {0} {} {On a bridge (n,s)} { } {The bridge is made of wood and chains, appears roughly 60 feet in length and stands about 20 feet above the water. There are two posts on each side of the bridge, which anchor the chain guard rail and relieve the weight from the bridge. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11899} {n} {n} {1} {0} {} {1.000} {}
 E {11901} {s} {s} {4} {0} {} {1.000} {}
 
-R {11901} {0} {} {Across the bridge (n,s,w)} { } {Standing on the other side of the bridge, the shoreline continues to the west. You can also continue further to the southwest and the southeast. Further along the shore you see a camp site. } {Ultima Online} {} {} {} {1.000} {}
+R {11901} {0} {} {Across the bridge (n,s,w)} { } {Standing on the other side of the bridge, the shoreline continues to the west. You can also continue further to the southwest and the southeast. Further along the shore you see a camp site. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11900} {n} {n} {1} {0} {} {1.000} {}
 E {11902} {s} {s} {4} {0} {} {1.000} {}
 E {11943} {w} {w} {8} {0} {} {1.000} {}
 
-R {11902} {0} {} {A passage south of the bridge (n,s)} { } {As you follow the path leading south, the passage opens up to a wide section with a group of stalagmites and rocks in the center. There is a faded old cloak left on the ground near the stalagmites, and a set of bones nearby. } {Ultima Online} {} {} {} {1.000} {}
+R {11902} {0} {} {A passage south of the bridge (n,s)} { } {As you follow the path leading south, the passage opens up to a wide section with a group of stalagmites and rocks in the center. There is a faded old cloak left on the ground near the stalagmites, and a set of bones nearby. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11901} {n} {n} {1} {0} {} {1.000} {}
 E {11903} {s} {s} {4} {0} {} {1.000} {}
 
-R {11903} {0} {} {A passage south of the bridge (n,s)} { } {Past the group of the stalagmites, the walls start coming together and form a narrow descending passage. Further ahead, you can see the passage diverge to the west and to a smaller chamber to the east. There are very short stalagmites here, and a few bones poking out of the ground. } {Ultima Online} {} {} {} {1.000} {}
+R {11903} {0} {} {A passage south of the bridge (n,s)} { } {Past the group of the stalagmites, the walls start coming together and form a narrow descending passage. Further ahead, you can see the passage diverge to the west and to a smaller chamber to the east. There are very short stalagmites here, and a few bones poking out of the ground. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11902} {n} {n} {1} {0} {} {1.000} {}
 E {11904} {s} {s} {4} {0} {} {1.000} {}
 
-R {11904} {0} {} {An intersection south of the bridge (w,n,s)} { } {You reach another intersection in the path. The path continues into a busy chamber to the south, while the western path splits again with one path continuing west and another heading back toward the bridge. There is a large pool of blood and mangled bones right where you are standing, and you can see traces of blood coming from the path to the south. } {Ultima Online} {} {} {} {1.000} {}
+R {11904} {0} {} {An intersection south of the bridge (w,n,s)} { } {You reach another intersection in the path. The path continues into a busy chamber to the south, while the western path splits again with one path continuing west and another heading back toward the bridge. There is a large pool of blood and mangled bones right where you are standing, and you can see traces of blood coming from the path to the south. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11903} {n} {n} {1} {0} {} {1.000} {}
 E {11905} {s} {s} {4} {0} {} {1.000} {}
 E {11909} {w} {w} {8} {0} {} {1.000} {}
 
-R {11905} {0} {} {Entering a chamber (e,n)} { } {Heading down the hill, you enter a huge rectangular chamber. There is hay covering the ground of the entire chamber here, and you can see many pools of blood soaking in. There are stalagmites near the entrance and in each corner of the room, and many barrels lined up near them. } {Ultima Online} {} {} {} {1.000} {}
+R {11905} {0} {} {Entering a chamber (e,n)} { } {Heading down the hill, you enter a huge rectangular chamber. There is hay covering the ground of the entire chamber here, and you can see many pools of blood soaking in. There are stalagmites near the entrance and in each corner of the room, and many barrels lined up near them. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11904} {n} {n} {1} {0} {} {1.000} {}
 E {11906} {e} {e} {2} {0} {} {1.000} {}
 
-R {11906} {0} {} {In the chamber south of the bridge (e,w)} { } {Moving toward the center of the huge chamber, you see more pools of blood, piles of bones, and scattered hay on the ground. There are several barrels in the room, as well as a chest right near the center. The chamber continues further to the east, and it looks like there is another small passage leading south in that direction. } {Ultima Online} {} {} {} {1.000} {}
+R {11906} {0} {} {In the chamber south of the bridge (e,w)} { } {Moving toward the center of the huge chamber, you see more pools of blood, piles of bones, and scattered hay on the ground. There are several barrels in the room, as well as a chest right near the center. The chamber continues further to the east, and it looks like there is another small passage leading south in that direction. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11905} {w} {w} {8} {0} {} {1.000} {}
 E {11907} {e} {e} {2} {0} {} {1.000} {}
 
-R {11907} {0} {} {In the chamber south of the bridge (w,sw)} { } {As you reach the eastern wall of the chamber, you discover a huge pile of bones in the corner of the room. Stalagmites line the walls behind the bones, and there are several open barrels near them as well. Something must be either piling the bones in this corner, or dragging their enemies here. You can also make out a small passage to the south. } {Ultima Online} {} {} {} {1.000} {}
+R {11907} {0} {} {In the chamber south of the bridge (w,sw)} { } {As you reach the eastern wall of the chamber, you discover a huge pile of bones in the corner of the room. Stalagmites line the walls behind the bones, and there are several open barrels near them as well. Something must be either piling the bones in this corner, or dragging their enemies here. You can also make out a small passage to the south. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11906} {w} {w} {8} {0} {} {1.000} {}
 E {11908} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {11908} {0} {} {In a narrow chamber (ne)} { } {You reach a narrow chamber, relatively hidden from your line of sight in the main room. The chamber is only about ten feet long and about five feed wide at the widest point. At the end of the chamber, you see a chest tucked between a boulder and a group of stalagmites growing along the northern wall. There are more bones on the way to the chest. } {Ultima Online} {} {} {} {1.000} {}
+R {11908} {0} {} {In a narrow chamber (ne)} { } {You reach a narrow chamber, relatively hidden from your line of sight in the main room. The chamber is only about ten feet long and about five feed wide at the widest point. At the end of the chamber, you see a chest tucked between a boulder and a group of stalagmites growing along the northern wall. There are more bones on the way to the chest. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11907} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {11909} {0} {} {At an intersection (e,sw,n)} { } {The passage comes to an intersection here. The path running east-west is long and narrow. There are stalagmites in the middle of the path to the east, blocking your view from that direction. To the west, you can see the shore line again. There is a small outlet with a purple stone altar tucked away next to a small group of stalagmites. } {Ultima Online} {} {} {} {1.000} {}
+R {11909} {0} {} {At an intersection (e,sw,n)} { } {The passage comes to an intersection here. The path running east-west is long and narrow. There are stalagmites in the middle of the path to the east, blocking your view from that direction. To the west, you can see the shore line again. There is a small outlet with a purple stone altar tucked away next to a small group of stalagmites. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11904} {e} {e} {2} {0} {} {1.000} {}
 E {11910} {sw} {sw} {12} {0} {} {1.000} {}
 E {12572} {n} {n} {1} {0} {} {1.000} {}
 
-R {11910} {0} {} {On the shore, near a bridge (se,ne)} { } {The path through the rock walls curves to the southwest and you can hear the water lapping up against the sides of the shore. You can see another long bridge from here, and it looks like you will be able to reach it by continuing further to the southeast. The water seems tranquil here, but the river is too wide to cross with magic. You will have to take the bridge if you want to continue deeper into the dungeon. } {Ultima Online} {} {} {} {1.000} {}
+R {11910} {0} {} {On the shore, near a bridge (se,ne)} { } {The path through the rock walls curves to the southwest and you can hear the water lapping up against the sides of the shore. You can see another long bridge from here, and it looks like you will be able to reach it by continuing further to the southeast. The water seems tranquil here, but the river is too wide to cross with magic. You will have to take the bridge if you want to continue deeper into the dungeon. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11909} {ne} {ne} {3} {0} {} {1.000} {}
 E {11911} {se} {se} {6} {0} {} {1.000} {}
 
-R {11911} {0} {} {On the shore, near a bridge (nw,e)} { } {The path continues around a large outcropping of rock toward the east. Your sight of the bridge is blocked at this point, but you can still see the shore of the river from here. There are stalagmites against the northern wall, but otherwise this area is relatively unremarkable. It's refreshing to see no evidence of blood or bones here. } {Ultima Online} {} {} {} {1.000} {}
+R {11911} {0} {} {On the shore, near a bridge (nw,e)} { } {The path continues around a large outcropping of rock toward the east. Your sight of the bridge is blocked at this point, but you can still see the shore of the river from here. There are stalagmites against the northern wall, but otherwise this area is relatively unremarkable. It's refreshing to see no evidence of blood or bones here. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11910} {nw} {nw} {9} {0} {} {1.000} {}
 E {11912} {e} {e} {2} {0} {} {1.000} {}
 
-R {11912} {0} {} {Approaching a bridge (s,w)} { } {As you follow the path around the outcropping of rock, you see the bridge coming up in the distance. The river appears to stop as it comes up to the eastern wall, but the water probably continues underneath the visible rock. There is still no evidence of battle here, but you see a large entity seemingly protecting the bridge. There are also stalagmites against the northern wall, and right next to the start of the bridge. } {Ultima Online} {} {} {} {1.000} {}
+R {11912} {0} {} {Approaching a bridge (s,w)} { } {As you follow the path around the outcropping of rock, you see the bridge coming up in the distance. The river appears to stop as it comes up to the eastern wall, but the water probably continues underneath the visible rock. There is still no evidence of battle here, but you see a large entity seemingly protecting the bridge. There are also stalagmites against the northern wall, and right next to the start of the bridge. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11911} {w} {w} {8} {0} {} {1.000} {}
 E {11913} {s} {s} {4} {0} {} {1.000} {}
 
-R {11913} {0} {} {At the beginning of the bridge (n,w)} { } {This long and narrow bridge would be a great spot for a guardian to prevent access to whatever may be on the other side. It would be very hard indeed to pass by unnoticed. The bridge is very long and crosses over to another island. The water looks relatively calm here. } {Ultima Online} {} {} {} {1.000} {}
+R {11913} {0} {} {At the beginning of the bridge (n,w)} { } {This long and narrow bridge would be a great spot for a guardian to prevent access to whatever may be on the other side. It would be very hard indeed to pass by unnoticed. The bridge is very long and crosses over to another island. The water looks relatively calm here. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11912} {n} {n} {1} {0} {} {1.000} {}
 E {11914} {w} {w} {8} {0} {} {1.000} {}
 
-R {11914} {0} {} {In the middle of the bridge (e,w)} { } {You are standing right over the middle of the river at this point and can make out large shapes moving under the water. Hopefully the water will remain calm as you continue your crossing. } {Ultima Online} {} {} {} {1.000} {}
+R {11914} {0} {} {In the middle of the bridge (e,w)} { } {You are standing right over the middle of the river at this point and can make out large shapes moving under the water. Hopefully the water will remain calm as you continue your crossing. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11913} {e} {e} {2} {0} {} {1.000} {}
 E {11915} {w} {w} {8} {0} {} {1.000} {}
 
-R {11915} {0} {} {On the western shore (e,w)} { } {The bridge connects to the western shore here. The shore is hardly larger than the width of the bridge on this end, and only narrows further into a small passageway. The passage continues for some distance, but you can make out another bend up ahead. } {Ultima Online} {} {} {} {1.000} {}
+R {11915} {0} {} {On the western shore (e,w)} { } {The bridge connects to the western shore here. The shore is hardly larger than the width of the bridge on this end, and only narrows further into a small passageway. The passage continues for some distance, but you can make out another bend up ahead. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11914} {e} {e} {2} {0} {} {1.000} {}
 E {11916} {w} {w} {8} {0} {} {1.000} {}
 
-R {11916} {0} {} {In a narrow passage (w,e)} { } {The passage continues to get more narrow, and you can see a pile of bones has washed up here. The path begins to descend, and it seems to diverge to the north further ahead. You feel like you're getting close to another source of magical power. } {Ultima Online} {} {} {} {1.000} {}
+R {11916} {0} {} {In a narrow passage (w,e)} { } {The passage continues to get more narrow, and you can see a pile of bones has washed up here. The path begins to descend, and it seems to diverge to the north further ahead. You feel like you're getting close to another source of magical power. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11915} {e} {e} {2} {0} {} {1.000} {}
 E {11917} {w} {w} {8} {0} {} {1.000} {}
 
-R {11917} {0} {} {In a narrow passage (w,e)} { } {The passage continues further to the west, and you can hear a faint humming coming through the walls. There are various humanoid bones tossed around on the ground here. You can make out a spine, a pelvis, a ribcage, and even a skull in one place.  } {Ultima Online} {} {} {} {1.000} {}
+R {11917} {0} {} {In a narrow passage (w,e)} { } {The passage continues further to the west, and you can hear a faint humming coming through the walls. There are various humanoid bones tossed around on the ground here. You can make out a spine, a pelvis, a ribcage, and even a skull in one place.  } {Ultima Online 2} {} {} {} {1.000} {}
 E {11916} {e} {e} {2} {0} {} {1.000} {}
 E {11918} {w} {w} {8} {0} {} {1.000} {}
 
-R {11918} {0} {} {In a narrow passage (e,n)} { } {The path you have been following takes a sharp turn to the north. Up ahead, you can make out a short passage that turns again toward the east. It seems like this path has been carved out from the cave to hide a room deeper in. } {Ultima Online} {} {} {} {1.000} {}
+R {11918} {0} {} {In a narrow passage (e,n)} { } {The path you have been following takes a sharp turn to the north. Up ahead, you can make out a short passage that turns again toward the east. It seems like this path has been carved out from the cave to hide a room deeper in. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11917} {e} {e} {2} {0} {} {1.000} {}
 E {11919} {n} {n} {1} {0} {} {1.000} {}
 
-R {11919} {0} {} {In a narrow passage (n,s)} { } {As you start heading north, the path widens to roughly ten feet ahead of you. There are large collections of stalagmites here again, and you can make out pools of blood across from the first set of stalagmites. There may be some aggressive entities nearby, protecting whatever may be up ahead. } {Ultima Online} {} {} {} {1.000} {}
+R {11919} {0} {} {In a narrow passage (n,s)} { } {As you start heading north, the path widens to roughly ten feet ahead of you. There are large collections of stalagmites here again, and you can make out pools of blood across from the first set of stalagmites. There may be some aggressive entities nearby, protecting whatever may be up ahead. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11918} {s} {s} {4} {0} {} {1.000} {}
 E {11920} {n} {n} {1} {0} {} {1.000} {}
 
-R {11920} {0} {} {In a narrow passage (s,e)} { } {The path takes another turn to the east, leaving you with the option to continue deeper into the dungeon or start your way back out to the south. There is a large cluster of tall stalagmites in the center of the path here. Ahead to the east, you can see the shore line once again. } {Ultima Online} {} {} {} {1.000} {}
+R {11920} {0} {} {In a narrow passage (s,e)} { } {The path takes another turn to the east, leaving you with the option to continue deeper into the dungeon or start your way back out to the south. There is a large cluster of tall stalagmites in the center of the path here. Ahead to the east, you can see the shore line once again. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11919} {s} {s} {4} {0} {} {1.000} {}
 E {11921} {e} {e} {2} {0} {} {1.000} {}
 
-R {11921} {0} {} {Approaching the shore (w,e)} { } {The path is narrow and uneventful here. The ground is mostly yellow clay and packed tight. The walls are smooth, steep, and close together. The only relief to this oppressive cave is seeing the shore line up ahead. The water may not be entirely safe, but at least you can see further than ten feet in front of you. } {Ultima Online} {} {} {} {1.000} {}
+R {11921} {0} {} {Approaching the shore (w,e)} { } {The path is narrow and uneventful here. The ground is mostly yellow clay and packed tight. The walls are smooth, steep, and close together. The only relief to this oppressive cave is seeing the shore line up ahead. The water may not be entirely safe, but at least you can see further than ten feet in front of you. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11920} {w} {w} {8} {0} {} {1.000} {}
 E {11922} {e} {e} {2} {0} {} {1.000} {}
 
-R {11922} {0} {} {Along the shore (s,w)} { } {You reach the shore once again, and you can just barely make out the bridge and the purple altar on the other side. The shore line is not very long here, but it continues to the south. The water is calm here, but occasionally you see a huge shape speeding along silently. } {Ultima Online} {} {} {} {1.000} {}
+R {11922} {0} {} {Along the shore (s,w)} { } {You reach the shore once again, and you can just barely make out the bridge and the purple altar on the other side. The shore line is not very long here, but it continues to the south. The water is calm here, but occasionally you see a huge shape speeding along silently. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11921} {w} {w} {8} {0} {} {1.000} {}
 E {11923} {s} {s} {4} {0} {} {1.000} {}
 
-R {11923} {0} {} {Along the shore (n,w)} { } {The shore line comes to an abrupt end here as it meets with another towering rock wall. You can see across to the other shore, as well as a long bridge further to the east. A small chamber is carved out of the rock wall to the west, and you can see a stone platform with a portal hanging in mid-air. } {Ultima Online} {} {} {} {1.000} {}
+R {11923} {0} {} {Along the shore (n,w)} { } {The shore line comes to an abrupt end here as it meets with another towering rock wall. You can see across to the other shore, as well as a long bridge further to the east. A small chamber is carved out of the rock wall to the west, and you can see a stone platform with a portal hanging in mid-air. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11922} {n} {n} {1} {0} {} {1.000} {}
 E {11924} {w} {w} {8} {0} {} {1.000} {}
 
-R {11924} {0} {} {In front of a floating portal (e,portal)} { } {There is a large platform of stone bricks in the corner of this cut-out. Floating above the platform is another shimmering blue portal. Based on your previous experience, this portal will probably take you to another location in this dungeon. } {Ultima Online} {} {} {} {1.000} {}
+R {11924} {0} {} {In front of a floating portal (e,portal)} { } {There is a large platform of stone bricks in the corner of this cut-out. Floating above the platform is another shimmering blue portal. Based on your previous experience, this portal will probably take you to another location in this dungeon. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11923} {e} {e} {2} {0} {} {1.000} {}
 E {12027} {portal} {portal} {0} {0} {} {1.000} {}
 
@@ -56658,7 +56671,7 @@ E {11949} {n} {n} {1} {0} {} {1.000} {}
 R {11939} {0} {} {A dead end (n)} { } {As you continue down the path, you see a grouping of stalagmites and large rocks in the center of the room. As you peer through the stalagmites, you see a wooden chest resting behind them. The path comes to an end here. This would probably be a good place to mine some iron ore in peace. } {Ultima Online 1} {} {} {} {1.000} {}
 E {11890} {n} {n} {1} {0} {} {1.000} {}
 
-R {11940} {0} {} {A miner's camp (nw)} { } {You have reached another small cut-out where the miners must have been busy. There are two sets of bed rolls set up along the northern wall and a campfire with a cooking stand set up over it between them. There is also a tub filled with dark gray dye resting near the bed rolls. In the southern corner, there is a group of multi-colored stalagmites covered in spider webs. Near the stalagmites there are several barrels as well as a wooden chest hiding in the back. } {Ultima Online} {} {} {} {1.000} {}
+R {11940} {0} {} {A miner's camp (nw)} { } {You have reached another small cut-out where the miners must have been busy. There are two sets of bed rolls set up along the northern wall and a campfire with a cooking stand set up over it between them. There is also a tub filled with dark gray dye resting near the bed rolls. In the southern corner, there is a group of multi-colored stalagmites covered in spider webs. Near the stalagmites there are several barrels as well as a wooden chest hiding in the back. } {Ultima Online 1} {} {} {} {1.000} {}
 E {11931} {nw} {nw} {9} {0} {} {1.000} {}
 
 R {11941} {0} {} {Deeper into the dungeon (se,w)} { } {There is a section of rock cut out from the northern wall here, forming a large rounded area. There must have been a lode of resources here at some point, but now nothing remains but stalagmites and large rocks. You can see the path getting brighter ahead. There must be some source of light further down this path. } {Ultima Online 1} {} {} {} {1.000} {}
@@ -56669,28 +56682,28 @@ R {11942} {0} {} {Close to the blue light (nw,e)} { } {There is a huge group of 
 E {11941} {nw} {nw} {9} {0} {} {1.000} {}
 E {11898} {e} {e} {2} {0} {} {1.000} {}
 
-R {11943} {0} {} {Along the northern shore (e,nw,s,w)} { } {The shore line continues further to the northwest. There is a large camp site in that direction, and you recognize the land from before you crossed the bridge. The path continues to the west and the south. } {Ultima Online} {} {} {} {1.000} {}
+R {11943} {0} {} {Along the northern shore (e,nw,s,w)} { } {The shore line continues further to the northwest. There is a large camp site in that direction, and you recognize the land from before you crossed the bridge. The path continues to the west and the south. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11901} {e} {e} {2} {0} {} {1.000} {}
 E {11944} {nw} {nw} {9} {0} {} {1.000} {}
 E {11946} {s} {s} {4} {0} {} {1.000} {}
 E {12570} {w} {w} {8} {0} {} {1.000} {}
 
-R {11944} {0} {} {Along the northern shore (se,w)} { } {The shore line continues further to the west. There is a large camp site here, sprawling west across the end of the shore. There is a campfire with a huge cauldron over it in the center of the site, and several bed rolls spread out near it. You can make out large shapes moving in the water. } {Ultima Online} {} {} {} {1.000} {}
+R {11944} {0} {} {Along the northern shore (se,w)} { } {The shore line continues further to the west. There is a large camp site here, sprawling west across the end of the shore. There is a campfire with a huge cauldron over it in the center of the site, and several bed rolls spread out near it. You can make out large shapes moving in the water. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11943} {se} {se} {6} {0} {} {1.000} {}
 E {11945} {w} {w} {8} {0} {} {1.000} {}
 
-R {11945} {0} {} {Along the northern shore (e)} { } {There is a large camp site here, which continues further to the east. There are more bed rolls on this side of the camp site, as well as random bits of garbage left on the ground and an old wooden chest. You can make out shapes moving both underneath and above the water from here. } {Ultima Online} {} {} {} {1.000} {}
+R {11945} {0} {} {Along the northern shore (e)} { } {There is a large camp site here, which continues further to the east. There are more bed rolls on this side of the camp site, as well as random bits of garbage left on the ground and an old wooden chest. You can make out shapes moving both underneath and above the water from here. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11944} {e} {e} {2} {0} {} {1.000} {}
 
-R {11946} {0} {} {In a narrow passage (s,n)} { } {The narrow passage curves around a large sloping rock wall. There is not much of interest here, but this seems to serve as an easy path through the rock. You can make out an intersection up ahead. } {Ultima Online} {} {} {} {1.000} {}
+R {11946} {0} {} {In a narrow passage (s,n)} { } {The narrow passage curves around a large sloping rock wall. There is not much of interest here, but this seems to serve as an easy path through the rock. You can make out an intersection up ahead. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11943} {n} {n} {1} {0} {} {1.000} {}
 E {12572} {s} {s} {4} {0} {} {1.000} {}
 
-R {11947} {0} {} {A shortcut (se,n)} { } {Blood is splattered all over the floor, and you can make out several piles of bones poking out of the clay floor. There are half a dozen empty kegs near a group of stalagmites to the south, and more barrels packed against stalagmites to the west. The walls are very rough as if mining had started, but there is still plenty of metal gleaming in the rocks. The mining operation must have been interrupted here. } {Ultima Online} {} {} {} {1.000} {}
+R {11947} {0} {} {A shortcut (se,n)} { } {Blood is splattered all over the floor, and you can make out several piles of bones poking out of the clay floor. There are half a dozen empty kegs near a group of stalagmites to the south, and more barrels packed against stalagmites to the west. The walls are very rough as if mining had started, but there is still plenty of metal gleaming in the rocks. The mining operation must have been interrupted here. } {Ultima Online 1} {} {} {} {1.000} {}
 E {11925} {n} {n} {1} {0} {} {1.000} {}
 E {11948} {se} {se} {6} {0} {} {1.000} {}
 
-R {11948} {0} {} {A shortcut (nw,e)} { } {The path opens up to a large camp site in what is likely the center of this cave system. There are at least half a dozen piles of bones on the ground, mixed in with garbage and equipment. Against the northern wall, there is a pile of bed rolls, a lantern, and an orange backpack hidden by a large group of stalagmites, rocks, and barrels. Maybe someone was trying to hide their camp site, but they were clearly unsuccessful. } {Ultima Online} {} {} {} {1.000} {}
+R {11948} {0} {} {A shortcut (nw,e)} { } {The path opens up to a large camp site in what is likely the center of this cave system. There are at least half a dozen piles of bones on the ground, mixed in with garbage and equipment. Against the northern wall, there is a pile of bed rolls, a lantern, and an orange backpack hidden by a large group of stalagmites, rocks, and barrels. Maybe someone was trying to hide their camp site, but they were clearly unsuccessful. } {Ultima Online 1} {} {} {} {1.000} {}
 E {11947} {nw} {nw} {9} {0} {} {1.000} {}
 E {11931} {e} {e} {2} {0} {} {1.000} {}
 
@@ -57053,40 +57066,40 @@ R {12026} {0} {} {Octopus Garden (s,w)} { } {Creatures of all shapes and sizes l
 E {12025} {w} {w} {8} {0} {} {1.000} {}
 E {12017} {s} {s} {4} {0} {} {1.000} {}
 
-R {12027} {0} {} {In front of a portal (e,portal)} { } {You are in a small square chamber with a pale blue portal suspended above a stone platform. The tunnel ahead of you continues north and south, but you cannot make out any detail from here.  } {Ultima Online} {uo3} {} {} {1.000} {}
+R {12027} {0} {} {In front of a portal (e,portal)} { } {You are in a small square chamber with a pale blue portal suspended above a stone platform. The tunnel ahead of you continues north and south, but you cannot make out any detail from here.  } {Ultima Online 3} {uo3} {} {} {1.000} {}
 E {11924} {portal} {portal} {0} {0} {} {1.000} {}
 E {12028} {e} {e} {2} {0} {} {1.000} {}
 
-R {12028} {0} {} {In a narrow tunnel (s,w,n)} { } {The tunnel is narrow and fairly dark without the light from the portal. You can make out stalagmites and large rocks nearby, and you can hear sounds coming from all over. The tunnel continues north and south, while the portal lays west. } {Ultima Online} {} {} {} {1.000} {}
+R {12028} {0} {} {In a narrow tunnel (s,w,n)} { } {The tunnel is narrow and fairly dark without the light from the portal. You can make out stalagmites and large rocks nearby, and you can hear sounds coming from all over. The tunnel continues north and south, while the portal lays west. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12027} {w} {w} {8} {0} {} {1.000} {}
 E {12029} {n} {n} {1} {0} {} {1.000} {}
 E {12457} {s} {s} {4} {0} {} {1.000} {}
 
-R {12029} {0} {} {In a cavern (n,s)} { } {The tunnel is narrow and dark here. The portal you entered from lies due south, and this tunnel continues further north. Light is shining in from the west up ahead, and the cavern probably opens up in that direction. } {Ultima Online} {} {} {} {1.000} {}
+R {12029} {0} {} {In a cavern (n,s)} { } {The tunnel is narrow and dark here. The portal you entered from lies due south, and this tunnel continues further north. Light is shining in from the west up ahead, and the cavern probably opens up in that direction. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12028} {s} {s} {4} {0} {} {1.000} {}
 E {12030} {n} {n} {1} {0} {} {1.000} {}
 
-R {12030} {0} {} {In a cavern (w,s,n)} { } {The tunnel continues north-south, and also opens up to a large cavern due west. You can smell water from that direction as well. The air currents are unusually warm here.  } {Ultima Online} {} {} {} {1.000} {}
+R {12030} {0} {} {In a cavern (w,s,n)} { } {The tunnel continues north-south, and also opens up to a large cavern due west. You can smell water from that direction as well. The air currents are unusually warm here.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12029} {s} {s} {4} {0} {} {1.000} {}
 E {12031} {w} {w} {8} {0} {} {1.000} {}
 E {12035} {n} {n} {1} {0} {} {1.000} {}
 
-R {12031} {0} {} {In a cavern (e,n,w)} { } {The entrance tunnel leading back to the portal lies due east, and the cavern opens up to a much larger space to the northwest. You cannot make out much detail in the dim light, but seeing the large open space ahead of you brings with it a sense of relief.  } {Ultima Online} {} {} {} {1.000} {}
+R {12031} {0} {} {In a cavern (e,n,w)} { } {The entrance tunnel leading back to the portal lies due east, and the cavern opens up to a much larger space to the northwest. You cannot make out much detail in the dim light, but seeing the large open space ahead of you brings with it a sense of relief.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12030} {e} {e} {2} {0} {} {1.000} {}
 E {12032} {n} {n} {1} {0} {} {1.000} {}
 E {12034} {w} {w} {8} {0} {} {1.000} {}
 
-R {12032} {0} {} {In a cavern (w,s)} { } {You are standing along the northern wall of a small chamber, which seems to continue into a much larger chamber to the west. You can smell the familiar scent of the underground river wafting in from the northwest.  } {Ultima Online} {} {} {} {1.000} {}
+R {12032} {0} {} {In a cavern (w,s)} { } {You are standing along the northern wall of a small chamber, which seems to continue into a much larger chamber to the west. You can smell the familiar scent of the underground river wafting in from the northwest.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12031} {s} {s} {4} {0} {} {1.000} {}
 E {12033} {w} {w} {8} {0} {} {1.000} {}
 
-R {12033} {0} {} {In a cavern (e,w,s,n)} { } {The chamber opens to an even larger space, with a large body of water north of here. You can barely make out the western wall of the cavern in the darkness, but it must be at least eighty feet away from here. The size of this cavern is awe inspiring.  } {Ultima Online} {} {} {} {1.000} {}
+R {12033} {0} {} {In a cavern (e,w,s,n)} { } {The chamber opens to an even larger space, with a large body of water north of here. You can barely make out the western wall of the cavern in the darkness, but it must be at least eighty feet away from here. The size of this cavern is awe inspiring.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12032} {e} {e} {2} {0} {} {1.000} {}
 E {12034} {s} {s} {4} {0} {} {1.000} {}
 E {12486} {w} {w} {8} {0} {} {1.000} {}
 E {12487} {n} {n} {1} {0} {} {1.000} {}
 
-R {12034} {0} {} {In a cavern (e,n)} { } {You stand in the southwest corner of a small cavern, with the ceiling only ten or twelve feet above you. There is a small cluster of stalagmites growing in the center of the cavern here. The entrance tunnel leading back to the portal lies due east, and the cavern opens up to a much larger space to the northwest.  } {Ultima Online} {} {} {} {1.000} {}
+R {12034} {0} {} {In a cavern (e,n)} { } {You stand in the southwest corner of a small cavern, with the ceiling only ten or twelve feet above you. There is a small cluster of stalagmites growing in the center of the cavern here. The entrance tunnel leading back to the portal lies due east, and the cavern opens up to a much larger space to the northwest.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12033} {n} {n} {1} {0} {} {1.000} {}
 E {12031} {e} {e} {2} {0} {} {1.000} {}
 
@@ -58837,138 +58850,153 @@ E {12456} {e} {e} {2} {0} {} {1.000} {}
 R {12456} {0} {} {Aegis Global - Level 3 (w)} { } {This was probably an elegant bathroom at one point in time, but little remains of it now.  The vanity is scorched black and the mirror above it is marred by hundreds of cracks.  The toilet is relatively whole, although covered in ash and soot.  The tub next to the toilet is also littered with ash along with plastic debris from the ruined light fixtures overhead. } {Aegis Global - Level 3} {} {} {} {1.000} {}
 E {12455} {w} {w} {8} {0} {} {1.000} {}
 
-R {12457} {0} {} {In a narrow tunnel (n,s)} { } {The tunnel is narrow and dark here. You can make out the shapes of stalagmites and large rocks nearby. You can hear a variety of strange sounds, but it's impossible to tell where they are coming from. The air feels unusually warm here. } {Ultima Online} {} {} {} {1.000} {}
+R {12457} {0} {} {In a narrow tunnel (n,s)} { } {The tunnel is narrow and dark here. You can make out the shapes of stalagmites and large rocks nearby. You can hear a variety of strange sounds, but it's impossible to tell where they are coming from. The air feels unusually warm here. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12028} {n} {n} {1} {0} {} {1.000} {}
 E {12458} {s} {s} {4} {0} {} {1.000} {}
 
-R {12458} {0} {} {In a narrow tunnel (w,n)} { } {The tunnel is narrow and dimly lit here. You can hear a variety of strange sounds coming from the west. The tunnel continues west, and you can make out a light ahead of you.  } {Ultima Online} {} {} {} {1.000} {}
+R {12458} {0} {} {In a narrow tunnel (w,n)} { } {The tunnel is narrow and dimly lit here. You can hear a variety of strange sounds coming from the west. The tunnel continues west, and you can make out a light ahead of you.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12457} {n} {n} {1} {0} {} {1.000} {}
 E {12459} {w} {w} {8} {0} {} {1.000} {}
 
-R {12459} {0} {} {In a narrow tunnel (w,e)} { } {The tunnel is narrow and jagged here. You can make out the shapes of large rocks nearby. You can hear a variety of strange sounds from the west, and the light appears to be moving. } {Ultima Online} {} {} {} {1.000} {}
+R {12459} {0} {} {In a narrow tunnel (w,e)} { } {The tunnel is narrow and jagged here. You can make out the shapes of large rocks nearby. You can hear a variety of strange sounds from the west, and the light appears to be moving. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12458} {e} {e} {2} {0} {} {1.000} {}
 E {12460} {w} {w} {8} {0} {} {1.000} {}
 
-R {12460} {0} {} {In a narrow tunnel (se,e)} { } {The tunnel is narrow here, and continues either east or southeast. There are stalagmites and large rocks throughout the tunnel, and the air feels unusually warm here. } {Ultima Online} {} {} {} {1.000} {}
+R {12460} {0} {} {In a narrow tunnel (se,e)} { } {The tunnel is narrow here, and continues either east or southeast. There are stalagmites and large rocks throughout the tunnel, and the air feels unusually warm here. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12459} {e} {e} {2} {0} {} {1.000} {}
 E {12461} {se} {se} {6} {0} {} {1.000} {}
 
-R {12461} {0} {} {In a narrow tunnel (se,nw)} { } {The tunnel is narrow and dimly lit here. You can make out the shapes of large rocks nearby. You can hear a variety of strange sounds, but the sounds are bouncing off the large rocks and tunnel walls, making it impossible to determine their origin. } {Ultima Online} {} {} {} {1.000} {}
+R {12461} {0} {} {In a narrow tunnel (se,nw)} { } {The tunnel is narrow and dimly lit here. You can make out the shapes of large rocks nearby. You can hear a variety of strange sounds, but the sounds are bouncing off the large rocks and tunnel walls, making it impossible to determine their origin. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12460} {nw} {nw} {9} {0} {} {1.000} {}
 E {12462} {se} {se} {6} {0} {} {1.000} {}
 
-R {12462} {0} {} {In a narrow tunnel (nw,s)} { } {The tunnel is narrow and brightly lit here. You can make out the shapes of stalagmites and large rocks nearby. At times, it sounds like a roaring furnace in this room. The air feels unusually warm here. } {Ultima Online} {} {} {} {1.000} {}
+R {12462} {0} {} {In a narrow tunnel (nw,s)} { } {The tunnel is narrow and brightly lit here. You can make out the shapes of stalagmites and large rocks nearby. At times, it sounds like a roaring furnace in this room. The air feels unusually warm here. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12461} {nw} {nw} {9} {0} {} {1.000} {}
 E {12463} {s} {s} {4} {0} {} {1.000} {}
 
-R {12463} {0} {} {In a narrow tunnel (s,n)} { } {The tunnel is narrow and dimly lit here. You can make out the shapes of stalagmites along the ground, and you can hear sounds coming from both directions. The hard surfaces of the walls may be reflecting sounds from deeper in either direction. } {Ultima Online} {} {} {} {1.000} {}
+R {12463} {0} {} {In a narrow tunnel (s,n)} { } {The tunnel is narrow and dimly lit here. You can make out the shapes of stalagmites along the ground, and you can hear sounds coming from both directions. The hard surfaces of the walls may be reflecting sounds from deeper in either direction. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12462} {n} {n} {1} {0} {} {1.000} {}
 E {12464} {s} {s} {4} {0} {} {1.000} {}
 
-R {12464} {0} {} {In a narrow tunnel (s,n)} { } {The tunnel is narrow and dark here, and it seems to continue further south for quite a distance. There are several brightly moving shapes visible ahead of you, but you can only guess as to what they may be. You hear a variety of strange sounds, but it's difficult to tell which direction they are coming from. } {Ultima Online} {} {} {} {1.000} {}
+R {12464} {0} {} {In a narrow tunnel (s,n)} { } {The tunnel is narrow and dark here, and it seems to continue further south for quite a distance. There are several brightly moving shapes visible ahead of you, but you can only guess as to what they may be. You hear a variety of strange sounds, but it's difficult to tell which direction they are coming from. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12463} {n} {n} {1} {0} {} {1.000} {}
 E {12465} {s} {s} {4} {0} {} {1.000} {}
 
-R {12465} {0} {} {In a narrow tunnel (n,s)} { } {The tunnel is narrow and brightly lit here. You can make out the shapes of stalagmites and large rocks nearby. Occasionally, you hear something that sounds like a roaring fireplace or furnace. The air feels unusually warm here. } {Ultima Online} {} {} {} {1.000} {}
+R {12465} {0} {} {In a narrow tunnel (n,s)} { } {The tunnel is narrow and brightly lit here. You can make out the shapes of stalagmites and large rocks nearby. Occasionally, you hear something that sounds like a roaring fireplace or furnace. The air feels unusually warm here. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12464} {n} {n} {1} {0} {} {1.000} {}
 E {12466} {s} {s} {4} {0} {} {1.000} {}
 
-R {12466} {0} {} {In a narrow tunnel (s,n)} { } {The tunnel is narrow and dimly lit here. It feels like this tunnel continues on forever, but as you look in both directions, you can tell that you are about half-way through the current stretch. The air in the tunnel feels unnaturally warm through this corridor. } {Ultima Online} {} {} {} {1.000} {}
+R {12466} {0} {} {In a narrow tunnel (s,n)} { } {The tunnel is narrow and dimly lit here. It feels like this tunnel continues on forever, but as you look in both directions, you can tell that you are about half-way through the current stretch. The air in the tunnel feels unnaturally warm through this corridor. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12465} {n} {n} {1} {0} {} {1.000} {}
 E {12467} {s} {s} {4} {0} {} {1.000} {}
 
-R {12467} {0} {} {In a narrow tunnel (s,n)} { } {The tunnel is narrow and dimly lit here. You can make out the shapes of large rocks nearby, and occasionally hear sounds bouncing off the rocks and walls. Occasionally, you feel a gust of warm air wash over you and hear something that reminds you of a roaring fire. } {Ultima Online} {} {} {} {1.000} {}
+R {12467} {0} {} {In a narrow tunnel (s,n)} { } {The tunnel is narrow and dimly lit here. You can make out the shapes of large rocks nearby, and occasionally hear sounds bouncing off the rocks and walls. Occasionally, you feel a gust of warm air wash over you and hear something that reminds you of a roaring fire. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12466} {n} {n} {1} {0} {} {1.000} {}
 E {12468} {s} {s} {4} {0} {} {1.000} {}
 
-R {12468} {0} {} {In a narrow tunnel (n,s)} { } {The tunnel is narrow and brightly lit here. You can make out the shapes of stalagmites and large rocks nearby. You can hear a variety of strange sounds, but it's impossible to tell where they are coming from. The air feels unusually warm here.  } {Ultima Online} {} {} {} {1.000} {}
+R {12468} {0} {} {In a narrow tunnel (n,s)} { } {The tunnel is narrow and brightly lit here. You can make out the shapes of stalagmites and large rocks nearby. You can hear a variety of strange sounds, but it's impossible to tell where they are coming from. The air feels unusually warm here.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12467} {n} {n} {1} {0} {} {1.000} {}
 E {12469} {s} {s} {4} {0} {} {1.000} {}
 
-R {12469} {0} {} {In a narrow tunnel (n,w)} { } {The tunnel is narrow and dimly lit here, with a sharp turn to the west. You can make out stalagmites and large rocks nearby. You can hear a variety of unfamiliar sounds coming from the west, and see that this tunnel continues for a long stretch north.  } {Ultima Online} {} {} {} {1.000} {}
+R {12469} {0} {} {In a narrow tunnel (n,w)} { } {The tunnel is narrow and dimly lit here, with a sharp turn to the west. You can make out stalagmites and large rocks nearby. You can hear a variety of unfamiliar sounds coming from the west, and see that this tunnel continues for a long stretch north.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12468} {n} {n} {1} {0} {} {1.000} {}
 E {12470} {w} {w} {8} {0} {} {1.000} {}
 
-R {12470} {0} {} {In a narrow tunnel (w,e)} { } {The tunnel is narrow and dark here. You can make out the shapes of stalagmites and large rocks nearby. You hear a variety of unfamiliar sounds coming from the west, and see a T-fork in the tunnel up ahead. } {Ultima Online} {} {} {} {1.000} {}
+R {12470} {0} {} {In a narrow tunnel (w,e)} { } {The tunnel is narrow and dark here. You can make out the shapes of stalagmites and large rocks nearby. You hear a variety of unfamiliar sounds coming from the west, and see a T-fork in the tunnel up ahead. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12469} {e} {e} {2} {0} {} {1.000} {}
 E {12471} {w} {w} {8} {0} {} {1.000} {}
 
-R {12471} {0} {} {Approaching a clearing (e,w,s)} { } {The tunnel toward the east is narrow and dark, and opens up to the west and south. You can make out the shapes of stalagmites and large rocks nearby, and feel a slight breeze coming from the west. You can hear a variety of strange sounds coming from all directions here. } {Ultima Online} {} {} {} {1.000} {}
+R {12471} {0} {} {Approaching a clearing (e,w,s)} { } {The tunnel toward the east is narrow and dark, and opens up to the west and south. You can make out the shapes of stalagmites and large rocks nearby, and feel a slight breeze coming from the west. You can hear a variety of strange sounds coming from all directions here. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12470} {e} {e} {2} {0} {} {1.000} {}
 E {12472} {w} {w} {8} {0} {} {1.000} {}
 E {12473} {s} {s} {4} {0} {} {1.000} {}
 
-R {12472} {0} {} {Along the shore (e,w,s,n)} { } {You are traveling along the shore of an underground body of water. There is a large stone keep on an island in the middle, and the water flows out toward the northwest. The gusts of wind are extremely strong here. } {Ultima Online} {} {} {} {1.000} {}
+R {12472} {0} {} {Along the shore (e,w,s,n)} { } {You are traveling along the shore of an underground body of water. There is a large stone keep on an island in the middle, and the water flows out toward the northwest. The gusts of wind are extremely strong here. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12471} {e} {e} {2} {0} {} {1.000} {}
 E {12474} {w} {w} {8} {0} {} {1.000} {}
 E {12475} {s} {s} {4} {0} {} {1.000} {}
 E {12476} {n} {n} {1} {0} {} {1.000} {}
 
-R {12473} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {12473} {0} {} {Near a body of water (e,w,n)} { } {There is a large body of water to the northwest, and rough rock walls to the south. You can see stalagmites and large rocks on the ground nearby, and feel a strong breeze in this part of the cave. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12471} {n} {n} {1} {0} {} {1.000} {}
+E {13430} {e} {e} {2} {0} {} {1.000} {}
+E {12475} {w} {w} {8} {0} {} {1.000} {}
 
-R {12474} {0} {} {Along the shore (e,w,s)} { } {You are traveling along the shore of an underground body of water. There is a large stone keep on an island in the middle, and the water flows outward to the northwest. There appear to be tunnels in the walls on the western side of the cavern. } {Ultima Online} {} {} {} {1.000} {}
+R {12474} {0} {} {Along the shore (e,w,s)} { } {You are traveling along the shore of an underground body of water. There is a large stone keep on an island in the middle, and the water flows outward to the northwest. There appear to be tunnels in the walls on the western side of the cavern. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12472} {e} {e} {2} {0} {} {1.000} {}
 E {12477} {w} {w} {8} {0} {} {1.000} {}
 E {12478} {s} {s} {4} {0} {} {1.000} {}
 
-R {12475} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {12475} {0} {} {Near a body of water (w,s,e,n)} { } {There is a large body of water to the north, and rough rock walls to the south. You can see stalagmites on the ground here, and feel a strong breeze in this part of the cave.   } {Ultima Online 3} {} {} {} {1.000} {}
 E {12472} {n} {n} {1} {0} {} {1.000} {}
+E {12473} {e} {e} {2} {0} {} {1.000} {}
+E {12478} {w} {w} {8} {0} {} {1.000} {}
+E {13432} {s} {s} {4} {0} {} {1.000} {}
 
 R {12476} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {12472} {s} {s} {4} {0} {} {1.000} {}
 
-R {12477} {0} {} {Along the shore (e,w,s)} { } {You are traveling along the shore of an underground body of water. There is a large stone keep on an island in the middle, and the water flows out toward the northwest. You can see a small inlet along the northeastern shoreline from here, and small tunnels along the western walls. } {Ultima Online} {} {} {} {1.000} {}
+R {12477} {0} {} {Along the shore (e,w,s)} { } {You are traveling along the shore of an underground body of water. There is a large stone keep on an island in the middle, and the water flows out toward the northwest. You can see a small inlet along the northeastern shoreline from here, and small tunnels along the western walls. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12474} {e} {e} {2} {0} {} {1.000} {}
 E {12479} {w} {w} {8} {0} {} {1.000} {}
 E {12480} {s} {s} {4} {0} {} {1.000} {}
 
-R {12478} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {12478} {0} {} {Near a body of water (n,s,w,e)} { } {There is a large body of water to the north, and rough rock walls further south. You see a large structure on the center of an island in the water, and you can make out another shore behind it. There are large rocks on the ground nearby, and you feel a strong breeze in this part of the cave.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12474} {n} {n} {1} {0} {} {1.000} {}
+E {12475} {e} {e} {2} {0} {} {1.000} {}
+E {13433} {s} {s} {4} {0} {} {1.000} {}
+E {12480} {w} {w} {8} {0} {} {1.000} {}
 
-R {12479} {0} {} {Along the shore (e,n,s,w)} { } {You are traveling along the shore of an underground body of water. There is a large stone keep on an island in the middle, and the water flows out toward the northwest. There is a short bridge to the island here. The gusts of wind are extremely strong here. } {Ultima Online} {} {} {} {1.000} {}
+R {12479} {0} {} {Along the shore (e,n,s,w)} { } {You are traveling along the shore of an underground body of water. There is a large stone keep on an island in the middle, and the water flows out toward the northwest. There is a short bridge to the island here. The gusts of wind are extremely strong here. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12477} {e} {e} {2} {0} {} {1.000} {}
 E {12481} {n} {n} {1} {0} {} {1.000} {}
 E {12482} {s} {s} {4} {0} {} {1.000} {}
 E {12483} {w} {w} {8} {0} {} {1.000} {}
 
-R {12480} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {12480} {0} {} {Near a body of water (n,s,w,e)} { } {The cavern feels massive here, and you would probably lose your sense of space without the island to the north for reference. The only light present is coming from the tower, but it does little to illuminate your immediate surroundings. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12477} {n} {n} {1} {0} {} {1.000} {}
 E {12482} {w} {w} {8} {0} {} {1.000} {}
+E {12485} {s} {s} {4} {0} {} {1.000} {}
+E {12478} {e} {e} {2} {0} {} {1.000} {}
 
 R {12481} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {12479} {s} {s} {4} {0} {} {1.000} {}
 
-R {12482} {0} {} {Near a body of water (e,w,n,se)} { } {There is a large body of water to the north and you can make out a wooden bridge in the distance. The cavern is fairly open here, and the strong wind coming off the water brings a chill to your bones.  } {Ultima Online} {} {} {} {1.000} {}
+R {12482} {0} {} {Near a body of water (e,w,n,se)} { } {There is a large body of water to the north and you can make out a wooden bridge in the distance. The cavern is fairly open here, and the strong wind coming off the water brings a chill to your bones.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12479} {n} {n} {1} {0} {} {1.000} {}
 E {12480} {e} {e} {2} {0} {} {1.000} {}
 E {12484} {w} {w} {8} {0} {} {1.000} {}
 E {12485} {se} {se} {6} {0} {} {1.000} {}
 
-R {12483} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {12483} {0} {} {Along the shore (w,e,s)} { } {You are traveling along the shore of a large body of water. There is a large stone keep on an island in the center of the body of water, and the water continues to flow outward to the northwest. You can make out a small inlet across the water from here.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12479} {e} {e} {2} {0} {} {1.000} {}
+E {12484} {s} {s} {4} {0} {} {1.000} {}
+E {13434} {w} {w} {8} {0} {} {1.000} {}
 
-R {12484} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {12484} {0} {} {Near a body of water (n,e)} { } {There is a large body of water to the north, and rough rock walls to the south and west. You can see stalagmites and large rocks on the ground nearby, and feel a strong breeze in this part of the cave. You hear echoes of a watery sound coming through the walls here. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12482} {e} {e} {2} {0} {} {1.000} {}
+E {12483} {n} {n} {1} {0} {} {1.000} {}
 
-R {12485} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {12485} {0} {} {In a dark clearing (nw,e,n)} { } {The cavern is very dark here, with little light from the tower reaching this far. There are rough walls to the south, which lead east and northwest. You can see stalagmites and large rocks on the ground nearby, and feel extremely strong gusts of air coming from this part of the cave.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12482} {nw} {nw} {9} {0} {} {1.000} {}
+E {13433} {e} {e} {2} {0} {} {1.000} {}
+E {12480} {n} {n} {1} {0} {} {1.000} {}
 
-R {12486} {0} {} {In a cavern (e,w,n)} { } {You are traveling along the southern wall of a large open cavern. You can smell the familiar scent of the underground river to the north, and feel the slight chill it brings with it. There is large stone keep on an island to the north, and occasionally you sense that you are being watched. } {Ultima Online} {} {} {} {1.000} {}
+R {12486} {0} {} {In a cavern (e,w,n)} { } {You are traveling along the southern wall of a large open cavern. You can smell the familiar scent of the underground river to the north, and feel the slight chill it brings with it. There is large stone keep on an island to the north, and occasionally you sense that you are being watched. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12033} {e} {e} {2} {0} {} {1.000} {}
 E {12488} {w} {w} {8} {0} {} {1.000} {}
 E {12489} {n} {n} {1} {0} {} {1.000} {}
 
-R {12487} {0} {} {In a cavern (w,s)} { } {You have reached the craggy eastern wall of the cavern. The wall continues roughly northwest to the shore of the underground river, and southeast to the entrance tunnel.  } {Ultima Online} {} {} {} {1.000} {}
+R {12487} {0} {} {In a cavern (w,s)} { } {You have reached the craggy eastern wall of the cavern. The wall continues roughly northwest to the shore of the underground river, and southeast to the entrance tunnel.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12033} {s} {s} {4} {0} {} {1.000} {}
 E {12489} {w} {w} {8} {0} {} {1.000} {}
 
-R {12488} {0} {} {In a cavern (e,w,n)} { } {The southern wall continues east-west, and you appear to be roughly in the middle at this point. The underground river flows in from the southwest, around the island, and then back out of the same opening. The river must serve some purpose for the residents of the tower.  } {Ultima Online} {} {} {} {1.000} {}
+R {12488} {0} {} {In a cavern (e,w,n)} { } {The southern wall continues east-west, and you appear to be roughly in the middle at this point. The underground river flows in from the southwest, around the island, and then back out of the same opening. The river must serve some purpose for the residents of the tower.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12486} {e} {e} {2} {0} {} {1.000} {}
 E {12490} {w} {w} {8} {0} {} {1.000} {}
 E {12491} {n} {n} {1} {0} {} {1.000} {}
 
-R {12489} {0} {} {In a cavern (e,w,s,n)} { } {The shore line north of here continues into a large alcove, and appears to connect to another cavern behind the tower. You can also make out the tunnel leading back to the entrance portal to the southeast.  } {Ultima Online} {} {} {} {1.000} {}
+R {12489} {0} {} {In a cavern (e,w,s,n)} { } {The shore line north of here continues into a large alcove, and appears to connect to another cavern behind the tower. You can also make out the tunnel leading back to the entrance portal to the southeast.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12486} {s} {s} {4} {0} {} {1.000} {}
 E {12491} {w} {w} {8} {0} {} {1.000} {}
 E {12487} {e} {e} {2} {0} {} {1.000} {}
@@ -58979,7 +59007,7 @@ E {12488} {e} {e} {2} {0} {} {1.000} {}
 E {12492} {w} {w} {8} {0} {} {1.000} {}
 E {12493} {n} {n} {1} {0} {} {1.000} {}
 
-R {12491} {0} {} {In a cavern (e,w,s,n)} { } {This chamber must be at least eighty feet wide from wall to wall, and the ceiling is too far above you to even see. Constructing such a large stone tower down here must have required an incredible source of magical power. } {Ultima Online} {} {} {} {1.000} {}
+R {12491} {0} {} {In a cavern (e,w,s,n)} { } {This chamber must be at least eighty feet wide from wall to wall, and the ceiling is too far above you to even see. Constructing such a large stone tower down here must have required an incredible source of magical power. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12488} {s} {s} {4} {0} {} {1.000} {}
 E {12493} {w} {w} {8} {0} {} {1.000} {}
 E {12489} {e} {e} {2} {0} {} {1.000} {}
@@ -59049,12 +59077,12 @@ E {12491} {s} {s} {4} {0} {} {1.000} {}
 E {12504} {e} {e} {2} {0} {} {1.000} {}
 E {12502} {w} {w} {8} {0} {} {1.000} {}
 
-R {12504} {0} {} {Along the shore (ne,s,w)} { } {The shore continues northeast into a fairly large alcove, or you can follow it west toward a bridge. The bridge appears stable and should allow easy access to the large stone tower, but you sense a malevolent presence residing there. The water is flowing around the island fairly rapidly here.  } {Ultima Online} {} {} {} {1.000} {}
+R {12504} {0} {} {Along the shore (ne,s,w)} { } {The shore continues northeast into a fairly large alcove, or you can follow it west toward a bridge. The bridge appears stable and should allow easy access to the large stone tower, but you sense a malevolent presence residing there. The water is flowing around the island fairly rapidly here.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12489} {s} {s} {4} {0} {} {1.000} {}
 E {12503} {w} {w} {8} {0} {} {1.000} {}
 E {12505} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {12505} {0} {} {Along the shore (sw,ne,n)} { } {The rocky shore is narrow here, but it appears to widen ahead of you to the northeast. The main cavern lies further south, and you see a bridge leading to the island due west.  } {Ultima Online} {} {} {} {1.000} {}
+R {12505} {0} {} {Along the shore (sw,ne,n)} { } {The rocky shore is narrow here, but it appears to widen ahead of you to the northeast. The main cavern lies further south, and you see a bridge leading to the island due west.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12504} {sw} {sw} {12} {0} {} {1.000} {}
 E {12510} {ne} {ne} {3} {0} {} {1.000} {}
 E {12511} {n} {n} {1} {0} {} {1.000} {}
@@ -59074,43 +59102,47 @@ E {12509} {n} {n} {1} {0} {} {1.000} {}
 R {12509} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {12508} {s} {s} {4} {0} {} {1.000} {}
 
-R {12510} {0} {} {Along the shore (sw,n,w)} { } {You are standing against the eastern wall of an alcove, which continues further north, or back to the main cavern southwest. You feel as if someone is watching you from the large stone keep on the island. The gusts of wind are very powerful here. } {Ultima Online} {} {} {} {1.000} {}
+R {12510} {0} {} {Along the shore (sw,n,w)} { } {You are standing against the eastern wall of an alcove, which continues further north, or back to the main cavern southwest. You feel as if someone is watching you from the large stone keep on the island. The gusts of wind are very powerful here. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12505} {sw} {sw} {12} {0} {} {1.000} {}
 E {12512} {n} {n} {1} {0} {} {1.000} {}
 E {12511} {w} {w} {8} {0} {} {1.000} {}
 
-R {12511} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {12511} {0} {} {Along the shore (n,s,e)} { } {The distance between the rocky shore and the eastern cavern wall is roughly fifteen feet here, and the gusts of wind appear to be strongest near the wall. There are two large groups of stalagmites in the alcove, but they appear unremarkable.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12505} {s} {s} {4} {0} {} {1.000} {}
 E {12510} {e} {e} {2} {0} {} {1.000} {}
+E {12514} {n} {n} {1} {0} {} {1.000} {}
 
-R {12512} {0} {} {Along the shore (n,s,w)} { } {The eastern wall feels very smooth to the touch, as if high speed winds have caused rapid erosion. There is a cluster of stalagmites growing in the center of the room, but the space is otherwise almost empty. You can see a large stone keep on an island west of here. The gusts of wind are very strong here. } {Ultima Online} {} {} {} {1.000} {}
+R {12512} {0} {} {Along the shore (n,s,w)} { } {The eastern wall feels very smooth to the touch, as if high speed winds have caused rapid erosion. There is a cluster of stalagmites growing in the center of the room, but the space is otherwise almost empty. You can see a large stone keep on an island west of here. The gusts of wind are very strong here. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12510} {s} {s} {4} {0} {} {1.000} {}
 E {12513} {n} {n} {1} {0} {} {1.000} {}
 E {12514} {w} {w} {8} {0} {} {1.000} {}
 
-R {12513} {0} {} {Along the shore (nw,s,w)} { } {The wall you are following continues back toward the main cavern south, or leads to another large cavern to the northwest. The shore line narrows to only a few feet wide in either direction past this alcove before leading to the open caverns. The gusts of wind are extremely powerful here. } {Ultima Online} {} {} {} {1.000} {}
+R {12513} {0} {} {Along the shore (nw,s,w)} { } {The wall you are following continues back toward the main cavern south, or leads to another large cavern to the northwest. The shore line narrows to only a few feet wide in either direction past this alcove before leading to the open caverns. The gusts of wind are extremely powerful here. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12512} {s} {s} {4} {0} {} {1.000} {}
 E {12515} {nw} {nw} {9} {0} {} {1.000} {}
 E {12516} {w} {w} {8} {0} {} {1.000} {}
 
-R {12514} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {12514} {0} {} {Along the shore (n,s,e)} { } {The river flows around the island fairly quickly, throwing off chilly gusts of wind and droplets of water. Crossing the river would be impossible, but you can see a bridge aross the water to the southwest.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12512} {e} {e} {2} {0} {} {1.000} {}
+E {12511} {s} {s} {4} {0} {} {1.000} {}
+E {12516} {n} {n} {1} {0} {} {1.000} {}
 
-R {12515} {0} {} {At an alcove (se,nw,s)} { } {The path along the shore begins to widen here, forming an alcove. The main cavern opens up to the northwest, and you can see several openings in the cavern walls leading to tunnels. There is a large stone keep on the island in the middle of the water.  } {Ultima Online} {} {} {} {1.000} {}
+R {12515} {0} {} {At an alcove (se,nw,s)} { } {The path along the shore begins to widen here, forming an alcove. The main cavern opens up to the northwest, and you can see several openings in the cavern walls leading to tunnels. There is a large stone keep on the island in the middle of the water.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12513} {se} {se} {6} {0} {} {1.000} {}
 E {12517} {nw} {nw} {9} {0} {} {1.000} {}
 E {12516} {s} {s} {4} {0} {} {1.000} {}
 
-R {12516} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {12516} {0} {} {Along the shore (n,s,e)} { } {You are on the shore of the underground river, with the large stone keep to the west. The eastern wall is roughly fifteen feet away, and there are powerful gusts of wind coming from that direction.  } {Ultima Online 3} {} {} {} {1.000} {}
 E {12513} {e} {e} {2} {0} {} {1.000} {}
 E {12515} {n} {n} {1} {0} {} {1.000} {}
+E {12514} {s} {s} {4} {0} {} {1.000} {}
 
-R {12517} {0} {} {Along the shore (se,n,w)} { } {The shore line continues west-southeast, following the river as it flows around the island. There is a craggy alcove ahead of you, but you can see what appears to be several small tornadoes violently whirling around. The cavern opens up to the northwest, and you can see several openings in the cavern walls. } {Ultima Online} {} {} {} {1.000} {}
+R {12517} {0} {} {Along the shore (se,n,w)} { } {The shore line continues west-southeast, following the river as it flows around the island. There is a craggy alcove ahead of you, but you can see what appears to be several small tornadoes violently whirling around. The cavern opens up to the northwest, and you can see several openings in the cavern walls. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12515} {se} {se} {6} {0} {} {1.000} {}
 E {12518} {n} {n} {1} {0} {} {1.000} {}
 E {12519} {w} {w} {8} {0} {} {1.000} {}
 
-R {12518} {0} {} {In a cavern (s,w,e)} { } {The tunnel begins to open up here, and you can see a large body of water. You can make out the shapes of stalagmites and large rocks nearby. You can hear something that sounds like a small tornado coming from the southwest. } {Ultima Online} {} {} {} {1.000} {}
+R {12518} {0} {} {In a cavern (s,w,e)} { } {The tunnel begins to open up here, and you can see a large body of water. You can make out the shapes of stalagmites and large rocks nearby. You can hear something that sounds like a small tornado coming from the southwest. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12517} {s} {s} {4} {0} {} {1.000} {}
 E {12551} {e} {e} {2} {0} {} {1.000} {}
 E {12520} {w} {w} {8} {0} {} {1.000} {}
@@ -59245,32 +59277,32 @@ R {12546} {0} {} {In a cavern (n,s)} { } {The tunnel is narrow and there are sta
 E {12545} {s} {s} {4} {0} {} {1.000} {}
 E {12547} {n} {n} {1} {0} {} {1.000} {}
 
-R {12547} {0} {} {In a cavern (n,s)} { } {You are almost at the north end of this tunnel, but it appears to continue west. As you look around the cavern, you notice a pile of bones resting in the dirt. The air feels unusually warm here. } {Ultima Online} {} {} {} {1.000} {}
+R {12547} {0} {} {In a cavern (n,s)} { } {You are almost at the north end of this tunnel, but it appears to continue west. As you look around the cavern, you notice a pile of bones resting in the dirt. The air feels unusually warm here. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12546} {s} {s} {4} {0} {} {1.000} {}
 E {12548} {n} {n} {1} {0} {} {1.000} {}
 
-R {12548} {0} {} {In a cavern (s,w)} { } {You have reached the northeastern end of this tunnel. The passage continues further west and south from here. You can smell the water from the underground river coming from the west, and the southern tunnel should eventually lead back to the entrance portal. } {Ultima Online} {} {} {} {1.000} {}
+R {12548} {0} {} {In a cavern (s,w)} { } {You have reached the northeastern end of this tunnel. The passage continues further west and south from here. You can smell the water from the underground river coming from the west, and the southern tunnel should eventually lead back to the entrance portal. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12547} {s} {s} {4} {0} {} {1.000} {}
 E {12549} {w} {w} {8} {0} {} {1.000} {}
 
-R {12549} {0} {} {In a cavern (n,w,e)} { } {The tunnel splits in a T-shape here. The northern passage seems to lead to a dead end, while the western and eastern passages seem to continue on. You can make out a bright shape moving in the northern passage. } {Ultima Online} {} {} {} {1.000} {}
+R {12549} {0} {} {In a cavern (n,w,e)} { } {The tunnel splits in a T-shape here. The northern passage seems to lead to a dead end, while the western and eastern passages seem to continue on. You can make out a bright shape moving in the northern passage. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12548} {e} {e} {2} {0} {} {1.000} {}
 E {12550} {n} {n} {1} {0} {} {1.000} {}
 E {12551} {w} {w} {8} {0} {} {1.000} {}
 
-R {12550} {0} {} {In a cavern (n,s)} { } {The tunnel feels very tight here, with clusters of stalagmites growing against both sides of the cavern walls. There is a gory pile of remains on the ground here, and the air feels unusually warm here. } {Ultima Online} {} {} {} {1.000} {}
+R {12550} {0} {} {In a cavern (n,s)} { } {The tunnel feels very tight here, with clusters of stalagmites growing against both sides of the cavern walls. There is a gory pile of remains on the ground here, and the air feels unusually warm here. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12549} {s} {s} {4} {0} {} {1.000} {}
 E {12552} {n} {n} {1} {0} {} {1.000} {}
 
-R {12551} {0} {} {In a cavern (w,e)} { } {The tunnel is narrow and dimly lit here, continuing east and west. The western passage opens up to a larger space, and you can smell the water from the underground river. The currents of air are refreshing and cool here. } {Ultima Online} {} {} {} {1.000} {}
+R {12551} {0} {} {In a cavern (w,e)} { } {The tunnel is narrow and dimly lit here, continuing east and west. The western passage opens up to a larger space, and you can smell the water from the underground river. The currents of air are refreshing and cool here. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12549} {e} {e} {2} {0} {} {1.000} {}
 E {12518} {w} {w} {8} {0} {} {1.000} {}
 
-R {12552} {0} {} {In a cavern (n,s)} { } {The tunnel becomes wider as you approach the dead end. You see a glint of metal in the dead end ahead of you. The cavern walls feel like they are closing in on you, as they narrow down towards the end. The main tunnel lies back south of here. } {Ultima Online} {} {} {} {1.000} {}
+R {12552} {0} {} {In a cavern (n,s)} { } {The tunnel becomes wider as you approach the dead end. You see a glint of metal in the dead end ahead of you. The cavern walls feel like they are closing in on you, as they narrow down towards the end. The main tunnel lies back south of here. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12550} {s} {s} {4} {0} {} {1.000} {}
 E {12553} {n} {n} {1} {0} {} {1.000} {}
 
-R {12553} {0} {} {At a dead end (s)} { } {The tunnel is narrow and dark. You can make out the shapes of stalagmites and large rocks nearby. You can hear a variety of strange sounds, but it's impossible to tell where they are coming from. The tunnel comes to an abrupt end, but you can make out sounds further to the south. The air feels unusually warm here. } {Ultima Online} {} {} {} {1.000} {}
+R {12553} {0} {} {At a dead end (s)} { } {The tunnel is narrow and dark. You can make out the shapes of stalagmites and large rocks nearby. You can hear a variety of strange sounds, but it's impossible to tell where they are coming from. The tunnel comes to an abrupt end, but you can make out sounds further to the south. The air feels unusually warm here. } {Ultima Online 3} {} {} {} {1.000} {}
 E {12552} {s} {s} {4} {0} {} {1.000} {}
 
 R {12554} {0} {} {In a cavern (n,s,w)} { } {You are approaching the northern wall of the cavern. You notice a small opening in the northwest corner of the wall, leading into a narrow tunnel. The cavern feels cold and damp here. } {Ultima Online} {} {} {} {1.000} {}
@@ -59347,19 +59379,19 @@ E {12566} {ne} {ne} {3} {0} {} {1.000} {}
 R {12569} {0} {} {At a dead end (e)} { } {The tunnel comes to an end here. You can barely see a dim light entering the tunnel from the same opening you used, far to the east. You hear occasional splashing sounds echoing off the walls. The ceiling is low enough for the stalagmites to reach you, requiring extra caution when moving about. } {Ultima Online} {} {} {} {1.000} {}
 E {12564} {e} {e} {2} {0} {} {1.000} {}
 
-R {12570} {0} {} {Along the western shore (s,e)} { } {You have reached the western shore, and can see more land across another wide section of the river. The shore line continues narrowly to the south as it backs up to cave walls, and the walls also block your access to the north shore from here. It looks like the river may be narrow enough to cross here if you could figure out how. You can make out many shapes across the water. } {Ultima Online} {} {} {} {1.000} {}
+R {12570} {0} {} {Along the western shore (s,e)} { } {You have reached the western shore, and can see more land across another wide section of the river. The shore line continues narrowly to the south as it backs up to cave walls, and the walls also block your access to the north shore from here. It looks like the river may be narrow enough to cross here if you could figure out how. You can make out many shapes across the water. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11943} {e} {e} {2} {0} {} {1.000} {}
 E {12571} {s} {s} {4} {0} {} {1.000} {}
 
-R {12571} {0} {} {Along the western shore (s,n)} { } {The river opens up very wide here and you can barely see across to the island. You see figures moving around on the island, but it's difficult to tell what they are. There are pools of blood all over the ground here, and the washed-up bones of other adventurers along the water. You can continue along the shore further to the south, but it seems to come to a short stop as the cave walls close in. } {Ultima Online} {} {} {} {1.000} {}
+R {12571} {0} {} {Along the western shore (s,n)} { } {The river opens up very wide here and you can barely see across to the island. You see figures moving around on the island, but it's difficult to tell what they are. There are pools of blood all over the ground here, and the washed-up bones of other adventurers along the water. You can continue along the shore further to the south, but it seems to come to a short stop as the cave walls close in. } {Ultima Online 2} {} {} {} {1.000} {}
 E {12570} {n} {n} {1} {0} {} {1.000} {}
 E {12573} {s} {s} {4} {0} {} {1.000} {}
 
-R {12572} {0} {} {In a narrow passage (s,n)} { } {The passage continues around the slight bend, and the walls slope toward the east. There is not much room to move around here, and this would be a terrible place to get trapped. You can see the end of this passage up ahead, and you can hear water coming from the west. } {Ultima Online} {} {} {} {1.000} {}
+R {12572} {0} {} {In a narrow passage (s,n)} { } {The passage continues around the slight bend, and the walls slope toward the east. There is not much room to move around here, and this would be a terrible place to get trapped. You can see the end of this passage up ahead, and you can hear water coming from the west. } {Ultima Online 2} {} {} {} {1.000} {}
 E {11946} {n} {n} {1} {0} {} {1.000} {}
 E {11909} {s} {s} {4} {0} {} {1.000} {}
 
-R {12573} {0} {} {Along the western shore (n)} { } {The shore narrows to a point as you continue further south, closed off by the cave walls. There are washed-up bones from other adventurers on the shore, and several pools of fresh blood still soaking into the dirt. The river has narrowed out relatively thin here, and you might be able to make it across with the help of some magic. The entities on the island do not appear friendly. } {Ultima Online} {} {} {} {1.000} {}
+R {12573} {0} {} {Along the western shore (n)} { } {The shore narrows to a point as you continue further south, closed off by the cave walls. There are washed-up bones from other adventurers on the shore, and several pools of fresh blood still soaking into the dirt. The river has narrowed out relatively thin here, and you might be able to make it across with the help of some magic. The entities on the island do not appear friendly. } {Ultima Online 2} {} {} {} {1.000} {}
 E {12571} {n} {n} {1} {0} {} {1.000} {}
 
 R {12574} {0} {} {*** The Ruins of Niroth *** (e,w,n,s)} { } {Ice and snow, wintery and white, surrounds you on all sides. This desolate valley between the northern mountains was once home to the city of Niroth, but now it is nothing but ruins. A bitter wind howls through this lonely place, perhaps warning of the very danger that leveled the city so many years ago. The broken bits of wood and stone half-buried in the snow are the only remaining signs that man ever called this place home. } {The Ruins of Niroth} {} {} {} {1.000} {}
@@ -62924,8 +62956,161 @@ E {13383} {n} {n} {1} {0} {} {1.000} {}
 R {13403} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {13383} {nw} {nw} {9} {0} {} {1.000} {}
 
+R {13404} {0} {} {Bedroom (n,closet)} { } {You have entered someone's bedroom, that isn't very polite of you. This is a well kept bedroom, clean and tidy.  There is a bed in one corner and a night table next to it.  On the table is a lamp.  There is a closet on the far side of the room. } {Mage Tower} {} {} {} {1.000} {}
+E {  161} {n} {n} {1} {0} {} {1.000} {}
+E {13408} {closet} {closet} {0} {0} {} {1.000} {}
+E {13409} {touch lamp} {touch lamp} {0} {0} {} {1.000} {}
+
 R {13405} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
 R {13406} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
 R {13407} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R {13408} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R {13409} {0} {} {The Hall of Glass (n,out)} { } {You are standing in a long hallway.  What is most remarkable about this hallway is that walls, floor, ceiling, everything is glass.  Looking through the glass you see infinite space.  There are no clouds, no features of any kind.  Your eyes even hurt as they rapidly change focus trying to pinpoint anything. } {Mage Tower} {hall of glass} {} {} {1.000} {}
+E {13404} {out} {out} {0} {0} {} {1.000} {}
+E {13410} {n} {n} {1} {0} {} {1.000} {}
+
+R {13410} {0} {} {The Hall of Glass (n,s)} { } {You are standing in a long hallway.  What is most remarkable about this hallway is that walls, floor, ceiling, everything is glass.  Looking through the glass you see infinite space.  There are no clouds, no features of any kind.  Your eyes even hurt as they rapidly change focus trying to pinpoint anything. } {Mage Tower} {} {} {} {1.000} {}
+E {13409} {s} {s} {4} {0} {} {1.000} {}
+E {13415} {n} {n} {1} {0} {} {1.000} {}
+
+R {13411} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R {13412} {0} {} {Open Area (s)} { } {This is a large, open room with very ornate windows and lots of them. They allow a significant amount of light in and the room looks very large.  There is a couch and chair here, as well as a foot table and end table. } {Mage Tower} {} {} {} {1.000} {}
+E {  160} {s} {s} {4} {0} {} {1.000} {}
+
+R {13413} {0} {} {Coat Room (e)} { } {This is a somewhat deserted coat room.  There is a hangy bar thing and some empty hangers, but that's about it. } {Mage Tower} {} {} {} {1.000} {}
+E {  160} {e} {e} {2} {0} {} {1.000} {}
+
+R {13414} {0} {} {Library (w)} { } {This is a well filled library, completely full of various books and scrolls.  There is a nice oaken desk on one side of the room with a comfortable looking chair behind it.  The desk is relatively unoccupied save a pen and ink well. } {Mage Tower} {} {} {} {1.000} {}
+E {  160} {w} {w} {8} {0} {} {1.000} {}
+
+R {13415} {0} {} {The Hall of Glass (n,s)} { } {You are standing in a long hallway.  What is most remarkable about this hallway is that walls, floor, ceiling, everything is glass.  Looking through the glass you see infinite space.  There are no clouds, no features of any kind.  Your eyes even hurt as they rapidly change focus trying to pinpoint anything. } {Mage Tower} {} {} {} {1.000} {}
+E {13410} {s} {s} {4} {0} {} {1.000} {}
+E {13416} {n} {n} {1} {0} {} {1.000} {}
+
+R {13416} {0} {} {The Hall of Glass (n,s)} { } {You are standing in a long hallway.  What is most remarkable about this hallway is that walls, floor, ceiling, everything is glass.  Looking through the glass you see infinite space.  There are no clouds, no features of any kind.  Your eyes even hurt as they rapidly change focus trying to pinpoint anything. } {Mage Tower} {} {} {} {1.000} {}
+E {13415} {s} {s} {4} {0} {} {1.000} {}
+E {13417} {n} {n} {1} {0} {} {1.000} {}
+
+R {13417} {0} {} {The Hall of Glass (n,s)} { } {You are standing in a long hallway.  What is most remarkable about this hallway is that walls, floor, ceiling, everything is glass.  Looking through the glass you see infinite space.  There are no clouds, no features of any kind.  Your eyes even hurt as they rapidly change focus trying to pinpoint anything. } {Mage Tower} {} {} {} {1.000} {}
+E {13416} {s} {s} {4} {0} {} {1.000} {}
+E {13418} {n} {n} {1} {0} {} {1.000} {}
+
+R {13418} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13417} {s} {s} {4} {0} {} {1.000} {}
+
+R {13419} {0} {} {Entrance to a Laboratory (out,n)} { } {You stand in the entrance of a large laboratory, the room perfectly clean and clutter free.  On the walls hang protective suits, some regular clothes and other odds and ends.  The floor is covered with shiny white ceramic tiles, as are the walls. The lab's ceiling is about ten feet high, made from solid cement, with several fluorescent lights illuminating every corner in the room, giving it a hygienic, hospital-like feel.  The rest of the lab can be seen off through the archway to the north.  It appears that you have arrived here during non-working hours. } {Wormhole Laboratory} {wormhole laboratory} {} {} {1.000} {}
+E { 3979} {out} {out} {0} {0} {} {1.000} {}
+E {13420} {n} {n} {1} {0} {} {1.000} {}
+
+R {13420} {0} {} {Laboratory recreation room (s,n)} { } {This room appears to be the recreation and common room for this lab.  Several lounges and chairs sit up against the walls, while a large TV sits on a bench near the west wall.  In the centre of the room is a large table, with a few magazines scattered about on it.  A coffee machine sits next to the TV, on top of a large cabinet. } {Wormhole Laboratory} {} {} {} {1.000} {}
+E {13419} {s} {s} {4} {0} {} {1.000} {}
+E {13421} {n} {n} {1} {0} {} {1.000} {}
+
+R {13421} {0} {} {The Lab's Computer Room (s,e)} { } {The room is divided into several rows of desks, each of which has various computers and computer equipment sitting on them.  The walls here are covered with printouts and data charts, the results from some unknown experiments and testing.  A space is cleared around one of the computers in the centre of the room, suggesting that it is the main computer in this lab. } {Wormhole Laboratory} {} {} {} {1.000} {}
+E {13420} {s} {s} {4} {0} {} {1.000} {}
+E {13422} {e} {e} {2} {0} {} {1.000} {}
+
+R {13422} {0} {} {Main Test Room (s,w)} { } {This appears to be the main test room for the laboratory.  There are several desks in the room, on them sit various items of testing equipment and apparatus.  The majority of the items look like they are used for electrical or electronic purposes.  The walls, floor and ceiling are slightly blackened and damaged in some places. } {Wormhole Laboratory} {} {} {} {1.000} {}
+E {13421} {w} {w} {8} {0} {} {1.000} {}
+E {13423} {s} {s} {4} {0} {} {1.000} {}
+
+R {13423} {0} {} {Storage Room (n)} { } {This appears to be the main storage room for the laboratory.  Shelving is arranged along the walls, and more shelving forms aisles through the middle of the room.  On the shelving are various boxes of all shapes and sizes, test equipment, and things that look like they would be more at home in an alien spacecraft. } {Wormhole Laboratory} {} {} {} {1.000} {}
+E {13422} {n} {n} {1} {0} {} {1.000} {}
+
+R {13424} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {11651} {d} {d} {32} {0} {} {1.000} {}
+
+R {13425} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {11666} {d} {d} {32} {0} {} {1.000} {}
+
+R {13426} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {11683} {d} {d} {32} {0} {} {1.000} {}
+
+R {13427} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {11701} {d} {d} {32} {0} {} {1.000} {}
+
+R {13428} {0} {} {Somewhere in the sewer (w)} { } {As you follow the dark tunnel you suddenly find your self face to face with a stone wall. Rather surprisingly this sewer has turned into a dead end. The warm murky water surrounds your lower legs and you frequently bump into things underwater. Trying your best not to think about what it might be you focus on the area. Looking around, you see pipes moving above you and they seem to vanish somewhere to the east above the stone wall.  } {The City of Westersea (Sewer)} {} {} {} {1.000} {}
+E {11706} {w} {w} {8} {0} {} {1.000} {}
+
+R {13429} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {11710} {d} {d} {32} {0} {} {1.000} {}
+
+R {13430} {0} {} {In a narrow tunnel (w,s)} { } {The tunnel is narrow and dimly lit here. You can make out the shapes of stalagmites and large rocks nearby. You can hear a variety of sounds coming from the south that remind you of a roaring fire or a furnace. You appear to be approaching another dead end. } {Ultima Online 3} {} {} {} {1.000} {}
+E {12473} {w} {w} {8} {0} {} {1.000} {}
+E {13431} {s} {s} {4} {0} {} {1.000} {}
+
+R {13431} {0} {} {At the end of a tunnel (n)} { } {The tunnel is narrow, dark, and comes to an end here. You can make out the shapes of stalagmites and large rocks nearby. You can hear a variety of strange sounds, mostly coming from further to the northwest. } {Ultima Online 3} {} {} {} {1.000} {}
+E {13430} {n} {n} {1} {0} {} {1.000} {}
+
+R {13432} {0} {} {In a dark clearing (w,n)} { } {There is a large body of water to the north, and rough rock walls to the south. You can see stalagmites and large rocks on the ground nearby, and feel extremely strong gusts of air coming from this part of the cave.  } {Ultima Online 3} {} {} {} {1.000} {}
+E {12475} {n} {n} {1} {0} {} {1.000} {}
+E {13433} {w} {w} {8} {0} {} {1.000} {}
+
+R {13433} {0} {} {In a dark clearing (w,e,n)} { } {There is a large body of water to the north, and rough rock walls to the south. You can see stalagmites and large rocks on the ground nearby, and feel strong gusts of wind coming from this part of the cave.  } {Ultima Online 3} {} {} {} {1.000} {}
+E {13432} {e} {e} {2} {0} {} {1.000} {}
+E {12485} {w} {w} {8} {0} {} {1.000} {}
+E {12478} {n} {n} {1} {0} {} {1.000} {}
+
+R {13434} {0} {} {Along the shore (w,e)} { } {You are traveling along the shore of a large body of water. There is a large stone keep on an island in the center of the body of water, and the water continues to flow outward to the northwest.  } {Ultima Online 3} {} {} {} {1.000} {}
+E {12483} {e} {e} {2} {0} {} {1.000} {}
+E {13435} {w} {w} {8} {0} {} {1.000} {}
+
+R {13435} {0} {} {Along the shore (n,e)} { } {You are traveling along the shore of a large body of water. There is a large stone keep on an island in the center of the body of water, and the water continues to flow outward to the northwest. You can hear strange noises coming through the walls to your southwest. } {Ultima Online 3} {} {} {} {1.000} {}
+E {13434} {e} {e} {2} {0} {} {1.000} {}
+E {13436} {n} {n} {1} {0} {} {1.000} {}
+
+R {13436} {0} {} {Along the shore (s,w,n)} { } {You are traveling along the shore of a large body of water. There is a large stone keep on an island in the center of the body of water, and the water continues to flow outward to the northwest. There is an entrance to a tunnel leading west here, and you see a small inlet ahead of you. } {Ultima Online 3} {} {} {} {1.000} {}
+E {13435} {s} {s} {4} {0} {} {1.000} {}
+E {13437} {w} {w} {8} {0} {} {1.000} {}
+E {13438} {n} {n} {1} {0} {} {1.000} {}
+
+R {13437} {0} {} {In a narrow tunnel (s,e,w)} { } {The tunnel is narrow and dark here. You can make out the shapes of stalagmites nearby. The air feels cold here, and there are red stains leading both west and south from here. } {Ultima Online 3} {} {} {} {1.000} {}
+E {13436} {e} {e} {2} {0} {} {1.000} {}
+E {13439} {s} {s} {4} {0} {} {1.000} {}
+E {13440} {w} {w} {8} {0} {} {1.000} {}
+
+R {13438} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13436} {s} {s} {4} {0} {} {1.000} {}
+
+R {13439} {0} {} {In a narrow tunnel (s,n)} { } {The tunnel is narrow and dark here. You can make out the shapes of stalagmites and large rocks nearby. The tunnel continues north-south, and seems to continue for a good distance before splitting off to the east. } {Ultima Online 3} {} {} {} {1.000} {}
+E {13437} {n} {n} {1} {0} {} {1.000} {}
+E {13441} {s} {s} {4} {0} {} {1.000} {}
+
+R {13440} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13437} {e} {e} {2} {0} {} {1.000} {}
+
+R {13441} {0} {} {In a narrow tunnel (s,n)} { } {The tunnel is narrow and dark here. You can make out the shapes of stalagmites and large rocks nearby. You hear squelching sounds coming from the south here, which must be echoing off of the walls from deeper into the tunnel. } {Ultima Online 3} {} {} {} {1.000} {}
+E {13439} {n} {n} {1} {0} {} {1.000} {}
+E {13442} {s} {s} {4} {0} {} {1.000} {}
+
+R {13442} {0} {} {In a narrow tunnel (n,e)} { } {The tunnel is narrow and dark here. You can make out the shapes of stalagmites and large rocks nearby. You hear water sounds almost like splashing coming from the east, and notice pools of a red liquid on the ground here. } {Ultima Online 3} {} {} {} {1.000} {}
+E {13441} {n} {n} {1} {0} {} {1.000} {}
+E {13443} {e} {e} {2} {0} {} {1.000} {}
+
+R {13443} {0} {} {In a narrow tunnel (ne,e,w)} { } {The tunnel is opens up to a small chamber here. You can make out the shapes of stalagmites and large rocks nearby. The chamber appears to be covered in blood.  } {Ultima Online 3} {} {} {} {1.000} {}
+E {13442} {w} {w} {8} {0} {} {1.000} {}
+E {13444} {ne} {ne} {3} {0} {} {1.000} {}
+E {13445} {e} {e} {2} {0} {} {1.000} {}
+
+R {13444} {0} {} {In a narrow tunnel (sw,s)} { } {The tunnel opens up to a small chamber here. You can make out the shapes of stalagmites and large rocks nearby. You can hear a variety of strange sounds, but it's impossible to tell where they are coming from. The chamber appears to be covered in blood.  } {Ultima Online 3} {} {} {} {1.000} {}
+E {13443} {sw} {sw} {12} {0} {} {1.000} {}
+E {13445} {s} {s} {4} {0} {} {1.000} {}
+
+R {13445} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13443} {w} {w} {8} {0} {} {1.000} {}
+E {13444} {n} {n} {1} {0} {} {1.000} {}
+
+R {13456} {0} {} {At a landing pad. (board,s,w)} { } {The road up the mountain comes to a halt at a giant platform. The mountain walls cut off all travel past this point, and the only way out is back down the road. } {Juggernaut} {} {} {} {1.000} {}
+E { 6371} {w} {w} {8} {0} {} {1.000} {}
+E {13457} {board} {board} {0} {0} {} {1.000} {}
+E {13458} {s} {s} {4} {0} {} {1.000} {}
+
+R {13457} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R {13458} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13456} {n} {n} {1} {0} {} {1.000} {}
