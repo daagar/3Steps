@@ -3,6 +3,27 @@
 #var guild jedi
 #var subguild teepo
 
+#read .tt/3k/jedimode.tin
+#var {my[desired][weapon]}{offhand blaster};
+#var {my[desired][weapon]}{offhand blaster};
+#var {my[desired][mode]}{aimed shot};
+#var {my[desired][modeshort]}{a};
+
+#ticker {blaster}{focus check}{30};
+
+#act {You look at the readout on your %1 blaster handle}{
+	#line gag;
+	#var {my[blaster][type]}{%1};
+};
+
+#act {\[%1\] (%2\%) Power}{
+	#line gag;
+	#if {%2 < 5}{
+		!smuggle remove cell;
+		!recharge ${my[blaster][type]} blaster;
+	};
+};
+
 #nop {focus hpconfigure /HP: #hp/#mhp SP: #sp/#msp C: #c F: #f M: #sm/#%c D: #dn/#ng P: #df E: #es GXP: #gxp}
 #gag {HP: %2/%3 SP: %4/%5 C: %6 F: %7 M: %8/%9 D:%10/%11 P: %12 E: %14GXP:%13}
 #act {HP: %1/%2 SP: %3/%4 C: %5\% F: %6\% M: %7/%8\% D:%9/%10 P: %11 E:%12 GXP: %13\%} {
@@ -11,7 +32,9 @@
 	#var {my[sp][current]}		{%3};
 	#var {my[sp][max]}		{%4};
 	#var {my[gp1][current]}		{%5};
+	#var {my[conc][current]}	{%5};
 	#var {my[gp2][current]}		{%6};
+	#var {my[force][current]}	{%6};
 	#var {my[mode][current]}	{%7};
 	#var {my[charge][current]}	{%8};
 	#var {my[dissipate][current]}	{%9};
@@ -21,83 +44,111 @@
 	#var {my[gtnl]}			{%13};
 	#math {my[hp][deficit]}{$my[hp][max] - $my[hp][current]};
 	#math {my[sp][deficit]}{$my[sp][max] - $my[sp][current]};
-        #if {"$my[attacker]" != " "}{
+	#math {my[hp][percent]}{$my[hp][current] * 100 / $my[hp][max]};
+	#math {my[sp][percent]}{$my[sp][current] * 100 / $my[sp][max]};
+        #if {"${my[attacker]}" != " "}{
 		#var {my[incombat]}	{1};
 		#math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+		#var {my[cleanse][status]}{0};
         }{
 		#var {my[incombat]}	{0};
+		#var {my[gouged]}	{0};
         };
-	#if {$my[incombat] != 1}{
-		#if {$my[sp][current] < $my[sp][max]}{
-			!focus clear mind;
-		};
-		#if {$my[hp][current] < $my[hp][max]}{
+	#if {${my[incombat]} == 1}{
+		#if {$my[hp][deficit] > 150}{
 			!focus reduce injury;
 		};
-	}{
-		#if {$my[sp][deficit] > 50}{
+		#if {$my[sp][deficit] > 100}{
 			!focus clear mind;
 		};
-	};
-        #regex {$my[prots][current][all]}{s}{
-                #var {my[prots][current][lfs]}{1};
-        }{
-		#var {my[prots][current][lfs]}{0};
-		!focus lesser force shield;
-        };
-        #regex {$my[prots][current][all]}{S}{
-                #var {my[prots][current][gfs]}{1};
-        }{
-		#var {my[prots][current][gfs]}{0};
-		!focus greater force shield;
-        };
-        #regex {$my[prots][current][all]}{D}{
-                #var {my[prots][current][dodge]}{1};
-        }{
-		#var {my[prots][current][dodge]}{0};
-		!focus dodge /on;
-        };
-        #regex {$my[prots][current][all]}{RP}{
-                #var {my[prots][current][rpoison]}{1};
-        }{
-		#var {my[prots][current][rpoison]}{0};
-		!focus resist poison;
-        };
-	#regex {$my[mode][current]}{a}{
-		#nop;
+		#if {${my[hp][percent]} < 50}{
+			ppp;
+		};
+		#if {${my[hp][percent]} < 30}{
+			go home;
+		};
+		#if {${my[gouged]} != 1}{
+			!gouge;
+			#var {my[gouged]}{1};
+			#nop {Safety measure for UO};
+			#if {$critter_room > 1 && "$area" == "Ultima Online"}{
+				ppp;
+				#var {critter_room}{0};
+			};
+		};
 	}{
-		!sheath;
-		!draw offhand blaster;
-		!focus mode /aimed shot;
+		#if {${my[conc][current]} < 80 && ${my[cleanse][status]} == 0}{
+			do_htrance
+		};
+		#if {${my[force][current]} > 10 && ${my[cleanse][status]} == 0}{
+			do_htrance
+		};
+		#if {${my[cleanse][status]} != 1}{
+			#if {${my[hp][current]} < $my[hp][max]}{
+				!focus reduce injury;
+			};
+			#if {${my[sp][current]} < $my[sp][max]}{
+				!focus clear mind;
+			};
+		};
 	};
-	#if {$my[charge][current] < 5}{
-		!smuggle remove cell;
-		!smuggle remove cell;
-		!recharge teepo blaster;
-		!recharge offhand blaster;
+	#if {${my[cleanse][status]} != 1}{
+		#regex {$my[prots][current][all]}{s}{
+			#var {my[prots][current][lfs]}{1};
+		}{
+			#var {my[prots][current][lfs]}{0};
+			!focus lesser force shield;
+		};
+		#regex {$my[prots][current][all]}{S}{
+			#var {my[prots][current][gfs]}{1};
+		}{
+			#var {my[prots][current][gfs]}{0};
+			!focus greater force shield;
+		};
+		#regex {$my[prots][current][all]}{D}{
+			#var {my[prots][current][dodge]}{1};
+		}{
+			#var {my[prots][current][dodge]}{0};
+			!focus dodge /on;
+		};
+		#regex {$my[prots][current][all]}{RP}{
+			#var {my[prots][current][rpoison]}{1};
+		}{
+			#var {my[prots][current][rpoison]}{0};
+			!focus resist poison;
+		};
+		#if {"${my[mode][current]}" != "${my[desired][modeshort]}"}{
+			#if {"${my[desired][modeshort]}" == "h"}{
+				!sheath;
+				!focus hand to hand;
+			}{
+				!sheath;
+				!draw ${my[desired][weapon]};
+				!focus mode /${my[desired][mode]};
+			};
+		};
+		#if {"${my[mode][current]}" != "h"}{
+			#if {$my[charge][current] < 5}{
+				!smuggle remove cell;
+				!recharge ${my[desired][weapon]};
+			};
+		};
+		#regex {$mip[gline][2]}{Deflection UP}{
+			#nop;
+		}{
+			!focus force deflection;
+		};
+		#regex {$mip[gline][2]}{Accelerated Healing}{
+			#nop;
+		}{
+			!focus accelerated healing;
+		};
 	};
-	#regex {$mip[gline][2]}{Deflection UP}{
-		#nop;
-	}{
-		!focus force deflection;
-	};
+	#var {my[damagetracker][guildstring]}{${guild}/${subguild} - ${my[desired][weapon]} - ${my[desired][mode]}};
 	update_status;
 }
 
-
 #alias {update_status} {
-        #if {"$cooler" == "on" || $corpses[cooler] > 0} {
-                #format {sb1_cooler} {%+2s} {$corpses[cooler]};
-                #var {sb1_cooler} { CL:<130>$sb1_cooler<088>}
-        } {
-                #var {sb1_cooler} {}
-        };
-        #if {"$freezer" == "on" || $corpses[freezer] > 0} {
-                #format {sb2_freezer} {%+2s} {$corpses[freezer]};
-                #var {sb2_freezer} { FZ:<130>$sb2_freezer<088>}
-        } {
-                #var {sb2_freezer} {}
-        };
 	#var	{my[hp][graph]}		{@graph{$my[hp][current];$my[hp][max]}};
 	#var	{my[sp][graph]}		{@graph{$my[sp][current];$my[sp][max]}};
 	#var	{my[gp1][graph]}	{@graph{$my[gp1][current];100}};
@@ -108,19 +159,16 @@
 	#format {hp_max}		{%+4s} {<128>$my[hp][max]<088>};
 	#format {sp}			{%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
 	#format {sp_max}		{%+4s} {<128>$my[sp][max]<088>};
-	#format {conc}			{%+8s} {@colscale{$my[gp1][current];100}};
-	#format {force}			{%+6s} {@colscale{$my[gp2][current];100}};
+	#format {conc}			{%+8s} {@colscale{$my[conc][current];100}};
+	#format {force}			{%+6s} {@colscale{$my[force][current];100}};
 	#format {charge}		{%+6s} {@colscale{$my[charge][current];100}};
 	#format {ehealth}		{%+8s} {@colscale{$enemy[hp];100}\%};
-        #format {corpses[inventory]}    {%+2s} {$corpses[inventory]};
-        #format {corpses[truck]}	{%+2s} {$corpses[truck]};
-        #format {corpses[coffin]}	{%+2s} {$corpses[coffin]};
-        #format {corpses[freezer]}	{%+2s} {$corpses[freezer]};
-	#showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} C:${conc}%  F:${force}%    C: ${charge}%    G2N: $my[gtnl]}{-4};
-	#showme {H:${my[hp][graph]} S:${my[sp][graph]} C:${my[gp1][graph]} F:${my[gp2][graph]} C: ${my[charge][graph]}   E:${enemy[graph]}} {-3};
+	#showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} C:${conc}%  F:${force}%    C: ${charge}%   M: ${my[desired][weapon]} - ${my[desired][mode]}}{-4};
+	#showme {H:${my[hp][graph]} S:${my[sp][graph]} C:${my[gp1][graph]} F:${my[gp2][graph]} C: ${my[charge][graph]}E:${enemy[graph]}} {-3};
 	#showme {$mip[gline][2]} {-6};
 	#showme {$mip[gline][1]} {-7};
 }
+
 
 #act {Floo dealt the killing blow to %1.} {
 	log_damage_no_numbers %1;
@@ -130,3 +178,4 @@
 };
 
 #class {floo} {close}
+
