@@ -1,0 +1,14 @@
+#alias room_cleanup {
+        #unvar {valid_rooms};
+        #loop {1}{13446}{count}{
+        	#unvar flags;
+                #map goto {${count}};
+                #map get roomflag flags;
+                #if {$flags != 4104 && "$flags" != ""}{
+                	#map {goto}{1};
+                	#echo {$count};
+                	#map {find}{$count};
+                };
+        };
+};
+

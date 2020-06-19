@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 11
+F 10
 
 G 0
 
-I 62
+I 6326
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -252,7 +252,7 @@ T {} { } {}
 
 
 
-R {    1} {0} {} {home} { } {Ashland Avenue ends its southward run here, in what can only be termed the Residential Complex of Foundation.  A quiet cul de sac has been carved out of the surrounding woodlands to shelter the homes of 3scapes' wealthy patrons.  Columned southern mansions stand side by side with medieval castles and classic victorian homes.  To have a home in this crime free, exclusive neighborhood is a sign of wealth and success in the realms. } {Foundation's Residential Complex} {home} {} {} {1.000} {}
+R {    1} {0} {} {home} { } {Ashland Avenue ends its southward run here, in what can only be termed the Residential Complex of Foundation.  A quiet cul de sac has been carved out of the surrounding woodlands to shelter the homes of 3scapes' wealthy patrons.  Columned southern mansions stand side by side with medieval castles and classic victorian homes.  To have a home in this crime free, exclusive neighborhood is a sign of wealth and success in the realms. } {Foundation's Residential Complex} {home} {} {} {100.000} {}
 E {   68} {fan} {fan} {0} {0} {} {1.000} {}
 E {  166} {cha} {cha} {0} {0} {} {1.000} {}
 E {    9} {sci} {sci} {0} {0} {} {1.000} {}
@@ -265,13 +265,14 @@ E {12424} {new} {new} {0} {0} {} {1.000} {}
 E {12425} {atm} {atm} {0} {0} {} {1.000} {}
 E {12426} {leave} {leave} {0} {0} {} {1.000} {}
 E {12427} {login} {login} {0} {0} {} {1.000} {}
-E {12428} {sh} {sh} {0} {0} {} {1.000} {}
 E {12429} {gyp} {gyp} {0} {0} {} {1.000} {}
 E {12430} {gld} {gld} {0} {0} {} {1.000} {}
+E {    2} {sh} {sh} {0} {0} {} {1.000} {}
 
 R {    2} {0} {} {shop} { } {} {} {shop} {} {} {1.000} {}
 E {    3} {w} {w} {8} {0} {} {1.000} {}
 E {  795} {d} {d} {32} {0} {} {1.000} {}
+E {    1} {home} {home} {0} {0} {} {1.000} {}
 
 R {    3} {0} {} {cot} { } {} {} {cot} {} {} {1.000} {}
 E {    2} {e} {e} {2} {0} {} {1.000} {}
@@ -596,6 +597,7 @@ E {   67} {e} {e} {2} {0} {} {1.000} {}
 E {   69} {portal} {portal} {0} {0} {} {1.000} {}
 E { 3959} {w} {w} {8} {0} {} {1.000} {}
 E { 7179} {n} {n} {1} {0} {} {1.000} {}
+E {    1} {home} {home} {0} {0} {} {1.000} {}
 
 R {   69} {0} {} {wayhaven} { } {} {} {wayhaven} {} {} {1.000} {}
 E {   68} {portal} {portal} {0} {0} {} {1.000} {}
@@ -1051,6 +1053,7 @@ R {  166} {0} {<118>} {166} { } {} {} {} {} {} {1.000} {}
 E {10004} {s} {s} {4} {0} {} {1.000} {}
 E {  167} {enter} {enter} {0} {0} {} {1.000} {}
 E { 6085} {w} {w} {8} {0} {} {1.000} {}
+E {    1} {home} {home} {0} {0} {} {1.000} {}
 
 R {  167} {0} {} {chaos} { } {} {} {chaos} {} {} {1.000} {}
 E {  166} {vortex} {vortex} {0} {0} {} {1.000} {}
@@ -1071,9 +1074,8 @@ R {  169} {0} {} {169} { } {} {} {} {} {} {1.000} {}
 E {  168} {w} {w} {8} {0} {} {1.000} {}
 E {  170} {d} {d} {32} {0} {} {1.000} {}
 E {  776} {e} {e} {2} {0} {} {1.000} {}
-E {  779} {csouth} {#map leave;s;#map go 779} {0} {0} {} {1.000} {}
-E {12402} {s} {s} {4} {0} {} {1.000} {}
 E {12403} {n} {n} {1} {0} {} {1.000} {}
+E {  676} {s} {s} {4} {0} {} {1.000} {}
 
 R {  170} {0} {} {alphabet} { } {} {} {} {} {} {1.000} {}
 E {  169} {u} {u} {16} {0} {} {1.000} {}
@@ -3685,49 +3687,43 @@ E {  673} {s} {s} {4} {0} {} {1.000} {}
 
 R {  673} {0} {} {673} { } {} {} {} {} {} {1.000} {}
 E {  672} {n} {n} {1} {0} {} {1.000} {}
-E {  674} {rabbitfields} {#map leave;s;#map go rabbitfields} {0} {0} {} {1.000} {}
-E {11185} {s} {s} {4} {0} {} {1.000} {}
+E {13460} {s} {s} {4} {0} {} {1.000} {}
 
-R {  674} {0} {} {rabbitfields} { } {} {} {} {} {} {1.000} {}
-E {  673} {n} {n} {1} {0} {} {1.000} {}
-E {  675} {s} {s} {4} {0} {} {1.000} {}
+R {  674} {5130} {} {} { } {} {} {} {} {} {1.000} {}
+E { 3381} {n} {n} {1} {0} {} {1.000} {}
+E { 3380} {s} {s} {4} {0} {} {1.000} {}
 
-R {  675} {0} {} {675} { } {} {} {} {} {} {1.000} {}
-E {  674} {n} {n} {1} {0} {} {1.000} {}
-E {  676} {s} {s} {4} {0} {} {1.000} {}
+R {  675} {5130} {} {} { } {} {} {} {} {} {1.000} {}
+E {11574} {e} {e} {2} {0} {} {1.000} {}
+E {11573} {w} {w} {8} {0} {} {1.000} {}
 
-R {  676} {0} {} {676} { } {} {} {} {} {} {1.000} {}
-E {  675} {n} {n} {1} {0} {} {1.000} {}
-E {  677} {s} {s} {4} {0} {} {1.000} {}
+R {  676} {10} {} {} { } {} {} {} {} {} {1.000} {}
+E {  779} {s} {s} {4} {0} {} {1.000} {}
+E {  169} {n} {n} {1} {0} {} {1.000} {}
 
-R {  677} {0} {} {677} { } {} {} {} {} {} {1.000} {}
-E {  676} {n} {n} {1} {0} {} {1.000} {}
-E {  678} {s} {s} {4} {0} {} {1.000} {}
+R {  677} {10} {} {} { } {} {} {} {} {} {1.000} {}
+E {  797} {e} {e} {2} {0} {} {1.000} {}
+E { 4546} {w} {w} {8} {0} {} {1.000} {}
 
-R {  678} {0} {} {678} { } {} {} {} {} {} {1.000} {}
-E {  677} {n} {n} {1} {0} {} {1.000} {}
-E {  679} {s} {s} {4} {0} {} {1.000} {}
-E {  956} {w} {w} {8} {0} {} {1.000} {}
+R {  678} {10} {} {} { } {} {} {} {} {} {1.000} {}
+E { 9885} {n} {n} {1} {0} {} {1.000} {}
+E { 4009} {s} {s} {4} {0} {} {1.000} {}
 
-R {  679} {0} {} {679} { } {} {} {} {} {} {1.000} {}
-E {  678} {n} {n} {1} {0} {} {1.000} {}
-E {  680} {s} {s} {4} {0} {} {1.000} {}
+R {  679} {10} {} {} { } {} {} {} {} {} {1.000} {}
+E { 7221} {w} {w} {8} {0} {} {1.000} {}
+E { 7219} {e} {e} {2} {0} {} {1.000} {}
 
-R {  680} {0} {} {680} { } {} {} {} {} {} {1.000} {}
-E {  679} {n} {n} {1} {0} {} {1.000} {}
-E {  681} {w} {w} {8} {0} {} {1.000} {}
+R {  680} {10} {} {} { } {} {} {} {} {} {1.000} {}
+E { 6268} {nw} {nw} {9} {0} {} {1.000} {}
+E { 6267} {se} {se} {6} {0} {} {1.000} {}
 
-R {  681} {0} {} {681} { } {} {} {} {} {} {1.000} {}
-E {  680} {e} {e} {2} {0} {} {1.000} {}
-E {  682} {w} {w} {8} {0} {} {1.000} {}
-
-R {  682} {0} {<118>} {682} { } {} {} {} {} {} {1.000} {}
-E {  681} {e} {e} {2} {0} {} {1.000} {}
-E {  683} {s} {s} {4} {0} {} {1.000} {}
+R {  681} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 4961} {w} {w} {8} {0} {} {1.000} {}
+E { 6326} {e} {e} {2} {0} {} {1.000} {}
 
 R {  683} {0} {} {underdark} { } {This building was once a farmers shed of some sort.  Made of stone and built to last it has all but been consumed by the forest.  Weeds and small trees grow from the cracks in the stonework and rain and weather have removed any sharp corners.  The shed has been forgotten by this world and left to its demise. There is a dark, crude stone stairwell leading down, with a heavy stone door over top of it. } {The Drow Kingdom of fe dar Shad} {underdark} {} {} {1.000} {}
-E {  682} {out} {out} {0} {0} {} {1.000} {}
 E {  684} {d} {d} {32} {0} {} {1.000} {}
+E {11193} {out} {out} {0} {0} {} {1.000} {}
 
 R {  684} {0} {} {684} { } {This is a dark stone stairwell leading underground.  The air is clean here and you can tell that the stairs are not used often.  Perhaps you should leave before you find out what's at the bottom. } {The Drow Kingdom of fe dar Shad} {} {} {} {1.000} {}
 E {  683} {u} {u} {16} {0} {} {1.000} {}
@@ -4125,11 +4121,11 @@ R {  776} {0} {} {hanging ladder} { } {} {} {} {} {} {1.000} {}
 E {  169} {w} {w} {8} {0} {} {1.000} {}
 E {  778} {n} {n} {1} {0} {} {1.000} {}
 E {  796} {s} {s} {4} {0} {} {1.000} {}
-E {  777} {jagsbar} {#map leave;e;#map go 777} {0} {0} {} {1.000} {}
+E {  777} {grab stein} {grab stein} {0} {0} {} {1.000} {}
 
-R {  777} {0} {} {jagsbar} { } {} {} {} {} {} {1.000} {}
-E {  776} {chaos} {#map leave;w;#map go 776} {0} {0} {} {1.000} {}
+R {  777} {0} {} {} { } {} {} {jagsbar} {} {} {1.000} {}
 E { 2739} {n} {n} {1} {0} {} {1.000} {}
+E {  776} {leave} {leave} {0} {0} {} {1.000} {}
 
 R {  778} {0} {} {chaos staircase} { } {} {} {} {} {} {1.000} {}
 E {  776} {s} {s} {4} {0} {} {1.000} {}
@@ -4137,8 +4133,8 @@ E {12256} {e} {e} {2} {0} {} {1.000} {}
 
 R {  779} {0} {} {779} { } {} {} {} {} {} {1.000} {}
 E { 4557} {s} {s} {4} {0} {} {1.000} {}
-E {  169} {cnorth} {#map leave;n;#map go 169} {0} {0} {} {1.000} {}
 E {  780} {leap ditch} {leap ditch} {0} {0} {} {1.000} {}
+E {  676} {n} {n} {1} {0} {} {1.000} {}
 
 R {  780} {0} {} {780} { } {} {} {} {} {} {1.000} {}
 E {  781} {e} {e} {2} {0} {} {1.000} {}
@@ -4209,14 +4205,13 @@ E {  892} {d} {d} {32} {0} {} {1.000} {}
 R {  796} {0} {} {796} { } {} {} {} {} {} {1.000} {}
 E {  776} {n} {n} {1} {0} {} {1.000} {}
 E {  797} {s} {s} {4} {0} {} {1.000} {}
-E { 4556} {cwest} {#map leave;w;#map go 4556} {0} {0} {} {1.000} {}
 E { 7043} {grab trowel} {grab trowel} {0} {0} {} {1.000} {}
 
 R {  797} {0} {} {797} { } {} {} {} {} {} {1.000} {}
 E {  796} {n} {n} {1} {0} {} {1.000} {}
 E {12258} {e} {e} {2} {0} {} {1.000} {}
-E { 4546} {cwest} {#map leave;w;#map go 4546} {0} {0} {} {1.000} {}
 E { 9803} {ride cow} {ride cow} {0} {0} {} {1.000} {}
+E {  677} {w} {w} {8} {0} {} {1.000} {}
 
 R {  798} {0} {} {798} { } {} {} {} {} {} {1.000} {}
 E {12258} {w} {w} {8} {0} {} {1.000} {}
@@ -4920,56 +4915,8 @@ R {  955} {0} {} {955} { } {} {} {} {} {} {1.000} {}
 E {  954} {w} {w} {8} {0} {} {1.000} {}
 E {11024} {e} {e} {2} {0} {} {1.000} {}
 
-R {  956} {0} {} {956} { } {} {} {} {} {} {1.000} {}
-E {  678} {e} {e} {2} {0} {} {1.000} {}
-E {  957} {w} {w} {8} {0} {} {1.000} {}
-
-R {  957} {0} {} {957} { } {} {} {} {} {} {1.000} {}
-E {  956} {e} {e} {2} {0} {} {1.000} {}
-E {  958} {w} {w} {8} {0} {} {1.000} {}
-
-R {  958} {0} {} {958} { } {} {} {} {} {} {1.000} {}
-E {  957} {e} {e} {2} {0} {} {1.000} {}
-E {  959} {w} {w} {8} {0} {} {1.000} {}
-
-R {  959} {0} {} {959} { } {} {} {} {} {} {1.000} {}
-E {  958} {e} {e} {2} {0} {} {1.000} {}
-E {  960} {w} {w} {8} {0} {} {1.000} {}
-
-R {  960} {0} {} {960} { } {} {} {} {} {} {1.000} {}
-E {  959} {e} {e} {2} {0} {} {1.000} {}
-E {  961} {w} {w} {8} {0} {} {1.000} {}
-
-R {  961} {0} {} {961} { } {} {} {} {} {} {1.000} {}
-E {  960} {e} {e} {2} {0} {} {1.000} {}
-E {  962} {w} {w} {8} {0} {} {1.000} {}
-
-R {  962} {0} {} {962} { } {} {} {} {} {} {1.000} {}
-E {  961} {e} {e} {2} {0} {} {1.000} {}
-E {  963} {w} {w} {8} {0} {} {1.000} {}
-
-R {  963} {0} {} {963} { } {} {} {} {} {} {1.000} {}
-E {  962} {e} {e} {2} {0} {} {1.000} {}
-E {  964} {s} {s} {4} {0} {} {1.000} {}
-
-R {  964} {0} {} {964} { } {} {} {} {} {} {1.000} {}
-E {  963} {n} {n} {1} {0} {} {1.000} {}
-E {  965} {s} {s} {4} {0} {} {1.000} {}
-
-R {  965} {0} {} {965} { } {} {} {} {} {} {1.000} {}
-E {  964} {n} {n} {1} {0} {} {1.000} {}
-E {  966} {s} {s} {4} {0} {} {1.000} {}
-
-R {  966} {0} {} {966} { } {} {} {} {} {} {1.000} {}
-E {  965} {n} {n} {1} {0} {} {1.000} {}
-E {  967} {s} {s} {4} {0} {} {1.000} {}
-
-R {  967} {0} {} {967} { } {} {} {} {} {} {1.000} {}
-E {  966} {n} {n} {1} {0} {} {1.000} {}
-E {  968} {rcastle} {#map leave;s;#read .tt/Dirs/rcastle_load.tt;#map go 968} {0} {0} {} {1.000} {}
-
 R {  968} {0} {} {rcastle} { } {} {} {rcastle} {} {} {1.000} {}
-E {  967} {out} {out;#read .tt/Dirs/rcastle_unload.tt} {0} {0} {} {1.000} {}
+E {13455} {out} {out} {0} {0} {} {1.000} {}
 
 R {  969} {0} {} {969} { } {} {} {} {} {} {1.000} {}
 E {  915} {s} {s} {4} {0} {} {1.000} {}
@@ -15195,12 +15142,11 @@ E { 5453} {n} {n} {1} {0} {} {1.000} {}
 
 R { 3380} {0} {} {3380} { } {} {} {} {} {} {1.000} {}
 E { 5453} {s} {s} {4} {0} {} {1.000} {}
-E { 3381} {enchantedspring} {#map leave;n;#map go 3381} {0} {0} {} {1.000} {}
-E { 5454} {n} {n} {1} {0} {} {1.000} {}
+E {  674} {n} {n} {1} {0} {} {1.000} {}
 
 R { 3381} {0} {} {enchanted spring} { } {} {} {} {} {} {1.000} {}
-E { 3380} {fantasy} {#map leave;s;#map go 3380} {0} {0} {} {1.000} {}
 E { 3382} {n} {n} {1} {0} {} {1.000} {}
+E {  674} {s} {s} {4} {0} {} {1.000} {}
 
 R { 3382} {0} {} {3382} { } {} {} {} {} {} {1.000} {}
 E { 3381} {s} {s} {4} {0} {} {1.000} {}
@@ -18250,7 +18196,7 @@ R { 4009} {0} {<118>} {4009} { } {} {} {} {} {} {1.000} {}
 E {12250} {s} {s} {4} {0} {} {1.000} {}
 E { 4010} {w} {w} {8} {0} {} {1.000} {}
 E { 5416} {pick paris} {pick paris} {0} {0} {} {1.000} {}
-E { 9885} {nn} {#map leave;n;#map go 9885} {0} {0} {} {1.000} {}
+E {  678} {n} {n} {1} {0} {} {1.000} {}
 
 R { 4010} {0} {} {4010} { } {} {} {} {} {} {1.000} {}
 E { 4009} {e} {e} {2} {0} {} {1.000} {}
@@ -20545,13 +20491,13 @@ E { 3451} {enter} {enter;#read .tt/Dirs/zelligar_load.tt} {0} {0} {} {1.000} {}
 E { 4604} {s} {s} {4} {0} {} {1.000} {}
 
 R { 4546} {0} {} {4546} { } {} {} {} {} {} {1.000} {}
-E { 4547} {bigtop} {#map leave;n;#map go 4547} {0} {0} {} {1.000} {}
-E {  797} {ceast} {#map leave;e;#map go 797} {0} {0} {} {1.000} {}
+E {  677} {e} {e} {2} {0} {} {1.000} {}
+E { 4547} {n} {n} {1} {0} {} {1.000} {}
 
 R { 4547} {0} {} {bigtop} { } {} {} {} {} {} {1.000} {}
-E { 4546} {chaos} {#map leave;s;#map go 4546} {0} {0} {} {1.000} {}
 E { 4548} {buy ticket} {buy ticket} {0} {0} {} {1.000} {}
 E { 4548} {ne} {ne} {3} {0} {} {1.000} {}
+E { 4546} {s} {s} {4} {0} {} {1.000} {}
 
 R { 4548} {0} {} {4548} { } {} {} {} {} {} {1.000} {}
 E { 4547} {sw} {sw} {12} {0} {} {1.000} {}
@@ -20584,10 +20530,6 @@ E { 4555} {sw} {sw} {12} {0} {} {1.000} {}
 R { 4555} {0} {} {albino tiger} { } {} {} {} {} {} {1.000} {}
 E { 4554} {ne} {ne} {3} {0} {} {1.000} {}
 
-R { 4556} {0} {} {4556} { } {} {} {} {} {} {1.000} {}
-E {  796} {ceast} {#map leave;e;#map go 796} {0} {0} {} {1.000} {}
-E { 4560} {ne} {ne} {3} {0} {} {1.000} {}
-
 R { 4557} {0} {} {4557} { } {} {} {} {} {} {1.000} {}
 E {  779} {n} {n} {1} {0} {} {1.000} {}
 E { 4558} {s} {s} {4} {0} {} {1.000} {}
@@ -20600,7 +20542,6 @@ R { 4559} {0} {} {4559} { } {} {} {} {} {} {1.000} {}
 E { 4558} {n} {n} {1} {0} {} {1.000} {}
 
 R { 4560} {0} {} {veggiegarden} { } {} {} {} {} {} {1.000} {}
-E { 4556} {sw} {sw} {12} {0} {} {1.000} {}
 E { 4561} {n} {n} {1} {0} {} {1.000} {}
 
 R { 4561} {0} {} {4561} { } {} {} {} {} {} {1.000} {}
@@ -22522,7 +22463,7 @@ E {11711} {u} {u} {16} {0} {} {1.000} {}
 R { 4959} {0} {} {4959} { } {} {} {} {} {} {1.000} {}
 E { 3082} {s} {s} {4} {0} {} {1.000} {}
 
-R { 4960} {0} {} {4960} { } {} {} {} {} {} {1.000} {}
+R { 4960} {0} {} {4960} { } {Books surround you, covering the walls nearly to the ceiling. There are even a few free standing shelves about the room, usually strategically placed to add privacy to the small reading tables which are scattered about the room. A red overstuffed chair sits at the end of one of the shelves. } {The Book Nook} {} {} {} {1.000} {}
 E { 6328} {n} {n} {1} {0} {} {1.000} {}
 E { 6326} {se} {se} {6} {0} {} {1.000} {}
 
@@ -28408,12 +28349,12 @@ E { 6267} {w} {w} {8} {0} {} {1.000} {}
 
 R { 6267} {0} {<128>} {} { } {} {} {} {} {} {1.000} {}
 E { 6266} {e} {e} {2} {0} {} {1.000} {}
-E { 6268} {nnw} {#map leave;nw;#map go 6268} {0} {0} {} {1.000} {}
+E {  680} {nw} {nw} {9} {0} {} {1.000} {}
 
 R { 6268} {0} {<118>} {clenched light} { } {} {} {clenched light} {} {} {1.000} {}
 E { 6269} {w} {w} {8} {0} {} {1.000} {}
 E {10895} {n} {n} {1} {0} {} {1.000} {}
-E { 6267} {sse} {#map leave;se;#map go 6267} {0} {0} {} {1.000} {}
+E {  680} {se} {se} {6} {0} {} {1.000} {}
 
 R { 6269} {0} {} {6269} { } {Outside the Tower of the Clenched Light Currents writhe strangely and unnaturally inside the water, responding to unearthly forces.  Centered in the vast glade rises a tower of pale stone, seemingly held in place by the ribbons of water as it reaches for the heavens.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
 E { 6268} {e} {e} {2} {0} {} {1.000} {}
@@ -28679,14 +28620,14 @@ E { 6324} {e} {e} {2} {0} {} {1.000} {}
 E {11642} {d} {d} {32} {0} {} {1.000} {}
 E {11718} {in} {in} {0} {0} {} {1.000} {}
 
-R { 6326} {0} {} {book nook} { } {} {} {} {} {} {1.000} {}
-E { 4961} {cwest} {#map leave;w;#map go 4961} {0} {0} {} {1.000} {}
+R { 6326} {0} {} {book nook} { } {Before you is the check-out counter of the store.  The counter backs  up against one of the display windows, letting the clerk keep an eye  on the door while working.  Across from the door is a wall dividing the store in half.  A sign hangs on the wall. } {The Book Nook} {} {} {} {1.000} {}
 E { 6334} {ne} {ne} {3} {0} {} {1.000} {}
 E { 6335} {e} {e} {2} {0} {} {1.000} {}
 E { 4960} {nw} {nw} {9} {0} {} {1.000} {}
 E {12040} {climb stairs} {climb stairs} {0} {0} {} {1.000} {}
+E {  681} {w} {w} {8} {0} {} {1.000} {}
 
-R { 6327} {0} {} {mtg} { } {} {} {} {} {} {1.000} {}
+R { 6327} {0} {<118>} {mtg} { } {} {} {} {} {} {1.000} {}
 E { 6336} {stand} {stand} {0} {0} {} {1.000} {}
 E { 6337} {nw} {nw} {9} {0} {} {1.000} {}
 E { 6338} {sw} {sw} {12} {0} {} {1.000} {}
@@ -28695,41 +28636,41 @@ E { 6345} {n} {n} {1} {0} {} {1.000} {}
 E { 6352} {se} {se} {6} {0} {} {1.000} {}
 E {12130} {say ready} {say ready} {0} {0} {} {1.000} {}
 
-R { 6328} {0} {} {6328} { } {} {} {} {} {} {1.000} {}
+R { 6328} {0} {} {6328} { } {You stand at the end of a long room full of books.  The walls are covered with shelves reaching nearly to the ceiling, all covered with books.  There are even a few free standing shelves about the room, usually strategically placed to add privacy to the small reading tables which are scattered about the room. } {The Book Nook} {} {} {} {1.000} {}
 E { 6329} {n} {n} {1} {0} {} {1.000} {}
 E { 4960} {s} {s} {4} {0} {} {1.000} {}
 E { 6465} {browse magazine} {browse magazine} {0} {0} {} {1.000} {}
 
-R { 6329} {0} {} {6329} { } {} {} {} {} {} {1.000} {}
+R { 6329} {0} {} {6329} { } {Books surround you, covering the walls nearly to the ceiling.  There are even a few free standing shelves about the room, usually  strategically placed to add privacy to the small reading tables which are scattered about the room. } {The Book Nook} {} {} {} {1.000} {}
 E { 6328} {s} {s} {4} {0} {} {1.000} {}
 E { 6330} {ne} {ne} {3} {0} {} {1.000} {}
 
-R { 6330} {0} {} {6330} { } {} {} {} {} {} {1.000} {}
+R { 6330} {0} {} {6330} { } {The two side rooms come together here at the ordering desk for  the store while another room lies to the north.  No one seems to  be here right now, but they've left a few sheets of paper and a  cork board to tack them on with your orders. } {The Book Nook} {} {} {} {1.000} {}
 E { 6329} {sw} {sw} {12} {0} {} {1.000} {}
 E { 6331} {n} {n} {1} {0} {} {1.000} {}
 E { 6332} {se} {se} {6} {0} {} {1.000} {}
 
-R { 6331} {0} {} {6331} { } {} {} {} {} {} {1.000} {}
+R { 6331} {0} {} {6331} { } {A large, bright yellow table sits in the middle of the room,  surrounded by tiny matching chairs.  Colorful books line the  shelves that cover each wall and fun characters are depicted on  posters that decorate the end of each shelf.  This is the  children's section of the store. } {The Book Nook} {} {} {} {1.000} {}
 E { 6330} {s} {s} {4} {0} {} {1.000} {}
 
-R { 6332} {0} {} {6332} { } {} {} {} {} {} {1.000} {}
+R { 6332} {0} {} {6332} { } {This half of the store is floor to ceiling compact discs.  Shelves and display racks line the walls and form a center divider down the room, creating two aisles.  Every so often along the aisle you notice a listening station where you can preview selected CDs before you buy them.  Looks like this room was made for browsing, so take a look around. } {The Book Nook} {} {} {} {1.000} {}
 E { 6330} {nw} {nw} {9} {0} {} {1.000} {}
 E { 6333} {s} {s} {4} {0} {} {1.000} {}
 
-R { 6333} {0} {} {6333} { } {} {} {} {} {} {1.000} {}
+R { 6333} {0} {} {6333} { } {This half of the store is floor to ceiling compact discs.  Shelves and display racks line the walls and form a center divider down the room, creating two aisles.  Every so often along the aisle you notice a listening station where you can preview selected CDs before you buy them.  Looks like this room was made for browsing, so take a look around. } {The Book Nook} {} {} {} {1.000} {}
 E { 6332} {n} {n} {1} {0} {} {1.000} {}
 E { 6334} {s} {s} {4} {0} {} {1.000} {}
 
-R { 6334} {0} {} {6334} { } {} {} {} {} {} {1.000} {}
+R { 6334} {0} {} {6334} { } {This half of the store is floor to ceiling compact discs.  Shelves and display racks line the walls and form a center divider down the room, creating two aisles.  Every so often along the aisle you notice a listening station where you can preview selected CDs before you buy them.  Looks like this room was made for browsing, so take a look around. } {The Book Nook} {} {} {} {1.000} {}
 E { 6333} {n} {n} {1} {0} {} {1.000} {}
 E { 6326} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 6335} {0} {} {6335} { } {} {} {} {} {} {1.000} {}
+R { 6335} {0} {} {6335} { } {A small hobby shop which connects to the BookNook.  Models,  paints, landscaping stuff for little trains, baseball cards, board  games, everything you can think of to waste time is here.  And  that's why you're here right?  The shop seems to be divided up by  the gaming tables.  The aisles of merchandise winding about them in  the cramped space. } {The Book Nook} {} {} {} {1.000} {}
 E { 6326} {w} {w} {8} {0} {} {1.000} {}
 E { 6336} {e} {e} {2} {0} {} {1.000} {}
 E {10077} {play warhammer} {play warhammer} {0} {0} {} {1.000} {}
 
-R { 6336} {0} {} {6336} { } {} {} {} {} {} {1.000} {}
+R { 6336} {0} {} {6336} { } {Now this is where you wanted to be.  You can almost feel the  cardboard crack calling you.  These tables in the back of the store  are for the Magic junkies.  They're usually waiting about for a  game or two.  You just need to find one and take your chances with  your deck.  Heck, if you start losing, you can just stand up and leave. } {The Book Nook} {} {} {} {1.000} {}
 E { 6335} {w} {w} {8} {0} {} {1.000} {}
 E { 6327} {sit} {sit} {0} {0} {} {1.000} {}
 
@@ -29272,7 +29213,7 @@ R { 6464} {0} {} {6464} { } {} {} {} {} {} {1.000} {}
 E { 6341} {e} {e} {2} {0} {} {1.000} {}
 E { 6342} {ne} {ne} {3} {0} {} {1.000} {}
 
-R { 6465} {0} {} {6465} { } {} {} {} {} {} {1.000} {}
+R { 6465} {0} {<118>} {6465} { } {} {} {} {} {} {1.000} {}
 E { 6328} {reality} {reality} {0} {0} {} {1.000} {}
 E { 6466} {e} {e} {2} {0} {} {1.000} {}
 
@@ -32657,15 +32598,15 @@ E {   65} {n} {n} {1} {0} {} {1.000} {}
 
 R { 7219} {0} {<128>} {7219} { } {} {} {} {} {} {1.000} {}
 E { 7218} {e} {e} {2} {0} {} {1.000} {}
-E { 7221} {bwest} {#map leave;w;#map go 7221} {0} {0} {} {1.000} {}
+E {  679} {w} {w} {8} {0} {} {1.000} {}
 
 R { 7220} {0} {} {7220} { } {} {} {} {} {} {1.000} {}
 E {  974} {e} {e} {2} {0} {} {1.000} {}
 E { 5876} {portal} {portal} {0} {0} {} {1.000} {}
 
 R { 7221} {0} {} {bards} { } {} {} {bards} {} {} {1.000} {}
-E { 7219} {beast} {#map leave;e;#map go 7219} {0} {0} {} {1.000} {}
 E { 7222} {w} {w} {8} {0} {} {1.000} {}
+E {  679} {e} {e} {2} {0} {} {1.000} {}
 
 R { 7222} {0} {} {7222} { } {} {} {} {} {} {1.000} {}
 E { 7221} {e} {e} {2} {0} {} {1.000} {}
@@ -47912,8 +47853,8 @@ R { 9884} {0} {} {9884} { } {} {} {} {} {} {1.000} {}
 E { 4017} {s} {s} {4} {0} {} {1.000} {}
 
 R { 9885} {0} {} {9885} { } {You are on a forest path going north and south. All around you are maple trees with small birds singing beautifully. The ground is covered with all kinds of different flowers. There is a soft breeze flowing through the trees swirling up the pollen from the flowers. You can smell the sweetness in the air. A small board is nailed to one of the trees here. To the south the path goes into another part of the forest. } {Mystic Forest} {} {} {} {1.000} {}
-E { 4009} {ss} {#map leave;s;#map go 4009} {0} {0} {} {1.000} {}
 E { 9886} {n} {n} {1} {0} {} {1.000} {}
+E {  678} {s} {s} {4} {0} {} {1.000} {}
 
 R { 9886} {0} {} {9886} { } {You are on a forest path going north and south. Tall trees line the path around you. High up in the trees you can spot small birds that seem to be looking down on you. There is a breeze flowing through the trees and as it touches the ground it swirls up pollen from the blooming flowers. } {Mystic Forest} {} {} {} {1.000} {}
 E { 9885} {s} {s} {4} {0} {} {1.000} {}
@@ -48692,7 +48633,7 @@ E {10587} {s} {s} {4} {0} {} {1.000} {}
 E {10591} {e} {e} {2} {0} {} {1.000} {}
 E {10609} {w} {w} {8} {0} {} {1.000} {}
 
-R {10077} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10077} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 6335} {door} {door} {0} {0} {} {1.000} {}
 E {10078} {board} {board} {0} {0} {} {1.000} {}
 
@@ -53404,7 +53345,7 @@ E {  654} {n} {n} {1} {0} {} {1.000} {}
 E { 3008} {s} {s} {4} {0} {} {1.000} {}
 
 R {11185} {0} {} {} { } {} {} {} {} {} {1.000} {}
-E {  673} {n} {n} {1} {0} {} {1.000} {}
+E {13460} {n} {n} {1} {0} {} {1.000} {}
 E {11186} {s} {s} {4} {0} {} {1.000} {}
 
 R {11186} {0} {} {} { } {} {} {} {} {} {1.000} {}
@@ -53426,26 +53367,36 @@ E {11190} {s} {s} {4} {0} {} {1.000} {}
 R {11190} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11189} {n} {n} {1} {0} {} {1.000} {}
 E {11191} {s} {s} {4} {0} {} {1.000} {}
+E {13459} {w} {w} {8} {0} {} {1.000} {}
+E {11192} {sw} {sw} {12} {0} {} {1.000} {}
 
 R {11191} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11190} {n} {n} {1} {0} {} {1.000} {}
 E {11192} {w} {w} {8} {0} {} {1.000} {}
+E {13446} {s} {s} {4} {0} {} {1.000} {}
 
 R {11192} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11191} {e} {e} {2} {0} {} {1.000} {}
 E {11193} {w} {w} {8} {0} {} {1.000} {}
+E {13459} {n} {n} {1} {0} {} {1.000} {}
+E {11190} {ne} {ne} {3} {0} {} {1.000} {}
 
 R {11193} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11192} {e} {e} {2} {0} {} {1.000} {}
 E {11194} {sw} {sw} {12} {0} {} {1.000} {}
+E {  683} {s} {s} {4} {0} {} {1.000} {}
+E {13461} {n} {n} {1} {0} {} {1.000} {}
 
 R {11194} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11193} {ne} {ne} {3} {0} {} {1.000} {}
 E {11195} {sw} {sw} {12} {0} {} {1.000} {}
+E {13449} {se} {se} {6} {0} {} {1.000} {}
 
 R {11195} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11194} {ne} {ne} {3} {0} {} {1.000} {}
 E {11196} {nw} {nw} {9} {0} {} {1.000} {}
+E {13450} {e} {e} {2} {0} {} {1.000} {}
+E {13452} {w} {w} {8} {0} {} {1.000} {}
 
 R {11196} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11195} {se} {se} {6} {0} {} {1.000} {}
@@ -55145,12 +55096,11 @@ E {11573} {n} {n} {1} {0} {} {1.000} {}
 
 R {11573} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11572} {s} {s} {4} {0} {} {1.000} {}
-E {11574} {ee} {#map leave;e;#map goto 11574} {0} {0} {} {1.000} {}
+E {  675} {e} {e} {2} {0} {} {1.000} {}
 
 R {11574} {0} {} {dreamville} { } {} {} {} {} {} {1.000} {}
-E {11573} {ww} {#map leave;w;#map goto 11573} {0} {0} {} {1.000} {}
 E {11575} {n} {n} {1} {0} {} {1.000} {}
-E {11580} {w} {w} {8} {0} {} {1.000} {}
+E {  675} {w} {w} {8} {0} {} {1.000} {}
 
 R {11575} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11574} {s} {s} {4} {0} {} {1.000} {}
@@ -55171,9 +55121,6 @@ E {11579} {w} {w} {8} {0} {} {1.000} {}
 
 R {11579} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11578} {e} {e} {2} {0} {} {1.000} {}
-
-R {11580} {0} {} {} { } {} {} {} {} {} {1.000} {}
-E {11574} {e} {e} {2} {0} {} {1.000} {}
 
 R {11581} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11575} {w} {w} {8} {0} {} {1.000} {}
@@ -57121,7 +57068,7 @@ E {11926} {s} {s} {4} {0} {} {1.000} {}
 R {12039} {0} {} {princess bride} { } {} {} {} {} {} {1.000} {}
 E {12040} {exit} {exit} {0} {0} {} {1.000} {}
 
-R {12040} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {12040} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 6326} {d} {d} {32} {0} {} {1.000} {}
 E {12039} {ask} {ask} {0} {0} {} {1.000} {}
 
@@ -58751,6 +58698,7 @@ R {12423} {0} {} {Swirling Vapors (e)} { } {You stand on the edge of the world, 
 E {  623} {e} {e} {2} {0} {} {1.000} {}
 
 R {12424} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {    1} {home} {home} {0} {0} {} {1.000} {}
 
 R {12425} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
@@ -63105,6 +63053,49 @@ R {13445} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {13443} {w} {w} {8} {0} {} {1.000} {}
 E {13444} {n} {n} {1} {0} {} {1.000} {}
 
+R {13446} {0} {} {} { } {} {} {} {} {} {1.000} {}
+E {11191} {n} {n} {1} {0} {} {1.000} {}
+E {13447} {s} {s} {4} {0} {} {1.000} {}
+E {13448} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {13447} {0} {} {} { } {} {} {} {} {} {1.000} {}
+E {13446} {n} {n} {1} {0} {} {1.000} {}
+E {13448} {w} {w} {8} {0} {} {1.000} {}
+E {13451} {nw} {nw} {9} {0} {} {1.000} {}
+
+R {13448} {0} {} {} { } {} {} {} {} {} {1.000} {}
+E {13447} {e} {e} {2} {0} {} {1.000} {}
+E {13449} {w} {w} {8} {0} {} {1.000} {}
+E {13446} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {13449} {0} {} {} { } {} {} {} {} {} {1.000} {}
+E {13448} {e} {e} {2} {0} {} {1.000} {}
+E {13450} {w} {w} {8} {0} {} {1.000} {}
+E {11194} {nw} {nw} {9} {0} {} {1.000} {}
+
+R {13450} {0} {} {} { } {} {} {} {} {} {1.000} {}
+E {13449} {e} {e} {2} {0} {} {1.000} {}
+E {11195} {w} {w} {8} {0} {} {1.000} {}
+
+R {13451} {0} {} {} { } {} {} {} {} {} {1.000} {}
+E {13447} {se} {se} {6} {0} {} {1.000} {}
+
+R {13452} {0} {} {} { } {} {} {} {} {} {1.000} {}
+E {11195} {e} {e} {2} {0} {} {1.000} {}
+E {13453} {w} {w} {8} {0} {} {1.000} {}
+
+R {13453} {0} {} {} { } {} {} {} {} {} {1.000} {}
+E {13452} {e} {e} {2} {0} {} {1.000} {}
+E {13454} {w} {w} {8} {0} {} {1.000} {}
+
+R {13454} {0} {} {} { } {} {} {} {} {} {1.000} {}
+E {13453} {e} {e} {2} {0} {} {1.000} {}
+E {13455} {w} {w} {8} {0} {} {1.000} {}
+
+R {13455} {0} {} {} { } {} {} {} {} {} {1.000} {}
+E {13454} {e} {e} {2} {0} {} {1.000} {}
+E {  968} {s} {s} {4} {0} {} {1.000} {}
+
 R {13456} {0} {} {At a landing pad. (board,s,w)} { } {The road up the mountain comes to a halt at a giant platform. The mountain walls cut off all travel past this point, and the only way out is back down the road. } {Juggernaut} {} {} {} {1.000} {}
 E { 6371} {w} {w} {8} {0} {} {1.000} {}
 E {13457} {board} {board} {0} {0} {} {1.000} {}
@@ -63114,3 +63105,16 @@ R {13457} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
 R {13458} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {13456} {n} {n} {1} {0} {} {1.000} {}
+
+R {13459} {0} {} {} { } {} {} {} {} {} {1.000} {}
+E {11192} {s} {s} {4} {0} {} {1.000} {}
+E {11190} {e} {e} {2} {0} {} {1.000} {}
+E {13461} {w} {w} {8} {0} {} {1.000} {}
+
+R {13460} {5130} {} {} { } {} {} {} {} {} {1.000} {}
+E {11185} {s} {s} {4} {0} {} {1.000} {}
+E {  673} {n} {n} {1} {0} {} {1.000} {}
+
+R {13461} {0} {} {} { } {} {} {} {} {} {1.000} {}
+E {13459} {e} {e} {2} {0} {} {1.000} {}
+E {11193} {s} {s} {4} {0} {} {1.000} {}
