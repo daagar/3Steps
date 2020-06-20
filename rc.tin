@@ -7,7 +7,7 @@
 #CONFIG           {COMMAND ECHO}	{ON}
 #CONFIG           {CONNECT RETRY}	{15}
 #CONFIG           {HISTORY SIZE}	{1000}
-#CONFIG           {LOG MODE}		{RAW}
+#CONFIG           {LOG MODE}		{PLAIN}
 #CONFIG           {MOUSE TRACKING}	{ON}
 #CONFIG           {PACKET PATCH}	{0.80}
 #CONFIG           {REPEAT CHAR}		{!}
@@ -58,19 +58,27 @@
                 #format {ses_len} {%L} {%0};
                 #math {ses_len} {$ses_len-2};
                 #format {ses_name} {%.${ses_len}s} {%0};
-                #var {mud} {3s}
+                #var {mud} {3s};
         } {
-                #regex {%0} {AW} {
-                        #ses {%0} {aardwolf.org} {23};
+                #regex {%0} {AA} {
+                        #ses {%0} {anguish.org} {2222};
                         #format {ses_len} {%L} {%0};
                         #math {ses_len} {$ses_len-2};
                         #format {ses_name} {%.${ses_len}s} {%0};
-                        #var {mud} {AW}
+                        #var {mud} {AA};
                 } {
-                        #ses {%0} {3k.org} {3000};
-                        #var {ses_name} {%0};
-                        #var {mud} {3k}
-                }
+			#regex {%0} {ZM} {
+				#ses {%0} {zombiemud.org} {23};
+				#format {ses_len} {%L} {%0};
+				#math {ses_len} {$ses_len-2};
+				#format {ses_name} {%.${ses_len}s} {%0};
+				#var {mud} {ZM};
+			}{
+				#ses {%0} {3k.org} {3000};
+				#var {ses_name} {%0};
+				#var {mud} {3k};
+			};
+		};
         };
         $ses_name;
         #read .tt/.pass

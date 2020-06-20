@@ -1,0 +1,51 @@
+#nop {
+	macros.tt for Tim the bard, version 4.
+	December 16, 2008
+
+	f1		hp
+	f2		i
+	f3		display small map
+	opt-f1		new map
+	opt-f2		map step undo
+	opt-f3		display full map
+}
+#macro \eOP {walk home}
+#macro \eOQ {
+	i;
+}
+#macro \eOR {
+	#map map 1;
+}
+#macro \e[17~ {
+	#map create;
+	#map goto 1;
+}
+#macro \e[18~ {
+	#map undo;
+}
+#macro \e[19~ {
+	#map map;
+}
+
+#macro \e[23~ {
+	kk;
+}
+
+#macro \e[24~ {
+	ki;
+}
+
+
+#nop { quickkill, and: kill while typing }
+#macro \C-k kk
+
+#nop { quickwalk, and: walk while typing }
+#macro \C-r nw
+#macro \C-t n
+#macro \C-y ne
+#macro \C-f w
+#macro \C-g l
+#macro \C-h e
+#macro \C-v sw
+#macro \C-b s
+#macro \C-n se

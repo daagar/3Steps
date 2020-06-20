@@ -1,6 +1,5 @@
 #NOP
 /* Load Common Files */
-#config {packet patch}{0.5}
 #config {repeat enter}{on}
 #nop {Set to make copy/paste work
 	#config {mouse tracking}{off}
@@ -9,6 +8,7 @@
 #read .tt/graph.tin
 
 #alias {load3k} {
+	#config {packet patch}{0.5};
 	#read .tt/3k/mysql.tin;
 	#read .tt/3k/vars.tin;
 	#read .tt/3k/aliases.tin;
@@ -32,10 +32,34 @@
 	#read .tt/3k/triggers.tin;
 	#read .tt/3k/damagetracker.tin;
 	#delay {ansi}{#read .tt/3k/ansi_setup.tin}{2};
-	#script {cat .tt/map/lastroom.tt}
+	#script {cat .tt/map/lastroom.tt};
 }
 
-load3k;
-resume_chat;
+#alias {loadAA} {
+	#config {packet patch}{0.1};
+	#read .tt/AA/mapper.tin;
+	#read .tt/AA/draw.tin;
+	#read .tt/AA/triggers.tin;
+	#read .tt/AA/aliases.tin;
+	#read .tt/AA/gag.tin;
+	#read .tt/AA/vars.tin;
+	#script {cat .tt/AA/lastroom.tt};
+}
+
+#alias {load}{
+	#if {"$mud" == "3k"}{
+		load3k;
+		resume_chat;
+	};
+	#if {"$mud" == "3s"}{
+		load3k;
+		resume_chat;
+	};
+	#if {"$mud" == "AA"}{
+		loadAA;
+	};
+};
+
+#delay {0}{load};
 
 #sub {~\t} {       }

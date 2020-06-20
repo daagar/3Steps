@@ -1,0 +1,322 @@
+#var domove 0
+#var critter_room 0
+#var player_room 0
+#var starter 0
+#var stepper 0
+#var reversedir s
+#var reverse_dir 0
+#var findexit 0
+#var area_aggro 0
+#var automap 0
+
+#act {^%1[monster].}{
+	#math {critter_room}{$critter_room + 1};
+	#format {tkstr}{%l}{%1};
+	#regex {$tkstr}{%*attacking you%*}{#var tkstr &1};
+	#regex {$tkstr}{%*(%d\%)}{#var tkstr &1};
+	#if {"$guild" == "cyborg"}{#regex {$tkstr}{[%*] %*}{#var tkstr &2}};
+	#regex {$tkstr}{%* [%*]}{#var tkstr &1};
+	#regex {$tkstr}{%*[%*]%*}{#var tkstr &1};
+	#regex {$tkstr}{everybody}{#var tkstr none;#math {critter_room}{$critter_room - 1}};
+	#if {"$area" == "csewers"}{
+		#if {"$tkstr" == "{[grimy beast|muck monster|mudman|living fungus|venomous sludge|thorn beast]*}"}{
+		}{
+			#var tkstr none;
+			#math {critter_room}{$critter_room - 1};
+	};
+	};
+	#if {"$area" == "pol"}{
+		#if {"$tkstr" == "{[wild stag|wyvern|baby dragon|sylvan elf|faerie lizard|rabid wolf]*}"}{
+		}{
+			#var tkstr none;
+			#math {critter_room}{$critter_room - 1};
+		};
+	};
+	#if {"$area" == "ccows"}{
+		#regex {$tkstr}{cow}{#var tkstr cow};
+		#if {"$tkstr" != "cow"}{
+			#math {critter_room}{$critter_room - 1};
+			#var tkstr cow;
+		};
+	};
+	#regex {$tkstr}{broodling}{
+		#var tkstr none;
+		#math {critter_room}{$critter_room - 1};
+	};
+	#if {"$tkstr" != "none"}{
+		#var kstr $tkstr
+	};
+}
+
+#act {^%1[monster] \{%2\}.}{
+	#math {critter_room}{$critter_room + %2};
+	#format {tkstr}{%l}{%1};
+	#regex {$tkstr}{%*attacking you%*}{#var tkstr &1};
+	#regex {$tkstr}{%*(%d\%)}{#var tkstr &1};
+	#if {"$guild" == "cyborg"}{#regex {$tkstr}{[%*] %*}{#var tkstr &2}};
+	#regex {$tkstr}{%*attacking you%*}{#var tkstr &1};
+	#regex {$tkstr}{%* [%*]%*}{#var tkstr &1};
+	#regex {$tkstr}{[%*] %*}{#var tkstr &2};
+	#regex {$tkstr}{%*[%*]%*}{#var tkstr &1};
+	#if {"$area" == "csewers"}{
+		}{
+		#if {"$tkstr" == "{[grimy beast|muck monster|mudman|living fungus|venomous sludge|thorn beast]*}"}{
+		}{
+			#var tkstr none;
+			#math {critter_room}{$critter_room - %2};
+		};
+	};
+	#if {"$area" == "pol"}{
+		#if {"$tkstr" == "{[wild stag|wyvern|baby dragon|sylvan elf|faerie lizard|rabid wolf]*}"}{
+		}{
+			#var tkstr none;
+			#math {critter_room}{$critter_room - %2};
+		};
+	};
+	#if {"$area" == "ccows"}{
+		#regex {$tkstr}{cow}{#var tkstr cow};
+		#if {"$tkstr" != "cow"}{
+			#math {critter_room}{$critter_room - %2};
+			#var tkstr cow;
+		};
+	};
+	#regex {$tkstr}{broodling}{
+		#var tkstr none;
+		#math {critter_room}{$critter_room - 1};
+	};
+	#if {"$tkstr" != "none"}{
+		#var kstr $tkstr
+	};
+}
+
+#act {^%1[player].}{
+	#math {player_room}{$player_room + 1};
+}
+
+#var findloc 0
+#act {^%1[item].}{
+	#format {item}{%l}{%1};
+	#regex {$item}{gold coins}{!share coins};
+	#regex {$item}{puppy}{!get puppy};
+	#loop {1}{$all_area_items}{count}{
+		#regex {$item}{$area_items[$count]}{
+			#list {item_list}{add}{$area_items[$count]};
+			#list {item_list}{size}{total_items};
+		};
+	};
+	#if {$findloc == 1}{
+		#if {"$item" == "a small, dark hole"}{startmap small dark hole};
+		#if {"$item" == "a white fence"}{startmap white fence};
+		#if {"$item" == "a swirling void"}{startmap mushroom ring};
+		#if {"$item" == "a toy chest"}{startmap toy chest};
+		#if {"$item" == "a bronze plaque"}{startmap chaos};
+		#if {"$item" == "a weird hanging ladder"}{startmap hanging ladder};
+		#if {"$item" == "a large ladder"}{startmap large ladder};
+		#if {"$item" == "a large whirlpool"}{startmap whirlpool};
+		#if {"$item" == "a laboratory building, floating in the void"}{startmap chaos laboratory};
+		#if {"$item" == "an intradimensional bucket"}{startmap intradimensional bucket};
+		#if {"$item" == "a toddler's sippy cup"}{startmap sippy cup};
+		#if {"$item" == "a gumball machine"}{startmap gumball machine};
+		#if {"$item" == "a playhouse"}{startmap playhouse};
+		#if {"$item" == "a banana peel"}{startmap banana peel};
+		#if {"$item" == "a hockey puck"}{startmap hockey puck};
+		#if {"$item" == "a staircase"}{startmap chaos staircase};
+		#if {"$item" == "a writhing tendril"}{startmap writhing tendril};
+	};
+	#unvar item;
+}
+
+#act {^%1[item] \{%2\}.}{
+	#format {item}{%l}{%1};
+	#loop {1}{$all_area_items}{count}{
+		#regex {$item}{$area_items[$count]}{
+			#loop {1}{%2}{count2}{
+				#list {item_list}{add}{$area_items[$count]};
+				#list {item_list}{size}{total_items};
+			};
+		};
+	};
+	#unvar item;
+}
+
+#alias {dirfunction}{
+        #if {"%1" == "s"}{#var reversedir n;s};
+        #if {"%1" == "e"}{#var reversedir w;e};
+        #if {"%1" == "w"}{#var reversedir e;w};
+        #if {"%1" == "n"}{#var reversedir s;n};
+        #if {"%1" == "sw"}{#var reversedir ne;sw};
+        #if {"%1" == "se"}{#var reversedir nw;se};
+        #if {"%1" == "nw"}{#var reversedir se;nw};
+        #if {"%1" == "ne"}{#var reversedir sw;ne};
+}
+
+
+#alias ki {
+	#if {$domove == 1}{
+		#var domove 0;
+		#var starter 0;
+		#var player_room 0;
+		#var critter_room 0
+	}{
+		#var findexit 0;
+		#var critter_room 0;
+		#var player_room 0;
+		#var domove 1;
+		#var starter 1;
+		glance
+	};
+}
+
+#alias {o}{
+	#if {$domove == 1}{
+		#var domove 0;
+		#var findexit 0;
+	}{
+		#var findexit 1;
+		#var domove 1;
+		!glance;
+	};
+}
+
+#alias {gather_items}{
+	#if {$total_items > 0}{
+		#loop {1}{$total_items}{count}{
+		!get ${item_list[$count]};
+		#if {"$area" == "csewers" && "$guild" == "mage"}{
+			id ${item_list[$count]};
+		};
+		#if {"$guild" == "breed"}{
+			pck ${item_list[$count]};
+		}{
+			ppck;
+		};
+	};
+		#list {item_list}{clear};
+		#unvar item_list;
+	};
+}
+
+#alias kill-loop {
+	#if {$starter == 1}{
+		#if {${player_room} == 0}{ 
+			#if {${autogather} == 1}{
+				gather_items;
+				};
+		};
+		#if {$stepper == 1}{
+			#math {room_num}{$room_num + 1};
+			$kill_path[$room_num];
+		}{
+			dirfunction $desired_dir;
+		};
+		#var domove 1;
+		#var starter 0;
+	}{
+	#if {${player_room} == 0}{ 
+		#if {${autogather} == 1}{
+			gather_items;
+		};
+		#if {${critter_room} > 0}{
+			#var domove 0;
+				#if {$autokill == 1 && $area_aggro != 1}{
+					kk;
+				};
+			}{
+				#if {$stepper == 1}{
+					#math {room_num}{$room_num + 1};
+					$kill_path[$room_num];
+				}{
+					dirfunction $desired_dir;
+				};
+			};
+		}{
+			#if {$stepper == 1}{
+				#math {room_num}{$room_num + 1};
+				$kill_path[$room_num];
+			}{
+				dirfunction $desired_dir;
+			};
+		};
+	};
+}
+
+#alias dir_selection {
+	#var good_dir 0;
+	#var max_rand 0;
+	#if {$domove == 1}{
+		#if {$room_exits == 1}{
+			#var desired_dir ${room_dirs[1]};
+		}{
+			#if {$room_exits == 2}{
+				#if {$upexit == 1}{
+					#var desired_dir ${room_dirs[2]};
+					#var good_dir 1;
+				};
+				#if {$upexit == 2}{
+					#var desired_dir ${room_dirs[1]};
+					#var good_dir 1;
+				};
+			};
+			#while {$good_dir == 0 && $max_rand < 100}{
+				#math {max_rand}{$max_rand + 1};
+				#math {desired_num}{1 d $room_exits};
+				#if {$desired_num != $upexit}{
+					#if {$desired_num != $reverse_dir}{
+						#var {desired_dir}{${room_dirs[$desired_num]}};
+						#var good_dir 1;
+					};
+				};
+			};
+		};
+		#if {$findexit == 1}{
+			kill-loop
+		}{
+			#delay {0.05}{kill-loop};
+		};
+	};
+}
+
+#act {[room]%1 (%2)}{
+	#unvar {item_list};
+	#var total_items 0;
+	#list {item_list}{clear};
+	#var player_room 0;
+	#var critter_room 0;
+	#var upexit 0;
+	#var room_dirs %2;
+	#replace {room_dirs}{,}{;};
+	#list {room_dirs}{create}{$room_dirs};
+	#list {room_dirs}{find}{u}{upexit};
+#nop {	#if {$upexit > 0 && "$area" == "csewers"} };
+	#if {"%1" == "Sewer Portal" && "$area" == "csewers"}{
+		#map name exit;#map set roomsymbol x;#map set roomcolor <128>;
+		#map dig u;
+		#map {exit}{u}{command}{#read Dirs/csewers_unload.tt;u;#var findloc 1};
+		#if {$findexit == 1}{#var domove 0};
+	};
+	#list {room_dirs}{find}{$reversedir}{reverse_dir};
+	#list {room_dirs}{size}{room_exits};
+	#if {$room_exits == 1 && "$area" == "csewers"}{#map set roomsymbol D}
+	#if {$automap == 1}{
+		#loop {1}{$room_exits}{exitnum}{
+			#if {"${room_dirs[$exitnum]}" == "{[nwes]}"}{}{mark};
+			#map dig ${room_dirs[$exitnum]};
+		};
+	};
+	#if {$stepper == 1}{
+		#if {${domove} == 1}{
+			#if {$findexit == 1}{
+				kill-loop;
+			}{
+				#delay {0.05}{kill-loop};
+			};
+		};
+	}{
+		dir_selection;
+	};
+	#if {$findloc == 1}{
+		#if {"%1" == "Da Pits"}{startmap da pits};
+		#if {"%1" == "Cliff Path" && "%2" == "s,e"}{startmap cliff path exit};
+	};
+}
+

@@ -1,17 +1,14 @@
-#class {flaabity} {open}
+#class {fleebity} {open}
 
 #var guild jedi
-#var subguild baadu
+#var subguild krath
 #read .tt/3s/jedimode.tin
 
-#delay {2}{ftik}
+#delay {2}{ftli}
 #var {my[cleanse][status]}{0};
 #var {my[cloud][threshold]}{50};
-#var {my[desired][weapon]}{lightsaber};
+#var {my[desired][weapon]}{lightdaggers};
 #var {my[desired][mode]}{guide};
-#var {my[damage][type]}{boil};
-fbq uo1
-fbq aegisl6
 
 
 #nop {focus hpconfigure /HP: #hp/#mhp SP: #sp/#msp C: #c F: #f M: #sm/#%c D: #dn/#ng P: #df E: #es GXP: #gxp}
@@ -43,6 +40,7 @@ fbq aegisl6
         }{
 		#var {my[incombat]}	{0};
 		#var {my[gouged]}	{0};
+		#var {my[mindblock]}	{0};
         };
 	#if {${my[incombat]} == 1}{
 		#if {$my[hp][deficit] > 150}{
@@ -57,12 +55,6 @@ fbq aegisl6
 		#if {${my[hp][percent]} < 30}{
 			go home;
 		};
-		#if {${my[conc][current]} < 10}{
-			go home;
-		};
-		#if {${my[force][current]} > 90}{
-			go home;
-		};
 		#if {${my[gouged]} != 1}{
 			!gouge;
 			#var {my[gouged]}{1};
@@ -72,6 +64,11 @@ fbq aegisl6
 				#var {critter_room}{0};
 			};
 		};
+                #if {$my[mindblock] != 1}{
+                        !focus mindblock;
+                        #delay {confusion}{!focus confusion}{30};
+                        #var {my[mindblock]}{1};
+                };
 	}{
 		#if {${my[conc][current]} < 80 && ${my[cleanse][status]} == 0}{
 			do_htrance
@@ -129,11 +126,6 @@ fbq aegisl6
 				!recharge ${my[desired][weapon]};
 			};
 		};
-		#regex {$mip[gline][2]}{Deflection UP}{
-			#nop;
-		}{
-			!focus force deflection;
-		};
 		#regex {$mip[gline][2]}{Accelerated Healing}{
 			#nop;
 		}{
@@ -166,11 +158,23 @@ fbq aegisl6
 	#showme {$mip[gline][1]} {-7};
 }
 
-#act {Flaabity dealt the killing blow to %1.} {
+#act {Fleebity dealt the killing blow to %1.} {
 	log_damage_no_numbers %1;
 	#if {"$my[autocorpse][method]" != "off"}{
 		corpsetrig;
 	};
 }
 
-#class {flaabity} {close}
+#alias set_default_areas {
+	fbq garg;
+	fbq balthazar;
+	fbq smurf swamp;
+	fbq pol;
+	fbq mahjongg;
+	fbq ccows;
+	autoq;
+	autok;
+}
+
+set_default_areas
+#class {fleebity} {close}
