@@ -1,9 +1,11 @@
 #class {stippy}{open}
 #var guild ranger
 
-#alias k {blow whistle;kill %0;say pip, attack}
+#alias {k}{blow whistle;kill %0;say pip, attack}
+#alias {pk}{blow whistle;point %0;say pip, attack;#delay {2}{assist pip}};
 #alias corp {pluck corpse;skin corpse;carve corpse;gut corpse;decorpse}
 #alias bww {get medicinals from pack;bind fox's wounds;put medicinals in pack}
+
 
 #alias {corpsetrig}{
 	corp;
@@ -13,22 +15,28 @@
 	corpsetrig;
 };
 
+#ticker {mysc}{sc}{8};
+
+#delay {2}{wield longsword;powerup}
+
 #nop {prompt preset althopper}
-#gag {You have %1 hps, %2 sps, and %3 gold coins}
+#gag {You have %1 hps, %2 sps, and %3 gold coins};
 #act {You have %1 hps, %2 sps, and %3 gold coins}{
-	#var {my[hp]}{%1};
-	#var {my[sp]}{%2};
+	#var {my[hp][current]}{%1};
+	#var {my[sp][current]}{%2};
 	#var {my[gold]}{%3};
 	update_status;
 };
 
-#gag {Stippy: Half-elf [Ranger] Coins: %1}  
-#act {Stippy: Half-elf [Ranger] Coins: %1}{
-	#var {my[gold]}{%1};
+#gag {Stippy: %1 [%2] Coins: %3};
+#act {Stippy: %1 [%2] Coins: %3}{
+	#var {my[form]}{%1};
+	#var {my[guild]}{%2};
+	#var {my[gold]}{%3};
 	update_status;
 };
 
-#gag {%1/%2:%3/%4>}
+#gag {%1/%2:%3/%4>};
 #act {%1/%2:%3/%4>}{
 	#var {my[hp][current]}{%1};
 	#var {my[hp][max]}{%2};
@@ -42,7 +50,7 @@
 #nop { prompt drawing }
 
 #alias {update_status} {
-	#showme {<088> HP:${my[hp][current]}/${my[hp][max]} SP:${my[sp][current]}/${my[sp][max]} G: ${my[gold]}}{-3};
+	#showme {<088> H:${my[hp][current]}/${my[hp][max]} S:${my[sp][current]}/${my[sp][max]} G: ${my[gold]}}{-3};
 	#showme {<088> GLD: ${my[guild]} F: ${my[form]}}{-4};
 }
 

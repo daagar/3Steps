@@ -469,12 +469,11 @@
 };
 
 #ALIAS {chatup} {
-	#if {$chat[rows]*{$chat[page]+1} <= $chat[max] &&
-	     $chat[rows]*{$chat[page]+1} <= &chat[log][]} {
+	#if {$chat[rows]*{$chat[page]+1} <= $chat[max] && $chat[rows]*{$chat[page]+1} <= &chat[log][]} {
 		#math chat[page] {$chat[page]+1};
 		show_chat;
-	}
-}
+	};
+};
 #ALIAS {chatdown} {
 	#if {$chat[page] > 1} {
 		#math chat[page] {$chat[page]-1};

@@ -1,11 +1,8 @@
 #NOP
 /* Load Common Files */
-#config {repeat enter}{on}
-#nop {Set to make copy/paste work
-	#config {mouse tracking}{off}
-};
-#read .tt/aliases.tin
-#read .tt/graph.tin
+#config {repeat enter}{on};
+#read .tt/aliases.tin;
+#read .tt/graph.tin;
 
 #alias {load3k} {
 	#config {packet patch}{0.5};
@@ -38,11 +35,13 @@
 #alias {loadAA} {
 	#config {packet patch}{0.1};
 	#read .tt/AA/mapper.tin;
+	#read .tt/AA/killer.tin;
 	#read .tt/AA/draw.tin;
 	#read .tt/AA/triggers.tin;
 	#read .tt/AA/aliases.tin;
 	#read .tt/AA/gag.tin;
 	#read .tt/AA/vars.tin;
+	#read .tt/AA/chat.tin;
 	#script {cat .tt/AA/lastroom.tt};
 }
 
@@ -60,6 +59,6 @@
 	};
 };
 
-#delay {0}{load};
+load;
 
 #sub {~\t} {       }

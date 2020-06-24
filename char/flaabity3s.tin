@@ -45,23 +45,23 @@ fbq aegisl6
 		#var {my[gouged]}	{0};
         };
 	#if {${my[incombat]} == 1}{
-		#if {$my[hp][deficit] > 150}{
+		#if {$my[hp][deficit] > 250}{
 			!focus reduce injury;
 		};
-		#if {$my[sp][deficit] > 100}{
+		#if {$my[sp][deficit] > 200}{
 			!focus clear mind;
 		};
 		#if {${my[hp][percent]} < 50}{
 			ppp;
 		};
 		#if {${my[hp][percent]} < 30}{
-			go home;
+			panic;
 		};
 		#if {${my[conc][current]} < 10}{
-			go home;
+			panic;
 		};
 		#if {${my[force][current]} > 90}{
-			go home;
+			panic;
 		};
 		#if {${my[gouged]} != 1}{
 			!gouge;

@@ -1,15 +1,9 @@
 #nop {}
 #act {You vanquished %1}{
-	#echo {**** CORPSE TRIGGER ****};
-	#echo {**** CORPSE TRIGGER ****};
-	#echo {**** CORPSE TRIGGER ****};
-	#echo {**** CORPSE TRIGGER ****};
+	update_chat %0;
 	corpsetrig;
 };
 #act {You killed %1}{
-	#echo {**** CORPSE TRIGGER ****};
-	#echo {**** CORPSE TRIGGER ****};
-	#echo {**** CORPSE TRIGGER ****};
-	#echo {**** CORPSE TRIGGER ****};
+	update_chat %0;
 	corpsetrig;
 };

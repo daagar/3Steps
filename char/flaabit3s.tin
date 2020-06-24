@@ -38,8 +38,8 @@
         #var my[focus] {%3};
         #var my[limberness] {%4};
         #if {$my[incombat] == 1}{
-                #if {$my[hp][diff] > 100}{go home};
-                #if {$my[sp][current] < 50}{go home};
+                #if {$my[hp][diff] > 100}{panic};
+                #if {$my[sp][current] < 50}{panic};
         };
 	update_status;
 }

@@ -263,7 +263,7 @@
 		!focus prevent average;
 	};
 	#if {$my[hp][current] < $my[targetlevel][panic][prevent][hp] || $my[sp][current] < $my[targetlevel][panic][prevent][sp] && $my[incombat] == 1}{
-		go home;
+		panic;
 	};
 	update_status;
 }
