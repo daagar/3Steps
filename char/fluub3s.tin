@@ -461,9 +461,9 @@
 				dosong;
 			};
 		};
-		#if {$my[hp][current] < 300}{go home};
-		#if {$my[sp][current] < 300}{go home};
-		#if {$my[karma][current] < 50}{go home};
+		#if {$my[hp][current] < 300}{panic};
+		#if {$my[sp][current] < 300}{panic};
+		#if {$my[karma][current] < 50}{panic};
 	}{
 		#if {$my[hp][current] < $my[hp][max] && $my[current][singing][status] != 1}{
 			!cast cure;

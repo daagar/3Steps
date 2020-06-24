@@ -1,4 +1,6 @@
-#var domove 0 #var critter_room 0 #var player_room 0
+#var domove 0 
+#var critter_room 0 
+#var player_room 0
 #var starter 0
 #var stepper 0
 #var reversedir s
@@ -10,6 +12,7 @@
 #var autokill 0
 
 #nop {Make a global blacklist of critters to not stop on since they are followers, etc};
+
 #var {global_blacklist}{everybody;under the control of;betrayer;broodling;chromatic cuckoo owlet;tiny translucent;gemini}
 
 #alias {make_global_blacklist}{

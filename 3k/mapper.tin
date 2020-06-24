@@ -70,18 +70,16 @@
 	}
 } {4}
 
-/* Data Grab Trigger */
-#var longcap off
+#var longcap off;
 
 #function cartcheck {
 	#format cart {%.20s} {%0};
-	#if {"$cart" == "                    " ||
-	     "$cart" == ""} {
-		#return 1
+	#if {"$cart" == "                    " || "$cart" == ""} {
+		#return 1;
 	} {
-		#return 0
-	}
-}
+		#return 0;
+	};
+};
 
 #NOP Kill-Loop to find rooms with critters and no people
 
@@ -240,6 +238,8 @@
 	#draw {tile} 17 -42 17 -1 {<140>[<030>$roomvnum<140>] <130>$roomname<099>}
 };
 
+#var {saferoom}{cot};
+
 #alias {go} {
 	#if {"$mapping" == "on"}{
 		mapoff;
@@ -268,12 +268,17 @@
 	#var {room_num}{0};
 	#map get {roomarea}{area};
 	#if {"$area" != ""}{
+		#var {saferoom}{%0};
 		make_roomlist {${area}};
 		show_area_selector;
 	}{
 		rating;
 	};
 }
+
+#alias {panic}{
+	go {$saferoom};
+};
 
 #alias goback {
         #map run $returnroom;
@@ -386,117 +391,6 @@
 }
 
 /* Transports */
-#nop { These rooms are all too specific.  may address later
-	#NOP Abyss
-	#act {Abyssmal Portal (s,portal)} {#map goto 5159} {1}
-
-	#NOP Ao
-	#act {** The Docks of Ao ** (se)} {#map goto 15463} {1}
-
-	#NOP Ascended
-	#act {Arid environment (sw,n,s,e,climb)} {#map goto 16718} {1}
-
-	#NOP Chaos TV
-	#act {AREA NAME: Simpsons [Doh]} {
-		#if {"$area" != "Simpsons"} {
-			#var {area} {Simpsons};
-			#map get {roomvnum} {tvroom};
-			#map goto 8315;
-		}
-	} {4}
-
-	#act {AREA NAME: Simpsons Expansion [Lostar]} {
-		#var {area} {Simpsons};
-	} {4}
-
-	#act {AREA NAME: Simpsons Expansion [Frank]} {
-		#var {area} {Simpsons Expansion};
-		#map get {roomvnum} {tvroom};
-		#map goto 8227
-	} {4}
-	#act {^   You dive cleanly through the computer screen!} {
-		#map goto $tvroom
-	}
-
-	#NOP Death
-	#act {^You die.$} {#map goto 6247}
-
-	#NOP Death Taco
-	#act {^You shoot through a graceful arc, and feel weightless for the} {#map goto {roomnote} roaches}
-
-	#NOP Dragon Realms
-	#act {^You have to retreat against the onslaught of fire!} {#map move vortex}
-
-	#NOP Einstein
-	#act {^Standing on the bench, you relax and the stagedive through the rift} {#map goto 7039}
-
-	#NOP Funkytown
-	#act {^The intense gravity of the sun pulls the coaster to its surface where you} {#map goto 17497}
-
-	#NOP Global Merc Training Theatre
-	#act {^You have exited the simulation, thank you for playing.} {#map goto 15144}
-
-	#NOP Kayos Portal
-	#act {^You leap into the unknown!} {
-		#map get {roomvnum} {num};
-		#if {$num == 10278} {
-			#map goto $plungeroom
-		} {
-			#var plungeroom $num;
-			#map goto 10278
-		}
-	}
-	#act {^You touch the beacon, and a friendly ship belonging to The Vigilant swings by.} {#map goto 10278}
-
-	#NOP Necromancers
-	#act {^You tumble down the river and find yourself on a rocky bank inside} {#map goto 7613}
-
-	#NOP Night of Colour
-	#act {^The balloon softly touches down, basket bumps lightly.} {exit}
-	#act {^You step out of the basket, into forest.} {
-		#map get {roomarea} {area};
-		#if {"$area" == "Night of Colour"} {
-			#map goto 16359
-		} {
-			#map goto  16530
-		}
-	}
-	#act {^You step out of the basket, into chaos.} {
-		#map get {roomarea} {area};
-		#if {"$area" == "Night of Colour"} {
-			#map goto 16307
-		} {
-			#map goto 16527
-		}
-	}
-
-	#NOP Ravenloft Castle
-	#act {^You warily step out onto the cold, damp ground.} {#map goto 20756}
-	#act {^You then step out of the coach and find yourself back} {#map goto 4631}
-
-	#NOP Sausage Dimensions
-	#act {^The frankfurter SMACKS you so hard you wake up somewhere else!} {#map goto 17561}
-
-	#NOP Science Shuttle
-	#act {^The captain announces: Welcome to Midway Space Station.$} {exit}
-	#act {^The captain announces: Welcome to Houston Transport Center.$} {exit2}
-
-	#NOP Serinth
-	#act {^The World of Serinth Board containing } {#map goto 16722}
-
-	#NOP Starcraft:Broodwar
-	#act {^Door number: 3, Access Code: %1$} {#var starcraft_code %1}
-
-	#NOP The Lost Village of Willothorn
-	#act {^You swim for your life for the surface and end up back where} {#map goto 14087}
-
-	#NOP Xaxis
-	#act {^Welcome to Xaxis!} {#map goto 15875}
-	#act {^Here we are folks. Welcome to the Isle of Equinity!} {#map goto 15913}
-
-	#NOP Wayhaven Ferry
-	#act {^The ferryman says: Well, here you are.} {#map goto 7354}
-};
 
 #NOP ** MARK SOMETHING GREEN **
 #alias mark {#map set roomcolor <128>};
@@ -580,8 +474,8 @@
 #act {^The guard blocks your passage.} {#map undo}
 
 #NOP Night of Colour
-#act {^Impediment slaps you back, thorns tearing.} {#map undo}
-#act {^Serrated sword extended, Bulwark stops your progress.} {#map undo}
+#act {^Impediment slaps you back, thorns tearing.} {#map undo};
+#act {^Serrated sword extended, Bulwark stops your progress.} {#map undo};
 
 #NOP Rabbit Fields
 #act {^The rabbit prevents you from going that way.} {#map undo}

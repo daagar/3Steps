@@ -1,0 +1,7 @@
+#var codePath ~/tintin-zombiemud
+
+#nop { connect to game }
+#session somebody zombiemud.org 23
+snuffy
+snuffy
+#read Util/zombiemud.tt

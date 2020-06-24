@@ -65,7 +65,7 @@
 			ppp;
 		};
 		#if {${my[hp][percent]} < 30}{
-			go home;
+			panic;
 		};
 		#if {${my[gouged]} != 1}{
 			!gouge;

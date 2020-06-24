@@ -156,10 +156,10 @@
                         };
                 };
                 #if {$my[anima][current] < 500}{
-                        go home;
+                	panic;
                 };
                 #if {$my[sp][current] < 50}{
-                        go home;
+                	panic;
                 };
         };
         #if {$my[sp][percent] < 50}{
