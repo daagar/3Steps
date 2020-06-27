@@ -1,1 +1,2 @@
 #nop {}
+#alias bw {get medicinals from pack;bind my wounds;put medicinals in pack}

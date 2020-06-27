@@ -96,6 +96,18 @@
 	};
 	update_chat <178>%0<088>;
 }{1};
+#act {-<%w>- %2} {
+	#format {timestamp} {%t} {[<268>%H<088>:<268>%M<088>] };
+        #format {dbtimestamp} {%t} {[%Y:%m:%d %H:%M:%S]};
+	#if {$my[config][db][chat] == 1}{
+		#var {dbmess}{%0};
+		db_submit_chat $dbmess;
+	}{
+		#line log {${logpath}/AA.chat} {$timestamp\};
+		#line log {${logpath}/AA.chat} {<178>To &3<088>: &4};
+	};
+	update_chat <178>%0<088>;
+}{1};
 
 #class {common_chatlog} {close}
 
