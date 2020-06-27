@@ -17,7 +17,7 @@ cd .tt
 edit menu.tin
 
 Make menu.tin match your characters instead of mine and then for each character in menu.tin create 
-.tt/char/"<charname3s>".tin
+.tt/char/charname3s.tin
 
 Edit rc.tin and change 
 #var {logpath}{/tintin/logs}
