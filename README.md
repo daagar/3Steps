@@ -32,11 +32,11 @@ mysql -u root
 
  and then 
 
-create database tintin
+*create database tintin
 
-create user 'tintin'@localhost identified by 'whateveryourpassis'; 
+*create user 'tintin'@localhost identified by 'whateveryourpassis'; 
 
-grant all on tintin.* to tintin identified by 'whateveryourpassis';
+*grant all on tintin.* to tintin identified by 'whateveryourpassis';
 
 and then control-d
  to exit mysql.. then 
