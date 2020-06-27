@@ -1,4 +1,54 @@
 # TinTin++
+## General Getting Started Guide
+
+git clone https://github.com/wstutt/tintin.git
+
+yum install mariadb mariadb-server
+systemctl enable mariadb
+systemctl start mariadb
+
+ln -s tintin .tt
+
+vi .tt/.pass
+
+contents of .pass:
+	#send {mypassword}
+
+cd .tt
+ 
+edit menu.tin
+
+Make menu.tin match your characters instead of mine and then for each character in menu.tin create 
+.tt/char/<charname3s>.tin
+
+Edit rc.tin and change 
+#var {logpath}{/tintin/logs}
+ to wherever you want your logs to go
+
+Edit mysql.tin
+ and change your mysql database password to whatever you want your passwords to be
+
+Log in to mysql and create the tintin database:
+
+mysql -u root
+
+ and then 
+
+*create database tintin
+
+*create user 'tintin'@localhost identified by 'whateveryourpassis'; 
+
+*grant all on tintin.* to tintin identified by 'whateveryourpassis';
+
+and then control-d
+ to exit mysql.. then 
+
+gunzip tintin.sql.gz
+
+mysql -u root tintin < tintin.sql
+
+and then edit your .profile to include 
+alias tt='tt++ ~/.tt/.tinrc'
 
 ## Required Version
 * TinTin++ version 2.01.90 or higher required

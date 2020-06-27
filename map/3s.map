@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 10
+F 11
 
 G 0
 
-I 961
+I 965
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} { }
+L {UNICODE GRAPHICS} {NO DIAGONAL} {}
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -4140,7 +4140,7 @@ R {  781} {0} {} {781} { } {} {} {} {} {} {1.000} {}
 E {  780} {w} {w} {8} {0} {} {1.000} {}
 E {  782} {hole} {examine hole in room} {0} {0} {} {1.000} {}
 
-R {  782} {0} {} {mousetrails} { } {} {} {} {} {} {1.000} {}
+R {  782} {0} {} {mousetrails} { } {} {} {mousetrails} {} {} {1.000} {}
 E {  783} {n} {n} {1} {0} {} {1.000} {}
 
 R {  783} {0} {} {783} { } {} {} {} {} {} {1.000} {}
@@ -4187,6 +4187,7 @@ E {  793} {n} {n} {1} {0} {} {1.000} {}
 
 R {  793} {0} {} {793} { } {} {} {} {} {} {1.000} {}
 E {  792} {s} {s} {4} {0} {} {1.000} {}
+E {  965} {enter} {enter} {0} {0} {} {1.000} {}
 
 R {  794} {0} {} {794} { } {} {} {} {} {} {1.000} {}
 E {  148} {w} {w} {8} {0} {} {1.000} {}
@@ -4954,6 +4955,8 @@ E {  962} {w} {w} {8} {0} {} {1.000} {}
 
 R {  964} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {  961} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {  965} {0} {} {} { } {} {} {csewers} {} {} {1.000} {}
 
 R {  968} {0} {} {rcastle} { } {} {} {rcastle} {} {} {1.000} {}
 E {13455} {out} {out} {0} {0} {} {1.000} {}
