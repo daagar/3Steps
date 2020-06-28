@@ -6,7 +6,7 @@
 
 
 #var {kill_path} {}
-#var blacklist {warriv;cain;atma;jerhyn;elzix;meshif;kashya;akara}
+#var {blacklist}{warriv;cain;atma;jerhyn;elzix;meshif;kashya;akara}
 
 #delay {0.1}{#var {saferoom}{home}}
 
