@@ -109,9 +109,7 @@
 						#list {unexplored}{find}{$eachroom}{explored_index};
 						#if {$explored_index == 0}{
 							#list {unexplored} ins -1 {$eachroom};
-							#if {$stepignore == 3}{
-								go_unexplored;
-							};
+							#list {unexplored}{size}{unexplored_rooms};
 						};
 					};
 				};
