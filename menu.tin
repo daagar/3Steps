@@ -23,8 +23,10 @@
 #echo {};
 #echo {con <number>:};
 
-#alias {con}{
+#line oneshot #alias {^%d$}{con %1};
+
+#line oneshot #alias {con}{
 	connect ${my[alts][%1][name]};
-	#unalias {con};
 	#unvar {my[alts]};
+	#unalias {con}
 };

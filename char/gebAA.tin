@@ -1,0 +1,49 @@
+#class {geb}{open}
+#var guild shapeshifter
+
+#alias {corpsetrig}{
+	co;
+};
+
+#ticker {hpchecker}{sc}{8}
+
+#nop {prompt preset althopper};
+#gag {You have %1 hps, %2 sps, and %3 gold coins};
+#act {You have %1 hps, %2 sps, and %3 gold coins}{
+	#var {my[hp][current]}{%1};
+	#var {my[sp][current]}{%2};
+	#var {my[gold]}{%3};
+	update_status;
+};
+
+#gag {Geb: %1 [%2] Coins: %3};
+#act {Geb: %1 [%2] Coins: %3}{
+	#var {my[form]}{%1};
+	#var {my[guild]}{%2};
+	#var {my[gold]}{%3};
+	update_status;
+};
+
+#gag {%1/%2:%3/%4\>};
+
+#act {%1/%2:%3/%4>}{
+	#var {my[hp][current]}{%1};
+	#var {my[hp][max]}{%2};
+	#var {my[sp][current]}{%3};
+	#var {my[sp][max]}{%4};
+	update_status;
+}
+
+#gag {HP: %* SP: %*};
+
+
+#alias {update_status} {
+	#format {hp}                    {%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
+	#format {hp_max}                {%+4s} {<128>$my[hp][max]<088>};
+	#format {sp}                    {%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
+	#format {sp_max}                {%+4s} {<128>$my[sp][max]<088>};
+	#showme {<088>G: ${my[guild]}   F: ${my[form]}}{-4};
+	#showme {<088>H:${hp}/${hp_max} S:${sp}/${sp_max}} {-3};
+}
+
+#class {geb}{close};

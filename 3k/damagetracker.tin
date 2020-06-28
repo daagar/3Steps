@@ -101,7 +101,7 @@
 	#showme {Last 8 Kills} 30 -28;
 	#showme {  Foe   | Rnds | Tot. Dmg | Avg} 31 -38;
 	#draw {line} 32 -40 32 -4;
-	show_area_selector
+	show_area_selector;
 #nop {
 	log_record_damage;
 	log_record_health;
@@ -117,8 +117,6 @@
         #math damagetracker[end]         {$damagetracker[rows] * $damagetracker[page] - $damagetracker[rows] + 1};
         #line sub {var} #draw {tile} 33 -39 41 -4 $damagetracker[log][-$damagetracker[start]..-$damagetracker[end]];
 };
-
-show_damage_table
 
 #ticker {damage_table}{show_damage_table}{4}
 

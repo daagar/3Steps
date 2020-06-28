@@ -1,14 +1,11 @@
 #class {mapper} {open}
 
-#var finding_here off;
-
 #regex {"$world"} {3s} {
 	#var {mapfile}{3s.map}
 } {
-	#var {mapfile}{daagar.map}
+	#var {mapfile}{3k.map}
 }
 #map read .tt/map/${mapfile}
-#map write .tt/map/${mud}-session-backup.map
 
 #var map[height] 17
 #var map[width] 42
@@ -33,10 +30,8 @@
 	#unvar area_mapped;
 	#map list {} {} {} {$roomarea} {variable} {area_mapped};
 	#var {room_cnt} {&area_mapped[]};
-	#if {"$draw[map]" == "on"} {
-		#draw {tile} $map[height]-1 -$map[width] $map[height]-1 -1 {<020>$roomarea <140>(<120>$room_cnt<140>)<099>};
-		#draw {tile} $map[height] -$map[width] $map[height] -1 {${room_map_string}}
-	};
+	#draw {tile} 16 -42 16 -1 {<020>${roomarea} <140>(<120>${room_cnt}<140>)<099>};
+	#draw {tile} 17 -42 17 -1 {${room_map_string}}
 }
 
 #event {MAP UPDATED VTMAP} {
@@ -112,7 +107,7 @@
 					#map get {roomarea} {eacharea};
 					#map get {roomvnum} {eachroom};
 					#if {"$eacharea" == ""} {
-						#map set {roomcolor} {<g09>};
+						#map set {roomcolor} {<118>};
 						#list {unexplored}{find}{$eachroom}{explored_index};
 						#if {$explored_index == 0}{
 							#list {unexplored} ins -1 {$eachroom};
@@ -135,7 +130,7 @@
 				#list {unexplored}{del}{$explored_index};
 			};
 		};
-		#if {($roomdesc_len == 0 || "$finding_here" == "on") && "$area" != "Changeling Biome"} {
+		#if {$roomdesc_len == 0} {
 			#var longcap on;
 			#unvar long;
 			#act {%%1} {
@@ -216,7 +211,7 @@
 			#map set roomarea {$area};
 			#map set roomcolor
 		};
-		#if {$roomdesc_len == 0 || "$finding_here" == "on"} {
+		#if {$roomdesc_len == 0} {
 			#var longcap on;
 			#unvar long;
 			#act {%%1} {
@@ -240,9 +235,7 @@
 	#if {"$longcap" == "on"} {
 		#var longcap off;
 		#unact {%%1};
-		#if {"$finding_here" == "off"} {
-			#map set roomdesc {$long}
-		}
+		#map set roomdesc {$long}
 	}
 } {1}
 
@@ -259,16 +252,14 @@
 	#loop 1 20000 {cnt} {
 		#map at {$cnt} {
 			#map get {roomarea} {cntarea};
-			#if {"$cntarea" == ""} {#map set roomcolor <g09>}
+			#if {"$cntarea" == ""} {#map set roomcolor <118>}
 		}
 	};
 	#map get {roomvnum} {gonum};
 	#map goto $gonum;
-	#if {"$draw[map]" == "on"} {
-		#draw {tile} $map[height]-1 -$map[width] $map[height]-1 -1 {<020>$roomarea <140>(<120>$room_cnt<140>)<099>};
-		#draw {tile} $map[height] -$map[width] $map[height] -1 {<140>[<030>$roomvnum<140>] <130>$roomname<099>}
-	}
-}
+	#draw {tile} 16 -42 16 -1 {<020>$roomarea <140>(<120>$room_cnt<140>)<099>};
+	#draw {tile} 17 -42 17 -1 {<140>[<030>$roomvnum<140>] <130>$roomname<099>}
+};
 
 #var {saferoom}{cot};
 
@@ -316,15 +307,15 @@
 };
 
 #alias goback {
-    #map run $returnroom;
-    #var {room_num}{$returnpathroom};
-    #var {do_return}{1};
+        #map run $returnroom;
+        #var {room_num}{$returnpathroom};
+        #var {do_return}{1};
 	#map get {roomarea}{area};
 	#if {"$area" != ""}{
 		make_roomlist {${area}};
 	}{
 		rating;
-	};
+	};;
 }
 
 #alias {mapgo} {
@@ -339,29 +330,23 @@
 }
 
 #alias {findhere} {
-	#var finding_here on;
-	rating;
-	#delay 1 mapon;
-	#delay 2 look;
-	#delay 3 {
-		#var findexits $exits;
-		#replace findexits {,} {;};
-		#map list {roomarea} {$area} {roomname} {$room%*} {roomexits} {$findexits} {roomdesc} {$long};
-		#map list {roomarea} {$area} {roomname} {$room%*} {roomexits} {$findexits} {roomdesc} {$long} {variable} {findroom};
-		#if {&findroom[] == 1} {
-			#map goto *findroom[1..1]
-		};
-		#var finding_here off;
-		mapoff
+	#if {"$room" == ""} {
+		look
+	};
+	#map list {roomarea} {$area} {roomname} {$room%*};
+	#map list {roomarea} {$area} {roomname} {$room%*} {variable} {findroom};
+	#if {&findroom[] == 1} {
+		#list {foundroom} {create} {$findroom};
+		#map goto $foundroom[1]
 	}
 }
 
 
 #alias {mapsearch} {
-	#line ignore #show <129>Name matches:<088>;
+	#show <129>Name matches:<088>;
 	#map list {%i%*%0%*};
-	#line ignore #show \n;
-	#line ignore #show <129>Note matches:<088>;
+	#show \n;
+	#show <129>Note matches:<088>;
 	#map list {} {} {} {} {%i%*%0%*};
 }
 
@@ -392,8 +377,7 @@
 	#if {$stepignore > 0}{
 		#echo {It's likely that you don't want to save.  Turn off the Magic Mapper and save again};
 	}{
-		#map write .tt/map/${mapfile};
-		#showme {<128>Saved map to .tt/map/${mapfile}<088>}
+		#map write .tt/map/${mapfile}
 	};
 }
 
@@ -424,7 +408,6 @@
 #alias {sn} {
 	#var noun_cnt &nouns[];
 	#loop 1 &nouns[] cnt {
-		#echo {<128>Examining: $nouns[$cnt]<088>};
 		exa $nouns[$cnt];
 		search $nouns[$cnt]
 	};
@@ -440,78 +423,119 @@
 	#read .tt/3k/draw.tin
 }
 
-/* Allow clicking on a room to get map info */
-#event {MAP SHORT-CLICKED MOUSE BUTTON ONE} {
-    lfr {%0};
-};
-#alias lr {
-    #if {"%1" == ""} {
-        #map get;
-    } {
-        #if {%2 || %2 == 0} {
-            #map jump %1 %2 %3;
-            #map get;
-            #map undo;
-        } {
-            #map at {%1} #map get;
-        };
-    };
-};
-#alias lfr {
-    #if {"%1" == ""} {
-        #map info;
-    } {
-        #if {%2 || %2 == 0} {
-            #map jump %1 %2 %3;
-            #map info;
-            #map undo;
-        } {
-            #map at {%1} #map info;
-        };
-    };
-};
+/* Transports */
 
-#alias room_cleanup {
-	#echo {Finding orphaned rooms...};
-	#config {log mode} {plain};
-	#system {rm splatrooms.txt};
-    #unvar {valid_rooms};
+#NOP ** MARK SOMETHING GREEN **
+#alias mark {#map set roomcolor <128>};
 
-	#NOP Get a list of all legitimate rooms (avoid gaps from previously deleted vnums);
-	#NOP Skip room 1, as that the is map start point;
-    #loop {2} {6635} {count} {
-        #map goto {${count}};
-		#map get roomvnum current_id;
-        #if {$current_id == $count} {
-            #list valid_rooms ins -1 $count;
-        };
-    };
+/* Blocked Exits */
+#act {^You cannot go } {
+	#if {$mapstatic} {
+		#map undo
+	}
+}
+#act {^You cannot get it up.} {
+	#if {$mapstatic} {
+		#map undo
+	}
+}
 
-    #loop {1} {&valid_rooms[]} {room} {
-		#path destroy;
-		#var path_length 0;
-		#NOP #map at {$valid_rooms[+$room]} {#map get roomflags flags};
+#NOP ** GUILDS **
+#NOP Juggernauts
+#act {^The room is locked.} {#map undo}
+#act {^Dirk says: This area is for Wolves not } {#map undo}
+#act {^Harlow says: You are not allowed here please turn around and leave at once} {#map undo}
+#act {^Only members of clan jade falcon can go this way.} {#map undo}
 
-		#NOP First check if we can get from CoT _to_ the room;
-		#map goto $valid_rooms[+$room];
-		#line quiet #map find 1;
-		#line quiet #path save length path_length;
+#NOP Bards
+#act {^You can't go there!} {#map undo}
 
-		#NOP If that fails, check to see if we can get to CoT from it;
-		#NOP (Eliminates void rooms from being caught, and finds mobile areas in Chaos);
-		#if {$path_length == 0} {
-			#map goto 1;
-        	#line quiet #map find $valid_rooms[+$room];
-			#line quiet #path save length path_length;
-		};
+#NOP ** AREAS **
+#NOP Abbey
+#act {^A feeling of fear and dread washes over you, preventing you from going} {#map undo}
+#act {^A feeling of dread washes over you, preventing you from going any further east.} {#map undo}
 
-		#if {$path_length == 0 && $flags == 0} {
-			#line log splatrooms.txt $valid_rooms[+$room];
-			#map leave;
-			#map delete $valid_rooms[+$room];
-		};
-    };
-	#echo {Cleanup complete!};
-};
+#NOP Body Mansion
+#act {^You bump into a locked door.} {#map undo}
+
+#NOP Carnegie
+#act {^Woody Allen says: You're going to have to wait for security!} {#map undo}
+#act {^Mel Brooks blocks the exit.} {#map undo}
+#act {^Jay-Z says: You're going to have to wait for security!} {#map undo}
+#act {^Jay-Z says: Where do you think you're going?} {#map undo}
+#act {^Jay-Z stops you leaving.} {#map undo}
+#act {^Jay-Z blocks the exit.} {#map undo}
+#act {^Trixie Hilton blocks the exit.} {#map undo}
+
+#NOP Chaos Cinemaplex
+#act {^The movie usher asks for your movie ticket. When you fail to come up with} {#map undo}
+
+#NOP Cove of the Three (Lost Soul)
+#act {^A magical force pushes you back, and you hear a voice} {#map undo}
+
+#NOP Crystal Stairway
+#act {^The Warrior will not let you invade her home any further.} {#map undo}
+#act {^The warrior will not let you pass.} {#map undo}
+
+#NOP Detroit
+#act {^Officer yells: Get him, he must be stealing something!!!!} {#map undo}
+
+#NOP Dundee
+#act {^The foliage in this part of the swamp is extremely thick and will take} {#map undo}
+
+#NOP Dragon Realms
+#act {^You cannot get past the dragon guards.} {#map undo}
+
+#NOP Fallout Shelter
+#act {^Core Guard jumps in your way, blocking your path!} {#map undo}
+
+#NOP Ice Fishing
+#act {^You are unable to climb the bank here.  It is very steep, and with all} {#map undo}
+#act {^You can't go through a solid wall.  Try going around the shack, and} {#map undo}
+
+#NOP Ice Mountains (Verbeeg)
+#act {^The magical barrier is impenetrable.$} {#map undo}
+#act {^The cryohydra snaps one of its heads at you as you try and approach} {#map undo}
+
+#NOP Land
+#act {^You are caught like a fly in a spider web, burning and twisting as} {#map undo}
+
+#NOP Longshadow
+#act {^The drawbridge is currently upright denying you access to the castle.} {#map undo}
+
+#NOP Mage Tower
+#act {^The guard blocks your passage.} {#map undo}
+
+#NOP Night of Colour
+#act {^Impediment slaps you back, thorns tearing.} {#map undo};
+#act {^Serrated sword extended, Bulwark stops your progress.} {#map undo};
+
+#NOP Rabbit Fields
+#act {^The rabbit prevents you from going that way.} {#map undo}
+
+#NOP Ravenloft
+#act {^You try to go down, but suddenly feel more terrified than} {#map undo}
+#act {^The trees move together and bar your path!} {#map undo}
+#act {^A deathly chill blows from the south, blasting into Inix!} {#map undo}
+
+#NOP Rocky Hill
+#act {^Waving their rusty scimitars and growling loudly, the jackalmen} {#map undo}
+
+#NOP Simpsons
+#act {^   The Guard stops you and says: Aww no...you can't go in there.} {#map undo}
+
+#NOP SolChem
+#act {^The gang member shoves you back.} {#map undo}
+
+#NOP Theatre of Souls
+#act {^A closed door blocks your way.} {#map undo}
+
+#NOP Underdark
+#act {^The {drow|guard} prevents you from going that way.} {#map undo}
+#act {^The troll will not let you pass.} {#map undo}
+
+#NOP Whorehouse
+#act {^Doh shoves you backwards with a scowl.} {#map undo}
+#act {^Your feet are mired in the bird poop, you can't seem to move!!} {#map undo}
 
 #class {mapper} {close}

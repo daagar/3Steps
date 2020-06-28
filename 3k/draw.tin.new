@@ -61,7 +61,7 @@
 };
 
 #if {"$draw[gline]" == "on"} {
-	#var gline[height] 2;
+	#var gline[height] 3;
 } {
 	#var gline[height] 0;
 };
@@ -98,52 +98,51 @@
 
 /* Perform Drawings */
 #if {"$draw[caption]" == "on"} {
-	#draw {<g09>} {line} $chat[height]+$caption[height] 1 $chat[height]+$caption[height] -1;
+	#draw {green} {line} $chat[height]+$caption[height] 1 $chat[height]+$caption[height] -1;
 	update_caption;
 };
 
 
 #if {"$draw[chat]" == "on"} {
-	#draw {<g09>} {line} $chat[height] 1 $chat[height] -1;
+	#draw {green} {line} $chat[height] 1 $chat[height] -1;
 	chatend;
 };
 
 #if {"$draw[exitpanel]" == "on"} {
 	#NOP #draw {line} $chat[height];
-	show_exits;
 };
 
 #if {"$draw[gline]" == "on"} {
-	#draw {<g09>} {line} -$hpbar[height]-$gline[height]-2 1 -$hpbar[height]-$gline[height]-2 -1;
+	#draw {line} -$hpbar[height]-$gline[height]-2 1 -$hpbar[height]-$gline[height]-2 -1;
 };
 
 #if {"$draw[hpbar]" == "on"} {
-	#draw {<g09>} {line} -$hpbar[height]-2 1 -$hpbar[height]-2 -1;
+	#draw {line} -$hpbar[height]-2 1 -$hpbar[height]-2 -1;
 	update_status;
 };
 
-#draw {<g09>} {line} -2 1 -2 -1;
+#draw {line} -2 1 -2 -1;
 
 #if {"$draw[exitpanel]" == "on" || "$draw[canvas]" == "on" || "$draw[pokedex]" == "on"} {
-	#draw {<g04>} {line} $chat[height]+$caption[height]+1 -$right_split -$status[height]-2 -$right_split;
-	#showme {<g09>\u252C<088>} $chat[height]+$caption[height] -$right_split;
-	#showme {<g09>\u2534<088>} -$hpbar[height]-$gline[height]-2 -$right_split;
+	#draw {line} $chat[height]+$caption[height]+1 -$right_split -$status[height]-2 -$right_split;
+	#showme {<228>\u252C<088>} $chat[height]+$caption[height] -$right_split;
+	#showme {<088>\u2534<088>} -$hpbar[height]-$gline[height]-2 -$right_split;
 };
 
 #NOP #if {"$draw[exitpanel]" == "on"} {
 #NOP 	#draw {line} $chat[height]+$caption[height]+$exitpanel[height]+1 -$right_split+1 $chat[height]+$caption[height]+$exitpanel[height]+1 -1;
-#NOP 	show_exits
-#NOP }
+#NOP 	show_exits;
+#NOP };
 
 #if {"$draw[canvas]" == "on"} {
 	#NOP botdraw;
-	show_area_selector;
+	#NOP show_area_selector;
 };
 
 #if {"$draw[map]" == "on"} {
-	#draw {<g04>} line 1 -$map[width]-1 $map[height] -$map[width]-1;
+	#draw line 1 -$map[width]-1 $map[height] -$map[width]-1;
 	#if {"$draw[caption]" == "on"} {
-		#showme {<g09>\u2534<088>} $map[height]+1 -$map[width]-1;
+		#showme {<228>\u2534<088>} $map[height]+1 -$map[width]-1;
 	};
 	#map flag vtmap on;
 	#map offset 1 -$map[width] $map[height] -1;

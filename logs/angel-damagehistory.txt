@@ -3270,3 +3270,5 @@ angel (Black Ooze [A50 D90 H50 (natural) - [Ter Te Pr Ev Sh Cl ]) - A Giant  -> 
 angel (Black Ooze [A70 D90 H50 (natural) - [Ter Te Pr Ev Sh Cl ]) - A Giant  -> 1171 -> 2 times -> 1171 (1312 Avg)
 angel (Black Ooze [A70 D70 H50 (hyperfocused) - [Ter Te Pr Ev Sh Cl ]) - A Giant  -> 1074 -> 2 times -> 1074 (1307 Avg)
 angel (Black Ooze [A70 D70 H50 (hyperfocused) - [Ter Te Pr Ev Sh Cl ]) - A Giant  -> 1484 -> 2 times -> 1484 (1311 Avg)
+angel (None [A100 D100 H100 (natural) - [Ter Te Ev Cl Pr Sh ]) - A Tiny L -> 60 -> 2 times -> 60 (45 Avg)
+angel (None [A100 D100 H100 (natural) - [Ter Te Ev Cl Pr Sh ]) - A Tiny L -> 90 -> 3 times -> 90 (45 Avg)

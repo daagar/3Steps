@@ -178,7 +178,7 @@
 			!morph;
 		};
 		#if {${my[hp[current]} < 1000 && ${my[pp][current]} < 10}{
-			go home;
+			panic;
 		};
 	};
 	#if {$my[hp][current] < 1000}{
