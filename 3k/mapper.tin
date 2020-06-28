@@ -89,21 +89,33 @@
 	#var exits %3;
 	#if {"$mapping" == "on"} {
 		#replace exits {,} {;};
-		#foreach {$exits} {eachexit} {#map dig $eachexit};
+		#foreach {$exits} {eachexit} {
+        		#if {"%2" == "Sewer Portal" && "$area" == "Chaotic Sewers"}{
+        			#nop {};
+        		}{
+				#map dig $eachexit;
+			};
+		};
 		#map get {roomexit} {rexit};
 		#foreach {$rexit} {eachexit} {
-			#map at {$eachexit} {
-				#map get {roomarea} {eacharea};
-				#map get {roomvnum} {eachroom};
-				#if {"$eacharea" == ""} {
-					#map set {roomcolor} {<118>};
-					#list {unexplored}{find}{$eachroom}{explored_index};
-					#if {$explored_index == 0}{
-						#list {unexplored} ins -1 {$eachroom};
-						#list {unexplored}{size}{unexplored_rooms};
+        		#if {"%2" == "Sewer Portal" && "$area" == "Chaotic Sewers"}{
+        			#nop {};
+        		}{
+				#map at {$eachexit} {
+					#map get {roomarea} {eacharea};
+					#map get {roomvnum} {eachroom};
+					#if {"$eacharea" == ""} {
+						#map set {roomcolor} {<118>};
+						#list {unexplored}{find}{$eachroom}{explored_index};
+						#if {$explored_index == 0}{
+							#list {unexplored} ins -1 {$eachroom};
+							#if {$stepignore == 3}{
+								go_unexplored;
+							};
+						};
 					};
-				}
-			}
+				};
+			};
 		};
 		#if {$roomname_len == 0} {
 			#map set roomname {%2 (%3)};
@@ -153,9 +165,6 @@
         };
         #if {"%2" == "Sewer Portal" && "$area" == "Chaotic Sewers"}{
                 #map name exit;#map set roomsymbol x;#map set roomcolor <128>;
-                #map dig u;
-                #map {exit}{u}{command}{#read Dirs/csewers_unload.tt;u;#var findloc 1};
-                #if {$findexit == 1}{#var domove 0};
         };
         #list {room_dirs}{find}{$reversedir}{reverse_dir};
         #list {room_dirs}{size}{room_exits};
