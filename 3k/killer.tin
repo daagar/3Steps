@@ -353,23 +353,6 @@ make_global_blacklist
 
 #alias {process_critter}{
 	#list {critter_array} ins -1 %0;
-	#list {critter_array}{size}{critter_room};
-};
-
-#var {searchstring}{}
-#act {^=M= %*} {
-	#format {tkstr}{%l}{%1};
-	#replace {tkstr}{.}{};
-	#replace {tkstr}{%s[%d\%]%s}{};
-	#replace {tkstr}{%s[%w]%s}{};
-	#replace {tkstr}{attacking you}{};
-	#regex {$tkstr}{%* \\x7b%d\\x7d}{
-		#loop {1}{&2}{count}{
-			process_critter &1;
-		};
-	}{
-		process_critter {$tkstr};
-	};
 	#var {critter_short_desc}{$tkstr};
 	#if {"$searchstring" != ""}{
 		#list {critter_array}{find}{%*${searchstring}%*}{found_index};
@@ -380,7 +363,7 @@ make_global_blacklist
 			#echo {***** Found $searchstring in room $foundroom****}
 		};
 	};
-	#list {critter_array}{find}{%*(%*)}{found_index};
+	#list {critter_array}{find}{%*(%d\%)}{found_index};
 	#if {$found_index > 0}{
 		#list {critter_array}{del}{$found_index};
 	};
@@ -418,6 +401,22 @@ make_global_blacklist
 		};
 	};
 	#list {critter_array}{size}{critter_room};
+};
+
+#var {searchstring}{}
+#act {^=M= %*} {
+	#format {tkstr}{%l}{%1};
+	#replace {tkstr}{.}{};
+	#replace {tkstr}{%s[%d\%]%s}{};
+	#replace {tkstr}{%s[%w]%s}{};
+	#replace {tkstr}{attacking you}{};
+	#regex {$tkstr}{%* \\x7b%d\\x7d}{
+		#loop {1}{&2}{count}{
+			process_critter &1;
+		};
+	}{
+		process_critter {$tkstr};
+	};
 	#var {tkstr}{${critter_array[${critter_room}]}};
 	#regex {$tkstr}{%* %w$}{
 		#var {tkstr}{&2};
