@@ -18,7 +18,7 @@ F 11
 
 G 0
 
-I 1
+I 4573
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -17907,7 +17907,7 @@ E { 3930} {s} {s} {4} {0} {} {1.000} {}
 
 R { 3930} {0} {<118>} {3930} { } {} {} {} {} {} {1.000} {}
 E { 3929} {n} {n} {1} {0} {} {1.000} {}
-E { 3931} {play diablo 2} {play diablo 2;#read .tt/Dirs/d2_load.tt} {0} {0} {} {1.000} {}
+E { 3931} {play diablo 2} {play diablo 2;#read .tt/Dirs/d2menu_load.tt} {0} {0} {} {1.000} {}
 E {11885} {play ultima online} {play ultima online} {0} {0} {} {1.000} {}
 
 R { 3931} {0} {} {Main Menu (windows)} { } {You are in the main menu of Diablo 2. Gigantic fiery words float in front of you spelling out the various difficulty levels: Normal, Nightmare and Hell, and the option to return to windows. Choose your fate carefully.... } {Diablo2 Normal 20+ Nightmare 40+ Hell 60+.} {d2menu} {} {} {1.000} {}
