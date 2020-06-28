@@ -76,9 +76,9 @@ make_global_blacklist
 	update_status;
 };
 
-#var {areaselector[rows]}{5}
+#var {areaselector[rows]}{6}
 #var {areaselector[page]}{1};
-#var {areaselector[max]}{5};
+#var {areaselector[max]}{6};
 
 #math selector[top] $chat[height]+$caption[height]+1;
 #math selector[bottom] $selector[top]+$selector[height];
@@ -116,7 +116,7 @@ make_global_blacklist
 			#showme {[<128>MAPPER<088>]} $selector[top]+1 -38;
 		};
 	};
-	#button {21;-36;21;-33}{si};
+	#button {$selector[top];-36;$selector[top];-33}{si};
 	#if {${autoqueue} == 1}{
 		#showme {[<128>Q<088>]} $selector[top] -7;
 	}{
@@ -135,8 +135,8 @@ make_global_blacklist
 	#button {$selector[top]+1;-7;$selector[top]+1;-5}{autok};
 	#math {areaselector[start]}{${areaselector[rows]} * ${areaselector[page]}};
 	#math {areaselector[end]}{${areaselector[rows]} * ${areaselector[page]} - ${areaselector[rows]} + 1};
-	#line sub {var} #draw {tile} $selector[top]+3 -35 $selector[bottom]-1 -4 ${areaselector[text][-$areaselector[start]..-$areaselector[end]]};
-	#var {start_row}{$selector[top]+2};
+	#line sub {var} #draw {tile} $selector[top]+2 -35 $selector[bottom]-1 -4 ${areaselector[text][-$areaselector[start]..-$areaselector[end]]};
+	#var {start_row}{$selector[top]+1};
 	#var {areaselector[current]}{0};
 	#if {$queue_size > 0}{
 		#loop {1}{${queue_size}}{queue_count}{
@@ -148,30 +148,30 @@ make_global_blacklist
 			};
 		};
 	};
-	#button {$selector[top]+3;-36;$selector[top]+3;-5}{
+	#button {$selector[top]+2;-36;$selector[top]+2;-5}{
 		fbrm 1;
 		show_area_selector;
 	};
-	#button {$selector[top]+4;-36;$selector[top]+4;-5}{
+	#button {$selector[top]+3;-36;$selector[top]+3;-5}{
 		fbrm 2;
 		show_area_selector;
 	};
-	#button {$selector[top]+5;-36;$selector[top]+5;-5}{
+	#button {$selector[top]+4;-36;$selector[top]+4;-5}{
 		fbrm 3;
 		show_area_selector;
 	};
-	#button {$selector[top]+6;-36;$selector[top]+6;-5}{
+	#button {$selector[top]+5;-36;$selector[top]+5;-5}{
 		fbrm 4;
 		show_area_selector;
 	};
-	#button {$selector[top]+7;-36;$selector[top]+7;-5}{
+	#button {$selector[top]+6;-36;$selector[top]+6;-5}{
 		fbrm 5;
 		show_area_selector;
 	};
-	#NOP #button {$selector[top]+7;-36;$selector[top]+7;-5}{
-	#NOP 	fbrm 6;
-	#NOP 	show_area_selector;
-	#NOP };
+	#button {$selector[top]+7;-36;$selector[top]+7;-5}{
+	 	fbrm 6;
+	 	show_area_selector;
+	};
 };
 
 
