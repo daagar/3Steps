@@ -457,6 +457,23 @@ make_global_blacklist
 }
 
 #var {unexplored_rooms}{0};
+
+#alias {go_unexplored}{
+	#var {closest_unexplored}{1};
+	#map find ${unexplored[1]};
+	#path {get}{length}{shortest_distance};
+	#list {unexplored}{size}{unexplored_rooms};
+	#loop {1}{$unexplored_rooms}{count}{
+		#map find {$unexplored[$count]};
+		#path {get}{length}{distance};
+		#if {$distance < $shortest_distance}{
+			#var {closest_unexplored}{$count};
+			#var {shortest_distance}{$distance};
+		};
+	};
+	make_killpath ${unexplored[${closest_unexplored}]};
+};
+
 #alias ki {
 	#if {$domove2 == 1}{
 		#var domove2 0;
@@ -485,7 +502,7 @@ make_global_blacklist
 			};
 			#case {3}{
 				#if {$unexplored_rooms > 0}{
-					make_killpath {${unexplored[${unexplored_rooms}]}};
+					go_unexplored;
 				};
 				#map {flag}{static}{off};
 				#var stepper2 0;
@@ -574,7 +591,7 @@ make_global_blacklist
 				#nop {Magic Mapper};
 				#if {$unexplored_rooms > 0}{
 					#if {"${kill_path2[${path_index}]}" == ""}{
-						make_killpath $unexplored[${unexplored_rooms}];
+						go_unexplored;
 					};
 					${kill_path2[${path_index}]};
 					#math {path_index}{$path_index + 1};
@@ -582,9 +599,8 @@ make_global_blacklist
 						#list {unexplored}{find}{$roomvnum}{my_result};
 						#if {$my_result > 0}{
 							#list {unexplored}{del}{${my_result}};
-							#list {unexplored}{size}{unexplored_rooms};
 						};
-						make_killpath $unexplored[${unexplored_rooms}];
+						go_unexplored;
 					};
 				}{
 					#echo {No Unexplored rooms, Wandering Instead};
