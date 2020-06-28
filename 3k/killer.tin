@@ -280,10 +280,10 @@ make_global_blacklist
 }
 
 #alias {make_killpath}{
-	#map {find}{%0};
+	#line quiet #map {find}{%0};
 	#unvar {kill_path2};
 	#list {kill_path2}{clear};
-	#path {save}{forward}{kill_path2};
+	#line quiet #path {save}{forward}{kill_path2};
 	#list {kill_path2}{create}{$kill_path2};
 	#list {kill_path2}{size}{path_size};
 	#list {unexplored}{size}{unexplored_rooms};
@@ -460,12 +460,12 @@ make_global_blacklist
 
 #alias {go_unexplored}{
 	#var {closest_unexplored}{1};
-	#map find ${unexplored[1]};
-	#path {get}{length}{shortest_distance};
+	#line quiet #map find ${unexplored[1]};
+	#line quiet #path {get}{length}{shortest_distance};
 	#list {unexplored}{size}{unexplored_rooms};
 	#loop {1}{$unexplored_rooms}{count}{
-		#map find {$unexplored[$count]};
-		#path {get}{length}{distance};
+		#line quiet #map find {$unexplored[$count]};
+		#line quiet #path {get}{length}{distance};
 		#if {$distance < $shortest_distance}{
 			#var {closest_unexplored}{$count};
 			#var {shortest_distance}{$distance};
