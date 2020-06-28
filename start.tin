@@ -1,34 +1,29 @@
-#NOP
-/* Load Common Files */
 #config {repeat enter}{on};
 #read .tt/aliases.tin;
 #read .tt/graph.tin;
 
 #alias {load3k} {
-	#config {packet patch}{0.5};
+	#config {packet patch}{0.1};
+	#read .tt/3k/mip.tin;
+	#read .tt/3k/draw.tin;
 	#read .tt/3k/mysql.tin;
 	#read .tt/3k/vars.tin;
 	#read .tt/3k/aliases.tin;
 	#read .tt/3k/ansi.tin;
 	#read .tt/3k/assemble.tin;
 	#read .tt/3k/corpses.tin;
-	#read .tt/3k/draw.tin;
 	#read .tt/3k/gag.tin;
 	#read .tt/3k/mapper.tin;
-	#read .tt/3k/mip.tin;
 	#read .tt/3k/mob_monitors.tin;
-	#nop {
-	#read .tt/3k/dog.tin;
-	#read .tt/3k/bots/bot_cycle.tin;
-	#read .tt/3k/bots/bot_load.tin;
-	#read .tt/3k/miphp.tin;
-	};
 	#read .tt/3k/trigs.tin;
 	#read .tt/3k/chat.tin;
 	#read .tt/3k/killer.tin;
 	#read .tt/3k/triggers.tin;
 	#read .tt/3k/damagetracker.tin;
-	#delay {ansi}{#read .tt/3k/ansi_setup.tin}{2};
+	#delay {ansi}{
+		redraw;
+		#read .tt/3k/ansi_setup.tin
+	}{2};
 	#script {cat .tt/map/lastroom.tt};
 }
 
@@ -46,16 +41,18 @@
 }
 
 #alias {load}{
-	#if {"$mud" == "3k"}{
-		load3k;
-		resume_chat;
-	};
-	#if {"$mud" == "3s"}{
-		load3k;
-		resume_chat;
-	};
-	#if {"$mud" == "AA"}{
-		loadAA;
+	#switch {"$mud"}{
+		#case {"3k"}{
+			load3k;
+			resume_chat;
+		};
+		#case {"3s"}{
+			load3k;
+			resume_chat;
+		};
+		#case {"AA"}{
+			loadAA;
+		};
 	};
 };
 

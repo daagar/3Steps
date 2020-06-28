@@ -7,9 +7,7 @@
 }
 #map read .tt/map/${mapfile}
 
-#var map[height] 17
-#var map[width] 42
-
+#map offset 1 -42 17 -1
 #map goto {roomnote} {home}
 
 /* Move Event */

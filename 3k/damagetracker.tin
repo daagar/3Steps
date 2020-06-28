@@ -118,8 +118,6 @@
         #line sub {var} #draw {tile} 33 -39 41 -4 $damagetracker[log][-$damagetracker[start]..-$damagetracker[end]];
 };
 
-show_damage_table
-
 #ticker {damage_table}{show_damage_table}{4}
 
 #alias {update_damage_table}{
