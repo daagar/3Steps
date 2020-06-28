@@ -338,12 +338,10 @@ make_global_blacklist
 
 #act {Too heavy.}{
 	#var domove2 0;
-	#var starter2 0;
 }
 
 #act {%1 is too heavy for Ventra's secret chest}{
 	#var domove2 0;
-	#var starter2 0;
 }
 
 #alias {mysearch}{
@@ -422,7 +420,7 @@ make_global_blacklist
 		#var {tkstr}{&2};
 	};
 	#var {kstr}{$tkstr};
-	#if {"$area" == "Changeling Biome" && $starter2 != 1 && $domove2 == 1}{
+	#if {"$area" == "Changeling Biome" && $domove2 == 1}{
 		bscan;
 	};
 }{9};
@@ -480,14 +478,12 @@ make_global_blacklist
 #alias ki {
 	#if {$domove2 == 1}{
 		#var domove2 0;
-		#var starter2 0;
 		#var player_room 0;
 		#var critter_room 0
 	}{
 		#var critter_room 0;
 		#var player_room 0;
 		#var domove2 1;
-		#var starter2 1;
 		#switch {$stepignore}{
 			#case {0}{
 				#if {$room_index <= $area_size}{
@@ -579,7 +575,6 @@ make_global_blacklist
 						#math {targetarea}{$my[areaselector][current] + 1};
 						#if {$targetarea > 6}{#var {targetarea}{1}};
 						#var {room_num}{1};
-						#var {starter2}{0};
 						go ${my[areaselector][${targetarea}][note]};
 					};
 				}{
@@ -615,26 +610,20 @@ make_global_blacklist
 };
 
 #alias kill-loop {
-	#if {$starter2 == 1}{
-		step_function;
-		#var {starter2}{0};
-		#var {domove2}{1};
-	}{
-		#if {${player_room} == 0}{ 
-			#if {${autogather} == 1}{
-				gather_items;
-			};
-			#if {${critter_room} > 0}{
-					#var domove2 0;
-					#if {$autokill == 1}{
-						kill $kstr;
-					};
-			}{
-				step_function;
-			};
+	#if {${player_room} == 0}{ 
+		#if {${autogather} == 1}{
+			gather_items;
+		};
+		#if {${critter_room} > 0}{
+				#var domove2 0;
+				#if {$autokill == 1}{
+					kill $kstr;
+				};
 		}{
 			step_function;
 		};
+	}{
+		step_function;
 	};
 }
 
