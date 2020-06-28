@@ -160,7 +160,7 @@
 
 #if {"$draw[biome]" == "on"} {
 	#NOP botdraw;
-	display_biome;
+	#delay {0.1}{display_biome};
 };
 
 #if {"$draw[map]" == "on"} {
