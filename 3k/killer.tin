@@ -286,6 +286,7 @@ make_global_blacklist
 	#path {save}{forward}{kill_path2};
 	#list {kill_path2}{create}{$kill_path2};
 	#list {kill_path2}{size}{path_size};
+	#list {unexplored}{size}{unexplored_rooms};
 	#var {path_index}{1};
 };
 
@@ -484,7 +485,7 @@ make_global_blacklist
 			};
 			#case {3}{
 				#if {$unexplored_rooms > 0}{
-					make_killpath {${unexplored[1]}};
+					make_killpath {${unexplored[${unexplored_rooms}]}};
 				};
 				#map {flag}{static}{off};
 				#var stepper2 0;
@@ -573,16 +574,17 @@ make_global_blacklist
 				#nop {Magic Mapper};
 				#if {$unexplored_rooms > 0}{
 					#if {"${kill_path2[${path_index}]}" == ""}{
-						make_killpath $unexplored[1];
+						make_killpath $unexplored[${unexplored_rooms}];
 					};
 					${kill_path2[${path_index}]};
 					#math {path_index}{$path_index + 1};
 					#if {${path_index} > ${path_size}}{
 						#list {unexplored}{find}{$roomvnum}{my_result};
 						#if {$my_result > 0}{
-							#list {unexplored}{del}{1};
+							#list {unexplored}{del}{${my_result}};
+							#list {unexplored}{size}{unexplored_rooms};
 						};
-						make_killpath $unexplored[1];
+						make_killpath $unexplored[${unexplored_rooms}];
 					};
 				}{
 					#echo {No Unexplored rooms, Wandering Instead};
