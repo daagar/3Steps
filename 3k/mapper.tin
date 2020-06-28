@@ -109,7 +109,9 @@
 						#list {unexplored}{find}{$eachroom}{explored_index};
 						#if {$explored_index == 0}{
 							#list {unexplored} ins -1 {$eachroom};
-							#list {unexplored}{size}{unexplored_rooms};
+							#if {$stepignore == 3}{
+								go_unexplored;
+							};
 						};
 					};
 				};
@@ -369,7 +371,14 @@
 	#map write .tt/map/${mapfile};
 };
 
-#alias {mapsave} {#map write .tt/map/${mapfile}}
+#alias {mapsave} {
+	#if {$stepignore > 0}{
+		#echo {It's likely that you don't want to save.  Turn off the Magic Mapper and save again};
+	}{
+		#map write .tt/map/${mapfile}
+	};
+}
+
 #alias {mapon} {
 	!brief off yes;
 	#map flag static off;
