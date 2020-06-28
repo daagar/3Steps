@@ -4,6 +4,8 @@
 git clone https://github.com/wstutt/tintin.git
 
 yum install mariadb mariadb-server
+systemctl enable mariadb
+systemctl start mariadb
 
 ln -s tintin .tt
 

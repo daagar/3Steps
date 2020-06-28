@@ -94,17 +94,27 @@
 		#foreach {$rexit} {eachexit} {
 			#map at {$eachexit} {
 				#map get {roomarea} {eacharea};
+				#map get {roomvnum} {eachroom};
 				#if {"$eacharea" == ""} {
-					#map set {roomcolor} {<118>}
+					#map set {roomcolor} {<118>};
+					#list {unexplored}{find}{$eachroom}{explored_index};
+					#if {$explored_index == 0}{
+						#list {unexplored} ins -1 {$eachroom};
+						#list {unexplored}{size}{unexplored_rooms};
+					};
 				}
 			}
 		};
 		#if {$roomname_len == 0} {
-			#map set roomname {%2 (%3)}
+			#map set roomname {%2 (%3)};
 		};
 		#if {$roomarea_len == 0} {
 			#map set roomarea {$area};
-			#map set roomcolor
+			#map set roomcolor;
+			#list {unexplored}{find}{$roomvnum}{explored_index};
+			#if {$explored_index > 0}{
+				#list {unexplored}{del}{$explored_index};
+			};
 		};
 		#if {$roomdesc_len == 0} {
 			#var longcap on;
@@ -123,6 +133,7 @@
 	#var total_items 0;
 	#var player_room 0;
 	#var critter_room 0;
+	#unvar critter_array;
         #var room_dirs %3;
         #replace {room_dirs}{,}{;};
         #var {room_short_desc}{%1};
@@ -209,6 +220,7 @@
 	#var total_items 0;
 	#var player_room 0;
 	#var critter_room 0;
+	#unvar {critter_array};
 	#if {"$longcap" == "on"} {
 		#var longcap off;
 		#unact {%%1};
@@ -252,6 +264,9 @@
 	};
 	#if {"${whitelist}" != ""}{
 		#unvar {whitelist};
+	};
+	#if {"${unexplored}" != ""}{
+		#unvar {unexplored};
 	};
 	#if {"${critter[whitelist]}" != ""}{
 		#unvar {critter[whitelist]};
