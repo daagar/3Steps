@@ -164,7 +164,7 @@
                 #list {room_dirs}{find}{menu}{upexit};
         };
         #if {"%2" == "Sewer Portal" && "$area" == "Chaotic Sewers"}{
-                #map name exit;#map set roomsymbol x;#map set roomcolor <128>;
+                #map set roomnote exit;#map set roomsymbol x;#map set roomcolor <128>;
         };
         #list {room_dirs}{find}{$reversedir}{reverse_dir};
         #list {room_dirs}{size}{room_exits};
