@@ -18,7 +18,7 @@ F 11
 
 G 0
 
-I 4573
+I 969
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -4975,10 +4975,13 @@ E { 2829} {town} {town} {0} {0} {} {1.000} {}
 R {  968} {0} {} {rcastle} { } {} {} {rcastle} {} {} {1.000} {}
 E {13455} {out} {out} {0} {0} {} {1.000} {}
 
-R {  969} {0} {} {} { } {} {} {d2a2nightmare} {} {} {1.000} {}
+R {  969} {0} {} {The town square (n,s,w,e,menu)} { } {This is the town square of Lut Gholein. Roads lead in all directions and people come and go on the streets. Guards patrol enforcing law and order. To the north you see a large military structure, and to the west you can make out a market. To the south is a slum and to the east is a gate leading out of town. An entertainer sits at one corner of the square, while a crier calls out news in another. } {Diablo 2 Act 2} {d2a2nightmare} {} {} {1.000} {}
 E { 3931} {menu} {menu} {0} {0} {} {1.000} {}
+E { 4292} {n} {n} {1} {0} {} {1.000} {}
+E { 4590} {s} {s} {4} {0} {} {1.000} {}
+E { 4845} {w} {w} {8} {0} {} {1.000} {}
 
-R {  970} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {  970} {0} {} {Rogue Encampment (leave)} { } {You are in a large open area with archery targets scattered about. The Rogues train with their leader Kashya. Arrows whizz through the air, most hitting their target with deadly accuracy. Younger rogues have been relegated to arrow pickup duty, and they scurry all about the fields. } {Diablo2 Normal 20+ Nightmare 40+ Hell 60+.} {} {} {} {1.000} {}
 
 R {  971} {0} {} {971} { } {} {} {} {} {} {1.000} {}
 E {  688} {n} {n} {1} {0} {} {1.000} {}
@@ -17913,7 +17916,7 @@ E { 3932} {normal} {normal} {0} {0} {} {1.000} {}
 E { 3933} {nightmare} {nightmare} {0} {0} {} {1.000} {}
 E { 3936} {hell} {hell} {0} {0} {} {1.000} {}
 
-R { 3932} {0} {<118>} {d2norm} { } {} {} {d2norm} {} {} {1.000} {}
+R { 3932} {0} {} {d2norm} { } {You are at the rogue encampment. This quiet outpost is on the edge of a vast wilderness, covered in a blanket of eerie fog. Various buildings surround you, with a few individuals roaming the street. A large wagon sits in the center of town, and an interesting looking hut lies a short walk away. } {Diablo2 Normal 20+ Nightmare 40+ Hell 60+.} {d2norm} {} {} {1.000} {}
 E { 3931} {menu} {menu} {0} {0} {} {1.000} {}
 E { 4204} {portal} {portal} {0} {0} {} {1.000} {}
 E { 5567} {say leave} {say leave} {0} {0} {} {1.000} {}
@@ -17921,11 +17924,15 @@ E { 5622} {travel stony field} {travel stony field} {0} {0} {} {1.000} {}
 E { 5623} {travel inner cloister} {travel inner cloister} {0} {0} {} {1.000} {}
 E { 5624} {travel black marsh} {travel black marsh} {0} {0} {} {1.000} {}
 E { 5625} {travel dark wood} {travel dark wood} {0} {0} {} {1.000} {}
+E { 4582} {hut} {hut} {0} {0} {} {1.000} {}
+E { 4587} {training} {training} {0} {0} {} {1.000} {}
 
-R { 3933} {0} {<118>} {} { } {} {} {d2nightmare} {} {} {1.000} {}
+R { 3933} {0} {} {Rogue Encampment (s,menu,hut,training)} { } {You are at the rogue encampment. This quiet outpost is on the edge of a vast wilderness, covered in a blanket of eerie fog. Various buildings surround you, with a few individuals roaming the street. A large wagon sits in the center of town, and an interesting looking hut lies a short walk away. } {Diablo2 Normal 20+ Nightmare 40+ Hell 60+.} {d2nightmare} {} {} {1.000} {}
 E { 3931} {menu} {menu} {0} {0} {} {1.000} {}
 E { 4293} {portal} {portal} {0} {0} {} {1.000} {}
 E {  969} {say leave} {say leave} {0} {0} {} {1.000} {}
+E { 4588} {training} {training} {0} {0} {} {1.000} {}
+E { 4589} {hut} {hut} {0} {0} {} {1.000} {}
 
 R { 3934} {0} {} {d2nightmare} { } {} {} {} {} {} {1.000} {}
 E { 3933} {normal} {normal} {0} {0} {} {1.000} {}
@@ -17937,7 +17944,6 @@ E {11558} {travel inner cloister} {travel inner cloister} {0} {0} {} {1.000} {}
 
 R { 3936} {0} {} {Rogue Encampment (e,menu,path,hut,training)} { } {You are at the rogue encampment. This quiet outpost is on the edge of a vast wilderness, covered in a blanket of eerie fog. Various buildings surround you, with a few individuals roaming the street. A large wagon sits in the center of town, and an interesting looking hut lies a short walk away. } {Diablo2 Normal 20+ Nightmare 40+ Hell 60+.} {d2hell} {} {} {1.000} {}
 E { 3931} {menu} {menu} {0} {0} {} {1.000} {}
-E {11966} {portal} {portal} {0} {0} {} {1.000} {}
 E {  967} {path} {path} {0} {0} {} {1.000} {}
 E {  970} {training} {training} {0} {0} {} {1.000} {}
 E { 2827} {hut} {hut} {0} {0} {} {1.000} {}
@@ -19082,11 +19088,11 @@ R { 4203} {0} {} {4203} { } {} {} {} {} {} {1.000} {}
 E { 4202} {e} {e} {2} {0} {} {1.000} {}
 E { 4152} {w} {w} {8} {0} {} {1.000} {}
 
-R { 4204} {0} {} {4204} { } {} {} {} {} {} {1.000} {}
+R { 4204} {0} {} {4204} { } {Beneath the sheltering canopy of trees the heat segues into shade. Not wanting to be forgotten, the wind occasionally blows the thick stench of hot air into the trees. } {CowVille} {d2normcows} {} {} {1.000} {}
 E { 3932} {portal} {portal} {0} {0} {} {1.000} {}
 E { 4205} {s} {s} {4} {0} {} {1.000} {}
 
-R { 4205} {0} {} {4205} { } {} {} {} {} {} {1.000} {}
+R { 4205} {0} {<118>} {4205} { } {} {} {} {} {} {1.000} {}
 E { 4204} {n} {n} {1} {0} {} {1.000} {}
 E { 4206} {s} {s} {4} {0} {} {1.000} {}
 E { 4214} {e} {e} {2} {0} {} {1.000} {}
@@ -19480,10 +19486,10 @@ E { 4288} {e} {e} {2} {0} {} {1.000} {}
 R { 4291} {0} {} {4291} { } {} {} {} {} {} {1.000} {}
 E {  763} {s} {s} {4} {0} {} {1.000} {}
 
-R { 4292} {0} {} {4292} { } {} {} {} {} {} {1.000} {}
-E { 3933} {n} {n} {1} {0} {} {1.000} {}
+R { 4292} {0} {} {A mercenary barracks (s)} { } {This is the north edge of Lut Gholein. A road leads south further into town after passing by a small warehouse and a large military building. Warriors wielding large spears train both inside and outside the structure. Dozens of houses line the sides of the street and various vendors have stalls setup near the training area. The sound of weapons striking targets and sparring soldiers is everywhere. } {Diablo 2 Act 2} {} {} {} {1.000} {}
+E {  969} {s} {s} {4} {0} {} {1.000} {}
 
-R { 4293} {0} {} {4293} { } {} {} {} {} {} {1.000} {}
+R { 4293} {0} {<118>} {4293} { } {} {} {} {} {} {1.000} {}
 E { 3933} {portal} {portal} {0} {0} {} {1.000} {}
 E { 9753} {s} {s} {4} {0} {} {1.000} {}
 
@@ -20667,11 +20673,28 @@ R { 4580} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
 R { 4581} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
+R { 4582} {0} {} {In a hut (out)} { } {You are inside a small straw hut. Shelves line the walls filled with bottles and vials. Books and scrolls litter the ground around a small table. The only light source in the room is a ring of wax candles. The light level is quite low, giving the room an almost sacred feel. } {Diablo2 Normal 20+ Nightmare 40+ Hell 60+.} {} {} {} {1.000} {}
+E { 3932} {out} {out} {0} {0} {} {1.000} {}
+
+R { 4583} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
 R { 4584} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
 R { 4585} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
 R { 4586} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 4587} {0} {} {Rogue Encampment (leave)} { } {You are in a large open area with archery targets scattered about. The Rogues train with their leader Kashya. Arrows whizz through the air, most hitting their target with deadly accuracy. Younger rogues have been relegated to arrow pickup duty, and they scurry all about the fields. } {Diablo2 Normal 20+ Nightmare 40+ Hell 60+.} {} {} {} {1.000} {}
+E { 3932} {leave} {leave} {0} {0} {} {1.000} {}
+
+R { 4588} {0} {} {Rogue Encampment (leave)} { } {You are in a large open area with archery targets scattered about. The Rogues train with their leader Kashya. Arrows whizz through the air, most hitting their target with deadly accuracy. Younger rogues have been relegated to arrow pickup duty, and they scurry all about the fields. } {Diablo2 Normal 20+ Nightmare 40+ Hell 60+.} {} {} {} {1.000} {}
+E { 3933} {leave} {leave} {0} {0} {} {1.000} {}
+
+R { 4589} {0} {} {In a hut (out)} { } {You are inside a small straw hut. Shelves line the walls filled with bottles and vials. Books and scrolls litter the ground around a small table. The only light source in the room is a ring of wax candles. The light level is quite low, giving the room an almost sacred feel. } {Diablo2 Normal 20+ Nightmare 40+ Hell 60+.} {} {} {} {1.000} {}
+E { 3933} {out} {out} {0} {0} {} {1.000} {}
+
+R { 4590} {0} {} {The slums (n)} { } {A shanty town stretches out before you ripe with poverty, hunger and the parts of society the upper class tries to hide from view. This segment of the population has been neatly stuffed into the south edge of town. The large city walls encircle the area almost entirely making it its own community. Garbage and refuse are thrown into the street and make their way into a sewer in the center of the slums. } {Diablo 2 Act 2} {} {} {} {1.000} {}
+E {  969} {n} {n} {1} {0} {} {1.000} {}
 
 R { 4591} {0} {} {4591} { } {} {} {} {} {} {1.000} {}
 E { 2911} {n} {n} {1} {0} {} {1.000} {}
@@ -21405,6 +21428,8 @@ E { 4719} {se} {se} {6} {0} {} {1.000} {}
 E { 4815} {sw} {sw} {12} {0} {} {1.000} {}
 E { 4814} {nw} {nw} {9} {0} {} {1.000} {}
 
+R { 4735} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
 R { 4736} {4104} {} {4736} { } {} {} {} {} {} {1.000} {}
 E { 4734} {s} {s} {4} {0} {} {1.000} {}
 E { 4730} {n} {n} {1} {0} {} {1.000} {}
@@ -21921,6 +21946,10 @@ E { 4809} {nw} {nw} {9} {0} {} {1.000} {}
 R { 4844} {4104} {} {4844} { } {} {} {} {} {} {1.000} {}
 E { 4843} {n} {n} {1} {0} {} {1.000} {}
 E { 4841} {s} {s} {4} {0} {} {1.000} {}
+
+R { 4845} {0} {} {A busy market (e,shop)} { } {A large market sits on the western edge of town. Large walls rise up to the west and south, and a large palace dominates the north side of the market. Because there is only one way into the market, would-be thieves think twice about stealing from the merchants. People hawk wares and merchants make purchases, making this the economic center of the desert. The houses in this part of Lut Gholein are of a higher quality representing the merchant class that lives here. } {Diablo 2 Act 2} {} {} {} {1.000} {}
+E {  969} {e} {e} {2} {0} {} {1.000} {}
+E { 5261} {shop} {shop} {0} {0} {} {1.000} {}
 
 R { 4846} {4104} {} {4846} { } {} {} {} {} {} {1.000} {}
 E { 4843} {s} {s} {4} {0} {} {1.000} {}
@@ -24001,6 +24030,8 @@ E { 5262} {n} {n} {1} {0} {} {1.000} {}
 E { 5263} {w} {w} {8} {0} {} {1.000} {}
 E { 5264} {e} {e} {2} {0} {} {1.000} {}
 
+R { 5261} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
 R { 5262} {0} {} {5262} { } {} {} {} {} {} {1.000} {}
 E { 5259} {s} {s} {4} {0} {} {1.000} {}
 E { 5209} {n} {n} {1} {0} {} {1.000} {}
@@ -25334,9 +25365,8 @@ E {10003} {s} {s} {4} {0} {} {1.000} {}
 R { 5566} {0} {} {thulin} { } {} {} {} {} {} {1.000} {}
 E { 5556} {n} {n} {1} {0} {} {1.000} {}
 
-R { 5567} {0} {} {d2norm2} { } {} {} {d2a2norm} {} {} {1.000} {}
+R { 5567} {0} {} {The town square (n,s,w,e,menu)} { } {This is the town square of Lut Gholein. Roads lead in all directions and people come and go on the streets. Guards patrol enforcing law and order. To the north you see a large military structure, and to the west you can make out a market. To the south is a slum and to the east is a gate leading out of town. An entertainer sits at one corner of the square, while a crier calls out news in another. } {Diablo 2 Act 2} {d2a2norm} {} {} {1.000} {}
 E { 3931} {menu} {menu} {0} {0} {} {1.000} {}
-E { 5626} {e} {e} {2} {0} {} {1.000} {}
 E { 5649} {w} {w} {8} {0} {} {1.000} {}
 E { 5650} {n} {n} {1} {0} {} {1.000} {}
 E { 5651} {s} {s} {4} {0} {} {1.000} {}
@@ -25553,58 +25583,17 @@ E { 9830} {n} {n} {1} {0} {} {1.000} {}
 E { 9831} {e} {e} {2} {0} {} {1.000} {}
 E { 9851} {w} {w} {8} {0} {} {1.000} {}
 
-R { 5622} {0} {} {5622} { } {} {} {} {} {} {1.000} {}
+R { 5622} {0} {<118>} {5622} { } {} {} {} {} {} {1.000} {}
 E { 3932} {travel rogue encampment} {travel rogue encampment} {0} {0} {} {1.000} {}
 
-R { 5623} {0} {} {5623} { } {} {} {} {} {} {1.000} {}
+R { 5623} {0} {<118>} {5623} { } {} {} {} {} {} {1.000} {}
 E { 3932} {travel rogue encampment} {travel rogue encampment} {0} {0} {} {1.000} {}
 
-R { 5624} {0} {} {5624} { } {} {} {} {} {} {1.000} {}
+R { 5624} {0} {<118>} {5624} { } {} {} {} {} {} {1.000} {}
 E { 3932} {travel rogue encampment} {travel rogue encampment} {0} {0} {} {1.000} {}
 
-R { 5625} {0} {} {5625} { } {} {} {} {} {} {1.000} {}
+R { 5625} {0} {<118>} {5625} { } {} {} {} {} {} {1.000} {}
 E { 3932} {travel rogue encampment} {travel rogue encampment} {0} {0} {} {1.000} {}
-
-R { 5626} {0} {} {5626} { } {} {} {} {} {} {1.000} {}
-E { 5567} {w} {w} {8} {0} {} {1.000} {}
-E { 5627} {e} {e} {2} {0} {} {1.000} {}
-
-R { 5627} {0} {} {5627} { } {} {} {} {} {} {1.000} {}
-E { 5626} {w} {w} {8} {0} {} {1.000} {}
-E { 5628} {s} {s} {4} {0} {} {1.000} {}
-E { 5648} {n} {n} {1} {0} {} {1.000} {}
-
-R { 5628} {0} {} {5628} { } {} {} {} {} {} {1.000} {}
-E { 5627} {n} {n} {1} {0} {} {1.000} {}
-E { 5629} {s} {s} {4} {0} {} {1.000} {}
-
-R { 5629} {0} {} {5629} { } {} {} {} {} {} {1.000} {}
-E { 5628} {n} {n} {1} {0} {} {1.000} {}
-E { 5630} {w} {w} {8} {0} {} {1.000} {}
-
-R { 5630} {0} {} {5630} { } {} {} {} {} {} {1.000} {}
-E { 5629} {e} {e} {2} {0} {} {1.000} {}
-E { 5631} {w} {w} {8} {0} {} {1.000} {}
-
-R { 5631} {0} {} {5631} { } {} {} {} {} {} {1.000} {}
-E { 5630} {e} {e} {2} {0} {} {1.000} {}
-E { 5632} {w} {w} {8} {0} {} {1.000} {}
-
-R { 5632} {0} {} {5632} { } {} {} {} {} {} {1.000} {}
-E { 5631} {e} {e} {2} {0} {} {1.000} {}
-E { 5633} {w} {w} {8} {0} {} {1.000} {}
-
-R { 5633} {0} {} {5633} { } {} {} {} {} {} {1.000} {}
-E { 5632} {e} {e} {2} {0} {} {1.000} {}
-E { 5634} {n} {n} {1} {0} {} {1.000} {}
-
-R { 5634} {0} {} {5634} { } {} {} {} {} {} {1.000} {}
-E { 5633} {s} {s} {4} {0} {} {1.000} {}
-E { 5635} {n} {n} {1} {0} {} {1.000} {}
-
-R { 5635} {0} {} {5635} { } {} {} {} {} {} {1.000} {}
-E { 5634} {s} {s} {4} {0} {} {1.000} {}
-E { 5642} {n} {n} {1} {0} {} {1.000} {}
 
 R { 5636} {0} {} {5636} { } {} {} {} {} {} {1.000} {}
 E {  834} {w} {w} {8} {0} {} {1.000} {}
@@ -25624,57 +25613,30 @@ E {  983} {n} {n} {1} {0} {} {1.000} {}
 R { 5641} {0} {} {5641} { } {} {} {} {} {} {1.000} {}
 E {  984} {e} {e} {2} {0} {} {1.000} {}
 
-R { 5642} {0} {} {5642} { } {} {} {} {} {} {1.000} {}
-E { 5635} {s} {s} {4} {0} {} {1.000} {}
-E { 5643} {n} {n} {1} {0} {} {1.000} {}
-
-R { 5643} {0} {} {5643} { } {} {} {} {} {} {1.000} {}
-E { 5642} {s} {s} {4} {0} {} {1.000} {}
-E { 5644} {e} {e} {2} {0} {} {1.000} {}
-
-R { 5644} {0} {} {5644} { } {} {} {} {} {} {1.000} {}
-E { 5643} {w} {w} {8} {0} {} {1.000} {}
-E { 5645} {e} {e} {2} {0} {} {1.000} {}
-
-R { 5645} {0} {} {5645} { } {} {} {} {} {} {1.000} {}
-E { 5644} {w} {w} {8} {0} {} {1.000} {}
-E { 5646} {e} {e} {2} {0} {} {1.000} {}
-
-R { 5646} {0} {} {5646} { } {} {} {} {} {} {1.000} {}
-E { 5645} {w} {w} {8} {0} {} {1.000} {}
-E { 5647} {e} {e} {2} {0} {} {1.000} {}
-
-R { 5647} {0} {} {5647} { } {} {} {} {} {} {1.000} {}
-E { 5646} {w} {w} {8} {0} {} {1.000} {}
-E { 5648} {s} {s} {4} {0} {} {1.000} {}
-
-R { 5648} {0} {} {5648} { } {} {} {} {} {} {1.000} {}
-E { 5647} {n} {n} {1} {0} {} {1.000} {}
-E { 5627} {s} {s} {4} {0} {} {1.000} {}
-
-R { 5649} {0} {} {5649} { } {} {} {} {} {} {1.000} {}
+R { 5649} {0} {} {5649} { } {A large market sits on the western edge of town. Large walls rise up to the west and south, and a large palace dominates the north side of the market. Because there is only one way into the market, would-be thieves think twice about stealing from the merchants. People hawk wares and merchants make purchases, making this the economic center of the desert. The houses in this part of Lut Gholein are of a higher quality representing the merchant class that lives here. } {Diablo 2 Act 2} {} {} {} {1.000} {}
 E { 5567} {e} {e} {2} {0} {} {1.000} {}
+E { 4735} {shop} {shop} {0} {0} {} {1.000} {}
 
-R { 5650} {0} {} {5650} { } {} {} {} {} {} {1.000} {}
+R { 5650} {0} {} {5650} { } {This is the north edge of Lut Gholein. A road leads south further into town after passing by a small warehouse and a large military building. Warriors wielding large spears train both inside and outside the structure. Dozens of houses line the sides of the street and various vendors have stalls setup near the training area. The sound of weapons striking targets and sparring soldiers is everywhere. } {Diablo 2 Act 2} {} {} {} {1.000} {}
 E { 5567} {s} {s} {4} {0} {} {1.000} {}
 
-R { 5651} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R { 5651} {0} {} {The slums (n)} { } {A shanty town stretches out before you ripe with poverty, hunger and the parts of society the upper class tries to hide from view. This segment of the population has been neatly stuffed into the south edge of town. The large city walls encircle the area almost entirely making it its own community. Garbage and refuse are thrown into the street and make their way into a sewer in the center of the slums. } {Diablo 2 Act 2} {} {} {} {1.000} {}
 E { 5567} {n} {n} {1} {0} {} {1.000} {}
 E { 5652} {travel sewers} {travel sewers} {0} {0} {} {1.000} {}
 E { 5653} {travel far oasis} {travel far oasis} {0} {0} {} {1.000} {}
 E { 5654} {travel lost city} {travel lost city} {0} {0} {} {1.000} {}
 E { 5655} {travel dry hills} {travel dry hills} {0} {0} {} {1.000} {}
 
-R { 5652} {0} {} {5652} { } {} {} {} {} {} {1.000} {}
+R { 5652} {0} {<118>} {5652} { } {} {} {} {} {} {1.000} {}
 E { 5651} {travel lut gholein} {travel lut gholein} {0} {0} {} {1.000} {}
 
-R { 5653} {0} {} {5653} { } {} {} {} {} {} {1.000} {}
+R { 5653} {0} {<118>} {5653} { } {} {} {} {} {} {1.000} {}
 E { 5651} {travel lut gholein} {travel lut gholein} {0} {0} {} {1.000} {}
 
-R { 5654} {0} {} {5654} { } {} {} {} {} {} {1.000} {}
+R { 5654} {0} {<118>} {5654} { } {} {} {} {} {} {1.000} {}
 E { 5651} {travel lut gholein} {travel lut gholein} {0} {0} {} {1.000} {}
 
-R { 5655} {0} {} {5655} { } {} {} {} {} {} {1.000} {}
+R { 5655} {0} {<118>} {5655} { } {} {} {} {} {} {1.000} {}
 E { 5651} {travel lut gholein} {travel lut gholein} {0} {0} {} {1.000} {}
 
 R { 5656} {0} {} {5656} { } {} {} {} {} {} {1.000} {}
@@ -56343,12 +56305,7 @@ E {11963} {u} {u} {16} {0} {} {1.000} {}
 R {11965} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11084} {door} {door} {0} {0} {} {1.000} {}
 
-R {11966} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
-E { 3936} {portal} {portal} {0} {0} {} {1.000} {}
-E {11967} {s} {s} {4} {0} {} {1.000} {}
-
 R {11967} {0} {} {} { } {} {} {} {} {} {1.000} {}
-E {11966} {n} {n} {1} {0} {} {1.000} {}
 E {11968} {e} {e} {2} {0} {} {1.000} {}
 E {11976} {s} {s} {4} {0} {} {1.000} {}
 E {12003} {w} {w} {8} {0} {} {1.000} {}
