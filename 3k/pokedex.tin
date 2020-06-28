@@ -18,7 +18,7 @@
 	#showme {  Minor : ${form_results[1][minor]}} 51 -38;
 	#showme {     FF : ${my[ff][level]}} 52 -38;
 	#showme {Avg Dam : ${form_avg[1][avg(damage)]}} 53 -38;
-}
+};
 
 #alias {show_biome_table}{
 	#format {padded_form}{%+3s}{$form_number};
@@ -91,7 +91,7 @@
 	#if {${my[config][db][biome]} == 1}{
         	db_submit {form_avg}{%s}{select guildstring, avg(damage) from (select guildstring, damage from damage_log where guildstring = `$guild ($my[form]($my[ff][level]))` order by timestamp desc limit 1000)var1;};
 	};
-	show_current_form_table;
+	#NOP show_current_form_table;
 };
 
 #ticker {form_damage}{show_biome_table;db_query_form_damage}{30};

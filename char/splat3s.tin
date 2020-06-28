@@ -3,7 +3,7 @@
 
 #var guild changeling
 
-#read .tt/3s/pokedex.tin
+#NOP #read .tt/3s/pokedex.tin
 
 #alias {autope}{
 	#if {$my[autopersevere] != 1}{
@@ -42,18 +42,18 @@
 #act {%1 flesh stops rotting}{
 	#var {my[bite][status]}{0};
 };
-#act {^Your wounds close as you morph into a %1!}{
-	#delay {2}{db_query_form_damage;select_current_form_biome};
-};
-#act {You morph into a %1!}{
-	#delay {2}{db_query_form_damage;select_current_form_biome};
-};
-#act {^Your wounds close as you morph into an %1!}{
-	#delay {2}{db_query_form_damage;select_current_form_biome};
-};
-#act {You morph into an %1!}{
-	#delay {2}{db_query_form_damage;select_current_form_biome};
-};
+#NOP #act {^Your wounds close as you morph into a %1!}{
+#NOP 	#delay {2}{db_query_form_damage;select_current_form_biome};
+#NOP };
+#NOP #act {You morph into a %1!}{
+#NOP 	#delay {2}{db_query_form_damage;select_current_form_biome};
+#NOP };
+#NOP #act {^Your wounds close as you morph into an %1!}{
+#NOP 	#delay {2}{db_query_form_damage;select_current_form_biome};
+#NOP };
+#NOP #act {You morph into an %1!}{
+#NOP 	#delay {2}{db_query_form_damage;select_current_form_biome};
+#NOP };
 
 #alias kk {kill $kstr}
 #alias k {kill %0}
@@ -245,11 +245,11 @@
 	#var {my[skill][name]}		{%2};
 	#var {my[skill][current]}	{%3};
 	#var {my[bioplasts]}		{%4};
-	#if {"${form_avg[1][guildstring]}" == ""}{
-		#delay {2}{db_query_form_damage;select_current_form_biome};
-	};
+	#NOP #if {"${form_avg[1][guildstring]}" == ""}{
+	#NOP 	#delay {2}{db_query_form_damage;select_current_form_biome};
+	#NOP };
 	#if {"${biome_results[1][form]}" == ""}{
-		db_list_biome form;
+		#NOP db_list_biome form;
 	};
 	#if {"${my[form]}" == "white tail spider"}{
 		#var {my[desired][perform]}{bite};

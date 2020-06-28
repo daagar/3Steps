@@ -15,18 +15,14 @@
 #var stepignore 0
 
 #nop {Make a global blacklist of critters to not stop on since they are followers, etc};
-#var {global_blacklist}{everybody;under the control of;betrayer;broodling;chromatic cuckoo owlet;tiny translucent;gemini}
+#var {global_blacklist}{Terrier;scorpion;CatBot;Valithyn;Dog;red squirrel;everybody;under the control of;betrayer;broodling;chromatic cuckoo owlet;tiny translucent;gemini};
 
 #alias {make_global_blacklist}{
 	#list {global[blacklist]}{create}{$global_blacklist};
 	#list {global[blacklist]}{size}{global_blacklist_size};
 };
 
-make_global_blacklist
-
-#var {areaselector[rows]}{6}
-#var {areaselector[page]}{1};
-#var {areaselector[max]}{6};
+make_global_blacklist;
 
 #NOP Added for all the bots in the room.
 #alias {autok}{
@@ -79,16 +75,19 @@ make_global_blacklist
 	update_status;
 };
 
+#var {areaselector[rows]}{5}
+#var {areaselector[page]}{1};
+#var {areaselector[max]}{5};
 
 #math selector[top] $chat[height]+$caption[height]+$exitpanel[height]+1;
 #math selector[bottom] $selector[top]+8;
 #alias {show_area_selector}{
 	#screen clear square $selector[top] -42 $selector[bottom] -1;
-	#draw <128> rounded box $selector[top] -41 $selector[bottom] -3;
-	#NOP #showme {<128>[<099><<<128>]-[<099>Area Selector<128>]-[<099>>><128>]<099>} $selector[top] -33;
-	#showme {<128>[<099>Area Selector<128>]<099>} $selector[top] -39;
-	#showme {<128>[<099><<<128>][<099>>><128>]<099>} $selector[top] -12;
-	#button {$selector[top];-7;$selector[top];-5}{
+	#draw <g09> rounded box $selector[top] -41 $selector[bottom] -3;
+	#showme {<g09>[<099><<<g09>]-[<099>Area Selector<g09>]-[<099>>><g09>]<099>} $selector[top] -33;
+	#NOP #showme {<128>[<099>Area Selector<128>]<099>} $selector[top] -39;
+	#NOP #showme {<128>[<099><<<128>][<099>>><128>]<099>} $selector[top] -12;
+	#button {$selector[top];-33;$selector[top];-29}{
 		#math {targetarea}{${areaselector[current]} - 1};
 		#if {$targetarea < 1}{#var targetarea ${queue_size}};
 		go ${areaselector[roomnote][${targetarea}]};
@@ -114,10 +113,10 @@ make_global_blacklist
 		#showme {[<faa>Q<088>]} $selector[top]+1 -7;
 	};
 	#button {$selector[top]+1;-7;$selector[top]+1;-5}{autoq};
-	#NOP #showme {[<128>GO<088>]} $selector[top]+1 -29;
-	#NOP #button {$selector[top]+1;-29;$selector[top]+1;-26}{ki};
-	#NOP #showme {[<128>KK<088>]} $selector[top]+1 -18;
-	#NOP #button {$selector[top]+1;-18;$selector[top]+1;-13}{kk};
+	#showme {[<128>GO<088>]} $selector[top]+1 -29;
+	#button {$selector[top]+1;-29;$selector[top]+1;-26}{ki};
+	#showme {[<128>KK<088>]} $selector[top]+1 -18;
+	#button {$selector[top]+1;-18;$selector[top]+1;-13}{kk};
 	#NOP #if {${autokill} == 1}{
 	#NOP 	#showme {[<128>A<088>]} $selector[top]+1 -7;
 	#NOP }{
@@ -126,8 +125,8 @@ make_global_blacklist
 	#NOP #button {$selector[top]+1;-7;$selector[top]+1;-5}{autok};
 	#math {areaselector[start]}{${areaselector[rows]} * ${areaselector[page]}};
 	#math {areaselector[end]}{${areaselector[rows]} * ${areaselector[page]} - ${areaselector[rows]} + 1};
-	#line sub {var} #draw {tile} $selector[top]+2 -35 $selector[bottom]-1 -4 ${areaselector[text][-$areaselector[start]..-$areaselector[end]]};
-	#var {start_row}{$selector[top]+1};
+	#line sub {var} #draw {tile} $selector[top]+3 -35 $selector[bottom]-1 -4 ${areaselector[text][-$areaselector[start]..-$areaselector[end]]};
+	#var {start_row}{$selector[top]+2};
 	#var {areaselector[current]}{0};
 	#if {$queue_size > 0}{
 		#loop {1}{${queue_size}}{queue_count}{
@@ -139,36 +138,36 @@ make_global_blacklist
 			};
 		};
 	};
-	#button {$selector[top]+2;-36;$selector[top]+2;-5}{
+	#button {$selector[top]+3;-36;$selector[top]+3;-5}{
 		fbrm 1;
 		show_area_selector;
 	};
-	#button {$selector[top]+3;-36;$selector[top]+3;-5}{
+	#button {$selector[top]+4;-36;$selector[top]+4;-5}{
 		fbrm 2;
 		show_area_selector;
 	};
-	#button {$selector[top]+4;-36;$selector[top]+4;-5}{
+	#button {$selector[top]+5;-36;$selector[top]+5;-5}{
 		fbrm 3;
 		show_area_selector;
 	};
-	#button {$selector[top]+5;-36;$selector[top]+5;-5}{
+	#button {$selector[top]+6;-36;$selector[top]+6;-5}{
 		fbrm 4;
 		show_area_selector;
 	};
-	#button {$selector[top]+6;-36;$selector[top]+6;-5}{
+	#button {$selector[top]+7;-36;$selector[top]+7;-5}{
 		fbrm 5;
 		show_area_selector;
 	};
-	#button {$selector[top]+7;-36;$selector[top]+7;-5}{
-		fbrm 6;
-		show_area_selector;
-	};
+	#NOP #button {$selector[top]+7;-36;$selector[top]+7;-5}{
+	#NOP 	fbrm 6;
+	#NOP 	show_area_selector;
+	#NOP };
 };
 
 #alias {fbq}{
 	#unvar notes;
 	#unvar newarea;
-	#var {name_len}{16};
+	#var {name_len}{17};
 	#var {note_len}{8};
 	#if {"%1" != ""}{
 		#map list {roomnote}{%i%*%0%*}{variable}{noterooms};
@@ -187,7 +186,7 @@ make_global_blacklist
 		};
 		#list {areaselector[text]}{size}{queue_size};
 		#math {queue_size}{$queue_size + 1};
-		#list areaselector[text] ins -1 {${note_trunc} | ${name_trunc} \[<faa>-<088>\]};
+		#list areaselector[text] ins -1 {${note_trunc}<g09>::<099>${name_trunc} \[<faa>-<088>\]};
 		#list areaselector[roomarea] ins -1 {${newarea[${room}]}};
 		#list areaselector[roomnote] ins -1 {${notes[${room}]}};
 		show_area_selector;

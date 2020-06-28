@@ -3,8 +3,8 @@
 	#if {"$draw[exitpanel]" == "on"} {
 		#NOP Must wait for a prompt to be able to 'see' mobile exits in the room;
     	show_exits;
-	}
-}
+	};
+};
 
 
 

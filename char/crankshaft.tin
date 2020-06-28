@@ -90,8 +90,6 @@
 
 #alias {update_status} {
     
-   
-
     #if {"$cooler" == "on" || $corpses[cooler] > 0} {
         #format {sb1_cooler} {%+2s} {$corpses[cooler]};
         #var {sb1_cooler} { CL:<130>$sb1_cooler<088>}
@@ -169,7 +167,7 @@
         #if {$my[gp2][current] > 50} {
             #echo {<028>::STOPPING - Heat limit reached::<088>};
             .pause;
-                #var resumebot 1;
+            #var resumebot 1;
         };
     };
 

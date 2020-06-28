@@ -30,6 +30,8 @@
 #PATHDIR          {u}	{d}	{16}
 #PATHDIR          {w}	{e}	{8}
 
+#var {logpath} {.tt/logs};
+
 #EVENT {SESSION CONNECTED} {
         #var world {%0};
         #format logfile {.tt/logs/%0_%t.log} {%Y%m%d};

@@ -2,24 +2,23 @@
 #class {common_chatlog} {open}
 
 #alias {-cl} {
-        #format {datestamp} {%t} {%Y-%m-%d.log};
+    #format {datestamp} {%t} {%Y-%m-%d.log};
 	#format {timestamp} {%t} {[<268>%H<088>:<268>%M<088>] };
 	#regex {"$world"} {3s} {
 		#line log ${logpath}/3s.chat {$timestamp\}
 	} {
 		#line log ${logpath}/3k.chat {$timestamp\}
 	};
-        -xchatlog
-        }
+    -xchatlog
+}
 
-#alias {-xchatlog}
-        {
-        #class {xchatlog} {open};
-        #act {^{\S}} {#class {xchatlog} {kill}} {99};
-        #act {{^(\s)*$}} {#class {xchatlog} {kill}} {99};
-        #act {^{\s{1,40}\S}} {-cl};
-        #class {xchatlog} {close}
-        }
+#alias {-xchatlog} {
+    #class {xchatlog} {open};
+    	#act {^{\S}} {#class {xchatlog} {kill}} {99};
+    	#act {{^(\s)*$}} {#class {xchatlog} {kill}} {99};
+    	#act {^{\s{1,40}\S}} {-cl};
+    #class {xchatlog} {close}
+}
 
 #NOP #act {{^\[.*\] [A-z]+:}} {-cl}
 /* TELLS LINKTELLS AUCTION HM SHOUTS GSHOUTS CLAN PROFESSIONS CRAFTING*/
@@ -27,11 +26,12 @@
 
 #act {{[A-z0-9@]+ tells you:}} {
 	-cl;
+	#system {python3 ~/.tt/sms.py};
 	#bell
 } {4};
 #act {%1@3k tells you: %2} {
 	#format {timestamp} {%t} {[<268>%H<088>:<268>%M<088>] };
-        #format {dbtimestamp} {%t} {[%Y:%m:%d %H:%M:%S]};
+    #format {dbtimestamp} {%t} {[%Y:%m:%d %H:%M:%S]};
 	#if {$my[config][db][chat] == 1}{
 		#var {dbmess}{%0};
 		db_submit_chat $dbmess;
@@ -80,14 +80,14 @@
 
 /* Necro */
 #act {^{[A-z]+ \[[A-z0-9-]+\]:}} {-cl}
-#act {Quoth tells you:} {#nop}{1}
-#act {F tells you:} {#nop}{1}
-#act {A tiny translucent bombardier beetle tells you:} {#nop}{1}
-#act {Talia tells you:} {#nop}{1}
+#NOP #act {Quoth tells you:} {#nop}{1}
+#NOP #act {F tells you:} {#nop}{1}
+#NOP #act {A tiny translucent bombardier beetle tells you:} {#nop}{1}
+#NOP #act {Talia tells you:} {#nop}{1}
 
 /* PROFESSIONS */
 
-#alias {.stop} {#nop}
+#NOP #alias {.stop} {#nop}
 
 /* EMOTES */
 #act {From afar,} {-cl}

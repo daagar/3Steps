@@ -20,6 +20,7 @@
 	#read .tt/3k/corpses.tin;
 	#read .tt/3k/dog.tin;
 	#read .tt/3k/mapper.tin;
+	#read .tt/3k/map_portals.tin;
 	#read .tt/3k/exits.tin;
 	#read .tt/3k/gag.tin;
 	#read .tt/3k/chat.tin;
@@ -42,9 +43,7 @@
 	#read .tt/3k/triggers.tin;
 	#NOP #read .tt/3k/damagetracker.tin;
 	#NOP #delay {ansi}{#read .tt/3k/ansi_setup.tin}{2};
-	#script {cat .tt/map/lastroom.tt}
-
-	show_area_selector;
+	#script {cat .tt/map/lastroom.tt};
 	
 }
 

@@ -1,4 +1,5 @@
 #var stepper 0 
+#var stepignore 0
 #unvar area_items
 #unvar all_area_items
 #unvar kill_path

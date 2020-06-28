@@ -30,7 +30,7 @@
 #PATHDIR          {u}	{d}	{16}
 #PATHDIR          {w}	{e}	{8}
 
-#var {logpath}{/tintin/logs};
+#var {logpath}{.tt/logs};
 
 #EVENT {SESSION CONNECTED} {
 	#var world {%0};
