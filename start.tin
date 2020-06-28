@@ -6,6 +6,7 @@
 	#config {packet patch}{0.1};
 	#read .tt/3k/mip.tin;
 	#read .tt/3k/draw.tin;
+	#read .tt/3k/chat.tin;
 	#read .tt/3k/mysql.tin;
 	#read .tt/3k/vars.tin;
 	#read .tt/3k/aliases.tin;
@@ -16,14 +17,13 @@
 	#read .tt/3k/mapper.tin;
 	#read .tt/3k/mob_monitors.tin;
 	#read .tt/3k/trigs.tin;
-	#read .tt/3k/chat.tin;
-	#read .tt/3k/killer.tin;
 	#read .tt/3k/triggers.tin;
-	#read .tt/3k/damagetracker.tin;
 	#delay {ansi}{
 		redraw;
 		#read .tt/3k/ansi_setup.tin
 	}{2};
+	#read .tt/3k/killer.tin;
+	#read .tt/3k/damagetracker.tin;
 	#script {cat .tt/map/lastroom.tt};
 }
 
