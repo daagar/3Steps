@@ -95,12 +95,14 @@
 #var {damagetracker[page]}{1};
 #var {damagetracker[max]}{100};
 
+#math {damage[top]}{$selector[bottom] + 1};
+#math {damage[bottom]}{$damage[top]+12};
 #alias {show_damage_table}{
-	#screen clear square 30 -42 42 -1;
-	#draw rounded box 30 -41 42 -3;
-	#showme {Last 8 Kills} 30 -28;
-	#showme {  Foe   | Rnds | Tot. Dmg | Avg} 31 -38;
-	#draw {line} 32 -40 32 -4;
+	#screen clear square ${damage[top]} -42 ${damage[bottom]} -1;
+	#draw rounded box ${damage[top]} -41 ${damage[bottom]} -3;
+	#showme {Last 8 Kills} ${damage[top]} -28;
+	#showme {  Foe   | Rnds | Tot. Dmg | Avg} ${damage[top]}+1 -38;
+	#draw {line} ${damage[top]}+2 -40 ${damage[top]}+2 -4;
 	show_area_selector;
 #nop {
 	log_record_damage;
@@ -115,10 +117,12 @@
 	};
         #math damagetracker[start]       {$damagetracker[rows] * $damagetracker[page]};
         #math damagetracker[end]         {$damagetracker[rows] * $damagetracker[page] - $damagetracker[rows] + 1};
-        #line sub {var} #draw {tile} 33 -39 41 -4 $damagetracker[log][-$damagetracker[start]..-$damagetracker[end]];
+        #line sub {var} #draw {tile} ${damage[top]}+3 -39 ${damage[top]}+11 -4 $damagetracker[log][-$damagetracker[start]..-$damagetracker[end]];
 };
 
+#nop {
 #ticker {damage_table}{show_damage_table}{4}
+};
 
 #alias {update_damage_table}{
         #if {&damagetracker[log][] > $damagetracker[max]} {

@@ -14,16 +14,20 @@
 
 /* Determine Dimensions */
 #if {"$draw[alert]" == "on"} {
-	#var alert[width] 1
+	#var alert[width] 1;
 } {
-	#var alert[width] 0
+	#var alert[width] 0;
 };
 
 #if {"$draw[canvas]" == "on"} {
-	#NOP redraw pokedex off;
-	#var canvas[width] $right_split
+	#NOP redraw canvas off;
+	#var canvas[width] $right_split;
+	#var selector[width] $right_split;
+	#var selector[height] 8;
 } {
-	#var canvas[width] 0
+	#var canvas[width] 0;
+	#var selector[width] 0;
+	#var selector[height] 0;
 };
 
 #if {"$draw[caption]" == "on"} {
@@ -51,14 +55,24 @@
 	#var exitpanel[height] 0;
 };
 
-#if {"$draw[pokedex]" == "on"} {
-	#NOP redraw canvas off;
-	#var pokedex[width] $right_split;
-	#var pokedex[height] 10;
+#if {"$draw[damage]" == "on"} {
+	#NOP redraw damage off;
+	#var damage[width] $right_split;
+	#var damage[height] 12;
 } {
-	#var pokedex[width] 0;
-	#var pokedex[height] 0;
+	#var damage[width] 0;
+	#var damage[height] 0;
 };
+
+#if {"$draw[biome]" == "on"} {
+	#NOP redraw canvas off;
+	#var biome[width] $right_split;
+	#var biome[height] 16;
+} {
+	#var biome[width] 0;
+	#var biome[height] 0;
+};
+
 
 #if {"$draw[gline]" == "on"} {
 	#var gline[height] 3;
@@ -136,7 +150,17 @@
 
 #if {"$draw[canvas]" == "on"} {
 	#NOP botdraw;
-	#NOP show_area_selector;
+	show_area_selector;
+}
+
+#if {"$draw[damage]" == "on"} {
+	#NOP botdraw;
+	show_damage_table;
+};
+
+#if {"$draw[biome]" == "on"} {
+	#NOP botdraw;
+	display_biome;
 };
 
 #if {"$draw[map]" == "on"} {
@@ -165,7 +189,8 @@
 			#case {"gline"}		{#var redraw[option] %1};
 			#case {"hpbar"}		{#var redraw[option] %1};
 			#case {"map"}		{#var redraw[option] %1};
-			#case {"pokedex"}	{#var redraw[option] %1};
+			#case {"biome"}		{#var redraw[option] %1};
+			#case {"damage"}	{#var redraw[option] %1};
 			#default		{#var redraw[args][1] invalid;#showme REDRAW:  Invalid redraw option}
 		};
 		#if {"%2" != ""} {
