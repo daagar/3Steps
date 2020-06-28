@@ -92,15 +92,19 @@ make_global_blacklist
 	#switch {$stepignore}{
 		#case {0}{
 			#showme {[<128>S<088>]} 21 -36;
+			#showme {[<128>STEPPR<088>]} 22 -38;
 		};
 		#case {1}{
 			#showme {[<128>K<088>]} 21 -36;
+			#showme {[<128>MANUAL<088>]} 22 -38;
 		};
 		#case {2}{
 			#showme {[<128>W<088>]} 21 -36;
+			#showme {[<128>WANDER<088>]} 22 -38;
 		};
 		#case {3}{
 			#showme {[<128>M<088>]} 21 -36;
+			#showme {[<128>MAPPER<088>]} 22 -38;
 		};
 	};
 	#button {21;-36;21;-33}{si};
