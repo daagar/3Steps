@@ -1,3 +1,4 @@
+#class {killer}{open}
 #var domove 0 
 #var critter_room 0 
 #var player_room 0
@@ -75,95 +76,104 @@ make_global_blacklist
 	update_status;
 };
 
+#var {areaselector[rows]}{5}
+#var {areaselector[page]}{1};
+#var {areaselector[max]}{5};
+
+#math selector[top] $chat[height]+$caption[height]+1;
+#math selector[bottom] $selector[top]+$selector[height];
 #alias {show_area_selector}{
-	#screen clear square 21 -42 29 -1;
-	#draw rounded box 21 -41 29 -3;
-	#showme {[<<] Area Selector [>>]} 21 -33;
-	#button {21;-33;21;-29}{
+	#screen clear square $selector[top] -42 $selector[bottom] -1;
+	#draw rounded box $selector[top] -41 $selector[bottom] -3;
+	#showme {[<<]-[Area Selector]-[>>]} $selector[top] -33;
+	#NOP #showme {<128>[<099>Area Selector<128>]<099>} $selector[top] -39;
+	#NOP #showme {<128>[<099><<<128>][<099>>><128>]<099>} $selector[top] -12;
+	#button {$selector[top];-33;$selector[top];-29}{
 		#math {targetarea}{${areaselector[current]} - 1};
 		#if {$targetarea < 1}{#var targetarea ${queue_size}};
 		go ${areaselector[roomnote][${targetarea}]};
 	};
-	#button {21;-14;21;-11}{
+	#button {$selector[top];-14;$selector[top];-11}{
 		#math {targetarea}{${areaselector[current]} + 1};
 		#if {$targetarea > ${queue_size}}{#var targetarea 1};
 		go ${areaselector[roomnote][${targetarea}]};
 	};
 	#switch {$stepignore}{
 		#case {0}{
-			#showme {[<128>S<088>]} 21 -36;
-			#showme {[<128>STEPPR<088>]} 22 -38;
+			#showme {[<128>S<088>]} $selector[top] -36;
+			#showme {[<128>STEPPR<088>]} $selector[top]+1 -38;
 		};
 		#case {1}{
-			#showme {[<128>K<088>]} 21 -36;
-			#showme {[<128>MANUAL<088>]} 22 -38;
+			#showme {[<128>K<088>]} $selector[top] -36;
+			#showme {[<128>MANUAL<088>]} $selector[top]+1 -38;
 		};
 		#case {2}{
-			#showme {[<128>W<088>]} 21 -36;
-			#showme {[<128>WANDER<088>]} 22 -38;
+			#showme {[<128>W<088>]} $selector[top] -36;
+			#showme {[<128>WANDER<088>]} $selector[top]+1 -38;
 		};
 		#case {3}{
-			#showme {[<128>M<088>]} 21 -36;
-			#showme {[<128>MAPPER<088>]} 22 -38;
+			#showme {[<128>M<088>]} $selector[top] -36;
+			#showme {[<128>MAPPER<088>]} $selector[top]+1 -38;
 		};
 	};
 	#button {21;-36;21;-33}{si};
 	#if {${autoqueue} == 1}{
-		#showme {[<128>Q<088>]} 21 -10;
+		#showme {[<128>Q<088>]} $selector[top] -7;
 	}{
-		#showme {[<faa>Q<088>]} 21 -10;
+		#showme {[<faa>Q<088>]} $selector[top] -7;
 	};
-	#button {21;-10;21;-7}{autoq};
-	#showme {[<128>GO<088>]} 22 -29;
-	#button {22;-29;22;-26}{ki};
-	#showme {[<128>KK<088>]} 22 -18;
-	#button {22;-18;22;-13}{kk};
+	#button {$selector[top];-7;$selector[top];-5}{autoq};
+	#showme {[<128>GO<088>]} $selector[top]+1 -29;
+	#button {$selector[top]+1;-29;$selector[top]+1;-26}{ki};
+	#showme {[<128>KK<088>]} $selector[top]+1 -18;
+	#button {$selector[top]+1;-18;$selector[top]+1;-13}{kk};
 	#if {${autokill} == 1}{
-		#showme {[<128>A<088>]} 22 -7;
+	 	#showme {[<128>A<088>]} $selector[top]+1 -7;
 	}{
-		#showme {[<faa>M<088>]} 22 -7;
+	 	#showme {[<faa>M<088>]} $selector[top]+1 -7;
 	};
-	#button {22;-7;22;-5}{autok};
+	#button {$selector[top]+1;-7;$selector[top]+1;-5}{autok};
 	#math {areaselector[start]}{${areaselector[rows]} * ${areaselector[page]}};
 	#math {areaselector[end]}{${areaselector[rows]} * ${areaselector[page]} - ${areaselector[rows]} + 1};
-	#line sub {var} #draw {tile} 23 -35 28 -4 ${areaselector[text][-$areaselector[start]..-$areaselector[end]]};
-	#var {start_row}{22};
+	#line sub {var} #draw {tile} $selector[top]+3 -35 $selector[bottom]-1 -4 ${areaselector[text][-$areaselector[start]..-$areaselector[end]]};
+	#var {start_row}{$selector[top]+2};
 	#var {areaselector[current]}{0};
 	#if {$queue_size > 0}{
 		#loop {1}{${queue_size}}{queue_count}{
 			#math {indicator}{$start_row + $queue_count};
 			#showme {${queue_count}.} ${indicator} -38;
 			#if {"${area}" == "${areaselector[roomarea][${queue_count}]}"}{
-				#showme {>} ${indicator} -40;
+				#showme {<abe>><099>} ${indicator} -40;
 				#var {areaselector[current]}{${queue_count}};
 			};
 		};
 	};
-	#button {23;-7;23;-5}{
+	#button {$selector[top]+3;-36;$selector[top]+3;-5}{
 		fbrm 1;
 		show_area_selector;
 	};
-	#button {24;-7;24;-5}{
+	#button {$selector[top]+4;-36;$selector[top]+4;-5}{
 		fbrm 2;
 		show_area_selector;
 	};
-	#button {25;-7;25;-5}{
+	#button {$selector[top]+5;-36;$selector[top]+5;-5}{
 		fbrm 3;
 		show_area_selector;
 	};
-	#button {26;-7;26;-5}{
+	#button {$selector[top]+6;-36;$selector[top]+6;-5}{
 		fbrm 4;
 		show_area_selector;
 	};
-	#button {27;-7;27;-5}{
+	#button {$selector[top]+7;-36;$selector[top]+7;-5}{
 		fbrm 5;
 		show_area_selector;
 	};
-	#button {28;-7;28;-5}{
-		fbrm 6;
-		show_area_selector;
-	};
+	#NOP #button {$selector[top]+7;-36;$selector[top]+7;-5}{
+	#NOP 	fbrm 6;
+	#NOP 	show_area_selector;
+	#NOP };
 };
+
 
 #alias {fbq}{
 	#unvar notes;
@@ -675,3 +685,4 @@ make_global_blacklist
 	};
 }
 
+#class {killer}{close}

@@ -10,52 +10,63 @@
 	};
 };
 
+#math {biome[top]}{$damage[bottom]+1};
+#math {biome[bottom]}{$biome[top]+$biome[height]};
+
 #alias {show_current_form_table}{
-        #draw {rounded}{box} 47 -41 54 -3 {Current Form Stats:};
-	#showme {Form : ${my[form]}} 49 -38;
+        #draw {rounded}{box} ${biome[top]} -41 ${biome[top]}+6 -3;
+        #showme {[Current Form Stats]} $biome[top] -30;
+	#showme {Form : ${my[form]}} $biome[top]+1 -38;
         db_query_single_form ${my[form]};
-	#showme {  Major : ${form_results[1][major]}} 50 -38;
-	#showme {  Minor : ${form_results[1][minor]}} 51 -38;
-	#showme {     FF : ${my[ff][level]}} 52 -38;
-	#showme {Avg Dam : ${form_avg[1][avg(damage)]}} 53 -38;
+	#showme {  Major : ${form_results[1][major]}} ${biome[top]}+2 -38;
+	#showme {  Minor : ${form_results[1][minor]}} ${biome[top]}+3 -38;
+	#showme {     FF : ${my[ff][level]}} ${biome[top]}+4 -38;
+	#showme {Avg Dam : ${form_avg[1][avg(damage)]}} ${biome[top]}+5 -38;
 }
 
 #alias {show_biome_table}{
+        #draw {rounded}{box} ${biome[top]}+7 -41 ${biome[bottom]} -3;
+        #screen clear square ${biome[top]}+8 -40 ${biome[bottom]}-1 -4;
 	#format {padded_form}{%+3s}{$form_number};
-        #draw {rounded}{box} 55 -41 65 -3 {   Pokedex Results   (${padded_form}/${all_forms}): << >>};
-        #button {56;-5;56;-4}{
+        #showme {[Pokedex Results   (${padded_form}/${all_forms}): << >>]} $biome[top]+7 -39;
+        #button {$biome[top]+7;-5;$biome[top]+7;-4}{
         	#math {form_number}{$form_number + 1}{};
         	db_query_biome ${form_list[${form_number}][form]};
 		show_biome_table;
 	};
-        #button {56;-8;56;-7}{
+        #button {$biome[top]+7;-8;$biome[top]+7;-7}{
         	#math {form_number}{$form_number - 1}{};
         	db_query_biome ${form_list[${form_number}][form]};
 		show_biome_table;
 	};
-	#showme {Form : $biome_results[$result_number][form]} 58 -38;
-        #button {58;-40;58;-35}{db_list_biome form};
-	#showme { Type : $biome_results[$result_number][formtype]} 59 -38;
-        #button {59;-40;59;-35}{db_list_biome formtype};
-	#showme { Major: $biome_results[$result_number][major]} 60 -38;
-        #button {60;-40;60;-35}{db_list_biome major};
-	#showme { Minor: $biome_results[$result_number][minor]} 61 -38;
-        #button {61;-40;61;-35}{db_list_biome minor};
+	#showme {Form : $biome_results[$result_number][form]} $biome[top]+9 -38;
+        #button {$biome[top]+9;-40;$biome[top]+9;-35}{db_list_biome form};
+	#showme { Type : $biome_results[$result_number][formtype]} $biome[top]+10 -38;
+        #button {$biome[top]+10;-40;$biome[top]+10;-35}{db_list_biome formtype};
+	#showme { Major: $biome_results[$result_number][major]} $biome[top]+11 -38;
+        #button {$biome[top]+11;-40;$biome[top]+11;-35}{db_list_biome major};
+	#showme { Minor: $biome_results[$result_number][minor]} $biome[top]+12 -38;
+        #button {$biome[top]+12;-40;$biome[top]+12;-35}{db_list_biome minor};
 	#format {padded_room}{%-9s}{${biome_results[$result_number][roomvnum]}};
-	#showme { Room : $padded_room  (${result_number}/${result_size})} 62 -38;
-        #button {62;-40;62;-35}{db_list_biome roomvnum};
+	#showme { Room : $padded_room  (${result_number}/${result_size})} $biome[top]+13 -38;
+        #button {$biome[top]+13;-40;$biome[top]+13;-35}{db_list_biome roomvnum};
         #if {"${biome_results[$result_number][form]}" != ""}{
 		#replace {biome_results[$result_number][roomshort]}{ x7Bnightx7D}{ \x7Bnight\x7D};
 		#replace {biome_results[$result_number][roomshort]}{ x7Bdayx7D}{ \x7Bday\x7D};
 		#replace {biome_results[$result_number][roomshort]}{ x7Bduskx7D}{ \x7Bdusk\x7D};
 		#replace {biome_results[$result_number][roomshort]}{ x7Bdawnx7D}{ \x7Bdawn\x7D};
 	};
-        #showme {       [ <128>GO<088> ]      [<faa>-<088>][<afa>+<088>]} 63 -38;
-        #button {63;-16;63;-14}{bnext};
-        #button {63;-19;63;-17}{bprev};
-        #button {63;-34;63;-26}{biomego};
-	#showme {$biome_results[$result_number][roomshort]} 64 -38;
-        #button {64;-40;64;-35}{db_list_biome roomshort};
+        #showme {       [ <128>GO<088> ]      [<faa>-<088>][<afa>+<088>]} $biome[top]+14 -38;
+        #button {$biome[top]+14;-16;$biome[top]+14;-14}{bnext};
+        #button {$biome[top]+14;-19;$biome[top]+14;-17}{bprev};
+        #button {$biome[top]+14;-34;$biome[top]+14;-26}{biomego};
+	#showme {$biome_results[$result_number][roomshort]} $biome[top]+15 -38;
+        #button {$biome[top]+15;-40;$biome[top]+15;-35}{db_list_biome roomshort};
+};
+
+#alias {display_biome}{
+	show_current_form_table;
+	show_biome_table;
 };
 
 #alias {db_submit_biome}{
@@ -94,7 +105,7 @@
 	show_current_form_table;
 };
 
-#ticker {form_damage}{show_biome_table;db_query_form_damage}{30};
+#ticker {form_damage}{db_query_form_damage}{30};
 	
 #alias {bnext}{
         #math {result_number}{$result_number + 1};
