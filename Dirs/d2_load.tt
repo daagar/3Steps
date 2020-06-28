@@ -1,0 +1,22 @@
+#unvar kill_path
+#list {kill_path}{clear}
+#unvar {area_items}
+#list {area_items}{clear}
+#unvar all_area_items
+
+
+#var {kill_path {}
+#var blacklist {}
+
+#delay {0.1}{#var {saferoom}{home}}
+
+#pathdir {cave}{out}
+#pathdir {out}{cave}
+
+#list {kill_path}{create}{$kill_path}
+#list {kill_path}{size}{max_room}
+
+#var {area_items}{}
+#list {area_items}{create}{$area_items}
+#list {area_items}{size}{all_area_items}
+
