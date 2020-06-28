@@ -5,7 +5,7 @@
 #unvar all_area_items
 
 
-#var {kill_path {}
+#var {kill_path} {}
 #var blacklist {}
 
 #delay {0.1}{#var {saferoom}{home}}
