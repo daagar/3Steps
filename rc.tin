@@ -31,7 +31,7 @@
 #PATHDIR          {w}	{e}	{8}
 
 #var {logpath}{/tintin/logs};
-
+#alias {update_status}{#nop};
 #EVENT {SESSION CONNECTED} {
 	#var world {%0};
 	#format logfile {${logpath}/%0_%t.log} {%Y%m%d};
@@ -53,35 +53,46 @@
         }
 }
 #alias {connect} {
-        #regex {%0} {3s} {
-                #var {mud} {3s};
-                #ses {%0} {3scapes.org} {3200};
-                #format {ses_len} {%L} {%0};
-                #math {ses_len} {$ses_len-2};
-                #format {ses_name} {%.${ses_len}s} {%0};
-        } {
-                #regex {%0} {AA} {
-                        #var {mud} {AA};
-                        #ses {%0} {anguish.org} {2222};
-                        #format {ses_len} {%L} {%0};
-                        #math {ses_len} {$ses_len-2};
-                        #format {ses_name} {%.${ses_len}s} {%0};
-                } {
-			#regex {%0} {ZM} {
-				#var {mud} {ZM};
-				#ses {%0} {zombiemud.org} {23};
-				#format {ses_len} {%L} {%0};
-				#math {ses_len} {$ses_len-2};
-				#format {ses_name} {%.${ses_len}s} {%0};
-			}{
-				#var {mud} {3k};
-				#ses {%0} {3k.org} {3000};
-				#var {ses_name} {%0};
-			};
+	#var mymud 3k;
+	#regex {%0}{3s}{
+		#var mymud 3s;
+	};	
+	#regex {%0}{AA}{
+		#var mymud AA;
+	};	
+	#regex {%0}{ZM}{
+		#var mymud ZM;
+	};	
+	#switch {"$mymud"}{
+		#case {"3s"}{
+			#var {mud} {3s};
+			#ses {%0} {3scapes.org} {3200};
+			#format {ses_len} {%L} {%0};
+			#math {ses_len} {$ses_len-2};
+			#format {ses_name} {%.${ses_len}s} {%0};
 		};
-        };
-        $ses_name;
-        #read .tt/.pass
+		#case {"AA"}{
+			#var {mud} {AA};
+			#ses {%0} {anguish.org} {2222};
+			#format {ses_len} {%L} {%0};
+			#math {ses_len} {$ses_len-2};
+			#format {ses_name} {%.${ses_len}s} {%0};
+		}
+		#case {"ZM"}{
+			#var {mud} {ZM};
+			#ses {%0} {zombiemud.org} {23};
+			#format {ses_len} {%L} {%0};
+			#math {ses_len} {$ses_len-2};
+			#format {ses_name} {%.${ses_len}s} {%0};
+		};
+		#case {"3k"}{
+			#var {mud} {3k};
+			#ses {%0} {3k.org} {3000};
+			#var {ses_name} {%0};
+		};
+	};
+        #send {$ses_name};
+        #read .tt/.pass;
 }
 
 #read .tt/menu.tin
