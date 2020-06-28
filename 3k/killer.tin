@@ -75,7 +75,6 @@ make_global_blacklist
 	update_status;
 };
 
-
 #alias {show_area_selector}{
 	#screen clear square 21 -42 29 -1;
 	#draw rounded box 21 -41 29 -3;
@@ -90,12 +89,17 @@ make_global_blacklist
 		#if {$targetarea > ${queue_size}}{#var targetarea 1};
 		go ${areaselector[roomnote][${targetarea}]};
 	};
-	#if {${stepignore} == 2}{
-		#showme {[<128>S<088>]} 21 -36;
-	}{
-		#if {${stepignore} == 1}{
+	#switch {$stepignore}{
+		#case {0}{
+			#showme {[<128>S<088>]} 21 -36;
+		};
+		#case {1}{
+			#showme {[<128>K<088>]} 21 -36;
+		};
+		#case {2}{
 			#showme {[<128>W<088>]} 21 -36;
-		}{
+		};
+		#case {3}{
 			#showme {[<128>M<088>]} 21 -36;
 		};
 	};
@@ -219,20 +223,30 @@ make_global_blacklist
 
 
 #alias {si}{
-	#if {$stepignore != 1}{
-		#if {$manual_stepper != 1}{
+	#switch {$stepignore}{
+		#case {0}{
 			#echo {Using Manual Stepper};
 			#var {manual_stepper}{1};
-			#var stepignore 2;
-		}{
+			#var {stepignore}{1};
+		};
+		#case {1}{
 			#echo {Using Magic Wanderer};
 			#var {manual_stepper}{0};
-			#var stepignore 1;
+			#var {stepignore}{2};
 		};
-	}{
-		#echo {Using Magic Stepper};
-		#var manual_stepper 0;
-		#var stepignore 0;
+		#case {2}{
+			#echo {Using Magic Mapper};
+			#var {manual_stepper}{0};
+			#var {stepignore}{3};
+			mapon;
+			!look;
+		};
+		#case {3}{
+			#echo {Using Magic Stepper};
+			#var {manual_stepper}{0};
+			#var {stepignore}{0};
+			mapoff;
+		};
 	};
 	show_area_selector;
 };
@@ -308,7 +322,7 @@ make_global_blacklist
                 $kill_path[$room_num];
                 #map map;
                 #showme {You are on Room $room_num};
-        };
+        	};
 }
 
 #act {You bounce right off the gelatinous wall.}{
@@ -332,31 +346,38 @@ make_global_blacklist
 	#echo {Searching for $searchstring};
 }
 
+#alias {process_critter}{
+	#list {critter_array} ins -1 %0;
+	#list {critter_array}{size}{critter_room};
+};
+
+#var {searchstring}{}
 #act {^=M= %*} {
-	#math {critter_room}{$critter_room + 1};
 	#format {tkstr}{%l}{%1};
+	#replace {tkstr}{.}{};
+	#replace {tkstr}{%s[%d\%]%s}{};
+	#replace {tkstr}{%s[%w]%s}{};
+	#replace {tkstr}{attacking you}{};
+	#regex {$tkstr}{%* \\x7b%d\\x7d}{
+		#loop {1}{&2}{count}{
+			process_critter &1;
+		};
+	}{
+		process_critter {$tkstr};
+	};
 	#var {critter_short_desc}{$tkstr};
 	#if {"$searchstring" != ""}{
-		#regex {$tkstr}{$searchstring}{
+		#list {critter_array}{find}{%*${searchstring}%*}{found_index};
+		#if {$found_index > 0}{
 			#bell;
 			#bell;
 			#map get {roomvnum}{foundroom};
 			#echo {***** Found $searchstring in room $foundroom****}
 		};
 	};
-	#if {"$guild" == "mages"}{
-		#regex {$tkstr}{%* (%*)}{
-			#var tkstr none;
-			#math {critter_room}{$critter_room - 1}
-		};
-	};
-	#if {"$searchstring" != ""}{
-		#regex {$tkstr}{$searchstring}{
-			#bell;
-			#bell;
-			#map get {roomvnum}{foundroom};
-			#echo {***** Found $searchstring in room $foundroom****}
-		};
+	#list {critter_array}{find}{%*(%*)}{found_index};
+	#if {$found_index > 0}{
+		#list {critter_array}{del}{$found_index};
 	};
 	#if {"$tkstr" != "none" && "$guild" == "changeling" && "$area" == "Changeling Biome"}{
 		#format {timestamp} {%t} {[<268>%H<088>:<268>%M<088>] };
@@ -364,50 +385,39 @@ make_global_blacklist
 		update_chat ${timestamp}<178>Biome<088>: $tkstr;
 		db_submit_chat ${dbtimestamp}Biome: $tkstr;
 	};
-	#regex {$tkstr}{%* attacking you%*}{#var tkstr &1};
-	#regex {$tkstr}{%*(%d\%)}{#var tkstr &1};
-	#regex {$tkstr}{%*attacking you%*}{#var tkstr &1};
-	#regex {$tkstr}{%* [%*]%*}{#var tkstr &1};
-	#regex {$tkstr}{[%*] %*}{#var tkstr &2};
-	#regex {$tkstr}{%*[%*]%*}{#var tkstr &1};
 	#if {"${critter[blacklist]}" != ""}{
 		#loop {1}{$blacklist_size}{critter_count}{
-			#regex {$tkstr}{${critter[blacklist][${critter_count}]}}{
-				#var tkstr none;
-				#math {critter_room}{$critter_room - 1};
+			#list {critter_array}{find}{%*${critter[blacklist][${critter_count}]}%*}{found_index};
+			#if {$found_index > 0}{
+				#list {critter_array}{del}{$found_index};
 			};
 		};
 	};
 	#if {"${global[blacklist]}" != ""}{
 		#loop {1}{$global_blacklist_size}{critter_count}{
-			#regex {$tkstr}{${global[blacklist][${critter_count}]}}{
-				#var tkstr none;
-				#math {critter_room}{$critter_room - 1};
+			#list {critter_array}{find}{%*${global[blacklist][${critter_count}]}%*}{found_index};
+			#if {$found_index > 0}{
+				#list {critter_array}{del}{$found_index};
 			};
 		};
 	};
-	#var wtkstr {none};
 	#if {"${critter[whitelist]}" != ""}{
 		#loop {1}{$whitelist_size}{critter_count}{
-			#regex {$tkstr}{${critter[whitelist][${critter_count}]}}{
-				#var {wtkstr}{$tkstr};
+			#list {critter_array}{size}{critter_room};
+			#if {$critter_room > 0}{
+				#list {critter_array}{find}{%*${critter[whitelist][${critter_count}]}%*}{found_index};
+				#if {$found_index != 1}{
+					#list {critter_array}{del}{1};
+				};
 			};
 		};
-		#if {"$wtkstr" == "none"}{
-			#var {$tkstr is not on the whitelist};
-			#var tkstr none;
-			#math {critter_room}{$critter_room - 1};
-		};
 	};
-	#regex {$tkstr}{%* %w.$}{#var tkstr &2};
-	#regex {$tkstr}{%* %w$}{#var tkstr &2};
-	#regex {$tkstr}{%* %S$}{#var tkstr &1};
-	#regex {$tkstr}{%* %w.$}{#var tkstr &2};
-	#regex {$tkstr}{%w.$}{#var tkstr &1};
-	#regex {$tkstr}{%* %w}{#var tkstr &2};
-	#if {"$tkstr" != "none"}{
-		#var kstr $tkstr;
+	#list {critter_array}{size}{critter_room};
+	#var {tkstr}{${critter_array[${critter_room}]}};
+	#regex {$tkstr}{%* %w$}{
+		#var {tkstr}{&2};
 	};
+	#var {kstr}{$tkstr};
 	#if {"$area" == "Changeling Biome" && $starter2 != 1 && $domove2 == 1}{
 		bscan;
 	};
@@ -445,7 +455,7 @@ make_global_blacklist
         #if {"%1" == "ne"}{#var reversedir sw;ne};
 }
 
-
+#var {unexplored_rooms}{0};
 #alias ki {
 	#if {$domove2 == 1}{
 		#var domove2 0;
@@ -457,14 +467,28 @@ make_global_blacklist
 		#var player_room 0;
 		#var domove2 1;
 		#var starter2 1;
-		#if {$stepignore > 0}{
-			#var stepper2 0;
-			#map {flag}{static}{off};
-		}{
-			#if {$room_index <= $area_size}{
-				make_killpath {${roomlist[${room_index}]}};
+		#switch {$stepignore}{
+			#case {0}{
+				#if {$room_index <= $area_size}{
+					make_killpath {${roomlist[${room_index}]}};
+				};
+				#var stepper2 1;
 			};
-			#var stepper2 1;
+			#case {1}{
+				#var stepper2 0;
+				#map {flag}{static}{off};
+			};
+			#case {2}{
+				#var stepper2 0;
+				#map {flag}{static}{off};
+			};
+			#case {3}{
+				#if {$unexplored_rooms > 0}{
+					make_killpath {${unexplored[1]}};
+				};
+				#map {flag}{static}{off};
+				#var stepper2 0;
+			};
 		};
 		#if {"$guild" == "angel" && $my[desecrate] == 1}{
 			!cease;
@@ -525,23 +549,46 @@ make_global_blacklist
 			};
 		};
 	}{
-		#if {$manual_stepper == 1}{
-			#nop {If we aren't using the magic stepper, check for a manual path};
-			#math {room_num}{$room_num + 1};
-			#if {$room_num > $max_room}{
-				#if {$autoqueue == 1}{
-					#math {targetarea}{$my[areaselector][current] + 1};
-					#if {$targetarea > 6}{#var {targetarea}{1}};
-					#var {room_num}{1};
-					#var {starter2}{0};
-					go ${my[areaselector][${targetarea}][note]};
+		#switch {$stepignore}{
+			#case {1}{
+				#nop {Manual path};
+				#math {room_num}{$room_num + 1};
+				#if {$room_num > $max_room}{
+					#if {$autoqueue == 1}{
+						#math {targetarea}{$my[areaselector][current] + 1};
+						#if {$targetarea > 6}{#var {targetarea}{1}};
+						#var {room_num}{1};
+						#var {starter2}{0};
+						go ${my[areaselector][${targetarea}][note]};
+					};
+				}{
+					${kill_path[${room_num}]};
 				};
-			}{
-				${kill_path[${room_num}]};
 			};
-		}{
-		#nop {If we aren't specifying a manual path, we are wandering aimlessly};
-			dirfunction $desired_dir;
+			#case {2}{
+				#nop {Wandering};
+				dirfunction $desired_dir;
+			};
+			#case {3}{
+				#nop {Magic Mapper};
+				#if {$unexplored_rooms > 0}{
+					#if {"${kill_path2[${path_index}]}" == ""}{
+						make_killpath $unexplored[1];
+					};
+					${kill_path2[${path_index}]};
+					#math {path_index}{$path_index + 1};
+					#if {${path_index} > ${path_size}}{
+						#list {unexplored}{find}{$roomvnum}{my_result};
+						#if {$my_result > 0}{
+							#list {unexplored}{del}{1};
+						};
+						make_killpath $unexplored[1];
+					};
+				}{
+					#echo {No Unexplored rooms, Wandering Instead};
+					dirfunction $desired_dir;
+				};
+			};
 		};
 	};
 };
