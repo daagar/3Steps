@@ -1,5 +1,5 @@
 #CLASS {drawvar} OPEN
 
-#VARIABLE         {draw}  {{alert}{on}{biome}{on}{canvas}{on}{caption}{on}{chat}{on}{damage}{on}{exitpanel}{on}{gline}{on}{hpbar}{on}{map}{on}{pokedex}{on}}
+#VARIABLE         {draw}  {{alert}{on}{biome}{on}{canvas}{on}{caption}{on}{chat}{on}{damage}{on}{exitpanel}{off}{gline}{on}{hpbar}{on}{map}{on}{pokedex}{on}{selector}{on}}
 
 #CLASS {drawvar} CLOSE
