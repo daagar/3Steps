@@ -14,6 +14,17 @@
 
 /* Determine Dimensions */
 
+#if {"$draw[chat]" == "on"} {
+	#math chat[height] {$chat[rows] + 1};
+	#if {"$draw[map]" == "on"} {
+		#math {chat[right]} {-$map[width]-2};
+	} {
+		#var chat[right] -1;
+	};
+} {
+	#var chat[height] 0;
+};
+
 #if {"$draw[canvas]" == "on}{
 	#var canvas[width] {$right_split};
 }{
@@ -29,41 +40,22 @@
 #if {"$draw[map]" == "on"}{
 	#var map[height] 17;
 	#var map[bottom] 17;
+	#var map[width] $right_split;
 }{
+	#var map[width]  0;
 	#var map[height] 0;
 	#var map[bottom] 0;
 };
 
 #if {"$draw[caption]" == "on"} {
-	#var caption[height] 3;
+	#var caption[height] 2;
 } {
 	#var caption[height] 0;
 	#var caption[bottom] 0;
 };
 
-#if {"$draw[selector]" == "on"} {
-	#NOP redraw selector off;
-	#var selector[width] $right_split;
-	#var selector[height] 8;
-} {
-	#var selector[width] 0;
-	#var selector[height] 0;
-};
-
-
-
-#if {"$draw[chat]" == "on"} {
-	#math chat[height] {$chat[rows] + 1};
-	#if {"$draw[map]" == "on"} {
-		#math {chat[right]} {-$map[width]-2};
-	} {
-		#var chat[right] -1;
-	};
-} {
-	#var chat[height] 0;
-};
-
 #if {"$draw[exitpanel]" == "on"} {
+	#read .tt/3k/exits.tin;
 	#var exitpanel[width] $right_split;
 	#var exitpanel[height] 10;
 } {
@@ -71,9 +63,19 @@
 	#var exitpanel[height] 0;
 };
 
+#if {"$draw[selector]" == "on"} {
+	#NOP redraw selector off;
+	#read .tt/3k/killer.tin;
+	#var selector[width] $right_split;
+	#var selector[height] 8;
+} {
+	#var selector[width] 0;
+	#var selector[height] 0;
+};
 
 #if {"$draw[damage]" == "on"} {
 	#NOP redraw damage off;
+	#read .tt/3k/damagetracker.tin;
 	#var damage[width] $right_split;
 	#var damage[height] 12;
 } {
@@ -82,15 +84,43 @@
 };
 
 
-#if {"$draw[biome]" == "on"} {
+#if {"$draw[biome]" == "on" && "$guild" == "changeling"} {
 	#NOP redraw biome off;
-	#var biome[width] $right_split;
+	#read .tt/3k/pokedex.tin;
 	#var biome[height] 16;
+	#var biome[width] $right_split;
+	#math {biome[top]}		{${damage[bottom]} + 1};
+	#math {biome[bottom]} 		{${biome[top]} + ${biome[height]}};
 } {
 	#var biome[width] 0;
 	#var biome[height] 0;
+	#math {biome[bottom]} 		{${biome[top]} + ${biome[height]}};
 };
 
+#if {"$draw[jedimode]" == "on" && "$guild" == "jedi"} {
+	#NOP redraw biome off;
+	#read .tt/3k/jedimode.tin;
+	#var jedimode[height] 16;
+	#var jedimode[width] $right_split;
+	#math {jedimode[top]}		{${biome[bottom]} + 1};
+	#math {jedimode[bottom]}	{${jedimode[top]} + ${jedimode[height]}};
+} {
+	#var jedimode[width] 0;
+	#var jedimode[height] 0;
+	#math {jedimode[bottom]}	{${jedimode[top]} + ${jedimode[height]}};
+};
+
+#if {"$draw[summoner]" == "on" && "$guild" == "mages"} {
+	#NOP redraw biome off;
+	#var summoner[height] 16;
+	#var summoner[width] $right_split;
+	#math {summoner[top]}		{${jedimode[bottom]} + 1};
+	#math {summoner[bottom]}	{${summoner[top]} + ${summoner[height]}};
+} {
+	#var summoner[width] 0;
+	#var summoner[height] 0;
+	#math {summoner[bottom]}	{${summoner[top]} + ${summoner[height]}};
+};
 
 #if {"$draw[gline]" == "on"} {
 	#var gline[height] 3;
@@ -130,7 +160,6 @@
 
 /* Perform Drawings */
 #if {"$draw[map]" == "on"} {
-	#draw line 1 -$map[width]-1 $map[height] -$map[width]-1;
 	#if {"$draw[caption]" == "on"} {
 		#showme {<228>\u2534<088>} $map[height]+1 -$map[width]-1;
 	};
@@ -138,6 +167,7 @@
 	#map offset 1 -$map[width] $map[height] -1;
 	#delay 0 #draw {tile} $map[height]-1 -$map[width] $map[height]-1 -1 {<020>$roomarea <140>(<120>$room_cnt<140>)<099>};
 	#delay 0 #draw {tile} $map[height] -$map[width] $map[height] -1 {<140>[<030>$roomvnum<140>] <130>$roomname<099>};
+	#delay 0 #draw line 1 -$map[width]-1 $map[height] -$map[width]-1;
 } {
 	#map flag vtmap off;
 };
@@ -168,10 +198,15 @@
 #draw {line} -2 1 -2 -1;
 
 
-#if {"$draw[exitpanel]" == "on" || "$draw[selector]" == "on" || "$draw[pokedex]" == "on"} {
+#if {"$draw[exitpanel]" == "on" || "$draw[canvas]" == "on" || "$draw[biome]" == "on"} {
 	#draw {line} $chat[height]+$caption[height]+1 -$right_split -$status[height]-2 -$right_split;
 	#showme {<228>\u252C<088>} $chat[height]+$caption[height] -$right_split;
 	#showme {<088>\u2534<088>} -$hpbar[height]-$gline[height]-2 -$right_split;
+};
+
+#if {"$draw[exitpanel]" == "on"}{
+	#NOP exitpanel;
+	show_exits;
 };
 
 #if {"$draw[selector]" == "on"} {
@@ -186,7 +221,7 @@
 
 #if {"$draw[biome]" == "on"} {
 	#NOP biome;
-	#delay {0.1}{display_biome};
+	display_biome;
 };
 
 #alias redraw {
@@ -204,6 +239,8 @@
 			#case {"hpbar"}		{#var redraw[option] %1};
 			#case {"map"}		{#var redraw[option] %1};
 			#case {"biome"}		{#var redraw[option] %1};
+			#case {"jedimode"}	{#var redraw[option] %1};
+			#case {"summoner"}		{#var redraw[option] %1};
 			#case {"damage"}	{#var redraw[option] %1};
 			#default		{#var redraw[args][1] invalid;#showme REDRAW:  Invalid redraw option}
 		};
@@ -236,6 +273,7 @@
 		} {
 			#class drawvar write .tt/3k/vars/draw_3s.var;
 		};
+		#unbutton %*;
 		#math {caption[top]} 		{${map[bottom]} + 1};
 		#math {caption[bottom]} 	{${caption[top]} + ${caption[height]}};
 		#math {exitpanel[top]} 		{${caption[bottom]} + 1};
