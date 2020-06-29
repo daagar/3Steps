@@ -13,6 +13,13 @@
 #var right_split 43
 
 /* Determine Dimensions */
+
+#if {"$draw[canvas]" == "on}{
+	#var canvas[width] {$right_split};
+}{
+	#var canvas[width] 0;
+};
+
 #if {"$draw[alert]" == "on"} {
 	#var alert[width] 1;
 } {
@@ -108,7 +115,7 @@
 } {
 	#var split[left] 0;
 };
-#if {"$draw[exitpanel]" == "on" || "$draw[selector]" == "on" || "$draw[pokedex]" == "on"} {
+#if {"$draw[canvas]" == "on"} {
 	#var split[right] $right_split;
 } {
 	#var split[right] 0;
