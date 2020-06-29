@@ -98,26 +98,28 @@
 #math {damage[top]}{$selector[bottom] + 1};
 #math {damage[bottom]}{$damage[top]+12};
 #alias {show_damage_table}{
-	#screen clear square ${damage[top]} -42 ${damage[bottom]} -1;
-	#draw rounded box ${damage[top]} -41 ${damage[bottom]} -3;
-	#showme {Last 8 Kills} ${damage[top]} -28;
-	#showme {  Foe   | Rnds | Tot. Dmg | Avg} ${damage[top]}+1 -38;
-	#draw {line} ${damage[top]}+2 -40 ${damage[top]}+2 -4;
-	show_area_selector;
-#nop {
-	log_record_damage;
-	log_record_health;
-};
-	#if {"$guild" == "mages"}{
-		display_desired_summons;
+	#if {"$draw[damage]" == "on"}{
+		#screen clear square ${damage[top]} -42 ${damage[bottom]} -1;
+		#draw rounded box ${damage[top]} -41 ${damage[bottom]} -3;
+		#showme {Last 8 Kills} ${damage[top]} -28;
+		#showme {  Foe   | Rnds | Tot. Dmg | Avg} ${damage[top]}+1 -38;
+		#draw {line} ${damage[top]}+2 -40 ${damage[top]}+2 -4;
+		show_area_selector;
+	#nop {
+		log_record_damage;
+		log_record_health;
 	};
-	#if {"guild" == "changeling"}{
-		show_current_form_table;
-		show_biome_table;
+		#if {"$guild" == "mages"}{
+			display_desired_summons;
+		};
+		#if {"guild" == "changeling"}{
+			show_current_form_table;
+			show_biome_table;
+		};
+		#math damagetracker[start]       {$damagetracker[rows] * $damagetracker[page]};
+		#math damagetracker[end]         {$damagetracker[rows] * $damagetracker[page] - $damagetracker[rows] + 1};
+		#line sub {var} #draw {tile} ${damage[top]}+3 -39 ${damage[top]}+11 -4 $damagetracker[log][-$damagetracker[start]..-$damagetracker[end]];
 	};
-        #math damagetracker[start]       {$damagetracker[rows] * $damagetracker[page]};
-        #math damagetracker[end]         {$damagetracker[rows] * $damagetracker[page] - $damagetracker[rows] + 1};
-        #line sub {var} #draw {tile} ${damage[top]}+3 -39 ${damage[top]}+11 -4 $damagetracker[log][-$damagetracker[start]..-$damagetracker[end]];
 };
 
 #nop {
