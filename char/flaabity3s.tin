@@ -3,9 +3,9 @@
 #var guild jedi
 #var subguild baadu
 
-redraw biome off;
-redraw summoner off;
-redraw jedimode on;
+redraw biome off
+redraw summoner off
+redraw jedimode on
 
 #delay {2}{ftik}
 #var {my[cleanse][status]}{0};

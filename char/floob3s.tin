@@ -303,7 +303,7 @@
 	!wrap corpse;
 }
 
-#alias {cco}{!unwrap corpse;co}
+#alias {cco}{!unwrap corpse;co
 	!unwrap corpse;
 	!cease;
 	#if {"$my[autocorpse][method]" == "guild"}{
