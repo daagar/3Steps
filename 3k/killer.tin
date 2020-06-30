@@ -80,7 +80,7 @@ make_global_blacklist
 #var {areaselector[page]}{1};
 #var {areaselector[max]}{6};
 
-#math selector[top] $chat[height]+$caption[height]+1;
+#math selector[top] $exitpanel[bottom]+1;
 #math selector[bottom] $selector[top]+$selector[height];
 #alias {show_area_selector}{
 	#if {"$draw[selector]" == "on"}{
@@ -420,6 +420,7 @@ make_global_blacklist
 	#replace {tkstr}{%s[%d\%]%s}{};
 	#replace {tkstr}{%s[%w]%s}{};
 	#replace {tkstr}{attacking you}{};
+	#replace {tkstr}{!}{};
 	#regex {$tkstr}{%* \\x7b%d\\x7d}{
 		#loop {1}{&2}{count}{
 			process_critter &1;
