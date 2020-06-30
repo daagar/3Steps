@@ -2,7 +2,9 @@
 
 #var guild changeling
 
-#read .tt/3s/pokedex.tin
+redraw jedimode off;
+redraw summoner off;
+redraw biome on;
 
 #alias {autope}{
 	#if {$my[autopersevere] != 1}{

@@ -40,7 +40,7 @@
 #if {"$draw[map]" == "on"}{
 	#var map[height] 17;
 	#var map[bottom] 17;
-	#var map[width] $right_split;
+	#math map[width] $right_split-1;
 }{
 	#var map[width]  0;
 	#var map[height] 0;
@@ -100,7 +100,7 @@
 #if {"$draw[jedimode]" == "on" && "$guild" == "jedi"} {
 	#NOP redraw biome off;
 	#read .tt/3k/jedimode.tin;
-	#var jedimode[height] 16;
+	#var jedimode[height] 20;
 	#var jedimode[width] $right_split;
 	#math {jedimode[top]}		{${biome[bottom]} + 1};
 	#math {jedimode[bottom]}	{${jedimode[top]} + ${jedimode[height]}};
@@ -111,7 +111,7 @@
 };
 
 #if {"$draw[summoner]" == "on" && "$guild" == "mages"} {
-	#NOP redraw biome off;
+	#NOP redraw summoner off;
 	#var summoner[height] 16;
 	#var summoner[width] $right_split;
 	#math {summoner[top]}		{${jedimode[bottom]} + 1};
@@ -224,6 +224,12 @@
 	display_biome;
 };
 
+#if {"$draw[jedimode]" == "on"} {
+	#NOP jedimode;
+	show_damage_selector;
+	show_mode_selector;
+};
+
 #alias redraw {
 	#var redraw[args][1] valid;
 	#var redraw[args][2] valid;
@@ -284,6 +290,8 @@
 		#math {damage[bottom]} 		{${damage[top]} + ${damage[height]}};
 		#math {biome[top]}		{${damage[bottom]} + 1};
 		#math {biome[bottom]} 		{${biome[top]} + ${biome[height]}};
+		#math {jedimode[top]}		{${biome[bottom]} + 1};
+		#math {jedimode[bottom]} 	{${jedimode[top]} + ${jedimode[height]}};
 		#read .tt/3k/draw.tin;
 	};
 }

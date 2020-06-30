@@ -2,7 +2,10 @@
 
 #var guild jedi
 #var subguild baadu
-#read .tt/3s/jedimode.tin
+
+redraw biome off;
+redraw summoner off;
+redraw jedimode on;
 
 #delay {2}{ftik}
 #var {my[cleanse][status]}{0};
