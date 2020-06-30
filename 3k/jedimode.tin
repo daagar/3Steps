@@ -1,3 +1,4 @@
+#class {jedimode}{open}
 #gag {^%1 sparks fly from your %1 as you strike your foe.}
 #gag {Your shot hit}
 #gag {The Force flows through you, mending your wounds.}
@@ -698,3 +699,4 @@
 		!orare;
 	};
 };
+#class {jedimode}{close}

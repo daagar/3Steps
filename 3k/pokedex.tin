@@ -1,3 +1,5 @@
+#class {biome}{open}
+
 #alias {disable_biome}{
 	#if {${my[config][db][biome]} == 1}{
 		#var {my[config][db][biome]}{0};
@@ -137,3 +139,5 @@
         db_query_biome ${form_list[${form_number}][form]};
 	show_biome_table;
 };
+
+#class {biome}{close}
