@@ -39,7 +39,6 @@
 };
 
 #if {"$draw[map]" == "on"}{
-	#read .tt/3k/mapper.tin;
 	#var map[height] 17;
 	#var map[bottom] 17;
 	#math map[width] $right_split-1;
@@ -51,9 +50,10 @@
 
 #if {"$draw[caption]" == "on"} {
 	#var caption[height] 2;
+	#var caption[bottom] 20;
 } {
 	#var caption[height] 0;
-	#var caption[bottom] 0;
+	#var caption[bottom] $map[bottom];
 };
 
 #if {"$draw[exitpanel]" == "on"} {
@@ -158,8 +158,6 @@
 #buffer end;
 
 /* Perform Drawings */
-#math {caption[top]} 		{${map[bottom]} + 1};
-#math {caption[bottom]} 	{${caption[top]} + ${caption[height]}};
 #math {exitpanel[top]} 		{${caption[bottom]} + 1};
 #math {exitpanel[bottom]} 	{${exitpanel[top]} + ${exitpanel[height]}};
 #math {selector[top]} 		{${exitpanel[bottom]} + 1};
