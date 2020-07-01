@@ -333,6 +333,11 @@ make_global_blacklist
 	};
 }
 
+#alias {bl}{
+	#list {critter[blacklist]} ins -1 {%0};
+	#list {critter[blacklist]}{size}{blacklist_size};
+};
+
 #alias {steptest}{
         #if {$manual_stepper == 1}{
                 #math {room_num}{$room_num + 1};
