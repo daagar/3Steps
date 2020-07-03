@@ -318,45 +318,47 @@
 };
 
 #alias {display_desired_summons}{
-	#screen clear square 43 -41 57 -3;
-	#draw rounded box 43 -41 57 -3;
-	#if {$my[autosetup][summons] == 1}{
-		#showme {Current Summon Setup:  [<128>ON<088>]} 44 -38;
-		#unbutton {44;-15;44;-11}{autos};
-		#button {44;-15;44;-12}{autos};
-	}{
-		#showme {Current Summon Setup:  [<118>OFF<088>]} 44 -38;
-		#unbutton {44;-15;44;-12}{autos};
-		#button {44;-15;44;-11}{autos};
+	#if {"$draw[summoner]" == "on"}{
+		#screen clear square 43 -41 57 -3;
+		#draw rounded box 43 -41 57 -3;
+		#if {$my[autosetup][summons] == 1}{
+			#showme {Current Summon Setup:  [<128>ON<088>]} 44 -38;
+			#unbutton {44;-15;44;-11}{autos};
+			#button {44;-15;44;-12}{autos};
+		}{
+			#showme {Current Summon Setup:  [<118>OFF<088>]} 44 -38;
+			#unbutton {44;-15;44;-12}{autos};
+			#button {44;-15;44;-11}{autos};
+		};
+		#showme {                 Avg:  ${mage_avg[1][avg(damage)]}} 45 -38;
+		#showme {       [<afa>+<088>] [<afa>+<088>]  <<afa>next<088>>} 46 -38;
+		#button {46;-31;46;-29}{tankcountup};
+		#button {46;-27;46;-25}{tanklevelup};
+		#button {46;-22;46;-16}{tanknameup};
+		#showme {Tank:   $my[summon][desired][tank][count] x $my[summon][desired][tank][level] - $my[summon][desired][tank][name]} 47 -38;
+		#showme {       [<faa>-<088>] [<faa>-<088>]  <<faa>prev<088>>} 48 -38;
+		#button {48;-31;48;-29}{tankcountdown};
+		#button {48;-27;48;-25}{tankleveldown};
+		#button {48;-22;48;-16}{tanknamedown};
+		#showme {       [<afa>+<088>] [<afa>+<088>]  <<afa>next<088>>} 50 -38;
+		#button {50;-31;50;-29}{damagecountup};
+		#button {50;-27;50;-25}{damagelevelup};
+		#button {50;-22;50;-16}{damagenameup};
+		#showme {Damage: $my[summon][desired][damage][count] x $my[summon][desired][damage][level] - $my[summon][desired][damage][name]} 51 -38;
+		#showme {       [<faa>-<088>] [<faa>-<088>]  <<faa>prev<088>>} 52 -38;
+		#button {52;-31;52;-29}{damagecountdown};
+		#button {52;-27;52;-25}{damageleveldown};
+		#button {52;-22;52;-16}{damagenamedown};
+		#showme {       [<afa>+<088>] [<afa>+<088>]  <<afa>next<088>>} 54 -38;
+		#button {54;-31;54;-29}{extracountup};
+		#button {54;-27;54;-25}{extralevelup};
+		#button {54;-22;54;-16}{extranameup};
+		#showme {Extra:  $my[summon][desired][extra][count] x $my[summon][desired][extra][level] - $my[summon][desired][extra][name]} 55 -38;
+		#showme {       [<faa>-<088>] [<faa>-<088>]  <<faa>prev<088>>} 56 -38;
+		#button {56;-31;56;-29}{extracountdown};
+		#button {56;-27;56;-25}{extraleveldown};
+		#button {56;-22;56;-16}{extranamedown};
 	};
-	#showme {                 Avg:  ${mage_avg[1][avg(damage)]}} 45 -38;
-	#showme {       [<afa>+<088>] [<afa>+<088>]  <<afa>next<088>>} 46 -38;
-	#button {46;-31;46;-29}{tankcountup};
-	#button {46;-27;46;-25}{tanklevelup};
-	#button {46;-22;46;-16}{tanknameup};
-	#showme {Tank:   $my[summon][desired][tank][count] x $my[summon][desired][tank][level] - $my[summon][desired][tank][name]} 47 -38;
-	#showme {       [<faa>-<088>] [<faa>-<088>]  <<faa>prev<088>>} 48 -38;
-	#button {48;-31;48;-29}{tankcountdown};
-	#button {48;-27;48;-25}{tankleveldown};
-	#button {48;-22;48;-16}{tanknamedown};
-	#showme {       [<afa>+<088>] [<afa>+<088>]  <<afa>next<088>>} 50 -38;
-	#button {50;-31;50;-29}{damagecountup};
-	#button {50;-27;50;-25}{damagelevelup};
-	#button {50;-22;50;-16}{damagenameup};
-	#showme {Damage: $my[summon][desired][damage][count] x $my[summon][desired][damage][level] - $my[summon][desired][damage][name]} 51 -38;
-	#showme {       [<faa>-<088>] [<faa>-<088>]  <<faa>prev<088>>} 52 -38;
-	#button {52;-31;52;-29}{damagecountdown};
-	#button {52;-27;52;-25}{damageleveldown};
-	#button {52;-22;52;-16}{damagenamedown};
-	#showme {       [<afa>+<088>] [<afa>+<088>]  <<afa>next<088>>} 54 -38;
-	#button {54;-31;54;-29}{extracountup};
-	#button {54;-27;54;-25}{extralevelup};
-	#button {54;-22;54;-16}{extranameup};
-	#showme {Extra:  $my[summon][desired][extra][count] x $my[summon][desired][extra][level] - $my[summon][desired][extra][name]} 55 -38;
-	#showme {       [<faa>-<088>] [<faa>-<088>]  <<faa>prev<088>>} 56 -38;
-	#button {56;-31;56;-29}{extracountdown};
-	#button {56;-27;56;-25}{extraleveldown};
-	#button {56;-22;56;-16}{extranamedown};
 };
 
 #alias {db_query_mage_damage}{
@@ -892,7 +894,7 @@
 	#if {$my[prots][fortress] != 1}{!cast dream fortress};
 	#if {$my[prots][globe] != 1}{!cast major globe};
 	#if {$my[prots][paura] != 1}{!cast prismatic aura};
-	#if {$my[school][current] > 0 && $my[school][reset] > 90}{
+	#if {$my[school][current] > 0 && $my[school][reset] > 90 && $my[summon][current][total] > 1}{
 		!cast astral matrix;
 	};
 	#if {$my[autosetup][staff] == 1 && $my[staff][umbra] < 20 && $my[sp][current] > 1000 && $my[imbue][current] > 1}{
@@ -902,7 +904,7 @@
 		#if {$my[sp][current] < 1500 && $my[gp1][current] > 30}{
 			!cast wellspring;
 		};
-		#if {$my[school][current] > 0 && $my[staff][shelter] < 30 && $my[matrix][status] != 1}{
+		#if {$my[school][current] > 0 && $my[staff][shelter] < 30 && $my[matrix][status] != 1 && $my[summon][current][total] > 1}{
 			!cast astral matrix;
 			#var {my[matrix][status]}	{1};
 		};
