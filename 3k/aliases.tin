@@ -32,6 +32,11 @@
 #alias {mipon} {#read .tt/3k/mip.tin}
 #alias {mipoff} {#class mip kill}
 
+#alias {.reload} {
+	#read .tt/char/${world}.tin;
+	#echo {Re-loading character files.};
+}
+
 #alias {ga} {get all}
 #alias {gac} {get all from corpse}
 #alias {gl} {glance}
