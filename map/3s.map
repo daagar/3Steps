@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 11
+F 10
 
 G 0
 
-I 13455
+I 3911
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} { }
+L {UNICODE GRAPHICS} {NO DIAGONAL} {}
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -1042,29 +1042,29 @@ E {  167} {enter} {enter} {0} {0} {} {1.000} {}
 E { 6085} {w} {w} {8} {0} {} {1.000} {}
 E {    1} {home} {home} {0} {0} {} {1.000} {}
 
-R {  167} {0} {} {chaos} { } {} {} {chaos} {} {} {1.000} {}
+R {  167} {0} {} {chaos} { } {This is the dead center of the Realm of Chaos.  All around you lies a bleak and desolate land tormented by the wrath of unknown forces. You are standing at the edge of a raging vortex that seems to fall into infinity.  There are paths leading away from the vortex in several directions.  What you might find there is so changeable that you aren't certain how to proceed.  Some hard-won experience is related on the plaque.  But don't trust it.  This is CHAOS! } {Mud} {chaos} {} {} {1.000} {}
 E {  166} {vortex} {vortex} {0} {0} {} {1.000} {}
-E {12261} {e} {e} {2} {0} {} {1.000} {}
-E { 9865} {w} {w} {8} {0} {} {1.000} {}
+E {  168} {e} {e} {2} {0} {} {1.000} {}
+E { 2743} {w} {w} {8} {0} {} {1.000} {}
 E { 3968} {s} {s} {4} {0} {} {1.000} {}
 E { 3970} {n} {n} {1} {0} {} {1.000} {}
 
-R {  168} {0} {<118>} {168} { } {} {} {} {} {} {1.000} {}
-E {12261} {w} {w} {8} {0} {} {1.000} {}
+R {  168} {0} {} {168} { } {You are on a road moving east-west.  Looking to the south you can see a huge range of mountains in the distance.  To the north the ground is all charred.  You can see an occasional geyser of fire shoot up from the ground.  The land to the east seems to phase in and out periodically.  You can't be sure but it just might be the remains of the old Kingdom capital now called, aptly enough, Kayos. } {Mud} {} {} {} {1.000} {}
+E {  167} {w} {w} {8} {0} {} {1.000} {}
 E {  169} {e} {e} {2} {0} {} {1.000} {}
 E {  173} {play flute} {play flute} {0} {0} {} {1.000} {}
 E { 5502} {climb} {climb} {0} {0} {} {1.000} {}
 E { 5827} {n} {n} {1} {0} {} {1.000} {}
-E {12259} {s} {s} {4} {0} {} {1.000} {}
+E { 5626} {s} {s} {4} {0} {} {1.000} {}
 
-R {  169} {0} {} {169} { } {} {} {} {} {} {1.000} {}
+R {  169} {0} {} {169} { } {You have come to an intersection with a highway that appears to go nowhere.  There are tractor trailer trucks wizzing by on both sides.  After watching for a couple of minutes you could swear you have been watching the same trucks go back and forth, over and over again.  There is a really bad smell around here that you can't pin down.  Maybe those geysers?  Maybe Lovecraftian flatulence? There is a manhole cover here as well.  It seems loose--perhaps you could go down here...But to where? } {Mud} {} {} {} {1.000} {}
 E {  168} {w} {w} {8} {0} {} {1.000} {}
 E {  170} {d} {d} {32} {0} {} {1.000} {}
 E {  776} {e} {e} {2} {0} {} {1.000} {}
 E {12403} {n} {n} {1} {0} {} {1.000} {}
 E {  676} {s} {s} {4} {0} {} {1.000} {}
 
-R {  170} {0} {} {alphabet} { } {} {} {} {} {} {1.000} {}
+R {  170} {0} {<118>} {alphabet} { } {} {} {} {} {} {1.000} {}
 E {  169} {u} {u} {16} {0} {} {1.000} {}
 E {  171} {s} {s} {4} {0} {} {1.000} {}
 
@@ -3688,7 +3688,7 @@ R {  675} {5130} {} {} { } {} {} {} {} {} {1.000} {}
 E {11574} {e} {e} {2} {0} {} {1.000} {}
 E {11573} {w} {w} {8} {0} {} {1.000} {}
 
-R {  676} {5130} {} {} { } {} {} {} {} {} {1.000} {}
+R {  676} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {  779} {s} {s} {4} {0} {} {1.000} {}
 E {  169} {n} {n} {1} {0} {} {1.000} {}
 
@@ -4113,7 +4113,7 @@ R {  775} {0} {} {775} { } {} {} {} {} {} {1.000} {}
 E {  774} {s} {s} {4} {0} {} {1.000} {}
 E {  751} {nw} {nw} {9} {0} {} {1.000} {}
 
-R {  776} {0} {} {hanging ladder} { } {} {} {} {} {} {1.000} {}
+R {  776} {0} {<118>} {hanging ladder} { } {} {} {} {} {} {1.000} {}
 E {  169} {w} {w} {8} {0} {} {1.000} {}
 E {  778} {n} {n} {1} {0} {} {1.000} {}
 E {  796} {s} {s} {4} {0} {} {1.000} {}
@@ -7378,23 +7378,23 @@ R { 1562} {0} {} {1562} { } {} {} {} {} {} {1.000} {}
 E { 1560} {e} {e} {2} {0} {} {1.000} {}
 E { 1563} {w} {w} {8} {0} {} {1.000} {}
 
-R { 1563} {0} {} {1563} { } {} {} {} {} {} {1.000} {}
+R { 1563} {0} {<118>} {1563} { } {} {} {} {} {} {1.000} {}
 E { 1562} {e} {e} {2} {0} {} {1.000} {}
 E { 1564} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 1564} {0} {} {1564} { } {} {} {} {} {} {1.000} {}
+R { 1564} {0} {} {1564} { } {You are in a dark and treacherous cavern.  Ancient bedrock forms the walls of this place.  There are many scratches along the wall but generally, they are very smooth.  Far in the distance, a great scurrying can be heard. } {Ant Hole} {} {} {} {1.000} {}
 E { 1563} {ne} {ne} {3} {0} {} {1.000} {}
 E { 1565} {n} {n} {1} {0} {} {1.000} {}
 
-R { 1565} {0} {} {crysmal} { } {} {} {crysmal} {} {} {1.000} {}
+R { 1565} {0} {} {crysmal} { } {You travel through a dark and eerie tunnel.  In the dim light you sense a golden hue upon the rather dull grey stone walls of the cavern here.  The ground is moist and very soft to the touch. } {Ant Hole} {crysmal} {} {} {1.000} {}
 E { 1564} {s} {s} {4} {0} {} {1.000} {}
 E { 1566} {n} {n} {1} {0} {} {1.000} {}
 
-R { 1566} {0} {} {1566} { } {} {} {} {} {} {1.000} {}
+R { 1566} {0} {} {1566} { } {You travel through a dark and eerie tunnel.  Ancient bedrock forms the walls of this place.  There are many scratches along the wall but generally, they are very smooth.  The ground is moist and very soft to the touch. } {Ant Hole} {} {} {} {1.000} {}
 E { 1565} {s} {s} {4} {0} {} {1.000} {}
 E { 1567} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 1567} {0} {} {1567} { } {} {} {} {} {} {1.000} {}
+R { 1567} {0} {<118>} {1567} { } {} {} {} {} {} {1.000} {}
 E { 1566} {ne} {ne} {3} {0} {} {1.000} {}
 E { 1568} {w} {w} {8} {0} {} {1.000} {}
 
@@ -12206,29 +12206,29 @@ E { 2740} {u} {u} {16} {0} {} {1.000} {}
 
 R { 2742} {0} {} {In a hut (out)} { } {You are inside a small straw hut. Shelves line the walls filled with bottles and vials. Books and scrolls litter the ground around a small table. The only light source in the room is a ring of wax candles. The light level is quite low, giving the room an almost sacred feel. } {Diablo2 Normal 20+ Nightmare 40+ Hell 60+.} {} {} {} {1.000} {}
 
-R { 2743} {0} {} {large ladder} { } {} {} {} {} {} {1.000} {}
-E { 9863} {e} {e} {2} {0} {} {1.000} {}
-E {12267} {w} {w} {8} {0} {} {1.000} {}
+R { 2743} {0} {} {large ladder} { } {This is the Eastwick road.  It leads to you know not where. At the northern edge of the road, there is a ladder that  climbs up to the sky. Follow your feet and see where you go. } {Mud} {large ladder} {} {} {1.000} {}
+E {  167} {e} {e} {2} {0} {} {1.000} {}
+E { 2744} {w} {w} {8} {0} {} {1.000} {}
 E { 4005} {n} {n} {1} {0} {} {1.000} {}
-E {12272} {s} {s} {4} {0} {} {1.000} {}
+E { 4007} {s} {s} {4} {0} {} {1.000} {}
 E {10943} {climb ladder} {climb ladder} {0} {0} {} {1.000} {}
 
-R { 2744} {0} {} {2744} { } {} {} {} {} {} {1.000} {}
-E {12267} {e} {e} {2} {0} {} {1.000} {}
+R { 2744} {0} {} {2744} { } {This is the road of Eastwick.  It leads to you know not where. Follow your feet and see where you go. There is a manhole here in the ground. } {Mud} {} {} {} {1.000} {}
+E { 2743} {e} {e} {2} {0} {} {1.000} {}
 E { 2745} {s} {s} {4} {0} {} {1.000} {}
 E { 3077} {w} {w} {8} {0} {} {1.000} {}
 E { 6038} {n} {n} {1} {0} {} {1.000} {}
 
-R { 2745} {0} {} {2745} { } {} {} {} {} {} {1.000} {}
+R { 2745} {0} {} {2745} { } {This appears to be a new side street. The pavement looks fresh and clean. Nary a pothole to be found! Too bad the same can't be said for the ground just beyond the curb on each side of this pleasant little avenue. It seems to be littered with craters. } {Mud} {} {} {} {1.000} {}
 E { 2744} {n} {n} {1} {0} {} {1.000} {}
 E { 2746} {s} {s} {4} {0} {} {1.000} {}
 
-R { 2746} {0} {} {2746} { } {} {} {} {} {} {1.000} {}
+R { 2746} {0} {} {2746} { } {Wickland Street continues merrily along, now winding through what appears to be a bamboo forest. A thick one at that! The trees of the forest are so thick on each side of the street that they almost run right up against the curbs. } {Mud} {} {} {} {1.000} {}
 E { 2745} {n} {n} {1} {0} {} {1.000} {}
 E { 2747} {draw tile} {draw tile} {0} {0} {} {1.000} {}
 E {12011} {s} {s} {4} {0} {} {1.000} {}
 
-R { 2747} {0} {} {2747} { } {} {} {} {} {} {1.000} {}
+R { 2747} {0} {<118>} {2747} { } {} {} {} {} {} {1.000} {}
 E { 2746} {exit} {exit} {0} {0} {} {1.000} {}
 E { 2748} {n} {n} {1} {0} {} {1.000} {}
 
@@ -13758,16 +13758,16 @@ E { 3052} {s} {s} {4} {0} {} {1.000} {}
 E { 3056} {e} {e} {2} {0} {} {1.000} {}
 E { 3073} {w} {w} {8} {0} {} {1.000} {}
 
-R { 3077} {0} {} {3077} { } {} {} {} {} {} {1.000} {}
-E { 2744} {e} {e} {2} {0} {} {1.000} {}
-E { 3078} {cwest} {#map leave;w;#map go mushroom ring} {0} {0} {} {1.000} {}
+R { 3077} {0} {<118>} {3077} { } {} {} {} {} {} {1.000} {}
 E { 4957} {n} {n} {1} {0} {} {1.000} {}
+E { 3078} {w} {w} {8} {0} {} {1.000} {}
+E { 2744} {e} {e} {2} {0} {} {1.000} {}
 
 R { 3078} {0} {} {mushroom ring} { } {} {} {} {} {} {1.000} {}
-E { 3077} {cwest} {#map leave;w;#map go 3077} {0} {0} {} {1.000} {}
 E { 3079} {e} {e} {2} {0} {} {1.000} {}
 E { 5665} {eat mushroom} {eat mushroom} {0} {0} {} {1.000} {}
 E { 5851} {enter void} {enter void} {0} {0} {} {1.000} {}
+E { 4293} {w} {w} {8} {0} {} {1.000} {}
 
 R { 3079} {0} {} {toy chest} { } {} {} {} {} {} {1.000} {}
 E { 3078} {w} {w} {8} {0} {} {1.000} {}
@@ -17827,9 +17827,9 @@ R { 3910} {0} {} {panda} { } {} {} {pandaemonium} {} {} {1.000} {}
 E { 3909} {climb} {climb} {0} {0} {} {1.000} {}
 E { 3986} {n} {n} {1} {0} {} {1.000} {}
 
-R { 3911} {0} {} {playhouse} { } {} {} {} {} {} {1.000} {}
-E {12271} {n} {n} {1} {0} {} {1.000} {}
-E {12269} {s} {s} {4} {0} {} {1.000} {}
+R { 3911} {0} {} {playhouse} { } {The non-forest continues south.  But now the `ground' is beginning to take on a purplish tint which seems to be coming from that obloid to the south. There is a dense patch of purple mist in this area through which you can dimly see huge shapes moving. } {Mud} {} {} {} {1.000} {}
+E { 4007} {n} {n} {1} {0} {} {1.000} {}
+E { 5630} {s} {s} {4} {0} {} {1.000} {}
 
 R { 3912} {0} {} {3912} { } {} {} {} {} {} {1.000} {}
 E { 3911} {w} {w} {8} {0} {} {1.000} {}
@@ -18068,23 +18068,26 @@ E { 3967} {n} {n} {1} {0} {} {1.000} {}
 R { 3967} {0} {} {3967} { } {} {} {} {} {} {1.000} {}
 E { 3966} {s} {s} {4} {0} {} {1.000} {}
 
-R { 3968} {0} {} {3968} { } {} {} {} {} {} {1.000} {}
+R { 3968} {0} {} {3968} { } {Well, for some unexplained reason you are now standing in a vast pasture.  The sun is shining, and grass is growing.  This is too weird.  You look back north but the vortex is no longer visible.  Come to mention it, nothing is very visible there, except for a lush green hill further to the east. } {Mud} {} {} {} {1.000} {}
 E {  167} {n} {n} {1} {0} {} {1.000} {}
-E {12264} {s} {s} {4} {0} {} {1.000} {}
-E {12262} {e} {e} {2} {0} {} {1.000} {}
+E { 3969} {s} {s} {4} {0} {} {1.000} {}
+E { 5260} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3969} {0} {} {3969} { } {} {} {} {} {} {1.000} {}
-E {12264} {n} {n} {1} {0} {} {1.000} {}
-E { 9864} {w} {w} {8} {0} {} {1.000} {}
-E {12263} {e} {e} {2} {0} {} {1.000} {}
-E {12265} {s} {s} {4} {0} {} {1.000} {}
+R { 3969} {0} {} {3969} { } {The grass gives way to innumerable little bits of glass.  They are arranged in intricate but non-linear rows.  It is night time here but the stars are out and a blazing comet casts sufficient light to see. } {Mud} {} {} {} {1.000} {}
+E { 3968} {n} {n} {1} {0} {} {1.000} {}
+E { 5270} {w} {w} {8} {0} {} {1.000} {}
+E { 5287} {e} {e} {2} {0} {} {1.000} {}
+E { 5289} {s} {s} {4} {0} {} {1.000} {}
 
-R { 3970} {0} {} {3970} { } {} {} {} {} {} {1.000} {}
+R { 3970} {0} {} {3970} { } {You step away from the void and into insanity.  You hear wailing coming from the distance and the room begins to spin before your eyes. Who knows where you are heading now but wherever it is, it's likely to be odd.  There seems to be a path off to the west, but you can't be sure. } {Mud} {} {} {} {1.000} {}
 E {  167} {s} {s} {4} {0} {} {1.000} {}
 E { 3971} {n} {n} {1} {0} {} {1.000} {}
+E { 5602} {w} {w} {8} {0} {} {1.000} {}
+E { 5601} {shop} {shop} {0} {0} {} {1.000} {}
 
-R { 3971} {0} {} {3971} { } {} {} {} {} {} {1.000} {}
+R { 3971} {0} {} {3971} { } {Your brain is under a serious assault now.  Images of horror and mayhem surround you.  Strange blobs of color float before your eyes, morphing into various shapes, each more hideous than the last. Insanity seems to be just another few breaths away. } {Mud} {} {} {} {1.000} {}
 E { 3970} {s} {s} {4} {0} {} {1.000} {}
+E { 5628} {e} {e} {2} {0} {} {1.000} {}
 
 R { 3972} {0} {} {banana peel} { } {} {} {} {} {} {1.000} {}
 E {  800} {w} {w} {8} {0} {} {1.000} {}
@@ -18225,20 +18228,21 @@ E { 4004} {nw} {nw} {9} {0} {} {1.000} {}
 R { 4004} {0} {} {4004} { } {} {} {} {} {} {1.000} {}
 E { 4003} {se} {se} {6} {0} {} {1.000} {}
 
-R { 4005} {0} {} {gumball machine} { } {} {} {} {} {} {1.000} {}
+R { 4005} {0} {} {gumball machine} { } {As you move north the road gives way to a cutesy little street lined by tall lollipop trees.  The smell of sugar is so intense here that you can almost hear the zits rising on your face and back.  I'd move on fast if I were you! } {Mud} {} {} {} {1.000} {}
 E { 2743} {s} {s} {4} {0} {} {1.000} {}
 E { 4006} {n} {n} {1} {0} {} {1.000} {}
 
-R { 4006} {0} {} {sippy cup} { } {} {} {} {} {} {1.000} {}
+R { 4006} {0} {} {sippy cup} { } {The lollipop trees give way abruptly to a narrow concrete road. To the north you can see a massive gray edifice.  Maybe the lollipops were former dwellers of that structure.  But if they were, you probably wouldn't want to chance going that way.  But if you were smart, you wouldn't be in Chaos anyway. } {Mud} {} {} {} {1.000} {}
 E { 4005} {s} {s} {4} {0} {} {1.000} {}
+E { 5633} {n} {n} {1} {0} {} {1.000} {}
 
-R { 4007} {0} {} {4007} { } {} {} {} {} {} {1.000} {}
-E {12272} {n} {n} {1} {0} {} {1.000} {}
-E {12271} {s} {s} {4} {0} {} {1.000} {}
-E {12268} {w} {w} {8} {0} {} {1.000} {}
+R { 4007} {0} {} {4007} { } {Branching off from the main road, you enter a plain forest. The ground beneath you is simply dirt with random tufts of grass shooting up through the ground. There is a marking of some sort etched in the dirt. } {Mud} {} {} {} {1.000} {}
+E { 2743} {n} {n} {1} {0} {} {1.000} {}
+E { 3911} {s} {s} {4} {0} {} {1.000} {}
+E { 5629} {w} {w} {8} {0} {} {1.000} {}
 
-R { 4008} {0} {} {4008} { } {} {} {} {} {} {1.000} {}
-E {12269} {n} {n} {1} {0} {} {1.000} {}
+R { 4008} {0} {} {4008} { } {-=  A well-travelled road  =- A well-travelled road leads east towards a large brick building.  Tall oak trees line the sides of the road.  A distinct bustling sound can be heard coming from farther east. } {Barney's Studio} {} {} {} {1.000} {}
+E { 5630} {n} {n} {1} {0} {} {1.000} {}
 E {12270} {e} {e} {2} {0} {} {1.000} {}
 
 R { 4009} {0} {<118>} {4009} { } {} {} {} {} {} {1.000} {}
@@ -19487,6 +19491,10 @@ E {  763} {s} {s} {4} {0} {} {1.000} {}
 
 R { 4292} {0} {} {A mercenary barracks (s)} { } {This is the north edge of Lut Gholein. A road leads south further into town after passing by a small warehouse and a large military building. Warriors wielding large spears train both inside and outside the structure. Dozens of houses line the sides of the street and various vendors have stalls setup near the training area. The sound of weapons striking targets and sparring soldiers is everywhere. } {Diablo 2 Act 2} {} {} {} {1.000} {}
 E {  969} {s} {s} {4} {0} {} {1.000} {}
+
+R { 4293} {5130} {} {} { } {} {} {} {} {} {1.000} {}
+E { 3077} {w} {w} {8} {0} {} {1.000} {}
+E { 3078} {e} {e} {2} {0} {} {1.000} {}
 
 R { 4294} {0} {} {4294} { } {} {} {} {} {} {1.000} {}
 E { 4107} {w} {w} {8} {0} {} {1.000} {}
@@ -24025,6 +24033,10 @@ E { 5262} {n} {n} {1} {0} {} {1.000} {}
 E { 5263} {w} {w} {8} {0} {} {1.000} {}
 E { 5264} {e} {e} {2} {0} {} {1.000} {}
 
+R { 5260} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {12262} {e} {e} {2} {0} {} {1.000} {}
+E { 3968} {w} {w} {8} {0} {} {1.000} {}
+
 R { 5261} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
 R { 5262} {0} {} {5262} { } {} {} {} {} {} {1.000} {}
@@ -24067,6 +24079,10 @@ E { 5267} {e} {e} {2} {0} {} {1.000} {}
 
 R { 5269} {0} {} {5269} { } {} {} {} {} {} {1.000} {}
 E { 5268} {e} {e} {2} {0} {} {1.000} {}
+
+R { 5270} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 9864} {w} {w} {8} {0} {} {1.000} {}
+E { 3969} {e} {e} {2} {0} {} {1.000} {}
 
 R { 5271} {0} {} {5271} { } {} {} {} {} {} {1.000} {}
 E { 5267} {w} {w} {8} {0} {} {1.000} {}
@@ -24147,9 +24163,17 @@ E { 5282} {w} {w} {8} {0} {} {1.000} {}
 E { 5288} {s} {s} {4} {0} {} {1.000} {}
 E { 6234} {e} {e} {2} {0} {} {1.000} {}
 
+R { 5287} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {12263} {e} {e} {2} {0} {} {1.000} {}
+E { 3969} {w} {w} {8} {0} {} {1.000} {}
+
 R { 5288} {0} {} {5288} { } {} {} {} {} {} {1.000} {}
 E { 5286} {n} {n} {1} {0} {} {1.000} {}
 E { 6229} {s} {s} {4} {0} {} {1.000} {}
+
+R { 5289} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {12265} {s} {s} {4} {0} {} {1.000} {}
+E { 3969} {n} {n} {1} {0} {} {1.000} {}
 
 R { 5290} {0} {} {5290} { } {} {} {} {} {} {1.000} {}
 E { 5118} {trail} {trail} {0} {0} {} {1.000} {}
@@ -25084,7 +25108,7 @@ E { 5498} {s} {s} {4} {0} {} {1.000} {}
 R { 5501} {0} {} {5501} { } {Gloomy and dark, this swamp is just about as far from smurfy as you can get. Blue and purple vegetation droop toward the muddy ground and thick trees block out the sky overhead. This swamp is the domain of King Bullrush and his Wartmonger minions. They don't like visitors. } {Smurfland 3} {} {} {} {1.000} {}
 E { 5498} {e} {e} {2} {0} {} {1.000} {}
 
-R { 5502} {0} {} {chessboard} { } {} {} {chessboard} {} {} {1.000} {}
+R { 5502} {0} {<118>} {chessboard} { } {} {} {chessboard} {} {} {1.000} {}
 E {  168} {climb} {climb} {0} {0} {} {1.000} {}
 E { 5679} {w} {w} {8} {0} {} {1.000} {}
 E { 5709} {e} {e} {2} {0} {} {1.000} {}
@@ -25502,6 +25526,21 @@ R { 5599} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 5598} {w} {w} {8} {0} {} {1.000} {}
 E {11447} {e} {e} {2} {0} {} {1.000} {}
 
+R { 5600} {0} {} {A Small Pathway (e,s)} { } {You are on a small woodland pathway through a small forest. The sun shines overhead through the trees and the birds sing softly in the trees. To the south you think you can make out a clearing. } {Mud} {} {} {} {1.000} {}
+E { 5602} {e} {e} {2} {0} {} {1.000} {}
+
+R { 5601} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 5602} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 5600} {w} {w} {8} {0} {} {1.000} {}
+E { 3970} {e} {e} {2} {0} {} {1.000} {}
+
+R { 5603} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {12266} {e} {e} {2} {0} {} {1.000} {}
+
+R { 5604} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {12266} {sw} {sw} {12} {0} {} {1.000} {}
+
 R { 5605} {0} {} {5605} { } {} {} {} {} {} {1.000} {}
 E {   69} {n} {n} {1} {0} {} {1.000} {}
 E { 5596} {s} {s} {4} {0} {} {1.000} {}
@@ -25590,6 +25629,47 @@ E { 3932} {travel rogue encampment} {travel rogue encampment} {0} {0} {} {1.000}
 R { 5625} {0} {<118>} {5625} { } {} {} {} {} {} {1.000} {}
 E { 3932} {travel rogue encampment} {travel rogue encampment} {0} {0} {} {1.000} {}
 
+R { 5626} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {12259} {s} {s} {4} {0} {} {1.000} {}
+E {  168} {n} {n} {1} {0} {} {1.000} {}
+
+R { 5627} {0} {} {The Yellow Brick Road (s,w)} { } {The ground beneath you is made of solid gold bricks.  You look  around cautiously, in sudden fear that a house may drop out of  the sky from nowhere and land on your head.  A crowd of drooling idiots mills around here as if waiting for something. } {Mud} {} {} {} {1.000} {}
+E {12403} {s} {s} {4} {0} {} {1.000} {}
+E { 5628} {w} {w} {8} {0} {} {1.000} {}
+
+R { 5628} {0} {} {A bridge (w,e)} { } {You are crossing a bridge of mist.  In places, the mist gives way to hideous shapes made out of gold.  Which, you suddenly realize is absolutely impossible.  The more you look at them the more you start to look like them.  And anyone with an ounce of sense wouldn't like that!  Of course, they wouldn't be here either but you ignore that thought. } {Mud} {} {} {} {1.000} {}
+E { 5627} {e} {e} {2} {0} {} {1.000} {}
+E { 3971} {w} {w} {8} {0} {} {1.000} {}
+
+R { 5629} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {12268} {w} {w} {8} {0} {} {1.000} {}
+E { 4007} {e} {e} {2} {0} {} {1.000} {}
+
+R { 5630} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 4008} {s} {s} {4} {0} {} {1.000} {}
+E { 3911} {n} {n} {1} {0} {} {1.000} {}
+
+R { 5631} {0} {} {Shady lane (s,n)} { } {This is a shady lane that leads to a large institution sitting on a hill to the north.  You notice all around you things seem pleasant and very quiet. } {Shady Oaks Asylum} {} {} {} {1.000} {}
+E { 5633} {s} {s} {4} {0} {} {1.000} {}
+E { 5632} {n} {n} {1} {0} {} {1.000} {}
+
+R { 5632} {0} {} {Shady lane (s,n)} { } {This is a shady lane.  All around you things seem pleasant and very quiet.  You are just outside the gates of the institution. } {Shady Oaks Asylum} {} {} {} {1.000} {}
+E { 5631} {s} {s} {4} {0} {} {1.000} {}
+E { 5634} {n} {n} {1} {0} {} {1.000} {}
+
+R { 5633} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 5631} {n} {n} {1} {0} {} {1.000} {}
+E { 4006} {s} {s} {4} {0} {} {1.000} {}
+
+R { 5634} {0} {} {Gates (w,e,s,n)} { } {You are inside the gates of a beautiful complex.  There are tennis courts to the east and a sundeck to the west.  Further north, there is a set of stairs.  To leave this tranquil place you must go south. } {Shady Oaks Asylum} {} {} {} {1.000} {}
+E { 5632} {s} {s} {4} {0} {} {1.000} {}
+E { 5635} {w} {w} {8} {0} {} {1.000} {}
+E { 5642} {e} {e} {2} {0} {} {1.000} {}
+E { 5643} {n} {n} {1} {0} {} {1.000} {}
+
+R { 5635} {0} {} {Sundeck (e)} { } {This is a nice warm sundeck.  The sun beams down and makes the surroundings very comfortable.  There are a couple of deck chairs, and a beanbag. } {Shady Oaks Asylum} {} {} {} {1.000} {}
+E { 5634} {e} {e} {2} {0} {} {1.000} {}
+
 R { 5636} {0} {} {5636} { } {} {} {} {} {} {1.000} {}
 E {  834} {w} {w} {8} {0} {} {1.000} {}
 
@@ -25607,6 +25687,32 @@ E {  983} {n} {n} {1} {0} {} {1.000} {}
 
 R { 5641} {0} {} {5641} { } {} {} {} {} {} {1.000} {}
 E {  984} {e} {e} {2} {0} {} {1.000} {}
+
+R { 5642} {0} {} {Tennis courts (w)} { } {This is where the residents of Shady Oaks can come and enjoy a nice friendly tennis match. } {Shady Oaks Asylum} {} {} {} {1.000} {}
+E { 5634} {w} {w} {8} {0} {} {1.000} {}
+
+R { 5643} {0} {} {Stairs (s,n)} { } {Standing on the steps, you can see the nice path from which you came.  Something tells you it's not too late to turn back. } {Shady Oaks Asylum} {} {} {} {1.000} {}
+E { 5634} {s} {s} {4} {0} {} {1.000} {}
+E { 5644} {n} {n} {1} {0} {} {1.000} {}
+
+R { 5644} {0} {} {Main hall (s,w)} { } {The main hall of Shady Oaks.  It is the hub of activity for this little world that so many here endure.  The centurions of this world are the nurses.  They hold the keys. } {Shady Oaks Asylum} {} {} {} {1.000} {}
+E { 5643} {s} {s} {4} {0} {} {1.000} {}
+E { 5645} {w} {w} {8} {0} {} {1.000} {}
+
+R { 5645} {0} {} {Side hall (e,n)} { } {A side hall of Shady Oaks.  It is a bustle of activity for this little world that so many here endure.  The centurions of this world are the nurses.  They hold the keys. } {Shady Oaks Asylum} {} {} {} {1.000} {}
+E { 5644} {e} {e} {2} {0} {} {1.000} {}
+E { 5646} {n} {n} {1} {0} {} {1.000} {}
+
+R { 5646} {0} {} {Hospital Room (s)} { } {This is an empty hospital room.  No patients are allowed in here because they may accidentally fall asleep on Alfonzo's Magic Dreambed. } {Shady Oaks Asylum} {} {} {} {1.000} {}
+E { 5645} {s} {s} {4} {0} {} {1.000} {}
+
+R { 5647} {0} {} {-=  A well-travelled road  =- (s,enter)} { } {-=  A well-travelled road  =- At the end of the purple road is a large studio.  It is made of brick and people are coming in and out of it\; mostly children.  A large purple sign stands in front of the building.  There is a door that leads into the studio through the gate. } {Barney's Studio} {} {} {} {1.000} {}
+E {12274} {s} {s} {4} {0} {} {1.000} {}
+E { 5648} {enter} {enter} {0} {0} {} {1.000} {}
+
+R { 5648} {0} {} {-= Inside Studio B =- (out,e)} { } {-= Inside Studio B =- Cameras, wires, and microphones lie scattered around.  Light gels dangle from their metal holders in the catwalk.  Bits of colored construction paper and odd paper plate shapes litter the floor.  The hustle and bustle of a show being readied for taping echoes through the halls. } {Barney's Studio} {} {} {} {1.000} {}
+E { 5647} {out} {out} {0} {0} {} {1.000} {}
+E { 5666} {e} {e} {2} {0} {} {1.000} {}
 
 R { 5649} {0} {} {5649} { } {A large market sits on the western edge of town. Large walls rise up to the west and south, and a large palace dominates the north side of the market. Because there is only one way into the market, would-be thieves think twice about stealing from the merchants. People hawk wares and merchants make purchases, making this the economic center of the desert. The houses in this part of Lut Gholein are of a higher quality representing the merchant class that lives here. } {Diablo 2 Act 2} {} {} {} {1.000} {}
 E { 5567} {e} {e} {2} {0} {} {1.000} {}
@@ -25674,14 +25780,54 @@ E { 5661} {se} {se} {6} {0} {} {1.000} {}
 R { 5665} {513} {} {mushroom ring 2} { } {} {} {} {} {} {1.000} {}
 E {  167} {clap} {clap} {0} {0} {} {1.000} {}
 
+R { 5666} {0} {} {-= Inside Studio B =- (n,w)} { } {-= Inside Studio B =- Dressing rooms of all sizes span the hallways.  Giant gold stars adorn each door.  Pancake make-up and red lipstick smear the walls.  A thick line of carpet lies in the center of the floor.  Children's laughter bounces through the halls. It sounds like everyone is getting ready to tape 'Barney'. } {Barney's Studio} {} {} {} {1.000} {}
+E { 5648} {w} {w} {8} {0} {} {1.000} {}
+E { 5668} {n} {n} {1} {0} {} {1.000} {}
+
 R { 5667} {0} {} {fallen stance} { } {} {} {fallen stance} {} {} {1.000} {}
 E { 5662} {return} {return} {0} {0} {} {1.000} {}
+
+R { 5668} {0} {} {-= Inside Studio B =- (s,n)} { } {-= Inside Studio B =- The clamour of children screeching with delight and stagehands moving and adjusting equipment grows louder.  The area leading down to the main sound stage is heavily littered with props, lunch garbage, and drawing paper.  A hurried stage mother runs towards the set, pushing her child toward stardom. } {Barney's Studio} {} {} {} {1.000} {}
+E { 5666} {s} {s} {4} {0} {} {1.000} {}
+E { 5669} {n} {n} {1} {0} {} {1.000} {}
+
+R { 5669} {0} {} {-= Playroom Set =- (w,s)} { } {-= Playroom Set =- The main sound stage for the 'Barney' show consists of two sets. The larger of the two sets is a replica of a playroom with a giant toy box stuffed with toys of all sizes, a make-shift ship, a futuristic robot made from cardboard and tinfoil, and more arts and crafts stuff than any person could do in ten lifetimes. } {Barney's Studio} {} {} {} {1.000} {}
+E { 5668} {s} {s} {4} {0} {} {1.000} {}
+E { 5670} {w} {w} {8} {0} {} {1.000} {}
+
+R { 5670} {0} {} {-= Playground Set =- (w,e)} { } {-= Playground Set =- Facing east, a wall of fake brick makes up the outside of a school building.  A set of four steps leads down into the make-believe playground.  Behind the jungle gym, lies a fake metal fence complete with schoolyard backdrop.  On the ground, a sheet of vinyl acts as asphalt where kids can play hopscotch or other children's games. } {Barney's Studio} {} {} {} {1.000} {}
+E { 5669} {e} {e} {2} {0} {} {1.000} {}
+E { 5673} {w} {w} {8} {0} {} {1.000} {}
 
 R { 5671} {0} {} {fallen shop} { } {} {} {} {} {} {1.000} {}
 E { 5662} {e} {e} {2} {0} {} {1.000} {}
 
 R { 5672} {0} {} {5672} { } {} {} {} {} {} {1.000} {}
 E { 5662} {n} {n} {1} {0} {} {1.000} {}
+
+R { 5673} {0} {} {-= Backstage =- (s,e)} { } {-= Backstage =- Behind the moleskin flats, worn furniture, costumes, large metal scaffolds, and dried out make-up are thoughtlessly tossed aside.  Two heavy sliding doors for deliveries adorn the back wall.  There is a technician on the catwalk, adjusting the lights. } {Barney's Studio} {} {} {} {1.000} {}
+E { 5670} {e} {e} {2} {0} {} {1.000} {}
+E { 5674} {s} {s} {4} {0} {} {1.000} {}
+
+R { 5674} {0} {} {-= Inside Studio B =- (s,n)} { } {-= Inside Studio B =- Crooked pictures of former cast members hang on the hallway walls.  An overhead light flickers and buzzes like a trapped bee.  The tile floor is dirty and cracked. } {Barney's Studio} {} {} {} {1.000} {}
+E { 5673} {n} {n} {1} {0} {} {1.000} {}
+E { 5675} {s} {s} {4} {0} {} {1.000} {}
+
+R { 5675} {0} {} {-= Prop Room =- (s,n)} { } {-= Prop Room =- The prop room stands 10x15 feet.  Along the north wall, shelves are lined from floor to ceiling, holding every kind of art supply imaginable.  The west wall holds small costume accessories used for when the cast plays dress-up.  Rolls of backdrops, held together with large rubberbands lean up against the south wall. } {Barney's Studio} {} {} {} {1.000} {}
+E { 5674} {n} {n} {1} {0} {} {1.000} {}
+E { 5676} {s} {s} {4} {0} {} {1.000} {}
+
+R { 5676} {0} {} {-= Inside Studio B =- (w,n)} { } {-= Inside Studio B =- The long hallway stretches from the prop room along the west side of the taping studio.  All the doors seemed to be closed and locked.  Booming yells bounce off the walls.  The lighting is harsh and unflattering.  A few obscenities, directed towards a clumsy stagehand, drift down from the soundstage. } {Barney's Studio} {} {} {} {1.000} {}
+E { 5675} {n} {n} {1} {0} {} {1.000} {}
+E { 5677} {w} {w} {8} {0} {} {1.000} {}
+
+R { 5677} {0} {} {-= Barney's Dressing Room =- (w,e)} { } {-= Barney's Dressing Room =- A large purple star hangs on the door leading into a dressing room.  This room obviously belongs to the star of the show, 'Barney.'  To the right of the door is a long mirror and counter shining with hundreds of little light bulbs.  A large swivel chair stands in front of the counter, with two big purple feet leaning against it. } {Barney's Studio} {} {} {} {1.000} {}
+E { 5676} {e} {e} {2} {0} {} {1.000} {}
+E { 5678} {w} {w} {8} {0} {} {1.000} {}
+
+R { 5678} {0} {} {-= Inside Studio B =- (w,e)} { } {-= Inside Studio B =- The lighting in the hallway is harsh and unflattering.  A few obscenities, directed towards a clumsy stagehand, drift down from the soundstage.  Crooked pictures of former cast members hang on the walls.  The tile floor is cracked and dirty. } {Barney's Studio} {} {} {} {1.000} {}
+E { 5677} {e} {e} {2} {0} {} {1.000} {}
+E { 5816} {w} {w} {8} {0} {} {1.000} {}
 
 R { 5679} {0} {} {5679} { } {} {} {} {} {} {1.000} {}
 E { 5502} {e} {e} {2} {0} {} {1.000} {}
@@ -26332,14 +26478,25 @@ R { 5815} {0} {} {5815} { } {} {} {} {} {} {1.000} {}
 E {  976} {w} {w} {8} {0} {} {1.000} {}
 E {  836} {e} {e} {2} {0} {} {1.000} {}
 
+R { 5816} {0} {} {-= Inside Studio B =- (e,n)} { } {-= Inside Studio B =- The lighting in the hallway is harsh and unflattering.  A few obscenities, directed towards a clumsy stagehand, drift down from the soundstage.  Crooked pictures of former cast members hang on the walls.  The tile floor is cracked and dirty.  The only thing that distinguishes this room above the others is a bright green door.  The rest of the studio continues to the north. } {Barney's Studio} {} {} {} {1.000} {}
+E { 5678} {e} {e} {2} {0} {} {1.000} {}
+E { 5817} {n} {n} {1} {0} {} {1.000} {}
+
+R { 5817} {0} {} {-= Inside Studio B =- (n,s)} { } {-= Inside Studio B =- Crooked pictures of former cast members hang on the hallway walls.  Several kids run, screaming for their lunches.  An overhead light flickers and buzzes like a trapped bee.  The tile floor is dirty and cracked. There is a door at the end of the hallway.  It stands open revealing a portion of the director's couch. } {Barney's Studio} {} {} {} {1.000} {}
+E { 5816} {s} {s} {4} {0} {} {1.000} {}
+E { 5818} {n} {n} {1} {0} {} {1.000} {}
+
+R { 5818} {0} {} {-= Director's Office =- (s)} { } {-= Director's Office =- A large desk in poor condition takes up most of the space.  Papers and folders are strewn about in disarray. A black vinyl couch sits facing the desk.  Pictures of the director and various celebrities hang on the wall.  A novelty hand grenade sits on top of the desk.  A megaphone and whistle sit on the floor next to the trashcan. } {Barney's Studio} {} {} {} {1.000} {}
+E { 5817} {s} {s} {4} {0} {} {1.000} {}
+
 R { 5826} {0} {} {5826} { } {} {} {} {} {} {1.000} {}
 E { 5814} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 5827} {0} {} {5827} { } {} {} {} {} {} {1.000} {}
+R { 5827} {0} {} {5827} { } {The charred ground was clearly an optical illusion.  Because you have stumbled upon a hidden utopia.  A vine covered fence blocks your view.  Maybe you should find out what great wisdom and transcendental coolness is being done here! } {Mud} {} {} {} {1.000} {}
 E {  168} {s} {s} {4} {0} {} {1.000} {}
 E { 5828} {climb vine} {climb vine} {0} {0} {} {1.000} {}
 
-R { 5828} {0} {} {hippies} { } {} {} {} {} {} {1.000} {}
+R { 5828} {0} {<118>} {hippies} { } {} {} {} {} {} {1.000} {}
 E { 5827} {exit} {exit} {0} {0} {} {1.000} {}
 E { 5829} {n} {n} {1} {0} {} {1.000} {}
 
@@ -27088,16 +27245,16 @@ E { 6033} {w} {w} {8} {0} {} {1.000} {}
 R { 6037} {0} {<128>} {witch advancement} { } {} {} {} {} {} {1.000} {}
 E { 6022} {e} {e} {2} {0} {} {1.000} {}
 
-R { 6038} {0} {<118>} {6038} { } {} {} {} {} {} {1.000} {}
+R { 6038} {0} {} {6038} { } {A brand-spanking new path! How 'bout that? It's made out of some kind of spongy material that adds a bounce to your step. The land around the path is as flat as Leeloo Dallas and looks like it's covered in AstroTurf. } {Mud} {} {} {} {1.000} {}
 E { 2744} {s} {s} {4} {0} {} {1.000} {}
 E { 6039} {n} {n} {1} {0} {} {1.000} {}
 E { 9953} {drool longingly} {drool longingly;#read .tt/Dirs/donuts_load.tt} {0} {0} {} {1.000} {}
 
-R { 6039} {0} {<128>} {fortune cookie} { } {} {} {} {} {} {1.000} {}
+R { 6039} {0} {} {fortune cookie} { } {This portion of the path is as bouncy as a trampoline. It's all you can do to avoid doing a backflip! The surrounding AstroTurf is now bright red and decorated with shiny white polka-dots. What looks like a giant glazed donut hovers overhead, occasionally dripping sugary sweetness upon the ground. } {Mud} {} {} {} {1.000} {}
 E { 6038} {s} {s} {4} {0} {} {1.000} {}
 E { 6040} {break cookie} {break cookie} {0} {0} {} {1.000} {}
 
-R { 6040} {0} {} {6040} { } {} {} {} {} {} {1.000} {}
+R { 6040} {0} {<118>} {6040} { } {} {} {} {} {} {1.000} {}
 E { 6039} {exit} {exit} {0} {0} {} {1.000} {}
 E { 6041} {n} {n} {1} {0} {} {1.000} {}
 
@@ -47154,17 +47311,9 @@ R { 9862} {0} {} {9862} { } {} {} {} {} {} {1.000} {}
 E { 9861} {e} {e} {2} {0} {} {1.000} {}
 E { 9854} {w} {w} {8} {0} {} {1.000} {}
 
-R { 9863} {4104} {} {9863} { } {} {} {} {} {} {1.000} {}
-E { 2743} {w} {w} {8} {0} {} {1.000} {}
-E { 9865} {e} {e} {2} {0} {} {1.000} {}
-
 R { 9864} {0} {} {9864} { } {} {} {} {} {} {1.000} {}
-E { 3969} {e} {e} {2} {0} {} {1.000} {}
+E { 5270} {e} {e} {2} {0} {} {1.000} {}
 E { 9866} {w} {w} {8} {0} {} {1.000} {}
-
-R { 9865} {4104} {} {9865} { } {} {} {} {} {} {1.000} {}
-E { 9863} {w} {w} {8} {0} {} {1.000} {}
-E {  167} {e} {e} {2} {0} {} {1.000} {}
 
 R { 9866} {0} {<118>} {9866} { } {} {} {} {} {} {1.000} {}
 E { 9864} {e} {e} {2} {0} {} {1.000} {}
@@ -51661,7 +51810,7 @@ E {10942} {s} {s} {4} {0} {} {1.000} {}
 R {10942} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10941} {n} {n} {1} {0} {} {1.000} {}
 
-R {10943} {0} {} {checkers} { } {} {} {} {} {} {1.000} {}
+R {10943} {0} {<118>} {checkers} { } {} {} {} {} {} {1.000} {}
 E { 2743} {ladder} {ladder} {0} {0} {} {1.000} {}
 E {10944} {nw} {nw} {9} {0} {} {1.000} {}
 E {10955} {ne} {ne} {3} {0} {} {1.000} {}
@@ -56283,7 +56432,7 @@ E {12009} {e} {e} {2} {0} {} {1.000} {}
 E {11982} {w} {w} {8} {0} {} {1.000} {}
 E {11984} {n} {n} {1} {0} {} {1.000} {}
 
-R {12011} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {12011} {0} {} {Wickwood Forest (n)} { } {The ground underfoot is hard-packed dirt and a multitude of strange trees surrounds you. You recognize a few varieties such as bamboo and palm, but what are these others? Some of the wood is bright red, others are purple, and some of these 'trees' actually appear to be giant Q-tips! } {Mud} {} {} {} {1.000} {}
 E { 2746} {n} {n} {1} {0} {} {1.000} {}
 E {12012} {smoke hookah} {smoke hookah} {0} {0} {} {1.000} {}
 
@@ -57391,63 +57540,42 @@ R {12258} {4104} {} {} { } {} {} {} {} {} {1.000} {}
 E {  798} {e} {e} {2} {0} {} {1.000} {}
 E {  797} {w} {w} {8} {0} {} {1.000} {}
 
-R {12259} {0} {} {} { } {} {} {} {} {} {1.000} {}
-E {  168} {n} {n} {1} {0} {} {1.000} {}
+R {12259} {0} {} {A road leading north-south (n,s)} { } {You are on a road moving north-south.  A hill rises in the south, leading to cloud-covered mountains in the distance.  Steam floats lazily in the air, forming shapes that dissipate before you can name them.  Red and yellow flowers bloom along the roadside, offering bright splashes of color that draw the eye and please the senses. } {Mud} {} {} {} {1.000} {}
+E { 5626} {n} {n} {1} {0} {} {1.000} {}
 E {12260} {s} {s} {4} {0} {} {1.000} {}
 
-R {12260} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {12260} {0} {} {A strange hill (n)} { } {This hill is utterly devoid of plantation.  For all you know, you might be walking atop the bald head of a towering gray giant.  The ground slopes downward to the north and continues to rise toward a range of oddly shaped mountains to the south.  A thin set of railroad tracks crosses the road moving in an east-west direction. } {Mud} {} {} {} {1.000} {}
 E {12259} {n} {n} {1} {0} {} {1.000} {}
 
-R {12261} {4104} {} {} { } {} {} {} {} {} {1.000} {}
-E {  168} {e} {e} {2} {0} {} {1.000} {}
-E {  167} {w} {w} {8} {0} {} {1.000} {}
-
 R {12262} {0} {} {} { } {} {} {} {} {} {1.000} {}
-E { 3968} {w} {w} {8} {0} {} {1.000} {}
+E { 5260} {w} {w} {8} {0} {} {1.000} {}
 
 R {12263} {0} {} {} { } {} {} {} {} {} {1.000} {}
-E { 3969} {w} {w} {8} {0} {} {1.000} {}
+E { 5287} {w} {w} {8} {0} {} {1.000} {}
 
-R {12264} {4104} {} {} { } {} {} {} {} {} {1.000} {}
-E { 3969} {s} {s} {4} {0} {} {1.000} {}
-E { 3968} {n} {n} {1} {0} {} {1.000} {}
-
-R {12265} {0} {} {} { } {} {} {} {} {} {1.000} {}
-E { 3969} {n} {n} {1} {0} {} {1.000} {}
+R {12265} {0} {} {Sandy Path (s,n)} { } {You have stumbled upon a sandy path.  Things don't seem quite as chaotic here, yet things in Chaos aren't always as they seem to be. As you look to the east, you can see a forest. The path here continues to the south. } {Mud} {} {} {} {1.000} {}
+E { 5289} {n} {n} {1} {0} {} {1.000} {}
 E {12266} {s} {s} {4} {0} {} {1.000} {}
 
-R {12266} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {12266} {0} {} {Sandy Path (w,ne,n)} { } {Your travels bring you to a turn on the sandy path. The realms of Chaos are to your north, and to your northeast you can see a mighty forest. The path continues to the northeast. } {Mud} {} {} {} {1.000} {}
 E {12265} {n} {n} {1} {0} {} {1.000} {}
-
-R {12267} {4104} {} {} { } {} {} {} {} {} {1.000} {}
-E { 2744} {w} {w} {8} {0} {} {1.000} {}
-E { 2743} {e} {e} {2} {0} {} {1.000} {}
+E { 5603} {w} {w} {8} {0} {} {1.000} {}
+E { 5604} {ne} {ne} {3} {0} {} {1.000} {}
 
 R {12268} {0} {} {} { } {} {} {} {} {} {1.000} {}
-E { 4007} {e} {e} {2} {0} {} {1.000} {}
+E { 5629} {e} {e} {2} {0} {} {1.000} {}
 
-R {12269} {4104} {} {} { } {} {} {} {} {} {1.000} {}
-E { 4008} {s} {s} {4} {0} {} {1.000} {}
-E { 3911} {n} {n} {1} {0} {} {1.000} {}
-
-R {12270} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {12270} {0} {} {-=  A well-travelled road  =- (w,e)} { } {-=  A well-travelled road  =- The well-travelled road runs east-west.  Nothing really out of the ordinary seems to be happening.  Although, there are large purple-lined clouds, lazily drifting by in the sky.  A brick building is farther ahead northeast. } {Barney's Studio} {} {} {} {1.000} {}
 E { 4008} {w} {w} {8} {0} {} {1.000} {}
 E {12273} {e} {e} {2} {0} {} {1.000} {}
 
-R {12271} {4104} {} {} { } {} {} {} {} {} {1.000} {}
-E { 3911} {s} {s} {4} {0} {} {1.000} {}
-E { 4007} {n} {n} {1} {0} {} {1.000} {}
-
-R {12272} {4104} {} {} { } {} {} {} {} {} {1.000} {}
-E { 4007} {s} {s} {4} {0} {} {1.000} {}
-E { 2743} {n} {n} {1} {0} {} {1.000} {}
-
-R {12273} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {12273} {0} {} {-=  A well-travelled road  =- (w,e)} { } {-=  A well-travelled road  =- The well-travelled road continues east-west.  Tall oak trees line the sides of the road, a sprinkling of purple flowers dot the grass surrounding the trees.  The hustle and bustle noises are growing louder. } {Barney's Studio} {} {} {} {1.000} {}
 E {12270} {w} {w} {8} {0} {} {1.000} {}
 E {12274} {e} {e} {2} {0} {} {1.000} {}
 
-R {12274} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {12274} {0} {} {-=  A well-travelled road  =- (w,n)} { } {-=  A well-travelled road  =- The well-travelled road curves north, towards the brick building.  It is almost in plain view from here.  The clamour of children grows louder.  Everything has a strange purple tint to it. } {Barney's Studio} {} {} {} {1.000} {}
 E {12273} {w} {w} {8} {0} {} {1.000} {}
+E { 5647} {n} {n} {1} {0} {} {1.000} {}
 
 R {12275} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11751} {ne} {ne} {3} {0} {} {1.000} {}
@@ -57969,8 +58097,9 @@ E {12385} {n} {n} {1} {0} {} {1.000} {}
 R {12402} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {  169} {n} {n} {1} {0} {} {1.000} {}
 
-R {12403} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {12403} {0} {} {A path of yellow dirt (n,s)} { } {That highway definitely didn't go anywhere.  As you move north it totally disappears.  No trucks, no asphalt, nothing.  You suddenly find yourself on a road of yellow dirt.  You almost imagine that you can see the outlines of bricks.  This has got to be your imagination. To make matters worse, you think you detect the odor of a dead skunk somewhere nearby. } {Mud} {} {} {} {1.000} {}
 E {  169} {s} {s} {4} {0} {} {1.000} {}
+E { 5627} {n} {n} {1} {0} {} {1.000} {}
 
 R {12404} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {  798} {n} {n} {1} {0} {} {1.000} {}
