@@ -83,7 +83,7 @@ make_global_blacklist
 #math selector[top] $exitpanel[bottom]+1;
 #math selector[bottom] $selector[top]+$selector[height];
 #alias {show_area_selector}{
-	#if {"$draw[selector]" == "on"}{
+	#if {"$draw[selector]" == "on" && "$draw[canvas]" == "on"}{
 		#screen clear square $selector[top] -42 $selector[bottom] -1;
 		#draw rounded box $selector[top] -41 $selector[bottom] -3;
 		#showme {[<<]-[Area Selector]-[>>]} $selector[top] -33;
