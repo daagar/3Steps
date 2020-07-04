@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 10
+F 11
 
 G 0
 
-I 1
+I 4748
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} { }
+L {UNICODE GRAPHICS} {NO DIAGONAL} {}
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -261,53 +261,58 @@ E {10893} {w} {w} {8} {0} {} {1.000} {}
 E {    2} {sh} {sh} {0} {0} {} {1.000} {}
 E {  977} {new} {new} {0} {0} {} {1.000} {}
 
-R {    2} {0} {<118>} {shop} { } {} {} {shop} {} {} {1.000} {}
-E {    3} {w} {w} {8} {0} {} {1.000} {}
+R {    2} {0} {} {shop} { } {           **  Welcome to the Foundation Emporium!  ** In a time long past, the city of Foundation was built around this shop.  Since then the shop has grown to be the largest in the land.  Many things change hands here, from the most common, to the most bizarre. There is a plaque hanging behind the counter. } {Mud} {shop} {} {} {1.000} {}
+E { 4238} {w} {w} {8} {0} {} {1.000} {}
 E {  795} {d} {d} {32} {0} {} {1.000} {}
 E {    1} {home} {home} {0} {0} {} {1.000} {}
+E { 4239} {u} {u} {16} {0} {} {1.000} {}
 
-R {    3} {0} {} {cot} { } {} {} {cot} {} {} {1.000} {}
-E {    2} {e} {e} {2} {0} {} {1.000} {}
+R {    3} {0} {} {cot} { } {This is the center of Foundation.  A well-kept but simple cobbled street runs north and south. There is a statue of a man here in the middle of the street.  To the east a low-hung whitewashed building buzzes with activity.  A towering and ornately decorated Lodestone edifice looms to the west.  A strange and mottled sky hangs low casting weird shadows which are barely dispelled by the lights on the oddly shaped streetposts.  You shiver. Hovering far in the air here is a strange looking hemispherical structure.  You could probably jump up to it if you wanted.  In the base of the structure is a huge iron trapdoor. } {Mud} {cot} {} {} {1.000} {}
+E { 4238} {e} {e} {2} {0} {} {1.000} {}
 E {    4} {n} {n} {1} {0} {} {1.000} {}
 E {  688} {s} {s} {4} {0} {} {1.000} {}
-E { 5956} {w} {w} {8} {0} {} {1.000} {}
+E { 4237} {w} {w} {8} {0} {} {1.000} {}
+E { 4233} {d} {d} {32} {0} {} {1.000} {}
+E { 4234} {omp} {omp} {0} {0} {} {1.000} {}
+E { 4235} {jump} {jump} {0} {0} {} {1.000} {}
+E { 4236} {gswap} {gswap} {0} {0} {} {1.000} {}
 
-R {    4} {0} {} {4} { } {} {} {} {} {} {1.000} {}
+R {    4} {0} {} {4} { } {The cobbles give way to a weird, twisting tile that makes your stomach churn uneasily.  This must be Waverly Street. You stand at an intersection where the cobbles of Main Street, which stretches to the south, meet the stomach- wrenching oddity of an undulating tile-covered path that goes left to right.  Just to the north there is a small, unimpressive brick building with a massive iron door. } {Mud} {} {} {} {1.000} {}
 E {    3} {s} {s} {4} {0} {} {1.000} {}
 E {    5} {e} {e} {2} {0} {} {1.000} {}
 E {   63} {w} {w} {8} {0} {} {1.000} {}
 E {  692} {n} {n} {1} {0} {} {1.000} {}
 
-R {    5} {0} {} {5} { } {} {} {} {} {} {1.000} {}
+R {    5} {0} {} {5} { } {You are on a street surfaced with weird, undulating green tiles which goes from east to west.  The back of a building lies to the south while an unprepossessing white building stands doughtily to the north. } {Mud} {} {} {} {1.000} {}
 E {    4} {w} {w} {8} {0} {} {1.000} {}
 E {    6} {e} {e} {2} {0} {} {1.000} {}
-E { 6082} {n} {n} {1} {0} {} {1.000} {}
+E { 6473} {n} {n} {1} {0} {} {1.000} {}
 
-R {    6} {0} {} {6} { } {} {} {} {} {} {1.000} {}
+R {    6} {0} {} {6} { } {You are on a narrow country lane which runs north and south. Waverly Street and the center of Foundation are to the west. The City Morgue lies to the east.  The sky to the north and east comes together in a spectacular color clash.  To the south you see a strange, tar-covered road heading off to the east.  Your nose hurts and your eyes water.  You sneeze! } {Mud} {} {} {} {1.000} {}
 E {    5} {w} {w} {8} {0} {} {1.000} {}
 E {    7} {s} {s} {4} {0} {} {1.000} {}
 E { 4746} {n} {n} {1} {0} {} {1.000} {}
 E { 5638} {e} {e} {2} {0} {} {1.000} {}
 
-R {    7} {0} {} {7} { } {} {} {} {} {} {1.000} {}
+R {    7} {0} {} {7} { } {Your feet slip slightly in the tar-covered, oil-specked road that leads off into a strange, stench-ridden and eye-hurting haze. To the north, an odd waver in the air causes the hair to stand up on the back of your neck, but all you can see is a pleasant country lane.  An old building lies to the west and an intersection lies to the south. } {Mud} {} {} {} {1.000} {}
 E {    6} {n} {n} {1} {0} {} {1.000} {}
 E {    8} {e} {e} {2} {0} {} {1.000} {}
 E {  690} {s} {s} {4} {0} {} {1.000} {}
 
-R {    8} {0} {} {8} { } {} {} {} {} {} {1.000} {}
+R {    8} {0} {} {8} { } {You are moving along a strange, incredibly hot asphalt road which runs east into a haze and west towards the fantastic city of Foundation.  You can see the side of a large abandoned ruin to the north. A large sign with no visible supports, is hanging in the air, just out of your reach. } {Mud} {} {} {} {1.000} {}
 E {    7} {w} {w} {8} {0} {} {1.000} {}
-E { 6383} {e} {e} {2} {0} {} {1.000} {}
+E {    9} {e} {e} {2} {0} {} {1.000} {}
 
-R {    9} {0} {<118>} {9} { } {} {} {} {} {} {1.000} {}
-E { 6384} {w} {w} {8} {0} {} {1.000} {}
+R {    9} {0} {} {9} { } {You are moving along a strange, incredibly hot asphalt road which runs east into a haze and west towards the fantastic city of Foundation.  Through the intense smog, you can vaguely make out an offramp to the south.  To the east, the road comes to an abrupt end in a malevolent and terrible desert. An odd oval gateway hovers about a foot off the ground in the middle of the road. } {Mud} {} {} {} {1.000} {}
+E {    8} {w} {w} {8} {0} {} {1.000} {}
 E {   10} {enter} {enter} {0} {0} {} {1.000} {}
-E { 3501} {s} {s} {4} {0} {} {1.000} {}
+E { 3396} {s} {s} {4} {0} {} {1.000} {}
 E { 3397} {se} {se} {6} {0} {} {1.000} {}
 E { 5503} {n} {n} {1} {0} {} {1.000} {}
-E { 6370} {ne} {ne} {3} {0} {} {1.000} {}
+E { 3501} {ne} {ne} {3} {0} {} {1.000} {}
 E { 7125} {e} {e} {2} {0} {} {1.000} {}
 
-R {   10} {0} {} {science} { } {} {} {science} {} {} {1.000} {}
+R {   10} {0} {<118>} {science} { } {} {} {science} {} {} {1.000} {}
 E {    9} {out} {out} {0} {0} {} {1.000} {}
 E {   11} {u} {u} {16} {0} {} {1.000} {}
 
@@ -556,38 +561,39 @@ R {   62} {0} {} {Aegis Global - Level 1 (e,exit)} { } {The fact that you were a
 E {  176} {e} {e} {2} {0} {} {1.000} {}
 E {   61} {exit} {exit} {0} {0} {} {1.000} {}
 
-R {   63} {0} {} {63} { } {} {} {} {} {} {1.000} {}
+R {   63} {0} {} {63} { } {Weird undulating tiles give way to the north to gleaming pebbles and to the west to a small dirt path.  To the south the looming bulk of the Lodestone Building arches toward a mottled sky of purple and gold.  Light drops of rain fall. } {Mud} {} {} {} {1.000} {}
 E {    4} {e} {e} {2} {0} {} {1.000} {}
 E {   64} {w} {w} {8} {0} {} {1.000} {}
 E {  163} {n} {n} {1} {0} {} {1.000} {}
 
-R {   64} {0} {} {64} { } {} {} {} {} {} {1.000} {}
+R {   64} {0} {} {64} { } {Once a long, narrow meadow stretching along the west side of Foundation, it has become a narrow dirt trail pounded flat by the passing feet of generations of adventurers and scoundrels. Large buildings lie to north and west.  North lane lies to the east while the dirt trail continues to the south. } {Mud} {} {} {} {1.000} {}
 E {   63} {e} {e} {2} {0} {} {1.000} {}
 E {   65} {s} {s} {4} {0} {} {1.000} {}
 E { 6087} {nw} {nw} {9} {0} {} {1.000} {}
 
-R {   65} {0} {} {65} { } {} {} {} {} {} {1.000} {}
+R {   65} {0} {} {65} { } {The majestic bulk of the Lodestone Building rears towards the strange and mottled sky behind you to the east.  Arborlin Trail, a one-time meadow rendered a narrow dark trail, runs from north to south.  To the west you can see a small path entering a great forest. } {Mud} {} {} {} {1.000} {}
 E {   64} {n} {n} {1} {0} {} {1.000} {}
-E {10022} {w} {w} {8} {0} {} {1.000} {}
+E {   66} {w} {w} {8} {0} {} {1.000} {}
 E { 7218} {s} {s} {4} {0} {} {1.000} {}
 
-R {   66} {0} {} {66} { } {} {} {} {} {} {1.000} {}
-E {10015} {e} {e} {2} {0} {} {1.000} {}
+R {   66} {0} {} {66} { } {You are walking along a wide and grassy path running west to east through the great ancient forest. A soft breeze blows past, carrying the scent of wild flowers. } {Mud} {} {} {} {1.000} {}
+E {   65} {e} {e} {2} {0} {} {1.000} {}
 E {   67} {w} {w} {8} {0} {} {1.000} {}
 
-R {   67} {0} {} {67} { } {} {} {} {} {} {1.000} {}
+R {   67} {0} {} {67} { } {You are at the intersection of a wide grassy path which goes east to west, and a well travelled road running north to south.  You can see a strange multicolored haze off to the west.  The colossal trees of the ancient forest prevent you from seeing much else of note. } {Mud} {} {} {} {1.000} {}
 E {   66} {e} {e} {2} {0} {} {1.000} {}
 E {   68} {w} {w} {8} {0} {} {1.000} {}
-E {10010} {n} {n} {1} {0} {} {1.000} {}
+E { 4232} {n} {n} {1} {0} {} {1.000} {}
+E { 4225} {s} {s} {4} {0} {} {1.000} {}
 
-R {   68} {0} {<118>} {fan} { } {} {} {} {} {} {1.000} {}
+R {   68} {0} {} {fan} { } {The road ends at a large portal here in the forest.  The portal itself is large and circular, with sprays of color shooting across it, and strange, mystical energy flickering within.  A road into Foundation lies to the east, while you can vaguely make out the outlines of a mysterious tower to the west.  A small hut stands just to the north. } {Mud} {} {} {} {1.000} {}
 E {   67} {e} {e} {2} {0} {} {1.000} {}
 E {   69} {portal} {portal} {0} {0} {} {1.000} {}
 E { 3959} {w} {w} {8} {0} {} {1.000} {}
 E { 7179} {n} {n} {1} {0} {} {1.000} {}
 E {    1} {home} {home} {0} {0} {} {1.000} {}
 
-R {   69} {0} {} {wayhaven} { } {} {} {wayhaven} {} {} {1.000} {}
+R {   69} {0} {<118>} {wayhaven} { } {} {} {wayhaven} {} {} {1.000} {}
 E {   68} {portal} {portal} {0} {0} {} {1.000} {}
 E {   70} {n} {n} {1} {0} {} {1.000} {}
 E {  633} {e} {e} {2} {0} {} {1.000} {}
@@ -1020,24 +1026,25 @@ E {13404} {s} {s} {4} {0} {} {1.000} {}
 R {  162} {0} {} {162} { } {You are in a large, open laboratory.  It takes up half of the tower on this level.  There are beakers and cauldrons, potions, scrolls, and all sorts of unrecognizable devices lining tables, chairs, the floor the wall and in some cases just hanging in the air.  Vapors rise out of some of the concoctions and flames from others, this doesn't look like a good place for you to be. } {Mage Tower} {hc mage} {} {} {1.000} {}
 E {  161} {s} {s} {4} {0} {} {1.000} {}
 
-R {  163} {0} {} {163} { } {} {} {} {} {} {1.000} {}
+R {  163} {0} {} {163} { } {You are walking along a narrow, pebbled country lane running north to south.  You can see the side of the Foundation Bank off to your east.  An ornate stone edifice towers to your west, casting the lane into shadow. } {Mud} {} {} {} {1.000} {}
 E {   63} {s} {s} {4} {0} {} {1.000} {}
 E {  164} {n} {n} {1} {0} {} {1.000} {}
 E { 6086} {w} {w} {8} {0} {} {1.000} {}
 
-R {  164} {0} {} {164} { } {} {} {} {} {} {1.000} {}
+R {  164} {0} {} {164} { } {A narrow pebbled country lane heads south here, cutting through a strange, blurry smog.  Horrible clouds rear up into an angry sky to the south.  Odd greenish red bricks undulate off to the east.  A strange, oddly twisted looking stone building lies in a clearing to the west.  While a brightly colored shop lies to the northwest and a brown brick road meanders to the north. } {Mud} {} {} {} {1.000} {}
 E {  163} {s} {s} {4} {0} {} {1.000} {}
 E {  165} {e} {e} {2} {0} {} {1.000} {}
-E { 6083} {w} {w} {8} {0} {} {1.000} {}
-E {10005} {n} {n} {1} {0} {} {1.000} {}
+E { 5898} {w} {w} {8} {0} {} {1.000} {}
+E { 5895} {n} {n} {1} {0} {} {1.000} {}
+E { 5896} {nw} {nw} {9} {0} {} {1.000} {}
 
-R {  165} {0} {} {165} { } {} {} {} {} {} {1.000} {}
+R {  165} {0} {} {165} { } {The haze gives way and you can see the Foundation Bank and the Foundation Hospital to the south, beyond a rolling flat grassy field.  The greenish red bricks of Maple Street continues to the east.  Alchemy row is to the west.  To the north the haze becomes absolutely impenetrable.  The meteorite-black paving stones beneath your feet throb with repressed power. } {Mud} {} {} {} {1.000} {}
 E {  164} {w} {w} {8} {0} {} {1.000} {}
-E {10008} {n} {n} {1} {0} {} {1.000} {}
+E { 4087} {n} {n} {1} {0} {} {1.000} {}
 E { 4748} {e} {e} {2} {0} {} {1.000} {}
 
-R {  166} {0} {<118>} {166} { } {} {} {} {} {} {1.000} {}
-E {10004} {s} {s} {4} {0} {} {1.000} {}
+R {  166} {0} {} {166} { } {The immediate area is extremely blurry and hard to focus on. Just ahead of you is a raging, swirling vortex.  It extends as far up into the sky as you can see with no end in sight. The vortex itself is a swirling mass of dark clouds, with occasional flashes of heat lightning.  A road leads out of the vortex to the south. } {Mud} {} {} {} {1.000} {}
+E { 4087} {s} {s} {4} {0} {} {1.000} {}
 E {  167} {enter} {enter} {0} {0} {} {1.000} {}
 E { 6085} {w} {w} {8} {0} {} {1.000} {}
 E {    1} {home} {home} {0} {0} {} {1.000} {}
@@ -3700,7 +3707,7 @@ R {  678} {5130} {} {} { } {} {} {} {} {} {1.000} {}
 E { 9885} {n} {n} {1} {0} {} {1.000} {}
 E { 4009} {s} {s} {4} {0} {} {1.000} {}
 
-R {  679} {5130} {} {} { } {} {} {} {} {} {1.000} {}
+R {  679} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 7221} {w} {w} {8} {0} {} {1.000} {}
 E { 7219} {e} {e} {2} {0} {} {1.000} {}
 
@@ -3734,30 +3741,30 @@ E {  685} {u} {u} {16} {0} {} {1.000} {}
 E {  693} {n} {n} {1} {0} {} {1.000} {}
 E {12813} {s} {s} {4} {0} {} {1.000} {}
 
-R {  687} {0} {} {smithy} { } {} {} {} {} {} {1.000} {}
+R {  687} {0} {} {smithy} { } {Strange sounds and smells assault your senses as you enter the Foundation Smithy.  Unlike your typical blacksmith shop, this one is run by a being from another world.  The large pyramid in the center of the room glows an eerie shade of purple and the smoke from the vat in the southwest corner swirls in odd patterns of gold and green before escaping through a wide opening in the leathery ceiling that undulates as if it were a living, breathing thing.  An unearthly mewling comes from a wriggling clump of wires that hang above the vat and propped up against the wall nearby is a twisted set of crystalline tongs.  Large bins take up most of the space around you and the haze is so thick in the hot, dry air that you can barely make out the sign hovering in front of the far wall.    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-    Type:      list              to see a list of all items for sale.      fix <item/all>    to have items repaired.      check <item/all>  to check the cost of repairs.      getitem           to collect a repaired item from the Smithy.      cancel <item>     to discontinue reparation of an item (no refunds)    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- } {Mud} {} {} {} {1.000} {}
 E {  689} {n} {n} {1} {0} {} {1.000} {}
 
-R {  688} {0} {} {688} { } {} {} {} {} {} {1.000} {}
+R {  688} {0} {} {688} { } {You are standing at the intersection of Main Street and Commercial Boulevard.  Main leads north and Commercial runs to west and east. Just north of here is the center of town.  To the south lies a slightly disreputable looking, noisy, and gin-smelling building with a large garish tankard of ale painted over the door. } {Mud} {} {} {} {1.000} {}
 E {    3} {n} {n} {1} {0} {} {1.000} {}
 E {  689} {e} {e} {2} {0} {} {1.000} {}
-E {  971} {s} {s} {4} {0} {} {1.000} {}
+E { 4240} {s} {s} {4} {0} {} {1.000} {}
 E {  972} {w} {w} {8} {0} {} {1.000} {}
 
-R {  689} {0} {} {689} { } {} {} {} {} {} {1.000} {}
+R {  689} {0} {} {689} { } {You are walking along a nice and neat village boulevard which runs east to west.  You can see the side of a large white building to the north.  Strange sounds and smells emanate from the south where an oddly organic looking structure has taken root. } {Mud} {} {} {} {1.000} {}
 E {  688} {w} {w} {8} {0} {} {1.000} {}
 E {  687} {s} {s} {4} {0} {} {1.000} {}
 E {  690} {e} {e} {2} {0} {} {1.000} {}
 
-R {  690} {0} {} {690} { } {} {} {} {} {} {1.000} {}
+R {  690} {0} {} {690} { } {You are at the intersection of Ashland Avenue, which runs south here down a village street filled with shops, and Commercial Boulevard, which runs to the west.  A strange, oily smell fills your nostrils, coming most heavily from the east. } {Mud} {} {} {} {1.000} {}
 E {  689} {w} {w} {8} {0} {} {1.000} {}
 E {  691} {e} {e} {2} {0} {} {1.000} {}
 E {    7} {n} {n} {1} {0} {} {1.000} {}
 E {  834} {s} {s} {4} {0} {} {1.000} {}
 
-R {  691} {0} {} {691} { } {} {} {} {} {} {1.000} {}
+R {  691} {0} {} {691} { } {You've entered a small, utilitarian room with plain walls.  In the far wall, a sizable window looks into a second room, filled with shelves of files.  At the bottom of the window is a counter on which a small man leans, watching you and waiting to see why you've come.  On the walls to your left and right are small sets of hanging shelves, and a framed poster hangs by the entrance.  The wooden floor is devoid of decoration other than a couple of simple chairs next to a small round table in one corner, and two potted plants.  Two torchieres provide ample lighting for the space, and a plaque above the counter reads 'MEDALS ARCHIVE'. } {Mud} {} {} {} {1.000} {}
 E {  690} {w} {w} {8} {0} {} {1.000} {}
 
-R {  692} {0} {<118>} {atm} { } {} {} {atm} {} {} {1.000} {}
+R {  692} {0} {} {atm} { } {You have entered the lobby of the austere and conservative Bank of Foundation.  Its owners are a shadowy consortium of whom little is known\; however, they have a reputation of never taking advantage of their customers.  They also do their best to find the heirs of the MANY who never return to get their savings.  There is an automatic teller machine here, and a small staircase which leads up to the second floor of the bank.  There seems to be construction blocking the staircase. There's a second machine here selling money bags.  No, not bags with money in them, but bags you can put money in. } {Mud} {atm} {} {} {1.000} {}
 E {    4} {s} {s} {4} {0} {} {1.000} {}
 
 R {  693} {0} {} {693} { } {You are in a north-south passageway sloping downward to the north. It is very dark here.  You sense evil all around you. } {The Drow Kingdom of fe dar Shad} {} {} {} {1.000} {}
@@ -4194,7 +4201,7 @@ E {  148} {w} {w} {8} {0} {} {1.000} {}
 E { 2734} {e} {e} {2} {0} {} {1.000} {}
 E { 4444} {n} {n} {1} {0} {} {1.000} {}
 
-R {  795} {0} {} {robert} { } {} {} {} {} {} {1.000} {}
+R {  795} {0} {<118>} {robert} { } {} {} {} {} {} {1.000} {}
 E {    2} {u} {u} {16} {0} {} {1.000} {}
 E {  892} {d} {d} {32} {0} {} {1.000} {}
 
@@ -4384,32 +4391,33 @@ E {  829} {w} {w} {8} {0} {} {1.000} {}
 R {  833} {0} {} {833} { } {} {} {} {} {} {1.000} {}
 E {  823} {w} {w} {8} {0} {} {1.000} {}
 
-R {  834} {0} {} {834} { } {} {} {} {} {} {1.000} {}
+R {  834} {0} {} {834} { } {You are wandering down Ashland Avenue, an otherwise pleasant village street marred only by the strange soot on the walls and pebblestones.  A ramshackle building with peeling paint stands off to the east. } {Mud} {} {} {} {1.000} {}
 E {  690} {n} {n} {1} {0} {} {1.000} {}
 E {  835} {s} {s} {4} {0} {} {1.000} {}
 E { 5636} {e} {e} {2} {0} {} {1.000} {}
 
-R {  835} {0} {} {835} { } {} {} {} {} {} {1.000} {}
+R {  835} {0} {} {835} { } {You are wandering down Ashland Avenue, a pleasant village street marred only by the strange soot on the walls and pebblestones. The soot leaves everything a bit colorless.  It looks like some some sort of commerce is going on in a large building to the east and a small shop lies to the west. } {Mud} {} {} {} {1.000} {}
 E {  834} {n} {n} {1} {0} {} {1.000} {}
 E {  836} {s} {s} {4} {0} {} {1.000} {}
 E { 5637} {e} {e} {2} {0} {} {1.000} {}
+E { 5894} {w} {w} {8} {0} {} {1.000} {}
 
-R {  836} {0} {} {836} { } {} {} {} {} {} {1.000} {}
+R {  836} {0} {} {836} { } {You are at the intersection of Ashland Avenue, a strangely colorless street to the north, and Willow Way, a pleasant country lane which starts here and gently inclines to the west.  You are struck by the sharp contrast between the smog-filled vista to the east, and the strange winking archway visible there, and the pleasant fields to the south. } {Mud} {} {} {} {1.000} {}
 E {  835} {n} {n} {1} {0} {} {1.000} {}
 E {  837} {s} {s} {4} {0} {} {1.000} {}
 E {  838} {e} {e} {2} {0} {} {1.000} {}
 E { 5815} {w} {w} {8} {0} {} {1.000} {}
 E {10081} {se} {se} {6} {0} {} {1.000} {}
 
-R {  837} {0} {} {837} { } {} {} {} {} {} {1.000} {}
+R {  837} {0} {} {837} { } {Ashland Avenue ends its southward run here, in what can only be termed the Residential Complex of Foundation.  A quiet cul de sac has been carved out of the surrounding woodlands to shelter the homes of 3scapes' wealthy patrons.  Columned southern mansions stand side by side with medieval castles and classic victorian homes.  To have a home in this crime free, exclusive neighborhood is a sign of wealth and success in the realms. } {Mud} {} {} {} {1.000} {}
 E {  836} {n} {n} {1} {0} {} {1.000} {}
 E {    1} {home} {home} {0} {0} {} {1.000} {}
 
-R {  838} {0} {} {838} { } {} {} {} {} {} {1.000} {}
+R {  838} {0} {} {838} { } {You can vaguely make out the shapes of Foundation to the west. A dense smog cloud, laced with strange bursts of dazzling micro-lightning hovers about you.  A smell of ozone is in the air, almost certainly coming from the impressive archway before you.  Made of a strange oily metal, and covered with odd glyphs, it is filled with an inky darkness. } {Mud} {} {} {} {1.000} {}
 E {  836} {w} {w} {8} {0} {} {1.000} {}
 E {  839} {e} {e} {2} {0} {} {1.000} {}
 
-R {  839} {0} {} {839} { } {} {} {} {} {} {1.000} {}
+R {  839} {0} {} {839} { } {Surrounding you are manicured lawns covered with pristine white gravestones.  Before you, three gleaming purple arches push up towards the sky, a small white-pebbled courtyard lying beneath them.  In the distance, you can make out a white arch and black monument.  A blood red dish, embedded in the stones of hallow ground, contains an undying flame. } {Mud} {} {} {} {1.000} {}
 E {  838} {w} {w} {8} {0} {} {1.000} {}
 
 R {  840} {0} {} {840} { } {} {} {} {} {} {1.000} {}
@@ -4983,81 +4991,90 @@ E { 4845} {w} {w} {8} {0} {} {1.000} {}
 
 R {  970} {0} {} {Rogue Encampment (leave)} { } {You are in a large open area with archery targets scattered about. The Rogues train with their leader Kashya. Arrows whizz through the air, most hitting their target with deadly accuracy. Younger rogues have been relegated to arrow pickup duty, and they scurry all about the fields. } {Diablo2 Normal 20+ Nightmare 40+ Hell 60+.} {} {} {} {1.000} {}
 
-R {  971} {0} {} {971} { } {} {} {} {} {} {1.000} {}
-E {  688} {n} {n} {1} {0} {} {1.000} {}
+R {  971} {0} {} {971} { } {		Welcome to the Fortress!! You are in a wide spacious room dominated by an immense redwood bar at the southern end.  Light reflects off the brightly waxed oaken floors, lovingly maintained by the enigmatic Doyle, who nods in your direction from behind the bar.  Tables filled with adventurers of various sorts are packed into the room, along with more private booths along the eastern and western walls.  A spiral staircase made of some odd metal dominates the center of the Fortress.  The old-style western saloon doors that exit to Foundation are to the north.  An open door is to your west and there seems to be some sort of humidor set up in the eastern section.  There's yet another exit from the room to the south, behind the bar.  A menu is posted in neon glory above the bar. } {Mud} {} {} {} {1.000} {}
+E { 4240} {n} {n} {1} {0} {} {1.000} {}
+E { 5820} {sw} {sw} {12} {0} {} {1.000} {}
+E { 4242} {u} {u} {16} {0} {} {1.000} {}
+E { 4243} {d} {d} {32} {0} {} {1.000} {}
+E { 4244} {w} {w} {8} {0} {} {1.000} {}
+E { 4245} {e} {e} {2} {0} {} {1.000} {}
 
-R {  972} {0} {} {972} { } {} {} {} {} {} {1.000} {}
+R {  972} {0} {} {972} { } {You are walking along a bustling city boulevard.  The bulk of the Lodestone Building blocks the dark and threatening sky to the north.  A narrow dirt trail and the massive and gloriously beautiful forest are to the west.  A cobblestoned track heads off to the south. } {Mud} {} {} {} {1.000} {}
 E {  688} {e} {e} {2} {0} {} {1.000} {}
 E {  973} {s} {s} {4} {0} {} {1.000} {}
 E { 7218} {w} {w} {8} {0} {} {1.000} {}
 
-R {  973} {0} {} {973} { } {} {} {} {} {} {1.000} {}
+R {  973} {0} {} {973} { } {You are at the start of the well-kept trail known as Saint's Walk.  It runs south along the western border of Foundation. You can see the side of the rustic Fortress to the east.  To the west, in a small clearing within the great forest, you can see a long building surrounded by well-tended, if small, fields. } {Mud} {} {} {} {1.000} {}
 E {  972} {n} {n} {1} {0} {} {1.000} {}
 E {  974} {s} {s} {4} {0} {} {1.000} {}
-E { 4623} {w} {w} {8} {0} {} {1.000} {}
+E { 5880} {w} {w} {8} {0} {} {1.000} {}
 
-R {  974} {0} {} {974} { } {} {} {} {} {} {1.000} {}
+R {  974} {0} {} {974} { } {You are moving along a pleasant trail running north and south. To the east you can see the stately Foundation Chapel, where many of the Realm's most famed citizens are wed.  To the west, in a small clearing, you can make out an odd swirling whirl of flashing lights as they dance across the mottled sky above. You shiver.  To the north is Foundation proper. } {Mud} {} {} {} {1.000} {}
 E {  973} {n} {n} {1} {0} {} {1.000} {}
 E {  975} {s} {s} {4} {0} {} {1.000} {}
 E { 6081} {e} {e} {2} {0} {} {1.000} {}
 E { 7220} {w} {w} {8} {0} {} {1.000} {}
 
-R {  975} {0} {} {975} { } {} {} {} {} {} {1.000} {}
+R {  975} {0} {} {975} { } {You are at the south end of Saint's Walk, the well-kept trail that honors the lords and ladies of every realm of 3Scapes. To the east you can see a pleasant country lane while to the west you can see a clearing in the great and wild forest that makes Foundation's western border. } {Mud} {} {} {} {1.000} {}
 E {  974} {n} {n} {1} {0} {} {1.000} {}
 E {  976} {e} {e} {2} {0} {} {1.000} {}
-E { 6012} {w} {w} {8} {0} {} {1.000} {}
+E { 5886} {w} {w} {8} {0} {} {1.000} {}
 
-R {  976} {0} {} {976} { } {} {} {} {} {} {1.000} {}
+R {  976} {0} {} {976} { } {You are walking along a pleasant country lane.  You can see the spires of a stately church to your north rising high above the tree tops.  A narrow path cuts through a pasture to the south, ending at a tall and oddly out of place iron gate! } {Mud} {} {} {} {1.000} {}
 E {  975} {w} {w} {8} {0} {} {1.000} {}
 E {  977} {s} {s} {4} {0} {} {1.000} {}
 E { 5815} {e} {e} {2} {0} {} {1.000} {}
 
-R {  977} {0} {} {newbie} { } {} {} {newbie} {} {} {1.000} {}
+R {  977} {0} {} {newbie} { } {You are on the narrow pasture path known, affectionately, as Newbies' End!  A narrow stone lane leads west, just north of a rickety wood building.  The smells of appetizing food drift from the quaint restaurant to the east.  But overpowering all your senses is the huge, iron gate that just rears up offering no truck or bargain.  Enter it and take your chances.  Or turn around and go home.  Foundation is just to the north, after all. } {Mud} {newbie} {} {} {1.000} {}
 E {  976} {n} {n} {1} {0} {} {1.000} {}
 E {  978} {w} {w} {8} {0} {} {1.000} {}
-E { 6080} {e} {e} {2} {0} {} {1.000} {}
+E { 6474} {e} {e} {2} {0} {} {1.000} {}
 E { 7173} {s} {s} {4} {0} {} {1.000} {}
+E { 5893} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {  978} {0} {} {978} { } {} {} {} {} {} {1.000} {}
+R {  978} {0} {} {978} { } {You are walking along a small stone path leading along a row of storefronts as well as many buildings for rent.  The path looks relatively new as does the building construction.  Commerce in Foundation must be growing! } {Mud} {} {} {} {1.000} {}
 E {  977} {e} {e} {2} {0} {} {1.000} {}
 E {  979} {w} {w} {8} {0} {} {1.000} {}
 
-R {  979} {0} {} {979} { } {} {} {} {} {} {1.000} {}
+R {  979} {0} {} {979} { } {You are walking along a small stone path leading through a series of storefronts and buildings for rent. The path looks newer than most sections of the city. Perhaps the city founders are hard at work trying to attract new business to Foundation. } {Mud} {} {} {} {1.000} {}
 E {  978} {e} {e} {2} {0} {} {1.000} {}
 E {  980} {s} {s} {4} {0} {} {1.000} {}
 
-R {  980} {0} {} {980} { } {} {} {} {} {} {1.000} {}
+R {  980} {0} {} {980} { } {A small stone path leads through rows of storefronts and several buildings for rent. To the south is a low, tin-roofed shed.  It looks like it might be a storage facility of some kind. } {Mud} {} {} {} {1.000} {}
 E {  979} {n} {n} {1} {0} {} {1.000} {}
 E {  981} {w} {w} {8} {0} {} {1.000} {}
 E {  987} {s} {s;acquire coffin} {4} {0} {} {1.000} {}
 
-R {  981} {0} {} {981} { } {} {} {} {} {} {1.000} {}
+R {  981} {0} {} {981} { } {You are walking along a small stone path leading past a row of storefronts as well as many buildings for rent. A much grander building stands directly to the south. The arched roof and marble pillars of the Hall of Champions suggest it might be worth visiting. } {Mud} {} {} {} {1.000} {}
 E {  980} {e} {e} {2} {0} {} {1.000} {}
 E {  982} {w} {w} {8} {0} {} {1.000} {}
 E {  986} {s} {s} {4} {0} {} {1.000} {}
 
-R {  982} {0} {} {982} { } {} {} {} {} {} {1.000} {}
+R {  982} {0} {} {982} { } {This small stone path leads both south and east along a row of storefronts and buildings for rent. To the north stands a large building that serves as the Foundation Goodwill. If you're in the market for some used goods or have some to donate, maybe you should stop in and have a look around. } {Mud} {} {} {} {1.000} {}
 E {  981} {e} {e} {2} {0} {} {1.000} {}
 E {  983} {s} {s} {4} {0} {} {1.000} {}
 E { 5639} {n} {n} {1} {0} {} {1.000} {}
 
-R {  983} {0} {} {983} { } {} {} {} {} {} {1.000} {}
+R {  983} {0} {} {983} { } {You are walking down a small stone path leading along a row of storefronts as well as many buildings for rent. A tall museum-like structure lies to the south, adding a touch of elegance to the area. } {Mud} {} {} {} {1.000} {}
 E {  982} {n} {n} {1} {0} {} {1.000} {}
 E {  984} {w} {w} {8} {0} {} {1.000} {}
 E { 5640} {s} {s} {4} {0} {} {1.000} {}
 
-R {  984} {0} {} {984} { } {} {} {} {} {} {1.000} {}
+R {  984} {0} {} {984} { } {You are walking along a small stone path leading along a row of storefronts as well as many buildings for rent. Further west, a vast, empty tract serves as the town junkyard. } {Mud} {} {} {} {1.000} {}
 E {  983} {e} {e} {2} {0} {} {1.000} {}
 E {  985} {n} {n} {1} {0} {} {1.000} {}
 E { 5641} {w} {w} {8} {0} {} {1.000} {}
 
-R {  985} {0} {} {985} { } {} {} {} {} {} {1.000} {}
+R {  985} {0} {} {985} { } {The inside of the post office is cramped - people are much less important than letters and packages here. The walls are packed with pigeonholes and shelves\; paper and scrolls are jammed in with no apparent order. The smell of musty old paper and very organic glue makes this tiny space seem even more crowded. In the back wall is a half-door leading into the sorting area, with a small counter built into it. Over this door hangs a wanted poster, because this is a post office, after all. A clerk is puttering around the room, moving paper from place to place. } {Mud} {} {} {} {1.000} {}
 E {  984} {s} {s} {4} {0} {} {1.000} {}
+E { 6480} {n} {n} {1} {0} {} {1.000} {}
 
-R {  986} {0} {} {986} { } {} {} {} {} {} {1.000} {}
+R {  986} {0} {} {986} { } {This cavernous hall was built to honor the champions of the realms. The statues held within these gilded walls represent the greatest players to ever grace 3Scapes. The black marble floor echoes with your every footstep, the sound carrying up to the arched ceiling high overhead. } {Mud} {} {} {} {1.000} {}
 E {  981} {n} {n} {1} {0} {} {1.000} {}
+E { 6478} {s} {s} {4} {0} {} {1.000} {}
+E { 6479} {exit} {exit} {0} {0} {} {1.000} {}
 
-R {  987} {0} {} {locker} { } {} {} {} {} {} {1.000} {}
+R {  987} {0} {} {locker} { } {What you first thought was a tiny shed turns out to be a solid granite building. The walls, floor and ceiling of the house of lockers are made of solid granite. The house is very sparsely furnished with only a wooden desk in the east end of the room and a row of lockers along the north and south sides of the room. To the west a huge granite door allows passage to the street. There's a sign on the wall behind the desk. } {Mud} {} {} {} {1.000} {}
 E {  980} {n} {n} {1} {0} {} {1.000} {}
 
 R {  988} {0} {} {988} { } {} {} {} {} {} {1.000} {}
@@ -15235,15 +15252,14 @@ E { 3395} {n} {n} {1} {0} {} {1.000} {}
 R { 3395} {0} {} {sol} { } {} {} {} {} {} {1.000} {}
 E { 3394} {s} {s} {4} {0} {} {1.000} {}
 
-R { 3396} {0} {} {3396} { } {} {} {} {} {} {1.000} {}
-E { 3501} {n} {n} {1} {0} {} {1.000} {}
-E { 4087} {e} {e} {2} {0} {} {1.000} {}
+R { 3396} {0} {} {3396} { } {A freeway overpass swings up to a decrepit interstate highway just to your north. Just south of here is a giant wasteland with nothing but a decrepit old bunker as a landmark. } {Mud} {} {} {} {1.000} {}
+E {    9} {n} {n} {1} {0} {} {1.000} {}
 
-R { 3397} {0} {} {3397} { } {} {} {} {} {} {1.000} {}
+R { 3397} {0} {} {3397} { } {The sounds of Foundation are muted in this area.  A giant hemispherical shape spreads out to the south, either erupting from the soil or having collided with the earth.  The surface of it is a dark purplish colour with what looks like a yellow sheen covering it.  Parts of the form pulse and move as if it were alive.  A long, hardened tentacle-like protrusion extends to either side of you.  Covered in what looks like tiny sharp teeth, they center on a dark, gaping hole in the middle of the hunched shape.  Off to the side of the huge form, a small ATM has been set up, with wires snaking back into town.  If you are wanting to 'join' the Sii guild, you can do so here. } {Mud} {} {} {} {1.000} {}
 E {    9} {nw} {nw} {9} {0} {} {1.000} {}
 E { 3398} {enter} {enter} {0} {0} {} {1.000} {}
 
-R { 3398} {0} {} {sii} { } {} {} {sii} {} {} {1.000} {}
+R { 3398} {0} {<118>} {sii} { } {} {} {sii} {} {} {1.000} {}
 E { 3397} {leave} {leave} {0} {0} {} {1.000} {}
 E { 3399} {e} {e} {2} {0} {} {1.000} {}
 E { 3404} {s} {s} {4} {0} {} {1.000} {}
@@ -15776,9 +15792,9 @@ R { 3500} {4104} {<118>} {3500} { } {} {} {} {} {} {1.000} {}
 E { 3468} {ne} {ne} {3} {0} {} {1.000} {}
 E { 3451} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 3501} {4104} {} {3501} { } {} {} {} {} {} {1.000} {}
-E { 3396} {s} {s} {4} {0} {} {1.000} {}
-E {    9} {n} {n} {1} {0} {} {1.000} {}
+R { 3501} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 6370} {ne} {ne} {3} {0} {} {1.000} {}
+E {    9} {sw} {sw} {12} {0} {} {1.000} {}
 
 R { 3502} {0} {} {siivault} { } {} {} {} {} {} {1.000} {}
 E { 3398} {s} {s} {4} {0} {} {1.000} {}
@@ -18026,13 +18042,13 @@ E {11950} {nw} {nw} {9} {0} {} {1.000} {}
 R { 3958} {0} {} {3958} { } {} {} {} {} {} {1.000} {}
 E { 3402} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3959} {0} {<118>} {3959} { } {} {} {} {} {} {1.000} {}
+R { 3959} {0} {} {3959} { } {The road ends here at the edge of a clearing, a few hoary old trees rising like sentinels. Space warps unnaturally, bent to a nexus of strangeness, an umbilicus twisting off at right angles to the world. Unseen forces stream just beneath the skin of reality, causing the trees and even the clouds in the sky to wave and drift in contradictory ways. To the east, a crackling portal stands, while small single buildings stand to the north and south. } {Mages} {} {} {} {1.000} {}
 E {   68} {e} {e} {2} {0} {} {1.000} {}
 E { 3960} {n} {n} {1} {0} {} {1.000} {}
 E { 5909} {s} {s} {4} {0} {} {1.000} {}
 E {  626} {nexus} {nexus} {0} {0} {} {1.000} {}
 
-R { 3960} {0} {} {arundin} { } {} {} {arundin} {} {} {1.000} {}
+R { 3960} {0} {} {arundin} { } {	Welcome to the Foundation Magic Shop. As you step inside the Magic Shop, your olfactory nerves are assaulted by a highly offensive stench.  As you carefully scan the dimly lit room, your eyes affix upon a large display case in the center of the room.  Encased within the glass display, is an abundant supply of magical items that the shopkeeper has recently acquired.  A large sign sits on top of the case. } {Mages} {arundin} {} {} {1.000} {}
 E { 3959} {s} {s} {4} {0} {} {1.000} {}
 
 R { 3961} {0} {} {3961} { } {} {} {} {} {} {1.000} {}
@@ -18590,14 +18606,13 @@ E { 4086} {d} {d} {32} {0} {} {1.000} {}
 R { 4086} {0} {} {4086} { } {} {} {} {} {} {1.000} {}
 E { 4085} {u} {u} {16} {0} {} {1.000} {}
 
-R { 4087} {0} {} {cyborg} { } {} {} {} {} {} {1.000} {}
-E { 3396} {w} {w} {8} {0} {} {1.000} {}
-E { 4088} {e} {push button;e} {2} {0} {} {1.000} {}
+R { 4087} {10} {} {} { } {} {} {} {} {} {1.000} {}
+E {  166} {n} {n} {1} {0} {} {1.000} {}
+E {  165} {s} {s} {4} {0} {} {1.000} {}
 
-R { 4088} {0} {} {cyborg elevator} { } {} {} {} {} {} {1.000} {}
-E { 4091} {touch 7} {touch 7;#map leave;w;#map go 4091} {0} {0} {} {1.000} {}
-E { 4092} {touch roof} {touch roof;#map leave;w;#map go 4092} {0} {0} {} {1.000} {}
-E { 4087} {touch lobby} {touch lobby;#map leave;w;#map go cyborg} {0} {0} {} {1.000} {}
+R { 4088} {10} {} {} { } {} {} {} {} {} {1.000} {}
+E { 4109} {ne} {ne} {3} {0} {} {1.000} {}
+E { 4748} {sw} {sw} {12} {0} {} {1.000} {}
 
 R { 4089} {0} {} {4089} { } {} {} {} {} {} {1.000} {}
 E {    6} {s} {s} {4} {0} {} {1.000} {}
@@ -18608,11 +18623,9 @@ R { 4090} {0} {} {gypsy} { } {} {} {} {} {} {1.000} {}
 E { 4089} {w} {w} {8} {0} {} {1.000} {}
 
 R { 4091} {0} {} {research} { } {} {} {} {} {} {1.000} {}
-E { 4088} {e} {push button;e} {2} {0} {} {1.000} {}
 
 R { 4092} {0} {} {cyborg roof} { } {} {} {} {} {} {1.000} {}
 E { 4093} {touch warehouse} {touch warehouse} {0} {0} {} {1.000} {}
-E { 4088} {e} {push button;e} {2} {0} {} {1.000} {}
 
 R { 4093} {0} {} {4093} { } {} {} {} {} {} {1.000} {}
 E { 4092} {s} {s} {4} {0} {} {1.000} {}
@@ -18686,18 +18699,18 @@ E { 5386} {w} {w} {8} {0} {} {1.000} {}
 E { 5388} {n} {n} {1} {0} {} {1.000} {}
 E { 5390} {d} {d} {32} {0} {} {1.000} {}
 
-R { 4108} {0} {} {4108} { } {} {} {} {} {} {1.000} {}
+R { 4108} {0} {} {4108} { } {Marble statues and stone structures are crumbled and scattered across what looks like an ancient battlefield. The battle scarred site looks like it may have been a beautiful garden at one point in time and you wonder why this area, seemingly surrounded by mountains, is an important enough location for a battle. A blood covered path leads to the northwest, a clean path of stone leads to the northeast and a dirt path leads north. To the south, you see the cosmic rift. } {Mud} {} {} {} {1.000} {}
 E { 4109} {s} {s} {4} {0} {} {1.000} {}
 E { 4110} {n} {n} {1} {0} {} {1.000} {}
 E { 6259} {nw} {nw} {9} {0} {} {1.000} {}
 E {10025} {ne} {ne} {3} {0} {} {1.000} {}
 
-R { 4109} {0} {} {4109} { } {} {} {} {} {} {1.000} {}
-E { 4748} {sw} {sw} {12} {0} {} {1.000} {}
+R { 4109} {0} {} {4109} { } {The entire area fluctuates between blinding light and absolute darkness, making it impossible to see but a few inches ahead of pure nothingness. It seems that you've reached a plane that is neither physical nor celestial, but somewhere in between. A feeling of angelic presence emanates from the vast beyond, sparking curiosity deep within your very soul. You may choose to follow this calling via exodus or you may ignore it by returning to the southwest. To the north, you see some ruins. } {Mud} {} {} {} {1.000} {}
+E { 4088} {sw} {sw} {12} {0} {} {1.000} {}
 E { 4108} {n} {n} {1} {0} {} {1.000} {}
 E { 5661} {exodus} {exodus} {0} {0} {} {1.000} {}
 
-R { 4110} {0} {} {awaken} { } {} {} {awaken} {} {} {1.000} {}
+R { 4110} {0} {} {awaken} { } {Stones of various sizes lead up to the enormous grey stone altar. A circular slab in the center of the altar looks big enough to fit several dozen average sized humans. Pools of blood, both old and new, cover the slab, but there appear to be no bodies. The air above the altar seems blurry at times and the wind blows through with an eerie whistle. The dirt path leads back to the south. } {Mud} {awaken} {} {} {1.000} {}
 E { 4108} {s} {s} {4} {0} {} {1.000} {}
 
 R { 4111} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
@@ -19164,6 +19177,105 @@ E { 4223} {e} {e} {2} {0} {} {1.000} {}
 R { 4223} {0} {} {Compost pile (w)} { } {With the sun to assist the breaking down process, this huge decomposing pile seems to be rotting away nicely. It would seem that what did not decompose yet will soon be consumed by the new tenants to this area. Banana peels, eggshells, sandwich halves, cobs of corn, and old rotting pizza make up a tiny portion of this heap. Some of this food cannot even be identified anymore.  } {Rampage of the Piggies} {} {} {} {1.000} {}
 E { 4222} {w} {w} {8} {0} {} {1.000} {}
 E { 3968} {jump} {jump} {0} {0} {} {1.000} {}
+
+R { 4224} {0} {} {Woodland Road (n,s)} { } {A well-travelled road runs north and south through the wonderous and ancient forest.  Colossal trees rear upwards filling you with awe and reverence.  You can hear the sound of church bells to the south. } {Mud} {} {} {} {1.000} {}
+E { 4225} {n} {n} {1} {0} {} {1.000} {}
+E { 4226} {s} {s} {4} {0} {} {1.000} {}
+
+R { 4225} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 4224} {s} {s} {4} {0} {} {1.000} {}
+E {   67} {n} {n} {1} {0} {} {1.000} {}
+
+R { 4226} {0} {} {Woodland Road (n,s,w,e)} { } {A well-travelled road runs north and south here through an awesome and ancient forest.  The surrounding trees are so tall, they seem to reach all the way to the heavens.  To the south the road ends in a clearing where a chapel is visible in the gloom of the trees' canopy. } {Mud} {} {} {} {1.000} {}
+E { 4224} {n} {n} {1} {0} {} {1.000} {}
+E { 4227} {s} {s} {4} {0} {} {1.000} {}
+E { 4228} {w} {w} {8} {0} {} {1.000} {}
+E { 4229} {e} {e} {2} {0} {} {1.000} {}
+
+R { 4227} {0} {} {The Knight Castle and Chapel (n)} { } {You have entered a clearing at the end of a well-kept gravel path. Towering to the east is a beautiful, airy, alabaster castle.  It is the home of the powerful and wealthy Knight Guild.  To the south a small, elegant chapel blends with the forest in a harmonious way. This clearing was formerly used by the Knight Guild to advance their members.  The guild is closed for now, but Foundation awaits their return. } {Mud} {} {} {} {1.000} {}
+E { 4226} {n} {n} {1} {0} {} {1.000} {}
+
+R { 4228} {0} {} {Poll Room (e)} { } {The interior of this small circular building is simple and unrefined.  The walls are stone and the floor is dirt, but a well-tended fire seems to be doing an adequate job of keeping the damp away. Just off to one side is a large counter where Rikken accepts new polls.  Mounds of paper litter a wooden table in the center of the room, while other sheets are stacked neatly onto wooden shelves behind the counter.  A sign on the wall by the counter offers a bit of information on what goes on here and how you might participate. } {Mud} {} {} {} {1.000} {}
+E { 4226} {e} {e} {2} {0} {} {1.000} {}
+
+R { 4229} {0} {} {Dayln's Gladiatorial Extravaganza (n,s,w)} { } {The formerly empty, and abandoned ruins of the Priest Guild has been transformed into a gladiatorial arena. A crowd of rowdy citizens huddle around the circular ring, eagerly waiting for the bloodshed.  It is doubtful that the peaceful Priests of 3scapes could have foreseen this when they decided to move to Wayhaven.  Oh well, let the games begin. } {Gladiatorial Arena} {} {} {} {1.000} {}
+E { 4226} {w} {w} {8} {0} {} {1.000} {}
+E { 4230} {n} {n} {1} {0} {} {1.000} {}
+E { 4231} {s} {s} {4} {0} {} {1.000} {}
+
+R { 4230} {0} {} {Gladiatorial Finance Room (s)} { } {It looks like when the Priests moved that they left this ATM machine behind.  Dayln has 'borrowed' it for now so that he can get you to spend as much money as he can on his gladiator contests. } {Gladiatorial Arena} {} {} {} {1.000} {}
+E { 4229} {s} {s} {4} {0} {} {1.000} {}
+
+R { 4231} {0} {} {Dayln's Gladiatorial Office (n)} { } {This tent is currently very empty except for a board that has been placed off to one side.  If you want to be a Master of Ceremonies just look at the sign. } {Gladiatorial Arena} {} {} {} {1.000} {}
+E { 4229} {n} {n} {1} {0} {} {1.000} {}
+
+R { 4232} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 5910} {n} {n} {1} {0} {} {1.000} {}
+E {   67} {s} {s} {4} {0} {} {1.000} {}
+
+R { 4233} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {    3} {u} {u} {16} {0} {} {1.000} {}
+
+R { 4234} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 4235} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 4236} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 4237} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 5956} {w} {w} {8} {0} {} {1.000} {}
+E {    3} {e} {e} {2} {0} {} {1.000} {}
+
+R { 4238} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {    2} {e} {e} {2} {0} {} {1.000} {}
+E {    3} {w} {w} {8} {0} {} {1.000} {}
+
+R { 4239} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {    2} {d} {d} {32} {0} {} {1.000} {}
+
+R { 4240} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {  971} {s} {s} {4} {0} {} {1.000} {}
+E {  688} {n} {n} {1} {0} {} {1.000} {}
+
+R { 4241} {0} {} {Sports Fan-atics Hall (se,sw,ne,n,s,w,e)} { } {This is the well-appointed back sports-bar section of the Foundation Fortress.  The floor is made of dark oak hardwood, polished to a bright shine.  Shaped like an octagon, the expansive room's walls contain many archways leading to separate sections of the sports bar.  Where there aren't archways, clean mirrors hang on the walls, serving to make the room look even larger than it really is.  Hanging from the ceiling are symbols of each sport, describing what's through each of the archways. } {Foundation Sports Bar} {} {} {} {1.000} {}
+E { 5820} {ne} {ne} {3} {0} {} {1.000} {}
+E { 4248} {se} {se} {6} {0} {} {1.000} {}
+E { 4249} {sw} {sw} {12} {0} {} {1.000} {}
+E { 4250} {s} {s} {4} {0} {} {1.000} {}
+E { 4251} {w} {w} {8} {0} {} {1.000} {}
+E { 5819} {e} {e} {2} {0} {} {1.000} {}
+E { 5821} {n} {n} {1} {0} {} {1.000} {}
+
+R { 4242} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {  971} {d} {d} {32} {0} {} {1.000} {}
+
+R { 4243} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {  971} {u} {u} {16} {0} {} {1.000} {}
+
+R { 4244} {0} {} {A College Dorm Room (u,e)} { } {You are standing in a typical college dorm room. From the moment you entered, you felt a definite sense of being at home. Clothes are thrown about the room in a disorderly fashion, with little regard for keeping the room clean. There is one bed on the left wall, right next to a small closet. On the wall above the bed lie two posters, mirrored on the other wall by an even larger poster. The other bed is elevated above your head, with a computer desk beneath it, so as to maximize space. Across from the desk are two bureaus, stacked on top of each other. In the upper left hand corner of the room, on top of the bureaus is a large stereo, with long wires leading to four feet speakers sonically placed in different corners of the room. Finally, there is a small spiral staircase in the upper right-hand corner of the room\; and on the wall next to the closet, there is a large window that for some reason has been screwed shut. } {Mud} {} {} {} {1.000} {}
+E {  971} {e} {e} {2} {0} {} {1.000} {}
+E { 4246} {u} {u} {16} {0} {} {1.000} {}
+
+R { 4245} {0} {} {The Foundation Humidor (out)} { } {As you enter the humidor you are assaulted by the sweet smell of the fine tobacco around you.  The entire room is made of red cedar with deep shelves lining three of the four walls floor to ceiling.  On each shelf, spaced out to allow for breathing room, lie smaller humidors filled with a multitude of different cigars.  Each of the smaller humidors is open to offer a pleasing view of its contents.  The fourth wall is dominated by a cedar counter and the man sitting behind it who seems to be the owner of the establishment.                                              You could type "list" to see what is available.                          } {Mud} {} {} {} {1.000} {}
+E {  971} {w} {w} {8} {0} {} {1.000} {}
+E { 4247} {out} {out} {0} {0} {} {1.000} {}
+
+R { 4246} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 4244} {d} {d} {32} {0} {} {1.000} {}
+
+R { 4247} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 4248} {0} {} {Sports Fan-atics Soccer Lounge (nw)} { } {This lounge looks like the back room of a pub.  It's dingy and dark with spilled beer on the floor and scarves adorning the walls.  Despite the decor you still feel extremely welcome somehow.  Pictures of the legends of the past and present stretch from wall to wall gazing down upon you, instilling you with a sense of awe and history.  A massive widescreen T.V. takes up the northeast corner of the ceiling and plays live games back to back.  So grab a pint from Hey You, sit yourself down on one of the worn sofas, kick back and enjoy the match.  They don't call it the beautiful game for nothing. } {Foundation Sports Bar} {} {} {} {1.000} {}
+E { 4241} {nw} {nw} {9} {0} {} {1.000} {}
+
+R { 4249} {0} {} {Sports Fan-atics Golf Lounge (ne)} { } {Here, the floor is actually a grass-green rug.  In the far corner is a small hole in the floor, with a yellow flag sticking out of it.  There are a couple of TVs on the far wall, and it's very quiet in here.  For seating arrangements, there are tables and chairs about, but they look like they're trying to hide in the shadows so as not to be seen. } {Foundation Sports Bar} {} {} {} {1.000} {}
+E { 4241} {ne} {ne} {3} {0} {} {1.000} {}
+
+R { 4250} {0} {} {Sports Fan-atics Baseball Lounge (n)} { } {The floor in this room contains a miniature painted replica of a baseball field.  Home plate is right at the entryway, with the first base line extending diagonally to the right, and third base going diagonally left.  The pitcher's mound is about six steps into the room, and second base is six steps beyond that.  At each of the bases, of course, is a table with four bar stools around it, giving adventurers places to sit and enjoy the games playing on the TVs.  Around the edges of the room are benches made to look like bleachers.  Fl3s     Uptime: 1.6 days  Reboot: 5.4 days  Lag: 0.00  Idle: [00:00:01]   } {Foundation Sports Bar} {} {} {} {1.000} {}
+E { 4241} {n} {n} {1} {0} {} {1.000} {}
+
+R { 4251} {0} {} {Sports Fan-atics Basketball Lounge (e)} { } {The lights are brighter in here than they are in the other rooms.  Additionally, the floor is a lighter color -- this one is the same color as the floorboards in the NBA!  This floor even has all the same markings as a basketball court does\; about the only thing missing are the hoops.  TVs on the far wall display a multitude of basketball games, and tables and chairs are scattered about the room, offering places to sit. } {Foundation Sports Bar} {} {} {} {1.000} {}
+E { 4241} {e} {e} {2} {0} {} {1.000} {}
 
 R { 4252} {0} {} {4252} { } {} {} {} {} {} {1.000} {}
 E {   23} {u} {u} {16} {0} {} {1.000} {}
@@ -20670,23 +20782,25 @@ R { 4622} {0} {} {wforest} { } {} {} {wforest} {} {} {1.000} {}
 E { 4621} {e} {e} {2} {0} {} {1.000} {}
 E { 6265} {nw} {nw} {9} {0} {} {1.000} {}
 
-R { 4623} {0} {} {4623} { } {} {} {} {} {} {1.000} {}
-E {  973} {e} {e} {2} {0} {} {1.000} {}
+R { 4623} {0} {} {4623} { } {-= Peaceful Path =- Small shrubs line the shaded path on both sides. Tiny black pebbles shine through the dirt. Various flowers, mostly orchids squeeze between the leafy shrubs. In the distance, ornate roof ridges can be seen peeking through the woods. The path is calm and peaceful. The only sounds are the buzzing of a few insects among the orchid blossoms, and the occasional echo of a bell ringing vibrantly from the west. } {Monks} {} {} {} {1.000} {}
+E { 5880} {e} {e} {2} {0} {} {1.000} {}
 E { 4624} {w} {w} {8} {0} {} {1.000} {}
 
-R { 4624} {0} {} {4624} { } {} {} {} {} {} {1.000} {}
+R { 4624} {0} {} {4624} { } {-= Peaceful Path =- Small stone pillars line the time-worn path. Leafy vines creep up the pillars, their blossoms opening wide, adding splashes of color amid the shrub greenery. Surrounding each shrub and pillar is crushed pale stone. The path continues to the west through the shady trees. } {Monks} {} {} {} {1.000} {}
 E { 4623} {e} {e} {2} {0} {} {1.000} {}
 E { 4625} {w} {w} {8} {0} {} {1.000} {}
 
-R { 4625} {0} {} {4625} { } {} {} {} {} {} {1.000} {}
+R { 4625} {0} {} {4625} { } {-= Peaceful Path =- As the path opens up, the buildings housing the Monks begin to emerge from the trees. Tall oaks provide shade and comfort for those seeking refuge from the bright sun. The path is covered with pale stone and crumbling bricks. Small marble benches lie on either side, mixed among the stone tablets that lead travelers towards the Great Hall. } {Monks} {} {} {} {1.000} {}
 E { 4624} {e} {e} {2} {0} {} {1.000} {}
 E { 4626} {w} {w} {8} {0} {} {1.000} {}
 
-R { 4626} {0} {} {4626} { } {} {} {} {} {} {1.000} {}
+R { 4626} {0} {} {4626} { } {-= Great Hall Courtyard =- Directly ahead stands the majestic Great Hall.  Slick black stones cover the path leading to the narrow steps. Guarding the entrance to the Great Hall stand two enormous stone lions, their teeth bared against any evil that may try to enter the sacred buildings. The Great Hall is made of earthen clay and covered with an ornate green roof. To the north is the Drum Tower, to the south lies the three-storied Bell Tower. } {Monks} {} {} {} {1.000} {}
 E { 4625} {e} {e} {2} {0} {} {1.000} {}
 E { 4627} {w} {w} {8} {0} {} {1.000} {}
+E { 5881} {n} {n} {1} {0} {} {1.000} {}
+E { 5885} {s} {s} {4} {0} {} {1.000} {}
 
-R { 4627} {0} {} {4627} { } {} {} {} {} {} {1.000} {}
+R { 4627} {0} {<118>} {4627} { } {} {} {} {} {} {1.000} {}
 E { 4626} {e} {e} {2} {0} {} {1.000} {}
 E { 4628} {w} {w} {8} {0} {} {1.000} {}
 
@@ -21321,20 +21435,20 @@ E { 4741} {ne} {ne} {3} {0} {} {1.000} {}
 E { 4744} {nw} {nw} {9} {0} {} {1.000} {}
 E { 4917} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 4746} {0} {} {4746} { } {} {} {} {} {} {1.000} {}
+R { 4746} {0} {} {4746} { } {You are walking along a grassy country lane which runs north to south.  Empty and strangely blurry fields lie to the east.  A small white building lies to the west and a strange little hut is in the grassy field to the east.  A strange and mottled sky glowers down upon you. } {Mud} {} {} {} {1.000} {}
 E {    6} {s} {s} {4} {0} {} {1.000} {}
 E { 4747} {n} {n} {1} {0} {} {1.000} {}
-E { 5376} {e} {e} {2} {0} {} {1.000} {}
+E { 6018} {e} {e} {2} {0} {} {1.000} {}
 
-R { 4747} {0} {} {4747} { } {} {} {} {} {} {1.000} {}
+R { 4747} {0} {} {4747} { } {Strange greenish red bricks head into a weird and miasmic haze to the west but give way to a gentle, lush green path to the south.  To the east is a large building made of rough hewn stone.  Towering clouds shaped like nothing you have ever seen before rear high into the air to north and south. Massive flashes of black lightning tear through the air. How odd.  There seems to be a manhole here now! } {Mud} {} {} {} {1.000} {}
 E { 4746} {s} {s} {4} {0} {} {1.000} {}
 E { 4748} {w} {w} {8} {0} {} {1.000} {}
 E { 5554} {e} {e} {2} {0} {} {1.000} {}
 
-R { 4748} {0} {} {4748} { } {} {} {} {} {} {1.000} {}
+R { 4748} {0} {} {4748} { } {You are on a strange, undulating path that runs east to west and is floored with greenish red bricks.  A thick, miasmal haze blocks your view of Foundation and distorts your vision. Something shimmers to the northeast that is somehow both light and dark at the same time. } {Mud} {} {} {} {1.000} {}
 E { 4747} {e} {e} {2} {0} {} {1.000} {}
 E {  165} {w} {w} {8} {0} {} {1.000} {}
-E { 4109} {ne} {ne} {3} {0} {} {1.000} {}
+E { 4088} {ne} {ne} {3} {0} {} {1.000} {}
 
 R { 4749} {4104} {} {4749} { } {} {} {} {} {} {1.000} {}
 E { 4070} {n} {n} {1} {0} {} {1.000} {}
@@ -24435,8 +24549,9 @@ R { 5375} {4104} {} {5375} { } {} {} {} {} {} {1.000} {}
 E { 3999} {s} {s} {4} {0} {} {1.000} {}
 E { 3998} {n} {n} {1} {0} {} {1.000} {}
 
-R { 5376} {0} {} {gypsy} { } {} {} {gypsy} {} {} {1.000} {}
-E { 4746} {w} {w} {8} {0} {} {1.000} {}
+R { 5376} {0} {} {gypsy} { } {			Lair of the Gypsy You have entered the mystical dwelling of The Gypsy.  For years, she has used her mysterious powers to benefit the citizens of Foundation. Of course, her services are accompanied by a substantial fee.  To see a list of the services provided by The Gypsy, just read the sign found within the shop.  Looking closely, you can see a small staircase leading down into the basement. } {Mud} {gypsy} {} {} {1.000} {}
+E { 6018} {w} {w} {8} {0} {} {1.000} {}
+E { 6017} {d} {d} {32} {0} {} {1.000} {}
 
 R { 5377} {0} {} {A Narrow Path (sw,nw,e,w)} { } {A Narrow Path. You are on a path which leads eastwards away from the huge tower looming just to the west of you. To the southwest, you can easily see the huge swirling portal and ahead lies the broken outline of the strange eastern tower. The path is quite busy, with mages traveling to and from the main tower but none are using any magic or magical devices. To the north of the path you notice several unusually large bushes. } {Mages} {} {} {} {1.000} {}
 E {  626} {sw} {sw} {12} {0} {} {1.000} {}
@@ -24459,13 +24574,15 @@ R { 5380} {0} {} {The glade of the ruined tower (enter,w)} { } {The glade of the
 E { 5379} {w} {w} {8} {0} {} {1.000} {}
 E { 7200} {enter} {enter} {0} {0} {} {1.000} {}
 
-R { 5381} {0} {} {5381} { } {} {} {} {} {} {1.000} {}
-E { 6011} {e} {e} {2} {0} {} {1.000} {}
+R { 5381} {0} {} {5381} { } {You are in a lush, green clearing in the great forest west of Foundation.  You can vaguely see Saint's Walk off to the east.  To the west is a small and pleasant-looking white building.  To the southwest, the forest has grown over an old path, sealing it off from further exploration. } {Mud} {} {} {} {1.000} {}
+E { 5886} {e} {e} {2} {0} {} {1.000} {}
 E { 5382} {w} {w} {8} {0} {} {1.000} {}
-E { 6014} {sw} {sw} {12} {0} {} {1.000} {}
+E { 6013} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 5382} {0} {} {house} { } {} {} {} {} {} {1.000} {}
+R { 5382} {0} {} {house} { } {The office of the Foundation Real Estate Co. is a very sleek and relaxed-looking place.  Creamy white walls and lamps with neon cobalt blue trim adorn the room, giving the office a very trendy look.  Various funky chairs and sofas are set throughout the room, next to some screens. } {Mud} {} {} {} {1.000} {}
 E { 5381} {e} {e} {2} {0} {} {1.000} {}
+E { 5887} {u} {u} {16} {0} {} {1.000} {}
+E { 5891} {w} {w} {8} {0} {} {1.000} {}
 
 R { 5383} {0} {} {5383} { } {} {} {} {} {} {1.000} {}
 E { 3402} {s} {s} {4} {0} {} {1.000} {}
@@ -24954,11 +25071,11 @@ E { 5709} {e} {e} {2} {0} {} {1.000} {}
 E { 5715} {n} {n} {1} {0} {} {1.000} {}
 E { 5701} {s} {s} {4} {0} {} {1.000} {}
 
-R { 5503} {0} {} {5503} { } {} {} {} {} {} {1.000} {}
+R { 5503} {0} {} {5503} { } {Inconspicuously in a less-travelled portion of Foundation, the Rebel Forces have hidden one of their largest troop transport hangars. The ships that fly from here are moderately sized but extremely fast. They are intended to quickly make the jump to light speed and evade any and all Imperial Destroyers. Rumour has it that the destination of the current flights is the planet of Yavin, home of Luke Skywalker's Jedi Academy. } {Mud} {} {} {} {1.000} {}
 E {    9} {s} {s} {4} {0} {} {1.000} {}
 E { 5504} {shuttle} {shuttle} {0} {0} {} {1.000} {}
 
-R { 5504} {0} {} {jedis} { } {} {} {jedis} {} {} {1.000} {}
+R { 5504} {0} {<118>} {jedis} { } {} {} {jedis} {} {} {1.000} {}
 E {    9} {board science} {board science} {0} {0} {} {1.000} {}
 E { 5505} {n} {n} {1} {0} {} {1.000} {}
 
@@ -25169,7 +25286,7 @@ E { 5550} {n} {n} {1} {0} {} {1.000} {}
 R { 5553} {0} {} {5553} { } {This chamber is much larger than the other rooms found in this castle. Heavy, iron torches line the stone walls and a large brown rug covers most of the floor. A massive throne sits in front of the far wall. The back of the throne reaches all the way to the ceiling. } {Smurfland 2} {} {} {} {1.000} {}
 E { 5550} {w} {w} {8} {0} {} {1.000} {}
 
-R { 5554} {0} {} {profs} { } {} {} {profs} {} {} {1.000} {}
+R { 5554} {0} {} {profs} { } {The sounds of clattering feet and murmuring voices completely fills this dark and rough hewn stone building.  While the interior of the structure is more visually appealing than the exterior, with its soft iridescent glow, its 20 foot vaulted ceiling, and its dark oak counters, there is still the hint of a much rougher underbelly, as evidenced by the dusty and half-worked stones underneath it all.  People mill around the area, not pausing at all for pleasantries but rather working as efficiently and quickly as possible, then exiting once their transactions are complete.  One wouldn't expect more from the Office of Professional Registration, an organization whose sole purpose is to keep track of the various professions and the people who practice it. } {Mud} {profs} {} {} {1.000} {}
 E { 4747} {w} {w} {8} {0} {} {1.000} {}
 
 R { 5555} {0} {} {5555} { } {} {} {} {} {} {1.000} {}
@@ -25509,22 +25626,23 @@ E { 5643} {n} {n} {1} {0} {} {1.000} {}
 R { 5635} {0} {} {Sundeck (e)} { } {This is a nice warm sundeck.  The sun beams down and makes the surroundings very comfortable.  There are a couple of deck chairs, and a beanbag. } {Shady Oaks Asylum} {} {} {} {1.000} {}
 E { 5634} {e} {e} {2} {0} {} {1.000} {}
 
-R { 5636} {0} {} {5636} { } {} {} {} {} {} {1.000} {}
+R { 5636} {0} {} {5636} { } {A room in a quaint old building that once served as the office for the 3KP newspaper. Where once reporters scurried to and fro, there are now only dust-covered desks and cobwebs growing along the mildewed ceiling. The old charm of the room is only hinted at now. The coffee table is worn and scratched. The formerly comfortable chairs around the cold fireplace sag on their springs. A few yellowed newspaper pages are still framed and hung along the walls. } {Mud} {} {} {} {1.000} {}
 E {  834} {w} {w} {8} {0} {} {1.000} {}
+E { 6383} {d} {d} {32} {0} {} {1.000} {}
 
-R { 5637} {0} {} {mercs} { } {} {} {} {} {} {1.000} {}
+R { 5637} {0} {} {mercs} { } {A thick black haze envelops the room, hindering your vision.  An unruly looking assortment of characters stare at you as you walk into the room.  Broken glass and empty beer bottles are strewn across the floor, and every now and then you step into a fresh pool of blood or come across a knocked-out tooth.  A well stocked bar runs along the length of the room, and tables are scattered haphazardly.  This is the mercenary guild, a natural refuge of fallen warriors and homeplace of the unscrupulous.  If you have the money, you can find many friends and an assortment of services here.  There is a note stuck to the wall with a large dagger. } {Mud} {} {} {} {1.000} {}
 E {  835} {w} {w} {8} {0} {} {1.000} {}
 
-R { 5638} {0} {} {morgue} { } {} {} {morgue} {} {} {1.000} {}
+R { 5638} {0} {} {morgue} { } {This is the new and improved Foundation Morgue.  The recent renovations have really done wonders for the place.  The walls and floor are both tile with a large drain in the floor.  Probably for cleanup!  In the corner is a cart likely used by the mortician to move the bodies around. There is a sign here if you want more information. } {Mud} {morgue} {} {} {1.000} {}
 E {    6} {w} {w} {8} {0} {} {1.000} {}
 
-R { 5639} {0} {} {5639} { } {} {} {} {} {} {1.000} {}
+R { 5639} {0} {} {5639} { } {Row upon row of boxes, bins, shelves, and racks full of stuff stand before you. This is the new Foundation Goodwill, serving the needy since 2009. If you're interested in borrowing some used, but still serviceable equipment, take a look in the bin. You might donate a few items too. } {Mud} {} {} {} {1.000} {}
 E {  982} {s} {s} {4} {0} {} {1.000} {}
 
-R { 5640} {0} {} {massxp} { } {} {} {} {} {} {1.000} {}
+R { 5640} {0} {} {massxp} { } {You enter the museum.  Several works of art catch your eye, but the one thing that holds your attention most is the bulletin board at the center of this wide and empty room.  You feel that if you had anything to share in the creative sense, this would be the place to do it.  All poetry, pictures, etc. are accepted. To the east you see an archway. Above the archway, a sign reads: 		~ GALLERY OF WIZARDS ~ } {Mud} {} {} {} {1.000} {}
 E {  983} {n} {n} {1} {0} {} {1.000} {}
 
-R { 5641} {0} {} {5641} { } {} {} {} {} {} {1.000} {}
+R { 5641} {0} {} {5641} { } {Piles of junk litter the yard to the west with only a narrow path winding its way between them. Standing between you and the piles is a long wooden counter attached to an electrified fence that goes all the way around the yard. The faint but bitter stench of rusting metal wafts its way from the yard, making even the toughest of adventurers wrinkle his or her nose. If you're looking for scrap metal, this is the place. } {Mud} {} {} {} {1.000} {}
 E {  984} {e} {e} {2} {0} {} {1.000} {}
 
 R { 5642} {0} {} {Tennis courts (w)} { } {This is where the residents of Shady Oaks can come and enjoy a nice friendly tennis match. } {Shady Oaks Asylum} {} {} {} {1.000} {}
@@ -25595,7 +25713,7 @@ E { 4164} {s} {s} {4} {0} {} {1.000} {}
 R { 5660} {0} {} {5660} { } {Here at the bottom of the well lies a vast, empty cavern. } {Arcanarton} {} {} {} {1.000} {}
 E { 3033} {u} {u} {16} {0} {} {1.000} {}
 
-R { 5661} {0} {} {angels} { } {} {} {angels} {} {} {1.000} {}
+R { 5661} {0} {<118>} {angels} { } {} {} {angels} {} {} {1.000} {}
 E { 4109} {exodus} {exodus} {0} {0} {} {1.000} {}
 E { 5662} {d} {d} {32} {0} {} {1.000} {}
 E { 5663} {n} {n} {1} {0} {} {1.000} {}
@@ -26313,7 +26431,7 @@ R { 5814} {0} {} {5814} { } {} {} {} {} {} {1.000} {}
 E { 5813} {se} {se} {6} {0} {} {1.000} {}
 E { 5826} {ne} {ne} {3} {0} {} {1.000} {}
 
-R { 5815} {0} {} {5815} { } {} {} {} {} {} {1.000} {}
+R { 5815} {0} {} {5815} { } {You are walking along a pleasant country lane.  You can see the side of a whitewashed shop to the north and a small and curiously shaped building to the south. } {Mud} {} {} {} {1.000} {}
 E {  976} {w} {w} {8} {0} {} {1.000} {}
 E {  836} {e} {e} {2} {0} {} {1.000} {}
 
@@ -26327,6 +26445,32 @@ E { 5818} {n} {n} {1} {0} {} {1.000} {}
 
 R { 5818} {0} {} {-= Director's Office =- (s)} { } {-= Director's Office =- A large desk in poor condition takes up most of the space.  Papers and folders are strewn about in disarray. A black vinyl couch sits facing the desk.  Pictures of the director and various celebrities hang on the wall.  A novelty hand grenade sits on top of the desk.  A megaphone and whistle sit on the floor next to the trashcan. } {Barney's Studio} {} {} {} {1.000} {}
 E { 5817} {s} {s} {4} {0} {} {1.000} {}
+
+R { 5819} {0} {} {Sports Fan-atics Football Lounge (w)} { } {The floor is covered with FieldTurf[TM], marked every three feet with yardage markers.  According to the floor, this room is about 15 yards long, and about 10 yards wide.  Overstuffed leather couches line the left wall, whereas the right wall is covered with widescreen digital TVs, each showing a different football game.  The walls are covered with pennants of every team in the league, as well as memorabilia from throughout the history of the NFL. } {Foundation Sports Bar} {} {} {} {1.000} {}
+E { 4241} {w} {w} {8} {0} {} {1.000} {}
+
+R { 5820} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 4241} {sw} {sw} {12} {0} {} {1.000} {}
+E {  971} {ne} {ne} {3} {0} {} {1.000} {}
+
+R { 5821} {0} {} {Sports Fan-atics Hockey Lounge (s)} { } {The walls here are painted white on the bottom, and there is a red chair-rail running around the perimeter of this oval-shaped room.  Above the chair-rail are mirrors in the shape of the plexiglass that surrounds hockey rinks.  The floor is ice-white, and has all the standard markings of a hockey rink.  Along the wide far wall is a bank of televisions, each showing a different game.  Spread around the room are chairs and tables to sit down and watch the games at. } {Foundation Sports Bar} {} {} {} {1.000} {}
+E { 4241} {s} {s} {4} {0} {} {1.000} {}
+
+R { 5822} {0} {} {Northern Garden Entrance (nw,s)} { } {The sky is a pale blue expanse that covers the world overhead, dotted with faint smeared tufts of white clouds left like dust trails after a jalopy on a dusty road.  You stand just outside an arch that separates the Garden of the Poets from the courtyard of the guild tower.  In a wide ring encircling the base of the tower is a neatly pruned flowerbed filled with various species of colorful flowers.  A cobblestone path runs alongside it for visitors to stroll on and admire the surroundings.  The path divides the flowers from an immaculate spacious green lawn that runs right up to the edge of the outer tower wall.  On the lawn, a stone bench provides a shady spot to rest under an ash tree.  It faces an imposing white stone statue beside the path. } {Bard} {} {} {} {1.000} {}
+E { 7221} {s} {s} {4} {0} {} {1.000} {}
+E { 5824} {nw} {nw} {9} {0} {} {1.000} {}
+
+R { 5823} {0} {} {Southern Garden Entrance (sw,n)} { } {You stand on the threshold of an arch that separates the Garden of the Poets from the courtyard of the guild tower.  A wide flowerbed abutting the tower is filled with pruned well-kept rose bushes of various sizes and colors.  The wild colors extend out of sight around the curve of the tower wall. Running alongside the garden is a quaint cobblestone path.  It separates the roses from a wide green lawn that stretches right up to the outer tower wall.  The trimmed grass creates a park-like open expanse under the bright blue sky.  In the center of it a massive oak tree bends its long thick branches down in graceful curves.  It is easy to imagine someone spreading a picnic blanket beneath its protective canopy.  Near you beside the path, a large stone statue presides silently over the surroundings. } {Bard} {} {} {} {1.000} {}
+E { 7221} {n} {n} {1} {0} {} {1.000} {}
+E { 5825} {sw} {sw} {12} {0} {} {1.000} {}
+
+R { 5824} {0} {} {Garden of the Poets (se,nw)} { } {As you wander along the path, you come to a large silver plaque mounted on an angled stone block set in the neatly manicured lawn.  It rests in the protective shadow of a giant sycamore that reaches its wide-leafed branches up to the blue sky above.  A quick glance shows a list of names, perhaps a memorial of some kind.  Against the tower wall, a flower garden blooms with fresh smells that tickle your nose.  The lush green lawn on your other side invites you to take off your shoes and wiggle your toes in the cool dank grass. } {Bard} {} {} {} {1.000} {}
+E { 5822} {se} {se} {6} {0} {} {1.000} {}
+E { 5879} {nw} {nw} {9} {0} {} {1.000} {}
+
+R { 5825} {0} {} {Garden of the Poets (sw,ne)} { } {Further down the cobblestone path, you come to a large gold plaque mounted on an angled stone block set in the neatly manicured lawn.  A flowering slender olive tree nearby sways gently in the wind, its shadow playing over the surface of the plaque.  The breeze sets loose small petals that curl and dip lazily about before coming to rest on the surrounding grass.  A quick glance at the plaque shows a list of names, perhaps a memorial of some kind.  Against the tower wall, the flower garden displays a wide array of dahlias of impressive size with the rich glowing colors that only dahlias can achieve. } {Bard} {} {} {} {1.000} {}
+E { 5823} {ne} {ne} {3} {0} {} {1.000} {}
+E { 5865} {sw} {sw} {12} {0} {} {1.000} {}
 
 R { 5826} {0} {} {5826} { } {} {} {} {} {} {1.000} {}
 E { 5814} {sw} {sw} {12} {0} {} {1.000} {}
@@ -26484,14 +26628,54 @@ E { 5863} {se} {se} {6} {0} {} {1.000} {}
 R { 5863} {0} {} {5863} { } {} {} {} {} {} {1.000} {}
 E { 5862} {nw} {nw} {9} {0} {} {1.000} {}
 
-R { 5864} {0} {} {5864} { } {} {} {} {} {} {1.000} {}
+R { 5864} {0} {} {5864} { } {You stand on a path that winds through a massive and ancient forest.  The towering trees that surround you rise into a canopy so thick that they block out the sun.  The resulting shadows don't provide much light to see by, but it appears that a clearing lies further to the northwest. } {Mud} {} {} {} {1.000} {}
 E { 5910} {se} {se} {6} {0} {} {1.000} {}
 E { 6088} {nw} {nw} {9} {0} {} {1.000} {}
+
+R { 5865} {0} {} {Garden of the Poets (ne,w)} { } {The walkway continues around the tower grounds, and as you round the corner you find a pleasant array of berried plants.  Saint John's wort lines the front with light green delicate speckled leaves and red and black berries.  For groundcover you recognize thin tendrils of blackberries native to the more northern regions.  Further back, attractive salmonberry bushes add a splash of melon color, but also make it apparent that not everything beautiful here is edible.  On the lawn side of the garden a holly bush sprouts thick waxy healthy-looking leaves and bright red berry clusters. } {Bard} {} {} {} {1.000} {}
+E { 5825} {ne} {ne} {3} {0} {} {1.000} {}
+E { 5866} {w} {w} {8} {0} {} {1.000} {}
+
+R { 5866} {0} {} {Garden of the Poets (w,e)} { } {On the lawn side of the garden, a smaller path leads off of the main path to the south and loops around a man-made reflective pond.  A nice diversionary stroll, the pond almost perfectly captures the blue sky and fleecy clouds above, save for the occasional ripple that spreads across the surface when a breeze gusts through.  There is a slight bubbling at one end of pool that suggests it is fed by an underground water source that keeps the water fresh and clear.  In the center it is graced by the figure of a woman on a pedestal.  On the far edge of the pond, a weeping willow dips its long thin branches down to the water. } {Bard} {} {} {} {1.000} {}
+E { 5865} {e} {e} {2} {0} {} {1.000} {}
+E { 5867} {w} {w} {8} {0} {} {1.000} {}
+
+R { 5867} {0} {} {Garden of the Poets (nw,e)} { } {With a loud crunch your boot heel crushes a round nut underfoot.  The walkway is littered with fallen hazelnuts from a tree bordering the path.  The rest of the area, however, is spotless.  The lawn has closely-cropped grass, and the flowerbeds are perfectly pruned.  Their intermingled abundant fragrant scents waft gently over to you.  How odd to have such a carefully tended garden yet such an atrociously messy path. } {Bard} {} {} {} {1.000} {}
+E { 5866} {e} {e} {2} {0} {} {1.000} {}
+E { 5868} {nw} {nw} {9} {0} {} {1.000} {}
+
+R { 5868} {0} {} {Garden of the Poets (se,nw)} { } {The colors in the garden are very cool and refreshing.  The deep purple of violets mingle with the lighter blues of irises.  Bluebells wave delicately in the breeze, and tall white carnations sway in time with them like the gentle swell of white-capped oceans.  They form a perfect complement to the pale blue sky and its wispy tufts of white clouds.  On the wide green lawn on the other side of the path, a laurel tree spreads its leafy branches. } {Bard} {} {} {} {1.000} {}
+E { 5867} {se} {se} {6} {0} {} {1.000} {}
+E { 5869} {nw} {nw} {9} {0} {} {1.000} {}
+
+R { 5869} {0} {} {Garden of the Poets (se,n)} { } {In contrast to the wild creative patterns of the rest of the garden this section is noticeably structured in comparison.  Perfectly squared bushes and carefully pruned plants form convoluted geometric shapes.  There are wild foxgloves and other tall leafy fronds in the centerpiece, and around that are rows forming alternating concentric circles and squares, with a large triangle overlaying the entire design.  It is all completely constructed out of plants and gravel beds without the aid of dividers or supports.  On the other side of the path, a pine tree grows on the lawn.  Its long shadow falls across the grass and barely brushes against the statue of a tall man in scholarly robes. } {Bard} {} {} {} {1.000} {}
+E { 5868} {se} {se} {6} {0} {} {1.000} {}
+E { 5870} {n} {n} {1} {0} {} {1.000} {}
+
+R { 5870} {0} {} {Garden of the Poets (n,s)} { } {There is a fresh minty smell in the air.  In the garden, various fragrant bushes are growing in abundance.  A bumblebee dips and hovers around the flowering tips of a large mint plant.  Next to it is a thick rosemary bush with spiky branches, and a smaller thyme bush with little round yellow-tipped leaves.  There are also smaller herbs like a light green sage plant, and thin stalks of chives with round purple blossoms on top.  A eucalyptus tree spreads its tall smooth branches up to the sky on the other side of the path. } {Bard} {} {} {} {1.000} {}
+E { 5869} {s} {s} {4} {0} {} {1.000} {}
+E { 5871} {n} {n} {1} {0} {} {1.000} {}
+
+R { 5871} {0} {} {Garden of the Poets (ne,s)} { } {The gardenbed along this side of the tower is a field of golden colors.  Along the back row, tall sunflowers graciously dip their heavy heads.  Closer up front, chrysanthemums, marigolds, and other flowers create a field of yellows and oranges.  The sunlight reflecting off their bright surfaces makes the entire garden glow.  In contrast, the lawn across the path is a cool uniform green. Although, in the branches of a maple tree nearby you spot the darting yellow form of a goldfinch. } {Bard} {} {} {} {1.000} {}
+E { 5870} {s} {s} {4} {0} {} {1.000} {}
+E { 5872} {ne} {ne} {3} {0} {} {1.000} {}
+
+R { 5872} {0} {} {Garden of the Poets (sw,ne)} { } {Following the path around the tower, you come to a giant elm tree with an elegant spread of branches.  Shadows of dancing leaves sway daintily back and forth on the surface of the path and you can hear the leaves rustling and sighing in the tree overhead.  The cool shade under the tree encourages you to linger for a while.  You could lie under the branches and look skyward at the bits of blue peeking through the leaves, or you might sit with your back against the tree and take in the blooming gardens next to the guild tower. } {Bard} {} {} {} {1.000} {}
+E { 5871} {sw} {sw} {12} {0} {} {1.000} {}
+E { 5873} {ne} {ne} {3} {0} {} {1.000} {}
+
+R { 5873} {0} {} {Garden of the Poets (sw,e)} { } {This area of the garden has been recently cultivated.  A young apple tree growing next to the path has a few ripe red delicious apples dangling temptingly over the pathway.  Likewise, the flowerbeds along the tower wall have young seedlings, many of the shoots still too tender to be able to determine their species.  You can see from their arrangement that when they bloom they will form the shape of a harp.  It is apparent from this new project that the garden is in a constant state of evolution and change. } {Bard} {} {} {} {1.000} {}
+E { 5872} {sw} {sw} {12} {0} {} {1.000} {}
+E { 5875} {e} {e} {2} {0} {} {1.000} {}
 
 R { 5874} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 7140} {se} {se} {6} {0} {} {1.000} {}
 
-R { 5876} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R { 5875} {0} {} {Garden of the Poets (w,e)} { } {As you curve around the north side of the tower, a pleasant gurgling reaches your ears.  Here, a little brook burbling up from an underground source cuts across the lawn for some distance.  It is spanned by a wooden bridge that lets you cross from the cobblestone path to the lawn on the other side of the creek.  Just beyond the bridge, two figures are preserved in stone in a loving embrace in the shade of a cherry tree.  On the guild side of the bridge, the flowerbeds next to the tower wall sport rows of bright red roses of varying hues.  A cool breeze rises off the water and fans your cheek. } {Bard} {} {} {} {1.000} {}
+E { 5873} {w} {w} {8} {0} {} {1.000} {}
+E { 5879} {e} {e} {2} {0} {} {1.000} {}
+
+R { 5876} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 7220} {portal} {portal} {0} {0} {} {1.000} {}
 E { 5877} {n} {n} {1} {0} {} {1.000} {}
 
@@ -26506,6 +26690,17 @@ E { 5877} {s} {s} {4} {0} {} {1.000} {}
 E { 5882} {n} {n} {1} {0} {} {1.000} {}
 E {10216} {e} {e} {2} {0} {} {1.000} {}
 E {10221} {w} {w} {8} {0} {} {1.000} {}
+
+R { 5879} {0} {} {Garden of the Poets (se,w)} { } {The wind rustles lazily through an old yew tree alongside the path.  This section of the garden is comprised of various flowering bushes, which create a predominant swath of green punctuated by occasional bits of bright color against the tower wall.  Small azalea bushes, medium-sized hibiscuses, and larger rhododendrons are some of the more recognizable species.  Other generic leafy topiaries are sculpted into miniature lawn creatures that run underfoot. } {Bard} {} {} {} {1.000} {}
+E { 5875} {w} {w} {8} {0} {} {1.000} {}
+E { 5824} {se} {se} {6} {0} {} {1.000} {}
+
+R { 5880} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 4623} {w} {w} {8} {0} {} {1.000} {}
+E {  973} {e} {e} {2} {0} {} {1.000} {}
+
+R { 5881} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 4626} {s} {s} {4} {0} {} {1.000} {}
 
 R { 5882} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 5878} {s} {s} {4} {0} {} {1.000} {}
@@ -26523,6 +26718,16 @@ E { 5888} {n} {n} {1} {0} {} {1.000} {}
 E {10203} {e} {e} {2} {0} {} {1.000} {}
 E {10207} {w} {w} {8} {0} {} {1.000} {}
 
+R { 5885} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 4626} {n} {n} {1} {0} {} {1.000} {}
+
+R { 5886} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 5381} {w} {w} {8} {0} {} {1.000} {}
+E {  975} {e} {e} {2} {0} {} {1.000} {}
+
+R { 5887} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 5382} {d} {d} {32} {0} {} {1.000} {}
+
 R { 5888} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 5884} {s} {s} {4} {0} {} {1.000} {}
 E { 5889} {n} {n} {1} {0} {} {1.000} {}
@@ -26537,22 +26742,71 @@ E { 5888} {w} {w} {8} {0} {} {1.000} {}
 E { 5892} {ne} {ne} {3} {0} {} {1.000} {}
 E {10203} {s} {s} {4} {0} {} {1.000} {}
 
+R { 5891} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 5382} {e} {e} {2} {0} {} {1.000} {}
+
 R { 5892} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 5890} {sw} {sw} {12} {0} {} {1.000} {}
 E {10202} {se} {se} {6} {0} {} {1.000} {}
 E {10224} {d} {d} {32} {0} {} {1.000} {}
 E {10225} {u} {u} {16} {0} {} {1.000} {}
 
-R { 5909} {0} {<118>} {ss} { } {} {} {ss} {} {} {1.000} {}
+R { 5893} {0} {} {Deputy Mayor's Office (ne,u)} { } {This cluttered office serves as the temporary workspace of the Deputy Mayor of Foundation.  Stacks of reports, memos, books, budgets, agendas, briefings, dossiers, and doodles are piled in a haphazard mountain on a warped wooden desk.  A gilded mirror frame stands near the desk.  An inconspicuous door leads to a staircase up. } {Mud} {} {} {} {1.000} {}
+E {  977} {ne} {ne} {3} {0} {} {1.000} {}
+E { 6481} {u} {u} {16} {0} {} {1.000} {}
+
+R { 5894} {0} {} {An Odds 'n Ends shop (e)} { } {This is the Foundation Odds 'n Ends shop. Lots of fun toys are on display here and a smiling sales clerk stands behind the counter.  There is a sign listing prices up on the wall. } {Mud} {} {} {} {1.000} {}
+E {  835} {e} {e} {2} {0} {} {1.000} {}
+
+R { 5895} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {10005} {n} {n} {1} {0} {} {1.000} {}
+E {  164} {s} {s} {4} {0} {} {1.000} {}
+
+R { 5896} {0} {} {A small candy store (se,n)} { } {This is a small candy store and candy is everywhere in sight.  There is a lot of candy and it is hard to decide on what to get.  The walls are filled with different types of candy.  The counter is to the north and behind the counter is Ho-San and the backroom. } {Mud} {} {} {} {1.000} {}
+E {  164} {se} {se} {6} {0} {} {1.000} {}
+
+R { 5898} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 6083} {w} {w} {8} {0} {} {1.000} {}
+E {  164} {e} {e} {2} {0} {} {1.000} {}
+
+R { 5899} {0} {} {The Consignment Shop (u,w)} { } {What a warm and inviting place.  The walls are covered in polished wood paneling, and the grain in the panels is accentuated in the swirling patterns in the beige-coloured tile floor.  The room is bright and cheery, and sunlight dapples over the many shelves, each of which hold something wonderful.  You could spend hours in here!  A small red sign has instructions on how to use the store, which are summarized as: 'consign', 'unconsign', 'checkconsign', 'list', 'buy', 'cashout', 'checkexpire', 'reclaim'.  You should read the sign for more information. } {Crafter's Guild Halls} {} {} {} {1.000} {}
+E {10005} {w} {w} {8} {0} {} {1.000} {}
+E { 5900} {u} {u} {16} {0} {} {1.000} {}
+
+R { 5900} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 5899} {d} {d} {32} {0} {} {1.000} {}
+
+R { 5901} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 5902} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 5903} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 5904} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 5905} {0} {} {The Chef Room (kitchen,nw)} { } {Women and men in silly white hats mill about this room, heading between various kitchens, their arms full of bowls or pans or, most commonly, fruits and vegetables.  The look on their faces is one of rapture, and they don't even seem to notice the fine leather furnishings, the antique wood cabinets, or the subtle abstract art on the walls.  The clanging sound of pots and pans and lots of arguing filters out from the kitchens. } {Crafter's Guild Halls} {} {} {} {1.000} {}
+E {10011} {nw} {nw} {9} {0} {} {1.000} {}
+E { 6014} {kitchen} {kitchen} {0} {0} {} {1.000} {}
+
+R { 5906} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {10012} {se} {se} {6} {0} {} {1.000} {}
+
+R { 5907} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {10012} {sw} {sw} {12} {0} {} {1.000} {}
+
+R { 5908} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {10012} {s} {s} {4} {0} {} {1.000} {}
+
+R { 5909} {0} {} {ss} { } {You are standing in the Surreal Spirits Tavern.  Herein you can purchase beverages to ease your troubles and soothe your mind. Type 'list' to see a list of consumables. } {Mages} {ss} {} {} {1.000} {}
 E { 3959} {n} {n} {1} {0} {} {1.000} {}
 
-R { 5910} {0} {} {5910} { } {} {} {} {} {} {1.000} {}
-E { 7282} {s} {s} {4} {0} {} {1.000} {}
+R { 5910} {0} {} {5910} { } {A well-travelled road runs north and south here through an awesome and ancient forest.  The trees rise high overhead into a dense canopy that blocks your view of the sky.  A small path veers off and down through a slight gap in the trees to the northwest.  To the east you see a clearing in front of the Cathedral of All Gods. } {Mud} {} {} {} {1.000} {}
+E { 4232} {s} {s} {4} {0} {} {1.000} {}
 E { 5911} {n} {n} {1} {0} {} {1.000} {}
 E { 5864} {nw} {nw} {9} {0} {} {1.000} {}
 E { 7286} {e} {e} {2} {0} {} {1.000} {}
 
-R { 5911} {0} {} {5911} { } {} {} {} {} {} {1.000} {}
+R { 5911} {0} {} {5911} { } {The well travelled road comes to an abrupt end here in a round clearing deep in the ancient woods that border the city of Foundation.  A wrought iron gate stands partially opened across the trail into the forest.  Tall stone walls extend from the gates into the darkness of the forest. } {Mud} {} {} {} {1.000} {}
 E { 5910} {s} {s} {4} {0} {} {1.000} {}
 E { 5918} {gate} {gate} {0} {0} {} {1.000} {}
 
@@ -26579,24 +26833,24 @@ E { 5917} {ne} {ne} {3} {0} {} {1.000} {}
 R { 5917} {0} {} {5917} { } {} {} {} {} {} {1.000} {}
 E { 5916} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 5918} {0} {} {raylorn} { } {} {} {raylorn} {} {} {1.000} {}
+R { 5918} {0} {} {A wooded path (n,w,e,gate)} { } {A well worn path passes through the dark forest, leading to the  great tower which rises above the trees to the north.  You can feel  the aura of power even at this distance from the dark stone walls.   A swirling mist winds its way across the path, twining itself about  the trees of the forest and curling off into the darkness.  You  shiver slightly in the dark wood and feel a faint yearning for the  comforting walls of the tower. } {Necs} {raylorn} {} {} {1.000} {}
 E { 5919} {n} {n} {1} {0} {} {1.000} {}
 E { 5937} {e} {e} {2} {0} {} {1.000} {}
 E { 5911} {gate} {gate} {0} {0} {} {1.000} {}
 E {10806} {w} {w} {8} {0} {} {1.000} {}
 
-R { 5919} {0} {} {necromancers} { } {} {} {} {} {} {1.000} {}
+R { 5919} {0} {} {necromancers} { } {You have entered the halls of the great keep in the woods.  This is the main hall of the Necromancers' Guild.  To the north is a beautiful courtyard and there are rooms to the east and west.  Many wizards rush by you, pursuing their art.  You may join the guild in the crypt below.  If you have decided to forsake your membership, you may retire from the guild here. } {Necs} {} {} {} {1.000} {}
 E { 5918} {s} {s} {4} {0} {} {1.000} {}
 E { 5920} {d} {d} {32} {0} {} {1.000} {}
 E { 5921} {n} {n} {1} {0} {} {1.000} {}
 E { 5945} {w} {w} {8} {0} {} {1.000} {}
 E { 7072} {e} {e} {2} {0} {} {1.000} {}
 
-R { 5920} {0} {} {5920} { } {} {} {} {} {} {1.000} {}
+R { 5920} {0} {<118>} {5920} { } {} {} {} {} {} {1.000} {}
 E { 5919} {u} {u} {16} {0} {} {1.000} {}
 E { 7068} {d} {d} {32} {0} {} {1.000} {}
 
-R { 5921} {0} {} {5921} { } {} {} {} {} {} {1.000} {}
+R { 5921} {0} {<118>} {5921} { } {} {} {} {} {} {1.000} {}
 E { 5919} {s} {s} {4} {0} {} {1.000} {}
 E { 5923} {e} {e} {2} {0} {} {1.000} {}
 E { 5922} {w} {w;gda;gda;gda} {8} {0} {} {1.000} {}
@@ -26674,11 +26928,11 @@ E {12407} {Psionic} {Psionic} {0} {0} {} {1.000} {}
 R { 5936} {0} {} {light} { } {} {} {light} {} {} {1.000} {}
 E { 5935} {focus} {focus} {0} {0} {} {1.000} {}
 
-R { 5937} {0} {} {5937} { } {} {} {} {} {} {1.000} {}
+R { 5937} {0} {} {5937} { } {A well worn path passes through the dark forest, leading to the  great tower which rises above the trees to the north.  You can feel  the aura of power even at this distance from the dark stone walls.   A swirling mist winds its way across the path, twining itself about  the trees of the forest and curling off into the darkness.  You  shiver slightly in the dark wood and feel a faint yearning for the  comforting walls of the tower. } {Necs} {} {} {} {1.000} {}
 E { 5918} {w} {w} {8} {0} {} {1.000} {}
 E { 5938} {se} {se} {6} {0} {} {1.000} {}
 
-R { 5938} {0} {} {5938} { } {} {} {} {} {} {1.000} {}
+R { 5938} {0} {<118>} {5938} { } {} {} {} {} {} {1.000} {}
 E { 5937} {nw} {nw} {9} {0} {} {1.000} {}
 E { 5939} {tower} {tower} {0} {0} {} {1.000} {}
 
@@ -26705,7 +26959,7 @@ E { 5944} {s} {s} {4} {0} {} {1.000} {}
 R { 5944} {0} {} {were} { } {} {} {were} {} {} {1.000} {}
 E { 5943} {n} {n} {1} {0} {} {1.000} {}
 
-R { 5945} {0} {} {rr} { } {} {} {rr} {} {} {1.000} {}
+R { 5945} {0} {<118>} {rr} { } {} {} {rr} {} {} {1.000} {}
 E { 5919} {e} {e} {2} {0} {} {1.000} {}
 E { 5922} {n} {n;gda;gda;gda} {1} {0} {} {1.000} {}
 
@@ -26753,8 +27007,8 @@ E { 2687} {e} {e} {2} {0} {} {1.000} {}
 R { 5955} {0} {} {5955} { } {This is one of the larger and nicer homes on the street. There's lovely carpeting on the floors, a large shroom-burning fireplace, extravagant furniture, and a large victorian bed in the corner. } {Smurfland} {} {} {} {1.000} {}
 E { 2687} {w} {w} {8} {0} {} {1.000} {}
 
-R { 5956} {0} {} {5956} { } {} {} {} {} {} {1.000} {}
-E {    3} {e} {e} {2} {0} {} {1.000} {}
+R { 5956} {0} {<118>} {5956} { } {} {} {} {} {} {1.000} {}
+E { 4237} {e} {e} {2} {0} {} {1.000} {}
 E { 5957} {d} {d} {32} {0} {} {1.000} {}
 
 R { 5957} {0} {} {5957} { } {} {} {} {} {} {1.000} {}
@@ -26975,45 +27229,37 @@ E { 6008} {s} {s} {4} {0} {} {1.000} {}
 R { 6010} {0} {} {gentech box} { } {} {} {} {} {} {1.000} {}
 E {10096} {s} {s} {4} {0} {} {1.000} {}
 
-R { 6011} {4104} {} {6011} { } {} {} {} {} {} {1.000} {}
-E { 5381} {w} {w} {8} {0} {} {1.000} {}
-E { 6012} {e} {e} {2} {0} {} {1.000} {}
+R { 6011} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
-R { 6012} {4104} {} {6012} { } {} {} {} {} {} {1.000} {}
-E { 6011} {w} {w} {8} {0} {} {1.000} {}
-E {  975} {e} {e} {2} {0} {} {1.000} {}
+R { 6012} {0} {} {The farm store. (w)} { } {The red cherry stained wood planks lining this room bring to mind a perhaps higher class establishment and remind you more specifically of one of the smoke filled private clubs with red leather chairs and shelves of rare first edition books from the 18th century.  None of those things are here, of course.  In fact there's nobody here at all, as the farmers rely on the honour system to do business.  If your word is not as good as gold, then maybe you should keep your mouth shut.  To list the things you can buy here, type "list".  To buy something, type buy <id>.  This shop supports string parsing. } {Crafter's Guild Halls} {} {} {} {1.000} {}
+E {10012} {w} {w} {8} {0} {} {1.000} {}
 
-R { 6013} {0} {} {6013} { } {} {} {} {} {} {1.000} {}
-E { 6014} {ne} {ne} {3} {0} {} {1.000} {}
-E { 6020} {w} {w} {8} {0} {} {1.000} {}
-
-R { 6014} {4104} {} {6014} { } {} {} {} {} {} {1.000} {}
-E { 6013} {sw} {sw} {12} {0} {} {1.000} {}
+R { 6013} {0} {} {6013} { } {You are on a narrow path, and on either side, alarmingly close, are brambles thick with finger-length thorns. Thankfully, the path itself is clear. To the northeast, it leads back to the city of Foundation, with its people and its buildings. To the west, however, a wide clearing reveals itself atop a low hill. The path seems to to meander up the hill, leading to what appears to be some arrangement of massive slabs of pale stone around a roaring fire, the flames leaping into the great, black night. Around the fire, you can make out the silhouettes of countless witches, dancing in complicated rhythms. } {Mud} {} {} {} {1.000} {}
 E { 5381} {ne} {ne} {3} {0} {} {1.000} {}
+E { 6015} {w} {w} {8} {0} {} {1.000} {}
 
-R { 6015} {0} {} {witches} { } {} {} {} {} {} {1.000} {}
-E { 6017} {e} {e} {2} {0} {} {1.000} {}
+R { 6014} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 6015} {0} {} {witches} { } {A fire burns blazingly bright in the middle of a ring of great stones, throwing embers up into the night sky. The slabs of stone are impossibly immense, rising like fingers twenty feet tall. Next to the fire, an altar of sorts has been set up, a rough-hewn table of the same pale stone. More than a dozen people, male and female, cavort around the altar and the fire, naked and beautiful, their voices harmonizing in eerie ways. You may join in the ritualistic dancing, if you wish. } {Witches} {} {} {} {1.000} {}
+E { 6013} {e} {e} {2} {0} {} {1.000} {}
 E { 6016} {nw} {nw} {9} {0} {} {1.000} {}
 
-R { 6016} {0} {} {6016} { } {} {} {} {} {} {1.000} {}
+R { 6016} {0} {<118>} {6016} { } {} {} {} {} {} {1.000} {}
 E { 6015} {se} {se} {6} {0} {} {1.000} {}
 E { 6028} {w} {w} {8} {0} {} {1.000} {}
 
-R { 6017} {4104} {} {6017} { } {} {} {} {} {} {1.000} {}
-E { 6015} {w} {w} {8} {0} {} {1.000} {}
-E { 6018} {e} {e} {2} {0} {} {1.000} {}
+R { 6017} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 5376} {u} {u} {16} {0} {} {1.000} {}
 
-R { 6018} {4104} {} {6018} { } {} {} {} {} {} {1.000} {}
-E { 6017} {w} {w} {8} {0} {} {1.000} {}
-E { 6019} {e} {e} {2} {0} {} {1.000} {}
+R { 6018} {10} {} {} { } {} {} {} {} {} {1.000} {}
+E { 5376} {e} {e} {2} {0} {} {1.000} {}
+E { 4746} {w} {w} {8} {0} {} {1.000} {}
 
-R { 6019} {4104} {} {6019} { } {} {} {} {} {} {1.000} {}
-E { 6018} {w} {w} {8} {0} {} {1.000} {}
-E { 6020} {e} {e} {2} {0} {} {1.000} {}
+R { 6019} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 6082} {d} {d} {32} {0} {} {1.000} {}
 
-R { 6020} {4104} {} {6020} { } {} {} {} {} {} {1.000} {}
-E { 6019} {w} {w} {8} {0} {} {1.000} {}
-E { 6013} {e} {e} {2} {0} {} {1.000} {}
+R { 6020} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 6082} {u} {u} {16} {0} {} {1.000} {}
 
 R { 6021} {0} {} {6021} { } {} {} {} {} {} {1.000} {}
 E { 6027} {e} {e} {2} {0} {} {1.000} {}
@@ -27248,37 +27494,40 @@ E { 5384} {s} {s} {4} {0} {} {1.000} {}
 R { 6079} {0} {} {6079} { } {} {} {} {} {} {1.000} {}
 E { 5384} {n} {n} {1} {0} {} {1.000} {}
 
-R { 6080} {0} {} {6080} { } {} {} {} {} {} {1.000} {}
-E {  977} {w} {w} {8} {0} {} {1.000} {}
+R { 6080} {0} {} {6080} { } {Mario's Bistro The delicious smells of Italian cooking hang heavy in the air.  The floor is covered with faded red brick, as are the walls. Each table is identical in appearance, bearing a red and white checkered tablecloth, a white candle stuck in an empty bottle of wine, and a small white flower in a glass vase.  Towards the back of the restaurant, is the kitchen.  Two large brick ovens can be seen as well as the large stainless steel stove. Beautiful music is playing from the speakers, which are strategically placed behind gorgeous hanging plants. } {Mud} {} {} {} {1.000} {}
+E { 6474} {w} {w} {8} {0} {} {1.000} {}
+E { 6384} {se} {se} {6} {0} {} {1.000} {}
 
-R { 6081} {0} {} {6081} { } {} {} {} {} {} {1.000} {}
+R { 6081} {0} {} {6081} { } {You have entered the Chapel of 3scapes, wherein the holy vows of mud-matrimony are exchanged.  Row upon row of pews flank the altar from all four sides, in the shape of an 'X'.  Stained glass windows cause multi-colored light to stream in from outside.  The Holy Priest of 3scapes usually stands at the altar, waiting to wed couples in mudmarriage. On the wall above the altar is a small sign. } {Mud} {} {} {} {1.000} {}
 E {  974} {w} {w} {8} {0} {} {1.000} {}
 
-R { 6082} {0} {} {6082} { } {} {} {} {} {} {1.000} {}
-E {    5} {s} {s} {4} {0} {} {1.000} {}
+R { 6082} {0} {} {6082} { } {This is the Foundation Hospital.  The room, though not lavishly decorated, is aesthetically pleasing.  The floor and walls are made of an impeccably clean white marble, void of any stains or blemishes.  A small sitting area in the northeast corner of the room offers patients a place to sit and rest while they wait for a courteous priest to offer their divine healing.  If there are no priests presently available, please try back again later.  If it is an EMERGENCY, you may 'page' to see if there are any priests in the vicinity, but please do NOT abuse this.  If you have the ability and are willing to heal others, you may 'announce' yourself to those who may be in need of healing. } {Mud} {} {} {} {1.000} {}
+E { 6473} {s} {s} {4} {0} {} {1.000} {}
+E { 6019} {u} {u} {16} {0} {} {1.000} {}
+E { 6020} {d} {d} {32} {0} {} {1.000} {}
 
-R { 6083} {0} {} {6083} { } {} {} {} {} {} {1.000} {}
-E {  164} {e} {e} {2} {0} {} {1.000} {}
+R { 6083} {0} {} {6083} { } {You are inside a small building with little more than a staircase leading down.  Dusty windows filter soft light into the room.                       } {Mud} {} {} {} {1.000} {}
+E { 5898} {e} {e} {2} {0} {} {1.000} {}
 E { 6084} {d} {d} {32} {0} {} {1.000} {}
 
-R { 6084} {0} {} {6084} { } {} {} {} {} {} {1.000} {}
+R { 6084} {0} {<118>} {6084} { } {} {} {} {} {} {1.000} {}
 E { 6083} {u} {u} {16} {0} {} {1.000} {}
 
-R { 6085} {0} {} {6085} { } {} {} {} {} {} {1.000} {}
+R { 6085} {0} {} {6085} { } {The massive, nightmarish vortex to the east can still be seen clearly from here, but another chaotic impossibility begins to dominate your senses.  Rivers of protoplasm flow in all directions with varying speeds and sizes, defying gravity and logic as they flow upwards, or even in several directions at once.  Objects that seem far away when seen from the corner of your eye, seemingly leap forward when you turn to focus on them, making distances all but impossible to judge.  Amongst all this chaos there is one constant, a cave formed by spiralling flows of protoplasm, large enough to enter with ease. } {Mud} {} {} {} {1.000} {}
 E {  166} {e} {e} {2} {0} {} {1.000} {}
 E { 7308} {enter} {enter} {0} {0} {} {1.000} {}
 
-R { 6086} {0} {} {6086} { } {} {} {} {} {} {1.000} {}
+R { 6086} {0} {} {6086} { } {You are in the Foundation Law Office. Here a lawyer waits to help you with your various law problems. There is a sign above his head, listing services you can purchase here, and their cost. } {Mud} {} {} {} {1.000} {}
 E {  163} {e} {e} {2} {0} {} {1.000} {}
 
-R { 6087} {0} {} {viggen} { } {} {} {} {} {} {1.000} {}
+R { 6087} {0} {} {viggen} { } {What a mess. You stand in the remains of what was once a busy pub. Now it's little more than rubble. A giant hole has been ripped in the ceiling, letting in a fair amount of light to illuminate the wreckage. The remains of tables and chairs are broken into splinters and small chunks of wood. The floor is covered with a million pieces of debris. A dead fireplace sits idle on the far side of the room. What was once the bar is now just a broken wooden frame and some scorch marks along the length of the far wall. Whatever catastrophe befell this place, it did its work well. } {Mud} {} {} {} {1.000} {}
 E {   64} {out} {out} {0} {0} {} {1.000} {}
 
-R { 6088} {0} {} {6088} { } {} {} {} {} {} {1.000} {}
+R { 6088} {0} {} {6088} { } {To the north, a great open-topped tower rises, the pale stone of its construction shining in the sun. It is the White Tower of Tar Valon, where the Aes Sedai perform incomprehensible actions with the One Power, protected by the deadly Warders. Here is the center of power, both political and economic, and you stand in its shadow. } {Warders} {} {} {} {1.000} {}
 E { 5864} {se} {se} {6} {0} {} {1.000} {}
 E { 6089} {enter} {enter} {0} {0} {} {1.000} {}
 
-R { 6089} {0} {} {warders} { } {} {} {} {} {} {1.000} {}
+R { 6089} {0} {<118>} {warders} { } {} {} {} {} {} {1.000} {}
 E { 6088} {s} {s} {4} {0} {} {1.000} {}
 E { 6090} {w} {w} {8} {0} {} {1.000} {}
 E { 6091} {e} {e} {2} {0} {} {1.000} {}
@@ -28028,7 +28277,7 @@ E { 6244} {w} {w} {8} {0} {} {1.000} {}
 R { 6258} {0} {} {6258} { } {} {} {} {} {} {1.000} {}
 E { 4631} {w} {w} {8} {0} {} {1.000} {}
 
-R { 6259} {0} {<128>} {altar of condemnation} { } {} {} {} {} {} {1.000} {}
+R { 6259} {0} {} {altar of condemnation} { } {Rubble and charred earth cover the barren wastes. In the center, is a pit with the infamous Altar of Condemnation. The area around the altar is darker than the surrounding ruinds, like it was somehow absorbing the light around it. A blood red path leads back to the southeast. Mountains surround you in every other direction. } {Mud} {} {} {} {1.000} {}
 E { 4108} {se} {se} {6} {0} {} {1.000} {}
 
 R { 6260} {0} {} {6260} { } {} {} {} {} {} {1.000} {}
@@ -28532,7 +28781,7 @@ R { 6369} {0} {} {6369} { } {} {} {} {} {} {1.000} {}
 E { 5661} {sw} {sw} {12} {0} {} {1.000} {}
 
 R { 6370} {0} {} {6370} { } {You stand before a gigantic metal structure. This building can be none other then the Juggernauts compound. The thick metal walls are topped with guard towers and automated weaponry. Soldiers walk by on patrol and a pair stand guard at the main entrance. } {Juggernaut} {} {} {} {1.000} {}
-E {    9} {sw} {sw} {12} {0} {} {1.000} {}
+E { 3501} {sw} {sw} {12} {0} {} {1.000} {}
 E { 6371} {n} {n} {1} {0} {} {1.000} {}
 
 R { 6371} {0} {} {6371} { } {The recruitment office is dominated by a large, central desk. The desk is resting atop a slightly raised platform towards the back of the room. You can leave the guild here by typing leave the juggernauts. You can extend an invitation to another non juggernaut using the recruit command. A doorway to the east leads outside the compound and up a winding mountain road. **NOTE** You may type 'join' to join without a recruiter. } {Juggernaut} {} {} {} {1.000} {}
@@ -28589,13 +28838,12 @@ R { 6382} {0} {<118>} {6382} { } {} {} {} {} {} {1.000} {}
 E { 6381} {nw} {nw} {9} {0} {} {1.000} {}
 E { 6372} {e} {e} {2} {0} {} {1.000} {}
 
-R { 6383} {4104} {} {6383} { } {} {} {} {} {} {1.000} {}
-E {    8} {w} {w} {8} {0} {} {1.000} {}
-E { 6384} {e} {e} {2} {0} {} {1.000} {}
+R { 6383} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 5636} {u} {u} {16} {0} {} {1.000} {}
 
-R { 6384} {4104} {} {6384} { } {} {} {} {} {} {1.000} {}
-E { 6383} {w} {w} {8} {0} {} {1.000} {}
-E {    9} {e} {e} {2} {0} {} {1.000} {}
+R { 6384} {0} {} {A long corridor (ne,nw)} { } {Leaving the smells and sounds of the bistro behind, you step into a long and narrow corridor.  Tall, metal sconces line the walls of the corridor.  Hanging upon the wall, is a small, wooden sign.  At the southern end of the corridor, along the east wall, stands a huge, wooden door.  Directly across from the door, nestled into the corner, is a charming, potted tree. } {Public Restrooms} {} {} {} {1.000} {}
+E { 6080} {nw} {nw} {9} {0} {} {1.000} {}
+E { 6475} {ne} {ne} {3} {0} {} {1.000} {}
 
 R { 6385} {0} {} {Medical Bay (e)} {M} {A medical bay } {Juggernaut} {jugger regen} {} {} {1.000} {}
 E { 6375} {e} {e} {2} {0} {} {1.000} {}
@@ -28958,6 +29206,36 @@ E { 6643} {w} {w} {8} {0} {} {1.000} {}
 E { 6845} {s} {s} {4} {0} {} {1.000} {}
 E { 6846} {n} {n} {1} {0} {} {1.000} {}
 E { 6878} {e} {e} {2} {0} {} {1.000} {}
+
+R { 6473} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 6082} {n} {n} {1} {0} {} {1.000} {}
+E {    5} {s} {s} {4} {0} {} {1.000} {}
+
+R { 6474} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 6080} {e} {e} {2} {0} {} {1.000} {}
+E {  977} {w} {w} {8} {0} {} {1.000} {}
+
+R { 6475} {0} {} {Public Toilets (sw,w,e)} { } {A white tiled wall stares you in the face as you enter this sparkling and clean building. There is a large sign attached to the north wall, below which is a coin slot and some writing. Metal doors, devoid of handles, block your way east and west. } {Public Restrooms} {} {} {} {1.000} {}
+E { 6384} {sw} {sw} {12} {0} {} {1.000} {}
+E { 6476} {w} {w} {8} {0} {} {1.000} {}
+E { 6477} {e} {e} {2} {0} {} {1.000} {}
+
+R { 6476} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 6475} {e} {e} {2} {0} {} {1.000} {}
+
+R { 6477} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 6475} {w} {w} {8} {0} {} {1.000} {}
+
+R { 6478} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {  986} {n} {n} {1} {0} {} {1.000} {}
+
+R { 6479} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 6480} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {  985} {s} {s} {4} {0} {} {1.000} {}
+
+R { 6481} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 5893} {d} {d} {32} {0} {} {1.000} {}
 
 R { 6489} {0} {} {6489} { } {} {} {} {} {} {1.000} {}
 E { 6140} {e} {e} {2} {0} {} {1.000} {}
@@ -31649,7 +31927,7 @@ E { 7070} {door} {door} {0} {0} {} {1.000} {}
 E { 7074} {e} {e} {2} {0} {} {1.000} {}
 E { 7075} {u} {u} {16} {0} {} {1.000} {}
 
-R { 7072} {0} {} {7072} { } {} {} {} {} {} {1.000} {}
+R { 7072} {0} {<118>} {7072} { } {} {} {} {} {} {1.000} {}
 E { 5923} {n} {n} {1} {0} {} {1.000} {}
 E { 5919} {w} {w} {8} {0} {} {1.000} {}
 
@@ -31865,11 +32143,11 @@ E { 7124} {w} {w} {8} {0} {} {1.000} {}
 R { 7124} {0} {} {7124} { } {} {} {} {} {} {1.000} {}
 E { 7123} {e} {e} {2} {0} {} {1.000} {}
 
-R { 7125} {0} {} {7125} { } {} {} {} {} {} {1.000} {}
+R { 7125} {0} {} {7125} { } {You find yourself standing on a rocky plateau, seemingly in the middle of nowhere.  You notice some spacecraft, which take off and land frequently from this location.  Dust swirls around in small cyclones, that get whisked away by the breezes blowing across the rocky platform. } {Mud} {} {} {} {1.000} {}
 E {    9} {w} {w} {8} {0} {} {1.000} {}
 E { 7126} {board spacecraft} {board spacecraft} {0} {0} {} {1.000} {}
 
-R { 7126} {0} {} {fremen} { } {} {} {fremen} {} {} {1.000} {}
+R { 7126} {0} {<118>} {fremen} { } {} {} {fremen} {} {} {1.000} {}
 E { 7125} {board ornithopter} {board ornithopter} {0} {0} {} {1.000} {}
 E { 7129} {s} {s} {4} {0} {} {1.000} {}
 
@@ -32062,7 +32340,7 @@ E { 7172} {s} {s} {4} {0} {} {1.000} {}
 R { 7172} {0} {} {7172} { } {} {} {} {} {} {1.000} {}
 E { 7171} {n} {n} {1} {0} {} {1.000} {}
 
-R { 7173} {0} {} {7173} { } {} {} {} {} {} {1.000} {}
+R { 7173} {0} {<118>} {7173} { } {} {} {} {} {} {1.000} {}
 E {  977} {n} {n} {1} {0} {} {1.000} {}
 E { 7174} {s} {s} {4} {0} {} {1.000} {}
 
@@ -32086,7 +32364,7 @@ E { 7178} {s} {s} {4} {0} {} {1.000} {}
 R { 7178} {0} {} {7178} { } {} {} {} {} {} {1.000} {}
 E { 7177} {n} {n} {1} {0} {} {1.000} {}
 
-R { 7179} {0} {} {7179} { } {} {} {} {} {} {1.000} {}
+R { 7179} {0} {} {7179} { } {Hundreds of beautiful roses line the shelves of this small shop filling your senses with a joy of life and love.  A small counter rests near the back wall where May does her business.  A small sign has been engraved into the slab of pink marble that makes up the front of the counter. } {Mud} {} {} {} {1.000} {}
 E {   68} {s} {s} {4} {0} {} {1.000} {}
 
 R { 7180} {0} {} {A Straight Road (se,nw)} { } {A Straight Road. You are standing on a road in the magical glade. The road leads to either the northwest or southeast. Several mages in the area are producing an incredible display of power and skill. Seven towers stand around the glade, six of which form a hexagon around the larger tower rising in the exact center. Surrounding the outer towers is a dark pulsating field which fills you with a feeling of dread. } {Mages} {} {} {} {1.000} {}
@@ -32233,24 +32511,26 @@ E { 7217} {u} {u} {16} {0} {} {1.000} {}
 R { 7217} {0} {} {7217} { } {} {} {} {} {} {1.000} {}
 E { 7216} {d} {d} {32} {0} {} {1.000} {}
 
-R { 7218} {0} {} {7218} { } {} {} {} {} {} {1.000} {}
+R { 7218} {0} {} {7218} { } {You are on a narrow dirt trail which winds its way north, and back to the east along a small village street.  A tidy stone building is visible through the breathtakingly beautiful trees that make up the great western forest of Foundation. } {Mud} {} {} {} {1.000} {}
 E {  972} {e} {e} {2} {0} {} {1.000} {}
 E { 7219} {w} {w} {8} {0} {} {1.000} {}
 E {   65} {n} {n} {1} {0} {} {1.000} {}
 
-R { 7219} {0} {<128>} {7219} { } {} {} {} {} {} {1.000} {}
+R { 7219} {0} {} {7219} { } {The entrance gates to the renowned Bard Guild stand open in front of you.  Beyond them you see a courtyard leading to a large stone tower, where brightly colored flags flap briskly on the ramparts. Loud shouts of laughter and strains of music drift down through the open air.  On the left outer wall next to the gate pillars, a proclamation has been tacked up which you may wish to read.  To the right of the gates, a wooden message board has been staked into the grass allowing visitors from Foundation to leave missives for bard friends. } {Bard} {} {} {} {1.000} {}
 E { 7218} {e} {e} {2} {0} {} {1.000} {}
 E {  679} {w} {w} {8} {0} {} {1.000} {}
 
-R { 7220} {0} {} {7220} { } {} {} {} {} {} {1.000} {}
+R { 7220} {0} {} {7220} { } {You see a few super natural beings enter and leave through a rather large glimmering portal that hangs in mid air ahead of you.  You ponder at all the exciting things that might be happening on the other side, but as you try to enter it pushes you back.  Only those from the Elemental guild may travel freely through, and no other.  A crisp voice from within beckons at you to become one with the elements\; join the Elemental Guild! For more information about Elementals type:   'help elemental' To leave the Elemental Guild type:            'leave the elementals' To join the Elemental Guild     type 'players ele' and have a member recruit you. To join on your own, type 'join elementals'. To praise or file a grievance against a member of the guild type: 'report <who>' where who is the Elemental's name. } {Elemental} {} {} {} {1.000} {}
 E {  974} {e} {e} {2} {0} {} {1.000} {}
 E { 5876} {portal} {portal} {0} {0} {} {1.000} {}
 
-R { 7221} {0} {} {bards} { } {} {} {bards} {} {} {1.000} {}
+R { 7221} {0} {} {bards} { } {Sunshine beats down on your head as you stroll through the giant flagstone courtyard.  The centerpiece of the courtyard is a marble sculptured fountain carved in the shape of a harp. Surrounding the fountain, darker flagstones radiate outward in a cross, creating paths that lead west to the tower proper, or north and south to arched openings in the courtyard wall.  On the lighter flagstones around the path, occasional benches and planters blooming with flowers allow visitors to sit back and enjoy the outdoors.  The entrance gates to the east lead out to Foundation. } {Bard} {bards} {} {} {1.000} {}
 E { 7222} {w} {w} {8} {0} {} {1.000} {}
 E {  679} {e} {e} {2} {0} {} {1.000} {}
+E { 5822} {n} {n} {1} {0} {} {1.000} {}
+E { 5823} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7222} {0} {} {7222} { } {} {} {} {} {} {1.000} {}
+R { 7222} {0} {<118>} {7222} { } {} {} {} {} {} {1.000} {}
 E { 7221} {e} {e} {2} {0} {} {1.000} {}
 E { 7223} {w} {w} {8} {0} {} {1.000} {}
 E { 7261} {n} {n} {1} {0} {} {1.000} {}
@@ -32494,23 +32774,7 @@ E { 7281} {n} {n;drink fountain;drink fountain;drink fountain} {1} {0} {} {1.000
 R { 7281} {0} {} {esperoth} { } {} {} {esperoth} {} {} {1.000} {}
 E { 7280} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7282} {4104} {} {7282} { } {} {} {} {} {} {1.000} {}
-E { 5910} {n} {n} {1} {0} {} {1.000} {}
-E { 7283} {s} {s} {4} {0} {} {1.000} {}
-
-R { 7283} {4104} {} {7283} { } {} {} {} {} {} {1.000} {}
-E { 7282} {n} {n} {1} {0} {} {1.000} {}
-E { 7284} {s} {s} {4} {0} {} {1.000} {}
-
-R { 7284} {4104} {} {7284} { } {} {} {} {} {} {1.000} {}
-E { 7283} {n} {n} {1} {0} {} {1.000} {}
-E { 7285} {s} {s} {4} {0} {} {1.000} {}
-
-R { 7285} {4104} {} {7285} { } {} {} {} {} {} {1.000} {}
-E { 7284} {n} {n} {1} {0} {} {1.000} {}
-E {10010} {s} {s} {4} {0} {} {1.000} {}
-
-R { 7286} {0} {} {7286} { } {} {} {} {} {} {1.000} {}
+R { 7286} {0} {} {7286} { } {You are standing in a tree-lined clearing.  Towering to the east in front of you is a beautiful gothic cathedral, home to the powerful Priest Guild.  To the west you can see Woodland Road. Non-members may join the guild by asking a current priest or typing "join priest".  Members may leave the guild (by typing "unjoin priest") at a cost of one-half of their total experience.  Both decisions are of great importance and should be carefully weighed before being made. } {Priest} {} {} {} {1.000} {}
 E { 5910} {w} {w} {8} {0} {} {1.000} {}
 E { 7287} {enter} {enter} {0} {0} {} {1.000} {}
 
@@ -32600,7 +32864,7 @@ E { 7289} {s} {s} {4} {0} {} {1.000} {}
 R { 7307} {0} {} {7307} { } {} {} {} {} {} {1.000} {}
 E { 7289} {d} {d} {32} {0} {} {1.000} {}
 
-R { 7308} {0} {} {7308} { } {} {} {} {} {} {1.000} {}
+R { 7308} {0} {<118>} {7308} { } {} {} {} {} {} {1.000} {}
 E { 6085} {out} {out} {0} {0} {} {1.000} {}
 E { 7309} {enter} {enter} {0} {0} {} {1.000} {}
 
@@ -47720,90 +47984,77 @@ E { 5565} {ne} {ne} {3} {0} {} {1.000} {}
 R {10003} {0} {<128>} {krath} { } {} {} {} {} {} {1.000} {}
 E { 5565} {n} {n} {1} {0} {} {1.000} {}
 
-R {10004} {4104} {} {} { } {} {} {} {} {} {1.000} {}
-E {  166} {n} {n} {1} {0} {} {1.000} {}
-E {10008} {s} {s} {4} {0} {} {1.000} {}
-
-R {10005} {0} {} {crafting} { } {} {} {} {} {} {1.000} {}
-E {  164} {s} {s} {4} {0} {} {1.000} {}
+R {10005} {0} {} {crafting} { } {A smooth, neatly swept brown brick road leads northwest into a cluster of compact brown and black buildings that seem to swim in a constant symphony of hammering metal.  The road continues south to an intersection with a narrow pebbled country lane and an undulating path of greenish red bricks.   } {Crafter's Guild Halls} {} {} {} {1.000} {}
+E { 5895} {s} {s} {4} {0} {} {1.000} {}
 E {10006} {nw} {nw} {9} {0} {} {1.000} {}
+E { 5899} {e} {e} {2} {0} {} {1.000} {}
 
-R {10006} {0} {<128>} {} { } {} {} {} {} {} {1.000} {}
+R {10006} {0} {} {Crafter's Lane (e,se,w,n)} { } {The brown brick road splits here, heading off either west to a cluster of four compact brown buildings, or off to the north, where the road eventually meets up with two other brown buildings.  The smell of food wafts from the north, and the sound of metal striking metal comes from the west.  To the east stands an austere stone building. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10005} {se} {se} {6} {0} {} {1.000} {}
 E {10007} {n} {n} {1} {0} {} {1.000} {}
 E {10009} {e} {e} {2} {0} {} {1.000} {}
 E {10013} {w} {w} {8} {0} {} {1.000} {}
 
-R {10007} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10007} {0} {} {Crafter's Lane (s,ne)} { } {The brown brick road curves gently here, turning northeast from the north/south route.  Just over to the northeast, at the end of the path, are two compact brown buildings.  An indescribably wonderful aroma emanates from the northeast.   A few billowing willow trees can be seen just behind the gerberas that line the path. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10006} {s} {s} {4} {0} {} {1.000} {}
 E {10011} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10008} {4104} {} {} { } {} {} {} {} {} {1.000} {}
-E {10004} {n} {n} {1} {0} {} {1.000} {}
-E {  165} {s} {s} {4} {0} {} {1.000} {}
-
-R {10009} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10009} {0} {} {Satchel Storage (w)} { } {This building is filled with locked boxes, each showing the name of a resident of Foundation.  From time to time, people enter the building and deposit their satchel with the clerk, or retrieve it from him before heading out.  This must be where people's satchels are stored when they are linkdead or logged out.  Fascinating. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10006} {w} {w} {8} {0} {} {1.000} {}
 
-R {10010} {4104} {} {} { } {} {} {} {} {} {1.000} {}
-E { 7285} {n} {n} {1} {0} {} {1.000} {}
-E {   67} {s} {s} {4} {0} {} {1.000} {}
-
-R {10011} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10011} {0} {} {Crafter's Lane (se,sw,nw)} { } {The enticing aroma that fills the northeastern part of Crafter's Lane seems to be coming from the southwestern squat building, which hangs a sign outside that reads "Cooking".  To the northwest is an identical brown building with the sign "Farming".  The brown brick road leads off to the southwest, where you can dimly hear the sound of metal striking metal. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10007} {sw} {sw} {12} {0} {} {1.000} {}
 E {10012} {nw} {nw} {9} {0} {} {1.000} {}
+E { 5905} {se} {se} {6} {0} {} {1.000} {}
 
-R {10012} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10012} {0} {} {The Farming Room. (nw,se,ne,n,mixing,e)} { } {A long white picket fence stretches away from either side of the gate leading to the sunny farm.  Tractor tracks are visible here, and the smell of fertilizer fills your nostrils.  From here you can visit the various farms. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10011} {se} {se} {6} {0} {} {1.000} {}
+E { 5906} {nw} {nw} {9} {0} {} {1.000} {}
+E { 5907} {ne} {ne} {3} {0} {} {1.000} {}
+E { 5908} {n} {n} {1} {0} {} {1.000} {}
+E { 6011} {mixing} {mixing} {0} {0} {} {1.000} {}
+E { 6012} {e} {e} {2} {0} {} {1.000} {}
 
-R {10013} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10013} {0} {} {Crafter's Lane (s,w,e,n)} { } {Two squat brown buildings line either side of the brown brick road.  From the northern building hangs a large sign that reads "Chaos Wrangling" and from the southern building hangs a sign that reads "Enchanting".  The road continues east towards the smell of food, and west to the sounds of hammering. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10006} {e} {e} {2} {0} {} {1.000} {}
 E {10014} {s} {s} {4} {0} {} {1.000} {}
 E {10016} {w} {w} {8} {0} {} {1.000} {}
 E {10021} {n} {n} {1} {0} {} {1.000} {}
 
-R {10014} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10014} {0} {} {The Enchanter Room (e,n,kiln)} { } {This wing of the crafting guild belongs to the enchanters.  Around you, there is a bustle of activity as enchanters come and go with various magical components.  Deeper into the wing, you can hear the fires of kilns and the occaisional explosion. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10013} {n} {n} {1} {0} {} {1.000} {}
 E {10020} {e} {e} {2} {0} {} {1.000} {}
+E { 5901} {kiln} {kiln} {0} {0} {} {1.000} {}
 
-R {10015} {4104} {} {} { } {} {} {} {} {} {1.000} {}
-E {   66} {w} {w} {8} {0} {} {1.000} {}
-E {10017} {e} {e} {2} {0} {} {1.000} {}
-
-R {10016} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10016} {0} {} {Crafter's Lane (e,sw)} { } {The brown brick road curves gently here, turning southwest from the east/west route.  Just ahead to the southwest are two compact brown buildings, and to the east are two more.  The hammering from the southwest is almost deafening.  A few enormous oak trees can be seen just behind the gerberas that line the path. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10013} {e} {e} {2} {0} {} {1.000} {}
 E {10018} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {10017} {4104} {} {} { } {} {} {} {} {} {1.000} {}
-E {10015} {w} {w} {8} {0} {} {1.000} {}
-E {10022} {e} {e} {2} {0} {} {1.000} {}
-
-R {10018} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10018} {0} {} {Crafter's Lane (nw,ne,se)} { } {The sound of hammering metal fills the air at the end of the brown brick road, which is lined by two identical brown buildings.  From the northwestern building hangs a large sign that reads "Blacksmithing" and from the southeastern building hangs a sign that reads "Mining".  The road also leads to the northeast. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10016} {ne} {ne} {3} {0} {} {1.000} {}
 E {10019} {se} {se} {6} {0} {} {1.000} {}
 E {10023} {nw} {nw} {9} {0} {} {1.000} {}
 
-R {10019} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10019} {0} {} {The Miner Room (mines,nw,smelt)} { } {This wing of the crafting guild belongs to the chaos miners.  The wing is filled with adventurers, both young and old, but all of them grizzled, discussing topics of interest like ores, gems, and the best techniques for digging them up.  A damp cold breeze filters through the room, emanating from the mines.  An elevator is here for rapid transit to the lower levels of the mine. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10018} {nw} {nw} {9} {0} {} {1.000} {}
+E { 5903} {mines} {mines} {0} {0} {} {1.000} {}
+E { 5904} {smelt} {smelt} {0} {0} {} {1.000} {}
 
-R {10020} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10020} {0} {} {The Enchanter Recipe Shop (w)} { } {Various pots and jars line the whitewashed walls, but these are clearly for show.  Your keen eye spots the real prize hidden among the jars: the mouldings.  These are the key to the whole enchanting process!  There is no shopkeeper here, but a bobbing ball of light sits at the one end of the sterile room, repeating: 'You can 'list' or 'buy' items here.' You can also 'showitem' to see a specific recipe, or you can 'list nontrivial' if you want to see only those recipes that will provide you with skillups. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10014} {w} {w} {8} {0} {} {1.000} {}
 
-R {10021} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10021} {0} {} {The Wrangler Room (s)} { } {This wing of the crafting guild belongs to the chaos wranglers.  Giant high-backed chairs and elaborate furnishings are scattered throughout the room.  Within the chairs, or more commonly, standing up, or even more commonly, standing up on the furnishings and shouting, are the chaos wranglers.  They are discussing (at very high volume) various topics of interest such as gem capacities and efficient ways of gathering chaotic energy. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10013} {s} {s} {4} {0} {} {1.000} {}
 
-R {10022} {4104} {} {} { } {} {} {} {} {} {1.000} {}
-E {10017} {w} {w} {8} {0} {} {1.000} {}
-E {   65} {e} {e} {2} {0} {} {1.000} {}
-
-R {10023} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10023} {0} {} {The Blacksmithing Room (e,se,forge)} { } {This wing of the crafting guild belongs to the blacksmiths.  Around you, there is a bustle of activity as blacksmiths come and go with crafting supplies, and a variety of metal weapons and armours.  Deeper into the wing, you can hear the fires of forges and the clanging of hammers on anvils. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10018} {se} {se} {6} {0} {} {1.000} {}
 E {10024} {e} {e} {2} {0} {} {1.000} {}
+E { 5902} {forge} {forge} {0} {0} {} {1.000} {}
 
-R {10024} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10024} {0} {} {The Blacksmith Recipe Shop (w)} { } {Various mouldings can be seen lining the wooden walls, though it is clear from even a cursory glance that the most valuable mouldings must be kept in the back.  Oddly enough, there is no storekeeper, since no blacksmith wanted to take time away from the forge.  Instead they rely on the honour system -- nobody wants to upset the strongest people in the guild.  you can 'list' or 'buy' something here.  You can also 'showitem' to see a specific recipe, or you can 'list nontrivial' if you want to see only those recipes that will provide you with skillups. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10023} {w} {w} {8} {0} {} {1.000} {}
 
-R {10025} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10025} {0} {} {The Altar of Absolution (sw)} { } {Standing alone amidst the rubble and charred earth, the Altar of Absolution shines like a beacon of light. Beautifully carved, the pure, white marble glimmers in the sunlight, a truly magnificent sight in comparison to the surrounding ruins, leaving you to believe the altar is not of this world. A clean stone path leads back to the southwest. Mountains surround you in every other direction. } {Mud} {} {} {} {1.000} {}
 E { 4108} {sw} {sw} {12} {0} {} {1.000} {}
 
 R {10026} {0} {} {} { } {} {} {} {} {} {1.000} {}
@@ -48031,11 +48282,11 @@ E {10078} {activate machine} {activate machine} {0} {0} {} {1.000} {}
 R {10080} {0} {} {edged} { } {} {} {edged} {} {} {1.000} {}
 E { 5935} {focus} {focus} {0} {0} {} {1.000} {}
 
-R {10081} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10081} {0} {} {A quiet forest glen (nw)} { } {You stand in a small quiet forest glen. Trees surround a circular patch of grass. Within the patch are five strange looking hi-tech pillars that stand about as high as your waist. Shining bands of blue-white light burst back and forth around the circle from the tops of the pillars. } {Mud} {} {} {} {1.000} {}
 E {  836} {nw} {nw} {9} {0} {} {1.000} {}
 E {10082} {activate pillar} {activate pillar} {0} {0} {} {1.000} {}
 
-R {10082} {0} {} {gentech} { } {} {} {} {} {} {1.000} {}
+R {10082} {0} {<118>} {gentech} { } {} {} {} {} {} {1.000} {}
 E {10081} {slide surface} {slide surface} {0} {0} {} {1.000} {}
 E {10083} {e} {e} {2} {0} {} {1.000} {}
 
@@ -51104,7 +51355,7 @@ R {10805} {4104} {} {} { } {} {} {} {} {} {1.000} {}
 E {10804} {w} {w} {8} {0} {} {1.000} {}
 E {10806} {e} {e} {2} {0} {} {1.000} {}
 
-R {10806} {4104} {} {} { } {} {} {} {} {} {1.000} {}
+R {10806} {4104} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {10805} {w} {w} {8} {0} {} {1.000} {}
 E { 5918} {e} {e} {2} {0} {} {1.000} {}
 
