@@ -79,7 +79,7 @@
 	#NOP redraw damage off;
 	#read .tt/3k/damagetracker.tin;
 	#var damage[width] $right_split;
-	#var damage[height] 12;
+	#var damage[height] 8;
 } {
 	#var damage[width] 0;
 	#var damage[height] -1;
@@ -209,7 +209,7 @@ create_panel_alignment
 #draw {line} -2 1 -2 -1;
 
 
-#if {"$draw[exitpanel]" == "on" || "$draw[canvas]" == "on" || "$draw[biome]" == "on"} {
+#if {"$draw[canvas]" == "on"} {
 	#draw {line} $chat[height]+$caption[height]+1 -$right_split -$status[height]-2 -$right_split;
 	#showme {<228>\u252C<088>} $chat[height]+$caption[height] -$right_split;
 	#showme {<088>\u2534<088>} -$hpbar[height]-$gline[height]-2 -$right_split;
@@ -262,7 +262,7 @@ create_panel_alignment
 			#case {"map"}		{#var redraw[option] %1};
 			#case {"biome"}		{#var redraw[option] %1};
 			#case {"jedimode"}	{#var redraw[option] %1};
-			#case {"summoner"}		{#var redraw[option] %1};
+			#case {"summoner"}	{#var redraw[option] %1};
 			#case {"damage"}	{#var redraw[option] %1};
 			#default		{#var redraw[args][1] invalid;#showme REDRAW:  Invalid redraw option}
 		};

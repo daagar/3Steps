@@ -42,7 +42,10 @@
 	#system {echo "#map goto $roomvnum" > .tt/map/lastroom.tt};
 	#if {"$mapping" == "on"} {
 		mapupdate
-	}
+	};
+	#if {"$draw[exitpanel]" == "on"}{
+		show_exits;
+	};
 }
 
 #event {MAP EXIT ROOM} {
