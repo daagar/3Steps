@@ -1,11 +1,5 @@
 #class {aliases} {open}
 
-#alias {mob}{
-	#unticker {damage_selector};
-	#unticker {damage_table};
-	#read .tt/3k/draw.tin;
-};
-
 /* MySQL Aliases */
 
 #alias {db_submit_chat}{
@@ -37,6 +31,11 @@
 
 #alias {mipon} {#read .tt/3k/mip.tin}
 #alias {mipoff} {#class mip kill}
+
+#alias {.reload} {
+	#read .tt/char/${world}.tin;
+	#echo {Re-loading character files.};
+}
 
 #alias {ga} {get all}
 #alias {gac} {get all from corpse}

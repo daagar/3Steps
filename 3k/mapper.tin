@@ -23,20 +23,17 @@
 	#map {get} {ROOMDESC} {roomdesc};
 	#format {roomname_len}	{%L} {$roomname};
 	#format {roomvnum_len}	{%L} {$roomvnum};
-	#math {roomvnum_len}{$roomvnum_len + 4};
 	#format {roomarea_len}	{%L} {$roomarea};
 	#format {roomdesc_len}	{%L} {$roomdesc};
-	#math {name_len} {42-$roomvnum_len};
-	#format {name_trunc} {%.${name_len}s} {${roomname}};
-	#var {room_map_string}{<140>\[<030>${roomvnum}<140>\] <130>${name_trunc}<099>};
-	#format {room_map_string}{%.42s}{$room_map_string};
+	#math {name_len} {42-$roomvnum_len-3};
+	#format {name_trunc} {%.${name_len}s} {$roomname};
 	#unvar area_mapped;
 	#map list {} {} {} {$roomarea} {variable} {area_mapped};
 	#var {room_cnt} {&area_mapped[]};
 	#if {"$draw[map]" == "on"} {
 		#draw {tile} $map[height]-1 -$map[width] $map[height]-1 -1 {<020>$roomarea <140>(<120>$room_cnt<140>)<099>};
-		#draw {tile} $map[height] -$map[width] $map[height] -1 {${room_map_string}}
-	};
+		#draw {tile} $map[height] -$map[width] $map[height] -1 {<140>[<030>$roomvnum<140>] <130>$name_trunc<099>}
+	}
 }
 
 #event {MAP UPDATED VTMAP} {
@@ -48,7 +45,10 @@
 	#system {echo "#map goto $roomvnum" > .tt/map/lastroom.tt};
 	#if {"$mapping" == "on"} {
 		mapupdate
-	}
+	};
+	#if {"$draw[exitpanel]" == "on"}{
+		show_exits;
+	};
 }
 
 #event {MAP EXIT ROOM} {
@@ -514,4 +514,77 @@
 	#echo {Cleanup complete!};
 };
 
+/* Allow clicking on a room to get map info */
+#event {MAP SHORT-CLICKED MOUSE BUTTON ONE} {
+    lfr {%0};
+};
+#alias lr {
+    #if {"%1" == ""} {
+        #map get;
+    } {
+        #if {%2 || %2 == 0} {
+            #map jump %1 %2 %3;
+            #map get;
+            #map undo;
+        } {
+            #map at {%1} #map get;
+        };
+    };
+};
+#alias lfr {
+    #if {"%1" == ""} {
+        #map info;
+    } {
+        #if {%2 || %2 == 0} {
+            #map jump %1 %2 %3;
+            #map info;
+            #map undo;
+        } {
+            #map at {%1} #map info;
+        };
+    };
+};
+
+#alias room_cleanup {
+	#echo {Finding orphaned rooms...};
+	#config {log mode} {plain};
+	#system {rm splatrooms.txt};
+    #unvar {valid_rooms};
+
+	#NOP Get a list of all legitimate rooms (avoid gaps from previously deleted vnums);
+	#NOP Skip room 1, as that the is map start point;
+    #loop {2} {6635} {count} {
+        #map goto {${count}};
+		#map get roomvnum current_id;
+        #if {$current_id == $count} {
+            #list valid_rooms ins -1 $count;
+        };
+    };
+
+    #loop {1} {&valid_rooms[]} {room} {
+		#path destroy;
+		#var path_length 0;
+		#NOP #map at {$valid_rooms[+$room]} {#map get roomflags flags};
+
+		#NOP First check if we can get from CoT _to_ the room;
+		#map goto $valid_rooms[+$room];
+		#line quiet #map find 1;
+		#line quiet #path save length path_length;
+
+		#NOP If that fails, check to see if we can get to CoT from it;
+		#NOP (Eliminates void rooms from being caught, and finds mobile areas in Chaos);
+		#if {$path_length == 0} {
+			#map goto 1;
+        	#line quiet #map find $valid_rooms[+$room];
+			#line quiet #path save length path_length;
+		};
+
+		#if {$path_length == 0 && $flags == 0} {
+			#line log splatrooms.txt $valid_rooms[+$room];
+			#map leave;
+			#map delete $valid_rooms[+$room];
+		};
+    };
+	#echo {Cleanup complete!};
+};
 #class {mapper} {close}

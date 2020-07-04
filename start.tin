@@ -3,41 +3,29 @@
 #read .tt/graph.tin;
 
 #alias {load3k} {
-	#read .tt/3k/mip.tin;
-	#read .tt/3k/draw.tin;
+	#NOP #config {packet patch}{0.1};
+	#read .tt/3k/ansi.tin;
 	#read .tt/3k/mysql.tin;
+	#read .tt/3k/mapper.tin;
+	#read .tt/3k/mip.tin;
+	#read .tt/3k/chat.tin;
+	#read .tt/3k/draw.tin;
 	#read .tt/3k/vars.tin;
 	#read .tt/3k/aliases.tin;
-	#read .tt/3k/ansi.tin;
 	#read .tt/3k/assemble.tin;
 	#NOP #read .tt/3k/bots/bot_cycle.tin;
 	#NOP #read .tt/3k/bots/bot_load.tin;
 	#read .tt/3k/corpses.tin;
-	#read .tt/3k/dog.tin;
-	#read .tt/3k/mapper.tin;
-	#read .tt/3k/map_portals.tin;
-	#read .tt/3k/exits.tin;
 	#read .tt/3k/gag.tin;
-	#read .tt/3k/chat.tin;
-	
-	#read .tt/3k/mip.tin;
-	#if {"$mud" == "3k"} {
-		#read .tt/char/${ses_name}.tin;
-	} {
-		#read .tt/char/${ses_name}3s.tin;
-	};
-	
-	#read .tt/3k/draw.tin;
-	#NOP #nop {
-	#NOP #read .tt/3k/miphp.tin;
-	#NOP };
 	#read .tt/3k/mob_monitors.tin;
 	#read .tt/3k/trigs.tin;
-	
-	#read .tt/3k/killer.tin;
 	#read .tt/3k/triggers.tin;
-	#NOP #read .tt/3k/damagetracker.tin;
-	#NOP #delay {ansi}{#read .tt/3k/ansi_setup.tin}{2};
+	#delay {ansi}{
+		redraw;
+		#NOP #read .tt/3k/ansi_setup.tin
+	}{2};
+	#read .tt/3k/killer.tin;
+	#read .tt/3k/damagetracker.tin;
 	#script {cat .tt/map/lastroom.tt};
 	
 }

@@ -91,34 +91,39 @@
         #system {echo "$my[damagetracker][guildstring] - $my[damagetracker][targetstring] -> $my[damagetracker][hits] times -> $my[damagetracker][damage] ($my[damagetracker][average] Avg)" >> .tt/logs/${guild}-damagehistory.txt};
 };
 
-#var {damagetracker[rows]}{9};
+#var {damagetracker[rows]}{5};
 #var {damagetracker[page]}{1};
 #var {damagetracker[max]}{100};
 
+#math {damage[top]}{$selector[bottom] + 1};
+#math {damage[bottom]}{$damage[top]+$damage[height]};
 #alias {show_damage_table}{
-	#screen clear square 30 -42 42 -1;
-	#draw rounded box 30 -41 42 -3;
-	#showme {Last 8 Kills} 30 -28;
-	#showme {  Foe   | Rnds | Tot. Dmg | Avg} 31 -38;
-	#draw {line} 32 -40 32 -4;
-	show_area_selector;
-#nop {
-	log_record_damage;
-	log_record_health;
-};
-	#if {"$guild" == "mages"}{
-		display_desired_summons;
+	#if {"$draw[damage]" == "on"}{
+		#draw rounded box ${damage[top]} -$damage[width]+2 ${damage[bottom]} -$damage[width]+41;
+		#showme {Last 5 Kills} ${damage[top]} -$damage[width]+15;
+		#showme {  Foe   | Rnds | Tot. Dmg | Avg} ${damage[top]}+1 -38;
+		#draw {line} ${damage[top]}+2 -40 ${damage[top]}+2 -4;
+		show_area_selector;
+	#nop {
+		log_record_damage;
+		log_record_health;
 	};
-	#if {"guild" == "changeling"}{
-		show_current_form_table;
-		show_biome_table;
+		#if {"$guild" == "mages"}{
+			display_desired_summons;
+		};
+		#if {"guild" == "changeling"}{
+			show_current_form_table;
+			show_biome_table;
+		};
+		#math damagetracker[start]       {$damagetracker[rows] * $damagetracker[page]};
+		#math damagetracker[end]         {$damagetracker[rows] * $damagetracker[page] - $damagetracker[rows] + 1};
+		#line sub {var} #draw {tile} ${damage[top]}+3 -$damage[width]+4 ${damage[bottom]}-1 -4 $damagetracker[log][-$damagetracker[start]..-$damagetracker[end]];
 	};
-        #math damagetracker[start]       {$damagetracker[rows] * $damagetracker[page]};
-        #math damagetracker[end]         {$damagetracker[rows] * $damagetracker[page] - $damagetracker[rows] + 1};
-        #line sub {var} #draw {tile} 33 -39 41 -4 $damagetracker[log][-$damagetracker[start]..-$damagetracker[end]];
 };
 
+#nop {
 #ticker {damage_table}{show_damage_table}{4}
+};
 
 #alias {update_damage_table}{
         #if {&damagetracker[log][] > $damagetracker[max]} {

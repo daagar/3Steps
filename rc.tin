@@ -32,6 +32,10 @@
 
 #var {logpath}{.tt/logs};
 #alias {update_status}{#nop};
+#alias {display_biome}{#nop};
+#alias {show_damage_table}{#nop};
+#alias {show_area_selector}{#nop};
+
 #EVENT {SESSION CONNECTED} {
 	#var world {%0};
 	#format logfile {${logpath}/%0_%t.log} {%Y%m%d};

@@ -13,26 +13,9 @@
 #var right_split 43
 
 /* Determine Dimensions */
-#if {"$draw[alert]" == "on"} {
-	#var alert[width] 1
-} {
-	#var alert[width] 0
-};
-
-#if {"$draw[canvas]" == "on"} {
-	#NOP redraw pokedex off;
-	#var canvas[width] $right_split
-} {
-	#var canvas[width] 0
-};
-
-#if {"$draw[caption]" == "on"} {
-	#var caption[height] 2
-} {
-	#var caption[height] 0
-};
 
 #if {"$draw[chat]" == "on"} {
+	#read .tt/3k/chat.tin;
 	#math chat[height] {$chat[rows] + 1};
 	#if {"$draw[map]" == "on"} {
 		#math {chat[right]} {-$map[width]-2};
@@ -43,21 +26,94 @@
 	#var chat[height] 0;
 };
 
+#if {"$draw[canvas]" == "on}{
+	#var canvas[width] {$right_split};
+}{
+	#var canvas[width] 0;
+};
+
+#if {"$draw[alert]" == "on"} {
+	#var alert[width] 1;
+} {
+	#var alert[width] 0;
+};
+
+#if {"$draw[map]" == "on"}{
+	#var map[height] 17;
+	#var map[bottom] 17;
+	#math map[width] $right_split-1;
+}{
+	#var map[width]  0;
+	#var map[height] 0;
+	#var map[bottom] 0;
+};
+
+#if {"$draw[caption]" == "on"} {
+	#var caption[height] 2;
+	#var caption[bottom] 20;
+} {
+	#var caption[height] 0;
+	#var caption[bottom] $map[bottom];
+};
+
 #if {"$draw[exitpanel]" == "on"} {
+	#read .tt/3k/exits.tin;
 	#var exitpanel[width] $right_split;
 	#var exitpanel[height] 10;
 } {
 	#var exitpanel[width] 0;
-	#var exitpanel[height] 0;
+	#var exitpanel[height] -1;
 };
 
-#if {"$draw[pokedex]" == "on"} {
-	#NOP redraw canvas off;
-	#var pokedex[width] $right_split;
-	#var pokedex[height] 10;
+#if {"$draw[selector]" == "on"} {
+	#NOP redraw selector off;
+	#read .tt/3k/killer.tin;
+	#var selector[width] $right_split;
+	#var selector[height] 8;
 } {
-	#var pokedex[width] 0;
-	#var pokedex[height] 0;
+	#var selector[width] 0;
+	#var selector[height] -1;
+};
+
+#if {"$draw[damage]" == "on"} {
+	#NOP redraw damage off;
+	#read .tt/3k/damagetracker.tin;
+	#var damage[width] $right_split;
+	#var damage[height] 8;
+} {
+	#var damage[width] 0;
+	#var damage[height] -1;
+};
+
+
+#if {"$draw[biome]" == "on" && "$guild" == "changeling"} {
+	#NOP redraw biome off;
+	#read .tt/3k/pokedex.tin;
+	#var biome[height] 16;
+	#var biome[width] $right_split;
+} {
+	#var biome[width] 0;
+	#var biome[height] -1;
+};
+
+#if {"$draw[jedimode]" == "on" && "$guild" == "jedi"} {
+	#NOP redraw jedimode off;
+	#read .tt/3k/jedimode.tin;
+	#var jedimode[height] 20;
+	#var jedimode[width] $right_split;
+} {
+	#var jedimode[width] 0;
+	#var jedimode[height] -1;
+};
+
+#if {"$draw[summoner]" == "on" && "$guild" == "mage"} {
+	#NOP redraw summoner off;
+	#read .tt/3k/summoner.tin;
+	#var summoner[height] 12;
+	#var summoner[width] $right_split;
+} {
+	#var summoner[width] 0;
+	#var summoner[height] -1;
 };
 
 #if {"$draw[gline]" == "on"} {
@@ -72,6 +128,22 @@
 	#var hpbar[height] 0;
 };
 
+#alias {create_panel_alignment}{
+	#math {exitpanel[top]} 		{${caption[bottom]} + 1};
+	#math {exitpanel[bottom]} 	{${exitpanel[top]} + ${exitpanel[height]}};
+	#math {selector[top]} 		{${exitpanel[bottom]} + 1};
+	#math {selector[bottom]} 	{${selector[top]} + ${selector[height]}};
+	#math {damage[top]} 		{${selector[bottom]} + 1};
+	#math {damage[bottom]} 		{${damage[top]} + ${damage[height]}};
+	#math {biome[top]}		{${damage[bottom]} + 1};
+	#math {biome[bottom]} 		{${biome[top]} + ${biome[height]}};
+	#math {jedimode[top]}		{${biome[bottom]} + 1};
+	#math {jedimode[bottom]} 	{${jedimode[top]} + ${jedimode[height]}};
+	#math {summoner[top]}		{${jedimode[bottom]} + 1};
+	#math {summoner[bottom]} 	{${summoner[top]} + ${summoner[height]}};
+}
+
+create_panel_alignment
 #NOP map dimensions set in mapper.tin
 
 #math status[height] {$hpbar[height] + $gline[height] + 1};
@@ -83,7 +155,7 @@
 } {
 	#var split[left] 0;
 };
-#if {"$draw[exitpanel]" == "on" || "$draw[canvas]" == "on" || "$draw[pokedex]" == "on"} {
+#if {"$draw[canvas]" == "on"} {
 	#var split[right] $right_split;
 } {
 	#var split[right] 0;
@@ -97,18 +169,31 @@
 #buffer end;
 
 /* Perform Drawings */
+
+#if {"$draw[map]" == "on"} {
+	#if {"$draw[caption]" == "on"} {
+		#showme {<228>\u2534<088>} $map[height]+1 -$map[width]-1;
+	};
+	#map flag vtmap on;
+	#map offset 1 -$map[width] $map[height] -1;
+	#delay 0 #draw {tile} $map[height]-1 -$map[width] $map[height]-1 -1 {<020>$roomarea <140>(<120>$room_cnt<140>)<099>};
+	#delay 0 #draw {tile} $map[height] -$map[width] $map[height] -1 {<140>[<030>$roomvnum<140>] <130>$roomname<099>};
+	#delay 0 #draw line 1 -$map[width]-1 $map[height] -$map[width]-1;
+} {
+	#map flag vtmap off;
+};
+
 #if {"$draw[caption]" == "on"} {
 	#draw {<g09>} {line} $chat[height]+$caption[height] 1 $chat[height]+$caption[height] -1;
 	update_caption;
 };
-
 
 #if {"$draw[chat]" == "on"} {
 	#draw {<g09>} {line} $chat[height] 1 $chat[height] -1;
 	chatend;
 };
 
-#if {"$draw[exitpanel]" == "on"} {
+#if {"$draw[exitpanel]" == "on" && "$draw[canvas]" == "on"} {
 	#NOP #draw {line} $chat[height];
 	show_exits;
 };
@@ -124,33 +209,42 @@
 
 #draw {<g09>} {line} -2 1 -2 -1;
 
-#if {"$draw[exitpanel]" == "on" || "$draw[canvas]" == "on" || "$draw[pokedex]" == "on"} {
-	#draw {<g04>} {line} $chat[height]+$caption[height]+1 -$right_split -$status[height]-2 -$right_split;
-	#showme {<g09>\u252C<088>} $chat[height]+$caption[height] -$right_split;
-	#showme {<g09>\u2534<088>} -$hpbar[height]-$gline[height]-2 -$right_split;
-};
-
-#NOP #if {"$draw[exitpanel]" == "on"} {
-#NOP 	#draw {line} $chat[height]+$caption[height]+$exitpanel[height]+1 -$right_split+1 $chat[height]+$caption[height]+$exitpanel[height]+1 -1;
-#NOP 	show_exits
-#NOP }
 
 #if {"$draw[canvas]" == "on"} {
-	#NOP botdraw;
-	show_area_selector;
+	#draw {line} $chat[height]+$caption[height]+1 -$right_split -$status[height]-2 -$right_split;
+	#showme {<228>\u252C<088>} $chat[height]+$caption[height] -$right_split;
+	#showme {<088>\u2534<088>} -$hpbar[height]-$gline[height]-2 -$right_split;
 };
 
-#if {"$draw[map]" == "on"} {
-	#draw {<g04>} line 1 -$map[width]-1 $map[height] -$map[width]-1;
-	#if {"$draw[caption]" == "on"} {
-		#showme {<g09>\u2534<088>} $map[height]+1 -$map[width]-1;
-	};
-	#map flag vtmap on;
-	#map offset 1 -$map[width] $map[height] -1;
-	#delay 0 #draw {tile} $map[height]-1 -$map[width] $map[height]-1 -1 {<020>$roomarea <140>(<120>$room_cnt<140>)<099>};
-	#delay 0 #draw {tile} $map[height] -$map[width] $map[height] -1 {<140>[<030>$roomvnum<140>] <130>$roomname<099>};
-} {
-	#map flag vtmap off;
+#if {"$draw[exitpanel]" == "on" && "$draw[canvas]" == "on"} {
+	#NOP exitpanel;
+	show_exits;
+};
+
+#if {"$draw[selector]" == "on" && "$draw[canvas]" == "on"} {
+	#NOP selector;
+	show_area_selector;
+}
+
+#if {"$draw[damage]" == "on" && "$draw[canvas]" == "on"} {
+	#NOP damage stats;
+	show_damage_table;
+};
+
+#if {"$draw[biome]" == "on" && "$draw[canvas]" == "on"} {
+	#NOP biome;
+	display_biome;
+};
+
+#if {"$draw[jedimode]" == "on" && "$draw[canvas]" == "on"} {
+	#NOP jedimode;
+	show_mode_selector;
+	show_damage_selector;
+};
+
+#if {"$draw[summoner]" == "on" && "$draw[canvas]" == "on"} {
+	#NOP summoner;
+	display_desired_summons;
 };
 
 #alias redraw {
@@ -160,13 +254,17 @@
 		#switch {"%1"} {
 			#case {"alert"}		{#var redraw[option] %1};
 			#case {"canvas"}	{#var redraw[option] %1};
+			#case {"selector"}	{#var redraw[option] %1};
 			#case {"caption"}	{#var redraw[option] %1};
 			#case {"chat"}		{#var redraw[option] %1};
-			#case {"exitpanel"} {#var redraw[option] %1};
+			#case {"exitpanel"}     {#var redraw[option] %1};
 			#case {"gline"}		{#var redraw[option] %1};
 			#case {"hpbar"}		{#var redraw[option] %1};
 			#case {"map"}		{#var redraw[option] %1};
-			#case {"pokedex"}	{#var redraw[option] %1};
+			#case {"biome"}		{#var redraw[option] %1};
+			#case {"jedimode"}	{#var redraw[option] %1};
+			#case {"summoner"}	{#var redraw[option] %1};
+			#case {"damage"}	{#var redraw[option] %1};
 			#default		{#var redraw[args][1] invalid;#showme REDRAW:  Invalid redraw option}
 		};
 		#if {"%2" != ""} {
@@ -189,7 +287,7 @@
 			} {
 				#class drawvar write .tt/3k/vars/draw_3s.var;
 			};
-			
+			create_panel_alignment;
 			#read .tt/3k/draw.tin;
 		};
 	} {
@@ -198,6 +296,8 @@
 		} {
 			#class drawvar write .tt/3k/vars/draw_3s.var;
 		};
+		#unbutton %*;
+		create_panel_alignment;
 		#read .tt/3k/draw.tin;
 	};
 }
