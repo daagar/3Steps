@@ -18,7 +18,7 @@ F 10
 
 G 0
 
-I 3911
+I 10955
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -25641,11 +25641,11 @@ R { 5628} {0} {} {A bridge (w,e)} { } {You are crossing a bridge of mist.  In pl
 E { 5627} {e} {e} {2} {0} {} {1.000} {}
 E { 3971} {w} {w} {8} {0} {} {1.000} {}
 
-R { 5629} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 5629} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {12268} {w} {w} {8} {0} {} {1.000} {}
 E { 4007} {e} {e} {2} {0} {} {1.000} {}
 
-R { 5630} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 5630} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 4008} {s} {s} {4} {0} {} {1.000} {}
 E { 3911} {n} {n} {1} {0} {} {1.000} {}
 
@@ -25657,7 +25657,7 @@ R { 5632} {0} {} {Shady lane (s,n)} { } {This is a shady lane.  All around you t
 E { 5631} {s} {s} {4} {0} {} {1.000} {}
 E { 5634} {n} {n} {1} {0} {} {1.000} {}
 
-R { 5633} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 5633} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 5631} {n} {n} {1} {0} {} {1.000} {}
 E { 4006} {s} {s} {4} {0} {} {1.000} {}
 
@@ -26488,6 +26488,15 @@ E { 5818} {n} {n} {1} {0} {} {1.000} {}
 
 R { 5818} {0} {} {-= Director's Office =- (s)} { } {-= Director's Office =- A large desk in poor condition takes up most of the space.  Papers and folders are strewn about in disarray. A black vinyl couch sits facing the desk.  Pictures of the director and various celebrities hang on the wall.  A novelty hand grenade sits on top of the desk.  A megaphone and whistle sit on the floor next to the trashcan. } {Barney's Studio} {} {} {} {1.000} {}
 E { 5817} {s} {s} {4} {0} {} {1.000} {}
+
+R { 5819} {0} {} {Chinese Checkers Board - Evil Green's Fort (ne)} { } {This busy corner of Evil Green's fort is a blur of motion, activity and repulsive colors. You feel sick to your stomach for a moment as a waist-high pus-green chinese checker rolls up beside you, taunting you with the assault on your senses. It is daring you to make a move on it, here in Evil Green's headquarters. } {Chinese Checkers} {} {} {} {1.000} {}
+E {11016} {ne} {ne} {3} {0} {} {1.000} {}
+
+R { 5820} {0} {} {Chinese Checkers Board - Evil Blue's Fort (nw)} { } {These chinese checkers are nearly as tall as you are! Here in Evil Blue's headquarters, you walk very cautiously, as you feel like they would roll over you without even noticing the bump. The floor has been painted with a bright electric blue shade, making you feel alive. } {Chinese Checkers} {} {} {} {1.000} {}
+E {10972} {nw} {nw} {9} {0} {} {1.000} {}
+
+R { 5821} {0} {} {Chinese Checkers Board - Good Green's Fort (sw)} { } {This friendly feeling section of the board is clearly the headquarters of Good Green. The waist-high checkers pay no heed to intruders as they go about their business, planning for battle. The floor has been painted a grass green color, giving you a pleasant feeling. } {Chinese Checkers} {} {} {} {1.000} {}
+E {10969} {sw} {sw} {12} {0} {} {1.000} {}
 
 R { 5826} {0} {} {5826} { } {} {} {} {} {} {1.000} {}
 E { 5814} {sw} {sw} {12} {0} {} {1.000} {}
@@ -51810,148 +51819,164 @@ E {10942} {s} {s} {4} {0} {} {1.000} {}
 R {10942} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10941} {n} {n} {1} {0} {} {1.000} {}
 
-R {10943} {0} {<118>} {checkers} { } {} {} {} {} {} {1.000} {}
+R {10943} {0} {} {Chinese Checkers Board - Evil Red's Fort (nw,ne,ladder)} { } {A sense of foreboding and devious evil lurks in the corners of this fort. Red chinese checkers, reaching to your knees, roll about in a frenzy, waiting for some attack. They seem oblivious to your presence, perhaps because you aren't a chinese checker. You appear to be in the headquarters of this particular fort. The top of the ladder is at your feet. } {Chinese Checkers} {checkers} {} {} {1.000} {}
 E { 2743} {ladder} {ladder} {0} {0} {} {1.000} {}
 E {10944} {nw} {nw} {9} {0} {} {1.000} {}
 E {10955} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10944} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10944} {0} {} {Chinese Checkers Board - Evil Red's Fort (se,nw,ne)} { } {The western wall of the fort facing onto the board is quieter than the east, as though Evil Red was expecting more of an attack from that direction. The surface of the board is the same deep red color, but not as sinister as in the other corners of the fort. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10943} {se} {se} {6} {0} {} {1.000} {}
 E {10945} {nw} {nw} {9} {0} {} {1.000} {}
+E {10954} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10945} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10945} {0} {} {Chinese Checkers Board - Middle Board (se,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10944} {se} {se} {6} {0} {} {1.000} {}
 E {10946} {nw} {nw} {9} {0} {} {1.000} {}
+E {10953} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10946} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10946} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10945} {se} {se} {6} {0} {} {1.000} {}
 E {10947} {nw} {nw} {9} {0} {} {1.000} {}
 E {10973} {sw} {sw} {12} {0} {} {1.000} {}
 E {10952} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10947} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10947} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10946} {se} {se} {6} {0} {} {1.000} {}
 E {10948} {nw} {nw} {9} {0} {} {1.000} {}
+E {11016} {sw} {sw} {12} {0} {} {1.000} {}
+E {10951} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10948} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10948} {0} {} {Chinese Checkers Board - Good Blue's Fort (se,nw,ne)} { } {A high wall encircles Good Blue's fort, but poses no hindrance to your gaining access, and the checkers don't even seem to mind. The huge blue chinese checkers sit near the fort walls, waiting for whatever battle is about to go on. Unlike the other forts, no sense of urgency can be felt. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10947} {se} {se} {6} {0} {} {1.000} {}
 E {10949} {nw} {nw} {9} {0} {} {1.000} {}
 E {10950} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10949} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10949} {0} {} {Chinese Checkers Board - Good Blue's Fort (se)} { } {Despite the enormity of these chinese checkers, they make you feel safe and secure. They mill about their headquarters lazily, sure that they will overcome any and all who would dare attack them in their magnificent fort. One of them rolls across the vibrant blue surface toward you, as if to offer you greeting. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10948} {se} {se} {6} {0} {} {1.000} {}
 
-R {10950} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10950} {0} {} {Chinese Checkers Board - Good Blue's Fort (se,sw)} { } {Behind the high walls of Good Blue's fort, you feel very safe. Despite the sheer size of the checkers here, they seem like gentle giants. They roll by very slowly and sluggishly, from one end of the wall facing the playing board to the other. You find it hard to imagine the small red checkers attempting to gain access. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10948} {sw} {sw} {12} {0} {} {1.000} {}
 E {10951} {se} {se} {6} {0} {} {1.000} {}
 
-R {10951} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10951} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10950} {nw} {nw} {9} {0} {} {1.000} {}
 E {10952} {se} {se} {6} {0} {} {1.000} {}
 E {10960} {ne} {ne} {3} {0} {} {1.000} {}
+E {10947} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {10952} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10952} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10951} {nw} {nw} {9} {0} {} {1.000} {}
 E {10953} {se} {se} {6} {0} {} {1.000} {}
 E {10959} {ne} {ne} {3} {0} {} {1.000} {}
 E {10946} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {10953} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10953} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10952} {nw} {nw} {9} {0} {} {1.000} {}
 E {10954} {se} {se} {6} {0} {} {1.000} {}
+E {10945} {sw} {sw} {12} {0} {} {1.000} {}
+E {10958} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10954} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10954} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10953} {nw} {nw} {9} {0} {} {1.000} {}
 E {10955} {se} {se} {6} {0} {} {1.000} {}
+E {10944} {sw} {sw} {12} {0} {} {1.000} {}
+E {10957} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10955} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10955} {0} {} {Chinese Checkers Board - Evil Red's Fort (sw,nw,ne)} { } {The board's surface is covered in a deep, rich reddish color that reminds you more of blood than of paint. There is a great deal of activity in this fort, as the small red checkers roll about in a frenzy, reminding you of sharks after the scent of blood. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10954} {nw} {nw} {9} {0} {} {1.000} {}
 E {10943} {sw} {sw} {12} {0} {} {1.000} {}
 E {10956} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10956} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10956} {0} {} {Chinese Checkers Board - Middle Board (sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10955} {sw} {sw} {12} {0} {} {1.000} {}
 E {10957} {nw} {nw} {9} {0} {} {1.000} {}
 E {10967} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10957} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10957} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10956} {se} {se} {6} {0} {} {1.000} {}
 E {10958} {nw} {nw} {9} {0} {} {1.000} {}
+E {10954} {sw} {sw} {12} {0} {} {1.000} {}
+E {10968} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10958} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10958} {0} {} {Chinese Checkers Board - Middle of the Board (se,sw,nw,n} { } {This is the very center of the chinese checkers board. You look out in all directions, wondering about the strange behaviour of the playing pieces. This board is shaped like a six-pointed star, with six forts and six different types of checkers, each waiting for some sort of battle to begin. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10957} {se} {se} {6} {0} {} {1.000} {}
 E {10959} {nw} {nw} {9} {0} {} {1.000} {}
+E {10953} {sw} {sw} {12} {0} {} {1.000} {}
+E {11015} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10959} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10959} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10958} {se} {se} {6} {0} {} {1.000} {}
 E {10960} {nw} {nw} {9} {0} {} {1.000} {}
 E {11014} {ne} {ne} {3} {0} {} {1.000} {}
 E {10952} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {10960} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10960} {0} {} {Chinese Checkers Board - Middle Board (se,ne,sw)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10959} {se} {se} {6} {0} {} {1.000} {}
 E {10951} {sw} {sw} {12} {0} {} {1.000} {}
 E {10961} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10961} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10961} {0} {} {Chinese Checkers Board - Good Red's Fort (se,ne,sw)} { } {You are standing at the western wall of Good Red's fort. It would appear that the knee-high red chinese checkers are waiting nervously, rolling back and forth with agitation, for whatever is about to come. You wonder if these small chinese checkers can outlast the others. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10960} {sw} {sw} {12} {0} {} {1.000} {}
 E {10962} {ne} {ne} {3} {0} {} {1.000} {}
 E {11014} {se} {se} {6} {0} {} {1.000} {}
 
-R {10962} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10962} {0} {} {Chinese Checkers Board - Good Red's Fort (se,sw)} { } {You are standing in the headquarters of one of the two red teams on this board. Small red checkers roll about, somehow conversing with each other, probably sharing battle plans. High walls have been built up around the fort, painted a warm reddish hue, much softer than Evil Red, their enemy. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10961} {sw} {sw} {12} {0} {} {1.000} {}
 E {10963} {se} {se} {6} {0} {} {1.000} {}
 
-R {10963} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10963} {0} {} {Chinese Checkers Board - Good Red's Fort (se,nw,sw)} { } {At the eastern corner of Good Red's fort, an increase in concern regarding the outcome of this game can be sensed. Some of the checkers wait against the wall, some roll back and forth from the wall to the back of the fort, where the headquarters are located. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10962} {nw} {nw} {9} {0} {} {1.000} {}
 E {10964} {se} {se} {6} {0} {} {1.000} {}
 E {11014} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {10964} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10964} {0} {} {Chinese Checkers Board - Middle Board (se,nw,sw)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10963} {nw} {nw} {9} {0} {} {1.000} {}
 E {10965} {se} {se} {6} {0} {} {1.000} {}
 E {11015} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {10965} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10965} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10964} {nw} {nw} {9} {0} {} {1.000} {}
 E {10966} {ne} {ne} {3} {0} {} {1.000} {}
 E {10968} {sw} {sw} {12} {0} {} {1.000} {}
 E {10970} {se} {se} {6} {0} {} {1.000} {}
 
-R {10966} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10966} {0} {} {Chinese Checkers Board - Good Green's Fort (se,sw)} { } {The green checkers rest against the northern wall of their small fort, anticipating the game. You wonder if it is simply the colors that the board has been painted here or if the feeling of serenity is genuine. Real or not, these checkers do not seem worried about the outcome. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10965} {sw} {sw} {12} {0} {} {1.000} {}
 E {10969} {se} {se} {6} {0} {} {1.000} {}
 
-R {10967} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10967} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10956} {sw} {sw} {12} {0} {} {1.000} {}
 E {10968} {nw} {nw} {9} {0} {} {1.000} {}
 E {10970} {ne} {ne} {3} {0} {} {1.000} {}
 E {10971} {se} {se} {6} {0} {} {1.000} {}
 
-R {10968} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10968} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10967} {se} {se} {6} {0} {} {1.000} {}
 E {10965} {ne} {ne} {3} {0} {} {1.000} {}
 E {11015} {nw} {nw} {9} {0} {} {1.000} {}
+E {10957} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {10969} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10969} {0} {} {Chinese Checkers Board - Good Green's Fort (sw,nw,ne)} { } {The home base of Good Green is a very welcoming sight, with its grassy green paint and waist-high green checkers rolling about. The fort seems like a very peaceful area, more like a child's play area than a potential battleground. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10966} {nw} {nw} {9} {0} {} {1.000} {}
 E {10970} {sw} {sw} {12} {0} {} {1.000} {}
+E { 5821} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10970} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10970} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10969} {ne} {ne} {3} {0} {} {1.000} {}
 E {10965} {nw} {nw} {9} {0} {} {1.000} {}
 E {10967} {sw} {sw} {12} {0} {} {1.000} {}
 E {10972} {se} {se} {6} {0} {} {1.000} {}
 
-R {10971} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10971} {0} {} {Chinese Checkers Board - Evil Blue's Fort (ne,nw)} { } {Evil Blue's fort is painted electric blue, like lightning. The colors are bright and engaging, but lends itself to deep feelings of fear and terror. The checkers sit very close to the wall, waiting, almost daring any other checker to approach their fort. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10967} {nw} {nw} {9} {0} {} {1.000} {}
 E {10972} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10972} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10972} {0} {} {Chinese Checkers Board - Evil Blue's Fort (se,nw,sw)} { } {Unlike the other forts, there is little activity in Evil Blue's fort. Due to their sheer size, they undoubtedly fear no other chinese checker. The bright blue color of the board under your feet makes you feel a little bit dizzy... perhaps this is one of their tactics! } {Chinese Checkers} {} {} {} {1.000} {}
 E {10971} {sw} {sw} {12} {0} {} {1.000} {}
 E {10970} {nw} {nw} {9} {0} {} {1.000} {}
+E { 5820} {se} {se} {6} {0} {} {1.000} {}
 
-R {10973} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {10973} {0} {} {Chinese Checkers Board - Evil Green's Fort (ne,nw)} { } {The green checker guards standing at the southern gate roll back and forth, into the walls. You think they are trying to psyche themselves up for the upcoming battle, but perhaps they have simply spent too much time behind the walls. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10946} {ne} {ne} {3} {0} {} {1.000} {}
 E {11016} {nw} {nw} {9} {0} {} {1.000} {}
 
@@ -52124,19 +52149,22 @@ R {11013} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10993} {nw} {nw} {9} {0} {} {1.000} {}
 E {11012} {s} {s} {4} {0} {} {1.000} {}
 
-R {11014} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11014} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10963} {ne} {ne} {3} {0} {} {1.000} {}
 E {10961} {nw} {nw} {9} {0} {} {1.000} {}
 E {11015} {se} {se} {6} {0} {} {1.000} {}
 E {10959} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {11015} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11015} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
 E {11014} {nw} {nw} {9} {0} {} {1.000} {}
 E {10968} {se} {se} {6} {0} {} {1.000} {}
 E {10964} {ne} {ne} {3} {0} {} {1.000} {}
+E {10958} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {11016} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {11016} {0} {} {Chinese Checkers Board - Evil Green's Fort (se,ne,sw)} { } {The bright, harsh colors of this fort make you want to turn around the moment you step over the walls. You try to avert your eyes, but everything, from the board's surface to the walls to the checkers rolling by the fortifications wound your vision. Looking up, you almost trip over a checker. } {Chinese Checkers} {} {} {} {1.000} {}
 E {10973} {se} {se} {6} {0} {} {1.000} {}
+E {10947} {ne} {ne} {3} {0} {} {1.000} {}
+E { 5819} {sw} {sw} {12} {0} {} {1.000} {}
 
 R {11017} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 2998} {e} {e} {2} {0} {} {1.000} {}
