@@ -106,7 +106,7 @@
 	#var jedimode[height] -1;
 };
 
-#if {"$draw[summoner]" == "on" && "$guild" == "mage"} {
+#if {"$draw[summoner]" == "on" && "$guild" == "mages"} {
 	#NOP redraw summoner off;
 	#read .tt/3k/summoner.tin;
 	#var summoner[height] 12;

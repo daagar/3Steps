@@ -18,7 +18,7 @@ F 11
 
 G 0
 
-I 4748
+I 168
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -15792,7 +15792,7 @@ R { 3500} {4104} {<118>} {3500} { } {} {} {} {} {} {1.000} {}
 E { 3468} {ne} {ne} {3} {0} {} {1.000} {}
 E { 3451} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 3501} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 3501} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 6370} {ne} {ne} {3} {0} {} {1.000} {}
 E {    9} {sw} {sw} {12} {0} {} {1.000} {}
 
@@ -18606,11 +18606,11 @@ E { 4086} {d} {d} {32} {0} {} {1.000} {}
 R { 4086} {0} {} {4086} { } {} {} {} {} {} {1.000} {}
 E { 4085} {u} {u} {16} {0} {} {1.000} {}
 
-R { 4087} {10} {} {} { } {} {} {} {} {} {1.000} {}
+R { 4087} {5130} {} {} { } {} {} {} {} {} {1.000} {}
 E {  166} {n} {n} {1} {0} {} {1.000} {}
 E {  165} {s} {s} {4} {0} {} {1.000} {}
 
-R { 4088} {10} {} {} { } {} {} {} {} {} {1.000} {}
+R { 4088} {5130} {} {} { } {} {} {} {} {} {1.000} {}
 E { 4109} {ne} {ne} {3} {0} {} {1.000} {}
 E { 4748} {sw} {sw} {12} {0} {} {1.000} {}
 
@@ -19182,7 +19182,7 @@ R { 4224} {0} {} {Woodland Road (n,s)} { } {A well-travelled road runs north and
 E { 4225} {n} {n} {1} {0} {} {1.000} {}
 E { 4226} {s} {s} {4} {0} {} {1.000} {}
 
-R { 4225} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 4225} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 4224} {s} {s} {4} {0} {} {1.000} {}
 E {   67} {n} {n} {1} {0} {} {1.000} {}
 
@@ -19209,7 +19209,7 @@ E { 4229} {s} {s} {4} {0} {} {1.000} {}
 R { 4231} {0} {} {Dayln's Gladiatorial Office (n)} { } {This tent is currently very empty except for a board that has been placed off to one side.  If you want to be a Master of Ceremonies just look at the sign. } {Gladiatorial Arena} {} {} {} {1.000} {}
 E { 4229} {n} {n} {1} {0} {} {1.000} {}
 
-R { 4232} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 4232} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 5910} {n} {n} {1} {0} {} {1.000} {}
 E {   67} {s} {s} {4} {0} {} {1.000} {}
 
@@ -19222,18 +19222,18 @@ R { 4235} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
 R { 4236} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 
-R { 4237} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 4237} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 5956} {w} {w} {8} {0} {} {1.000} {}
 E {    3} {e} {e} {2} {0} {} {1.000} {}
 
-R { 4238} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 4238} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {    2} {e} {e} {2} {0} {} {1.000} {}
 E {    3} {w} {w} {8} {0} {} {1.000} {}
 
 R { 4239} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {    2} {d} {d} {32} {0} {} {1.000} {}
 
-R { 4240} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 4240} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {  971} {s} {s} {4} {0} {} {1.000} {}
 E {  688} {n} {n} {1} {0} {} {1.000} {}
 
@@ -25064,12 +25064,13 @@ E { 5498} {s} {s} {4} {0} {} {1.000} {}
 R { 5501} {0} {} {5501} { } {Gloomy and dark, this swamp is just about as far from smurfy as you can get. Blue and purple vegetation droop toward the muddy ground and thick trees block out the sky overhead. This swamp is the domain of King Bullrush and his Wartmonger minions. They don't like visitors. } {Smurfland 3} {} {} {} {1.000} {}
 E { 5498} {e} {e} {2} {0} {} {1.000} {}
 
-R { 5502} {0} {<118>} {chessboard} { } {} {} {chessboard} {} {} {1.000} {}
+R { 5502} {0} {} {A Dark Square (u,n,s,w,e)} { } {You are in a gloomy dark area\; the stench of smoke and death is all around you.  Smashed implements of war litter the ground amid the gore of human remains.  Unlike anything you've seen before, however, there is an odd shimmering hole in the ground here! } {Chess Board} {chessboard} {} {} {1.000} {}
 E {  168} {climb} {climb} {0} {0} {} {1.000} {}
 E { 5679} {w} {w} {8} {0} {} {1.000} {}
 E { 5709} {e} {e} {2} {0} {} {1.000} {}
 E { 5715} {n} {n} {1} {0} {} {1.000} {}
 E { 5701} {s} {s} {4} {0} {} {1.000} {}
+E { 6487} {u} {u} {16} {0} {} {1.000} {}
 
 R { 5503} {0} {} {5503} { } {Inconspicuously in a less-travelled portion of Foundation, the Rebel Forces have hidden one of their largest troop transport hangars. The ships that fly from here are moderately sized but extremely fast. They are intended to quickly make the jump to light speed and evade any and all Imperial Destroyers. Rumour has it that the destination of the current flights is the planet of Yavin, home of Luke Skywalker's Jedi Academy. } {Mud} {} {} {} {1.000} {}
 E {    9} {s} {s} {4} {0} {} {1.000} {}
@@ -25786,7 +25787,7 @@ R { 5678} {0} {} {-= Inside Studio B =- (w,e)} { } {-= Inside Studio B =- The li
 E { 5677} {e} {e} {2} {0} {} {1.000} {}
 E { 5816} {w} {w} {8} {0} {} {1.000} {}
 
-R { 5679} {0} {} {5679} { } {} {} {} {} {} {1.000} {}
+R { 5679} {0} {<118>} {5679} { } {} {} {} {} {} {1.000} {}
 E { 5502} {e} {e} {2} {0} {} {1.000} {}
 E { 5680} {w} {w} {8} {0} {} {1.000} {}
 E { 5728} {n} {n} {1} {0} {} {1.000} {}
@@ -25904,13 +25905,13 @@ E { 5701} {e} {e} {2} {0} {} {1.000} {}
 E { 5697} {s} {s} {4} {0} {} {1.000} {}
 E { 5679} {n} {n} {1} {0} {} {1.000} {}
 
-R { 5701} {0} {} {5701} { } {} {} {} {} {} {1.000} {}
+R { 5701} {0} {<118>} {5701} { } {} {} {} {} {} {1.000} {}
 E { 5700} {w} {w} {8} {0} {} {1.000} {}
 E { 5702} {e} {e} {2} {0} {} {1.000} {}
 E { 5502} {n} {n} {1} {0} {} {1.000} {}
 E { 5696} {s} {s} {4} {0} {} {1.000} {}
 
-R { 5702} {0} {} {5702} { } {} {} {} {} {} {1.000} {}
+R { 5702} {0} {<118>} {5702} { } {} {} {} {} {} {1.000} {}
 E { 5701} {w} {w} {8} {0} {} {1.000} {}
 E { 5703} {e} {e} {2} {0} {} {1.000} {}
 E { 5695} {s} {s} {4} {0} {} {1.000} {}
@@ -25944,13 +25945,13 @@ E { 5708} {w} {w} {8} {0} {} {1.000} {}
 E { 5711} {n} {n} {1} {0} {} {1.000} {}
 E { 5704} {s} {s} {4} {0} {} {1.000} {}
 
-R { 5708} {0} {} {5708} { } {} {} {} {} {} {1.000} {}
+R { 5708} {0} {<118>} {5708} { } {} {} {} {} {} {1.000} {}
 E { 5707} {e} {e} {2} {0} {} {1.000} {}
 E { 5709} {w} {w} {8} {0} {} {1.000} {}
 E { 5713} {n} {n} {1} {0} {} {1.000} {}
 E { 5703} {s} {s} {4} {0} {} {1.000} {}
 
-R { 5709} {0} {} {5709} { } {} {} {} {} {} {1.000} {}
+R { 5709} {0} {} {5709} { } {You are surrounded by burning brush set afire by cannon blasts and burning arrows sent high into the sky by the charioteers. The bright light from the flames highlights the detritus of war scattered by the explosions.  The area is littered with the horrible mangled remains of humans and animals. } {Chess Board} {} {} {} {1.000} {}
 E { 5708} {e} {e} {2} {0} {} {1.000} {}
 E { 5502} {w} {w} {8} {0} {} {1.000} {}
 E { 5702} {s} {s} {4} {0} {} {1.000} {}
@@ -25977,13 +25978,13 @@ E { 5714} {w} {w} {8} {0} {} {1.000} {}
 E { 5737} {n} {n} {1} {0} {} {1.000} {}
 E { 5708} {s} {s} {4} {0} {} {1.000} {}
 
-R { 5714} {0} {} {5714} { } {} {} {} {} {} {1.000} {}
+R { 5714} {0} {<118>} {5714} { } {} {} {} {} {} {1.000} {}
 E { 5713} {e} {e} {2} {0} {} {1.000} {}
 E { 5715} {w} {w} {8} {0} {} {1.000} {}
 E { 5709} {s} {s} {4} {0} {} {1.000} {}
 E { 5734} {n} {n} {1} {0} {} {1.000} {}
 
-R { 5715} {0} {} {5715} { } {} {} {} {} {} {1.000} {}
+R { 5715} {0} {<118>} {5715} { } {} {} {} {} {} {1.000} {}
 E { 5714} {e} {e} {2} {0} {} {1.000} {}
 E { 5502} {s} {s} {4} {0} {} {1.000} {}
 E { 5722} {n} {n} {1} {0} {} {1.000} {}
@@ -26449,7 +26450,7 @@ E { 5817} {s} {s} {4} {0} {} {1.000} {}
 R { 5819} {0} {} {Sports Fan-atics Football Lounge (w)} { } {The floor is covered with FieldTurf[TM], marked every three feet with yardage markers.  According to the floor, this room is about 15 yards long, and about 10 yards wide.  Overstuffed leather couches line the left wall, whereas the right wall is covered with widescreen digital TVs, each showing a different football game.  The walls are covered with pennants of every team in the league, as well as memorabilia from throughout the history of the NFL. } {Foundation Sports Bar} {} {} {} {1.000} {}
 E { 4241} {w} {w} {8} {0} {} {1.000} {}
 
-R { 5820} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 5820} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 4241} {sw} {sw} {12} {0} {} {1.000} {}
 E {  971} {ne} {ne} {3} {0} {} {1.000} {}
 
@@ -26695,7 +26696,7 @@ R { 5879} {0} {} {Garden of the Poets (se,w)} { } {The wind rustles lazily throu
 E { 5875} {w} {w} {8} {0} {} {1.000} {}
 E { 5824} {se} {se} {6} {0} {} {1.000} {}
 
-R { 5880} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 5880} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 4623} {w} {w} {8} {0} {} {1.000} {}
 E {  973} {e} {e} {2} {0} {} {1.000} {}
 
@@ -26721,7 +26722,7 @@ E {10207} {w} {w} {8} {0} {} {1.000} {}
 R { 5885} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 4626} {n} {n} {1} {0} {} {1.000} {}
 
-R { 5886} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 5886} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 5381} {w} {w} {8} {0} {} {1.000} {}
 E {  975} {e} {e} {2} {0} {} {1.000} {}
 
@@ -26758,14 +26759,20 @@ E { 6481} {u} {u} {16} {0} {} {1.000} {}
 R { 5894} {0} {} {An Odds 'n Ends shop (e)} { } {This is the Foundation Odds 'n Ends shop. Lots of fun toys are on display here and a smiling sales clerk stands behind the counter.  There is a sign listing prices up on the wall. } {Mud} {} {} {} {1.000} {}
 E {  835} {e} {e} {2} {0} {} {1.000} {}
 
-R { 5895} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 5895} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {10005} {n} {n} {1} {0} {} {1.000} {}
 E {  164} {s} {s} {4} {0} {} {1.000} {}
 
 R { 5896} {0} {} {A small candy store (se,n)} { } {This is a small candy store and candy is everywhere in sight.  There is a lot of candy and it is hard to decide on what to get.  The walls are filled with different types of candy.  The counter is to the north and behind the counter is Ho-San and the backroom. } {Mud} {} {} {} {1.000} {}
 E {  164} {se} {se} {6} {0} {} {1.000} {}
 
-R { 5898} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 5897} {0} {} {Foyer of the Toy Store (w,e,s,n)} { } {You step into what appears to be a giant toy store. In every direction boxes of toys line the shelves. The aisle on your right is filled with action toys, and on the left is the outdoor activities area. Just ahead you can see a frighteningly large wall of Barbie dolls. } {Toy Store} {} {} {} {1.000} {}
+E {12263} {s} {s} {4} {0} {} {1.000} {}
+E { 6482} {w} {w} {8} {0} {} {1.000} {}
+E { 6483} {e} {e} {2} {0} {} {1.000} {}
+E { 6484} {n} {n} {1} {0} {} {1.000} {}
+
+R { 5898} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 6083} {w} {w} {8} {0} {} {1.000} {}
 E {  164} {e} {e} {2} {0} {} {1.000} {}
 
@@ -27251,7 +27258,7 @@ E { 6028} {w} {w} {8} {0} {} {1.000} {}
 R { 6017} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 5376} {u} {u} {16} {0} {} {1.000} {}
 
-R { 6018} {10} {} {} { } {} {} {} {} {} {1.000} {}
+R { 6018} {5130} {} {} { } {} {} {} {} {} {1.000} {}
 E { 5376} {e} {e} {2} {0} {} {1.000} {}
 E { 4746} {w} {w} {8} {0} {} {1.000} {}
 
@@ -29207,11 +29214,11 @@ E { 6845} {s} {s} {4} {0} {} {1.000} {}
 E { 6846} {n} {n} {1} {0} {} {1.000} {}
 E { 6878} {e} {e} {2} {0} {} {1.000} {}
 
-R { 6473} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 6473} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 6082} {n} {n} {1} {0} {} {1.000} {}
 E {    5} {s} {s} {4} {0} {} {1.000} {}
 
-R { 6474} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 6474} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 6080} {e} {e} {2} {0} {} {1.000} {}
 E {  977} {w} {w} {8} {0} {} {1.000} {}
 
@@ -29236,6 +29243,25 @@ E {  985} {s} {s} {4} {0} {} {1.000} {}
 
 R { 6481} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 5893} {d} {d} {32} {0} {} {1.000} {}
+
+R { 6482} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 5897} {e} {e} {2} {0} {} {1.000} {}
+
+R { 6483} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 5897} {w} {w} {8} {0} {} {1.000} {}
+
+R { 6484} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 5897} {s} {s} {4} {0} {} {1.000} {}
+
+R { 6485} {0} {} {Halfway up a hill (ne,s)} { } {From halfway up the hill the view of the surrounding countryside is truly beautiful, for miles around you can see lush green rolling fields leading to in the distance, mist shrouded mountains.  Even the air seems cleaner and fresher!  Inhaling deeply you relax and think surely this must be paradise.  After a few moments you return to the task at hand ... the path and source of the music drifting down the hill on the breeze. } {Leprechaun Village} {} {} {} {1.000} {}
+E {12262} {s} {s} {4} {0} {} {1.000} {}
+E { 6486} {ne} {ne} {3} {0} {} {1.000} {}
+
+R { 6486} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 6485} {sw} {sw} {12} {0} {} {1.000} {}
+
+R { 6487} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 5502} {d} {d} {32} {0} {} {1.000} {}
 
 R { 6489} {0} {} {6489} { } {} {} {} {} {} {1.000} {}
 E { 6140} {e} {e} {2} {0} {} {1.000} {}
@@ -47414,11 +47440,11 @@ R { 9862} {0} {} {9862} { } {} {} {} {} {} {1.000} {}
 E { 9861} {e} {e} {2} {0} {} {1.000} {}
 E { 9854} {w} {w} {8} {0} {} {1.000} {}
 
-R { 9864} {0} {} {9864} { } {} {} {} {} {} {1.000} {}
+R { 9864} {0} {} {9864} { } {Following the comet's trail westward, you stumble upon a path leading up a snow-capped mountainside.  The mere sight it towering overhead leaves you in awe.  You wonder why you had not seen it a little earlier, but then in this chaotic realm, who knows if it is god playing tricks or it is by some other demonic hands.  Something about the large mountainous scenery makes you feel at peace here under the stars. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 5270} {e} {e} {2} {0} {} {1.000} {}
 E { 9866} {w} {w} {8} {0} {} {1.000} {}
 
-R { 9866} {0} {<118>} {9866} { } {} {} {} {} {} {1.000} {}
+R { 9866} {0} {} {9866} { } {Trudging up along the path, you reach a snow-capped plateau.  In front of you is a large white observatory with a line of people waiting to enter.  You hear them discussing things about stars, comets and other heavenly bodies.  Since you have traveled all this way, you might as well follow their lead and do a little star gazing inside.. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9864} {e} {e} {2} {0} {} {1.000} {}
 E { 9867} {enter} {enter} {0} {0} {} {1.000} {}
 
@@ -57637,17 +57663,19 @@ E {12260} {s} {s} {4} {0} {} {1.000} {}
 R {12260} {0} {} {A strange hill (n)} { } {This hill is utterly devoid of plantation.  For all you know, you might be walking atop the bald head of a towering gray giant.  The ground slopes downward to the north and continues to rise toward a range of oddly shaped mountains to the south.  A thin set of railroad tracks crosses the road moving in an east-west direction. } {Mud} {} {} {} {1.000} {}
 E {12259} {n} {n} {1} {0} {} {1.000} {}
 
-R {12262} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {12262} {0} {} {At the base of a hill (n,w)} { } {Before you lies a well worn path leading up a gently rolling hill. Drifting in on the gentle summer breeze is the sound of fiddle,  faintly playing some kind of reel or jig.  Overhead starlings  and swallows dart about on the summer breeze.  Everything here is peaceful and quiet, sighing contentedly you feel at one with  nature, heck even the grass seems greener than usual.  } {Leprechaun Village} {} {} {} {1.000} {}
 E { 5260} {w} {w} {8} {0} {} {1.000} {}
+E { 6485} {n} {n} {1} {0} {} {1.000} {}
 
-R {12263} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {12263} {0} {} {Outside the Toy Store (n,w)} { } {You are standing in front of a large brown building which bears a striking resemblance to a gingerbread house.  The windows are frosted over with fake spray snow, and on the door is a small plastic sign which reads : 'Now Open - Visitors Welcome'. } {Toy Store} {} {} {} {1.000} {}
 E { 5287} {w} {w} {8} {0} {} {1.000} {}
+E { 5897} {n} {n} {1} {0} {} {1.000} {}
 
-R {12265} {0} {} {Sandy Path (s,n)} { } {You have stumbled upon a sandy path.  Things don't seem quite as chaotic here, yet things in Chaos aren't always as they seem to be. As you look to the east, you can see a forest. The path here continues to the south. } {Mud} {} {} {} {1.000} {}
+R {12265} {0} {} {Sandy Path (s,n)} { } {You have stumbled upon a sandy path.  Things don't seem quite as chaotic here, yet things in Chaos aren't always as they seem to be. As you look to the east, you can see a forest. The path here continues to the south. } {Forest of Wolves} {} {} {} {1.000} {}
 E { 5289} {n} {n} {1} {0} {} {1.000} {}
 E {12266} {s} {s} {4} {0} {} {1.000} {}
 
-R {12266} {0} {} {Sandy Path (w,ne,n)} { } {Your travels bring you to a turn on the sandy path. The realms of Chaos are to your north, and to your northeast you can see a mighty forest. The path continues to the northeast. } {Mud} {} {} {} {1.000} {}
+R {12266} {0} {} {Sandy Path (w,ne,n)} { } {Your travels bring you to a turn on the sandy path. The realms of Chaos are to your north, and to your northeast you can see a mighty forest. The path continues to the northeast. } {Forest of Wolves} {} {} {} {1.000} {}
 E {12265} {n} {n} {1} {0} {} {1.000} {}
 E { 5603} {w} {w} {8} {0} {} {1.000} {}
 E { 5604} {ne} {ne} {3} {0} {} {1.000} {}
