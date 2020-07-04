@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 11
+F 10
 
 G 0
 
-I 167
+I 1
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -252,14 +252,14 @@ T {} { } {}
 
 
 
-R {    1} {0} {} {home} { } {Ashland Avenue ends its southward run here, in what can only be termed the Residential Complex of Foundation.  A quiet cul de sac has been carved out of the surrounding woodlands to shelter the homes of 3scapes' wealthy patrons.  Columned southern mansions stand side by side with medieval castles and classic victorian homes.  To have a home in this crime free, exclusive neighborhood is a sign of wealth and success in the realms. } {Foundation's Residential Complex} {home} {} {} {100.000} {}
+R {    1} {0} {} {The House of Fl (n,w,sci,new,cha,fan,atm,leave,login,sh,} { } {Ashland Avenue ends its southward run here, in what can only be termed the Residential Complex of Foundation.  A quiet cul de sac has been carved out of the surrounding woodlands to shelter the homes of 3scapes' wealthy patrons.  Columned southern mansions stand side by side with medieval castles and classic victorian homes.  To have a home in this crime free, exclusive neighborhood is a sign of wealth and success in the realms. } {Foundation's Residential Complex} {home} {} {} {100.000} {}
 E {   68} {fan} {fan} {0} {0} {} {1.000} {}
 E {  166} {cha} {cha} {0} {0} {} {1.000} {}
 E {    9} {sci} {sci} {0} {0} {} {1.000} {}
 E { 5852} {n} {n} {1} {0} {} {1.000} {}
 E {10893} {w} {w} {8} {0} {} {1.000} {}
-E {12424} {new} {new} {0} {0} {} {1.000} {}
 E {    2} {sh} {sh} {0} {0} {} {1.000} {}
+E {  977} {new} {new} {0} {0} {} {1.000} {}
 
 R {    2} {0} {<118>} {shop} { } {} {} {shop} {} {} {1.000} {}
 E {    3} {w} {w} {8} {0} {} {1.000} {}
@@ -5012,7 +5012,7 @@ E {  975} {w} {w} {8} {0} {} {1.000} {}
 E {  977} {s} {s} {4} {0} {} {1.000} {}
 E { 5815} {e} {e} {2} {0} {} {1.000} {}
 
-R {  977} {0} {} {newbie} { } {} {} {} {} {} {1.000} {}
+R {  977} {0} {} {newbie} { } {} {} {newbie} {} {} {1.000} {}
 E {  976} {n} {n} {1} {0} {} {1.000} {}
 E {  978} {w} {w} {8} {0} {} {1.000} {}
 E { 6080} {e} {e} {2} {0} {} {1.000} {}

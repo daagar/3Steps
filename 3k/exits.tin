@@ -36,7 +36,7 @@
     }
 
     #if {"$draw[exitpanel]" == "on"} {
-		#draw {tile} $chat[height]+$caption[height]+1 -$exitpanel[width]+1 $chat[height]+$caption[height]+$exitpanel[height] -2 $area_exits[%*];
+		#draw {tile} $exitpanel[top] -$exitpanel[width]+1 $exitpanel[bottom] -$exitpanel[width]+41 $area_exits[%*];
 	};
 
     #var mobile_areas {};
