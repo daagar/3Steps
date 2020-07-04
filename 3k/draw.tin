@@ -96,7 +96,7 @@
 	#var biome[height] -1;
 };
 
-#if {"$draw[jedimode]" == "on"} {
+#if {"$draw[jedimode]" == "on" && "$guild" == "jedi"} {
 	#NOP redraw jedimode off;
 	#read .tt/3k/jedimode.tin;
 	#var jedimode[height] 20;
