@@ -96,7 +96,7 @@
 	#var biome[height] -1;
 };
 
-#if {"$draw[jedimode]" == "on" && "$guild" == "jedi"} {
+#if {"$draw[jedimode]" == "on"} {
 	#NOP redraw jedimode off;
 	#read .tt/3k/jedimode.tin;
 	#var jedimode[height] 20;
@@ -106,9 +106,10 @@
 	#var jedimode[height] -1;
 };
 
-#if {"$draw[summoner]" == "on" && "$guild" == "mages"} {
+#if {"$draw[summoner]" == "on" && "$guild" == "mage"} {
 	#NOP redraw summoner off;
-	#var summoner[height] 14;
+	#read .tt/3k/summoner.tin;
+	#var summoner[height] 12;
 	#var summoner[width] $right_split;
 } {
 	#var summoner[width] 0;
@@ -192,7 +193,7 @@ create_panel_alignment
 	chatend;
 };
 
-#if {"$draw[exitpanel]" == "on"} {
+#if {"$draw[exitpanel]" == "on" && "$draw[canvas]" == "on"} {
 	#NOP #draw {line} $chat[height];
 };
 
@@ -214,30 +215,35 @@ create_panel_alignment
 	#showme {<088>\u2534<088>} -$hpbar[height]-$gline[height]-2 -$right_split;
 };
 
-#if {"$draw[exitpanel]" == "on"}{
+#if {"$draw[exitpanel]" == "on" && "$draw[canvas]" == "on"} {
 	#NOP exitpanel;
 	show_exits;
 };
 
-#if {"$draw[selector]" == "on"} {
+#if {"$draw[selector]" == "on" && "$draw[canvas]" == "on"} {
 	#NOP selector;
 	show_area_selector;
 }
 
-#if {"$draw[damage]" == "on"} {
+#if {"$draw[damage]" == "on" && "$draw[canvas]" == "on"} {
 	#NOP damage stats;
 	show_damage_table;
 };
 
-#if {"$draw[biome]" == "on"} {
+#if {"$draw[biome]" == "on" && "$draw[canvas]" == "on"} {
 	#NOP biome;
 	display_biome;
 };
 
-#if {"$draw[jedimode]" == "on"} {
+#if {"$draw[jedimode]" == "on" && "$draw[canvas]" == "on"} {
 	#NOP jedimode;
 	show_mode_selector;
 	show_damage_selector;
+};
+
+#if {"$draw[summoner]" == "on" && "$draw[canvas]" == "on"} {
+	#NOP summoner;
+	display_desired_summons;
 };
 
 #alias redraw {
