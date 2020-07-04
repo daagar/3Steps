@@ -316,7 +316,7 @@
 };
 
 #alias {display_desired_summons}{
-	#if {"$draw[summoner]" == "on"}{
+	#if {"$draw[summoner]" == "on" && "$draw[canvas]" == "on"}{
 		#screen clear square $summoner[top] -$summoner[width]+2 $summoner[bottom] -$summoner[width]+40;
 		#draw rounded box $summoner[top] -$summoner[width]+2 $summoner[bottom] -$summoner[width]+40;
 		#if {$my[autosetup][summons] == 1}{

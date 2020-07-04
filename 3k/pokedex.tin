@@ -13,54 +13,58 @@
 };
 
 #alias {show_current_form_table}{
-        #draw {rounded}{box} ${biome[top]} -$biome[width]+2 ${biome[top]}+6 -$biome[width]+40;
-        #showme {[Current Form Stats]} $biome[top] -$biome[width]+13;
-	#showme {Form : ${my[form]}} $biome[top]+1 -$biome[width]+5;
-        db_query_single_form ${my[form]};
-	#showme {  Major : ${form_results[1][major]}} ${biome[top]}+2 -$biome[width]+5;
-	#showme {  Minor : ${form_results[1][minor]}} ${biome[top]}+3 -$biome[width]+5;
-	#showme {     FF : ${my[ff][level]}} ${biome[top]}+4 -$biome[width]+5;
-	#showme {Avg Dam : ${form_avg[1][avg(damage)]}} ${biome[top]}+5 -$biome[width]+5;
+	#if {"$draw[biome]" == "on" && "$draw[canvas]" == "on"}{
+		#draw {rounded}{box} ${biome[top]} -$biome[width]+2 ${biome[top]}+6 -$biome[width]+40;
+		#showme {[Current Form Stats]} $biome[top] -$biome[width]+13;
+		#showme {Form : ${my[form]}} $biome[top]+1 -$biome[width]+5;
+		db_query_single_form ${my[form]};
+		#showme {  Major : ${form_results[1][major]}} ${biome[top]}+2 -$biome[width]+5;
+		#showme {  Minor : ${form_results[1][minor]}} ${biome[top]}+3 -$biome[width]+5;
+		#showme {     FF : ${my[ff][level]}} ${biome[top]}+4 -$biome[width]+5;
+		#showme {Avg Dam : ${form_avg[1][avg(damage)]}} ${biome[top]}+5 -$biome[width]+5;
+	};
 }
 
 #alias {show_biome_table}{
-        #draw {rounded}{box} ${biome[top]}+7 -${biome[width]}+2 ${biome[bottom]} -$biome[width]+40;
-        #screen clear square ${biome[top]}+8 -$biome[width]+3 ${biome[bottom]}-1 -$biome[width]+39;
-	#format {padded_form}{%+3s}{$form_number};
-        #showme {[Pokedex Results   (${padded_form}/${all_forms}): << >>]} $biome[top]+7 -$biome[width]+4;
-        #button {$biome[top]+7;-$biome[width]+38;$biome[top]+7;-$biome[width]+39}{
-        	#math {form_number}{$form_number + 1}{};
-        	db_query_biome ${form_list[${form_number}][form]};
-		show_biome_table;
-	};
-        #button {${biome[top]}+7;-${biome[width]}+35;${biome[top]}+7;-${biome[width]}+36}{
-        	#math {form_number}{$form_number - 1}{};
-        	db_query_biome ${form_list[${form_number}][form]};
-		show_biome_table;
-	};
-	#showme {Form : $biome_results[$result_number][form]} $biome[top]+9 -$biome[width]+5;
-        #button {$biome[top]+9;-$biome[width]+3;$biome[top]+9;-$biome[width]+8}{db_list_biome form};
-	#showme { Type : $biome_results[$result_number][formtype]} $biome[top]+10 -$biome[width]+5;
-        #button {$biome[top]+10;-$biome[width]+3;$biome[top]+10;-$biome[width]+8}{db_list_biome formtype};
-	#showme { Major: $biome_results[$result_number][major]} $biome[top]+11 -$biome[width]+5;
-        #button {$biome[top]+11;-$biome[width]+3;$biome[top]+11;-$biome[width]+8}{db_list_biome major};
-	#showme { Minor: $biome_results[$result_number][minor]} $biome[top]+12 -$biome[width]+5;
-        #button {$biome[top]+12;-$biome[width]+3;$biome[top]+12;-$biome[width]+8}{db_list_biome minor};
-	#format {padded_room}{%-9s}{${biome_results[$result_number][roomvnum]}};
-	#showme { Room : $padded_room  (${result_number}/${result_size})} $biome[top]+13 -$biome[width]+5;
-        #button {$biome[top]+13;-$biome[width]+3;$biome[top]+13;-$biome[width]+8}{db_list_biome roomvnum};
-        #if {"${biome_results[$result_number][form]}" != ""}{
-		#replace {biome_results[$result_number][roomshort]}{ x7Bnightx7D}{ \x7Bnight\x7D};
-		#replace {biome_results[$result_number][roomshort]}{ x7Bdayx7D}{ \x7Bday\x7D};
-		#replace {biome_results[$result_number][roomshort]}{ x7Bduskx7D}{ \x7Bdusk\x7D};
-		#replace {biome_results[$result_number][roomshort]}{ x7Bdawnx7D}{ \x7Bdawn\x7D};
-	};
-        #showme {       [ <128>GO<088> ]      [<faa>-<088>][<afa>+<088>]} $biome[top]+14 -$biome[width]+5;
-        #button {$biome[top]+14;-$biome[width]+27;$biome[top]+14;-$biome[width]+29}{bnext};
-        #button {$biome[top]+14;-$biome[width]+24;$biome[top]+14;-$biome[width]+26}{bprev};
-        #button {$biome[top]+14;-$biome[width]+9;$biome[top]+14;-$biome[width]+17}{biomego};
-	#showme {$biome_results[$result_number][roomshort]} $biome[top]+15 -$biome[width]+5;
-        #button {$biome[top]+15;-$biome[width]+3;$biome[top]+15;-$biome[width]+8}{db_list_biome roomshort};
+	#if {"$draw[biome]" == "on" && "$draw[canvas]" == "on"}{
+		#draw {rounded}{box} ${biome[top]}+7 -${biome[width]}+2 ${biome[bottom]} -$biome[width]+40;
+		#screen clear square ${biome[top]}+8 -$biome[width]+3 ${biome[bottom]}-1 -$biome[width]+39;
+		#format {padded_form}{%+3s}{$form_number};
+		#showme {[Pokedex Results   (${padded_form}/${all_forms}): << >>]} $biome[top]+7 -$biome[width]+4;
+		#button {$biome[top]+7;-$biome[width]+38;$biome[top]+7;-$biome[width]+39}{
+			#math {form_number}{$form_number + 1}{};
+			db_query_biome ${form_list[${form_number}][form]};
+			show_biome_table;
+		};
+		#button {${biome[top]}+7;-${biome[width]}+35;${biome[top]}+7;-${biome[width]}+36}{
+			#math {form_number}{$form_number - 1}{};
+			db_query_biome ${form_list[${form_number}][form]};
+			show_biome_table;
+		};
+		#showme {Form : $biome_results[$result_number][form]} $biome[top]+9 -$biome[width]+5;
+		#button {$biome[top]+9;-$biome[width]+3;$biome[top]+9;-$biome[width]+8}{db_list_biome form};
+		#showme { Type : $biome_results[$result_number][formtype]} $biome[top]+10 -$biome[width]+5;
+		#button {$biome[top]+10;-$biome[width]+3;$biome[top]+10;-$biome[width]+8}{db_list_biome formtype};
+		#showme { Major: $biome_results[$result_number][major]} $biome[top]+11 -$biome[width]+5;
+		#button {$biome[top]+11;-$biome[width]+3;$biome[top]+11;-$biome[width]+8}{db_list_biome major};
+		#showme { Minor: $biome_results[$result_number][minor]} $biome[top]+12 -$biome[width]+5;
+		#button {$biome[top]+12;-$biome[width]+3;$biome[top]+12;-$biome[width]+8}{db_list_biome minor};
+		#format {padded_room}{%-9s}{${biome_results[$result_number][roomvnum]}};
+		#showme { Room : $padded_room  (${result_number}/${result_size})} $biome[top]+13 -$biome[width]+5;
+		#button {$biome[top]+13;-$biome[width]+3;$biome[top]+13;-$biome[width]+8}{db_list_biome roomvnum};
+		#if {"${biome_results[$result_number][form]}" != ""}{
+			#replace {biome_results[$result_number][roomshort]}{ x7Bnightx7D}{ \x7Bnight\x7D};
+			#replace {biome_results[$result_number][roomshort]}{ x7Bdayx7D}{ \x7Bday\x7D};
+			#replace {biome_results[$result_number][roomshort]}{ x7Bduskx7D}{ \x7Bdusk\x7D};
+			#replace {biome_results[$result_number][roomshort]}{ x7Bdawnx7D}{ \x7Bdawn\x7D};
+		};
+		#showme {       [ <128>GO<088> ]      [<faa>-<088>][<afa>+<088>]} $biome[top]+14 -$biome[width]+5;
+		#button {$biome[top]+14;-$biome[width]+27;$biome[top]+14;-$biome[width]+29}{bnext};
+		#button {$biome[top]+14;-$biome[width]+24;$biome[top]+14;-$biome[width]+26}{bprev};
+		#button {$biome[top]+14;-$biome[width]+9;$biome[top]+14;-$biome[width]+17}{biomego};
+		#showme {$biome_results[$result_number][roomshort]} $biome[top]+15 -$biome[width]+5;
+		#button {$biome[top]+15;-$biome[width]+3;$biome[top]+15;-$biome[width]+8}{db_list_biome roomshort};
+        };
 };
 
 #alias {display_biome}{

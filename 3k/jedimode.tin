@@ -375,7 +375,7 @@
 };
 
 #alias {show_mode_selector}{
-	#if {"$draw[jedimode]" == "on"}{
+	#if {"$draw[jedimode]" == "on" && "$draw[canvas]" == "on"}{
 		#draw {line} $jedimode[top]+13 -$jedimode[width]+3 $jedimode[top]+13 -$jedimode[width]+39;
 		#showme {Jedi Mode Selector} $jedimode[top]+13 -$jedimode[width]+13;
 		#if {"${my[desired][mode]}" == "hand to hand" && "${my[desired][weapon]}" == "none"}{
