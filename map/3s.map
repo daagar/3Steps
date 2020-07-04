@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 10
+F 11
 
 G 0
 
-I 10955
+I 167
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} { }
+L {UNICODE GRAPHICS} {NO DIAGONAL} {}
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -17817,7 +17817,6 @@ R { 3908} {0} {} {whirlpool} { } {} {} {} {} {} {1.000} {}
 E { 3909} {enter whirlpool} {enter whirlpool} {0} {0} {} {1.000} {}
 E { 3088} {w} {w} {8} {0} {} {1.000} {}
 E { 5426} {e} {e} {2} {0} {} {1.000} {}
-E { 5426} {s} {s} {4} {0} {} {1.000} {}
 
 R { 3909} {0} {} {3909} { } {} {} {} {} {} {1.000} {}
 E { 3908} {u} {u} {16} {0} {} {1.000} {}
@@ -17918,12 +17917,7 @@ E { 3936} {hell} {hell} {0} {0} {} {1.000} {}
 
 R { 3932} {0} {} {d2norm} { } {You are at the rogue encampment. This quiet outpost is on the edge of a vast wilderness, covered in a blanket of eerie fog. Various buildings surround you, with a few individuals roaming the street. A large wagon sits in the center of town, and an interesting looking hut lies a short walk away. } {Diablo2 Normal 20+ Nightmare 40+ Hell 60+.} {d2norm} {} {} {1.000} {}
 E { 3931} {menu} {menu} {0} {0} {} {1.000} {}
-E { 4204} {portal} {portal} {0} {0} {} {1.000} {}
 E { 5567} {say leave} {say leave} {0} {0} {} {1.000} {}
-E { 5622} {travel stony field} {travel stony field} {0} {0} {} {1.000} {}
-E { 5623} {travel inner cloister} {travel inner cloister} {0} {0} {} {1.000} {}
-E { 5624} {travel black marsh} {travel black marsh} {0} {0} {} {1.000} {}
-E { 5625} {travel dark wood} {travel dark wood} {0} {0} {} {1.000} {}
 E { 4582} {hut} {hut} {0} {0} {} {1.000} {}
 E { 4587} {training} {training} {0} {0} {} {1.000} {}
 
@@ -18072,6 +18066,7 @@ R { 3968} {0} {} {3968} { } {Well, for some unexplained reason you are now stand
 E {  167} {n} {n} {1} {0} {} {1.000} {}
 E { 3969} {s} {s} {4} {0} {} {1.000} {}
 E { 5260} {e} {e} {2} {0} {} {1.000} {}
+E { 4204} {turn flag} {turn flag} {0} {0} {} {1.000} {}
 
 R { 3969} {0} {} {3969} { } {The grass gives way to innumerable little bits of glass.  They are arranged in intricate but non-linear rows.  It is night time here but the stars are out and a blazing comet casts sufficient light to see. } {Mud} {} {} {} {1.000} {}
 E { 3968} {n} {n} {1} {0} {} {1.000} {}
@@ -19091,240 +19086,84 @@ R { 4203} {0} {} {4203} { } {} {} {} {} {} {1.000} {}
 E { 4202} {e} {e} {2} {0} {} {1.000} {}
 E { 4152} {w} {w} {8} {0} {} {1.000} {}
 
-R { 4204} {0} {} {4204} { } {Beneath the sheltering canopy of trees the heat segues into shade. Not wanting to be forgotten, the wind occasionally blows the thick stench of hot air into the trees. } {CowVille} {d2normcows} {} {} {1.000} {}
-E { 3932} {portal} {portal} {0} {0} {} {1.000} {}
+R { 4204} {0} {} {Country (leave,s)} { } {The sun is beating down on the beautiful country setting. The trees are lush with deep, rich green leaves and all the flowers are in full bloom. The smell of fresh cut hay lingers in the air. Birds gather bits of straw and twigs to aid in their nest building. The sounds of farm animals echo through the warm summer breeze. In the distance you can see a pleasant country farmhouse that has a long, gravel lane-way. } {Rampage of the Piggies} {} {} {} {1.000} {}
+E { 3968} {leave} {leave} {0} {0} {} {1.000} {}
 E { 4205} {s} {s} {4} {0} {} {1.000} {}
 
-R { 4205} {0} {<118>} {4205} { } {} {} {} {} {} {1.000} {}
+R { 4205} {0} {} {Lane-way (s,n)} { } {This long gravel lane-way looks well used and welcoming. Just ahead you can make out the farmhouse and its white picket fence. The ground beneath your feet is uneven and filled with potholes. Straw pieces litter the ground almost everywhere you look. Bits of grass can be found growing up through the rocks and stones. Just beyond the house you notice their yard is well cared for and healthy green in color.  } {Rampage of the Piggies} {} {} {} {1.000} {}
 E { 4204} {n} {n} {1} {0} {} {1.000} {}
 E { 4206} {s} {s} {4} {0} {} {1.000} {}
-E { 4214} {e} {e} {2} {0} {} {1.000} {}
-E { 4215} {w} {w} {8} {0} {} {1.000} {}
 
-R { 4206} {0} {} {4206} { } {} {} {} {} {} {1.000} {}
+R { 4206} {0} {} {Farm House (s,w,e,n)} { } {The white picket fence seems to surround the whole house with a gate opening up to the farmhouse just ahead. The house appears to be very quiet and empty. The gate is open for all to venture forward. There is a walkway made from patio stones here that go all the way to the steps of the house. The soft humming sound of a young girl can be heard ever so faintly.  } {Rampage of the Piggies} {} {} {} {1.000} {}
 E { 4205} {n} {n} {1} {0} {} {1.000} {}
-E { 4207} {e} {e} {2} {0} {} {1.000} {}
-E { 4218} {w} {w} {8} {0} {} {1.000} {}
-
-R { 4207} {0} {} {4207} { } {} {} {} {} {} {1.000} {}
-E { 4206} {w} {w} {8} {0} {} {1.000} {}
-E { 4208} {e} {e} {2} {0} {} {1.000} {}
-E { 4214} {n} {n} {1} {0} {} {1.000} {}
-
-R { 4208} {0} {} {4208} { } {} {} {} {} {} {1.000} {}
-E { 4207} {w} {w} {8} {0} {} {1.000} {}
-E { 4209} {e} {e} {2} {0} {} {1.000} {}
-E { 4213} {n} {n} {1} {0} {} {1.000} {}
-
-R { 4209} {0} {} {4209} { } {} {} {} {} {} {1.000} {}
-E { 4208} {w} {w} {8} {0} {} {1.000} {}
-E { 4210} {e} {e} {2} {0} {} {1.000} {}
-E { 4212} {n} {n} {1} {0} {} {1.000} {}
-
-R { 4210} {0} {} {4210} { } {} {} {} {} {} {1.000} {}
-E { 4209} {w} {w} {8} {0} {} {1.000} {}
-E { 4211} {n} {n} {1} {0} {} {1.000} {}
-
-R { 4211} {0} {} {4211} { } {} {} {} {} {} {1.000} {}
-E { 4210} {s} {s} {4} {0} {} {1.000} {}
-E { 4212} {w} {w} {8} {0} {} {1.000} {}
-E { 4219} {n} {n} {1} {0} {} {1.000} {}
-
-R { 4212} {0} {} {4212} { } {} {} {} {} {} {1.000} {}
-E { 4211} {e} {e} {2} {0} {} {1.000} {}
-E { 4213} {w} {w} {8} {0} {} {1.000} {}
-E { 4209} {s} {s} {4} {0} {} {1.000} {}
-E { 4251} {n} {n} {1} {0} {} {1.000} {}
-
-R { 4213} {0} {} {4213} { } {} {} {} {} {} {1.000} {}
-E { 4212} {e} {e} {2} {0} {} {1.000} {}
-E { 4214} {w} {w} {8} {0} {} {1.000} {}
-E { 4208} {s} {s} {4} {0} {} {1.000} {}
-E { 4250} {n} {n} {1} {0} {} {1.000} {}
-
-R { 4214} {0} {} {4214} { } {} {} {} {} {} {1.000} {}
-E { 4213} {e} {e} {2} {0} {} {1.000} {}
-E { 4205} {w} {w} {8} {0} {} {1.000} {}
 E { 4207} {s} {s} {4} {0} {} {1.000} {}
-E { 4249} {n} {n} {1} {0} {} {1.000} {}
+E { 4208} {w} {w} {8} {0} {} {1.000} {}
+E { 4209} {e} {e} {2} {0} {} {1.000} {}
 
-R { 4215} {0} {} {4215} { } {} {} {} {} {} {1.000} {}
-E { 4205} {e} {e} {2} {0} {} {1.000} {}
+R { 4207} {0} {} {Barn (climb,n)} { } {This barn is well taken care of with very high ceilings. Bits of straw drop occasionally from the cracks in the loft floor above. The smell of manure is very strong in here. A large bin full of feed is against the far wall. Glancing around you see a hayloft not far away, with the only access being up that wooden rickety ladder against the wall.  } {Rampage of the Piggies} {} {} {} {1.000} {}
+E { 4206} {n} {n} {1} {0} {} {1.000} {}
+E { 4210} {climb} {climb} {0} {0} {} {1.000} {}
+
+R { 4208} {0} {} {Garden (w,e)} { } {The garden you are standing at the edge of grows Hickson county's largest assortment of blue ribbon vegetables. Carrots, tomatoes, onions, potatoes, pumpkins, squash, turnip, and corn appear to be just some of the vegetables you can see growing nicely here. Just over to your left you can see a shed that appears to be broken down. Fertilizer bags litter the ground here as well as a few garden tools. Wooden stakes with seed packets are lined up in rows marking the vegetable types. Dark rich soil is packed down quite nicely here and makes for a perfect growing environment.  } {Rampage of the Piggies} {} {} {} {1.000} {}
+E { 4206} {e} {e} {2} {0} {} {1.000} {}
+E { 4212} {w} {w} {8} {0} {} {1.000} {}
+
+R { 4209} {0} {} {Yard (w)} { } {You have made your way into the yard of the Owles family farm. Here you can see the yard is scattered with items that must belong to a pleasant young lady. A toy horse and a stuffed piglet seem to be her best friends at what appears to be an afternoon tea party. The grass is well trimmed and a rich green tone shows years of good landscaping. } {Rampage of the Piggies} {} {} {} {1.000} {}
+E { 4206} {w} {w} {8} {0} {} {1.000} {}
+
+R { 4210} {0} {} {Hayloft (d,jump)} { } {Bales of hay are stacked everywhere up here. Each bale seems to be tied nice and tight with binder twine and stacked perfectly. There are no signs of a light switch or any electrical fixture that could cast some light up here. Sunlight streams through the cracks in the barn boards casting a little light. Upon further inspection you notice that many birds have made nests in the rafters above. The only way out of here other than back down the way you came is through the loft window. Just in the near distance you can see a beautiful pasture.  } {Rampage of the Piggies} {} {} {} {1.000} {}
+E { 4207} {d} {d} {32} {0} {} {1.000} {}
+E { 4211} {jump} {jump} {0} {0} {} {1.000} {}
+
+R { 4211} {0} {} {Pasture (e)} { } {The sun shines brightly in the cloudless sky. The birds and bees fly lazily through the air with such grace and ease. Stretching as far as the eye can see is beautiful grazing pastureland. Very pleasant to walk through if you are careful. Tiny pieces of straw are scattered through the grass and flowers. Trees can be seen far off in the distance. Just ahead you can see where the pasture ends and the wooded area of this land begins.  } {Rampage of the Piggies} {} {} {} {1.000} {}
+E { 4213} {e} {e} {2} {0} {} {1.000} {}
+
+R { 4212} {0} {} {Shed (e)} { } {Standing before you appears to be a partially broken down shed. The door hangs lopsided but appears to be unlocked. The windowpane is cracked and covered with some sort of brown paper from the inside. You can just peek in the window through a rip in the paper. It seems this shed is filled quite to its capacity, with no room for even the smallest garden tool. You can see that it is full of accessories to help aid in the continued production of prize-winning veggies. The ground here is soft but lush with green foliage.  } {Rampage of the Piggies} {} {} {} {1.000} {}
+E { 4208} {e} {e} {2} {0} {} {1.000} {}
+
+R { 4213} {0} {} {Woods (w)} { } {Large trees of various kinds with lush green foliage are growing plentifully here. The trees provide a gentle breeze and protection from the rays of the afternoon sun. Many different varieties of leaves and nuts can be seen on the ground. Your way is blocked here, if you had intended your nature walk to continue. There must be another way into this forest.  } {Rampage of the Piggies} {} {} {} {1.000} {}
+E { 4211} {w} {w} {8} {0} {} {1.000} {}
+E { 4214} {s} {s} {4} {0} {} {1.000} {}
+
+R { 4214} {0} {} {Trail (sw,n)} { } {The smell lingering in the air here is not quite the smell of animal but of sawdust and oil. Now how could that be? The large leaves on the trees prevent the sun from brightening up the path. Twigs, leaves, and bits of composting material enrich the soil beneath your feet. The path continues just ahead through the darkness and cover of the thick bush.  } {Rampage of the Piggies} {} {} {} {1.000} {}
+E { 4213} {n} {n} {1} {0} {} {1.000} {}
+E { 4215} {sw} {sw} {12} {0} {} {1.000} {}
+
+R { 4215} {0} {} {Sawmill (w,ne)} { } {Emerging from the trees you have stumbled upon an old abandoned sawmill. Sawdust is on the ground everywhere you step. Bits of wood chips and tree bark cover the ground. The footprints are not man-made, but of an animal, suggesting the sawmill is not quite as abandoned as it would appear. Grunting sounds of pigs can be heard in the distance. The sawmill looks quite old and broken down. The roof has red shingles on it, with a small chimney that appears to have smoke coming out of it. From here you can see the docking area of the sawmill.  } {Rampage of the Piggies} {} {} {} {1.000} {}
+E { 4214} {ne} {ne} {3} {0} {} {1.000} {}
 E { 4216} {w} {w} {8} {0} {} {1.000} {}
-E { 4218} {s} {s} {4} {0} {} {1.000} {}
-E { 4248} {n} {n} {1} {0} {} {1.000} {}
 
-R { 4216} {0} {} {4216} { } {} {} {} {} {} {1.000} {}
+R { 4216} {0} {} {Docking bay (e,s)} { } {This docking bay is where the big trucks back up to pick up the finished wood. A skid of wood stands here waiting to be removed. The ramp is crumbling apart from lack of repair and damage taken from the elements. Tiny bits of cement crunch under your feet. Just ahead you see a doorway with the door itself completely missing.  } {Rampage of the Piggies} {} {} {} {1.000} {}
 E { 4215} {e} {e} {2} {0} {} {1.000} {}
 E { 4217} {s} {s} {4} {0} {} {1.000} {}
-E { 4247} {n} {n} {1} {0} {} {1.000} {}
 
-R { 4217} {0} {} {4217} { } {} {} {} {} {} {1.000} {}
+R { 4217} {0} {} {Office (e,n)} { } {You have stumbled upon the office of the head ringmaster of this operation. A large pine desk is littered with papers that appear to be plans of some sort. There appears to be another exit just behind that box.  } {Rampage of the Piggies} {} {} {} {1.000} {}
 E { 4216} {n} {n} {1} {0} {} {1.000} {}
 E { 4218} {e} {e} {2} {0} {} {1.000} {}
 
-R { 4218} {0} {} {4218} { } {} {} {} {} {} {1.000} {}
+R { 4218} {0} {} {Mud pit (s,w)} { } {You seem to be in a mud pit. Rather soft and wet this mud provides a soft landing nonetheless. This must be where the pigs come to cool off. The center of the pit is very wet and squishy but the outer edge appears to be a bit drier and more stable.  } {Rampage of the Piggies} {} {} {} {1.000} {}
 E { 4217} {w} {w} {8} {0} {} {1.000} {}
-E { 4215} {n} {n} {1} {0} {} {1.000} {}
-E { 4206} {e} {e} {2} {0} {} {1.000} {}
-
-R { 4219} {0} {} {4219} { } {} {} {} {} {} {1.000} {}
-E { 4211} {s} {s} {4} {0} {} {1.000} {}
-E { 4220} {n} {n} {1} {0} {} {1.000} {}
-E { 4251} {w} {w} {8} {0} {} {1.000} {}
-
-R { 4220} {0} {} {4220} { } {} {} {} {} {} {1.000} {}
 E { 4219} {s} {s} {4} {0} {} {1.000} {}
-E { 4221} {n} {n} {1} {0} {} {1.000} {}
-E { 4245} {w} {w} {8} {0} {} {1.000} {}
 
-R { 4221} {0} {} {4221} { } {} {} {} {} {} {1.000} {}
-E { 4220} {s} {s} {4} {0} {} {1.000} {}
-E { 4222} {n} {n} {1} {0} {} {1.000} {}
-E { 4240} {w} {w} {8} {0} {} {1.000} {}
-
-R { 4222} {0} {} {4222} { } {} {} {} {} {} {1.000} {}
-E { 4221} {s} {s} {4} {0} {} {1.000} {}
-E { 4223} {n} {n} {1} {0} {} {1.000} {}
-E { 4233} {w} {w} {8} {0} {} {1.000} {}
-
-R { 4223} {0} {} {4223} { } {} {} {} {} {} {1.000} {}
-E { 4222} {s} {s} {4} {0} {} {1.000} {}
-E { 4224} {w} {w} {8} {0} {} {1.000} {}
-
-R { 4224} {0} {} {4224} { } {} {} {} {} {} {1.000} {}
-E { 4223} {e} {e} {2} {0} {} {1.000} {}
-E { 4225} {w} {w} {8} {0} {} {1.000} {}
-E { 4233} {s} {s} {4} {0} {} {1.000} {}
-
-R { 4225} {0} {} {4225} { } {} {} {} {} {} {1.000} {}
-E { 4224} {e} {e} {2} {0} {} {1.000} {}
-E { 4226} {w} {w} {8} {0} {} {1.000} {}
-E { 4232} {s} {s} {4} {0} {} {1.000} {}
-
-R { 4226} {0} {} {4226} { } {} {} {} {} {} {1.000} {}
-E { 4225} {e} {e} {2} {0} {} {1.000} {}
-E { 4227} {w} {w} {8} {0} {} {1.000} {}
-E { 4231} {s} {s} {4} {0} {} {1.000} {}
-
-R { 4227} {0} {} {4227} { } {} {} {} {} {} {1.000} {}
-E { 4226} {e} {e} {2} {0} {} {1.000} {}
-E { 4228} {w} {w} {8} {0} {} {1.000} {}
-E { 4230} {s} {s} {4} {0} {} {1.000} {}
-
-R { 4228} {0} {} {4228} { } {} {} {} {} {} {1.000} {}
-E { 4227} {e} {e} {2} {0} {} {1.000} {}
-E { 4229} {s} {s} {4} {0} {} {1.000} {}
-
-R { 4229} {0} {} {4229} { } {} {} {} {} {} {1.000} {}
-E { 4228} {n} {n} {1} {0} {} {1.000} {}
-E { 4230} {e} {e} {2} {0} {} {1.000} {}
-E { 4234} {w} {w} {8} {0} {} {1.000} {}
-E { 4236} {s} {s} {4} {0} {} {1.000} {}
-
-R { 4230} {0} {} {4230} { } {} {} {} {} {} {1.000} {}
-E { 4229} {w} {w} {8} {0} {} {1.000} {}
-E { 4227} {n} {n} {1} {0} {} {1.000} {}
-E { 4231} {e} {e} {2} {0} {} {1.000} {}
-E { 4237} {s} {s} {4} {0} {} {1.000} {}
-
-R { 4231} {0} {} {4231} { } {} {} {} {} {} {1.000} {}
-E { 4226} {n} {n} {1} {0} {} {1.000} {}
-E { 4232} {e} {e} {2} {0} {} {1.000} {}
-E { 4230} {w} {w} {8} {0} {} {1.000} {}
-E { 4238} {s} {s} {4} {0} {} {1.000} {}
-
-R { 4232} {0} {} {4232} { } {} {} {} {} {} {1.000} {}
-E { 4231} {w} {w} {8} {0} {} {1.000} {}
-E { 4225} {n} {n} {1} {0} {} {1.000} {}
-E { 4233} {e} {e} {2} {0} {} {1.000} {}
-E { 4239} {s} {s} {4} {0} {} {1.000} {}
-
-R { 4233} {0} {} {4233} { } {} {} {} {} {} {1.000} {}
-E { 4224} {n} {n} {1} {0} {} {1.000} {}
-E { 4222} {e} {e} {2} {0} {} {1.000} {}
-E { 4232} {w} {w} {8} {0} {} {1.000} {}
-E { 4240} {s} {s} {4} {0} {} {1.000} {}
-
-R { 4234} {0} {} {4234} { } {} {} {} {} {} {1.000} {}
-E { 4229} {e} {e} {2} {0} {} {1.000} {}
-E { 4235} {s} {s} {4} {0} {} {1.000} {}
-
-R { 4235} {0} {} {4235} { } {} {} {} {} {} {1.000} {}
-E { 4234} {n} {n} {1} {0} {} {1.000} {}
-E { 4236} {e} {e} {2} {0} {} {1.000} {}
-E { 4246} {s} {s} {4} {0} {} {1.000} {}
-
-R { 4236} {0} {} {4236} { } {} {} {} {} {} {1.000} {}
-E { 4235} {w} {w} {8} {0} {} {1.000} {}
-E { 4229} {n} {n} {1} {0} {} {1.000} {}
-E { 4237} {e} {e} {2} {0} {} {1.000} {}
-E { 4241} {s} {s} {4} {0} {} {1.000} {}
-
-R { 4237} {0} {} {4237} { } {} {} {} {} {} {1.000} {}
-E { 4230} {n} {n} {1} {0} {} {1.000} {}
-E { 4236} {w} {w} {8} {0} {} {1.000} {}
-E { 4238} {e} {e} {2} {0} {} {1.000} {}
-
-R { 4238} {0} {} {4238} { } {} {} {} {} {} {1.000} {}
-E { 4237} {w} {w} {8} {0} {} {1.000} {}
-E { 4231} {n} {n} {1} {0} {} {1.000} {}
-
-R { 4239} {0} {} {4239} { } {} {} {} {} {} {1.000} {}
-E { 4232} {n} {n} {1} {0} {} {1.000} {}
-
-R { 4240} {0} {} {4240} { } {} {} {} {} {} {1.000} {}
-E { 4233} {n} {n} {1} {0} {} {1.000} {}
-E { 4221} {e} {e} {2} {0} {} {1.000} {}
-
-R { 4241} {0} {} {4241} { } {} {} {} {} {} {1.000} {}
-E { 4236} {n} {n} {1} {0} {} {1.000} {}
-E { 4242} {e} {e} {2} {0} {} {1.000} {}
-E { 4246} {w} {w} {8} {0} {} {1.000} {}
-
-R { 4242} {0} {} {4242} { } {} {} {} {} {} {1.000} {}
-E { 4241} {w} {w} {8} {0} {} {1.000} {}
-E { 4243} {e} {e} {2} {0} {} {1.000} {}
-
-R { 4243} {0} {} {4243} { } {} {} {} {} {} {1.000} {}
-E { 4242} {w} {w} {8} {0} {} {1.000} {}
-E { 4244} {e} {e} {2} {0} {} {1.000} {}
-
-R { 4244} {0} {} {4244} { } {} {} {} {} {} {1.000} {}
-E { 4243} {w} {w} {8} {0} {} {1.000} {}
-E { 4245} {e} {e} {2} {0} {} {1.000} {}
-
-R { 4245} {0} {} {4245} { } {} {} {} {} {} {1.000} {}
-E { 4244} {w} {w} {8} {0} {} {1.000} {}
+R { 4219} {0} {} {Log pile (e,n)} { } {After crawling out of the mud and finally being back on dry ground you notice a huge pile of logs before you. These must have been long forgotten when the mill was abandoned. Perhaps a more thorough investigation of this pile of lumber is in order.  } {Rampage of the Piggies} {} {} {} {1.000} {}
+E { 4218} {n} {n} {1} {0} {} {1.000} {}
 E { 4220} {e} {e} {2} {0} {} {1.000} {}
 
-R { 4246} {0} {} {4246} { } {} {} {} {} {} {1.000} {}
-E { 4241} {e} {e} {2} {0} {} {1.000} {}
-E { 4235} {n} {n} {1} {0} {} {1.000} {}
-E { 4247} {s} {s} {4} {0} {} {1.000} {}
+R { 4220} {0} {} {Abandoned truck (w,ne)} { } {Sitting here with two wheels buried deep in the mud is an old abandoned truck. The outside is covered in rust and the tires appear to be very flat. Garbage litters the box of the truck making it quite the eyesore. The driver's side door is open showing the inside is also pretty torn up. The glove box is open showing the contents have been removed long ago. Dust covers the dash, and the windshield is layered in cobwebs. The seat is in the same disrepair as the entire truck.  } {Rampage of the Piggies} {} {} {} {1.000} {}
+E { 4219} {w} {w} {8} {0} {} {1.000} {}
+E { 4221} {ne} {ne} {3} {0} {} {1.000} {}
 
-R { 4247} {0} {} {4247} { } {} {} {} {} {} {1.000} {}
-E { 4246} {n} {n} {1} {0} {} {1.000} {}
-E { 4248} {e} {e} {2} {0} {} {1.000} {}
-E { 4216} {s} {s} {4} {0} {} {1.000} {}
+R { 4221} {0} {} {Tool shed (se,sw)} { } {Hardly looking like a tool shed any longer, this broken down structure must have served its purpose well when it was new. The window is covered half way over with a board nailed on diagonally, with the door missing completely. Bits of sawdust litter the ground making it a lot easier to walk on and less muddy.  } {Rampage of the Piggies} {} {} {} {1.000} {}
+E { 4220} {sw} {sw} {12} {0} {} {1.000} {}
+E { 4222} {se} {se} {6} {0} {} {1.000} {}
 
-R { 4248} {0} {} {4248} { } {} {} {} {} {} {1.000} {}
-E { 4247} {w} {w} {8} {0} {} {1.000} {}
-E { 4215} {s} {s} {4} {0} {} {1.000} {}
+R { 4222} {0} {} {Garbage dump (nw,e)} { } {A huge garbage dump stands like a mountain before you. It seems the pigs have their own built in food supply right on the site. Food and garbage of every imaginable kind are piled here. Cans, jars, bags, lids, and plastic eating utensils are just a few of the items seen here.  } {Rampage of the Piggies} {} {} {} {1.000} {}
+E { 4221} {nw} {nw} {9} {0} {} {1.000} {}
+E { 4223} {e} {e} {2} {0} {} {1.000} {}
 
-R { 4249} {0} {} {4249} { } {} {} {} {} {} {1.000} {}
-E { 4214} {s} {s} {4} {0} {} {1.000} {}
-E { 4250} {e} {e} {2} {0} {} {1.000} {}
-
-R { 4250} {0} {} {4250} { } {} {} {} {} {} {1.000} {}
-E { 4249} {w} {w} {8} {0} {} {1.000} {}
-E { 4213} {s} {s} {4} {0} {} {1.000} {}
-E { 4251} {e} {e} {2} {0} {} {1.000} {}
-
-R { 4251} {0} {} {4251} { } {} {} {} {} {} {1.000} {}
-E { 4250} {w} {w} {8} {0} {} {1.000} {}
-E { 4212} {s} {s} {4} {0} {} {1.000} {}
-E { 4219} {e} {e} {2} {0} {} {1.000} {}
+R { 4223} {0} {} {Compost pile (w)} { } {With the sun to assist the breaking down process, this huge decomposing pile seems to be rotting away nicely. It would seem that what did not decompose yet will soon be consumed by the new tenants to this area. Banana peels, eggshells, sandwich halves, cobs of corn, and old rotting pizza make up a tiny portion of this heap. Some of this food cannot even be identified anymore.  } {Rampage of the Piggies} {} {} {} {1.000} {}
+E { 4222} {w} {w} {8} {0} {} {1.000} {}
+E { 3968} {jump} {jump} {0} {0} {} {1.000} {}
 
 R { 4252} {0} {} {4252} { } {} {} {} {} {} {1.000} {}
 E {   23} {u} {u} {16} {0} {} {1.000} {}
@@ -26488,15 +26327,6 @@ E { 5818} {n} {n} {1} {0} {} {1.000} {}
 
 R { 5818} {0} {} {-= Director's Office =- (s)} { } {-= Director's Office =- A large desk in poor condition takes up most of the space.  Papers and folders are strewn about in disarray. A black vinyl couch sits facing the desk.  Pictures of the director and various celebrities hang on the wall.  A novelty hand grenade sits on top of the desk.  A megaphone and whistle sit on the floor next to the trashcan. } {Barney's Studio} {} {} {} {1.000} {}
 E { 5817} {s} {s} {4} {0} {} {1.000} {}
-
-R { 5819} {0} {} {Chinese Checkers Board - Evil Green's Fort (ne)} { } {This busy corner of Evil Green's fort is a blur of motion, activity and repulsive colors. You feel sick to your stomach for a moment as a waist-high pus-green chinese checker rolls up beside you, taunting you with the assault on your senses. It is daring you to make a move on it, here in Evil Green's headquarters. } {Chinese Checkers} {} {} {} {1.000} {}
-E {11016} {ne} {ne} {3} {0} {} {1.000} {}
-
-R { 5820} {0} {} {Chinese Checkers Board - Evil Blue's Fort (nw)} { } {These chinese checkers are nearly as tall as you are! Here in Evil Blue's headquarters, you walk very cautiously, as you feel like they would roll over you without even noticing the bump. The floor has been painted with a bright electric blue shade, making you feel alive. } {Chinese Checkers} {} {} {} {1.000} {}
-E {10972} {nw} {nw} {9} {0} {} {1.000} {}
-
-R { 5821} {0} {} {Chinese Checkers Board - Good Green's Fort (sw)} { } {This friendly feeling section of the board is clearly the headquarters of Good Green. The waist-high checkers pay no heed to intruders as they go about their business, planning for battle. The floor has been painted a grass green color, giving you a pleasant feeling. } {Chinese Checkers} {} {} {} {1.000} {}
-E {10969} {sw} {sw} {12} {0} {} {1.000} {}
 
 R { 5826} {0} {} {5826} { } {} {} {} {} {} {1.000} {}
 E { 5814} {sw} {sw} {12} {0} {} {1.000} {}
@@ -51819,164 +51649,148 @@ E {10942} {s} {s} {4} {0} {} {1.000} {}
 R {10942} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10941} {n} {n} {1} {0} {} {1.000} {}
 
-R {10943} {0} {} {Chinese Checkers Board - Evil Red's Fort (nw,ne,ladder)} { } {A sense of foreboding and devious evil lurks in the corners of this fort. Red chinese checkers, reaching to your knees, roll about in a frenzy, waiting for some attack. They seem oblivious to your presence, perhaps because you aren't a chinese checker. You appear to be in the headquarters of this particular fort. The top of the ladder is at your feet. } {Chinese Checkers} {checkers} {} {} {1.000} {}
+R {10943} {0} {<118>} {checkers} { } {} {} {} {} {} {1.000} {}
 E { 2743} {ladder} {ladder} {0} {0} {} {1.000} {}
 E {10944} {nw} {nw} {9} {0} {} {1.000} {}
 E {10955} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10944} {0} {} {Chinese Checkers Board - Evil Red's Fort (se,nw,ne)} { } {The western wall of the fort facing onto the board is quieter than the east, as though Evil Red was expecting more of an attack from that direction. The surface of the board is the same deep red color, but not as sinister as in the other corners of the fort. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10944} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10943} {se} {se} {6} {0} {} {1.000} {}
 E {10945} {nw} {nw} {9} {0} {} {1.000} {}
-E {10954} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10945} {0} {} {Chinese Checkers Board - Middle Board (se,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10945} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10944} {se} {se} {6} {0} {} {1.000} {}
 E {10946} {nw} {nw} {9} {0} {} {1.000} {}
-E {10953} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10946} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10946} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10945} {se} {se} {6} {0} {} {1.000} {}
 E {10947} {nw} {nw} {9} {0} {} {1.000} {}
 E {10973} {sw} {sw} {12} {0} {} {1.000} {}
 E {10952} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10947} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10947} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10946} {se} {se} {6} {0} {} {1.000} {}
 E {10948} {nw} {nw} {9} {0} {} {1.000} {}
-E {11016} {sw} {sw} {12} {0} {} {1.000} {}
-E {10951} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10948} {0} {} {Chinese Checkers Board - Good Blue's Fort (se,nw,ne)} { } {A high wall encircles Good Blue's fort, but poses no hindrance to your gaining access, and the checkers don't even seem to mind. The huge blue chinese checkers sit near the fort walls, waiting for whatever battle is about to go on. Unlike the other forts, no sense of urgency can be felt. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10948} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10947} {se} {se} {6} {0} {} {1.000} {}
 E {10949} {nw} {nw} {9} {0} {} {1.000} {}
 E {10950} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10949} {0} {} {Chinese Checkers Board - Good Blue's Fort (se)} { } {Despite the enormity of these chinese checkers, they make you feel safe and secure. They mill about their headquarters lazily, sure that they will overcome any and all who would dare attack them in their magnificent fort. One of them rolls across the vibrant blue surface toward you, as if to offer you greeting. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10949} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10948} {se} {se} {6} {0} {} {1.000} {}
 
-R {10950} {0} {} {Chinese Checkers Board - Good Blue's Fort (se,sw)} { } {Behind the high walls of Good Blue's fort, you feel very safe. Despite the sheer size of the checkers here, they seem like gentle giants. They roll by very slowly and sluggishly, from one end of the wall facing the playing board to the other. You find it hard to imagine the small red checkers attempting to gain access. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10950} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10948} {sw} {sw} {12} {0} {} {1.000} {}
 E {10951} {se} {se} {6} {0} {} {1.000} {}
 
-R {10951} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10951} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10950} {nw} {nw} {9} {0} {} {1.000} {}
 E {10952} {se} {se} {6} {0} {} {1.000} {}
 E {10960} {ne} {ne} {3} {0} {} {1.000} {}
-E {10947} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {10952} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10952} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10951} {nw} {nw} {9} {0} {} {1.000} {}
 E {10953} {se} {se} {6} {0} {} {1.000} {}
 E {10959} {ne} {ne} {3} {0} {} {1.000} {}
 E {10946} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {10953} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10953} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10952} {nw} {nw} {9} {0} {} {1.000} {}
 E {10954} {se} {se} {6} {0} {} {1.000} {}
-E {10945} {sw} {sw} {12} {0} {} {1.000} {}
-E {10958} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10954} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10954} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10953} {nw} {nw} {9} {0} {} {1.000} {}
 E {10955} {se} {se} {6} {0} {} {1.000} {}
-E {10944} {sw} {sw} {12} {0} {} {1.000} {}
-E {10957} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10955} {0} {} {Chinese Checkers Board - Evil Red's Fort (sw,nw,ne)} { } {The board's surface is covered in a deep, rich reddish color that reminds you more of blood than of paint. There is a great deal of activity in this fort, as the small red checkers roll about in a frenzy, reminding you of sharks after the scent of blood. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10955} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10954} {nw} {nw} {9} {0} {} {1.000} {}
 E {10943} {sw} {sw} {12} {0} {} {1.000} {}
 E {10956} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10956} {0} {} {Chinese Checkers Board - Middle Board (sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10956} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10955} {sw} {sw} {12} {0} {} {1.000} {}
 E {10957} {nw} {nw} {9} {0} {} {1.000} {}
 E {10967} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10957} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10957} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10956} {se} {se} {6} {0} {} {1.000} {}
 E {10958} {nw} {nw} {9} {0} {} {1.000} {}
-E {10954} {sw} {sw} {12} {0} {} {1.000} {}
-E {10968} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10958} {0} {} {Chinese Checkers Board - Middle of the Board (se,sw,nw,n} { } {This is the very center of the chinese checkers board. You look out in all directions, wondering about the strange behaviour of the playing pieces. This board is shaped like a six-pointed star, with six forts and six different types of checkers, each waiting for some sort of battle to begin. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10958} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10957} {se} {se} {6} {0} {} {1.000} {}
 E {10959} {nw} {nw} {9} {0} {} {1.000} {}
-E {10953} {sw} {sw} {12} {0} {} {1.000} {}
-E {11015} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10959} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10959} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10958} {se} {se} {6} {0} {} {1.000} {}
 E {10960} {nw} {nw} {9} {0} {} {1.000} {}
 E {11014} {ne} {ne} {3} {0} {} {1.000} {}
 E {10952} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {10960} {0} {} {Chinese Checkers Board - Middle Board (se,ne,sw)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10960} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10959} {se} {se} {6} {0} {} {1.000} {}
 E {10951} {sw} {sw} {12} {0} {} {1.000} {}
 E {10961} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10961} {0} {} {Chinese Checkers Board - Good Red's Fort (se,ne,sw)} { } {You are standing at the western wall of Good Red's fort. It would appear that the knee-high red chinese checkers are waiting nervously, rolling back and forth with agitation, for whatever is about to come. You wonder if these small chinese checkers can outlast the others. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10961} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10960} {sw} {sw} {12} {0} {} {1.000} {}
 E {10962} {ne} {ne} {3} {0} {} {1.000} {}
 E {11014} {se} {se} {6} {0} {} {1.000} {}
 
-R {10962} {0} {} {Chinese Checkers Board - Good Red's Fort (se,sw)} { } {You are standing in the headquarters of one of the two red teams on this board. Small red checkers roll about, somehow conversing with each other, probably sharing battle plans. High walls have been built up around the fort, painted a warm reddish hue, much softer than Evil Red, their enemy. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10962} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10961} {sw} {sw} {12} {0} {} {1.000} {}
 E {10963} {se} {se} {6} {0} {} {1.000} {}
 
-R {10963} {0} {} {Chinese Checkers Board - Good Red's Fort (se,nw,sw)} { } {At the eastern corner of Good Red's fort, an increase in concern regarding the outcome of this game can be sensed. Some of the checkers wait against the wall, some roll back and forth from the wall to the back of the fort, where the headquarters are located. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10963} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10962} {nw} {nw} {9} {0} {} {1.000} {}
 E {10964} {se} {se} {6} {0} {} {1.000} {}
 E {11014} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {10964} {0} {} {Chinese Checkers Board - Middle Board (se,nw,sw)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10964} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10963} {nw} {nw} {9} {0} {} {1.000} {}
 E {10965} {se} {se} {6} {0} {} {1.000} {}
 E {11015} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {10965} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10965} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10964} {nw} {nw} {9} {0} {} {1.000} {}
 E {10966} {ne} {ne} {3} {0} {} {1.000} {}
 E {10968} {sw} {sw} {12} {0} {} {1.000} {}
 E {10970} {se} {se} {6} {0} {} {1.000} {}
 
-R {10966} {0} {} {Chinese Checkers Board - Good Green's Fort (se,sw)} { } {The green checkers rest against the northern wall of their small fort, anticipating the game. You wonder if it is simply the colors that the board has been painted here or if the feeling of serenity is genuine. Real or not, these checkers do not seem worried about the outcome. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10966} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10965} {sw} {sw} {12} {0} {} {1.000} {}
 E {10969} {se} {se} {6} {0} {} {1.000} {}
 
-R {10967} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10967} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10956} {sw} {sw} {12} {0} {} {1.000} {}
 E {10968} {nw} {nw} {9} {0} {} {1.000} {}
 E {10970} {ne} {ne} {3} {0} {} {1.000} {}
 E {10971} {se} {se} {6} {0} {} {1.000} {}
 
-R {10968} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10968} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10967} {se} {se} {6} {0} {} {1.000} {}
 E {10965} {ne} {ne} {3} {0} {} {1.000} {}
 E {11015} {nw} {nw} {9} {0} {} {1.000} {}
-E {10957} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {10969} {0} {} {Chinese Checkers Board - Good Green's Fort (sw,nw,ne)} { } {The home base of Good Green is a very welcoming sight, with its grassy green paint and waist-high green checkers rolling about. The fort seems like a very peaceful area, more like a child's play area than a potential battleground. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10969} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10966} {nw} {nw} {9} {0} {} {1.000} {}
 E {10970} {sw} {sw} {12} {0} {} {1.000} {}
-E { 5821} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10970} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10970} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10969} {ne} {ne} {3} {0} {} {1.000} {}
 E {10965} {nw} {nw} {9} {0} {} {1.000} {}
 E {10967} {sw} {sw} {12} {0} {} {1.000} {}
 E {10972} {se} {se} {6} {0} {} {1.000} {}
 
-R {10971} {0} {} {Chinese Checkers Board - Evil Blue's Fort (ne,nw)} { } {Evil Blue's fort is painted electric blue, like lightning. The colors are bright and engaging, but lends itself to deep feelings of fear and terror. The checkers sit very close to the wall, waiting, almost daring any other checker to approach their fort. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10971} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10967} {nw} {nw} {9} {0} {} {1.000} {}
 E {10972} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {10972} {0} {} {Chinese Checkers Board - Evil Blue's Fort (se,nw,sw)} { } {Unlike the other forts, there is little activity in Evil Blue's fort. Due to their sheer size, they undoubtedly fear no other chinese checker. The bright blue color of the board under your feet makes you feel a little bit dizzy... perhaps this is one of their tactics! } {Chinese Checkers} {} {} {} {1.000} {}
+R {10972} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10971} {sw} {sw} {12} {0} {} {1.000} {}
 E {10970} {nw} {nw} {9} {0} {} {1.000} {}
-E { 5820} {se} {se} {6} {0} {} {1.000} {}
 
-R {10973} {0} {} {Chinese Checkers Board - Evil Green's Fort (ne,nw)} { } {The green checker guards standing at the southern gate roll back and forth, into the walls. You think they are trying to psyche themselves up for the upcoming battle, but perhaps they have simply spent too much time behind the walls. } {Chinese Checkers} {} {} {} {1.000} {}
+R {10973} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10946} {ne} {ne} {3} {0} {} {1.000} {}
 E {11016} {nw} {nw} {9} {0} {} {1.000} {}
 
@@ -52149,22 +51963,19 @@ R {11013} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10993} {nw} {nw} {9} {0} {} {1.000} {}
 E {11012} {s} {s} {4} {0} {} {1.000} {}
 
-R {11014} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {11014} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10963} {ne} {ne} {3} {0} {} {1.000} {}
 E {10961} {nw} {nw} {9} {0} {} {1.000} {}
 E {11015} {se} {se} {6} {0} {} {1.000} {}
 E {10959} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {11015} {0} {} {Chinese Checkers Board - Middle Board (se,sw,nw,ne)} { } {You are standing on a smooth wooden surface, unpainted and dimpled at every pace, yet very smooth. Looking around you in all directions, you can see only more dimples, tapering off into painted triangles and then nothingness. } {Chinese Checkers} {} {} {} {1.000} {}
+R {11015} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11014} {nw} {nw} {9} {0} {} {1.000} {}
 E {10968} {se} {se} {6} {0} {} {1.000} {}
 E {10964} {ne} {ne} {3} {0} {} {1.000} {}
-E {10958} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {11016} {0} {} {Chinese Checkers Board - Evil Green's Fort (se,ne,sw)} { } {The bright, harsh colors of this fort make you want to turn around the moment you step over the walls. You try to avert your eyes, but everything, from the board's surface to the walls to the checkers rolling by the fortifications wound your vision. Looking up, you almost trip over a checker. } {Chinese Checkers} {} {} {} {1.000} {}
+R {11016} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10973} {se} {se} {6} {0} {} {1.000} {}
-E {10947} {ne} {ne} {3} {0} {} {1.000} {}
-E { 5819} {sw} {sw} {12} {0} {} {1.000} {}
 
 R {11017} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 2998} {e} {e} {2} {0} {} {1.000} {}
