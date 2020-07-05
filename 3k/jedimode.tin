@@ -173,9 +173,9 @@
 		};
 		#showme {Inflict Pain} $jedimode[top]+2 -$jedimode[width]+25;
 		#if {"${my[damage][type]}" == "pain"}{
-			#showme {<faa> Pain<088>} $jedimode[top]+3 -$jedimode[width]+25;
+			#showme {<faa> Pain : Energy<088>} $jedimode[top]+3 -$jedimode[width]+25;
 		}{
-			#showme { Pain} $jedimode[top]+3 -$jedimode[width]+25;
+			#showme { Pain : Energy} $jedimode[top]+3 -$jedimode[width]+25;
 		};
 		#button {$jedimode[top]+3;-$jedimode[width]+25;$jedimode[top]+3;-$jedimode[width]+30}{
 			#send {alias dospell ifitem quietly/mysp>80/focus inflict pain for pain};
@@ -197,9 +197,9 @@
 			show_damage_selector;
 		};
 		#if {"${my[damage][type]}" == "spasm"}{
-			#showme {<faa> Spasm<088>} $jedimode[top]+4 -$jedimode[width]+25;
+			#showme {<faa> Spasm: Elec<088>} $jedimode[top]+4 -$jedimode[width]+25;
 		}{
-			#showme { Spasm} $jedimode[top]+4 -$jedimode[width]+25;
+			#showme { Spasm: Elec} $jedimode[top]+4 -$jedimode[width]+25;
 		};
 		#button {$jedimode[top]+4;-$jedimode[width]+25;$jedimode[top]+4;-$jedimode[width]+30}{
 			#send {alias dospell ifitem quietly/mysp>80/focus inflict pain for spasm};
@@ -221,9 +221,9 @@
 			show_damage_selector;
 		};
 		#if {"${my[damage][type]}" == "blackout"}{
-			#showme {<faa> Blackout<088>} $jedimode[top]+5 -$jedimode[width]+25;
+			#showme {<faa> Black: Mind<088>} $jedimode[top]+5 -$jedimode[width]+25;
 		}{
-			#showme { Blackout} $jedimode[top]+5 -$jedimode[width]+25;
+			#showme { Black: Mind} $jedimode[top]+5 -$jedimode[width]+25;
 		};
 		#button {$jedimode[top]+5;-$jedimode[width]+25;$jedimode[top]+5;-$jedimode[width]+30}{
 			#send {alias dospell ifitem quietly/mysp>80/focus inflict pain for blackout};
@@ -375,7 +375,7 @@
 };
 
 #alias {show_mode_selector}{
-	#if {"$draw[jedimode]" == "on"}{
+	#if {"$draw[jedimode]" == "on" && "$draw[canvas]" == "on"}{
 		#draw {line} $jedimode[top]+13 -$jedimode[width]+3 $jedimode[top]+13 -$jedimode[width]+39;
 		#showme {Jedi Mode Selector} $jedimode[top]+13 -$jedimode[width]+13;
 		#if {"${my[desired][mode]}" == "hand to hand" && "${my[desired][weapon]}" == "none"}{

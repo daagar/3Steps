@@ -98,7 +98,7 @@
 #math {damage[top]}{$selector[bottom] + 1};
 #math {damage[bottom]}{$damage[top]+$damage[height]};
 #alias {show_damage_table}{
-	#if {"$draw[damage]" == "on"}{
+	#if {"$draw[damage]" == "on" && "$draw[canvas]" == "on"}{
 		#draw rounded box ${damage[top]} -$damage[width]+2 ${damage[bottom]} -$damage[width]+41;
 		#showme {Last 5 Kills} ${damage[top]} -$damage[width]+15;
 		#showme {  Foe   | Rnds | Tot. Dmg | Avg} ${damage[top]}+1 -38;

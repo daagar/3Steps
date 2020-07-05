@@ -59,7 +59,7 @@
 #if {"$draw[exitpanel]" == "on"} {
 	#read .tt/3k/exits.tin;
 	#var exitpanel[width] $right_split;
-	#var exitpanel[height] 10;
+	#var exitpanel[height] 5;
 } {
 	#var exitpanel[width] 0;
 	#var exitpanel[height] -1;
@@ -106,7 +106,7 @@
 	#var jedimode[height] -1;
 };
 
-#if {"$draw[summoner]" == "on" && "$guild" == "mage"} {
+#if {"$draw[summoner]" == "on" && "$guild" == "mages"} {
 	#NOP redraw summoner off;
 	#read .tt/3k/summoner.tin;
 	#var summoner[height] 12;

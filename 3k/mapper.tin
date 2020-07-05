@@ -309,6 +309,9 @@
 	}{
 		rating;
 	};
+	#if {"$draw[selector]" == "on" && "$draw[canvas]" == "on}{
+		show_area_selector;
+	};
 }
 
 #alias {panic}{
@@ -324,6 +327,9 @@
 		make_roomlist {${area}};
 	}{
 		rating;
+	};
+	#if {"$draw[selector]" == "on" && "$draw[canvas]" == "on}{
+		show_area_selector;
 	};
 }
 

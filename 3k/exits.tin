@@ -35,7 +35,7 @@
         
     }
 
-    #if {"$draw[exitpanel]" == "on"} {
+    #if {"$draw[exitpanel]" == "on" && "$draw[canvas]" == "on"} {
 		#draw {tile} $exitpanel[top] -$exitpanel[width]+1 $exitpanel[bottom] -$exitpanel[width]+41 $area_exits[%*];
 	};
 

@@ -316,7 +316,7 @@
 };
 
 #alias {display_desired_summons}{
-	#if {"$draw[summoner]" == "on"}{
+	#if {"$draw[summoner]" == "on" && "$draw[canvas]" == "on"}{
 		#screen clear square $summoner[top] -$summoner[width]+2 $summoner[bottom] -$summoner[width]+40;
 		#draw rounded box $summoner[top] -$summoner[width]+2 $summoner[bottom] -$summoner[width]+40;
 		#if {$my[autosetup][summons] == 1}{
@@ -497,7 +497,7 @@
 	#var {my[summon][available][8][2]}{lightning};
 #nop Conjure Greater Elemental;
 	#var {my[summon][available][9][1]}{elemental};
-#nop Inveiglement
+#nop Inveiglement;
 	#var {my[summon][available][10][1]}{inveiglement};
 #nop Sorcerous weapon;
 	#var {my[summon][available][11][1]}{sorcerous};
