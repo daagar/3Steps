@@ -116,6 +116,16 @@
 	#var summoner[height] -1;
 };
 
+#if {"$draw[possess]" == "on" && "$guild" == "angel"}{
+	#NOP redraw possess off;
+	#read .tt/3k/angelform.tin;
+	#var possess[height] 8;
+	#var possess[width] $right_split;
+} {
+	#var possess[height] -1;
+	#var possess[width] 0;
+};
+
 #if {"$draw[gline]" == "on"} {
 	#var gline[height] 3;
 } {
@@ -141,6 +151,8 @@
 	#math {jedimode[bottom]} 	{${jedimode[top]} + ${jedimode[height]}};
 	#math {summoner[top]}		{${jedimode[bottom]} + 1};
 	#math {summoner[bottom]} 	{${summoner[top]} + ${summoner[height]}};
+	#math {possess[top]}		{${summoner[bottom]} + 1};
+	#math {possess[bottom]}		{${possess[top]} + ${possess[height]}};
 }
 
 create_panel_alignment
@@ -246,6 +258,11 @@ create_panel_alignment
 	display_desired_summons;
 };
 
+#if {"$draw[possess]" == "on" && "$draw[canvas]" == "on"} {
+	#NOP possess;
+	show_current_form_table;
+};
+
 #alias redraw {
 	#var redraw[args][1] valid;
 	#var redraw[args][2] valid;
@@ -263,6 +280,7 @@ create_panel_alignment
 			#case {"biome"}		{#var redraw[option] %1};
 			#case {"jedimode"}	{#var redraw[option] %1};
 			#case {"summoner"}	{#var redraw[option] %1};
+			#case {"possess"}	{#var redraw[option] %1};
 			#case {"damage"}	{#var redraw[option] %1};
 			#default		{#var redraw[args][1] invalid;#showme REDRAW:  Invalid redraw option}
 		};

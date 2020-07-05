@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 11
+F 10
 
 G 0
 
-I 1
+I 4957
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} { }
+L {UNICODE GRAPHICS} {NO DIAGONAL} {}
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -4989,6 +4989,7 @@ E { 3931} {menu} {menu} {0} {0} {} {1.000} {}
 E { 4292} {n} {n} {1} {0} {} {1.000} {}
 E { 4590} {s} {s} {4} {0} {} {1.000} {}
 E { 4845} {w} {w} {8} {0} {} {1.000} {}
+E {13111} {e} {e} {2} {0} {} {1.000} {}
 
 R {  970} {0} {} {Rogue Encampment (leave)} { } {You are in a large open area with archery targets scattered about. The Rogues train with their leader Kashya. Arrows whizz through the air, most hitting their target with deadly accuracy. Younger rogues have been relegated to arrow pickup duty, and they scurry all about the fields. } {Diablo2 Normal 20+ Nightmare 40+ Hell 60+.} {} {} {} {1.000} {}
 
@@ -22452,10 +22453,10 @@ E { 4956} {e} {e} {2} {0} {} {1.000} {}
 R { 4956} {0} {} {4956} { } {} {} {} {} {} {1.000} {}
 E { 4955} {w} {w} {8} {0} {} {1.000} {}
 
-R { 4957} {0} {} {hockey puck} { } {} {} {} {} {} {1.000} {}
+R { 4957} {0} {} {hockey puck} { } {You are on a road leading north-south.  You're traveling through some really messed up mountains.  It smells like charred flesh... or maybe it's Snuggle Fabric Softener, it's hard to tell. } {Fidohell} {} {} {} {1.000} {}
 E { 3077} {s} {s} {4} {0} {} {1.000} {}
 E {11631} {wrist puck} {wrist puck} {0} {0} {} {1.000} {}
-E {12049} {n} {n} {1} {0} {} {1.000} {}
+E {13127} {n} {n} {1} {0} {} {1.000} {}
 
 R { 4958} {0} {} {mayne} { } {} {} {} {} {} {1.000} {}
 E {11718} {n} {n} {1} {0} {} {1.000} {}
@@ -48295,7 +48296,7 @@ E {10010} {d} {d} {32} {0} {} {1.000} {}
 R {10009} {0} {} {Satchel Storage (w)} { } {This building is filled with locked boxes, each showing the name of a resident of Foundation.  From time to time, people enter the building and deposit their satchel with the clerk, or retrieve it from him before heading out.  This must be where people's satchels are stored when they are linkdead or logged out.  Fascinating. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10006} {w} {w} {8} {0} {} {1.000} {}
 
-R {10010} {0} {} {the stone halls (u,n,w)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {} {} {} {1.000} {}
+R {10010} {0} {} {the stone halls (u,n,w)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {gpiders2} {} {} {1.000} {}
 E {10008} {u} {u} {16} {0} {} {1.000} {}
 E {10015} {n} {n} {1} {0} {} {1.000} {}
 E {10017} {w} {w} {8} {0} {} {1.000} {}
@@ -55289,7 +55290,7 @@ R {11630} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11629} {ne} {ne} {3} {0} {} {1.000} {}
 E {11623} {s} {s} {4} {0} {} {1.000} {}
 
-R {11631} {0} {} {hockey hall of fame} { } {} {} {} {} {} {1.000} {}
+R {11631} {0} {<118>} {hockey hall of fame} { } {} {} {} {} {} {1.000} {}
 E {11632} {ne} {ne} {3} {0} {} {1.000} {}
 
 R {11632} {0} {} {} { } {} {} {} {} {} {1.000} {}
@@ -57061,11 +57062,12 @@ E {12048} {s} {s} {4} {0} {} {1.000} {}
 R {12048} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {12047} {n} {n} {1} {0} {} {1.000} {}
 
-R {12049} {0} {<128>} {spark of light} { } {} {} {} {} {} {1.000} {}
-E { 4957} {s} {s} {4} {0} {} {1.000} {}
+R {12049} {0} {} {spark of light} { } {All around you fiery geysers explode from the land, showering you in harmless ashes.  Though, you can imagine it wouldn't be quite so harmless if you were standing on top of one of them when it decided to erupt.  You'd best watch where you step.  A small path branches off here, and in defiance of common sense, someone has set up a notice board here as well. } {Mud} {} {} {} {1.000} {}
+E {13127} {s} {s} {4} {0} {} {1.000} {}
 E {12050} {touch spark} {touch spark} {0} {0} {} {1.000} {}
+E {13136} {se} {se} {6} {0} {} {1.000} {}
 
-R {12050} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {12050} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {12051} {d} {d} {32} {0} {} {1.000} {}
 
 R {12051} {0} {} {} { } {} {} {} {} {} {1.000} {}
@@ -58673,7 +58675,7 @@ E {  623} {e} {e} {2} {0} {} {1.000} {}
 R {12424} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {    1} {home} {home} {0} {0} {} {1.000} {}
 
-R {12425} {0} {} {the Weaver's Halls (u,e)} { } {The labyrinth of hallways leads you on and on with no clear direction to the exit.. if any exists. Massive holes in the stone walls create an odd glow on the opposite walls as some sections have more holes than others. You get the feeling that you'll run into several orb-weavers before the tunnels see an end. } {Arachnecropolis} {} {} {} {1.000} {}
+R {12425} {0} {} {the Weaver's Halls (u,e)} { } {The labyrinth of hallways leads you on and on with no clear direction to the exit.. if any exists. Massive holes in the stone walls create an odd glow on the opposite walls as some sections have more holes than others. You get the feeling that you'll run into several orb-weavers before the tunnels see an end. } {Arachnecropolis} {gspiders3} {} {} {1.000} {}
 E {12422} {u} {u} {16} {0} {} {1.000} {}
 E {12434} {e} {e} {2} {0} {} {1.000} {}
 
@@ -60928,7 +60930,7 @@ E {12936} {d} {d} {32} {0} {} {1.000} {}
 R {12935} {0} {} {the Weaver's Halls (w)} { } {Big ominous holes in the stone walls create a somewhat terrifying trek through the Weaver's halls. It's unclear if you're getting close to the exit or if some giant bugs are going to pop out and have a meal of you. At least the green glow from the halls allows you to see where you are going. } {Arachnecropolis} {} {} {} {1.000} {}
 E {12824} {w} {w} {8} {0} {} {1.000} {}
 
-R {12936} {0} {} {the Ancient Arachnecropolis (ne,nw,u,w,e)} { } {The outer hall of this ancient Arachnecropolis is a display of utter architectural mastery. The stones are piled several stories high in perfect form and the floor is no different. Paths lead along the outer hall as well as inward toward the center of the necropolis. } {Arachnecropolis} {} {} {} {1.000} {}
+R {12936} {0} {} {the Ancient Arachnecropolis (ne,nw,u,w,e)} { } {The outer hall of this ancient Arachnecropolis is a display of utter architectural mastery. The stones are piled several stories high in perfect form and the floor is no different. Paths lead along the outer hall as well as inward toward the center of the necropolis. } {Arachnecropolis} {gspiders4} {} {} {1.000} {}
 E {12934} {u} {u} {16} {0} {} {1.000} {}
 E {12937} {ne} {ne} {3} {0} {} {1.000} {}
 E {12938} {nw} {nw} {9} {0} {} {1.000} {}
@@ -61717,6 +61719,9 @@ E {13110} {n} {n} {1} {0} {} {1.000} {}
 R {13110} {0} {} {cavern (s,e,downwest)} { } {You are moving through a winding and dark tunnel.  In the dim light you sense a golden hue upon the rather dull grey stone walls of the cavern here.  You can hear a scraping sound further into the tunnel. } {Ant Hole} {} {} {} {1.000} {}
 E {13109} {s} {s} {4} {0} {} {1.000} {}
 
+R {13111} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {  969} {w} {w} {8} {0} {} {1.000} {}
+
 R {13112} {0} {} {shadowed tunnel (nw,s)} { } {You travel through a dark and eerie tunnel.  Strange shadows flutter along the stone walls of the cave, creating a feeling that you are not alone.  The ground is moist and very soft to the touch. } {Ant Hole} {} {} {} {1.000} {}
 E {13044} {nw} {nw} {9} {0} {} {1.000} {}
 E {13139} {s} {s} {4} {0} {} {1.000} {}
@@ -61774,6 +61779,10 @@ R {13126} {0} {} {crevice (n,e)} { } {You are in a dark and treacherous cavern. 
 E {13125} {n} {n} {1} {0} {} {1.000} {}
 E {13128} {e} {e} {2} {0} {} {1.000} {}
 
+R {13127} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {12049} {n} {n} {1} {0} {} {1.000} {}
+E { 4957} {s} {s} {4} {0} {} {1.000} {}
+
 R {13128} {0} {} {damp cavern (s,w)} { } {You travel through a dark and eerie tunnel.  In the dim light you sense a golden hue upon the rather dull grey stone walls of the cavern here.  A small drip of water falls to the ground nearby. } {Ant Hole} {} {} {} {1.000} {}
 E {13126} {w} {w} {8} {0} {} {1.000} {}
 E {13129} {s} {s} {4} {0} {} {1.000} {}
@@ -61804,6 +61813,10 @@ E {13135} {w} {w} {8} {0} {} {1.000} {}
 
 R {13135} {0} {} {rock tunnel (e)} { } {You travel through a dark and eerie tunnel.  Strange shadows flutter along the stone walls of the cave, creating a feeling that you are not alone.  You can hear a scraping sound further into the tunnel. } {Ant Hole} {} {} {} {1.000} {}
 E {13134} {e} {e} {2} {0} {} {1.000} {}
+
+R {13136} {0} {} {An unstable area (nw,se)} { } {You have entered a very unstable area.  Bursts of flame shoot from craters, large and small, all over the place.  It seems like you are treading on what was once lava.  You must be in the vicinity of a volcano.  You had better hope it's asleep. } {Fidohell} {} {} {} {1.000} {}
+E {12049} {nw} {nw} {9} {0} {} {1.000} {}
+E {13248} {se} {se} {6} {0} {} {1.000} {}
 
 R {13137} {0} {} {dark crevice (ne,w)} { } {You are moving through a winding and dark tunnel.  In the dim light you sense a golden hue upon the rather dull grey stone walls of the cavern here.  A small drip of water falls to the ground nearby. } {Ant Hole} {} {} {} {1.000} {}
 E {13059} {ne} {ne} {3} {0} {} {1.000} {}
@@ -62250,6 +62263,11 @@ E {13245} {w} {w} {8} {0} {} {1.000} {}
 R {13247} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 9877} {s} {s} {4} {0} {} {1.000} {}
 
+R {13248} {0} {} {An unstable area (sw,nw,e)} { } {Jets of flame continue to rocket from the ground, exploding into the sky in a shower of harmless sparks.  You wonder who on earth would want to live in this place.  Then as you remember that this is chaos, your fear increases tenfold. } {Fidohell} {} {} {} {1.000} {}
+E {13136} {nw} {nw} {9} {0} {} {1.000} {}
+E {13270} {sw} {sw} {12} {0} {} {1.000} {}
+E {13405} {e} {e} {2} {0} {} {1.000} {}
+
 R {13249} {0} {} {~Q~ Blackfathom ~Q~ (counterclockwise,clockwise)} { } {Even with the length of time you've explored these underground passages, your eyes have not adjusted to the utter darkness that surrounds you. The blackness down here is all-consuming. Chunks of rock litter the uneven ground, made apparent by your frequent stumbles as you navigate this cavern. Somewhere nearby, an awful shriek pierces the air, leaving you with goosebumps. } {Blackfathom} {} {} {} {1.000} {}
 E {11350} {counterclockwise} {counterclockwise} {0} {0} {} {1.000} {}
 E {13250} {clockwise} {clockwise} {0} {0} {} {1.000} {}
@@ -62329,6 +62347,11 @@ E {10262} {s} {s} {4} {0} {} {1.000} {}
 
 R {13269} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {10263} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {13270} {0} {} {An unstable area (se,ne,w)} { } {The path branches off in three directions here.  To the southwest is a large rock formation jutting out of the ground, and to the east is a bubbling pool of hot lava.  Not very pleasant surroundings at all. } {Fidohell} {} {} {} {1.000} {}
+E {13248} {ne} {ne} {3} {0} {} {1.000} {}
+E {13406} {se} {se} {6} {0} {} {1.000} {}
+E {13407} {w} {w} {8} {0} {} {1.000} {}
 
 R {13271} {0} {} {Reading section (se,n,w)} { } {Reading section The bright light in this room shines down from sinuous coils that hover magically in the air.  A few low tables stand scattered around the area, surrounded by stacks of cushions.  Shadows gather heavily just outside the range of the lights, cloaking much of the shelves that stretch away to the distant walls.   } {Tower of the Clenched Light} {} {} {} {1.000} {}
 E {12697} {se} {se} {6} {0} {} {1.000} {}
@@ -62900,6 +62923,23 @@ R {13404} {0} {} {Bedroom (n,closet)} { } {You have entered someone's bedroom, t
 E {  161} {n} {n} {1} {0} {} {1.000} {}
 E {13409} {touch lamp} {touch lamp} {0} {0} {} {1.000} {}
 
+R {13405} {0} {} {An unstable area (ne,w)} { } {Jets of flame continue to rocket from the ground, exploding into the sky in a shower of harmless sparks.  You wonder what kind of creatures can survive in a place like this. } {Fidohell} {} {} {} {1.000} {}
+E {13248} {w} {w} {8} {0} {} {1.000} {}
+E {13408} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {13406} {0} {} {An unstable area (e,nw,ne)} { } {The large rock formation is now to the west of you.  Another wonder of nature, a large lava pit is to the northeast.  The path here is as warm as ever, and you wonder if this place has any real point. } {Fidohell} {} {} {} {1.000} {}
+E {13270} {nw} {nw} {9} {0} {} {1.000} {}
+E {13465} {e} {e} {2} {0} {} {1.000} {}
+E {13466} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {13407} {0} {} {An unstable area (s,e)} { } {The path branches off in two directions here.  To the south is a large rock formation jutting out of the ground, and far to the east is a bubbling pool of hot lava.  This place makes you want to scream in fright. } {Fidohell} {} {} {} {1.000} {}
+E {13270} {e} {e} {2} {0} {} {1.000} {}
+E {13464} {s} {s} {4} {0} {} {1.000} {}
+
+R {13408} {0} {} {An unstable area (se,sw)} { } {Despite the searing heat, you can't help but surpress a chill as you hear groups of piercing howls in the distance. What manner of beasts could they belong to? } {Fidohell} {} {} {} {1.000} {}
+E {13405} {sw} {sw} {12} {0} {} {1.000} {}
+E {13411} {se} {se} {6} {0} {} {1.000} {}
+
 R {13409} {0} {} {The Hall of Glass (n,out)} { } {You are standing in a long hallway.  What is most remarkable about this hallway is that walls, floor, ceiling, everything is glass.  Looking through the glass you see infinite space.  There are no clouds, no features of any kind.  Your eyes even hurt as they rapidly change focus trying to pinpoint anything. } {Mage Tower} {hall of glass} {} {} {1.000} {}
 E {13404} {out} {out} {0} {0} {} {1.000} {}
 E {13410} {n} {n} {1} {0} {} {1.000} {}
@@ -62907,6 +62947,11 @@ E {13410} {n} {n} {1} {0} {} {1.000} {}
 R {13410} {0} {} {The Hall of Glass (n,s)} { } {You are standing in a long hallway.  What is most remarkable about this hallway is that walls, floor, ceiling, everything is glass.  Looking through the glass you see infinite space.  There are no clouds, no features of any kind.  Your eyes even hurt as they rapidly change focus trying to pinpoint anything. } {Mage Tower} {} {} {} {1.000} {}
 E {13409} {s} {s} {4} {0} {} {1.000} {}
 E {13415} {n} {n} {1} {0} {} {1.000} {}
+
+R {13411} {0} {} {A fiery path (s,nw,w)} { } {The ground trembles beneath your feet as you tread a fiery path.  More random fires and flames break out around you in this area. } {Fidohell} {} {} {} {1.000} {}
+E {13408} {nw} {nw} {9} {0} {} {1.000} {}
+E {13462} {s} {s} {4} {0} {} {1.000} {}
+E {13463} {w} {w} {8} {0} {} {1.000} {}
 
 R {13412} {0} {} {Open Area (s)} { } {This is a large, open room with very ornate windows and lots of them. They allow a significant amount of light in and the room looks very large.  There is a couch and chair here, as well as a foot table and end table. } {Mage Tower} {} {} {} {1.000} {}
 E {  160} {s} {s} {4} {0} {} {1.000} {}
@@ -63099,3 +63144,70 @@ E {  673} {n} {n} {1} {0} {} {1.000} {}
 R {13461} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {13459} {e} {e} {2} {0} {} {1.000} {}
 E {11193} {s} {s} {4} {0} {} {1.000} {}
+
+R {13462} {0} {} {A fiery path (s,n)} { } {The path remains much the same here.  The harsh environment still appears unforgiving though.  There appears to be some sort of activity occurring to the south. } {Fidohell} {} {} {} {1.000} {}
+E {13411} {n} {n} {1} {0} {} {1.000} {}
+E {13473} {s} {s} {4} {0} {} {1.000} {}
+
+R {13463} {0} {} {An unstable area (sw,e)} { } {The ground is more stable here, and you take a moment to get used to solid footing again.  The path to the southwest seems hotter, yet more stable than the northeast. } {Fidohell} {} {} {} {1.000} {}
+E {13411} {e} {e} {2} {0} {} {1.000} {}
+E {13466} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {13464} {0} {} {An unstable area (s,n)} { } {The path grows narrow as it winds along the large rock formation to the east here.  To your west is a sheer cliff face rising up high into the sky above. } {Fidohell} {} {} {} {1.000} {}
+E {13407} {n} {n} {1} {0} {} {1.000} {}
+E {13467} {s} {s} {4} {0} {} {1.000} {}
+
+R {13465} {0} {} {An unstable area (sw,w,e)} { } {The path continues on to the west and southwest.  To your northeast is a large pool full of bubbling lava.  A smaller less used path branches off here. } {Fidohell} {} {} {} {1.000} {}
+E {13406} {w} {w} {8} {0} {} {1.000} {}
+E {13470} {sw} {sw} {12} {0} {} {1.000} {}
+E {13472} {e} {e} {2} {0} {} {1.000} {}
+
+R {13466} {0} {} {An unstable area (sw,ne)} { } {A burst of flame rises from the center of the path, causing you to trace your steps around it carefully. To your west is a bubbling pool of hot lava. } {Fidohell} {} {} {} {1.000} {}
+E {13406} {sw} {sw} {12} {0} {} {1.000} {}
+E {13463} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {13467} {0} {} {A fiery path (e,sw,n)} { } {The path branches off in three directions here.  A large rock formation rises up to the northeast, jutting high into the sky.  Other than the occasional howl, things are fairly quiet in your immediate surroundings. } {Fidohell} {} {} {} {1.000} {}
+E {13464} {n} {n} {1} {0} {} {1.000} {}
+E {13468} {e} {e} {2} {0} {} {1.000} {}
+E {13469} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {13468} {0} {} {A fiery path (e,w)} { } {The ground shudders beneath your feet as you tread the fiery path through this god-forsaken place.  The thought to turn back crosses your mind, given weight by the flames erupting from the rock formation north of you. } {Fidohell} {} {} {} {1.000} {}
+E {13467} {w} {w} {8} {0} {} {1.000} {}
+E {13470} {e} {e} {2} {0} {} {1.000} {}
+
+R {13469} {0} {} {A fiery path (ne)} { } {You are at a dead end in the paths.  The walls close in here, and then recede forming an open aired chamber in  the precipice.  A bit of lava trickles from the walls and the temperature rises to uncomfortable levels. } {Fidohell} {} {} {} {1.000} {}
+E {13467} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {13470} {0} {} {A fiery path (se,w,ne)} { } {The path grows narrow as it winds along the large rock formation to the northwest.  To the northeast is an area of volcanic activity, and west the path curves around the big rock. } {Fidohell} {} {} {} {1.000} {}
+E {13468} {w} {w} {8} {0} {} {1.000} {}
+E {13471} {se} {se} {6} {0} {} {1.000} {}
+E {13465} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {13471} {0} {} {A fiery path (ne,nw)} { } {The path continues on through the same oppressive landscape you've come to hate.  Some fires burn white hot from gasses escaping from far beneath the earth's core. The heat is not quite as overbearing here, but it's still damn hot. } {Fidohell} {} {} {} {1.000} {}
+E {13470} {nw} {nw} {9} {0} {} {1.000} {}
+E {13475} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {13472} {0} {} {An unstable area (n,w)} { } {This narrow pathway turns north here and passes through an opening in a rock face.  As you weigh your options, you begin to feel like you are not alone here. } {Fidohell} {} {} {} {1.000} {}
+E {13465} {w} {w} {8} {0} {} {1.000} {}
+E {13477} {n} {n} {1} {0} {} {1.000} {}
+
+R {13473} {0} {} {The edge of a crater (se,sw,n)} { } {You are walking along the north side of a large crater. The walls of it are fairly steep, and climbing down here is next to impossible.  There may be another way though. } {Fidohell} {} {} {} {1.000} {}
+E {13462} {n} {n} {1} {0} {} {1.000} {}
+E {13474} {se} {se} {6} {0} {} {1.000} {}
+E {13475} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {13474} {0} {} {The edge of a crater (sw,nw)} { } {You are walking along the west side of a large crater. The ledge here is wide and you have no problem maneuvering around the few obstacles in your path.  The walls of the crater are fairly steep, and climbing down here is next to impossible.  There may be another way though. } {Fidohell} {} {} {} {1.000} {}
+E {13473} {nw} {nw} {9} {0} {} {1.000} {}
+E {13476} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {13475} {0} {} {The edge of a crater (ne,sw,se)} { } {You are walking along the east side of a large crater. The ledge here is narrow, and you almost lose your balance. The walls of it are fairly steep, and climbing down here is next to impossible.  There may be another way though. } {Fidohell} {} {} {} {1.000} {}
+E {13473} {ne} {ne} {3} {0} {} {1.000} {}
+E {13471} {sw} {sw} {12} {0} {} {1.000} {}
+E {13476} {se} {se} {6} {0} {} {1.000} {}
+
+R {13476} {0} {} {The edge of a crater (nw,ne)} { } {You are walking along the south side of a large crater. The walls of the crater are fairly steep, and climbing down here is next to impossible.  There may be another way though. } {Fidohell} {} {} {} {1.000} {}
+E {13475} {nw} {nw} {9} {0} {} {1.000} {}
+E {13474} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {13477} {0} {} {An unstable area (s)} { } {This is a dead-end in the path.  A big rock stands here waiting for someone to wander by and have a seat. } {Fidohell} {} {} {} {1.000} {}
+E {13472} {s} {s} {4} {0} {} {1.000} {}

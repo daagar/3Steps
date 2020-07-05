@@ -18,5 +18,6 @@
 #send aset room_exits_pref [33\;1m=X=[0m
 #send aset room_exits_suff [33\;1m=X=[0m
 
+#send {setmod MAPCOLS CLEAR}; 
 
 #class {ansi_setup} {close}

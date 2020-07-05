@@ -83,27 +83,6 @@
 #gag {You seethe with burning hate.}
 #gag {Your weakened blow drives your determination!}
 
-#NOP DAMAGETRACKER MYSQL ENHANCEMENTS
-#alias {show_current_form_table}{
-        #draw {rounded}{box} 47 -41 56 -3 {Current Form Stats:};
-	#showme {Form : ${my[possess][body]}} 49 -38;
-	#showme {  Attack : ${my[possess][attack]}} 50 -38;
-	#showme {     Def : ${my[possess][defense]}} 51 -38;
-	#showme {  Health : ${my[possess][health]}} 52 -38;
-	#showme {   Speed : ${my[possess][fullspeed]}} 53 -38;
-        db_query_form_damage;
-	#showme { Avg Dam : ${form_avg[1][avg(damage)]}} 55 -38;
-}
-
-#alias {db_query_form_damage}{
-        db_submit {form_avg}{%s}{select guildstring, avg(damage) from (select guildstring, damage from damage_log where guildstring = `$my[damagetracker][guildstring]` order by timestamp desc limit 100)var1;};
-};
-
-#ticker {damage_query}{show_current_form_table}{10};
-#delay {initial_update}{show_current_form_table}{2};
-
-#NOP END OF DAMAGETRACKER MYSQL ENHANCEMENTS
-
 #act {You cease funneling the fires of Creation into your desecrated room.}{
         #var my[drounds] 0;
         #var my[desecrate] 0;
