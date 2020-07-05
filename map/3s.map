@@ -18,7 +18,7 @@ F 11
 
 G 0
 
-I 168
+I 4000
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} { }
+L {UNICODE GRAPHICS} {NO DIAGONAL} {}
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -17834,11 +17834,11 @@ E { 3909} {enter whirlpool} {enter whirlpool} {0} {0} {} {1.000} {}
 E { 3088} {w} {w} {8} {0} {} {1.000} {}
 E { 5426} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3909} {0} {} {3909} { } {} {} {} {} {} {1.000} {}
+R { 3909} {0} {<118>} {3909} { } {} {} {} {} {} {1.000} {}
 E { 3908} {u} {u} {16} {0} {} {1.000} {}
 E { 3910} {d} {d} {32} {0} {} {1.000} {}
 
-R { 3910} {0} {} {panda} { } {} {} {pandaemonium} {} {} {1.000} {}
+R { 3910} {0} {} {panda} { } {You are at the bottom of a pit, and a deep red glow to the north helps your eyes adjust the relative darkness.  To the north, a strange rock gateway chiseled out of the stone leads off into the strange glow.  The walls of the pit are rocky with many holds to climb up. } {Pandaemonium} {pandaemonium} {} {} {1.000} {}
 E { 3909} {climb} {climb} {0} {0} {} {1.000} {}
 E { 3986} {n} {n} {1} {0} {} {1.000} {}
 
@@ -18162,82 +18162,90 @@ E { 3982} {sw} {sw} {12} {0} {} {1.000} {}
 R { 3985} {0} {} {3985} { } {You pass through the gossamer thin curtain covering the door and enter the home.  Long and rectangular, it is centered around a large stone table that could easily seat six people.  Cut into the rock walls all around the room are shelves filled with the everyday items of quotidian life.  Two small alcoves lead off of the main room into small spartan bedrooms. } {The Land} {} {} {} {1.000} {}
 E { 3982} {s} {s} {4} {0} {} {1.000} {}
 
-R { 3986} {0} {} {3986} { } {} {} {} {} {} {1.000} {}
+R { 3986} {0} {} {3986} { } {You are standing on the surface of a vast lake of fire.  The surface bubbles and churns, but feels solid to you.  Across the burning lake, you see flaming creatures leap to and fro among the waves of fire.  Occasionally, you hear a roar erupt from one section of the lake, but when you turn that way, you see nothing but flames.  Intense flames block your path to the east. } {Pandaemonium} {} {} {} {1.000} {}
 E { 3910} {s} {s} {4} {0} {} {1.000} {}
 E { 3987} {n} {n} {1} {0} {} {1.000} {}
 E { 5844} {w} {w} {8} {0} {} {1.000} {}
 
-R { 3987} {0} {} {3987} { } {} {} {} {} {} {1.000} {}
+R { 3987} {0} {} {3987} { } {You are standing on the surface of a vast lake of fire.  The surface bubbles and churns, but feels solid to you.  Across the burning lake, you see flaming creatures leap to and fro among the waves of fire.  Occasionally, you hear a roar erupt from one section of the lake, but when you turn that way, you see nothing but flames.  Intense flames block your path to the east and north. } {Pandaemonium} {} {} {} {1.000} {}
 E { 3986} {s} {s} {4} {0} {} {1.000} {}
 E { 3988} {w} {w} {8} {0} {} {1.000} {}
 
-R { 3988} {0} {} {3988} { } {} {} {} {} {} {1.000} {}
+R { 3988} {0} {} {3988} { } {You are standing on the surface of a vast lake of fire.  The surface bubbles and churns, but feels solid to you.  Across the burning lake, you see flaming creatures leap to and fro among the waves of fire.  Occasionally, you hear a roar erupt from one section of the lake, but when you turn that way, you see nothing but flames. } {Pandaemonium} {} {} {} {1.000} {}
 E { 3987} {e} {e} {2} {0} {} {1.000} {}
 E { 3989} {n} {n} {1} {0} {} {1.000} {}
 E { 5844} {s} {s} {4} {0} {} {1.000} {}
+E { 6488} {w} {w} {8} {0} {} {1.000} {}
 
-R { 3989} {0} {} {3989} { } {} {} {} {} {} {1.000} {}
+R { 3989} {0} {} {3989} { } {You are standing on the surface of a vast lake of fire.  The surface bubbles and churns, but feels solid to you.  Across the burning lake, you see flaming creatures leap to and fro among the waves of fire.  Occasionally, you hear a roar erupt from one section of the lake, but when you turn that way, you see nothing but flames.  Intense flames block your path to the east and north. } {Pandaemonium} {} {} {} {1.000} {}
 E { 3988} {s} {s} {4} {0} {} {1.000} {}
 E { 3990} {w} {w} {8} {0} {} {1.000} {}
 
-R { 3990} {0} {} {3990} { } {} {} {} {} {} {1.000} {}
+R { 3990} {0} {} {3990} { } {You are standing on the surface of a vast lake of fire.  The surface bubbles and churns, but feels solid to you.  Across the burning lake, you see flaming creatures leap to and fro among the waves of fire.  Occasionally, you hear a roar erupt from one section of the lake, but when you turn that way, you see nothing but flames.  Intense flames block your path to the west, and south. } {Pandaemonium} {} {} {} {1.000} {}
 E { 3989} {e} {e} {2} {0} {} {1.000} {}
 E { 3991} {n} {n} {1} {0} {} {1.000} {}
 
-R { 3991} {0} {} {3991} { } {} {} {} {} {} {1.000} {}
+R { 3991} {0} {} {3991} { } {You enter a vast stone tunnel, the edges of which are rough.  The whole region exudes a sense of dullness, and after travelling down the tunnel for a while you wonder if you are actually making any progress. } {Pandaemonium} {} {} {} {1.000} {}
 E { 3990} {s} {s} {4} {0} {} {1.000} {}
 E { 3992} {n} {n} {1} {0} {} {1.000} {}
 
-R { 3992} {0} {} {3992} { } {} {} {} {} {} {1.000} {}
+R { 3992} {0} {} {3992} { } {This place has an evil presence to it.  There is an indescribable haze drowning the radiance of your light.  The floor, the ceiling and the walls all appear to be made of rock.  Strange carvings appear to dance quietly along the walls.  There are two alcoves here, one on the left side and one on the right side of the tunnel.  Both alcoves appear to be empty, but perhaps there was once something there.  The darkness within them is disturbed only by a faint flickering of light from beyond the tunnel. } {Pandaemonium} {} {} {} {1.000} {}
 E { 3991} {s} {s} {4} {0} {} {1.000} {}
-E { 5371} {w} {w} {8} {0} {} {1.000} {}
+E { 3993} {w} {w} {8} {0} {} {1.000} {}
 
-R { 3993} {0} {} {3993} { } {} {} {} {} {} {1.000} {}
-E { 5371} {e} {e} {2} {0} {} {1.000} {}
-E { 5370} {nw} {nw} {9} {0} {} {1.000} {}
+R { 3993} {0} {} {3993} { } {This place has an evil presence to it.  There is an indescribable haze drowning the radiance of your light.  The floor, the ceiling and the walls all appear to be made of rock.  Strange carvings appear to dance quietly along the walls.  There are two alcoves here, one on the left side and one on the right side of the tunnel.  Both alcoves appear to be empty, but perhaps there was once something there.  The darkness within them is disturbed only by a faint flickering of light from beyond the tunnel. } {Pandaemonium} {} {} {} {1.000} {}
+E { 3992} {e} {e} {2} {0} {} {1.000} {}
+E { 3994} {nw} {nw} {9} {0} {} {1.000} {}
 
-R { 3994} {0} {} {3994} { } {} {} {} {} {} {1.000} {}
-E { 5370} {se} {se} {6} {0} {} {1.000} {}
-E { 5369} {n} {n} {1} {0} {} {1.000} {}
+R { 3994} {0} {} {3994} { } {This place has an evil presence to it.  There is an indescribable haze drowning the radiance of your light.  The floor, the ceiling and the walls all appear to be made of rock.  Strange carvings appear to dance quietly along the walls.  There are two alcoves here, one on the left side and one on the right side of the tunnel.  Both alcoves contain a silent statue, peering out from the darkness of the shadows.  It is almost as if they have been placed here for a specific reason. } {Pandaemonium} {} {} {} {1.000} {}
+E { 3993} {se} {se} {6} {0} {} {1.000} {}
+E { 3995} {n} {n} {1} {0} {} {1.000} {}
 
-R { 3995} {0} {} {3995} { } {} {} {} {} {} {1.000} {}
-E { 5369} {s} {s} {4} {0} {} {1.000} {}
-E { 5372} {ne} {ne} {3} {0} {} {1.000} {}
+R { 3995} {0} {} {3995} { } {This place has an evil presence to it.  There is an indescribable haze drowning the radiance of your light.  The floor, the ceiling and the walls all appear to be made of rock.  Strange carvings appear to dance quietly along the walls.  There are two alcoves here, one on the left side and one on the right side of the tunnel.  Both alcoves contain a silent statue, peering out from the darkness of the shadows.  It is almost as if they have been placed here for a specific reason. } {Pandaemonium} {} {} {} {1.000} {}
+E { 3994} {s} {s} {4} {0} {} {1.000} {}
+E { 3996} {ne} {ne} {3} {0} {} {1.000} {}
 
-R { 3996} {0} {} {3996} { } {} {} {} {} {} {1.000} {}
-E { 5372} {sw} {sw} {12} {0} {} {1.000} {}
-E { 5373} {e} {e} {2} {0} {} {1.000} {}
+R { 3996} {0} {} {3996} { } {This place has an evil presence to it.  There is an indescribable haze drowning the radiance of your light.  The floor, the ceiling and the walls all appear to be made of rock.  Strange carvings appear to dance quietly along the walls.  There are two alcoves here, one on the left side and one on the right side of the tunnel.  Both alcoves contain a silent statue, peering out from the darkness of the shadows.  It is almost as if they have been placed here for a specific reason. } {Pandaemonium} {} {} {} {1.000} {}
+E { 3995} {sw} {sw} {12} {0} {} {1.000} {}
+E { 3997} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3997} {0} {} {3997} { } {} {} {} {} {} {1.000} {}
-E { 5373} {w} {w} {8} {0} {} {1.000} {}
-E { 5374} {se} {se} {6} {0} {} {1.000} {}
+R { 3997} {0} {} {3997} { } {This place has an evil presence to it.  There is an indescribable haze drowning the radiance of your light.  The floor, the ceiling and the walls all appear to be made of rock.  Strange carvings appear to dance quietly along the walls.  There are two alcoves here, one on the left side and one on the right side of the tunnel.  Both alcoves contain a silent statue, peering out from the darkness of the shadows.  It is almost as if they have been placed here for a specific reason. } {Pandaemonium} {} {} {} {1.000} {}
+E { 3996} {w} {w} {8} {0} {} {1.000} {}
+E { 3998} {se} {se} {6} {0} {} {1.000} {}
 
-R { 3998} {0} {} {3998} { } {} {} {} {} {} {1.000} {}
-E { 5374} {nw} {nw} {9} {0} {} {1.000} {}
-E { 5375} {s} {s} {4} {0} {} {1.000} {}
+R { 3998} {0} {} {3998} { } {This place has an evil presence to it.  There is an indescribable haze drowning the radiance of your light.  The floor, the ceiling and the walls all appear to be made of rock.  Strange carvings appear to dance quietly along the walls.  There are two alcoves here, one on the left side and one on the right side of the tunnel.  Both alcoves contain a silent statue, peering out from the darkness of the shadows.  It is almost as if they have been placed here for a specific reason. } {Pandaemonium} {} {} {} {1.000} {}
+E { 3997} {nw} {nw} {9} {0} {} {1.000} {}
+E { 3999} {s} {s} {4} {0} {} {1.000} {}
 
-R { 3999} {0} {} {3999} { } {} {} {} {} {} {1.000} {}
-E { 5375} {n} {n} {1} {0} {} {1.000} {}
-E { 4000} {nw} {nw} {9} {0} {} {1.000} {}
+R { 3999} {0} {} {3999} { } {This place has an evil presence to it.  There is an indescribable haze drowning the radiance of your light.  The floor, the ceiling and the walls all appear to be made of rock.  Strange carvings appear to dance quietly along the walls.  There are two alcoves here, one on the left side and one on the right side of the tunnel.  Both alcoves contain a silent statue, peering out from the darkness of the shadows.  It is almost as if they have been placed here for a specific reason. } {Pandaemonium} {} {} {} {1.000} {}
+E { 3998} {n} {n} {1} {0} {} {1.000} {}
+E { 5369} {nw} {nw} {9} {0} {} {1.000} {}
+E { 3992} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 4000} {0} {} {4000} { } {} {} {} {} {} {1.000} {}
-E { 3999} {se} {se} {6} {0} {} {1.000} {}
+R { 4000} {0} {} {4000} { } {You are continuing down a huge tunnel.  To the north you can see the gates of Pandaemonium, while to the south lie miles and miles of underground tunnels.  The lifelessness around you chills your soul, and the fact that before you lies the city of Hell, Pandaemonium, destroys all attempt at rational thought. } {Pandaemonium} {dagon} {} {} {1.000} {}
+E { 5369} {se} {se} {6} {0} {} {1.000} {}
 E { 4001} {n} {n} {1} {0} {} {1.000} {}
 
-R { 4001} {0} {} {4001} { } {} {} {} {} {} {1.000} {}
+R { 4001} {0} {} {4001} { } {You tread where few mortals have, the great hall of Pandaemonium.  It was here that the rebellious angels were cast down to.  It was here that the great leader of that rebellion, the Dark Angel himself, decided to build a fortress.  And you have penetrated the outer defenses and stand within its unholy walls.  Diamonds and rubies glisten in the walls of the cavern, as the wealth of the underworld has been collected to decorate this vast hall.  To the west and northeast are gem-studded passageways leading on around the inner sanctum.  To the north is an entrance to that sanctum, a place of great evil and terrible danger.  Mere mortals were not meant to challenge the power of the Dark One in his own abode. } {Pandaemonium} {} {} {} {1.000} {}
 E { 4002} {ne} {ne} {3} {0} {} {1.000} {}
 E { 4003} {w} {w} {8} {0} {} {1.000} {}
 E { 4000} {s} {s} {4} {0} {} {1.000} {}
+E { 5370} {n} {n} {1} {0} {} {1.000} {}
 
-R { 4002} {0} {} {4002} { } {} {} {} {} {} {1.000} {}
+R { 4002} {0} {} {4002} { } {You continue around the inner circle, staring at the riches around you.  Your light reflects back at you in a myriad of colored reflections.  Diamonds and rubies glisten in the walls of cavern, as the wealth of the underworld has been collected to decorate this vast hall.  To the north and southwest are gem-studded passageways leading on around the inner sanctum.  To the northwest is an entrance to that sanctum, a place of great evil and terrible danger.  Mere mortals were not meant to challenge the power of the Dark One in his own abode. } {Pandaemonium} {} {} {} {1.000} {}
 E { 4001} {sw} {sw} {12} {0} {} {1.000} {}
+E { 5371} {nw} {nw} {9} {0} {} {1.000} {}
+E { 5372} {n} {n} {1} {0} {} {1.000} {}
 
-R { 4003} {0} {} {4003} { } {} {} {} {} {} {1.000} {}
+R { 4003} {0} {} {4003} { } {You continue around the inner circle, staring at the riches around you.  Your light reflects back at you in a myriad of colored reflections.  Diamonds and rubies glisten in the walls of cavern, as the wealth of the underworld has been collected to decorate this vast hall.  To the northwest and east are gem-studded passageways leading on around the inner sanctum.  To the northeast is an entrance to that sanctum, a place of great evil and terrible danger.  Mere mortals were not meant to challenge the power of the Dark One in his own abode. } {Pandaemonium} {} {} {} {1.000} {}
 E { 4001} {e} {e} {2} {0} {} {1.000} {}
 E { 4004} {nw} {nw} {9} {0} {} {1.000} {}
+E { 5370} {ne} {ne} {3} {0} {} {1.000} {}
 
-R { 4004} {0} {} {4004} { } {} {} {} {} {} {1.000} {}
+R { 4004} {0} {} {4004} { } {You continue around the inner circle, staring at the riches around you.  Your light reflects back at you in a myriad of colored reflections.  Diamonds and rubies glisten in the walls of cavern, as the wealth of the underworld has been collected to decorate this vast hall.  To the southeast and north are gem-studded passageways leading on around the inner sanctum.  To the east is an entrance to that sanctum, a place of great evil and terrible danger.  Mere mortals were not meant to challenge the power of the Dark One in his own abode. } {Pandaemonium} {} {} {} {1.000} {}
 E { 4003} {se} {se} {6} {0} {} {1.000} {}
+E { 7127} {n} {n} {1} {0} {} {1.000} {}
+E { 7128} {e} {e} {2} {0} {} {1.000} {}
 
 R { 4005} {0} {} {gumball machine} { } {As you move north the road gives way to a cutesy little street lined by tall lollipop trees.  The smell of sugar is so intense here that you can almost hear the zits rising on your face and back.  I'd move on fast if I were you! } {Mud} {} {} {} {1.000} {}
 E { 2743} {s} {s} {4} {0} {} {1.000} {}
@@ -24521,33 +24529,36 @@ E { 5366} {w} {w} {8} {0} {} {1.000} {}
 R { 5368} {0} {} {schroedinger} { } {} {} {} {} {} {1.000} {}
 E { 4993} {leave} {leave} {0} {0} {} {1.000} {}
 
-R { 5369} {4104} {} {5369} { } {} {} {} {} {} {1.000} {}
-E { 3994} {s} {s} {4} {0} {} {1.000} {}
-E { 3995} {n} {n} {1} {0} {} {1.000} {}
+R { 5369} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 4000} {nw} {nw} {9} {0} {} {1.000} {}
+E { 3999} {se} {se} {6} {0} {} {1.000} {}
 
-R { 5370} {4104} {} {5370} { } {} {} {} {} {} {1.000} {}
-E { 3994} {nw} {nw} {9} {0} {} {1.000} {}
-E { 3993} {se} {se} {6} {0} {} {1.000} {}
+R { 5370} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 4001} {s} {s} {4} {0} {} {1.000} {}
+E { 4003} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 5371} {4104} {} {5371} { } {} {} {} {} {} {1.000} {}
-E { 3993} {w} {w} {8} {0} {} {1.000} {}
-E { 3992} {e} {e} {2} {0} {} {1.000} {}
+R { 5371} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 4002} {se} {se} {6} {0} {} {1.000} {}
+E { 5372} {e} {e} {2} {0} {} {1.000} {}
 
-R { 5372} {4104} {} {5372} { } {} {} {} {} {} {1.000} {}
-E { 3996} {ne} {ne} {3} {0} {} {1.000} {}
-E { 3995} {sw} {sw} {12} {0} {} {1.000} {}
+R { 5372} {0} {} {The Inner Circle of Pandaemonium (w,nw,s)} { } {You continue around the inner circle, staring at the riches around you.  Your light reflects back at you in a myriad of colored reflections.  Diamonds and rubies glisten in the walls of cavern, as the wealth of the underworld has been collected to decorate this vast hall.  To the south and northwest are gem-studded passageways leading on around the inner sanctum.  To the west is an entrance to that sanctum, a place of great evil and terrible danger.  Mere mortals were not meant to challenge the power of the Dark One in his own abode. } {Pandaemonium} {} {} {} {1.000} {}
+E { 4002} {s} {s} {4} {0} {} {1.000} {}
+E { 5371} {w} {w} {8} {0} {} {1.000} {}
+E { 5373} {nw} {nw} {9} {0} {} {1.000} {}
 
-R { 5373} {4104} {} {5373} { } {} {} {} {} {} {1.000} {}
-E { 3997} {e} {e} {2} {0} {} {1.000} {}
-E { 3996} {w} {w} {8} {0} {} {1.000} {}
+R { 5373} {0} {} {The Inner Circle of Pandaemonium (w,sw,se)} { } {You continue around the inner circle, staring at the riches around you.  Your light reflects back at you in a myriad of colored reflections.  Diamonds and rubies glisten in the walls of cavern, as the wealth of the underworld has been collected to decorate this vast hall.  To the west and southeast are gem-studded passageways leading on around the inner sanctum.  To the southwest is an entrance to that sanctum, a place of great evil and terrible danger.  Mere mortals were not meant to challenge the power of the Dark One in his own abode. } {Pandaemonium} {} {} {} {1.000} {}
+E { 5372} {se} {se} {6} {0} {} {1.000} {}
+E { 5374} {w} {w} {8} {0} {} {1.000} {}
+E { 5375} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 5374} {4104} {} {5374} { } {} {} {} {} {} {1.000} {}
-E { 3998} {se} {se} {6} {0} {} {1.000} {}
-E { 3997} {nw} {nw} {9} {0} {} {1.000} {}
+R { 5374} {0} {} {The Inner Circle of Pandaemonium (s,e,sw)} { } {You continue around the inner circle, staring at the riches around you.  Your light reflects back at you in a myriad of colored reflections.  Diamonds and rubies glisten in the walls of cavern, as the wealth of the underworld has been collected to decorate this vast hall.  To the southwest and east are gem-studded passageways leading on around the inner sanctum.  To the south is an entrance to that sanctum, a place of great evil and terrible danger.  Mere mortals were not meant to challenge the power of the Dark One in his own abode. } {Pandaemonium} {} {} {} {1.000} {}
+E { 5373} {e} {e} {2} {0} {} {1.000} {}
+E { 5375} {s} {s} {4} {0} {} {1.000} {}
+E { 7127} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 5375} {4104} {} {5375} { } {} {} {} {} {} {1.000} {}
-E { 3999} {s} {s} {4} {0} {} {1.000} {}
-E { 3998} {n} {n} {1} {0} {} {1.000} {}
+R { 5375} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 5373} {ne} {ne} {3} {0} {} {1.000} {}
+E { 5374} {n} {n} {1} {0} {} {1.000} {}
 
 R { 5376} {0} {} {gypsy} { } {			Lair of the Gypsy You have entered the mystical dwelling of The Gypsy.  For years, she has used her mysterious powers to benefit the citizens of Foundation. Of course, her services are accompanied by a substantial fee.  To see a list of the services provided by The Gypsy, just read the sign found within the shop.  Looking closely, you can see a small staircase leading down into the basement. } {Mud} {gypsy} {} {} {1.000} {}
 E { 6018} {w} {w} {8} {0} {} {1.000} {}
@@ -26548,7 +26559,7 @@ E { 5842} {s} {s} {4} {0} {} {1.000} {}
 E { 7098} {w} {w} {8} {0} {} {1.000} {}
 E { 7106} {e} {e} {2} {0} {} {1.000} {}
 
-R { 5844} {0} {} {5844} { } {} {} {} {} {} {1.000} {}
+R { 5844} {0} {} {5844} { } {You are standing on the surface of a vast lake of fire.  The surface bubbles and churns, but feels solid to you.  Across the burning lake, you see flaming creatures leap to and fro among the waves of fire.  Occasionally, you hear a roar erupt from one section of the lake, but when you turn that way, you see nothing but flames.  Intense flames block your path to the west and south. } {Pandaemonium} {} {} {} {1.000} {}
 E { 3988} {n} {n} {1} {0} {} {1.000} {}
 E { 3986} {e} {e} {2} {0} {} {1.000} {}
 
@@ -29262,6 +29273,9 @@ E { 6485} {sw} {sw} {12} {0} {} {1.000} {}
 
 R { 6487} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 5502} {d} {d} {32} {0} {} {1.000} {}
+
+R { 6488} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 3988} {e} {e} {2} {0} {} {1.000} {}
 
 R { 6489} {0} {} {6489} { } {} {} {} {} {} {1.000} {}
 E { 6140} {e} {e} {2} {0} {} {1.000} {}
@@ -32176,6 +32190,15 @@ E { 7126} {board spacecraft} {board spacecraft} {0} {0} {} {1.000} {}
 R { 7126} {0} {<118>} {fremen} { } {} {} {fremen} {} {} {1.000} {}
 E { 7125} {board ornithopter} {board ornithopter} {0} {0} {} {1.000} {}
 E { 7129} {s} {s} {4} {0} {} {1.000} {}
+
+R { 7127} {0} {} {The Inner Circle of Pandaemonium (se,ne,s)} { } {You continue around the inner circle, staring at the riches around you.  Your light reflects back at you in a myriad of colored reflections.  Diamonds and rubies glisten in the walls of cavern, as the wealth of the underworld has been collected to decorate this vast hall.  To the northeast and south are gem-studded passageways leading on around the inner sanctum.  To the southeast is an entrance to that sanctum, a place of great evil and terrible danger.  Mere mortals were not meant to challenge the power of the Dark One in his own abode. } {Pandaemonium} {} {} {} {1.000} {}
+E { 5374} {ne} {ne} {3} {0} {} {1.000} {}
+E { 7128} {se} {se} {6} {0} {} {1.000} {}
+E { 4004} {s} {s} {4} {0} {} {1.000} {}
+
+R { 7128} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 7127} {nw} {nw} {9} {0} {} {1.000} {}
+E { 4004} {w} {w} {8} {0} {} {1.000} {}
 
 R { 7129} {0} {} {7129} { } {} {} {} {} {} {1.000} {}
 E { 7126} {n} {n} {1} {0} {} {1.000} {}
