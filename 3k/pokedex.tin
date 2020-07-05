@@ -15,6 +15,7 @@
 #alias {show_current_form_table}{
 	#if {"$draw[biome]" == "on" && "$draw[canvas]" == "on"}{
 		#draw {rounded}{box} ${biome[top]} -$biome[width]+2 ${biome[top]}+6 -$biome[width]+40;
+		#screen clear square ${biome[top]}+1 -$biome[width]+3 ${biome[top]}+5 -$biome[width]+39;
 		#showme {[Current Form Stats]} $biome[top] -$biome[width]+13;
 		#showme {Form : ${my[form]}} $biome[top]+1 -$biome[width]+5;
 		db_query_single_form ${my[form]};

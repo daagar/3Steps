@@ -321,7 +321,7 @@
 	}{
 		rating;
 	};
-	#if {"$draw[selector]" == "on" && "$draw[canvas]" == "on}{
+	#if {"$draw[selector]" == "on" && "$draw[canvas]" == "on"}{
 		show_area_selector;
 	};
 }
