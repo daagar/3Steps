@@ -424,7 +424,9 @@ make_global_blacklist
 	#replace {tkstr}{.}{};
 	#replace {tkstr}{%s[%d\%]%s}{};
 	#replace {tkstr}{%s[%w]%s}{};
-	#replace {tkstr}{attacking you}{};
+	#replace {tkstr}{ attacking you}{};
+	#replace {tkstr}{ <?>}{};
+	#replace {tkstr}{ <!>}{};
 	#replace {tkstr}{!}{};
 	#regex {$tkstr}{%* \\x7b%d\\x7d}{
 		#loop {1}{&2}{count}{
