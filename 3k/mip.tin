@@ -49,22 +49,19 @@
 		#var mapstatus {};
 	};
 
-	#if {$stepignore == 0} {
-		#if {$bot} {
-			#if {$autokill} {
-				#format {stepper} {<068>[S:B(A)]};
+	#switch {$stepignore} {
+		#case {0} {
+			#if {$bot} {
+				#if {$autokill} {
+					#format {stepper} {<068>[S:B(A)]};
+				} {
+					#format {stepper} {<068>[S:B(P)]};
+				};
 			} {
-				#format {stepper} {<068>[S:B(P)]};
-			};
-			
-		} {
-			#format {stepper} {<068>[S]<088>};
+				#format {stepper} {<068>[S]<088>};
+			};		
 		};
-		
-	} {
-		#if {$stepignore == 1} {
-			#format {stepper} {<068>[W]<088>};
-		} {
+		#case {1} {
 			#if {$bot} {
 				#if {$autokill} {
 					#format {stepper} {<068>[M:B(A)]};
@@ -73,9 +70,14 @@
 				};
 			} {
 				#var stepper {<068>[M]};
-			}
-			
-		}
+			};
+		};
+		#case {2} {
+			#var stepper {<068>[W]};
+		};
+		#case {3} {
+			#var stepper {<068>[C]};
+		};
 	};
 
 	#if	{&botcycle[] > 0} {
@@ -84,7 +86,7 @@
 		#var areacap {};	
 	};
 	#if {"$draw[caption]" == "on"} {
-		#SHOWME {<088> <128>$world_cap <068>Uptime: <168>$uptime_cap  <038>Reboot: <138>$reboot_cap  <fca>Lag: <fcb>$lag_cap  <228>Idle: $idle_cap<088>  $areacap<088>} {19}
+		#SHOWME {<088> <128>$world_cap <068>Uptime: <168>$uptime_cap  <038>Reboot: <138>$reboot_cap  <fca>Lag: <fcb>$lag_cap  <228>Idle: $idle_cap<088>  $areacap<088> $stepper $mapstatus} {19}
 	};
 }
 

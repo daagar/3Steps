@@ -171,6 +171,8 @@
         };
     };
 
+    update_status;
+
     #if {$bot && $autokill && !$resumebot} {ki};
 
 }
@@ -181,7 +183,7 @@
     #if {$bot} {
         .pause;
         donatecoffin;
-        #var resumebot 1;
+        #delay {3} {#var resumebot 1};
     }
 }
 

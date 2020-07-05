@@ -5,8 +5,10 @@
 #var area_aggro 1
 #unvar all_area_items
 
-#var stepignore 2;
+#var stepignore 1;
 #var manual_stepper 1;
+show_area_selector;
+#NOP #var manual_stepper 1;
 
 #var kill_path {n;n;e;w;w;n;nw;n;e;e;e;e;w;s;s;search shelves;n;n;w;w;w;s;take key;e;e;s;n;w;n;e;e;s;s;e;e;e;n;n;n;n;e;e;s;s;w;w;s;e;e;e;n;n;n;n;w;w;w;w;s;s;s;s;unlock door;w;take key;e;n;n;n;n;e;e;e;e;s;s;s;s;w;w;w;s;w;w;w;n;n;w;n;e;n;s;w;s;w;n;unlock door;w;w;s;s;sw;w;w;w;n;nw;e;e;e;e;n;ne;e;e;e;w;w;w;sw;nw;nw;w;e;sw;e;se;w;w;s;w;se;e;e;e;s;ne;n;n;e;e;s;s;w;se;s;e;s;s}
 

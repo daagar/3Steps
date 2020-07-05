@@ -193,11 +193,6 @@ create_panel_alignment
 	chatend;
 };
 
-#if {"$draw[exitpanel]" == "on" && "$draw[canvas]" == "on"} {
-	#NOP #draw {line} $chat[height];
-	show_exits;
-};
-
 #if {"$draw[gline]" == "on"} {
 	#draw {<g09>} {line} -$hpbar[height]-$gline[height]-2 1 -$hpbar[height]-$gline[height]-2 -1;
 };

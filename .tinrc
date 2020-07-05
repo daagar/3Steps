@@ -31,19 +31,17 @@
 #PATHDIR          {w}	{e}	{8}
 
 #var {logpath} {.tt/logs};
+#alias {update_status}{#nop};
+#alias {display_biome}{#nop};
+#alias {show_damage_table}{#nop};
+#alias {show_area_selector}{#nop};
 
 #EVENT {SESSION CONNECTED} {
         #var world {%0};
-        #format logfile {.tt/logs/%0_%t.log} {%Y%m%d};
+        #format logfile {${logpath}/%0_%t.log} {%Y%m%d};
         #LOG {APPEND} {$logfile};
-        #act {welcomes you} {
-            #read .tt/start.tin;
-            #nop #read .tt/char/%0.tin;
-        }
-
-        #EVENT {SESSION DISCONNECTED} {
-            mapsave;      
-        }
+        #read .tt/start.tin;
+        #read .tt/char/%0.tin;
 }
 
 #var world {}
@@ -58,32 +56,47 @@
                 connect %0
         }
 };
-
 #alias {connect} {
-    #regex {%0} {3s} {
-        #var {mud} {3s};
-        #ses {%0} {3scapes.org} {3200};
-        #format {ses_len} {%L} {%0};
-        #math {ses_len} {$ses_len-2};
-        #format {ses_name} {%.${ses_len}s} {%0};               
-    } {
-        #regex {%0} {AW} {
-            #var {mud} {AW};
-            #ses {%0} {aardwolf.org} {23};
-            #format {ses_len} {%L} {%0};
-            #math {ses_len} {$ses_len-2};
-            #format {ses_name} {%.${ses_len}s} {%0};                       
-        } {
-            #var {mud} {3k};
-            #ses {%0} {3k.org} {3000};
-            #var {ses_name} {%0};         
-        }
-};
-
-    #act {^<Entering 3%*.  Enter your character name or press enter to continue>} {
-        $ses_name;
+	#var mymud 3k;
+	#regex {%0}{3s}{
+		#var mymud 3s;
+	};	
+	#regex {%0}{AA}{
+		#var mymud AA;
+	};	
+	#regex {%0}{ZM}{
+		#var mymud ZM;
+	};	
+	#switch {"$mymud"}{
+		#case {"3s"}{
+			#var {mud} {3s};
+			#ses {%0} {3scapes.org} {3200};
+			#format {ses_len} {%L} {%0};
+			#math {ses_len} {$ses_len-2};
+			#format {ses_name} {%.${ses_len}s} {%0};
+		};
+		#case {"AA"}{
+			#var {mud} {AA};
+			#ses {%0} {anguish.org} {2222};
+			#format {ses_len} {%L} {%0};
+			#math {ses_len} {$ses_len-2};
+			#format {ses_name} {%.${ses_len}s} {%0};
+		}
+		#case {"ZM"}{
+			#var {mud} {ZM};
+			#ses {%0} {zombiemud.org} {23};
+			#format {ses_len} {%L} {%0};
+			#math {ses_len} {$ses_len-2};
+			#format {ses_name} {%.${ses_len}s} {%0};
+		};
+		#case {"3k"}{
+			#var {mud} {3k};
+			#ses {%0} {3k.org} {3000};
+			#var {ses_name} {%0};
+		};
+	};
+        #send {$ses_name};
         #read .tt/.pass;
-    }    
-};
+}
 
 #read .tt/menu.tin
