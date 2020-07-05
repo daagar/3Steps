@@ -18,7 +18,7 @@ F 11
 
 G 0
 
-I 4000
+I 1
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -4130,9 +4130,10 @@ R {  777} {0} {} {} { } {} {} {jagsbar} {} {} {1.000} {}
 E { 2739} {n} {n} {1} {0} {} {1.000} {}
 E {  776} {leave} {leave} {0} {0} {} {1.000} {}
 
-R {  778} {0} {} {chaos staircase} { } {} {} {} {} {} {1.000} {}
+R {  778} {0} {} {chaos staircase} { } {After crawling through the pipe, you are abruptly discharged by a burst of water.  Standing up, you realize that you have emerged in a ditch in a fog-clouded night.  Of course, the fog isn't fog, and the ditch isn't a ditch, but.... } {Mud} {} {} {} {1.000} {}
 E {  776} {s} {s} {4} {0} {} {1.000} {}
 E {12256} {e} {e} {2} {0} {} {1.000} {}
+E { 7283} {n} {n} {1} {0} {} {1.000} {}
 
 R {  779} {0} {} {779} { } {} {} {} {} {} {1.000} {}
 E { 4557} {s} {s} {4} {0} {} {1.000} {}
@@ -4212,18 +4213,18 @@ E { 7043} {grab trowel} {grab trowel} {0} {0} {} {1.000} {}
 
 R {  797} {0} {} {797} { } {} {} {} {} {} {1.000} {}
 E {  796} {n} {n} {1} {0} {} {1.000} {}
-E {12258} {e} {e} {2} {0} {} {1.000} {}
+E {  798} {e} {e} {2} {0} {} {1.000} {}
 E { 9803} {ride cow} {ride cow} {0} {0} {} {1.000} {}
 E {  677} {w} {w} {8} {0} {} {1.000} {}
 
 R {  798} {0} {} {798} { } {} {} {} {} {} {1.000} {}
-E {12258} {w} {w} {8} {0} {} {1.000} {}
-E {12257} {e} {e} {2} {0} {} {1.000} {}
+E {  797} {w} {w} {8} {0} {} {1.000} {}
+E {  799} {e} {e} {2} {0} {} {1.000} {}
 E {12404} {s} {s} {4} {0} {} {1.000} {}
 E {12405} {n} {n} {1} {0} {} {1.000} {}
 
 R {  799} {0} {} {799} { } {} {} {} {} {} {1.000} {}
-E {12257} {w} {w} {8} {0} {} {1.000} {}
+E {  798} {w} {w} {8} {0} {} {1.000} {}
 E {  800} {n} {n} {1} {0} {} {1.000} {}
 E { 3961} {skip rope} {skip rope} {0} {0} {} {1.000} {}
 
@@ -20305,9 +20306,10 @@ R { 4497} {0} {} {4497} { } {} {} {} {} {} {1.000} {}
 E { 4495} {w} {w} {8} {0} {} {1.000} {}
 E { 4537} {e} {e} {2} {0} {} {1.000} {}
 
-R { 4498} {0} {} {4498} { } {} {} {} {} {} {1.000} {}
+R { 4498} {0} {<118>} {4498} { } {} {} {} {} {} {1.000} {}
 E { 4496} {e} {e} {2} {0} {} {1.000} {}
 E { 4499} {w} {w} {8} {0} {} {1.000} {}
+E { 9782} {s} {s} {4} {0} {} {1.000} {}
 
 R { 4499} {0} {} {4499} { } {} {} {} {} {} {1.000} {}
 E { 4498} {e} {e} {2} {0} {} {1.000} {}
@@ -24529,7 +24531,7 @@ E { 5366} {w} {w} {8} {0} {} {1.000} {}
 R { 5368} {0} {} {schroedinger} { } {} {} {} {} {} {1.000} {}
 E { 4993} {leave} {leave} {0} {0} {} {1.000} {}
 
-R { 5369} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R { 5369} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 4000} {nw} {nw} {9} {0} {} {1.000} {}
 E { 3999} {se} {se} {6} {0} {} {1.000} {}
 
@@ -25733,7 +25735,7 @@ E { 5664} {nw} {nw} {9} {0} {} {1.000} {}
 E { 6369} {ne} {ne} {3} {0} {} {1.000} {}
 E { 9895} {u} {u} {16} {0} {} {1.000} {}
 
-R { 5662} {0} {} {fallen regen} { } {} {} {fallen regen} {} {} {1.000} {}
+R { 5662} {0} {} {The Asylum of the Fallen (u,s,w,tree)} { } {The black path ends here.  You feel surrounded by evil and hatred.  Here you are truly safe from those who would seek to blind you with righteousness.  Here meet those who truly understand the nature of evil and of the cosmos. } {Angels' Guild Hall} {fallen regen} {} {} {1.000} {}
 E { 5661} {u} {u} {16} {0} {} {1.000} {}
 E { 5667} {tree} {tree} {0} {0} {} {1.000} {}
 E { 5671} {w} {w} {8} {0} {} {1.000} {}
@@ -25753,7 +25755,7 @@ R { 5666} {0} {} {-= Inside Studio B =- (n,w)} { } {-= Inside Studio B =- Dressi
 E { 5648} {w} {w} {8} {0} {} {1.000} {}
 E { 5668} {n} {n} {1} {0} {} {1.000} {}
 
-R { 5667} {0} {} {fallen stance} { } {} {} {fallen stance} {} {} {1.000} {}
+R { 5667} {0} {<118>} {fallen stance} { } {} {} {fallen stance} {} {} {1.000} {}
 E { 5662} {return} {return} {0} {0} {} {1.000} {}
 
 R { 5668} {0} {} {-= Inside Studio B =- (s,n)} { } {-= Inside Studio B =- The clamour of children screeching with delight and stagehands moving and adjusting equipment grows louder.  The area leading down to the main sound stage is heavily littered with props, lunch garbage, and drawing paper.  A hurried stage mother runs towards the set, pushing her child toward stardom. } {Barney's Studio} {} {} {} {1.000} {}
@@ -25768,10 +25770,10 @@ R { 5670} {0} {} {-= Playground Set =- (w,e)} { } {-= Playground Set =- Facing e
 E { 5669} {e} {e} {2} {0} {} {1.000} {}
 E { 5673} {w} {w} {8} {0} {} {1.000} {}
 
-R { 5671} {0} {} {fallen shop} { } {} {} {} {} {} {1.000} {}
+R { 5671} {0} {<118>} {fallen shop} { } {} {} {} {} {} {1.000} {}
 E { 5662} {e} {e} {2} {0} {} {1.000} {}
 
-R { 5672} {0} {} {5672} { } {} {} {} {} {} {1.000} {}
+R { 5672} {0} {<118>} {5672} { } {} {} {} {} {} {1.000} {}
 E { 5662} {n} {n} {1} {0} {} {1.000} {}
 
 R { 5673} {0} {} {-= Backstage =- (s,e)} { } {-= Backstage =- Behind the moleskin flats, worn furniture, costumes, large metal scaffolds, and dried out make-up are thoughtlessly tossed aside.  Two heavy sliding doors for deliveries adorn the back wall.  There is a technician on the catwalk, adjusting the lights. } {Barney's Studio} {} {} {} {1.000} {}
@@ -32822,6 +32824,24 @@ E { 7281} {n} {n;drink fountain;drink fountain;drink fountain} {1} {0} {} {1.000
 
 R { 7281} {0} {} {esperoth} { } {} {} {esperoth} {} {} {1.000} {}
 E { 7280} {s} {s} {4} {0} {} {1.000} {}
+
+R { 7282} {0} {} {Visiting a Crack House (n,s,w)} { } {As you leave the `ditch' and head north you are suddenly catapulted into another dimension.  As you go flying through the `air', you see dark shapes lying around the floor, smoking some noxious substance from little glass tubes.  You hope the ride comes to a quick end somewhere else because this view is very depressing. } {Mud} {} {} {} {1.000} {}
+E { 7283} {s} {s} {4} {0} {} {1.000} {}
+E { 7284} {n} {n} {1} {0} {} {1.000} {}
+E { 7285} {w} {w} {8} {0} {} {1.000} {}
+
+R { 7283} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 7282} {n} {n} {1} {0} {} {1.000} {}
+E {  778} {s} {s} {4} {0} {} {1.000} {}
+
+R { 7284} {0} {} {The Streets of London (s,n)} { } {You are standing in a half-lit street, surrounded in a thick pea-soup fog that makes seeing anything difficult.  The only source of light to be seen is an occasional gas-lamp.  It is almost painfully cold and the air seems to suck the warmth from your bones.  Your footsteps echo in a strange muffled tone on the cobblestones beneath your feet, and your senses are assailed by a truly awful stench that seems to come from all around you.  A signpost stands here, giving you a chance to orient yourself in this new setting.  } {Old London} {} {} {} {1.000} {}
+E { 7282} {s} {s} {4} {0} {} {1.000} {}
+E { 9690} {n} {n} {1} {0} {} {1.000} {}
+
+R { 7285} {0} {} {Strange Museum (e,nw,sw)} { } {There are exotic places hiding in all the lands of Three Scapes.  In these places lurk dangerous monsters and exquisite treasures beyond the darkest fantasies of normal mortals.  Some objects are lost in the fearsome combats which are normally associated with their retrieval, others are recovered by these fearless adventurers and returned to the town of Foundation.  A select few items which are brought back are considered too dangerous and even Gemini with his lack of business scruples will not buy them.  This exotic store, hidden in the bowels of Chaos, deals in such rare and forbidden items.  Your curiosity is overwhelming, and you can't resist taking a look around. } {Chaos Museum} {} {} {} {1.000} {}
+E { 7282} {e} {e} {2} {0} {} {1.000} {}
+E { 9688} {nw} {nw} {9} {0} {} {1.000} {}
+E { 9689} {sw} {sw} {12} {0} {} {1.000} {}
 
 R { 7286} {0} {} {7286} { } {You are standing in a tree-lined clearing.  Towering to the east in front of you is a beautiful gothic cathedral, home to the powerful Priest Guild.  To the west you can see Woodland Road. Non-members may join the guild by asking a current priest or typing "join priest".  Members may leave the guild (by typing "unjoin priest") at a cost of one-half of their total experience.  Both decisions are of great importance and should be carefully weighed before being made. } {Priest} {} {} {} {1.000} {}
 E { 5910} {w} {w} {8} {0} {} {1.000} {}
@@ -46958,6 +46978,23 @@ E { 9687} {outward} {outward} {0} {0} {} {1.000} {}
 R { 9687} {0} {} {9687} { } {} {} {} {} {} {1.000} {}
 E { 9686} {inward} {inward} {0} {0} {} {1.000} {}
 
+R { 9688} {0} {} {Chamber of Death (sw,se)} { } {The subdued and slightly smoky atmosphere of this place is disrupted by the implements of destruction carefully distributed about this room.  The weapons range from daggers and pikes, to shurikens and crossbows.  The illumination for this room is completely provided by a two-handed sword that is thrust into the ceiling. } {Chaos Museum} {} {} {} {1.000} {}
+E { 7285} {se} {se} {6} {0} {} {1.000} {}
+E { 9763} {sw} {sw} {12} {0} {} {1.000} {}
+
+R { 9689} {0} {} {Strange Museum (nw,ne)} { } {You have taken your first step into what you pictured as a chaotic and twisted environment.  It turns out to be quite the opposite.  The area is kept very clean and tidy, with not a hint of disorder.  There is a crystal case here on a table, containing several small objects.  In addition, there is a stuffed owl mounted on the opposite wall. } {Chaos Museum} {} {} {} {1.000} {}
+E { 7285} {ne} {ne} {3} {0} {} {1.000} {}
+E { 9763} {nw} {nw} {9} {0} {} {1.000} {}
+
+R { 9690} {0} {} {The Streets of London (e,s)} { } {You've arrived at a sharp right hand turn in the road.  The surrounding buildings loom darkly out of the fog, and you can hear the occasional sound of movement off somewhere in the distance, or perhaps right by you.  The fog is distorting your sense of distance, and it is nearly impossible to judge what might lie just near you, let alone some distance away.  An old signpost sits on the corner, the only indication of where you might be.  } {Old London} {} {} {} {1.000} {}
+E { 7284} {s} {s} {4} {0} {} {1.000} {}
+E { 9691} {e} {e} {2} {0} {} {1.000} {}
+
+R { 9691} {0} {} {The Streets of London (w,e,n)} { } {You stand at the junction of two roads, one sprawling out to the north, the other running from the east to the west.  Somewhere in the distance you hear someone scream, but in the miasmic fog you cannot tell from which direction it has come from.  The lighting here is making the fog an eerie and sickly yellow, and it smells terrible.  A weathered signpost stands here to guide you. } {Old London} {} {} {} {1.000} {}
+E { 9690} {w} {w} {8} {0} {} {1.000} {}
+E { 9753} {e} {e} {2} {0} {} {1.000} {}
+E { 9754} {n} {n} {1} {0} {} {1.000} {}
+
 R { 9692} {0} {} {9692} { } {} {} {} {} {} {1.000} {}
 E { 7096} {w} {w} {8} {0} {} {1.000} {}
 E { 9924} {n} {n} {1} {0} {} {1.000} {}
@@ -47211,7 +47248,194 @@ E { 9752} {enter} {enter} {0} {0} {} {1.000} {}
 R { 9752} {0} {} {lich} { } {} {} {lich} {} {} {1.000} {}
 E { 9751} {w} {w} {8} {0} {} {1.000} {}
 
+R { 9753} {0} {} {The Streets of London (w,e)} { } {You are standing in a half-lit street, surrounded in a thick pea-soup fog that inhibits your vision.  The only source of light around are the occasional gas lamps lining the road.  It is almost painfully cold and the air seems to suck the warmth from your bones.  Your footsteps echo in a strange muffled tone on the cobblestones beneath your feet, and your senses are assailed by a truly awful stench that seems to come from all around you.  } {Old London} {} {} {} {1.000} {}
+E { 9691} {w} {w} {8} {0} {} {1.000} {}
+E { 9758} {e} {e} {2} {0} {} {1.000} {}
+
+R { 9754} {0} {} {The Streets of London (s,e,n)} { } {The street continues through the murk of the London fog, weird sounds echo about adding further to your sense of disorientation.  There is an almost tangible feeling of panic within these streets, as the fear of the Ripper takes hold on the city.  The strange yellow lights of the gas-lamps hold no comfort here, only the single signpost guiding the way seems to give off any sense of normality.  } {Old London} {} {} {} {1.000} {}
+E { 9691} {s} {s} {4} {0} {} {1.000} {}
+E { 9755} {e} {e} {2} {0} {} {1.000} {}
+E { 9757} {n} {n} {1} {0} {} {1.000} {}
+
+R { 9755} {0} {} {Mitre Square (e,w)} { } {You have entered into a small clear space, known to the locals as Mitre Square.  The fog is not quite as thick here as it is elsewhere, and you can see the surrounding buildings a little more clearly than you have been able to elsewhere.  Improved visibility does not really make the place seem any more attractive however, as broken cobbles underfoot, and a weak and tottering looking brick fence seem to give the square the impression of decay.  Mounds of garbage give the area a very foul odour, and you're not surprised at the complete absence of anyone else here.  At least it would seem there is no one else here.  } {Old London} {} {} {} {1.000} {}
+E { 9754} {w} {w} {8} {0} {} {1.000} {}
+E { 9764} {e} {e} {2} {0} {} {1.000} {}
+
 R { 9756} {0} {} {9756} { } {} {} {} {} {} {1.000} {}
+
+R { 9757} {0} {} {The Streets of London (s,e,gate)} { } {The road you are walking along swings from the south to east here.  It seems somewhat darker here than normal, although the lamp posts still continue on at regular intervals.  The fog swirls about you, almost concealing a wooden fence on the west side of the corner that holds a rickety iron gate within it.  You can't make out what lies on the other side of it, but there are no buildings that you can see in that direction.  A signpost just next to the gate points out your options.  } {Old London} {} {} {} {1.000} {}
+E { 9754} {s} {s} {4} {0} {} {1.000} {}
+E { 9766} {e} {e} {2} {0} {} {1.000} {}
+E { 9767} {gate} {gate} {0} {0} {} {1.000} {}
+
+R { 9758} {0} {} {The Streets of London (gates,e,w)} { } {The fog spins in a tiny waft of air and clears for a split second, just long enough to spot the massive wall and iron gates to your immediate south.  A small bronze plaque rests by the gates, but the fog closes in again before you get a chance to read it.  The road meanwhile, seems to continue on to the east and west.  } {Old London} {} {} {} {1.000} {}
+E { 9753} {w} {w} {8} {0} {} {1.000} {}
+E { 9759} {gates} {gates} {0} {0} {} {1.000} {}
+E { 9760} {e} {e} {2} {0} {} {1.000} {}
+
+R { 9759} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 9760} {0} {} {The Streets of London (w,door,n)} { } {You stand before a large tavern that is out of character with the rest of the street.  Bright and full of light and noise, it looms out of the fog like a safe-haven.  A large sign dangles by its open door, and you hear sounds of singing and merriment from within.  The street outside it however has lost none of its sinister edge, and it swings northward, a single signpost marking the end of one street and the beginning of another.  } {Old London} {} {} {} {1.000} {}
+E { 9758} {w} {w} {8} {0} {} {1.000} {}
+E { 9761} {door} {door} {0} {0} {} {1.000} {}
+E { 9762} {n} {n} {1} {0} {} {1.000} {}
+
+R { 9761} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 9762} {0} {} {The Streets of London (w,s,n)} { } {This section of the streets seems to be darker than the rest for some reason.  The lighting is more a muddy brown than the usual off yellow of the lamps.  Strangely you can't even work out why this is the case, as the lamps around here seem normal enough.  Perhaps the fog itself is polluted here.  A signpost stands here, allowing you a moment to orient yourself.  } {Old London} {} {} {} {1.000} {}
+E { 9760} {s} {s} {4} {0} {} {1.000} {}
+E { 9765} {n} {n} {1} {0} {} {1.000} {}
+E { 9764} {w} {w} {8} {0} {} {1.000} {}
+
+R { 9763} {0} {} {Strange Museum (se,ne)} { } {You can feel a great source of evil in this room.  The feeling invades your being on the most basic of levels and you can't help but feel uneasy.  When the feeling of dread subsides you take a quick look around and see the obvious cause of the evil.  To either side of the wheel is a wide red banner. } {Chaos Museum} {} {} {} {1.000} {}
+E { 9689} {se} {se} {6} {0} {} {1.000} {}
+E { 9688} {ne} {ne} {3} {0} {} {1.000} {}
+
+R { 9764} {0} {} {The Streets of London (e,w)} { } {The street here is almost deathly silent.  Compared to other parts of the fog-enshrouded city, the silence here seems somewhat sinister.  The shadows on the edge of your vision seem to twitch and move.  All you can hear through the thick air is the sound of your harsh breath.  If anything were to happen to you here, no-one would ever know it until it was far too late. } {Old London} {} {} {} {1.000} {}
+E { 9762} {e} {e} {2} {0} {} {1.000} {}
+E { 9755} {w} {w} {8} {0} {} {1.000} {}
+
+R { 9765} {0} {} {Spitalfield Square (e,s,w,n)} { } {You've entered a large open square.  There is a slight breeze through here, and the fog has thinned as a result, swirling and eddying through the pale yellow lights of the lamp posts that have been placed about the square.  A series of closed market stalls fill most of the area, creating a warren of dark nooks and passageways throughout.  The surrounding buildings are dark and lifeless, and you feel quite exposed here.  A large signpost dominates the center of the square, pointing off in all four cardinal destinations to the various exits.  } {Old London} {} {} {} {1.000} {}
+E { 9762} {s} {s} {4} {0} {} {1.000} {}
+E { 9768} {w} {w} {8} {0} {} {1.000} {}
+E { 9769} {e} {e} {2} {0} {} {1.000} {}
+E { 9770} {n} {n} {1} {0} {} {1.000} {}
+
+R { 9766} {0} {} {The Streets of London (e,w)} { } {The street you are on runs from east to west through what can only be described as an extremely run-down part of the city.  Dark and dreary, even the fog seems ragged and worn along here, being swirled about by a slight breeze that seems to waft through the cold night air.  The smell is as bad as ever, reeking of coal and rubbish, and it is truly a wonder anyone would tolerate this kind of environment.  } {Old London} {} {} {} {1.000} {}
+E { 9757} {w} {w} {8} {0} {} {1.000} {}
+E { 9768} {e} {e} {2} {0} {} {1.000} {}
+
+R { 9767} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 9768} {0} {} {The Streets of London (e,w)} { } {The street you are wandering down runs from east to west through the blinding fog.  The fog is so thick in this area that you have trouble even making out the ground beneath your feet.  The air seems colder here as well, and the sound of your footsteps is so muffled as to sound far away, causing it to sound like someone or something is following.  That's ridiculous of course, why would anyone be following you? } {Old London} {} {} {} {1.000} {}
+E { 9766} {w} {w} {8} {0} {} {1.000} {}
+E { 9765} {e} {e} {2} {0} {} {1.000} {}
+
+R { 9769} {0} {} {The Streets of London (e,w)} { } {You're heading along a street that runs from east to west.  The fog is sparser here somewhat, but it is still incredibly hard to see clearly. The buildings on either side of the street are dark and lifeless, and it is difficult to tell if they are even used anymore.  There is a strange smell in the air, as if something has gone off.  It's sickly sweet and it is difficult to breathe properly, so strong is the scent. It seems to be emanating from a bundle of rags over by the side of the road.  } {Old London} {} {} {} {1.000} {}
+E { 9765} {w} {w} {8} {0} {} {1.000} {}
+E { 9771} {e} {e} {2} {0} {} {1.000} {}
+
+R { 9770} {0} {} {The Streets of London (s,e)} { } {The lane you have been following turns sharply here, heading off to both the east and south.  It is quieter than normal around here, and your breath echoes in your ears.  The fog is somewhat thicker as well, and you can only just make out the signpost that marks the corner, giving you some sense of direction.  } {Old London} {} {} {} {1.000} {}
+E { 9765} {s} {s} {4} {0} {} {1.000} {}
+E { 9780} {e} {e} {2} {0} {} {1.000} {}
+
+R { 9771} {0} {} {The Streets of London (e,w)} { } {The air seems colder here, as if the fog that enshrouds your surroundings has an extra chill to it for some reason.  From somewhere off in the distance you can hear muffled shouting, and the shrill blast of a whistle.  This part of the street itself is extremely dark. You can make out light in either direction, just none about here.  In these conditions it would be very easy to hide. } {Old London} {} {} {} {1.000} {}
+E { 9769} {w} {w} {8} {0} {} {1.000} {}
+E { 9772} {e} {e} {2} {0} {} {1.000} {}
+
+R { 9772} {0} {} {The Streets of London (w,s,n)} { } {You've arrived at a T-intersection deep in the heart of London's west end.  There is a scent of rottenness and decay in the air, although it seems more likely to be associated with the nearby River Thames than anything more sinister.  A signpost sits by the side of the road, pointing out your options for continuing.  } {Old London} {} {} {} {1.000} {}
+E { 9771} {w} {w} {8} {0} {} {1.000} {}
+E { 9773} {s} {s} {4} {0} {} {1.000} {}
+E { 9774} {n} {n} {1} {0} {} {1.000} {}
+
+R { 9773} {0} {} {The Streets of London (s,enter,n)} { } {The road runs from north to south in an unerring line through the darkness.  The fog is thick and acrid, and the lamp posts seem even less effective here than normal.  To the east stands a large building, lit up brightly, and buzzing with activity, which is quite unusual given the time of night.  Whatever is happening in there must be of some importance.  To the south you notice that the road becomes even darker than normal, the shadows taking hold of the street completely in that direction.  } {Old London} {} {} {} {1.000} {}
+E { 9772} {n} {n} {1} {0} {} {1.000} {}
+E { 9778} {s} {s} {4} {0} {} {1.000} {}
+E { 9779} {enter} {enter} {0} {0} {} {1.000} {}
+
+R { 9774} {0} {} {The Streets of London (gates,w,s,n)} { } {You're at the meeting point of two roads that form a t-junction here.  The junction itself is overshadowed totally by the huge set of gates that sit just east of here.  Some kind of huge manor house can be seen beyond them, rising above everything around it by a good three stories.  A signpost sits to one side, almost unnoticeable next to the grandeur of the house. } {Old London} {} {} {} {1.000} {}
+E { 9772} {s} {s} {4} {0} {} {1.000} {}
+E { 9776} {w} {w} {8} {0} {} {1.000} {}
+E { 9777} {n} {n} {1} {0} {} {1.000} {}
+E { 9775} {gates} {gates} {0} {0} {} {1.000} {}
+
+R { 9775} {0} {} {A Courtyard (gates)} { } {You've entered a courtyard of a fairly large looking manor house.  It seems extremely out of place here, with its neat garden and pleasant facade highly at odds with the streets you have left behind.  The fog is still quite heavy, so it is not easy to make out any real details about the place, but it could be assumed that someone quite wealthy lives here.  } {Old London} {} {} {} {1.000} {}
+E { 9774} {gates} {gates} {0} {0} {} {1.000} {}
+
+R { 9776} {0} {} {The Streets of London (w,e,n)} { } {You have arrived at a tiny junction between two roads.  To the north a small alleyway runs between the buildings, allowing you to head in that direction if you desire.  The larger road continues to both the east and west through the thick fog that engulfs everything.  Black shadows make it hard to see anything clearly beyond your immediate surroundings, so it is difficult to tell which is the better path to take.  A signpost stands just nearby, and may help guide you.  } {Old London} {} {} {} {1.000} {}
+E { 9774} {e} {e} {2} {0} {} {1.000} {}
+E { 9780} {w} {w} {8} {0} {} {1.000} {}
+E { 9781} {n} {n} {1} {0} {} {1.000} {}
+
+R { 9777} {0} {} {By the Banks of The River Thames (w,s)} { } {The road ends abruptly at the banks of the mighty River Thames, with only a small alleyway leading off to the west from here.  The fog hangs thickly over the water, giving it a strange and eerie appearance.  The river itself gurgles quietly as it passes, the sound disturbingly similar to that of the last dying gasps of a person.  There seems to be no way to cross it here, the far banks are not even visible.  A solitary signpost stands by the water's edge, a strange sentinel guiding you through the haze.   } {Old London} {} {} {} {1.000} {}
+E { 9774} {s} {s} {4} {0} {} {1.000} {}
+E { 9781} {w} {w} {8} {0} {} {1.000} {}
+
+R { 9778} {0} {} {The Streets of London (n)} { } {You've arrived at a dead-end.  The lane ends in a huge pile of garbage that is lined up against several old wooden fences, and the stench emanating from it is almost completely overpowering.  There is almost no light, the nearest source is some distance to the north of here, and the fog is thick, making the houses that surround the lane seem dark and foreboding.  } {Old London} {} {} {} {1.000} {}
+E { 9773} {n} {n} {1} {0} {} {1.000} {}
+
+R { 9779} {0} {} {Dorset Street Police Station (out)} { } {You've entered a busy police station.  Constables wander about performing a range of tasks, and even at this time of night it is a hub of activity, especially during these dark times.  A huge desk blocks off any easy access to the rest of the station\; the gate that sits beside it is being watched constantly.  You notice that the walls are covered in maps of the local area, as well as the usual assortment of wanted posters and general notices.  } {Old London} {} {} {} {1.000} {}
+E { 9773} {out} {out} {0} {0} {} {1.000} {}
+
+R { 9780} {0} {} {The Streets of London (e,w)} { } {Running from east to west, the street you have been following is dark and menacing.  Fog clouds your vision, eddying wildly about in front of you, distorting things in strange ways.  What sounds you can make out are muffled, giving the road an ethereal and unreal quality.  Shadows loom dark and deep all about you, making it hard to discern if anyone, or anything is hidden amongst them.  } {Old London} {} {} {} {1.000} {}
+E { 9776} {e} {e} {2} {0} {} {1.000} {}
+E { 9770} {w} {w} {8} {0} {} {1.000} {}
+
+R { 9781} {0} {} {Miller's Court (s,e)} { } {You've entered a tiny courtyard surrounded by bleak and dark buildings on all sides.  Two dark alleyways run out of here to the east and south, not that it is much brighter in the courtyard itself.  The only illumination seems to be coming from a window up on the second floor of one of the buildings.  Even with your own source of light combined with it, it's difficult to make out your surroundings.  As with everywhere else the fog is thick and makes it hard to see.  Shadows line the walls of the buildings, where almost anything could be concealed.  } {Old London} {} {} {} {1.000} {}
+E { 9776} {s} {s} {4} {0} {} {1.000} {}
+E { 9777} {e} {e} {2} {0} {} {1.000} {}
+
+R { 9782} {0} {} {Forest (d,n,w)} { } {Forest You look back the way you came and see a path amongst crushed leaves.  You are completely surrounded by trees of varying shapes and sizes.  The trees cast long shadows on the ground before you as you wander through this lovely forest. Birds sing in the branches above you.  Further to the north and west you see that the forest continues.  The forest is impenetrable to the south and east. } {Mud} {} {} {} {1.000} {}
+E { 4498} {n} {n} {1} {0} {} {1.000} {}
+E { 9783} {d} {d} {32} {0} {} {1.000} {}
+E { 9784} {w} {w} {8} {0} {} {1.000} {}
+
+R { 9783} {0} {} {a dark, damp tunnel (u,w)} { } {This is a dark tunnel carved from earth and stone. The tunnel runs west from here, away from the entrance. Thick webs dangle from the walls and fill the corners with spider egg nests. Where soil meets stone, spiders burrow and nest in the walls and small beady eyes glow dimly. } {Arachnecropolis} {gspiders} {} {} {1.000} {}
+E { 9782} {u} {u} {16} {0} {} {1.000} {}
+E { 9785} {w} {w} {8} {0} {} {1.000} {}
+
+R { 9784} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 9782} {e} {e} {2} {0} {} {1.000} {}
+
+R { 9785} {0} {} {a dark, damp tunnel (n,e)} { } {This is a dark tunnel carved from earth and stone. The tunnels run north and east from here around a corner. Sticky spider webs and green ichor coat the walls as sounds of skittering legs fill the air. The rough tunnel walls and floor are covered in scrapes, scratches and punctures from little spider legs. } {Arachnecropolis} {} {} {} {1.000} {}
+E { 9783} {e} {e} {2} {0} {} {1.000} {}
+E { 9786} {n} {n} {1} {0} {} {1.000} {}
+
+R { 9786} {0} {} {a dark, damp tunnel (sw,nw,s)} { } {This is a dark tunnel carved from earth and stone. The tunnels run in several directions from here as the tunnel forks out. Sticky spider webs and green ichor coat the walls and ceiling here. The tunnel is crudely carved by the jittery legs of these eight-legged creatures that call it home. } {Arachnecropolis} {} {} {} {1.000} {}
+E { 9785} {s} {s} {4} {0} {} {1.000} {}
+E { 9787} {sw} {sw} {12} {0} {} {1.000} {}
+E { 9789} {nw} {nw} {9} {0} {} {1.000} {}
+
+R { 9787} {0} {} {a dark, damp tunnel (ne)} { } {This is a dark tunnel carved from earth and stone. The tunnel runs only northeast from here. Webbing hangs everywhere here, full of debris and round egg sacs. The ground is uneven, littered with uneven stones that remain as little spiderling legs slowly erode the soil around them. } {Arachnecropolis} {} {} {} {1.000} {}
+E { 9786} {ne} {ne} {3} {0} {} {1.000} {}
+
+R { 9788} {0} {} {a dark, damp tunnel (se,e)} { } {This is a dark tunnel carved from earth and stone. The tunnels run east-southeast from here sharply. Thick webs dangle from the walls and fill the corners with spider egg nests. Where soil meets stone, spiders burrow and nest in the walls and small beady eyes glow dimly. } {Arachnecropolis} {} {} {} {1.000} {}
+E { 9789} {se} {se} {6} {0} {} {1.000} {}
+E { 9790} {e} {e} {2} {0} {} {1.000} {}
+
+R { 9789} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 9788} {nw} {nw} {9} {0} {} {1.000} {}
+E { 9786} {se} {se} {6} {0} {} {1.000} {}
+
+R { 9790} {0} {} {a dark, damp tunnel (s,w)} { } {This is a dark tunnel carved from earth and stone. The tunnels run west and south from here. Webbing hangs everywhere here, full of debris and round egg sacs. The ground is uneven, littered with uneven stones that remain as little spiderling legs slowly erode the soil around them. } {Arachnecropolis} {} {} {} {1.000} {}
+E { 9788} {w} {w} {8} {0} {} {1.000} {}
+E { 9791} {s} {s} {4} {0} {} {1.000} {}
+
+R { 9791} {0} {} {a dark, damp tunnel (n,e)} { } {This is a dark tunnel carved from earth and stone. The tunnels run north and east from here. Sticky spider webs and green ichor coat the walls as sounds of skittering legs fill the air. The rough tunnel walls and floor are covered in scrapes, scratches and punctures from little spider legs. } {Arachnecropolis} {} {} {} {1.000} {}
+E { 9790} {n} {n} {1} {0} {} {1.000} {}
+E { 9792} {e} {e} {2} {0} {} {1.000} {}
+
+R { 9792} {0} {} {a dark, damp tunnel (ne,w)} { } {This is a dark tunnel carved from earth and stone. The tunnels run west and northeast from here in a sharp turn. Thick webs dangle from the walls and fill the corners with spider egg nests. Where soil meets stone, spiders burrow and nest in the walls and small beady eyes glow dimly. } {Arachnecropolis} {} {} {} {1.000} {}
+E { 9791} {w} {w} {8} {0} {} {1.000} {}
+E { 9793} {ne} {ne} {3} {0} {} {1.000} {}
+
+R { 9793} {0} {} {a dark, damp tunnel (sw,s)} { } {This is a dark tunnel carved from earth and stone. The tunnels run south and southwest from here in a wide arc. Sticky spider webs and green ichor coat the walls and ceiling here. The tunnel is crudely carved by the jittery legs of these eight-legged creatures that call it home. } {Arachnecropolis} {} {} {} {1.000} {}
+E { 9792} {sw} {sw} {12} {0} {} {1.000} {}
+E { 9795} {s} {s} {4} {0} {} {1.000} {}
+
+R { 9794} {0} {} {a dark, damp tunnel (n,w)} { } {This is a dark tunnel carved from earth and stone. The tunnels run north and west from here. Sticky spider webs and green ichor coat the walls as sounds of skittering legs fill the air. The rough tunnel walls and floor are covered in scrapes, scratches and punctures from little spider legs. } {Arachnecropolis} {} {} {} {1.000} {}
+E { 9795} {n} {n} {1} {0} {} {1.000} {}
+E { 9796} {w} {w} {8} {0} {} {1.000} {}
+
+R { 9795} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 9794} {s} {s} {4} {0} {} {1.000} {}
+E { 9793} {n} {n} {1} {0} {} {1.000} {}
+
+R { 9796} {0} {} {a dark, damp tunnel (sw,e)} { } {This is a dark tunnel carved from earth and stone. The tunnels run east and southwest from here. Thick webs dangle from the walls and fill the corners with spider egg nests. Where soil meets stone, spiders burrow and nest in the walls and small beady eyes glow dimly. } {Arachnecropolis} {} {} {} {1.000} {}
+E { 9794} {e} {e} {2} {0} {} {1.000} {}
+E { 9797} {sw} {sw} {12} {0} {} {1.000} {}
+
+R { 9797} {0} {} {a dark, damp tunnel (ne,w)} { } {This is a dark tunnel carved from earth and stone. The tunnels run west and northeast from here around the corner. Thick webs dangle from the walls and fill the corners with spider egg nests. Where soil meets stone, spiders burrow and nest in the walls and small beady eyes glow dimly. } {Arachnecropolis} {} {} {} {1.000} {}
+E { 9796} {ne} {ne} {3} {0} {} {1.000} {}
+E { 9798} {w} {w} {8} {0} {} {1.000} {}
+
+R { 9798} {0} {} {a dark, damp tunnel (sw,e)} { } {This is a dark tunnel carved from earth and stone. The tunnels run east and southwest from here. Webbing hangs everywhere here, full of debris and round egg sacs. The ground is uneven, littered with uneven stones that remain as little spiderling legs slowly erode the soil around them. } {Arachnecropolis} {} {} {} {1.000} {}
+E { 9797} {e} {e} {2} {0} {} {1.000} {}
+E { 9799} {sw} {sw} {12} {0} {} {1.000} {}
+
+R { 9799} {0} {} {a dark, damp tunnel (ne,e)} { } {This is a dark tunnel carved from earth and stone. The tunnels run east and northeast from here. Webbing hangs everywhere here, full of debris and round egg sacs. The ground is uneven, littered with uneven stones that remain as little spiderling legs slowly erode the soil around them. } {Arachnecropolis} {} {} {} {1.000} {}
+E { 9798} {ne} {ne} {3} {0} {} {1.000} {}
+E { 9865} {e} {e} {2} {0} {} {1.000} {}
 
 R { 9800} {0} {} {9800} { } {} {} {} {} {} {1.000} {}
 E { 5931} {s} {s} {4} {0} {} {1.000} {}
@@ -47463,9 +47687,17 @@ R { 9862} {0} {} {9862} { } {} {} {} {} {} {1.000} {}
 E { 9861} {e} {e} {2} {0} {} {1.000} {}
 E { 9854} {w} {w} {8} {0} {} {1.000} {}
 
+R { 9863} {0} {} {a dark, damp tunnel (ne,w)} { } {This is a dark tunnel carved from earth and stone. The tunnels run west and northwest from here. Thick webs dangle from the walls and fill the corners with spider egg nests. Where soil meets stone, spiders burrow and nest in the walls and small beady eyes glow dimly. } {Arachnecropolis} {} {} {} {1.000} {}
+E { 9865} {w} {w} {8} {0} {} {1.000} {}
+E { 9914} {ne} {ne} {3} {0} {} {1.000} {}
+
 R { 9864} {0} {} {9864} { } {Following the comet's trail westward, you stumble upon a path leading up a snow-capped mountainside.  The mere sight it towering overhead leaves you in awe.  You wonder why you had not seen it a little earlier, but then in this chaotic realm, who knows if it is god playing tricks or it is by some other demonic hands.  Something about the large mountainous scenery makes you feel at peace here under the stars. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 5270} {e} {e} {2} {0} {} {1.000} {}
 E { 9866} {w} {w} {8} {0} {} {1.000} {}
+
+R { 9865} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 9863} {e} {e} {2} {0} {} {1.000} {}
+E { 9799} {w} {w} {8} {0} {} {1.000} {}
 
 R { 9866} {0} {} {9866} { } {Trudging up along the path, you reach a snow-capped plateau.  In front of you is a large white observatory with a line of people waiting to enter.  You hear them discussing things about stars, comets and other heavenly bodies.  Since you have traveled all this way, you might as well follow their lead and do a little star gazing inside.. } {Carina's Observatory} {} {} {} {1.000} {}
 E { 9864} {e} {e} {2} {0} {} {1.000} {}
@@ -47666,6 +47898,10 @@ E { 9913} {s} {s} {4} {0} {} {1.000} {}
 R { 9913} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 9912} {n} {n} {1} {0} {} {1.000} {}
 E { 9915} {s} {s} {4} {0} {} {1.000} {}
+
+R { 9914} {0} {} {a dark, damp tunnel (se,sw)} { } {This is a dark tunnel carved from earth and stone. The tunnels run southwest and southeast from here in an abrupt turn. Sticky spider webs and green ichor coat the walls as sounds of skittering legs fill the air. The rough tunnel walls and floor are covered in scrapes, scratches and punctures from little spider legs. } {Arachnecropolis} {} {} {} {1.000} {}
+E { 9863} {sw} {sw} {12} {0} {} {1.000} {}
+E {10004} {se} {se} {6} {0} {} {1.000} {}
 
 R { 9915} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 9913} {n} {n} {1} {0} {} {1.000} {}
@@ -48033,6 +48269,10 @@ E { 5565} {ne} {ne} {3} {0} {} {1.000} {}
 R {10003} {0} {<128>} {krath} { } {} {} {} {} {} {1.000} {}
 E { 5565} {n} {n} {1} {0} {} {1.000} {}
 
+R {10004} {0} {} {a dark, damp tunnel (nw,e)} { } {This is a dark tunnel carved from earth and stone. The tunnels run east and northwest from here. Sticky spider webs and green ichor coat the walls as sounds of skittering legs fill the air. The rough tunnel walls and floor are covered in scrapes, scratches and punctures from little spider legs. } {Arachnecropolis} {} {} {} {1.000} {}
+E { 9914} {nw} {nw} {9} {0} {} {1.000} {}
+E {10008} {e} {e} {2} {0} {} {1.000} {}
+
 R {10005} {0} {} {crafting} { } {A smooth, neatly swept brown brick road leads northwest into a cluster of compact brown and black buildings that seem to swim in a constant symphony of hammering metal.  The road continues south to an intersection with a narrow pebbled country lane and an undulating path of greenish red bricks.   } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E { 5895} {s} {s} {4} {0} {} {1.000} {}
 E {10006} {nw} {nw} {9} {0} {} {1.000} {}
@@ -48048,8 +48288,17 @@ R {10007} {0} {} {Crafter's Lane (s,ne)} { } {The brown brick road curves gently
 E {10006} {s} {s} {4} {0} {} {1.000} {}
 E {10011} {ne} {ne} {3} {0} {} {1.000} {}
 
+R {10008} {0} {} {a dark, damp tunnel (d,w)} { } {This is a dark tunnel carved from earth and stone. The tunnel stops here and a passageway leads down into the darkness. Sticky spider webs and green ichor coat the walls and ceiling here. The tunnel is crudely carved by the jittery legs of these eight-legged creatures that call it home. Green light pours in from a hole in the ground here. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10004} {w} {w} {8} {0} {} {1.000} {}
+E {10010} {d} {d} {32} {0} {} {1.000} {}
+
 R {10009} {0} {} {Satchel Storage (w)} { } {This building is filled with locked boxes, each showing the name of a resident of Foundation.  From time to time, people enter the building and deposit their satchel with the clerk, or retrieve it from him before heading out.  This must be where people's satchels are stored when they are linkdead or logged out.  Fascinating. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10006} {w} {w} {8} {0} {} {1.000} {}
+
+R {10010} {0} {} {the stone halls (u,n,w)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10008} {u} {u} {16} {0} {} {1.000} {}
+E {10015} {n} {n} {1} {0} {} {1.000} {}
+E {10017} {w} {w} {8} {0} {} {1.000} {}
 
 R {10011} {0} {} {Crafter's Lane (se,sw,nw)} { } {The enticing aroma that fills the northeastern part of Crafter's Lane seems to be coming from the southwestern squat building, which hangs a sign outside that reads "Cooking".  To the northwest is an identical brown building with the sign "Farming".  The brown brick road leads off to the southwest, where you can dimly hear the sound of metal striking metal. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10007} {sw} {sw} {12} {0} {} {1.000} {}
@@ -48075,9 +48324,16 @@ E {10013} {n} {n} {1} {0} {} {1.000} {}
 E {10020} {e} {e} {2} {0} {} {1.000} {}
 E { 5901} {kiln} {kiln} {0} {0} {} {1.000} {}
 
+R {10015} {0} {} {the stone halls (s)} { } {Endless stone block walls fill your vision as you peer along the halls. Adjacent hallways are almost impossible to see at a distance as they blend in with the stonework almost flawlessly. The occasional spider web lines a wall or corner in most places but obviously the spiders try to keep this place in pristine condition. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10010} {s} {s} {4} {0} {} {1.000} {}
+
 R {10016} {0} {} {Crafter's Lane (e,sw)} { } {The brown brick road curves gently here, turning southwest from the east/west route.  Just ahead to the southwest are two compact brown buildings, and to the east are two more.  The hammering from the southwest is almost deafening.  A few enormous oak trees can be seen just behind the gerberas that line the path. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10013} {e} {e} {2} {0} {} {1.000} {}
 E {10018} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {10017} {0} {} {the stone halls (w,e)} { } {Tall and smooth stone blocks are stacked intricately to form these stone halls. Whatever creatures constructed these halls did such with great care and skill. Upon every few stones are holes leading into darkness behind walls. The sounds of skittering and clacking fill the halls as the sound echoes across the stone. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10010} {e} {e} {2} {0} {} {1.000} {}
+E {10022} {w} {w} {8} {0} {} {1.000} {}
 
 R {10018} {0} {} {Crafter's Lane (nw,ne,se)} { } {The sound of hammering metal fills the air at the end of the brown brick road, which is lined by two identical brown buildings.  From the northwestern building hangs a large sign that reads "Blacksmithing" and from the southeastern building hangs a sign that reads "Mining".  The road also leads to the northeast. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10016} {ne} {ne} {3} {0} {} {1.000} {}
@@ -48094,6 +48350,10 @@ E {10014} {w} {w} {8} {0} {} {1.000} {}
 
 R {10021} {0} {} {The Wrangler Room (s)} { } {This wing of the crafting guild belongs to the chaos wranglers.  Giant high-backed chairs and elaborate furnishings are scattered throughout the room.  Within the chairs, or more commonly, standing up, or even more commonly, standing up on the furnishings and shouting, are the chaos wranglers.  They are discussing (at very high volume) various topics of interest such as gem capacities and efficient ways of gathering chaotic energy. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10013} {s} {s} {4} {0} {} {1.000} {}
+
+R {10022} {0} {} {the stone halls (n,e)} { } {Tall and smooth stone blocks are stacked intricately to form these stone halls. Whatever creatures constructed these halls did such with great care and skill. Upon every few stones are holes leading into darkness behind walls. The sounds of skittering and clacking fill the halls as the sound echoes across the stone. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10017} {e} {e} {2} {0} {} {1.000} {}
+E {10926} {n} {n} {1} {0} {} {1.000} {}
 
 R {10023} {0} {} {The Blacksmithing Room (e,se,forge)} { } {This wing of the crafting guild belongs to the blacksmiths.  Around you, there is a bustle of activity as blacksmiths come and go with crafting supplies, and a variety of metal weapons and armours.  Deeper into the wing, you can hear the fires of forges and the clanging of hammers on anvils. } {Crafter's Guild Halls} {} {} {} {1.000} {}
 E {10018} {se} {se} {6} {0} {} {1.000} {}
@@ -51926,6 +52186,54 @@ E {10923} {n} {n} {1} {0} {} {1.000} {}
 R {10925} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {10915} {ne} {ne} {3} {0} {} {1.000} {}
 
+R {10926} {0} {} {the stone halls (n,s,w)} { } {Rows and rows of carefully constructed stone blocks form the halls upon which you roam. Varying sized holes in every few blocks lead into the darkness behind them. Occasionally a small spiderling scurries by or the louder clacks of long spider legs can be heard. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10022} {s} {s} {4} {0} {} {1.000} {}
+E {10927} {n} {n} {1} {0} {} {1.000} {}
+E {10928} {w} {w} {8} {0} {} {1.000} {}
+
+R {10927} {0} {} {the stone halls (s,e)} { } {Rows and rows of carefully constructed stone blocks form the halls upon which you roam. Varying sized holes in every few blocks lead into the darkness behind them. Occasionally a small spiderling scurries by or the louder clacks of long spider legs can be heard. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10926} {s} {s} {4} {0} {} {1.000} {}
+E {12430} {e} {e} {2} {0} {} {1.000} {}
+
+R {10928} {0} {} {the stone halls (n,s,w,e)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10926} {e} {e} {2} {0} {} {1.000} {}
+E {10929} {n} {n} {1} {0} {} {1.000} {}
+E {10930} {s} {s} {4} {0} {} {1.000} {}
+E {10931} {w} {w} {8} {0} {} {1.000} {}
+
+R {10929} {0} {} {the stone halls (n,s)} { } {Endless stone block walls fill your vision as you peer along the halls. Adjacent hallways are almost impossible to see at a distance as they blend in with the stonework almost flawlessly. The occasional spider web lines a wall or corner in most places but obviously the spiders try to keep this place in pristine condition. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10928} {s} {s} {4} {0} {} {1.000} {}
+E {12426} {n} {n} {1} {0} {} {1.000} {}
+
+R {10930} {0} {} {the stone halls (n,s)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10928} {n} {n} {1} {0} {} {1.000} {}
+E {10933} {s} {s} {4} {0} {} {1.000} {}
+
+R {10931} {0} {} {the stone halls (w,e)} { } {Rows and rows of carefully constructed stone blocks form the halls upon which you roam. Varying sized holes in every few blocks lead into the darkness behind them. Occasionally a small spiderling scurries by or the louder clacks of long spider legs can be heard. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10928} {e} {e} {2} {0} {} {1.000} {}
+E {10932} {w} {w} {8} {0} {} {1.000} {}
+
+R {10932} {0} {} {the stone halls (e)} { } {Thick stone blocks littered with intricately placed holes fill your vision as far as your eye can see. This place is a masterwork in stone masonry. The arachnid masons of this realm must be intelligent enough to work stone or do so with magical means. You think you see a hallway in the distance but it might be a trick of your imagination as everything seems to look the same. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10931} {e} {e} {2} {0} {} {1.000} {}
+
+R {10933} {0} {} {the stone halls (n,s,w,e)} { } {Endless stone block walls fill your vision as you peer along the halls. Adjacent hallways are almost impossible to see at a distance as they blend in with the stonework almost flawlessly. The occasional spider web lines a wall or corner in most places but obviously the spiders try to keep this place in pristine condition. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10930} {n} {n} {1} {0} {} {1.000} {}
+E {10934} {s} {s} {4} {0} {} {1.000} {}
+E {10935} {w} {w} {8} {0} {} {1.000} {}
+E {10936} {e} {e} {2} {0} {} {1.000} {}
+
+R {10934} {0} {} {the stone halls (n,s)} { } {Endless stone block walls fill your vision as you peer along the halls. Adjacent hallways are almost impossible to see at a distance as they blend in with the stonework almost flawlessly. The occasional spider web lines a wall or corner in most places but obviously the spiders try to keep this place in pristine condition. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10933} {n} {n} {1} {0} {} {1.000} {}
+E {12267} {s} {s} {4} {0} {} {1.000} {}
+
+R {10935} {0} {} {the stone halls (w,e)} { } {Tall and smooth stone blocks are stacked intricately to form these stone halls. Whatever creatures constructed these halls did such with great care and skill. Upon every few stones are holes leading into darkness behind walls. The sounds of skittering and clacking fill the halls as the sound echoes across the stone. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10933} {e} {e} {2} {0} {} {1.000} {}
+E {11246} {w} {w} {8} {0} {} {1.000} {}
+
+R {10936} {0} {} {the stone halls (w,e)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10933} {w} {w} {8} {0} {} {1.000} {}
+E {11247} {e} {e} {2} {0} {} {1.000} {}
+
 R {10937} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 5963} {e} {e} {2} {0} {} {1.000} {}
 E { 5605} {w} {w} {8} {0} {} {1.000} {}
@@ -53274,6 +53582,20 @@ E {10584} {sw} {sw} {12} {0} {} {1.000} {}
 E {11256} {ne} {ne} {3} {0} {} {1.000} {}
 E {11286} {e} {e} {2} {0} {} {1.000} {}
 E {11288} {s} {s} {4} {0} {} {1.000} {}
+
+R {11246} {0} {} {the stone halls (s,e)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10935} {e} {e} {2} {0} {} {1.000} {}
+E {12269} {s} {s} {4} {0} {} {1.000} {}
+
+R {11247} {0} {} {the stone halls (s,w,e)} { } {Endless stone block walls fill your vision as you peer along the halls. Adjacent hallways are almost impossible to see at a distance as they blend in with the stonework almost flawlessly. The occasional spider web lines a wall or corner in most places but obviously the spiders try to keep this place in pristine condition. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10936} {w} {w} {8} {0} {} {1.000} {}
+E {11248} {s} {s} {4} {0} {} {1.000} {}
+E {11580} {e} {e} {2} {0} {} {1.000} {}
+
+R {11248} {0} {} {the stone halls (n,s,w)} { } {Endless stone block walls fill your vision as you peer along the halls. Adjacent hallways are almost impossible to see at a distance as they blend in with the stonework almost flawlessly. The occasional spider web lines a wall or corner in most places but obviously the spiders try to keep this place in pristine condition. } {Arachnecropolis} {} {} {} {1.000} {}
+E {11247} {n} {n} {1} {0} {} {1.000} {}
+E {11966} {s} {s} {4} {0} {} {1.000} {}
+E {12257} {w} {w} {8} {0} {} {1.000} {}
 
 R {11249} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 4051} {e} {e} {2} {0} {} {1.000} {}
@@ -54755,6 +55077,9 @@ E {11579} {w} {w} {8} {0} {} {1.000} {}
 
 R {11579} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11578} {e} {e} {2} {0} {} {1.000} {}
+
+R {11580} {0} {} {the stone halls (w)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {} {} {} {1.000} {}
+E {11247} {w} {w} {8} {0} {} {1.000} {}
 
 R {11581} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11575} {w} {w} {8} {0} {} {1.000} {}
@@ -56353,6 +56678,11 @@ E {11963} {u} {u} {16} {0} {} {1.000} {}
 R {11965} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11084} {door} {door} {0} {0} {} {1.000} {}
 
+R {11966} {0} {} {the stone halls (n,w,e)} { } {Tall and smooth stone blocks are stacked intricately to form these stone halls. Whatever creatures constructed these halls did such with great care and skill. Upon every few stones are holes leading into darkness behind walls. The sounds of skittering and clacking fill the halls as the sound echoes across the stone. } {Arachnecropolis} {} {} {} {1.000} {}
+E {11248} {n} {n} {1} {0} {} {1.000} {}
+E {12258} {w} {w} {8} {0} {} {1.000} {}
+E {12261} {e} {e} {2} {0} {} {1.000} {}
+
 R {11967} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {11968} {e} {e} {2} {0} {} {1.000} {}
 E {11976} {s} {s} {4} {0} {} {1.000} {}
@@ -57668,16 +57998,16 @@ E {12255} {ne} {ne} {3} {0} {} {1.000} {}
 R {12255} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {12254} {sw} {sw} {12} {0} {} {1.000} {}
 
-R {12256} {0} {} {} { } {} {} {} {} {} {1.000} {}
+R {12256} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {  778} {w} {w} {8} {0} {} {1.000} {}
 
-R {12257} {4104} {} {} { } {} {} {} {} {} {1.000} {}
-E {  799} {e} {e} {2} {0} {} {1.000} {}
-E {  798} {w} {w} {8} {0} {} {1.000} {}
+R {12257} {0} {} {the stone halls (e)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {} {} {} {1.000} {}
+E {11248} {e} {e} {2} {0} {} {1.000} {}
 
-R {12258} {4104} {} {} { } {} {} {} {} {} {1.000} {}
-E {  798} {e} {e} {2} {0} {} {1.000} {}
-E {  797} {w} {w} {8} {0} {} {1.000} {}
+R {12258} {0} {} {the stone halls (s,w,e)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {} {} {} {1.000} {}
+E {11966} {e} {e} {2} {0} {} {1.000} {}
+E {12264} {s} {s} {4} {0} {} {1.000} {}
+E {12267} {w} {w} {8} {0} {} {1.000} {}
 
 R {12259} {0} {} {A road leading north-south (n,s)} { } {You are on a road moving north-south.  A hill rises in the south, leading to cloud-covered mountains in the distance.  Steam floats lazily in the air, forming shapes that dissipate before you can name them.  Red and yellow flowers bloom along the roadside, offering bright splashes of color that draw the eye and please the senses. } {Mud} {} {} {} {1.000} {}
 E { 5626} {n} {n} {1} {0} {} {1.000} {}
@@ -57686,6 +58016,9 @@ E {12260} {s} {s} {4} {0} {} {1.000} {}
 R {12260} {0} {} {A strange hill (n)} { } {This hill is utterly devoid of plantation.  For all you know, you might be walking atop the bald head of a towering gray giant.  The ground slopes downward to the north and continues to rise toward a range of oddly shaped mountains to the south.  A thin set of railroad tracks crosses the road moving in an east-west direction. } {Mud} {} {} {} {1.000} {}
 E {12259} {n} {n} {1} {0} {} {1.000} {}
 
+R {12261} {0} {} {the stone halls (w)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {} {} {} {1.000} {}
+E {11966} {w} {w} {8} {0} {} {1.000} {}
+
 R {12262} {0} {} {At the base of a hill (n,w)} { } {Before you lies a well worn path leading up a gently rolling hill. Drifting in on the gentle summer breeze is the sound of fiddle,  faintly playing some kind of reel or jig.  Overhead starlings  and swallows dart about on the summer breeze.  Everything here is peaceful and quiet, sighing contentedly you feel at one with  nature, heck even the grass seems greener than usual.  } {Leprechaun Village} {} {} {} {1.000} {}
 E { 5260} {w} {w} {8} {0} {} {1.000} {}
 E { 6485} {n} {n} {1} {0} {} {1.000} {}
@@ -57693,6 +58026,10 @@ E { 6485} {n} {n} {1} {0} {} {1.000} {}
 R {12263} {0} {} {Outside the Toy Store (n,w)} { } {You are standing in front of a large brown building which bears a striking resemblance to a gingerbread house.  The windows are frosted over with fake spray snow, and on the door is a small plastic sign which reads : 'Now Open - Visitors Welcome'. } {Toy Store} {} {} {} {1.000} {}
 E { 5287} {w} {w} {8} {0} {} {1.000} {}
 E { 5897} {n} {n} {1} {0} {} {1.000} {}
+
+R {12264} {0} {} {the stone halls (n,e)} { } {Rows and rows of carefully constructed stone blocks form the halls upon which you roam. Varying sized holes in every few blocks lead into the darkness behind them. Occasionally a small spiderling scurries by or the louder clacks of long spider legs can be heard. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12258} {n} {n} {1} {0} {} {1.000} {}
+E {12420} {e} {e} {2} {0} {} {1.000} {}
 
 R {12265} {0} {} {Sandy Path (s,n)} { } {You have stumbled upon a sandy path.  Things don't seem quite as chaotic here, yet things in Chaos aren't always as they seem to be. As you look to the east, you can see a forest. The path here continues to the south. } {Forest of Wolves} {} {} {} {1.000} {}
 E { 5289} {n} {n} {1} {0} {} {1.000} {}
@@ -57703,12 +58040,29 @@ E {12265} {n} {n} {1} {0} {} {1.000} {}
 E { 5603} {w} {w} {8} {0} {} {1.000} {}
 E { 5604} {ne} {ne} {3} {0} {} {1.000} {}
 
+R {12267} {0} {} {the stone halls (n,e)} { } {Thick stone blocks littered with intricately placed holes fill your vision as far as your eye can see. This place is a masterwork in stone masonry. The arachnid masons of this realm must be intelligent enough to work stone or do so with magical means. You think you see a hallway in the distance but it might be a trick of your imagination as everything seems to look the same. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12258} {e} {e} {2} {0} {} {1.000} {}
+E {10934} {n} {n} {1} {0} {} {1.000} {}
+
 R {12268} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 5629} {e} {e} {2} {0} {} {1.000} {}
+
+R {12269} {0} {} {the stone halls (n,s)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {} {} {} {1.000} {}
+E {11246} {n} {n} {1} {0} {} {1.000} {}
+E {12271} {s} {s} {4} {0} {} {1.000} {}
 
 R {12270} {0} {} {-=  A well-travelled road  =- (w,e)} { } {-=  A well-travelled road  =- The well-travelled road runs east-west.  Nothing really out of the ordinary seems to be happening.  Although, there are large purple-lined clouds, lazily drifting by in the sky.  A brick building is farther ahead northeast. } {Barney's Studio} {} {} {} {1.000} {}
 E { 4008} {w} {w} {8} {0} {} {1.000} {}
 E {12273} {e} {e} {2} {0} {} {1.000} {}
+
+R {12271} {0} {} {the stone halls (n,s,e)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12269} {n} {n} {1} {0} {} {1.000} {}
+E {12272} {s} {s} {4} {0} {} {1.000} {}
+E {12414} {e} {e} {2} {0} {} {1.000} {}
+
+R {12272} {0} {} {the stone halls (n,e)} { } {Endless stone block walls fill your vision as you peer along the halls. Adjacent hallways are almost impossible to see at a distance as they blend in with the stonework almost flawlessly. The occasional spider web lines a wall or corner in most places but obviously the spiders try to keep this place in pristine condition. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12271} {n} {n} {1} {0} {} {1.000} {}
+E {12416} {e} {e} {2} {0} {} {1.000} {}
 
 R {12273} {0} {} {-=  A well-travelled road  =- (w,e)} { } {-=  A well-travelled road  =- The well-travelled road continues east-west.  Tall oak trees line the sides of the road, a sprinkling of purple flowers dot the grass surrounding the trees.  The hustle and bustle noises are growing louder. } {Barney's Studio} {} {} {} {1.000} {}
 E {12270} {w} {w} {8} {0} {} {1.000} {}
@@ -58282,8 +58636,15 @@ E {12412} {e} {e} {2} {0} {} {1.000} {}
 E {12579} {nw} {nw} {9} {0} {} {1.000} {}
 E {12580} {n} {n} {1} {0} {} {1.000} {}
 
+R {12414} {0} {} {the stone halls (w)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12271} {w} {w} {8} {0} {} {1.000} {}
+
 R {12415} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {11600} {s} {s} {4} {0} {} {1.000} {}
+
+R {12416} {0} {} {the stone halls (s,w)} { } {Rows and rows of carefully constructed stone blocks form the halls upon which you roam. Varying sized holes in every few blocks lead into the darkness behind them. Occasionally a small spiderling scurries by or the louder clacks of long spider legs can be heard. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12272} {w} {w} {8} {0} {} {1.000} {}
+E {12419} {s} {s} {4} {0} {} {1.000} {}
 
 R {12417} {0} {} {} { } {} {} {jedi armory} {} {} {1.000} {}
 E { 5527} {w} {w} {8} {0} {} {1.000} {}
@@ -58291,17 +58652,66 @@ E { 5527} {w} {w} {8} {0} {} {1.000} {}
 R {12418} {0} {} {A Dusty Alcove (w)} { } {A Dusty Alcove. There are two alcoves set to the sides of the main entrance hall, this one and another symmetrically opposite. There is a small box here which serves as a place to store disjunction items collected by mages all over the Three Kingdoms. } {Mages} {} {} {} {1.000} {}
 E {  609} {w} {w} {8} {0} {} {1.000} {}
 
+R {12419} {0} {} {the stone halls (n)} { } {Endless stone block walls fill your vision as you peer along the halls. Adjacent hallways are almost impossible to see at a distance as they blend in with the stonework almost flawlessly. The occasional spider web lines a wall or corner in most places but obviously the spiders try to keep this place in pristine condition. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12416} {n} {n} {1} {0} {} {1.000} {}
+
+R {12420} {0} {} {the stone halls (w,e)} { } {Tall and smooth stone blocks are stacked intricately to form these stone halls. Whatever creatures constructed these halls did such with great care and skill. Upon every few stones are holes leading into darkness behind walls. The sounds of skittering and clacking fill the halls as the sound echoes across the stone. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12264} {w} {w} {8} {0} {} {1.000} {}
+E {12421} {e} {e} {2} {0} {} {1.000} {}
+
+R {12421} {0} {} {the stone halls (s,w)} { } {Tall and smooth stone blocks are stacked intricately to form these stone halls. Whatever creatures constructed these halls did such with great care and skill. Upon every few stones are holes leading into darkness behind walls. The sounds of skittering and clacking fill the halls as the sound echoes across the stone. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12420} {w} {w} {8} {0} {} {1.000} {}
+E {12422} {s} {s} {4} {0} {} {1.000} {}
+
+R {12422} {0} {} {the stone halls (d,n)} { } {Thick stone blocks littered with intricately placed holes fill your vision as far as your eye can see. This place is a masterwork in stone masonry. The arachnid masons of this realm must be intelligent enough to work stone or do so with magical means. You think you see a hallway in the distance but it might be a trick of your imagination as everything seems to look the same. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12421} {n} {n} {1} {0} {} {1.000} {}
+E {12425} {d} {d} {32} {0} {} {1.000} {}
+
 R {12423} {0} {} {Swirling Vapors (e)} { } {You stand on the edge of the world, behind you the warmth of the mage tower and in front of a mass of swirling vapors and clouds from another world or other dimension.  Clearly a tremendous spell has been cast to bring this link into existence.  Now and again, small objects such as pebbles and stones are flung from the vapors and clatter to the floor.  You wonder if this room is part of the construction of the wonderful telekinesis or secure shelter spells, linking this existence with another plane. } {Mages} {} {} {} {1.000} {}
 E {  623} {e} {e} {2} {0} {} {1.000} {}
 
 R {12424} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {    1} {home} {home} {0} {0} {} {1.000} {}
 
+R {12425} {0} {} {the Weaver's Halls (u,e)} { } {The labyrinth of hallways leads you on and on with no clear direction to the exit.. if any exists. Massive holes in the stone walls create an odd glow on the opposite walls as some sections have more holes than others. You get the feeling that you'll run into several orb-weavers before the tunnels see an end. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12422} {u} {u} {16} {0} {} {1.000} {}
+E {12434} {e} {e} {2} {0} {} {1.000} {}
+
+R {12426} {0} {} {the stone halls (s,w)} { } {Thick stone blocks littered with intricately placed holes fill your vision as far as your eye can see. This place is a masterwork in stone masonry. The arachnid masons of this realm must be intelligent enough to work stone or do so with magical means. You think you see a hallway in the distance but it might be a trick of your imagination as everything seems to look the same. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10929} {s} {s} {4} {0} {} {1.000} {}
+E {12427} {w} {w} {8} {0} {} {1.000} {}
+
+R {12427} {0} {} {the stone halls (s,w,e)} { } {Tall and smooth stone blocks are stacked intricately to form these stone halls. Whatever creatures constructed these halls did such with great care and skill. Upon every few stones are holes leading into darkness behind walls. The sounds of skittering and clacking fill the halls as the sound echoes across the stone. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12426} {e} {e} {2} {0} {} {1.000} {}
+E {12428} {s} {s} {4} {0} {} {1.000} {}
+E {12429} {w} {w} {8} {0} {} {1.000} {}
+
+R {12428} {0} {} {the stone halls (n)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12427} {n} {n} {1} {0} {} {1.000} {}
+
+R {12429} {0} {} {the stone halls (e)} { } {Endless stone block walls fill your vision as you peer along the halls. Adjacent hallways are almost impossible to see at a distance as they blend in with the stonework almost flawlessly. The occasional spider web lines a wall or corner in most places but obviously the spiders try to keep this place in pristine condition. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12427} {e} {e} {2} {0} {} {1.000} {}
+
+R {12430} {0} {} {the stone halls (w,e)} { } {Tall and smooth stone blocks are stacked intricately to form these stone halls. Whatever creatures constructed these halls did such with great care and skill. Upon every few stones are holes leading into darkness behind walls. The sounds of skittering and clacking fill the halls as the sound echoes across the stone. } {Arachnecropolis} {} {} {} {1.000} {}
+E {10927} {w} {w} {8} {0} {} {1.000} {}
+E {12433} {e} {e} {2} {0} {} {1.000} {}
+
 R {12431} {0} {} {On a small balcony (e)} { } {As you step out from the darkness in the study, your body is engulfed in warm and bright sunlight. For a moment your eyes becomes watery but in seconds your sight returns to normal. The balcony is made out of white marble and feels warm at your touch. You gaze at the wonderful view that is before you and it is truly breathtaking. To the east you see the small staircase leading back down into the tower itself. } {Mages} {} {} {} {1.000} {}
 E {  624} {e} {e} {2} {0} {} {1.000} {}
 
 R {12432} {0} {} {Lost in darkness (sw)} { } {Lost in darkness. You are in the darkness outside the boundaries of the safe glade. A chill runs through your body and you start to wonder if this was a wise decision. You look back at the glade and feel a longing for warmth and safety once more. Ahead of you the darkness and mist stretch forward as far as you can see. } {Mages} {} {} {} {1.000} {}
 E {  621} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {12433} {0} {} {the stone halls (w)} { } {Tall and smooth stone blocks are stacked intricately to form these stone halls. Whatever creatures constructed these halls did such with great care and skill. Upon every few stones are holes leading into darkness behind walls. The sounds of skittering and clacking fill the halls as the sound echoes across the stone. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12430} {w} {w} {8} {0} {} {1.000} {}
+
+R {12434} {0} {} {the Weaver's Halls (w,e)} { } {The labyrinth of hallways leads you on and on with no clear direction to the exit.. if any exists. Massive holes in the stone walls create an odd glow on the opposite walls as some sections have more holes than others. You get the feeling that you'll run into several orb-weavers before the tunnels see an end. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12425} {w} {w} {8} {0} {} {1.000} {}
+E {12435} {e} {e} {2} {0} {} {1.000} {}
+
+R {12435} {0} {} {the Weaver's Halls (w,e)} { } {The Weaver's halls wind almost maze-like through this floor. The stone walls are littered with monster-sized holes so big you could stand in twice over end. The halls glow with an eerie green light which seems to seep from the cracks and walls. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12434} {w} {w} {8} {0} {} {1.000} {}
+E {12578} {e} {e} {2} {0} {} {1.000} {}
 
 R {12436} {0} {} {Lost in darkness (se)} { } {Lost in darkness. You are in the darkness outside the boundaries of the safe glade. A chill runs through your body and you start to wonder if this was a wise decision. You look back at the glade and feel a longing for warmth and safety once more. Ahead of you the darkness and mist stretch forward as far as you can see. } {Mages} {} {} {} {1.000} {}
 E {  618} {se} {se} {6} {0} {} {1.000} {}
@@ -58941,6 +59351,10 @@ E {12583} {ne} {ne} {3} {0} {} {1.000} {}
 R {12577} {0} {} {*** The Ruins of Niroth *** (w)} { } {Thick and hard-packed snow covers the ground. Your every step leaves tracks for anyone to see. A few low and broken walls of stone form a vague square around you and the taller stack of stones at the far end of the square might have once been an altar. Although it's destroyed beyond recognition now, this looks like it was once a temple of some sort. Whatever diety the citizens of Niroth worshipped, you can only hope they found their holy reward in death. } {The Ruins of Niroth} {} {} {} {1.000} {}
 E {12409} {w} {w} {8} {0} {} {1.000} {}
 
+R {12578} {0} {} {the Weaver's Halls (w,e)} { } {Big ominous holes in the stone walls create a somewhat terrifying trek through the Weaver's halls. It's unclear if you're getting close to the exit or if some giant bugs are going to pop out and have a meal of you. At least the green glow from the halls allows you to see where you are going. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12435} {w} {w} {8} {0} {} {1.000} {}
+E {12614} {e} {e} {2} {0} {} {1.000} {}
+
 R {12579} {0} {} {*** The Ruins of Niroth *** (e,nw,se,n)} { } {Jagged fragments of broken stone jut out from the snow-covered ground, the only remnants of the once bustling town of Niroth. A freezing wind howls down through this valley, the lonesome sound echoing off the white mountains that border this place in all directions. A few tree stumps, half-buried in the ice, suggest there might have once been timber here, but now there's nothing but frozen desolation. } {The Ruins of Niroth} {} {} {} {1.000} {}
 E {12413} {se} {se} {6} {0} {} {1.000} {}
 E {12580} {e} {e} {2} {0} {} {1.000} {}
@@ -59142,6 +59556,11 @@ E {12597} {s} {s} {4} {0} {} {1.000} {}
 
 R {12613} {0} {} {In the rock quarry (se)} { } {This large pit serves as the local rock quarry. When the smurfs need rocks for their construction projects, this is where they get them. Gray and brown rocks of all shapes and sizes surround you. Most of them look pretty heavy. The sun shines brightly overhead, making it a hot day to work around here. } {Smurfland} {} {} {} {1.000} {}
 E {12385} {se} {se} {6} {0} {} {1.000} {}
+
+R {12614} {0} {} {the Weaver's Halls (s,w,e)} { } {Long straight hallways fill your vision and bottleneck your movement through treacherous death traps by means of arachnid orb-weavers. The stone halls strech on and take abrupt turns in the distance. The massive holes in the stone walls creep you out as if something is going to pop out at any moment. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12578} {w} {w} {8} {0} {} {1.000} {}
+E {12821} {s} {s} {4} {0} {} {1.000} {}
+E {12824} {e} {e} {2} {0} {} {1.000} {}
 
 R {12615} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 7317} {out} {out} {0} {0} {} {1.000} {}
@@ -60053,12 +60472,22 @@ R {12820} {0} {} {A Maelstrom of Energy} { } {You are adrift in a maelstrom of e
 E {  664} {s} {s} {4} {0} {} {1.000} {}
 E {12825} {portal} {portal} {0} {0} {} {1.000} {}
 
+R {12821} {0} {} {the Weaver's Halls (n,w,e)} { } {While walking through these hallways, your mind is filled with fear as if a Weaver will pop out and devour you at any moment. Luckily the long hallways give clear visibility except for the sharp-angled corners leading down other hallways. There are suspiciously large holes in the stone walls here. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12614} {n} {n} {1} {0} {} {1.000} {}
+E {12853} {w} {w} {8} {0} {} {1.000} {}
+E {12856} {e} {e} {2} {0} {} {1.000} {}
+
 R {12822} {0} {} {Hallway in the Training Grounds (ne,sw)} { } {This is a long dark corridor that stretches between the drow training arenas.  Frequently you can find soldiers and other warriors resting here after a long battle. } {The Drow Kingdom of fe dar Shad} {} {} {} {1.000} {}
 E {12818} {sw} {sw} {12} {0} {} {1.000} {}
 E {12823} {ne} {ne} {3} {0} {} {1.000} {}
 
 R {12823} {0} {} {drwm} { } {This is the Advanced Training area, the strong Drow warriors come here to test their skills against equal opponents. There is a small sign attached to the wall here. } {The Drow Kingdom of fe dar Shad} {} {} {} {1.000} {}
 E {12822} {out} {out} {0} {0} {} {1.000} {}
+
+R {12824} {0} {} {the Weaver's Halls (s,w,e)} { } {The labyrinth of hallways leads you on and on with no clear direction to the exit.. if any exists. Massive holes in the stone walls create an odd glow on the opposite walls as some sections have more holes than others. You get the feeling that you'll run into several orb-weavers before the tunnels see an end. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12614} {w} {w} {8} {0} {} {1.000} {}
+E {12856} {s} {s} {4} {0} {} {1.000} {}
+E {12935} {e} {e} {2} {0} {} {1.000} {}
 
 R {12825} {0} {} {Path Near a Temple (portal,se)} { } {You are on a small path just outside a great temple, a temple from a civilization thriving. You can hear the sounds of many monks humming inside this large temple, a testament to the value the inhabitants of this region put on faith and mysticism. A small squirrel runs by your feet, runs up a tree, and disappears. You sense the presence of other forms of life, but beyond the tracks, nothing else appears. } {The Overlands} {overlands} {} {} {1.000} {}
 E {12820} {portal} {portal} {0} {0} {} {1.000} {}
@@ -60178,12 +60607,20 @@ R {12852} {0} {} {Rocky Road (e,nw)} { } {You are on a rocky road leading up tow
 E {12851} {nw} {nw} {9} {0} {} {1.000} {}
 E {12854} {e} {e} {2} {0} {} {1.000} {}
 
+R {12853} {0} {} {the Weaver's Halls (w,e)} { } {The labyrinth of hallways leads you on and on with no clear direction to the exit.. if any exists. Massive holes in the stone walls create an odd glow on the opposite walls as some sections have more holes than others. You get the feeling that you'll run into several orb-weavers before the tunnels see an end. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12821} {e} {e} {2} {0} {} {1.000} {}
+E {12872} {w} {w} {8} {0} {} {1.000} {}
+
 R {12854} {0} {} {Mountain Trail (e,w)} { } {You are on a mountain trail leading away from the great forest. The trail is getting steeper and steeper as you climb higher up the mountain, towards greater things. Just as you turn your head, you see a small rabbit being jumped upon by a large fox, and the rabbit dies. Seeing this makes you realize how precious life is, and how much you value your own existence. } {The Overlands} {} {} {} {1.000} {}
 E {12852} {w} {w} {8} {0} {} {1.000} {}
 E {12855} {e} {e} {2} {0} {} {1.000} {}
 
 R {12855} {0} {} {Mountain Trail (mountain,w)} { } {You are on a mountain trail leading away from the great forest. The trail is no longer steep, as you have reached the end of the trail. Your passage is slightly hindered by several large boulders, making any advancement difficult. The air seems cool and sweet, fresh  mountain air always makes you smile. A strange moon looms overhead. } {The Overlands} {} {} {} {1.000} {}
 E {12854} {w} {w} {8} {0} {} {1.000} {}
+
+R {12856} {0} {} {the Weaver's Halls (n,w)} { } {The Weaver's halls wind almost maze-like through this floor. The stone walls are littered with monster-sized holes so big you could stand in twice over end. The halls glow with an eerie green light which seems to seep from the cracks and walls. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12821} {w} {w} {8} {0} {} {1.000} {}
+E {12824} {n} {n} {1} {0} {} {1.000} {}
 
 R {12857} {0} {} {Forest Trail (e,nw)} { } {You are on a small trail amidst the thick, lush forest of the Overlands. The trees are very dense here, making it hard for you to veer off the trail. Somewhere in the not too far off distance, you can hear the sound of some animal being attacked, running and struggling for its life, against the cruel onslaught of some foe. A strange moon looms overhead. } {The Overlands} {} {} {} {1.000} {}
 E {12847} {nw} {nw} {9} {0} {} {1.000} {}
@@ -60243,6 +60680,17 @@ E {12871} {w} {w} {8} {0} {} {1.000} {}
 R {12871} {0} {} {Calm River (cave,e)} { } {You are wading along a little river around a cave. The river flows around slowly in a circular pattern, never ceasing. The water is almost up to your waist, making walking very difficult. The sweet song of a hummingbird can be heard off in the distance.  A strange moon looms overhead. } {The Overlands} {} {} {} {1.000} {}
 E {12870} {e} {e} {2} {0} {} {1.000} {}
 
+R {12872} {0} {} {the Weaver's Halls (s,w,e)} { } {Long straight hallways fill your vision and bottleneck your movement through treacherous death traps by means of arachnid orb-weavers. The stone halls strech on and take abrupt turns in the distance. The massive holes in the stone walls creep you out as if something is going to pop out at any moment. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12853} {e} {e} {2} {0} {} {1.000} {}
+E {12873} {s} {s} {4} {0} {} {1.000} {}
+E {12884} {w} {w} {8} {0} {} {1.000} {}
+
+R {12873} {0} {} {the Weaver's Halls (n,s,w,e)} { } {While walking through these hallways, your mind is filled with fear as if a Weaver will pop out and devour you at any moment. Luckily the long hallways give clear visibility except for the sharp-angled corners leading down other hallways. There are suspiciously large holes in the stone walls here. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12872} {n} {n} {1} {0} {} {1.000} {}
+E {12916} {w} {w} {8} {0} {} {1.000} {}
+E {12919} {s} {s} {4} {0} {} {1.000} {}
+E {12920} {e} {e} {2} {0} {} {1.000} {}
+
 R {12874} {0} {} {A path through the forest (se,w,n)} { } {Sunlight shines down upon this area, generously feeding the many plants growing here.  Emerald-green grass and thorny blackberry bushes lie along the side of this path, struggling to branch out in shrubs and patches along this dirt road.  The giant trees part to allow access to the majestic clearing ahead.  That sweet aroma that has spread across the forest intensifies here, overcoming every other scent.  It's starting to give you a natural high. } {Enchanted Spring} {} {} {} {1.000} {}
 E { 5440} {se} {se} {6} {0} {} {1.000} {}
 E {12876} {w} {w} {8} {0} {} {1.000} {}
@@ -60280,6 +60728,10 @@ E {12883} {n} {n} {1} {0} {} {1.000} {}
 
 R {12883} {0} {} {Prayer room (s)} { } {This spacious room is made out of glowing white marble stone. Gigantic pillars of granite stretch from the immaculately clean floor, to the domed ceiling.  Several dozen benches sit side by side in rows, covering nearly every inch of this prayer room.  A lavender rug lays sprawled across the floor, leading from the entryway to a giant golden altar.  A holy presence emanates from the shrine itself, causing a sensual feeling of peace and complete serenity to overwhelm your mind, body, and soul. } {Enchanted Spring} {} {} {} {1.000} {}
 E {12882} {s} {s} {4} {0} {} {1.000} {}
+
+R {12884} {0} {} {the Weaver's Halls (s,e)} { } {Long straight hallways fill your vision and bottleneck your movement through treacherous death traps by means of arachnid orb-weavers. The stone halls strech on and take abrupt turns in the distance. The massive holes in the stone walls creep you out as if something is going to pop out at any moment. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12872} {e} {e} {2} {0} {} {1.000} {}
+E {12916} {s} {s} {4} {0} {} {1.000} {}
 
 R {12885} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 4615} {s} {s} {4} {0} {} {1.000} {}
@@ -60397,14 +60849,484 @@ E {  801} {out} {out} {0} {0} {} {1.000} {}
 R {12915} {0} {} {In a dark forest (e)} { } {Neatly stacked piles of lumber sit ready for the watchtower construction project to the southeast. A sawhorse stands in the middle of the path and sawdust covers the ground around it. The watchtower rises into the nearby treetops but you'll need to get closer if you want a better look. } {Smurfland} {} {} {} {1.000} {}
 E {12393} {e} {e} {2} {0} {} {1.000} {}
 
+R {12916} {0} {} {the Weaver's Halls (n,s,w,e)} { } {The Weaver's halls wind almost maze-like through this floor. The stone walls are littered with monster-sized holes so big you could stand in twice over end. The halls glow with an eerie green light which seems to seep from the cracks and walls. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12884} {n} {n} {1} {0} {} {1.000} {}
+E {12917} {s} {s} {4} {0} {} {1.000} {}
+E {12918} {w} {w} {8} {0} {} {1.000} {}
+E {12873} {e} {e} {2} {0} {} {1.000} {}
+
+R {12917} {0} {} {the Weaver's Halls (n,s)} { } {The labyrinth of hallways leads you on and on with no clear direction to the exit.. if any exists. Massive holes in the stone walls create an odd glow on the opposite walls as some sections have more holes than others. You get the feeling that you'll run into several orb-weavers before the tunnels see an end. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12916} {n} {n} {1} {0} {} {1.000} {}
+E {12926} {s} {s} {4} {0} {} {1.000} {}
+
+R {12918} {0} {} {the Weaver's Halls (e)} { } {The Weaver's halls wind almost maze-like through this floor. The stone walls are littered with monster-sized holes so big you could stand in twice over end. The halls glow with an eerie green light which seems to seep from the cracks and walls. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12916} {e} {e} {2} {0} {} {1.000} {}
+
+R {12919} {0} {} {the Weaver's Halls (n,s)} { } {The Weaver's halls wind almost maze-like through this floor. The stone walls are littered with monster-sized holes so big you could stand in twice over end. The halls glow with an eerie green light which seems to seep from the cracks and walls. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12873} {n} {n} {1} {0} {} {1.000} {}
+E {12924} {s} {s} {4} {0} {} {1.000} {}
+
+R {12920} {0} {} {the Weaver's Halls (s,w)} { } {The labyrinth of hallways leads you on and on with no clear direction to the exit.. if any exists. Massive holes in the stone walls create an odd glow on the opposite walls as some sections have more holes than others. You get the feeling that you'll run into several orb-weavers before the tunnels see an end. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12873} {w} {w} {8} {0} {} {1.000} {}
+E {12921} {s} {s} {4} {0} {} {1.000} {}
+
+R {12921} {0} {} {the Weaver's Halls (n,s)} { } {Big ominous holes in the stone walls create a somewhat terrifying trek through the Weaver's halls. It's unclear if you're getting close to the exit or if some giant bugs are going to pop out and have a meal of you. At least the green glow from the halls allows you to see where you are going. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12920} {n} {n} {1} {0} {} {1.000} {}
+E {12922} {s} {s} {4} {0} {} {1.000} {}
+
+R {12922} {0} {} {the Weaver's Halls (n,w,e)} { } {While walking through these hallways, your mind is filled with fear as if a Weaver will pop out and devour you at any moment. Luckily the long hallways give clear visibility except for the sharp-angled corners leading down other hallways. There are suspiciously large holes in the stone walls here. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12921} {n} {n} {1} {0} {} {1.000} {}
+E {12924} {w} {w} {8} {0} {} {1.000} {}
+E {12925} {e} {e} {2} {0} {} {1.000} {}
+
 R {12923} {0} {} {In Slimy's house (e)} { } {You think to yourself that this house is really disgusting. There's some kind of slimy mucous all over everything. The walls, the furniture, and the floors are all covered in a yellowish-greenish-brownish glaze. } {Smurfland} {} {} {} {1.000} {}
 E {12383} {e} {e} {2} {0} {} {1.000} {}
+
+R {12924} {0} {} {the Weaver's Halls (n,e)} { } {While walking through these hallways, your mind is filled with fear as if a Weaver will pop out and devour you at any moment. Luckily the long hallways give clear visibility except for the sharp-angled corners leading down other hallways. There are suspiciously large holes in the stone walls here. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12922} {e} {e} {2} {0} {} {1.000} {}
+E {12919} {n} {n} {1} {0} {} {1.000} {}
+
+R {12925} {0} {} {the Weaver's Halls (n,w)} { } {The Weaver's halls wind almost maze-like through this floor. The stone walls are littered with monster-sized holes so big you could stand in twice over end. The halls glow with an eerie green light which seems to seep from the cracks and walls. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12922} {w} {w} {8} {0} {} {1.000} {}
+E {12928} {n} {n} {1} {0} {} {1.000} {}
+
+R {12926} {0} {} {the Weaver's Halls (n,w)} { } {Big ominous holes in the stone walls create a somewhat terrifying trek through the Weaver's halls. It's unclear if you're getting close to the exit or if some giant bugs are going to pop out and have a meal of you. At least the green glow from the halls allows you to see where you are going. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12917} {n} {n} {1} {0} {} {1.000} {}
+E {12927} {w} {w} {8} {0} {} {1.000} {}
+
+R {12927} {0} {} {the Weaver's Halls (e)} { } {Long straight hallways fill your vision and bottleneck your movement through treacherous death traps by means of arachnid orb-weavers. The stone halls strech on and take abrupt turns in the distance. The massive holes in the stone walls creep you out as if something is going to pop out at any moment. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12926} {e} {e} {2} {0} {} {1.000} {}
+
+R {12928} {0} {} {the Weaver's Halls (n,s)} { } {While walking through these hallways, your mind is filled with fear as if a Weaver will pop out and devour you at any moment. Luckily the long hallways give clear visibility except for the sharp-angled corners leading down other hallways. There are suspiciously large holes in the stone walls here. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12925} {s} {s} {4} {0} {} {1.000} {}
+E {12929} {n} {n} {1} {0} {} {1.000} {}
+
+R {12929} {0} {} {the Weaver's Halls (s,e)} { } {Big ominous holes in the stone walls create a somewhat terrifying trek through the Weaver's halls. It's unclear if you're getting close to the exit or if some giant bugs are going to pop out and have a meal of you. At least the green glow from the halls allows you to see where you are going. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12928} {s} {s} {4} {0} {} {1.000} {}
+E {12930} {e} {e} {2} {0} {} {1.000} {}
+
+R {12930} {0} {} {the Weaver's Halls (s,w,e)} { } {While walking through these hallways, your mind is filled with fear as if a Weaver will pop out and devour you at any moment. Luckily the long hallways give clear visibility except for the sharp-angled corners leading down other hallways. There are suspiciously large holes in the stone walls here. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12929} {w} {w} {8} {0} {} {1.000} {}
+E {12931} {s} {s} {4} {0} {} {1.000} {}
+E {12932} {e} {e} {2} {0} {} {1.000} {}
+
+R {12931} {0} {} {the Weaver's Halls (n,s)} { } {The Weaver's halls wind almost maze-like through this floor. The stone walls are littered with monster-sized holes so big you could stand in twice over end. The halls glow with an eerie green light which seems to seep from the cracks and walls. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12930} {n} {n} {1} {0} {} {1.000} {}
+E {12933} {s} {s} {4} {0} {} {1.000} {}
+
+R {12932} {0} {} {the Weaver's Halls (w)} { } {The labyrinth of hallways leads you on and on with no clear direction to the exit.. if any exists. Massive holes in the stone walls create an odd glow on the opposite walls as some sections have more holes than others. You get the feeling that you'll run into several orb-weavers before the tunnels see an end. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12930} {w} {w} {8} {0} {} {1.000} {}
+
+R {12933} {0} {} {the Weaver's Halls (n,e)} { } {While walking through these hallways, your mind is filled with fear as if a Weaver will pop out and devour you at any moment. Luckily the long hallways give clear visibility except for the sharp-angled corners leading down other hallways. There are suspiciously large holes in the stone walls here. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12931} {n} {n} {1} {0} {} {1.000} {}
+E {12934} {e} {e} {2} {0} {} {1.000} {}
+
+R {12934} {0} {} {the Weaver's Halls (d,w)} { } {The labyrinth of hallways leads you on and on with no clear direction to the exit.. if any exists. Massive holes in the stone walls create an odd glow on the opposite walls as some sections have more holes than others. You get the feeling that you'll run into several orb-weavers before the tunnels see an end. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12933} {w} {w} {8} {0} {} {1.000} {}
+E {12936} {d} {d} {32} {0} {} {1.000} {}
+
+R {12935} {0} {} {the Weaver's Halls (w)} { } {Big ominous holes in the stone walls create a somewhat terrifying trek through the Weaver's halls. It's unclear if you're getting close to the exit or if some giant bugs are going to pop out and have a meal of you. At least the green glow from the halls allows you to see where you are going. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12824} {w} {w} {8} {0} {} {1.000} {}
+
+R {12936} {0} {} {the Ancient Arachnecropolis (ne,nw,u,w,e)} { } {The outer hall of this ancient Arachnecropolis is a display of utter architectural mastery. The stones are piled several stories high in perfect form and the floor is no different. Paths lead along the outer hall as well as inward toward the center of the necropolis. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12934} {u} {u} {16} {0} {} {1.000} {}
+E {12937} {ne} {ne} {3} {0} {} {1.000} {}
+E {12938} {nw} {nw} {9} {0} {} {1.000} {}
+E {12939} {w} {w} {8} {0} {} {1.000} {}
+E {12940} {e} {e} {2} {0} {} {1.000} {}
+
+R {12937} {0} {} {the Ancient Arachnecropolis (sw,n)} { } {These are the inner halls of the ancient Arachnecropolis. The outer walls of are massive and foreboding, making you feel like a tiny insect. From afar you can see massive tarantula spiders dangling from the towering ceilings, spinning webs. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12936} {sw} {sw} {12} {0} {} {1.000} {}
+E {12952} {n} {n} {1} {0} {} {1.000} {}
+
+R {12938} {0} {} {the Ancient Arachnecropolis (se,n)} { } {These are the inner halls of the ancient Arachnecropolis. The outer walls of are massive and foreboding, making you feel like a tiny insect. From afar you can see massive tarantula spiders dangling from the towering ceilings, spinning webs. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12936} {se} {se} {6} {0} {} {1.000} {}
+E {12944} {n} {n} {1} {0} {} {1.000} {}
+
+R {12939} {0} {} {the Ancient Arachnecropolis (nw,e)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. The inner walls, while much shoter, clearly create a designwork pathway toward the necropolis' center. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12936} {e} {e} {2} {0} {} {1.000} {}
+E {12941} {nw} {nw} {9} {0} {} {1.000} {}
+
+R {12940} {0} {} {the Ancient Arachnecropolis (ne,w)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. The inner walls, while much shoter, clearly create a designwork pathway toward the necropolis' center. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12936} {w} {w} {8} {0} {} {1.000} {}
+E {12954} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {12941} {0} {} {the Ancient Arachnecropolis (se,n)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. The inner walls, while much shoter, clearly create a designwork pathway toward the necropolis' center. On the outer wall is a massive stone lever. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12939} {se} {se} {6} {0} {} {1.000} {}
+E {12942} {n} {n} {1} {0} {} {1.000} {}
+
+R {12942} {0} {} {the Ancient Arachnecropolis (n,s,e)} { } {You are walking through the outer hall of the ancient Arachnecropolis. Massive stonework forms the outer wall while the inner walls are shorter. The floor here slopes downward toward the center which seems to be the focus of the necropolis. The sound of massive scraping, hairy spider legs create a frigtening backdrop to this evil place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12941} {s} {s} {4} {0} {} {1.000} {}
+E {12943} {n} {n} {1} {0} {} {1.000} {}
+E {12944} {e} {e} {2} {0} {} {1.000} {}
+
+R {12943} {0} {} {the Ancient Arachnecropolis (ne,s,e)} { } {The outer hall of this ancient Arachnecropolis is a display of utter architectural mastery. The stones are piled several stories high in perfect form and the floor is no different. Paths lead along the outer hall as well as inward toward the center of the necropolis. On the outer wall is a massive stone lever. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12942} {s} {s} {4} {0} {} {1.000} {}
+E {12945} {ne} {ne} {3} {0} {} {1.000} {}
+E {12946} {e} {e} {2} {0} {} {1.000} {}
+
+R {12944} {0} {} {the Ancient Arachnecropolis (se,n,s,w)} { } {The inner stone walls dwarf you but are nothing in comparison to the outer walls which can be seen just in the distance. All paths here lead toward the center of the Arachnecopolis but at this distance you cannot tell what exactly lies within. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12942} {w} {w} {8} {0} {} {1.000} {}
+E {12946} {n} {n} {1} {0} {} {1.000} {}
+E {12951} {se} {se} {6} {0} {} {1.000} {}
+E {12938} {s} {s} {4} {0} {} {1.000} {}
+
+R {12945} {0} {} {the Ancient Arachnecropolis (sw,e)} { } {You are walking through the outer hall of the ancient Arachnecropolis. Massive stonework forms the outer wall while the inner walls are shorter. The floor here slopes downward toward the center which seems to be the focus of the necropolis. The sound of massive scraping, hairy spider legs create a frigtening backdrop to this evil place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12943} {sw} {sw} {12} {0} {} {1.000} {}
+E {12947} {e} {e} {2} {0} {} {1.000} {}
+
+R {12946} {0} {} {the Ancient Arachnecropolis (se,ne,s,w)} { } {These are the inner halls of the ancient Arachnecropolis. The outer walls of are massive and foreboding, making you feel like a tiny insect. From afar you can see massive tarantula spiders dangling from the towering ceilings, spinning webs. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12943} {w} {w} {8} {0} {} {1.000} {}
+E {12947} {ne} {ne} {3} {0} {} {1.000} {}
+E {12950} {se} {se} {6} {0} {} {1.000} {}
+E {12944} {s} {s} {4} {0} {} {1.000} {}
+
+R {12947} {0} {} {the Ancient Arachnecropolis (se,sw,w,e)} { } {You are walking through the outer hall of the ancient Arachnecropolis. Massive stonework forms the outer wall while the inner walls are shorter. The floor here slopes downward toward the center which seems to be the focus of the necropolis. The sound of massive scraping, hairy spider legs create a frigtening backdrop to this evil place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12945} {w} {w} {8} {0} {} {1.000} {}
+E {12948} {se} {se} {6} {0} {} {1.000} {}
+E {12946} {sw} {sw} {12} {0} {} {1.000} {}
+E {12949} {e} {e} {2} {0} {} {1.000} {}
+
+R {12948} {0} {} {the Ancient Arachnecropolis (sw,nw,s,e)} { } {The inner stone walls dwarf you but are nothing in comparison to the outer walls which can be seen just in the distance. All paths here lead toward the center of the Arachnecopolis but at this distance you cannot tell what exactly lies within. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12947} {nw} {nw} {9} {0} {} {1.000} {}
+E {12952} {s} {s} {4} {0} {} {1.000} {}
+E {12955} {e} {e} {2} {0} {} {1.000} {}
+E {12950} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {12949} {0} {} {the Ancient Arachnecropolis (se,ne,w)} { } {You are walking through the outer hall of the ancient Arachnecropolis. Massive stonework forms the outer wall while the inner walls are shorter. The floor here slopes downward toward the center which seems to be the focus of the necropolis. The sound of massive scraping, hairy spider legs create a frigtening backdrop to this evil place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12947} {w} {w} {8} {0} {} {1.000} {}
+E {12955} {se} {se} {6} {0} {} {1.000} {}
+E {12956} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {12950} {0} {} {the Ancient Arachnecropolis (ne,nw)} { } {You have reached an Ancient Tomb of Kings within the Arachnecropolis. This place is the final resting place of a long-dead and ancient King of spiders. A massive stone tomb adorned with cryptic runescript and symbols creates a central focal point in this massive place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12946} {nw} {nw} {9} {0} {} {1.000} {}
+E {12948} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {12951} {0} {} {the Ancient Arachnecropolis (ne,nw)} { } {You have reached an Ancient Tomb of Kings within the Arachnecropolis. This place is the final resting place of a long-dead and ancient King of spiders. A massive stone tomb adorned with cryptic runescript and symbols creates a central focal point in this massive place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12944} {nw} {nw} {9} {0} {} {1.000} {}
+E {12952} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {12952} {0} {} {the Ancient Arachnecropolis (sw,n,s,e)} { } {These are the inner halls of the ancient Arachnecropolis. The outer walls of are massive and foreboding, making you feel like a tiny insect. From afar you can see massive tarantula spiders dangling from the towering ceilings, spinning webs. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12951} {sw} {sw} {12} {0} {} {1.000} {}
+E {12948} {n} {n} {1} {0} {} {1.000} {}
+E {12937} {s} {s} {4} {0} {} {1.000} {}
+E {12953} {e} {e} {2} {0} {} {1.000} {}
+
+R {12953} {0} {} {the Ancient Arachnecropolis (n,s,w)} { } {The outer hall of this ancient Arachnecropolis is a display of utter architectural mastery. The stones are piled several stories high in perfect form and the floor is no different. Paths lead along the outer hall as well as inward toward the center of the necropolis. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12952} {w} {w} {8} {0} {} {1.000} {}
+E {12954} {s} {s} {4} {0} {} {1.000} {}
+E {12955} {n} {n} {1} {0} {} {1.000} {}
+
+R {12954} {0} {} {the Ancient Arachnecropolis (sw,n)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. The inner walls, while much shoter, clearly create a designwork pathway toward the necropolis' center. On the outer wall is a massive stone lever. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12940} {sw} {sw} {12} {0} {} {1.000} {}
+E {12953} {n} {n} {1} {0} {} {1.000} {}
+
+R {12955} {0} {} {the Ancient Arachnecropolis (nw,s,w)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. The inner walls, while much shoter, clearly create a designwork pathway toward the necropolis' center. On the outer wall is a massive stone lever. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12953} {s} {s} {4} {0} {} {1.000} {}
+E {12949} {nw} {nw} {9} {0} {} {1.000} {}
+E {12948} {w} {w} {8} {0} {} {1.000} {}
+
+R {12956} {0} {} {the Ancient Arachnecropolis (sw,nw,e)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. Inner walls while much shoter clearly create a designwork pathway toward the necropolis' center. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12949} {sw} {sw} {12} {0} {} {1.000} {}
+E {12957} {nw} {nw} {9} {0} {} {1.000} {}
+E {12958} {e} {e} {2} {0} {} {1.000} {}
+
+R {12957} {0} {} {the Ancient Arachnecropolis (se,n)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. Inner walls while much shoter clearly create a designwork pathway toward the necropolis' center. On the outer wall is a massive stone lever. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12956} {se} {se} {6} {0} {} {1.000} {}
+E {12959} {n} {n} {1} {0} {} {1.000} {}
+
+R {12958} {0} {} {the Ancient Arachnecropolis (ne,nw,w,e)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. Inner walls while much shoter clearly create a designwork pathway toward the necropolis' center. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12956} {w} {w} {8} {0} {} {1.000} {}
+E {12974} {nw} {nw} {9} {0} {} {1.000} {}
+E {12972} {ne} {ne} {3} {0} {} {1.000} {}
+E {12975} {e} {e} {2} {0} {} {1.000} {}
+
+R {12959} {0} {} {the Ancient Arachnecropolis (n,s,e)} { } {The outer hall of this ancient Arachnecropolis is a display of utter architectural mastery. The stones are piled several stories high in perfect form and the floor is no different. Paths lead along the outer hall as well as inward toward the center of the necropolis. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12957} {s} {s} {4} {0} {} {1.000} {}
+E {12960} {n} {n} {1} {0} {} {1.000} {}
+E {12961} {e} {e} {2} {0} {} {1.000} {}
+
+R {12960} {0} {} {the Ancient Arachnecropolis (ne,s,e)} { } {The outer hall of this ancient Arachnecropolis is a display of utter architectural mastery. The stones are piled several stories high in perfect form and the floor is no different. Paths lead along the outer hall as well as inward toward the center of the necropolis. On the outer wall is a massive stone lever. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12959} {s} {s} {4} {0} {} {1.000} {}
+E {12962} {ne} {ne} {3} {0} {} {1.000} {}
+E {12963} {e} {e} {2} {0} {} {1.000} {}
+
+R {12961} {0} {} {the Ancient Arachnecropolis (se,n,s,w)} { } {The inner stone walls dwarf you but are nothing in comparison to the outer walls which can be seen just in the distance. All paths here lead toward the center of the Arachnecopolis but at this distance you cannot tell what exactly lies within. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12959} {w} {w} {8} {0} {} {1.000} {}
+E {12963} {n} {n} {1} {0} {} {1.000} {}
+E {12971} {se} {se} {6} {0} {} {1.000} {}
+E {12974} {s} {s} {4} {0} {} {1.000} {}
+
+R {12962} {0} {} {the Ancient Arachnecropolis (sw,e)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. Inner walls while much shoter clearly create a designwork pathway toward the necropolis' center. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12960} {sw} {sw} {12} {0} {} {1.000} {}
+E {12964} {e} {e} {2} {0} {} {1.000} {}
+
+R {12963} {0} {} {the Ancient Arachnecropolis (se,ne,s,w)} { } {These are the inner halls of the ancient Arachnecropolis. The outer walls of are massive and foreboding, making you feel like a tiny insect. From afar you can see massive tarantula spiders dangling from the towering ceilings, spinning webs. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12960} {w} {w} {8} {0} {} {1.000} {}
+E {12964} {ne} {ne} {3} {0} {} {1.000} {}
+E {12969} {se} {se} {6} {0} {} {1.000} {}
+E {12961} {s} {s} {4} {0} {} {1.000} {}
+
+R {12964} {0} {} {the Ancient Arachnecropolis (se,sw,w,e)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. Inner walls while much shoter clearly create a designwork pathway toward the necropolis' center. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12962} {w} {w} {8} {0} {} {1.000} {}
+E {12965} {se} {se} {6} {0} {} {1.000} {}
+E {12963} {sw} {sw} {12} {0} {} {1.000} {}
+E {12966} {e} {e} {2} {0} {} {1.000} {}
+
+R {12965} {0} {} {the Ancient Arachnecropolis (sw,nw,s)} { } {The inner stone walls dwarf you but are nothing in comparison to the outer walls which can be seen just in the distance. All paths here lead toward the center of the Arachnecopolis but at this distance you cannot tell what exactly lies within. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12964} {nw} {nw} {9} {0} {} {1.000} {}
+E {12967} {e} {e} {2} {0} {} {1.000} {}
+E {12969} {sw} {sw} {12} {0} {} {1.000} {}
+E {12970} {s} {s} {4} {0} {} {1.000} {}
+
+R {12966} {0} {} {the Ancient Arachnecropolis (se,w)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. Inner walls while much shoter clearly create a designwork pathway toward the necropolis' center. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12964} {w} {w} {8} {0} {} {1.000} {}
+E {12967} {se} {se} {6} {0} {} {1.000} {}
+
+R {12967} {0} {} {the Ancient Arachnecropolis (nw,s,w)} { } {You are walking through the outer hall of the ancient Arachnecropolis. Massive stonework forms the outer wall while the inner walls are shorter. The floor here slopes downward toward the center which seems to be the focus of the necropolis. The sound of massive scraping, hairy spider legs create a frigtening backdrop to this evil place. On the outer wall is a massive stone lever. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12966} {nw} {nw} {9} {0} {} {1.000} {}
+E {12968} {s} {s} {4} {0} {} {1.000} {}
+E {12965} {w} {w} {8} {0} {} {1.000} {}
+
+R {12968} {0} {} {the Ancient Arachnecropolis (n,s,w)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. Inner walls while much shoter clearly create a designwork pathway toward the necropolis' center. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12967} {n} {n} {1} {0} {} {1.000} {}
+E {12970} {w} {w} {8} {0} {} {1.000} {}
+E {12973} {s} {s} {4} {0} {} {1.000} {}
+
+R {12969} {0} {} {the Ancient Arachnecropolis (ne,nw)} { } {You have reached an Ancient Tomb of Kings within the Arachnecropolis. This place is the final resting place of a long-dead and ancient King of spiders. A massive stone tomb adorned with cryptic runescript and symbols creates a central focal point in this massive place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12965} {ne} {ne} {3} {0} {} {1.000} {}
+E {12963} {nw} {nw} {9} {0} {} {1.000} {}
+
+R {12970} {0} {} {the Ancient Arachnecropolis (sw,n,s,e)} { } {These are the inner halls of the ancient Arachnecropolis. The outer walls of are massive and foreboding, making you feel like a tiny insect. From afar you can see massive tarantula spiders dangling from the towering ceilings, spinning webs. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12965} {n} {n} {1} {0} {} {1.000} {}
+E {12971} {sw} {sw} {12} {0} {} {1.000} {}
+E {12972} {s} {s} {4} {0} {} {1.000} {}
+E {12968} {e} {e} {2} {0} {} {1.000} {}
+
+R {12971} {0} {} {the Ancient Arachnecropolis (ne,nw)} { } {You have reached an Ancient Tomb of Kings within the Arachnecropolis. This place is the final resting place of a long-dead and ancient King of spiders. A massive stone tomb adorned with cryptic runescript and symbols creates a central focal point in this massive place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12970} {ne} {ne} {3} {0} {} {1.000} {}
+E {12961} {nw} {nw} {9} {0} {} {1.000} {}
+
+R {12972} {0} {} {the Ancient Arachnecropolis (sw,n)} { } {These are the inner halls of the ancient Arachnecropolis. The outer walls of are massive and foreboding, making you feel like a tiny insect. From afar you can see massive tarantula spiders dangling from the towering ceilings, spinning webs. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12970} {n} {n} {1} {0} {} {1.000} {}
+E {12958} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {12973} {0} {} {the Ancient Arachnecropolis (se,sw,n)} { } {The outer hall of this ancient Arachnecropolis is a display of utter architectural mastery. The stones are piled several stories high in perfect form and the floor is no different. Paths lead along the outer hall as well as inward toward the center of the necropolis. On the outer wall is a massive stone lever. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12968} {n} {n} {1} {0} {} {1.000} {}
+E {12976} {se} {se} {6} {0} {} {1.000} {}
+E {12975} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {12974} {0} {} {the Ancient Arachnecropolis (se,n)} { } {These are the inner halls of the ancient Arachnecropolis. The outer walls of are massive and foreboding, making you feel like a tiny insect. From afar you can see massive tarantula spiders dangling from the towering ceilings, spinning webs. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12961} {n} {n} {1} {0} {} {1.000} {}
+E {12958} {se} {se} {6} {0} {} {1.000} {}
+
+R {12975} {0} {} {the Ancient Arachnecropolis (ne,w)} { } {You are walking through the outer hall of the ancient Arachnecropolis. Massive stonework forms the outer wall while the inner walls are shorter. The floor here slopes downward toward the center which seems to be the focus of the necropolis. The sound of massive scraping, hairy spider legs create a frigtening backdrop to this evil place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12958} {w} {w} {8} {0} {} {1.000} {}
+E {12973} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {12976} {0} {} {the Ancient Arachnecropolis (sw,nw,e)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. Inner walls while much shoter clearly create a designwork pathway toward the necropolis' center. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12973} {nw} {nw} {9} {0} {} {1.000} {}
+E {12977} {sw} {sw} {12} {0} {} {1.000} {}
+E {12978} {e} {e} {2} {0} {} {1.000} {}
+
+R {12977} {0} {} {the Ancient Arachnecropolis (ne,s,e)} { } {The outer hall of this ancient Arachnecropolis is a display of utter architectural mastery. The stones are piled several stories high in perfect form and the floor is no different. Paths lead along the outer hall as well as inward toward the center of the necropolis. On the outer wall is a massive stone lever. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12976} {ne} {ne} {3} {0} {} {1.000} {}
+E {12992} {s} {s} {4} {0} {} {1.000} {}
+E {12980} {e} {e} {2} {0} {} {1.000} {}
+
+R {12978} {0} {} {the Ancient Arachnecropolis (se,sw,w,e)} { } {You are walking through the outer hall of the ancient Arachnecropolis. Massive stonework forms the outer wall while the inner walls are shorter. The floor here slopes downward toward the center which seems to be the focus of the necropolis. The sound of massive scraping, hairy spider legs create a frigtening backdrop to this evil place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12976} {w} {w} {8} {0} {} {1.000} {}
+E {12979} {se} {se} {6} {0} {} {1.000} {}
+E {12980} {sw} {sw} {12} {0} {} {1.000} {}
+E {12981} {e} {e} {2} {0} {} {1.000} {}
+
+R {12979} {0} {} {the Ancient Arachnecropolis (sw,nw,s,e)} { } {The inner stone walls dwarf you but are nothing in comparison to the outer walls which can be seen just in the distance. All paths here lead toward the center of the Arachnecopolis but at this distance you cannot tell what exactly lies within. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12978} {nw} {nw} {9} {0} {} {1.000} {}
+E {12982} {e} {e} {2} {0} {} {1.000} {}
+E {12985} {s} {s} {4} {0} {} {1.000} {}
+E {12995} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {12980} {0} {} {the Ancient Arachnecropolis (se,ne,s,w)} { } {These are the inner halls of the ancient Arachnecropolis. The outer walls of are massive and foreboding, making you feel like a tiny insect. From afar you can see massive tarantula spiders dangling from the towering ceilings, spinning webs. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12978} {ne} {ne} {3} {0} {} {1.000} {}
+E {12993} {s} {s} {4} {0} {} {1.000} {}
+E {12995} {se} {se} {6} {0} {} {1.000} {}
+E {12977} {w} {w} {8} {0} {} {1.000} {}
+
+R {12981} {0} {} {the Ancient Arachnecropolis (se,w)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. The inner walls, while much shoter, clearly create a designwork pathway toward the necropolis' center. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12978} {w} {w} {8} {0} {} {1.000} {}
+E {12982} {se} {se} {6} {0} {} {1.000} {}
+
+R {12982} {0} {} {the Ancient Arachnecropolis (nw,s,w)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. Inner walls while much shoter clearly create a designwork pathway toward the necropolis' center. On the outer wall is a massive stone lever. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12981} {nw} {nw} {9} {0} {} {1.000} {}
+E {12983} {s} {s} {4} {0} {} {1.000} {}
+E {12979} {w} {w} {8} {0} {} {1.000} {}
+
+R {12983} {0} {} {the Ancient Arachnecropolis (n,s,w)} { } {The outer hall of this ancient Arachnecropolis is a display of utter architectural mastery. The stones are piled several stories high in perfect form and the floor is no different. Paths lead along the outer hall as well as inward toward the center of the necropolis. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12982} {n} {n} {1} {0} {} {1.000} {}
+E {12984} {s} {s} {4} {0} {} {1.000} {}
+E {12985} {w} {w} {8} {0} {} {1.000} {}
+
+R {12984} {0} {} {the Ancient Arachnecropolis (sw,n)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. Inner walls while much shoter clearly create a designwork pathway toward the necropolis' center. On the outer wall is a massive stone lever. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12983} {n} {n} {1} {0} {} {1.000} {}
+E {12986} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {12985} {0} {} {the Ancient Arachnecropolis (sw,n,s,e)} { } {These are the inner halls of the ancient Arachnecropolis. The outer walls of are massive and foreboding, making you feel like a tiny insect. From afar you can see massive tarantula spiders dangling from the towering ceilings, spinning webs. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12983} {e} {e} {2} {0} {} {1.000} {}
+E {12994} {sw} {sw} {12} {0} {} {1.000} {}
+E {12979} {n} {n} {1} {0} {} {1.000} {}
+E {12988} {s} {s} {4} {0} {} {1.000} {}
+
+R {12986} {0} {} {the Ancient Arachnecropolis (ne,w)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. Inner walls while much shoter clearly create a designwork pathway toward the necropolis' center. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12984} {ne} {ne} {3} {0} {} {1.000} {}
+E {12987} {w} {w} {8} {0} {} {1.000} {}
+
+R {12987} {0} {} {the Ancient Arachnecropolis (ne,nw,w,e)} { } {You are walking through the outer hall of the ancient Arachnecropolis. Massive stonework forms the outer wall while the inner walls are shorter. The floor here slopes downward toward the center which seems to be the focus of the necropolis. The sound of massive scraping, hairy spider legs create a frigtening backdrop to this evil place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12986} {e} {e} {2} {0} {} {1.000} {}
+E {12988} {ne} {ne} {3} {0} {} {1.000} {}
+E {12989} {nw} {nw} {9} {0} {} {1.000} {}
+E {12990} {w} {w} {8} {0} {} {1.000} {}
+
+R {12988} {0} {} {the Ancient Arachnecropolis (sw,n)} { } {The inner stone walls dwarf you but are nothing in comparison to the outer walls which can be seen just in the distance. All paths here lead toward the center of the Arachnecopolis but at this distance you cannot tell what exactly lies within. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12987} {sw} {sw} {12} {0} {} {1.000} {}
+E {12985} {n} {n} {1} {0} {} {1.000} {}
+
+R {12989} {0} {} {the Ancient Arachnecropolis (se,n)} { } {The inner stone walls dwarf you but are nothing in comparison to the outer walls which can be seen just in the distance. All paths here lead toward the center of the Arachnecopolis but at this distance you cannot tell what exactly lies within. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12987} {se} {se} {6} {0} {} {1.000} {}
+E {12993} {n} {n} {1} {0} {} {1.000} {}
+
+R {12990} {0} {} {the Ancient Arachnecropolis (nw,e)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. Inner walls while much shoter clearly create a designwork pathway toward the necropolis' center. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12987} {e} {e} {2} {0} {} {1.000} {}
+E {12991} {nw} {nw} {9} {0} {} {1.000} {}
+
+R {12991} {0} {} {the Ancient Arachnecropolis (se,sw,n)} { } {The outer hall of this ancient Arachnecropolis is a display of utter architectural mastery. The stones are piled several stories high in perfect form and the floor is no different. Paths lead along the outer hall as well as inward toward the center of the necropolis. On the outer wall is a massive stone lever. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12990} {se} {se} {6} {0} {} {1.000} {}
+E {12992} {n} {n} {1} {0} {} {1.000} {}
+E {12996} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {12992} {0} {} {the Ancient Arachnecropolis (n,s,e)} { } {You are walking through the outer hall of the ancient Arachnecropolis. Massive stonework forms the outer wall while the inner walls are shorter. The floor here slopes downward toward the center which seems to be the focus of the necropolis. The sound of massive scraping, hairy spider legs create a frigtening backdrop to this evil place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12991} {s} {s} {4} {0} {} {1.000} {}
+E {12977} {n} {n} {1} {0} {} {1.000} {}
+E {12993} {e} {e} {2} {0} {} {1.000} {}
+
+R {12993} {0} {} {the Ancient Arachnecropolis (se,n,s,w)} { } {The inner stone walls dwarf you but are nothing in comparison to the outer walls which can be seen just in the distance. All paths here lead toward the center of the Arachnecopolis but at this distance you cannot tell what exactly lies within. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12992} {w} {w} {8} {0} {} {1.000} {}
+E {12994} {se} {se} {6} {0} {} {1.000} {}
+E {12980} {n} {n} {1} {0} {} {1.000} {}
+E {12989} {s} {s} {4} {0} {} {1.000} {}
+
+R {12994} {0} {} {the Ancient Arachnecropolis (ne,nw)} { } {You have reached an Ancient Tomb of Kings within the Arachnecropolis. This place is the final resting place of a long-dead and ancient King of spiders. A massive stone tomb adorned with cryptic runescript and symbols creates a central focal point in this massive place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12993} {nw} {nw} {9} {0} {} {1.000} {}
+E {12985} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {12995} {0} {} {the Ancient Arachnecropolis (ne,nw)} { } {You have reached an Ancient Tomb of Kings within the Arachnecropolis. This place is the final resting place of a long-dead and ancient King of spiders. A massive stone tomb adorned with cryptic runescript and symbols creates a central focal point in this massive place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12979} {ne} {ne} {3} {0} {} {1.000} {}
+E {12980} {nw} {nw} {9} {0} {} {1.000} {}
+
+R {12996} {0} {} {the Ancient Arachnecropolis (se,sw,ne,w,e)} { } {The outer hall of this ancient Arachnecropolis is a display of utter architectural mastery. The stones are piled several stories high in perfect form and the floor is no different. Paths lead along the outer hall as well as inward toward the center of the necropolis. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12991} {ne} {ne} {3} {0} {} {1.000} {}
+E {12997} {se} {se} {6} {0} {} {1.000} {}
+E {12998} {sw} {sw} {12} {0} {} {1.000} {}
+E {12999} {w} {w} {8} {0} {} {1.000} {}
+E {13000} {e} {e} {2} {0} {} {1.000} {}
+
+R {12997} {0} {} {the Ancient Arachnecropolis (sw,nw,s,e)} { } {The inner stone walls dwarf you but are nothing in comparison to the outer walls which can be seen just in the distance. All paths here lead toward the center of the Arachnecopolis but at this distance you cannot tell what exactly lies within. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12996} {nw} {nw} {9} {0} {} {1.000} {}
+E {13012} {sw} {sw} {12} {0} {} {1.000} {}
+E {13013} {s} {s} {4} {0} {} {1.000} {}
+E {13014} {e} {e} {2} {0} {} {1.000} {}
+
+R {12998} {0} {} {the Ancient Arachnecropolis (se,ne,s,w)} { } {These are the inner halls of the ancient Arachnecropolis. The outer walls of are massive and foreboding, making you feel like a tiny insect. From afar you can see massive tarantula spiders dangling from the towering ceilings, spinning webs. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12996} {ne} {ne} {3} {0} {} {1.000} {}
+E {13001} {w} {w} {8} {0} {} {1.000} {}
+E {13005} {s} {s} {4} {0} {} {1.000} {}
+E {13012} {se} {se} {6} {0} {} {1.000} {}
+
+R {12999} {0} {} {the Ancient Arachnecropolis (sw,e)} { } {The outer hall of this ancient Arachnecropolis is a display of utter architectural mastery. The stones are piled several stories high in perfect form and the floor is no different. Paths lead along the outer hall as well as inward toward the center of the necropolis. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12996} {e} {e} {2} {0} {} {1.000} {}
+E {13001} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {13000} {0} {} {the Ancient Arachnecropolis (se,w)} { } {The outer hall of this ancient Arachnecropolis is a display of utter architectural mastery. The stones are piled several stories high in perfect form and the floor is no different. Paths lead along the outer hall as well as inward toward the center of the necropolis. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12996} {w} {w} {8} {0} {} {1.000} {}
+E {13014} {se} {se} {6} {0} {} {1.000} {}
+
+R {13001} {0} {} {the Ancient Arachnecropolis (ne,s,e)} { } {You are walking through the outer hall of the ancient Arachnecropolis. Massive stonework forms the outer wall while the inner walls are shorter. The floor here slopes downward toward the center which seems to be the focus of the necropolis. The sound of massive scraping, hairy spider legs create a frigtening backdrop to this evil place. On the outer wall is a massive stone lever. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12999} {ne} {ne} {3} {0} {} {1.000} {}
+E {13003} {s} {s} {4} {0} {} {1.000} {}
+E {12998} {e} {e} {2} {0} {} {1.000} {}
 
 R {13002} {0} {} {In a very dark forest (e,w,n,s)} { } {You're in a very dark forest. You feel as if you are being watched by hundreds of tiny eyes. The path gets narrower ahead, but it looks travelable. } {Smurfland} {} {} {} {1.000} {}
 E {12383} {n} {n} {1} {0} {} {1.000} {}
 E { 2693} {e} {e} {2} {0} {} {1.000} {}
 E {13202} {w} {w} {8} {0} {} {1.000} {}
 E {13203} {s} {s} {4} {0} {} {1.000} {}
+
+R {13003} {0} {} {the Ancient Arachnecropolis (n,s,e)} { } {You are walking through the outer hall of the ancient Arachnecropolis. Massive stonework forms the outer wall while the inner walls are shorter. The floor here slopes downward toward the center which seems to be the focus of the necropolis. The sound of massive scraping, hairy spider legs create a frigtening backdrop to this evil place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13001} {n} {n} {1} {0} {} {1.000} {}
+E {13004} {s} {s} {4} {0} {} {1.000} {}
+E {13005} {e} {e} {2} {0} {} {1.000} {}
+
+R {13004} {0} {} {the Ancient Arachnecropolis (se,n)} { } {You are walking through the outer hall of the ancient Arachnecropolis. Massive stonework forms the outer wall while the inner walls are shorter. The floor here slopes downward toward the center which seems to be the focus of the necropolis. The sound of massive scraping, hairy spider legs create a frigtening backdrop to this evil place. On the outer wall is a massive stone lever. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13003} {n} {n} {1} {0} {} {1.000} {}
+E {13006} {se} {se} {6} {0} {} {1.000} {}
+
+R {13005} {0} {} {the Ancient Arachnecropolis (se,n,s,w)} { } {These are the inner halls of the ancient Arachnecropolis. The outer walls of are massive and foreboding, making you feel like a tiny insect. From afar you can see massive tarantula spiders dangling from the towering ceilings, spinning webs. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13003} {w} {w} {8} {0} {} {1.000} {}
+E {13009} {s} {s} {4} {0} {} {1.000} {}
+E {13011} {se} {se} {6} {0} {} {1.000} {}
+E {12998} {n} {n} {1} {0} {} {1.000} {}
+
+R {13006} {0} {} {the Ancient Arachnecropolis (nw,e)} { } {You are walking through the outer hall of the ancient Arachnecropolis. Massive stonework forms the outer wall while the inner walls are shorter. The floor here slopes downward toward the center which seems to be the focus of the necropolis. The sound of massive scraping, hairy spider legs create a frigtening backdrop to this evil place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13004} {nw} {nw} {9} {0} {} {1.000} {}
+E {13007} {e} {e} {2} {0} {} {1.000} {}
+
+R {13007} {0} {} {the Ancient Arachnecropolis (ne,nw,w,e)} { } {You are walking through the outer hall of the ancient Arachnecropolis. Massive stonework forms the outer wall while the inner walls are shorter. The floor here slopes downward toward the center which seems to be the focus of the necropolis. The sound of massive scraping, hairy spider legs create a frigtening backdrop to this evil place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13006} {w} {w} {8} {0} {} {1.000} {}
+E {13008} {ne} {ne} {3} {0} {} {1.000} {}
+E {13009} {nw} {nw} {9} {0} {} {1.000} {}
+E {13010} {e} {e} {2} {0} {} {1.000} {}
+
+R {13008} {0} {} {the Ancient Arachnecropolis (sw,n)} { } {The inner stone walls dwarf you but are nothing in comparison to the outer walls which can be seen just in the distance. All paths here lead toward the center of the Arachnecopolis but at this distance you cannot tell what exactly lies within. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13007} {sw} {sw} {12} {0} {} {1.000} {}
+E {13013} {n} {n} {1} {0} {} {1.000} {}
+
+R {13009} {0} {} {the Ancient Arachnecropolis (se,n)} { } {These are the inner halls of the ancient Arachnecropolis. The outer walls of are massive and foreboding, making you feel like a tiny insect. From afar you can see massive tarantula spiders dangling from the towering ceilings, spinning webs. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13007} {se} {se} {6} {0} {} {1.000} {}
+E {13005} {n} {n} {1} {0} {} {1.000} {}
+
+R {13010} {0} {} {the Ancient Arachnecropolis (ne,w)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. Inner walls while much shoter clearly create a designwork pathway toward the necropolis' center. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13007} {w} {w} {8} {0} {} {1.000} {}
+E {13017} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {13011} {0} {} {an Arachnecropolis Tomb of Kings (ne,nw,enter)} { } {You have reached an Ancient Tomb of Kings within the Arachnecropolis. This place is the final resting place of a long-dead and ancient King of spiders. A massive stone tomb adorned with cryptic runescript and symbols creates a central focal point in this massive place. A massive stone door is here (opened) } {Arachnecropolis} {} {} {} {1.000} {}
+E {13005} {nw} {nw} {9} {0} {} {1.000} {}
+E {13013} {ne} {ne} {3} {0} {} {1.000} {}
+E {13016} {enter} {enter} {0} {0} {} {1.000} {}
+
+R {13012} {0} {} {an Arachnecropolis Tomb of Kings (ne,nw)} { } {You have reached an Ancient Tomb of Kings within the Arachnecropolis. This place is the final resting place of a long-dead and ancient King of spiders. A massive stone tomb adorned with cryptic runescript and symbols creates a central focal point in this massive place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12998} {nw} {nw} {9} {0} {} {1.000} {}
+E {12997} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {13013} {0} {} {the Ancient Arachnecropolis (sw,n,s,e)} { } {The inner stone walls dwarf you but are nothing in comparison to the outer walls which can be seen just in the distance. All paths here lead toward the center of the Arachnecopolis but at this distance you cannot tell what exactly lies within. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12997} {n} {n} {1} {0} {} {1.000} {}
+E {13008} {s} {s} {4} {0} {} {1.000} {}
+E {13011} {sw} {sw} {12} {0} {} {1.000} {}
+E {13015} {e} {e} {2} {0} {} {1.000} {}
+
+R {13014} {0} {} {the Ancient Arachnecropolis (nw,s,w)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. Inner walls while much shoter clearly create a designwork pathway toward the necropolis' center. On the outer wall is a massive stone lever. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12997} {w} {w} {8} {0} {} {1.000} {}
+E {13015} {s} {s} {4} {0} {} {1.000} {}
+E {13000} {nw} {nw} {9} {0} {} {1.000} {}
+
+R {13015} {0} {} {the Ancient Arachnecropolis (n,s,w)} { } {You are walking through the outer hall of the ancient Arachnecropolis. Massive stonework forms the outer wall while the inner walls are shorter. The floor here slopes downward toward the center which seems to be the focus of the necropolis. The sound of massive scraping, hairy spider legs create a frigtening backdrop to this evil place. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13013} {w} {w} {8} {0} {} {1.000} {}
+E {13017} {s} {s} {4} {0} {} {1.000} {}
+E {13014} {n} {n} {1} {0} {} {1.000} {}
+
+R {13016} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R {13017} {0} {} {the Ancient Arachnecropolis (sw,n)} { } {The outer hall of this ancient Arachnecropolis is a display of utter architectural mastery. The stones are piled several stories high in perfect form and the floor is no different. Paths lead along the outer hall as well as inward toward the center of the necropolis. On the outer wall is a massive stone lever. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13010} {sw} {sw} {12} {0} {} {1.000} {}
+E {13015} {n} {n} {1} {0} {} {1.000} {}
 
 R {13018} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 2358} {s} {s} {4} {0} {} {1.000} {}
