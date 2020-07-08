@@ -297,8 +297,11 @@ make_global_blacklist
 
 #alias {make_killpath}{
 	#line quiet #map {find}{%0};
-	#line quiet #map {at}{%0}{
-		#map {get}{roomflag}{tempavoid};
+	#var {tempavoid} {0};
+	#if {$stepignore == 0}{
+		#line quiet #map {at}{%0}{
+			#map {get}{roomflag}{tempavoid};
+		};
 	};
 	#if {$tempavoid != 1}{
 		#unvar {kill_path2};
