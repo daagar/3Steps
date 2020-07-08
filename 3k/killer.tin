@@ -430,6 +430,7 @@ make_global_blacklist
 #act {^=M= %*} {
 	#format {tkstr}{%l}{%1};
 	#replace {tkstr}{.}{};
+	#replace {tkstr}{ !attacking you!}{};
 	#replace {tkstr}{%s[%d\%]%s}{};
 	#replace {tkstr}{%s[%w]%s}{};
 	#replace {tkstr}{ attacking you}{};
