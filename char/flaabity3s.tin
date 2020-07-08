@@ -68,6 +68,7 @@ fbq aegisl6
 		};
 		#if {${my[gouged]} != 1}{
 			!gouge;
+			!focus mindblock;
 			#var {my[gouged]}{1};
 			#nop {Safety measure for UO};
 			#if {$critter_room > 1 && "$area" == "Ultima Online"}{

@@ -18,7 +18,7 @@ F 10
 
 G 0
 
-I 4957
+I 3328
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -1084,7 +1084,7 @@ R {  172} {0} {} {172} {f} {} {} {} {} {} {1.000} {}
 E {  171} {n} {n} {1} {0} {} {1.000} {}
 E { 3109} {e} {e} {2} {0} {} {1.000} {}
 
-R {  173} {0} {} {smurfland} { } {You seem to be in some sort of forest. The trees look like large mushrooms. And, you are feeling pretty small and insignificant. Must just be the fact that you think you glimpsed a 10 foot frog off to your left. There's some smoke coming from the south. Maybe there's a town there. } {Smurfland} {smurfland} {} {} {1.000} {}
+R {  173} {0} {} {A very small forest (s,exit)} { } {You seem to be in some sort of forest. The trees look like large mushrooms. And, you are feeling pretty small and insignificant. Must just be the fact that you think you glimpsed a 10 foot frog off to your left. There's some smoke coming from the south. Maybe there's a town there. } {Smurfland} {smurfland} {} {} {1.000} {}
 E {  174} {s} {s} {4} {0} {} {1.000} {}
 E {  168} {exit} {exit} {0} {0} {} {1.000} {}
 
@@ -13877,11 +13877,11 @@ R { 3099} {0} {<118>} {3099} { } {} {} {} {} {} {1.000} {}
 E { 3098} {w} {w} {8} {0} {} {1.000} {}
 E { 3100} {swim} {search reeds;swim river;#read .tt/Dirs/ccows_load.tt} {0} {0} {} {1.000} {}
 
-R { 3100} {0} {} {ccows} { } {-= Riverbank =- The edge of the riverbank rises high to the east.  The River Summerset rises up to the sandy ground.  Blooms of meadowsweet and yellow agrimony grow in patches along the river's edge.  Bundles of reeds can be seen to the west, swaying in the breeze. } {Summerset Warrens} {ccows} {} {} {1.000} {}
+R { 3100} {0} {} {} { } {-= Riverbank =- The edge of the riverbank rises high to the east.  The River Summerset rises up to the sandy ground.  Blooms of meadowsweet and yellow agrimony grow in patches along the river's edge.  Bundles of reeds can be seen to the west, swaying in the breeze. } {Summerset Warrens} {ccows} {} {} {1.000} {}
 E { 3099} {swim} {search reeds;swim river;#read .tt/Dirs/ccows_unload.tt} {0} {0} {} {1.000} {}
 E { 3101} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3101} {0} {} {3101} { } {-= Riverbank =- The high bank overlooks the river and is covered in nesting holes.  Purple water germander, meadowsweet, and agrimony grows on the bank.  Fields can be seen to the east and north.  Bushes grow in sporadic places here and flame trees give some shade from the sun.  The grass is lush and green in the fields.  } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3101} {0} {} {-= Riverbank =- (ne,nw,n,w,e)} { } {-= Riverbank =- The high bank overlooks the river and is covered in nesting holes.  Purple water germander, meadowsweet, and agrimony grows on the bank.  Fields can be seen to the east and north.  Bushes grow in sporadic places here and flame trees give some shade from the sun.  The grass is lush and green in the fields.  } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3100} {w} {w;#read .tt/Dirs/ccows_load.tt} {8} {0} {} {1.000} {}
 E { 3134} {e} {e} {2} {0} {} {1.000} {}
 E { 3147} {n} {n} {1} {0} {} {1.000} {}
@@ -14018,7 +14018,7 @@ E { 3133} {e} {e} {2} {0} {} {1.000} {}
 R { 3133} {0} {} {3133} {r} {} {} {} {} {} {1.000} {}
 E { 3132} {w} {w} {8} {0} {} {1.000} {}
 
-R { 3134} {0} {} {3134} { } {-= Open Field =- The ground is covered with green grass and purple butterfly bushes.  Yarrow flowers bloom in clumps with their summer pastels of yellows, pinks, reds, purples, and grays.  The breeze on the air carries the sweet fragrance of the flowering bean plants which can be seen off in the distance.  Rays from the sun brighten the field and warm the grass.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3134} {0} {} {-= Open Field =- (se,ne,nw,n,s,w,e)} { } {-= Open Field =- The ground is covered with green grass and purple butterfly bushes.  Yarrow flowers bloom in clumps with their summer pastels of yellows, pinks, reds, purples, and grays.  The breeze on the air carries the sweet fragrance of the flowering bean plants which can be seen off in the distance.  Rays from the sun brighten the field and warm the grass.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3101} {w} {w} {8} {0} {} {1.000} {}
 E { 3135} {s} {s} {4} {0} {} {1.000} {}
 E { 3328} {n} {n} {1} {0} {} {1.000} {}
@@ -14084,7 +14084,7 @@ R { 3146} {0} {} {3146} { } {-= Beanfield =- This is a long, shadowy aisle betwe
 E { 3145} {w} {w} {8} {0} {} {1.000} {}
 E { 3139} {n} {n} {1} {0} {} {1.000} {}
 
-R { 3147} {0} {} {3147} { } {-= Open Field =- The field is covered in bright green grass and the majestic beauty of towering oaks, purple butterfly bushes and morning star roses.  Dandelions grow sporadically in the grass.  The breeze on the air carries the sweet fragrance of the flowering bean plants which can be seen off in the distance.  The high sun in the sky dries the dew on the ground with its warmth.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3147} {0} {} {-= Open Field =- (se,ne,nw,n,s,w,e)} { } {-= Open Field =- The field is covered in bright green grass and the majestic beauty of towering oaks, purple butterfly bushes and morning star roses.  Dandelions grow sporadically in the grass.  The breeze on the air carries the sweet fragrance of the flowering bean plants which can be seen off in the distance.  The high sun in the sky dries the dew on the ground with its warmth.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3101} {s} {s} {4} {0} {} {1.000} {}
 E { 3148} {w} {w} {8} {0} {} {1.000} {}
 E { 3327} {n} {n} {1} {0} {} {1.000} {}
@@ -14093,27 +14093,27 @@ E { 3134} {se} {se} {6} {0} {} {1.000} {}
 E { 3329} {ne} {ne} {3} {0} {} {1.000} {}
 E { 3328} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3148} {0} {} {3148} { } {The field is covered in bright green grass and the majestic beauty of towering oaks, purple butterfly bushes and morning star roses.  Lilac shrubs with arching branches and flowering lilacs grow the moist, rich soil.  The breeze on the air carries the fragrance of the flowers in bloom.  A small rabbit can be seen sunbathing in a warm patch of grass.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3148} {0} {} {-= Open Field =- (se,ne,n,e)} { } {The field is covered in bright green grass and the majestic beauty of towering oaks, purple butterfly bushes and morning star roses.  Lilac shrubs with arching branches and flowering lilacs grow the moist, rich soil.  The breeze on the air carries the fragrance of the flowers in bloom.  A small rabbit can be seen sunbathing in a warm patch of grass.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3147} {e} {e} {2} {0} {} {1.000} {}
 E { 3149} {n} {n} {1} {0} {} {1.000} {}
 E { 3101} {se} {se} {6} {0} {} {1.000} {}
 E { 3327} {ne} {ne} {3} {0} {} {1.000} {}
 
-R { 3149} {0} {} {3149} { } {-= Open Field =- The expansive field is decorated by towering oak trees, morning star roses, butterfly bushes, and an array of other plants too numerous to name.  Yarrow flowers bloom in clumps with their summer pastels of yellows, pinks, reds, purples, and grays.  A warm gentle breeze combines the fragrances of the beautiful flowering plants seen in the field, including the bean plants off in the distance.  Bees can be seen buzzing from flower to flower in the warmth of the sun.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3149} {0} {} {-= Open Field =- (se,ne,n,s,e)} { } {-= Open Field =- The expansive field is decorated by towering oak trees, morning star roses, butterfly bushes, and an array of other plants too numerous to name.  Yarrow flowers bloom in clumps with their summer pastels of yellows, pinks, reds, purples, and grays.  A warm gentle breeze combines the fragrances of the beautiful flowering plants seen in the field, including the bean plants off in the distance.  Bees can be seen buzzing from flower to flower in the warmth of the sun.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3148} {s} {s} {4} {0} {} {1.000} {}
 E { 3150} {n} {n} {1} {0} {} {1.000} {}
 E { 3147} {se} {se} {6} {0} {} {1.000} {}
 E { 3326} {ne} {ne} {3} {0} {} {1.000} {}
 E { 3327} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3150} {0} {} {3150} { } {-= Open Field =- The expansive field is decorated by towering oak trees, morning star roses, butterfly bushes, and an array of other plants too numerous to name.  Lilac shrubs with arching branches and flowering lilacs grow the moist, rich soil.  The breeze on the air carries the fragrance of the flowers in bloom.  The high sun in the sky dries the dew on the ground with its warmth.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3150} {0} {} {-= Open Field =- (se,ne,n,s,e)} { } {-= Open Field =- The expansive field is decorated by towering oak trees, morning star roses, butterfly bushes, and an array of other plants too numerous to name.  Lilac shrubs with arching branches and flowering lilacs grow the moist, rich soil.  The breeze on the air carries the fragrance of the flowers in bloom.  The high sun in the sky dries the dew on the ground with its warmth.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3149} {s} {s} {4} {0} {} {1.000} {}
 E { 3151} {n} {n} {1} {0} {} {1.000} {}
 E { 3327} {se} {se} {6} {0} {} {1.000} {}
 E { 3325} {ne} {ne} {3} {0} {} {1.000} {}
 E { 3326} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3151} {0} {} {3151} { } {-= Open Field =- Towering oak trees and bright green grass cover the expansive field.  Dandelions grow sporadically in the grass.  The breeze on the air carries the fragrance of the flowers in bloom.  Rays from the sun brighten the field and warm the grass.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3151} {0} {} {-= Open Field =- (se,e,s)} { } {-= Open Field =- Towering oak trees and bright green grass cover the expansive field.  Dandelions grow sporadically in the grass.  The breeze on the air carries the fragrance of the flowers in bloom.  Rays from the sun brighten the field and warm the grass.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3150} {s} {s} {4} {0} {} {1.000} {}
 E { 3325} {e} {e} {2} {0} {} {1.000} {}
 E { 3326} {se} {se} {6} {0} {} {1.000} {}
@@ -14853,14 +14853,14 @@ E { 3153} {n} {n} {1} {0} {} {1.000} {}
 E { 3319} {s} {s} {4} {0} {} {1.000} {}
 E {  738} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3325} {0} {} {3325} { } {-= Open Field =- The expansive field is decorated by towering oak trees, morning star roses, butterfly bushes, and an array of other plants too numerous to name.  Dandelions grow sporadically in the grass.  The breeze on the air carries the fragrance of the flowers in bloom.  Bees can be seen buzzing from flower to flower in the warmth of the sun.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3325} {0} {} {-= Open Field =- (se,sw,s,w,e)} { } {-= Open Field =- The expansive field is decorated by towering oak trees, morning star roses, butterfly bushes, and an array of other plants too numerous to name.  Dandelions grow sporadically in the grass.  The breeze on the air carries the fragrance of the flowers in bloom.  Bees can be seen buzzing from flower to flower in the warmth of the sun.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3151} {w} {w} {8} {0} {} {1.000} {}
 E { 3326} {s} {s} {4} {0} {} {1.000} {}
 E { 3150} {sw} {sw} {12} {0} {} {1.000} {}
 E { 3330} {se} {se} {6} {0} {} {1.000} {}
 E { 3331} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3326} {0} {} {3326} { } {-= Open Field =- The field is covered in bright green grass and the majestic beauty of towering oaks, purple butterfly bushes and morning star roses.  Dandelions grow sporadically in the grass.  The breeze on the air carries the fragrance of the flowers in bloom.  Bees can be seen buzzing from flower to flower in the warmth of the sun.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3326} {0} {} {-= Open Field =- (se,sw,ne,nw,n,s,w,e)} { } {-= Open Field =- The field is covered in bright green grass and the majestic beauty of towering oaks, purple butterfly bushes and morning star roses.  Dandelions grow sporadically in the grass.  The breeze on the air carries the fragrance of the flowers in bloom.  Bees can be seen buzzing from flower to flower in the warmth of the sun.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3325} {n} {n} {1} {0} {} {1.000} {}
 E { 3327} {s} {s} {4} {0} {} {1.000} {}
 E { 3149} {sw} {sw} {12} {0} {} {1.000} {}
@@ -14870,7 +14870,7 @@ E { 3329} {se} {se} {6} {0} {} {1.000} {}
 E { 3331} {ne} {ne} {3} {0} {} {1.000} {}
 E { 3330} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3327} {0} {} {3327} { } {-= Open Field =- The expansive field is decorated by towering oak trees, morning star roses, butterfly bushes, and an array of other plants too numerous to name.  Dandelions, yarrows, and lilac shrubs all are in full bloom in the rich soil.  The breeze on the air carries the sweet fragrance of the flowering bean plants which can be seen off in the distance.  A small rabbit can be seen sunbathing in a warm patch of grass.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3327} {0} {} {-= Open Field =- (se,sw,ne,nw,n,s,w,e)} { } {-= Open Field =- The expansive field is decorated by towering oak trees, morning star roses, butterfly bushes, and an array of other plants too numerous to name.  Dandelions, yarrows, and lilac shrubs all are in full bloom in the rich soil.  The breeze on the air carries the sweet fragrance of the flowering bean plants which can be seen off in the distance.  A small rabbit can be seen sunbathing in a warm patch of grass.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3326} {n} {n} {1} {0} {} {1.000} {}
 E { 3147} {s} {s} {4} {0} {} {1.000} {}
 E { 3148} {sw} {sw} {12} {0} {} {1.000} {}
@@ -14880,7 +14880,7 @@ E { 3328} {se} {se} {6} {0} {} {1.000} {}
 E { 3330} {ne} {ne} {3} {0} {} {1.000} {}
 E { 3329} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3328} {0} {} {3328} { } {-= Open Field =- The field is covered in bright green grass and the majestic beauty of towering oaks, purple butterfly bushes and morning star roses.  Dandelions, yarrows, and lilac shrubs all are in full bloom in the rich soil.  The breeze on the air carries the sweet fragrance of the flowering bean plants which can be seen off in the distance.  A small rabbit can be seen sunbathing in a warm patch of grass.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3328} {0} {} {-= Open Field =- (se,sw,ne,nw,n,s,w,e)} { } {-= Open Field =- The field is covered in bright green grass and the majestic beauty of towering oaks, purple butterfly bushes and morning star roses.  Dandelions, yarrows, and lilac shrubs all are in full bloom in the rich soil.  The breeze on the air carries the sweet fragrance of the flowering bean plants which can be seen off in the distance.  A small rabbit can be seen sunbathing in a warm patch of grass.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3134} {s} {s} {4} {0} {} {1.000} {}
 E { 3329} {n} {n} {1} {0} {} {1.000} {}
 E { 3101} {sw} {sw} {12} {0} {} {1.000} {}
@@ -14890,7 +14890,7 @@ E { 3336} {se} {se} {6} {0} {} {1.000} {}
 E { 3334} {ne} {ne} {3} {0} {} {1.000} {}
 E { 3335} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3329} {0} {} {3329} { } {-= Open Field =- The expansive field is decorated by towering oak trees, morning star roses, butterfly bushes, and an array of other plants too numerous to name.  Lilac shrubs with arching branches and flowering lilacs grow the moist, rich soil.  The breeze on the air carries the fragrance of the flowers in bloom.  A small rabbit can be seen sunbathing in a warm patch of grass.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3329} {0} {} {-= Open Field =- (se,sw,ne,nw,n,s,w,e)} { } {-= Open Field =- The expansive field is decorated by towering oak trees, morning star roses, butterfly bushes, and an array of other plants too numerous to name.  Lilac shrubs with arching branches and flowering lilacs grow the moist, rich soil.  The breeze on the air carries the fragrance of the flowers in bloom.  A small rabbit can be seen sunbathing in a warm patch of grass.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3328} {s} {s} {4} {0} {} {1.000} {}
 E { 3330} {n} {n} {1} {0} {} {1.000} {}
 E { 3326} {nw} {nw} {9} {0} {} {1.000} {}
@@ -14900,7 +14900,7 @@ E { 3335} {se} {se} {6} {0} {} {1.000} {}
 E { 3333} {ne} {ne} {3} {0} {} {1.000} {}
 E { 3334} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3330} {0} {} {3330} { } {-= Open Field =- The field is covered in bright green grass and the majestic beauty of towering oaks, purple butterfly bushes and morning star roses.  Dandelions, yarrows, and lilac shrubs all are in full bloom in the rich soil.  The breeze on the air carries the sweet fragrance of the flowering bean plants which can be seen off in the distance.  A small rabbit can be seen sunbathing in a warm patch of grass.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3330} {0} {} {-= Open Field =- (se,sw,ne,nw,n,s,w,e)} { } {-= Open Field =- The field is covered in bright green grass and the majestic beauty of towering oaks, purple butterfly bushes and morning star roses.  Dandelions, yarrows, and lilac shrubs all are in full bloom in the rich soil.  The breeze on the air carries the sweet fragrance of the flowering bean plants which can be seen off in the distance.  A small rabbit can be seen sunbathing in a warm patch of grass.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3329} {s} {s} {4} {0} {} {1.000} {}
 E { 3331} {n} {n} {1} {0} {} {1.000} {}
 E { 3325} {nw} {nw} {9} {0} {} {1.000} {}
@@ -14910,26 +14910,26 @@ E { 3334} {se} {se} {6} {0} {} {1.000} {}
 E { 3332} {ne} {ne} {3} {0} {} {1.000} {}
 E { 3333} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3331} {0} {} {3331} { } {-= Open Field =- The ground is covered with green grass and purple butterfly bushes.  Dandelions, yarrows, and lilac shrubs all are in full bloom in the rich soil.  The gentle breeze rustles the flowers in full bloom.  Bees can be seen buzzing from flower to flower in the warmth of the sun.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3331} {0} {} {-= Open Field =- (sw,se,w,e,s)} { } {-= Open Field =- The ground is covered with green grass and purple butterfly bushes.  Dandelions, yarrows, and lilac shrubs all are in full bloom in the rich soil.  The gentle breeze rustles the flowers in full bloom.  Bees can be seen buzzing from flower to flower in the warmth of the sun.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3330} {s} {s} {4} {0} {} {1.000} {}
 E { 3332} {e} {e} {2} {0} {} {1.000} {}
 E { 3325} {w} {w} {8} {0} {} {1.000} {}
 E { 3326} {sw} {sw} {12} {0} {} {1.000} {}
 E { 3333} {se} {se} {6} {0} {} {1.000} {}
 
-R { 3332} {0} {} {3332} { } {-= Open Field =- The ground is covered with green grass and purple butterfly bushes.  Lilac shrubs with arching branches and flowering lilacs grow the moist, rich soil.  The gentle breeze rustles the flowers in full bloom.  Bees can be seen buzzing from flower to flower in the warmth of the sun.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3332} {0} {} {-= Open Field =- (sw,w,s)} { } {-= Open Field =- The ground is covered with green grass and purple butterfly bushes.  Lilac shrubs with arching branches and flowering lilacs grow the moist, rich soil.  The gentle breeze rustles the flowers in full bloom.  Bees can be seen buzzing from flower to flower in the warmth of the sun.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3331} {w} {w} {8} {0} {} {1.000} {}
 E { 3333} {s} {s} {4} {0} {} {1.000} {}
 E { 3330} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 3333} {0} {} {3333} { } {-= Open Field =- Towering oak trees and bright green grass cover the expansive field.  Dandelions, yarrows, and lilac shrubs all are in full bloom in the rich soil.  A warm gentle breeze combines the fragrances of the beautiful flowering plants seen in the field, including the bean plants off in the distance.  Rays from the sun brighten the field and warm the grass.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3333} {0} {} {-= Open Field =- (sw,nw,n,s,w)} { } {-= Open Field =- Towering oak trees and bright green grass cover the expansive field.  Dandelions, yarrows, and lilac shrubs all are in full bloom in the rich soil.  A warm gentle breeze combines the fragrances of the beautiful flowering plants seen in the field, including the bean plants off in the distance.  Rays from the sun brighten the field and warm the grass.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3332} {n} {n} {1} {0} {} {1.000} {}
 E { 3334} {s} {s} {4} {0} {} {1.000} {}
 E { 3329} {sw} {sw} {12} {0} {} {1.000} {}
 E { 3330} {w} {w} {8} {0} {} {1.000} {}
 E { 3331} {nw} {nw} {9} {0} {} {1.000} {}
 
-R { 3334} {0} {} {3334} { } {-= Open Field =- Towering oak trees and bright green grass cover the expansive field.  Dandelions, yarrows, and lilac shrubs all are in full bloom in the rich soil.  The breeze on the air carries the fragrance of the flowers in bloom.  Bees can be seen buzzing from flower to flower in the warmth of the sun.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3334} {0} {} {-= Open Field =- (se,sw,nw,n,s,w,e)} { } {-= Open Field =- Towering oak trees and bright green grass cover the expansive field.  Dandelions, yarrows, and lilac shrubs all are in full bloom in the rich soil.  The breeze on the air carries the fragrance of the flowers in bloom.  Bees can be seen buzzing from flower to flower in the warmth of the sun.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3333} {n} {n} {1} {0} {} {1.000} {}
 E { 3335} {s} {s} {4} {0} {} {1.000} {}
 E { 3328} {sw} {sw} {12} {0} {} {1.000} {}
@@ -14938,7 +14938,7 @@ E { 3330} {nw} {nw} {9} {0} {} {1.000} {}
 E { 3338} {se} {se} {6} {0} {} {1.000} {}
 E { 3339} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3335} {0} {} {3335} { } {-= Open Field =- The ground is covered with green grass and purple butterfly bushes.  Lilac shrubs with arching branches and flowering lilacs grow the moist, rich soil.  The breeze on the air carries the sweet fragrance of the flowering bean plants which can be seen off in the distance.  Bees can be seen buzzing from flower to flower in the warmth of the sun.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3335} {0} {} {-= Open Field =- (se,sw,ne,nw,n,s,w,e)} { } {-= Open Field =- The ground is covered with green grass and purple butterfly bushes.  Lilac shrubs with arching branches and flowering lilacs grow the moist, rich soil.  The breeze on the air carries the sweet fragrance of the flowering bean plants which can be seen off in the distance.  Bees can be seen buzzing from flower to flower in the warmth of the sun.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3334} {n} {n} {1} {0} {} {1.000} {}
 E { 3336} {s} {s} {4} {0} {} {1.000} {}
 E { 3134} {sw} {sw} {12} {0} {} {1.000} {}
@@ -14948,7 +14948,7 @@ E { 3337} {se} {se} {6} {0} {} {1.000} {}
 E { 3339} {ne} {ne} {3} {0} {} {1.000} {}
 E { 3338} {e} {e} {2} {0} {} {1.000} {}
 
-R { 3336} {0} {} {3336} { } {-= Open Field =- The field is covered in bright green grass and the majestic beauty of towering oaks, purple butterfly bushes and morning star roses.  Lilac shrubs with arching branches and flowering lilacs grow the moist, rich soil.  The breeze on the air carries the fragrance of the flowers in bloom.  The high sun in the sky dries the dew on the ground with its warmth.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3336} {0} {} {-= Open Field =- (se,sw,ne,nw,n,s,w,e)} { } {-= Open Field =- The field is covered in bright green grass and the majestic beauty of towering oaks, purple butterfly bushes and morning star roses.  Lilac shrubs with arching branches and flowering lilacs grow the moist, rich soil.  The breeze on the air carries the fragrance of the flowers in bloom.  The high sun in the sky dries the dew on the ground with its warmth.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3335} {n} {n} {1} {0} {} {1.000} {}
 E { 3337} {e} {e} {2} {0} {} {1.000} {}
 E { 3134} {w} {w} {8} {0} {} {1.000} {}
@@ -14965,14 +14965,14 @@ E { 3335} {nw} {nw} {9} {0} {} {1.000} {}
 E { 3136} {sw} {sw} {12} {0} {} {1.000} {}
 E { 3137} {s} {s} {4} {0} {} {1.000} {}
 
-R { 3338} {0} {} {3338} { } {-= Open Field =- Towering oak trees and bright green grass cover the expansive field.  Dandelions, yarrows, and lilac shrubs all are in full bloom in the rich soil.  The breeze on the air carries the sweet fragrance of the flowering bean plants which can be seen off in the distance.  Bees can be seen buzzing from flower to flower in the warmth of the sun.   } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3338} {0} {} {-= Open Field =- (sw,nw,n,s,w)} { } {-= Open Field =- Towering oak trees and bright green grass cover the expansive field.  Dandelions, yarrows, and lilac shrubs all are in full bloom in the rich soil.  The breeze on the air carries the sweet fragrance of the flowering bean plants which can be seen off in the distance.  Bees can be seen buzzing from flower to flower in the warmth of the sun.   } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3337} {s} {s} {4} {0} {} {1.000} {}
 E { 3339} {n} {n} {1} {0} {} {1.000} {}
 E { 3334} {nw} {nw} {9} {0} {} {1.000} {}
 E { 3335} {w} {w} {8} {0} {} {1.000} {}
 E { 3336} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 3339} {0} {} {3339} { } {-= Road Shoulder =- The edge of the road is spotted with weeds and thin grass.  Open fields can be seen to the east and south. On the other side of the road, a small churchyard sits peacefully.  The road itself is made of black tar. } {Summerset Warrens} {} {} {} {1.000} {}
+R { 3339} {0} {} {} { } {-= Road Shoulder =- The edge of the road is spotted with weeds and thin grass.  Open fields can be seen to the east and south. On the other side of the road, a small churchyard sits peacefully.  The road itself is made of black tar. } {Summerset Warrens} {} {} {} {1.000} {}
 E { 3338} {s} {s} {4} {0} {} {1.000} {}
 E { 3340} {n} {n} {1} {0} {} {1.000} {}
 E { 3334} {w} {w} {8} {0} {} {1.000} {}
@@ -55163,7 +55163,6 @@ E {11882} {n} {n} {1} {0} {} {1.000} {}
 
 R {11600} {0} {} {Krispy Krematorium (n,s)} { } {At least one thing is clear now that you can get a closer look at what's behind the counter here in the Krispy Krematorium. No one is making any donuts. The shelves are empty as are the cooling racks that line the walls on either side of you. There's not even a crumb on the floor or the ordering counter. The only thing that looks interesting at all is the opaque wall that stands to your north. It quivers every few seconds, almost like it's made of some sort of magical jello. } {Krispy Krematorium} {} {} {} {1.000} {}
 E { 9953} {s} {s} {4} {0} {} {1.000} {}
-E {12415} {n} {n} {1} {0} {} {1.000} {}
 
 R {11601} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E { 5849} {nw} {nw} {9} {0} {} {1.000} {}
@@ -58641,9 +58640,6 @@ E {12580} {n} {n} {1} {0} {} {1.000} {}
 R {12414} {0} {} {the stone halls (w)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {} {} {} {1.000} {}
 E {12271} {w} {w} {8} {0} {} {1.000} {}
 
-R {12415} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
-E {11600} {s} {s} {4} {0} {} {1.000} {}
-
 R {12416} {0} {} {the stone halls (s,w)} { } {Rows and rows of carefully constructed stone blocks form the halls upon which you roam. Varying sized holes in every few blocks lead into the darkness behind them. Occasionally a small spiderling scurries by or the louder clacks of long spider legs can be heard. } {Arachnecropolis} {} {} {} {1.000} {}
 E {12272} {w} {w} {8} {0} {} {1.000} {}
 E {12419} {s} {s} {4} {0} {} {1.000} {}
@@ -61779,7 +61775,7 @@ R {13126} {0} {} {crevice (n,e)} { } {You are in a dark and treacherous cavern. 
 E {13125} {n} {n} {1} {0} {} {1.000} {}
 E {13128} {e} {e} {2} {0} {} {1.000} {}
 
-R {13127} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {13127} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {12049} {n} {n} {1} {0} {} {1.000} {}
 E { 4957} {s} {s} {4} {0} {} {1.000} {}
 

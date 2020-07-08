@@ -297,13 +297,21 @@ make_global_blacklist
 
 #alias {make_killpath}{
 	#line quiet #map {find}{%0};
-	#unvar {kill_path2};
-	#list {kill_path2}{clear};
-	#line quiet #path {save}{forward}{kill_path2};
-	#list {kill_path2}{create}{$kill_path2};
-	#list {kill_path2}{size}{path_size};
-	#list {unexplored}{size}{unexplored_rooms};
-	#var {path_index}{1};
+	#line quiet #map {at}{%0}{
+		#map {get}{roomflag}{tempavoid};
+	};
+	#if {$tempavoid != 1}{
+		#unvar {kill_path2};
+		#list {kill_path2}{clear};
+		#line quiet #path {save}{forward}{kill_path2};
+		#list {kill_path2}{create}{$kill_path2};
+		#list {kill_path2}{size}{path_size};
+		#list {unexplored}{size}{unexplored_rooms};
+		#var {path_index}{1};
+	}{
+		#math {room_index}{$room_index + 1};
+		make_killpath ${roomlist[${room_index}]};
+	};
 };
 
 #alias {make_roomlist}{
@@ -320,7 +328,7 @@ make_global_blacklist
 		#if {${roomvnum} == ${roomlist[${room_index}]}}{
 			#math {room_index}{$room_index + 1};
 		};
-		make_killpath {${roomlist[${room_index}]}};
+		make_killpath ${roomlist[${room_index}]};
 		#unvar my_roomlist;
 	};
 	#if {"$blacklist" != ""}{

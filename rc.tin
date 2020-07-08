@@ -98,6 +98,8 @@
 	};
         #send {$ses_name};
         #read .tt/.pass;
+	#read .tt/start.tin;
+	#read .tt/char/%0.tin;
 }
 
 #read .tt/menu.tin

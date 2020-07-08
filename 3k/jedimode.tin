@@ -50,6 +50,7 @@
 #gag {^You feel your bones knitting together.}
 #gag {^The healing power of the Force flows through you.}
 #gag {^The Force courses through you, mending your body.}
+#gag {^You cut off the blood to %1 brain.}
 #gag {^You clutch %1 heart with the Force}
 #gag {^the very life from %1.}
 #gag {^very life from %1.}
