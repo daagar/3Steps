@@ -37,6 +37,13 @@
 	#echo {Re-loading character files.};
 }
 
+#alias mob {
+	redraw map off;
+	redraw chat off;
+	redraw canvas off;
+	redraw caption off;
+}
+
 #alias {ga} {get all}
 #alias {gac} {get all from corpse}
 #alias {gl} {glance}

@@ -43,6 +43,7 @@ redraw biome on;
 #act {%1 flesh stops rotting}{
 	#var {my[bite][status]}{0};
 };
+#nop {
 #act {^Your wounds close as you morph into a %1!}{
 	#delay {2}{db_query_form_damage;select_current_form_biome};
 };
@@ -54,6 +55,19 @@ redraw biome on;
 };
 #act {You morph into an %1!}{
 	#delay {2}{db_query_form_damage;select_current_form_biome};
+};
+};
+#act {^Your wounds close as you morph into a %1!}{
+	#delay {2}{db_query_form_damage};
+};
+#act {You morph into a %1!}{
+	#delay {2}{db_query_form_damage};
+};
+#act {^Your wounds close as you morph into an %1!}{
+	#delay {2}{db_query_form_damage};
+};
+#act {You morph into an %1!}{
+	#delay {2}{db_query_form_damage};
 };
 
 #alias kk {kill $kstr}
