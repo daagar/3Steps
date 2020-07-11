@@ -553,6 +553,12 @@
 
 #act {You are fully rejuvenated and thus exit your trance}{
 	#var {my[cleanse][status]}{0};
+	!focus accelerated healing;
+	!focus control pain;
+	!focus clear mind;
+	#if {"$subguild" != "krath"}{
+		!focus force deflection;
+	};
 };
 
 #act {You have no need to enter a hibernation trance.}{
@@ -561,6 +567,12 @@
 
 #act {You abruptly exit your hibernation trance.}{
 	#var {my[cleanse][status]}{0};
+	!focus accelerated healing;
+	!focus control pain;
+	!focus clear mind;
+	#if {"$subguild" != "krath"}{
+		!focus force deflection;
+	};
 };
 
 #alias {ppp}{

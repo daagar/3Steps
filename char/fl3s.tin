@@ -79,6 +79,10 @@ redraw biome on;
 	!consume bioplast;
 };
 
+fbq donuts
+fbq uo3
+fbq gspiders
+
 #gag {HP[%1/%2] SP[%3/%4] ST[%5\%] PP[%6\%] CF[%7/%8\%] FF[%9] E%10 %11}
 #act {HP[%1/%2] SP[%3/%4] ST[%5\%] PP[%6\%] CF[%7/%8\%] FF[%9] E[%10] %11}{
 	#var {my[hp][current]}		{%1};

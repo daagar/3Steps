@@ -13,8 +13,10 @@ redraw jedimode on
 #var {my[desired][weapon]}{lightsaber};
 #var {my[desired][mode]}{guide};
 #var {my[damage][type]}{boil};
+
 fbq uo1
-fbq aegisl6
+fbq uo2
+fbq donuts
 
 
 #nop {focus hpconfigure /HP: #hp/#mhp SP: #sp/#msp C: #c F: #f M: #sm/#%c D: #dn/#ng P: #df E: #es GXP: #gxp}
