@@ -269,30 +269,30 @@ make_global_blacklist
 
 #act {AREA NAME: %1 [%2]} {
 	#var {area}{%1};
-	show_area_selector;
+	#map get {roomarea}{my_area};
+	#if {"$my_area" != ""}{
+		#var {area}{$my_area};
+	};
 	make_roomlist {$area};
 	#if {$do_queue2 == 1}{
-		#map get {roomarea}{my_area};
-		#if {"$my_area" != ""}{
-			#var {area}{$my_area};
-		};
 		#var do_queue2 0;
 		ki;
 	};
+	show_area_selector;
 }
 
 #act {AREA RATING -> %1 [%2]}{
 	#var {area}{%2};
-	show_area_selector;
+	#map get {roomarea}{my_area};
+	#if {"$my_area" != ""}{
+		#var {area}{$my_area};
+	};
 	make_roomlist {$area};
 	#if {$do_queue2 == 1}{
-		#map get {roomarea}{my_area};
-		#if {"$my_area" != ""}{
-			#var {area}{$my_area};
-		};
 		#var do_queue2 0;
 		ki;
 	};
+	show_area_selector;
 }
 
 #alias {make_killpath}{
@@ -572,7 +572,34 @@ make_global_blacklist
 	};
 };
 
+#alias {next_area_function}{
+	#if {${player_room} == 0}{ 
+		#if {${autogather} == 1}{
+			gather_items;
+		};
+		#if {${critter_room} > 0}{
+				#var domove2 0;
+				#if {$autokill == 1}{
+					kill $kstr;
+				};
+		}{
+			go ${areaselector[roomnote][${targetarea}]};
+			#delay {0.15}{rating};
+		};
+	}{
+		go ${areaselector[roomnote][${targetarea}]};
+		#delay {0.15}{rating};
+	};
+};
+
+
 #alias {step_function}{
+	#if {$debug_stepper == 1}{
+		#echo {using Stepper mode $stepper2 - Queeuing is $autoqueue - Domove is $domove2 - do_queue is $do_queue2};
+		#echo {Room index is $room_index - Path index is $path_index};
+		#echo {There are $critter_room critters in the room};
+		#echo {There are $player_room players in the room};
+	};
 	#if {${stepper2} == 1}{
 		${kill_path2[${path_index}]};
 		#math {path_index}{$path_index + 1};
@@ -585,8 +612,7 @@ make_global_blacklist
 					#math {targetarea}{${areaselector[current]} + 1};
 					#if {${targetarea} > ${queue_size}}{#var {targetarea}{1}};
 					#var {do_queue2}{1};
-					go ${areaselector[roomnote][${targetarea}]};
-					rating;
+					#delay {0.15}{next_area_function};
 				}{
 					make_killpath {${roomlist[${room_index}]}};
 					step_function;
@@ -606,8 +632,7 @@ make_global_blacklist
 					#if {$autoqueue == 1}{
 						#math {targetarea}{$my[areaselector][current] + 1};
 						#if {$targetarea > 6}{#var {targetarea}{1}};
-						#var {room_num}{1};
-						go ${my[areaselector][${targetarea}][note]};
+						#delay {0.15}{next_area_function};
 					};
 				}{
 					${kill_path[${room_num}]};

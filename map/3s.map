@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 11
+F 10
 
 G 0
 
-I 12951
+I 6389
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} { }
+L {UNICODE GRAPHICS} {NO DIAGONAL} {}
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -28846,11 +28846,11 @@ R { 6379} {0} {} {6379} { } {} {} {} {} {} {1.000} {}
 E { 6378} {e} {e} {2} {0} {} {1.000} {}
 E { 6380} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 6380} {0} {} {6380} { } {} {} {} {} {} {1.000} {}
+R { 6380} {0} {<118>} {6380} { } {} {} {} {} {} {1.000} {}
 E { 6379} {ne} {ne} {3} {0} {} {1.000} {}
 E { 6381} {s} {s} {4} {0} {} {1.000} {}
 
-R { 6381} {0} {} {6381} { } {} {} {} {} {} {1.000} {}
+R { 6381} {0} {} {6381} { } {Regiments of troops and vehicles can be seen through the door to the east. Looking north and southeast, there are many engineers and warriors coming and going. The noises are now discernable as there is much banging and hum of equipment in use. } {Juggernaut} {} {} {} {1.000} {}
 E { 6380} {n} {n} {1} {0} {} {1.000} {}
 E { 6382} {se} {se} {6} {0} {} {1.000} {}
 E { 6389} {e} {e} {2} {0} {} {1.000} {}
@@ -28880,7 +28880,7 @@ E { 6388} {s} {s} {4} {0} {} {1.000} {}
 R { 6388} {0} {} {6388} { } {} {} {} {} {} {1.000} {}
 E { 6387} {n} {n} {1} {0} {} {1.000} {}
 
-R { 6389} {0} {<128>} {jugger ammo} {A} {} {} {A} {} {} {1.000} {}
+R { 6389} {0} {<128>} {Ground base-Ammo room (w)} {A} {You have entered the ammo depot for the Juggernaut guild.  The walls are mounted with glass cases with very peculiar looking ammo inside.  A long counter runs along the east side of the shop with steel bars preventing anyone from hopping over the counter.  Behind this counter is a opened door which leads back into a storage room with an endless numbers of shelves. } {Juggernaut} {jugger ammo} {} {} {1.000} {}
 E { 6381} {w} {w} {8} {0} {} {1.000} {}
 
 R { 6390} {0} {} {6390} { } {You are standing at a large flat landing pad that extends outside the ground base. The pad is elevated high above the ground, making the doors leading back into the structure the only way to return. } {Juggernaut} {} {} {} {1.000} {}
@@ -28905,12 +28905,14 @@ E { 6395} {s} {s} {4} {0} {} {1.000} {}
 E { 6397} {u} {u} {16} {0} {} {1.000} {}
 E { 6457} {n} {n;upgrade} {1} {0} {} {1.000} {}
 
-R { 6395} {0} {} {6395} { } {} {} {} {} {} {1.000} {}
+R { 6395} {0} {<118>} {6395} { } {} {} {} {} {} {1.000} {}
 E { 6394} {n} {n} {1} {0} {} {1.000} {}
 E { 6396} {s} {s} {4} {0} {} {1.000} {}
 
-R { 6396} {0} {} {jugger suit} {S} {} {} {} {} {} {1.000} {}
+R { 6396} {0} {} {[Sub-1] Level Sub 1-Battle armour storage room (w,e,n)} {S} {This room is a gigantic store house of battle armour. As far as the eye can see, massive suits of power armour line the walls. People are hard at work filling out the requisitions of various warriors. Commands:          change <suit name>-Switch suits(read the sign)          store - Stores your current suit (Mounts & Reinforces)          pickup - Changes you to your stored suit type with the stored                    Mounts/Reinforces          swap - Swap your current suit and your stored suit, storing your                  current suit          empty - Clear your suit storage          check - Check what you have stored          DITCHIT-Clear a suit with glevel<50 (no gxp refunded) } {Juggernaut} {jugger suit} {} {} {1.000} {}
 E { 6395} {n} {n} {1} {0} {} {1.000} {}
+E {12415} {w} {w} {8} {0} {} {1.000} {}
+E {13478} {e} {e} {2} {0} {} {1.000} {}
 
 R { 6397} {0} {} {6397} { } {} {} {} {} {} {1.000} {}
 E { 6394} {d} {d} {32} {0} {} {1.000} {}
@@ -29088,7 +29090,7 @@ E { 9897} {n} {n} {1} {0} {} {1.000} {}
 E { 9922} {se} {se} {6} {0} {} {1.000} {}
 E { 9923} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 6439} {0} {} {6439} { } {} {} {} {} {} {1.000} {}
+R { 6439} {0} {<118>} {6439} { } {} {} {} {} {} {1.000} {}
 E { 6436} {s} {s} {4} {0} {} {1.000} {}
 E { 6440} {e} {e} {2} {0} {} {1.000} {}
 E { 6441} {n} {n} {1} {0} {} {1.000} {}
@@ -29096,12 +29098,12 @@ E { 6441} {n} {n} {1} {0} {} {1.000} {}
 R { 6440} {0} {} {6440} { } {} {} {} {} {} {1.000} {}
 E { 6439} {w} {w} {8} {0} {} {1.000} {}
 
-R { 6441} {0} {} {6441} { } {} {} {} {} {} {1.000} {}
+R { 6441} {0} {} {6441} { } {You are standing in a long metal hallway that makes up part of the juggernaut's orbital station. Everything has a very sanitized look to it, and every panel of the floor, walls, and ceiling is the exact same size and shape. This sort of perfection could only be created by the brilliant, and boring, minds of the clan. } {Juggernaut} {} {} {} {1.000} {}
 E { 6439} {s} {s} {4} {0} {} {1.000} {}
 E { 6442} {e} {e} {2} {0} {} {1.000} {}
 E { 6454} {ne} {ne} {3} {0} {} {1.000} {}
 
-R { 6442} {0} {<128>} {jugger mount} {M} {} {} {} {} {} {1.000} {}
+R { 6442} {0} {<128>} {[Level 1] Level 1-Mount shop (w)} {M} {You have entered the weapon depot for the Juggernaut guild.  The walls are mounted with glass cases with very peculiar looking weapons inside.  A long counter runs along the east side of the shop with steel bars preventing anyone from hopping over the counter.  Behind this counter is a opened door which leads back into a storage room with an endless numbers of shelves. } {Juggernaut} {jugger mount} {} {} {1.000} {}
 E { 6441} {w} {w} {8} {0} {} {1.000} {}
 
 R { 6443} {0} {} {6443} { } {} {} {} {} {} {1.000} {}
@@ -29151,7 +29153,7 @@ E { 6452} {s} {s} {4} {0} {} {1.000} {}
 E { 9905} {w} {w} {8} {0} {} {1.000} {}
 E { 9906} {e} {e} {2} {0} {} {1.000} {}
 
-R { 6454} {0} {} {6454} { } {} {} {} {} {} {1.000} {}
+R { 6454} {0} {<118>} {6454} { } {} {} {} {} {} {1.000} {}
 E { 6450} {e} {e} {2} {0} {} {1.000} {}
 E { 6441} {sw} {sw} {12} {0} {} {1.000} {}
 
@@ -58640,6 +58642,10 @@ E {12580} {n} {n} {1} {0} {} {1.000} {}
 R {12414} {0} {} {the stone halls (w)} { } {Block after block, your eyes mindlessly count one after another as you roam these ancient halls. Spiders chitter by in the distance and create shadows along the stone walls, looking much larger than reality. You can hear loud clickety clacking of massive creatures nearby as they patrol on the stone floors. } {Arachnecropolis} {} {} {} {1.000} {}
 E {12271} {w} {w} {8} {0} {} {1.000} {}
 
+R {12415} {0} {} {[Sub-1] In a power armour storage facility (w,e)} { } {This row of the storage facility houses hundreds of suits of Gnome armour. The gnome armour is designed to withstand the most devastating of attacks. When brought into battle, the gnome will attract the attention of the enemy and rely on his companions to make the kill. } {Juggernaut} {} {} {} {1.000} {}
+E { 6396} {e} {e} {2} {0} {} {1.000} {}
+E {13479} {w} {w} {8} {0} {} {1.000} {}
+
 R {12416} {0} {} {the stone halls (s,w)} { } {Rows and rows of carefully constructed stone blocks form the halls upon which you roam. Varying sized holes in every few blocks lead into the darkness behind them. Occasionally a small spiderling scurries by or the louder clacks of long spider legs can be heard. } {Arachnecropolis} {} {} {} {1.000} {}
 E {12272} {w} {w} {8} {0} {} {1.000} {}
 E {12419} {s} {s} {4} {0} {} {1.000} {}
@@ -61000,7 +61006,7 @@ R {12950} {0} {} {the Ancient Arachnecropolis (ne,nw)} { } {You have reached an 
 E {12946} {nw} {nw} {9} {0} {} {1.000} {}
 E {12948} {ne} {ne} {3} {0} {} {1.000} {}
 
-R {12951} {1} {} {the Ancient Arachnecropolis (ne,nw)} { } {You have reached an Ancient Tomb of Kings within the Arachnecropolis. This place is the final resting place of a long-dead and ancient King of spiders. A massive stone tomb adorned with cryptic runescript and symbols creates a central focal point in this massive place. } {Arachnecropolis} {} {} {} {1.000} {}
+R {12951} {513} {} {the Ancient Arachnecropolis (ne,nw)} { } {You have reached an Ancient Tomb of Kings within the Arachnecropolis. This place is the final resting place of a long-dead and ancient King of spiders. A massive stone tomb adorned with cryptic runescript and symbols creates a central focal point in this massive place. } {Arachnecropolis} {} {} {} {1.000} {}
 E {12944} {nw} {nw} {9} {0} {} {1.000} {}
 E {12952} {ne} {ne} {3} {0} {} {1.000} {}
 
@@ -63207,3 +63213,13 @@ E {13474} {ne} {ne} {3} {0} {} {1.000} {}
 
 R {13477} {0} {} {An unstable area (s)} { } {This is a dead-end in the path.  A big rock stands here waiting for someone to wander by and have a seat. } {Fidohell} {} {} {} {1.000} {}
 E {13472} {s} {s} {4} {0} {} {1.000} {}
+
+R {13478} {0} {} {[Sub-1] A mech bay (w,e)} { } {A giant mech docking bay is here where mechs can be parked to be serviced, upgraded or modified. Technicians can climb up to any part of the mech by using the scaffolding that juts out at various levels. } {Juggernaut} {} {} {} {1.000} {}
+E { 6396} {w} {w} {8} {0} {} {1.000} {}
+E {13480} {e} {e} {2} {0} {} {1.000} {}
+
+R {13479} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {12415} {e} {e} {2} {0} {} {1.000} {}
+
+R {13480} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {13478} {w} {w} {8} {0} {} {1.000} {}
