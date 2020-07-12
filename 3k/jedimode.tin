@@ -68,7 +68,7 @@
 #gag {^You already have your %1 drawn.}
 
 #alias {show_damage_selector}{
-	#if {"$draw[jedimode]" == "on"}{
+	#if {"$draw[jedimode]" == "on" && "$draw[canvas]" == "on"}{
 		#draw {rounded}{box} $jedimode[top] -$jedimode[width]+2 $jedimode[bottom] -$jedimode[width]+40;
 		#showme {Jedi Damage Selector} $jedimode[top] -$jedimode[width]+12;
 		#if {"${my[damage][type]}" == "dark suggestion"}{
