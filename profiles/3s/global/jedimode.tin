@@ -484,7 +484,7 @@
 			};
 			#button {$jedimode[top]+18;-$jedimode[width]+30;$jedimode[top]+18;-$jedimode[width]+38}{
 				#var {my[desired][mode]}{snap shot};
-				#var {my[desired][modeshort]}{s};
+				#var {my[desired][modeshort]}{S};
 				!focus mode /snap shot;
 				show_mode_selector;
 			};

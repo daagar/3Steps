@@ -34,7 +34,7 @@
 
 #event {MAP ENTER ROOM} {
 	#map get roomvnum roomvnum;
-	#system {echo "#map goto $roomvnum" > ${mappath}/lastroom.tt};
+	#system {echo "#map goto $roomvnum" > ${charpath}/lastroom.tt};
 	#if {"$mapping" == "on"} {
 		mapupdate
 	};

@@ -21,7 +21,7 @@
 		redraw;
 		#read ${globalpath}/ansi_setup.tin
 	}{2};
-	#script {cat ${mappath}/lastroom.tt};
+	#script {cat ${charpath}/lastroom.tt};
 	#read ${globalpath}/draw.tin;
 	#read ${charpath}/char.tin;
 	#read ${charpath}/aliases.tin;

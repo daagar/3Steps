@@ -1,0 +1,101 @@
+#CONFIG           {AUTO TAB}		{5000}
+#CONFIG           {BUFFER SIZE}		{1000000}
+#CONFIG           {CHARSET}		{UTF-8}
+#CONFIG           {COLOR MODE}		{TRUE}
+#CONFIG           {COLOR PATCH}		{ON}
+#CONFIG           {COMMAND COLOR}	{<078>}
+#CONFIG           {COMMAND ECHO}	{ON}
+#CONFIG           {CONNECT RETRY}	{15}
+#CONFIG           {HISTORY SIZE}	{1000}
+#CONFIG           {LOG MODE}		{PLAIN}
+#CONFIG           {MOUSE TRACKING}	{ON}
+#CONFIG           {PACKET PATCH}	{0.80}
+#CONFIG           {REPEAT CHAR}		{!}
+#CONFIG           {REPEAT ENTER}	{ON}
+#CONFIG           {SCROLL LOCK}		{ON}
+#CONFIG           {SPEEDWALK}		{OFF}
+#CONFIG           {TINTIN CHAR}		{#}
+#CONFIG           {VERBATIM}		{OFF}
+#CONFIG           {VERBATIM CHAR}	{\}
+#CONFIG           {VERBOSE}		{OFF}
+#CONFIG           {WORDWRAP}		{ON}
+#PATHDIR          {d}	{u}	{32}
+#PATHDIR          {e}	{w}	{2}
+#PATHDIR          {n}	{s}	{1}
+#PATHDIR          {ne}	{sw}	{3}
+#PATHDIR          {nw}	{se}	{9}
+#PATHDIR          {s}	{n}	{4}
+#PATHDIR          {se}	{nw}	{6}
+#PATHDIR          {sw}	{ne}	{12}
+#PATHDIR          {u}	{d}	{16}
+#PATHDIR          {w}	{e}	{8}
+
+#var {profilepath}{.tt/profiles};
+#var {myprofile}{floobity}
+#var {myprofilepath}{${profilepath}/${myprofile}};
+#alias {update_status}{#nop};
+#alias {display_biome}{#nop};
+
+#alias {configure_paths}{
+	#var {mudpath}{${profilepath}/${mud}};
+	#var {logpath}{${myprofilepath}/logs};
+	#var {globalpath}{${profilepath}/${mud}/global};
+	#var {mappath}{${profilepath}/${mud}/maps};
+	#var {charpath}{${myprofilepath}/chars/${char}};
+	#var {varpath}{${charpath}/vars};
+	#var {mapfile}{${mappath}/${mud}.map};
+}
+
+#var world {}
+
+#alias {connect} {
+	#var mymud 3k;
+	#regex {%0}{3s}{
+		#var mymud 3s;
+	};	
+	#regex {%0}{AA}{
+		#var mymud AA;
+	};	
+	#regex {%0}{ZM}{
+		#var mymud ZM;
+	};	
+	#var {mud}{$mymud};
+	#switch {"$mymud"}{
+		#case {"3s"}{
+			#var {mud} {3s};
+			#ses {%0} {3scapes.org} {3200};
+			#format {ses_len} {%L} {%0};
+			#math {ses_len} {$ses_len-2};
+			#format {ses_name} {%.${ses_len}s} {%0};
+		};
+		#case {"AA"}{
+			#var {mud} {AA};
+			#ses {%0} {anguish.org} {2222};
+			#format {ses_len} {%L} {%0};
+			#math {ses_len} {$ses_len-2};
+			#format {ses_name} {%.${ses_len}s} {%0};
+		}
+		#case {"ZM"}{
+			#var {mud} {ZM};
+			#ses {%0} {zombiemud.org} {23};
+			#format {ses_len} {%L} {%0};
+			#math {ses_len} {$ses_len-2};
+			#format {ses_name} {%.${ses_len}s} {%0};
+		};
+		#case {"3k"}{
+			#var {mud} {3k};
+			#ses {%0} {3k.org} {3000};
+			#var {ses_name} {%0};
+		};
+	};
+        #var {char}{$ses_name};
+        #var {world}{${char}${mud}};
+        #send {$ses_name};
+        #read .tt/.pass;
+	configure_paths;
+	#format logfile {${logpath}/%0_%t.log} {%Y%m%d};
+	#log {append}{$logfile};
+	#read ${profilepath}/start.tin;
+}
+
+#read ${myprofilepath}/menu.tin

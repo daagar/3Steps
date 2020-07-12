@@ -4,3 +4,4 @@
 *.bak
 .DS*
 info/
+profiles/rc.tin

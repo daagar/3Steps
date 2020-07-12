@@ -2,8 +2,8 @@
 
 #var guild jedi
 #var subguild krath
-#read .tt/3s/jedimode.tin
 
+redraw jedimode on
 #var {my[cleanse][status]}{0};
 #var {my[cloud][threshold]}{50};
 #var {my[desired][weapon]}{lightdaggers};

@@ -2,8 +2,8 @@
 
 #var guild jedi
 #var subguild shimura
-#read .tt/3k/jedimode.tin
 
+redraw jedimode on
 #var {my[desired][mode]}{hand to hand};
 #var {my[desired][modeshort]}{h};
 #var {my[desired][weapon]}{none};
