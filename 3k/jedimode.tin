@@ -625,7 +625,7 @@
 };
 
 #alias {ftik}{
-	#send {alias dospell focus injure-kill for boil};
+	#send {alias dospell ifitem quietly/mysp>80/focus injure-kill for boil};
 	#var {my[damage][type]}{boil};
 	!draw ${my[desired][weapon]};
 	!focus force trance /off;
@@ -646,7 +646,7 @@
 #alias {fti}{
 	!draw ${my[desired][weapon]};
 	!focus force trance /off;
-	#send {alias dospell focus inflict pain for pain};
+	#send {alias dospell ifitem quietly/mysp>80/focus inflict pain for pain};
 	#if {"${my[desired][weapon]}" == "lightdaggers"}{
 		#var {my[desired][mode]}{flurry};
 		#var {my[desired][modeshort]}{f};
@@ -662,7 +662,7 @@
 };
 
 #alias {fttk}{
-	#send {alias dospell focus telekinetic kill for cardiac};
+	#send {alias dospell ifitem quietly/mysp>80/focus telekinetic kill for cardiac};
 	#var {my[desired][spell]}{telekinetic kill};
 	!draw ${my[desired][weapon]};
 	!focus force trance /off;
@@ -675,7 +675,7 @@
 };
 
 #alias {ftli}{
-	#send {alias dospell focus force lightning};
+	#send {alias dospell ifitem quietly/mysp>80/focus force lightning};
 	#var {my[desired][spell]}{force lightning};
 	!draw ${my[desired][weapon]};
 	!focus force trance /off;
@@ -689,7 +689,7 @@
 };
 
 #alias {ftwi}{
-	#send {alias fwi focus freeze winds};
+	#send {alias dospell ifitem quietly/mysp>80/focus freeze winds};
 	#var {my[desired][spell]}{freeze winds};
 	!draw ${my[desired][weapon]};
 	!focus force trance /off;
@@ -698,7 +698,7 @@
 	#var {my[desired][modeshort]}{f};
 	#var {my[damage][type]}{freeze winds};
 	#var {my[damage][style]}{single};
-	#delay {2}{!focus force trance /fwi,repeat};
+	#delay {2}{!focus force trance /dospell,repeat};
 	show_damage_selector;
 };
 
@@ -726,7 +726,7 @@
 
 #alias {ftd}{
 	!draw ${my[desired][weapon]};
-	#send {alias dospell focus inflict pain for pain};
+	#send {alias dospell ifitem quietly/mysp>80/focus inflict pain for pain};
 	!focus force trance /off;
 	!focus mode /deflect;
 	#var {my[desired][mode]}{deflect};

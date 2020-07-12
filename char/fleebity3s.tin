@@ -4,14 +4,10 @@
 #var subguild krath
 #read .tt/3s/jedimode.tin
 
-#delay {2}{ftli}
 #var {my[cleanse][status]}{0};
 #var {my[cloud][threshold]}{50};
 #var {my[desired][weapon]}{lightdaggers};
-#var {my[desired][mode]}{guide};
 
-fbq aegisl1
-fbq aegisl2
 
 
 #nop {focus hpconfigure /HP: #hp/#mhp SP: #sp/#msp C: #c F: #f M: #sm/#%c D: #dn/#ng P: #df E: #es GXP: #gxp}
@@ -168,13 +164,14 @@ fbq aegisl2
 	};
 }
 
+#delay {2}{
+	#var {my[desired][weapon]}{lightdaggers};
+	ftwi;
+};
+
 #alias set_default_areas {
-	fbq garg;
-	fbq balthazar;
-	fbq smurf swamp;
-	fbq pol;
-	fbq mahjongg;
-	fbq ccows;
+	fbq aegisl1;
+	fbq aegisl2;
 	autoq;
 	autok;
 }
