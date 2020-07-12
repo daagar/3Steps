@@ -1,2 +1,6 @@
 .pass
-info
+@eaDir/
+*.swp
+*.bak
+.DS*
+
