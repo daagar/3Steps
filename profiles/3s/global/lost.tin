@@ -1,0 +1,116 @@
+#class {lost}{open};
+
+#var {auto_go_whenfound} {0};
+
+#alias {.loststart} {
+    initiate_arrays_lost;
+    get_possible_start_rooms;
+    report_lost_status;
+};
+
+#alias {initiate_arrays_lost}{
+    #list {dirs_taken}{create} {}; 
+    #list {new_rooms} {create} {};
+    #list {lost_rooms}{create} {};
+    #var {remaining_rooms} {0};
+}
+
+#alias {get_possible_start_rooms} {
+    #map list {roomname}{$roomname}{variable}{room_array};
+    #list {lost_rooms}{create}{*room_array[]};
+    #list {lost_rooms}{size}{remaining_rooms};
+}
+
+#alias {report_lost_status} {
+    #if { $remaining_rooms > 1 } {
+        #echo {Starting to find your current location. There are $remaining_rooms possible room matches.};
+    }{
+        #if {$remaining_rooms == 1} {
+            #echo {There's only one possible place you can be. Room#: $lost_rooms[1] };
+            #nop {#if { $auto_go_whenfound == 1 } { #map go $lost_rooms[1] };};
+        }{
+            #echo {Something went wrong, recommend you type .loststart again.};
+        };
+    };
+}
+
+#alias {record_direction} {
+    #var {mycurrentroom}{$roomvnum};
+    #list {dirs_taken} ins -1 $dir_taken;
+}
+
+#alias {.findme %1} {
+    #var {dir_taken} {%1};
+    record_direction;
+
+    #IF { $remaining_rooms > 1 } {
+        identify_potential_destinations;
+        #echo {Taking step...};
+        #send {$dir_taken};   
+        #map goto {$dir_taken};
+        #delay {.2}{narrow_mycurrent_possibilities};
+        #nop compare_destinations_to_possibilities;
+        #nop report_lost_status;
+    }{
+        #echo {There are no remaining rooms. If you are lost, .loststart again then .findme <direction>};
+    };
+}
+
+#alias {identify_potential_destinations} {
+    #list {new_rooms} {clear};
+    #foreach {*lost_rooms[]}{potential_room}{get_next_room $potential_room};
+}
+
+#alias {get_next_room} {
+    #echo {Getting the room short description and roomnumber for the room $dir_taken of ${lost_rooms[${potential_room}]}};
+    #map {at}{${lost_rooms[${potential_room}]}}{
+    	#map at {$dir_taken}{
+    		#map get {roomname}{myroomname}
+    	}
+    };
+    #map {at}{${lost_rooms[${potential_room}]}}{
+    	#map at {$dir_taken}{
+    		#map get {roomvnum}{myroomvnum}
+    	}
+    };
+    #echo {And the room is $myroomvnum with the short desc of $myroomname};
+    #list {new_rooms} ins -1 ${myroomvnum};
+    #echo {${myroomvnum}};
+    #list {new_rooms}{size}{new_room_size};
+    #map go {$mycurrentroom};
+}
+
+#alias {narrow_mycurrent_possibilities} {
+    #var {short_desc}{$room ($exits)}; 
+    #map list {roomname}{$short_desc}{variable}{new_room_array};
+    #list {compare_rooms}{create}{*new_room_array[]};
+    #list {compare_rooms}{size}{possible_rooms};
+    #echo {Based on the new room description, there are $possible_rooms possible rooms.};
+}
+
+#alias {compare_destinations_to_possibilities} {
+    #var {compare_count}{1};
+    #foreach {*compare_roomlist[]}{compare_roomnum}
+    #delay {0.15}{compare_me};
+}
+
+#alias {.checklost} {
+    #echo {$new_room_size};
+    #echo {$new_rooms};
+}
+
+#alias {compare_me} {
+    #echo {Searching for Room};
+    #var {found}{0};
+    #loop {1}{$new_room_size}{mycount}{
+    	#if {"$roomname" == "${new_rooms[$mycount][myroonmame]}"}{
+    		#echo {Found $roomname at index $mycount};
+    		#var {found}{1};
+    	};
+    };
+    #if { $found != 0 } {
+        #list {lost_rooms} ins -1 {$found};
+    };
+}
+
+#class {lost}{close}

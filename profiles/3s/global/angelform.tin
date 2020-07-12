@@ -1,0 +1,26 @@
+#class {angelform} {open}
+
+#NOP DAMAGETRACKER MYSQL ENHANCEMENTS
+#alias {show_current_form_table}{
+	#if {"$draw[possess]" == "on" && "$draw[canvas]" == "on"}{
+		#draw {rounded}{box} $possess[top] -$possess[width]+2 $possess[bottom] -$possess[width]+40 {Current Form Stats:};
+		#showme {Form : ${my[possess][body]}} $possess[top]+2 -$possess[width]+5;
+		#showme {  Attack : ${my[possess][attack]}} $possess[top]+3 -$possess[width]+5;
+		#showme {     Def : ${my[possess][defense]}} $possess[top]+4 -$possess[width]+5;
+		#showme {  Health : ${my[possess][health]}} $possess[top]+5 -$possess[width]+5;
+		#showme {   Speed : ${my[possess][fullspeed]}} $possess[top]+6 -$possess[width]+5;
+		db_query_form_damage;
+		#showme { Avg Dam : ${form_avg[1][avg(damage)]}} $possess[top]+7 -$possess[width]+5;
+	};
+}
+
+#alias {db_query_form_damage}{
+        db_submit {form_avg}{%s}{select guildstring, avg(damage) from (select guildstring, damage from damage_log where guildstring = `$my[damagetracker][guildstring]` order by timestamp desc limit 100)var1;};
+};
+
+#ticker {damage_query}{show_current_form_table}{10};
+#delay {initial_update}{show_current_form_table}{2};
+
+#NOP END OF DAMAGETRACKER MYSQL ENHANCEMENTS
+
+#class {angelform}{close}

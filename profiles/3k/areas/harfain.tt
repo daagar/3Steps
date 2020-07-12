@@ -1,0 +1,2 @@
+#alias toarea fan;portal;#12 n;leave;#10;n;#3 w;nw;ne;u;cave;trace symbol on wall;u;out;e;n;d
+#alias tohome climb;mountain;;s;w;cave;d;push wall;;out;d;sw;se;#3 e;#10;s;enter;#12 s;portal;home

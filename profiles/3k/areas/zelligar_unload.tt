@@ -1,0 +1,9 @@
+#var stepper 0 
+#unvar area_items
+#unvar all_area_items
+#unvar kill_path
+#unvar blacklist
+#unvar whitelist
+#var area_aggro 0
+#unvar max_room
+#list kill_path {clear}

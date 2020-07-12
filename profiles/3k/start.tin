@@ -1,0 +1,38 @@
+#config {repeat enter}{on};
+#config {packet patch}{0.1};
+#var {mud}{3s};
+#var {profilepath}{.tt/profiles/${mud}};
+#var {globalpath}{${profilepath}/global};
+#var {mappath}{${profilepath}/maps};
+#var {charpath}{${profilepath}/chars/${char}}
+#var {varspath}{${charpath}/vars}
+#var {mapfile}{${mappath}/3s.map}
+
+#alias {load} {
+	#read ${globalpath}/aliases.tin;
+	#read ${globalpath}/vars.tin;
+	#read ${globalpath}/trigs.tin;
+	#read ${globalpath}/triggers.tin;
+	#read ${globalpath}/graph.tin;
+	#read ${globalpath}/mip.tin;
+	#read ${globalpath}/ansi.tin;
+	#read ${globalpath}/mysql.tin;
+	#read ${globalpath}/mapper.tin;
+	#read ${globalpath}/chat.tin;
+	#read ${globalpath}/aliases.tin;
+	#read ${globalpath}/assemble.tin;
+	#read ${globalpath}/corpses.tin;
+	#read ${globalpath}/gag.tin;
+	#read ${globalpath}/mob_monitors.tin;
+	#read ${globalpath}/draw.tin;
+	#delay {ansi}{
+		redraw;
+		#read ${globalpath}/ansi_setup.tin
+	}{2};
+	#script {cat ${mappath}/lastroom.tt};
+	resume_chat;
+}
+
+load;
+
+#sub {~\t} {       }

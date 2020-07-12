@@ -1,0 +1,149 @@
+#READ {.tt/profiles/3s/chars//vars/3schat.var} - FILE NOT FOUND.
+#READ {/draw.var} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/chars//char.tin} - FILE NOT FOUND.
+Connecting...
+<Entering 3Scapes.  Enter your character name or press enter to continue>
+Invalid character in position 1.
+What is your name:
+No record found for booger on this mud.
+This name is in use on another instance.
+Are you the owner of that character (Y/N):
+#ERROR: #CLASS WRITE {/draw.var} - COULDN'T OPEN FILE TO WRITE.
+#READ {/draw.var} - FILE NOT FOUND.
+Invalid password.
+What is your name:
+Invalid character in position 17.
+What is your name:
+Invalid character in position 12.
+What is your name:
+No record found for forcehp on this mud.
+Would you like to create this character [N]:
+Then try again, or press RETURN to exit.
+What is your name:
+Invalid character in position 10.
+What is your name:
+Invalid character in position 10.
+What is your name:
+Invalid character in position 10.
+What is your name:
+Invalid character in position 10.
+What is your name:
+Invalid character in position 10.
+What is your name:
+Invalid character in position 10.
+What is your name:
+Invalid character in position 34.
+What is your name:
+Invalid character in position 34.
+What is your name:
+Invalid character in position 35.
+What is your name:
+Invalid character in position 35.
+What is your name:
+Invalid character in position 36.
+What is your name:
+Invalid character in position 35.
+What is your name:
+Invalid character in position 36.
+What is your name:
+Invalid character in position 34.
+What is your name:
+Invalid character in position 34.
+What is your name:
+Invalid character in position 15.
+What is your name:
+#SESSION 'fl' DIED.
+#READ {.tt/profiles/3s/chars//vars/3schat.var} - FILE NOT FOUND.
+#READ {/draw.var} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/chars//char.tin} - FILE NOT FOUND.
+Connecting...
+<Entering 3Scapes.  Enter your character name or press enter to continue>
+Password:
+Prompt set.
+[[MORPH]]: Chaotic forces surge and broil as Fl enters the realm.
+You are login #197 this boot.
+There have been 307556 logins since Mon May 25 11:48:56 2009.
+[PARTY] Forming new party: Fl's party.
+You set your mywho names to your watch list.
+With sheer focus of mind, you begin pumping adrenaline into your body,
+enabling you to attack with increased ferocity!                            
+You begin to concentrate on accelerating your natural regeneration process.
+You isolate a small sphere of protoplasm, hardening the outside then
+separating it to form an egg.  Inside, your clone is free to grow and
+develop in relative safety.                                                
+3Scapes welcomes you!
+#ERROR: #CLASS WRITE {/draw.var} - COULDN'T OPEN FILE TO WRITE.
+#READ {/draw.var} - FILE NOT FOUND.
+HP[1900/1900] SP[506/508] ST[100.00%] PP[93.04%] CF[3/93%] FF[56.18%] E[] N AH
+F[puddle of slime] S[Resilience/14.19%] B[0]
+You will no longer see the HP bar on the main screen.
+You remove your setting for MAPCOLS.
+You will now see the HP bar on your main screen as well.
+HP[1900/1900] SP[506/508] ST[100.00%] PP[96.91%] CF[3/93%] FF[56.18%] E[] N AH
+F[puddle of slime] S[Resilience/14.19%] B[0]
+Type 'news' to see the news screen.
+There is no reason to 'update_status' here.
+#SESSION 'fl' DIED.
+#READ {.tt/profiles/3s/chars//vars/3schat.var} - FILE NOT FOUND.
+#READ {/draw.var} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/chars//char.tin} - FILE NOT FOUND.
+Connecting...
+<Entering 3Scapes.  Enter your character name or press enter to continue>
+Password:
+Your character is currently logged in and linkdead.
+Prompt set.
+3Scapes welcomes you back from linkdeath.
+HP[1900/1900] SP[505/508] ST[100.00%] PP[100.00%] CF[3/94%] FF[56.18%] E[] N AH
+F[puddle of slime] S[Resilience/14.19%] B[0]
+#ERROR: #CLASS WRITE {/draw.var} - COULDN'T OPEN FILE TO WRITE.
+#READ {/draw.var} - FILE NOT FOUND.
+You will no longer see the HP bar on the main screen.
+You remove your setting for MAPCOLS.
+You will now see the HP bar on your main screen as well.
+HP[1900/1900] SP[505/508] ST[100.00%] PP[100.00%] CF[3/94%] FF[56.18%] E[] N AH
+F[puddle of slime] S[Resilience/14.19%] B[0]
+There is no reason to 'update_status' here.
+#var char
+#VARIABLE {char} {fl}
+
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+#SESSION 'fl' DIED.
+#READ {.tt/profiles/3s/chars//vars/3schat.var} - FILE NOT FOUND.
+#READ {/draw.var} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/chars//char.tin} - FILE NOT FOUND.
+Connecting...
+<Entering 3Scapes.  Enter your character name or press enter to continue>
+Password:
+Your character is currently logged in and linkdead.
+Prompt set.
+3Scapes welcomes you back from linkdeath.
+HP[1900/1900] SP[505/508] ST[100.00%] PP[100.00%] CF[3/95%] FF[56.18%] E[] N AH
+F[puddle of slime] S[Resilience/14.19%] B[0]
+#ERROR: #CLASS WRITE {/draw.var} - COULDN'T OPEN FILE TO WRITE.
+#READ {/draw.var} - FILE NOT FOUND.
+You will no longer see the HP bar on the main screen.
+You remove your setting for MAPCOLS.
+You will now see the HP bar on your main screen as well.
+HP[1900/1900] SP[507/508] ST[100.00%] PP[100.00%] CF[3/95%] FF[56.18%] E[] N AH
+F[puddle of slime] S[Resilience/14.19%] B[0]
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+There is no reason to 'update_status' here.
+#SESSION 'fl' DIED.
