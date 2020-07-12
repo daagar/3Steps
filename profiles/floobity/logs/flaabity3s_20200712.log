@@ -1,0 +1,160 @@
+Connecting...
+<Entering 3Scapes.  Enter your character name or press enter to continue>
+Password:
+Your character is currently logged in and linkdead.
+Prompt set.
+3Scapes welcomes you back from linkdeath.
+There is no reason to 'show_mode_selector' here.
+There is no reason to 'show_damage_selector' here.
+Your failing consciousness is bolstered by the soothing energy.
+The black beam of pure energy withdraws back into your lightsaber.
+You fall out of your trained combat mode.
+You unwield lightsaber.
+You slip your weapon into its sheath.
+You draw your weapon from the sheath in your belt.
+You wield lightsaber.
+A black beam of pure energy extends from your lightsaber.
+You will now fight using your weapon's standard mode.
+You draw upon the Force to help you find the weaknesses in your foes so
+that you may strike most effectively with your lightsaber.  With the
+Force guiding your strikes, you feel confident to face the challenges of
+the universe.                                                           
+You are already protected by force deflection.
+You stop accelerated healing.
+There is no reason to 'ftik' here.
+You will no longer see the HP bar on the main screen.
+You remove your setting for MAPCOLS.
+You will now see the HP bar on your main screen as well.
+The black beam of pure energy withdraws back into your lightsaber.
+You fall out of your trained combat mode.
+You unwield lightsaber.
+You slip your weapon into its sheath.
+You draw your weapon from the sheath in your belt.
+You wield lightsaber.
+A black beam of pure energy extends from your lightsaber.
+You will now fight using your weapon's standard mode.
+You draw upon the Force to help you find the weaknesses in your foes so
+that you may strike most effectively with your lightsaber.  With the
+Force guiding your strikes, you feel confident to face the challenges of
+the universe.                                                           
+You begin to concentrate on healing your wounds.
+The black beam of pure energy withdraws back into your lightsaber.
+You fall out of your trained combat mode.
+You unwield lightsaber.
+You slip your weapon into its sheath.
+You draw your weapon from the sheath in your belt.
+You wield lightsaber.
+A black beam of pure energy extends from your lightsaber.
+You will now fight using your weapon's standard mode.
+You draw upon the Force to help you find the weaknesses in your foes so
+that you may strike most effectively with your lightsaber.  With the
+Force guiding your strikes, you feel confident to face the challenges of
+the universe.                                                           
+The black beam of pure energy withdraws back into your lightsaber.
+You fall out of your trained combat mode.
+You unwield lightsaber.
+You slip your weapon into its sheath.
+You draw your weapon from the sheath in your belt.
+You wield lightsaber.
+A black beam of pure energy extends from your lightsaber.
+You will now fight using your weapon's standard mode.
+You draw upon the Force to help you find the weaknesses in your foes so
+that you may strike most effectively with your lightsaber.  With the
+Force guiding your strikes, you feel confident to face the challenges of
+the universe.                                                           
+ftik
+dospell = ifitem quietly/mysp>80/focus injure-kill for boil : Alias added.
+You feel the Force ebb and you control your actions once more.
+You draw upon the Force to help you find the weaknesses in your foes so
+that you may strike most effectively with your lightsaber.  With the
+Force guiding your strikes, you feel confident to face the challenges of
+the universe.                                                           
+You prepare your mind to draw upon the Force.
+You ready yourself to perform ifitem quietly/mysp>80/focus injure-kill for boil every round.
+#var world
+#VARIABLE {world} {}
+
+Your immune system's resistance to toxins returns to normal.
+Saving crafting status.
+#SESSION 'flaabity3s' DIED.
+Connecting...
+<Entering 3Scapes.  Enter your character name or press enter to continue>
+Password:
+Your character is currently logged in and linkdead.
+Prompt set.
+3Scapes welcomes you back from linkdeath.
+There is no reason to 'show_mode_selector' here.
+There is no reason to 'show_damage_selector' here.
+The Force flows through you, buttressing your thoughts.
+The black beam of pure energy withdraws back into your lightsaber.
+You fall out of your trained combat mode.
+You unwield lightsaber.
+You slip your weapon into its sheath.
+You draw your weapon from the sheath in your belt.
+You wield lightsaber.
+A black beam of pure energy extends from your lightsaber.
+You will now fight using your weapon's standard mode.
+You draw upon the Force to help you find the weaknesses in your foes so
+that you may strike most effectively with your lightsaber.  With the
+Force guiding your strikes, you feel confident to face the challenges of
+the universe.                                                           
+You are already protected by force deflection.
+You stop accelerated healing.
+There is no reason to 'ftik' here.
+You will no longer see the HP bar on the main screen.
+You remove your setting for MAPCOLS.
+You will now see the HP bar on your main screen as well.
+The black beam of pure energy withdraws back into your lightsaber.
+You fall out of your trained combat mode.
+You unwield lightsaber.
+You slip your weapon into its sheath.
+You draw your weapon from the sheath in your belt.
+You wield lightsaber.
+A black beam of pure energy extends from your lightsaber.
+You will now fight using your weapon's standard mode.
+You draw upon the Force to help you find the weaknesses in your foes so
+that you may strike most effectively with your lightsaber.  With the
+Force guiding your strikes, you feel confident to face the challenges of
+the universe.                                                           
+You begin to concentrate on healing your wounds.
+The black beam of pure energy withdraws back into your lightsaber.
+You fall out of your trained combat mode.
+You unwield lightsaber.
+You slip your weapon into its sheath.
+You draw your weapon from the sheath in your belt.
+You wield lightsaber.
+A black beam of pure energy extends from your lightsaber.
+You will now fight using your weapon's standard mode.
+You draw upon the Force to help you find the weaknesses in your foes so
+that you may strike most effectively with your lightsaber.  With the
+Force guiding your strikes, you feel confident to face the challenges of
+the universe.                                                           
+ftik
+dospell = ifitem quietly/mysp>80/focus injure-kill for boil : Alias added.
+You feel the Force ebb and you control your actions once more.
+Not so fast now.
+You prepare your mind to draw upon the Force.
+You ready yourself to perform ifitem quietly/mysp>80/focus injure-kill for boil every round.
+redraw jedimode on
+[Worm enters the game]
+redraw summoner on
+There is no reason to 'display_desired_summons' here.
+redraw summoner off
+3k: [Alassra disconnects]
+redraw summoner off
+ls
+There is no reason to 'ls' here.
+l
+              Login Room
+You are standing in an enormous enclosed chamber.  A single iron door
+sits in the floor of this structure surrounded by a granite doorframe.
+The ceiling is a dome completely covering the building.  People seem
+to appear here from nowhere, perhaps from another dimension, some call
+it 'reality'.
+=X=    There is one obvious exit: jump                                         =X=
+Your concentration breaks, letting your lesser Force shield dissipate away.
+Your immune system's resistance to toxins returns to normal.
+You concentrate on the ebb and flow of the Force about you, searching
+for the subtle patterns within the fragile web.  With the force of your
+will alone you gather the Force about you in a cocoon of pure energy.
+[Lasher disconnects]

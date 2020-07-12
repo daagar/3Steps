@@ -1,0 +1,215 @@
+#class {fluubit} {open}
+
+#var guild priest
+
+#nop {De-Spam the guild}
+#gag {^High Guard %1 with %2 sword!}
+#gag {^Lifeforce --==>> yourself}
+#gag {^Soulforce --==>> yourself}
+#gag {^HPLAN:}
+#gag {^CONTINGENCY:}
+#gag {^PACTION:}
+#gag {Smite  --==>> %1}
+#gag {Chilltouch  --==>> %1}
+#gag {Your relic shines with power!}
+#gag {You feel holy energy flow into your Golden shepherd's crook!}
+#gag {%1 gets cut by your blade barrier!}
+#gag {You feel yourself slow back down to normal speed.}
+#gag {Your blades nick %1 skin!}
+
+#act {%w tugs on your sleeve persistently.}{
+        #format {mytarget}{%l}{%1};
+        !radiance $mytarget;
+};
+
+#act {%w pulls your leg!}{
+        #format {mytarget}{%l}{%1};
+        !invigorate $mytarget;
+};
+
+#act {You feel yourself slow back down to normal speed.}{
+        #var my[effect][haste] OFF;
+}
+
+#act {Wise and powerful Solaris, hasten my reflexes and quicken my body}{
+        #var my[effect][haste] ON;
+}
+
+#act {HASTE!}{
+        #var my[effect][haste] ON;
+}
+
+#act {You are already affected by a haste spell}{
+        #var my[effect][haste] ON;
+}
+
+#act {You do not have enough magic to cast this spell.}{
+        !soulforce;
+}
+
+#act {Suddenly, a High Guard arrives from Solaris' side to}{
+        #var {my[effects][psummon][present]}{ON};
+}
+#act {You have already summoned help.}{
+        #var {my[effects][psummon][present]}{ON};
+}
+
+#act {Suddenly, High Guard grows to mammoth size!}{
+        #var {my[effects][psummon][growth]}{ON};
+}
+#act {Animal Growth has already been cast on High Guard.}{
+        #var {my[effects][psummon][growth]}{ON};
+}
+
+
+#alias buyall {
+        #foreach {acorn;bark;berry;chalk;clay;crushed gems;dirt;dung;feather;flint;foxfire;incense;iron rod;lead;lodestone;mercury;oil;pebble;phosphorous;pine sap;shamrock;silver;silver mirror;snake scale;sulphur;sumac leaf;thistledown;tiny hammer;twig;vellum;vine;white cloth}{reagent}{
+                buy %1 $reagent;
+        }
+}
+#alias ma {
+        #foreach {a;b;c;d;e;f;g;h;i;j;k;l;m;n;o;p;q;r;s;t;u;v;w;x;y;z}{person}{
+                !mend $person;
+        };
+}
+
+#nop {hpbar hp#sp#mana#mhl#NL#coffin2#pty#pgxxl#mend1#NL#cl2#med#bark#vest#blade#prot}
+#gag {HP: %1/%2 SP: %3/%4 MANA: %5/%6 E: %11}
+#act {HP: %1/%2 SP: %3/%4 MANA: %5/%6 E: %11} {
+	#var {my[hp][current]}	{%1};
+	#var {my[hp][max]}	{%2};
+	#var {my[sp][current]}	{%3};
+	#var {my[sp][max]}	{%4};
+	#var {my[gp1][current]}	{%5};
+	#var {my[gp1][max]}	{%6};
+	#var {enemy[full]}	{%11};
+	#regex {$enemy[full]}{%* : %d}{
+                #var enemy[name] &1;
+                #var enemy[health] &2;
+                #var my[incombat] 1;
+                #math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+        }{
+                #var enemy[name] None;
+                #var enemy[health] 0;
+                #var my[incombat] 0;
+        	#var {my[effects][psummon][present]}{OFF};
+        	#var {my[effects][psummon][growth]}{OFF};
+        };
+}
+
+#gag {COFFIN: %3/%4 PTY: (%1\%) GXP%: [%2\%] MND: [%5/%6|%7]}
+#act {COFFIN: %3/%4 PTY: (%1\%) GXP%: [%2\%] MND: [%5/%6|%7]}{
+	#var {my[gp2][current]}	{%1};
+	#var {corpses[coffin][current]}	{%3};
+	#var {corpses[coffin][max]}	{%4};
+	#var {my[gxp][current]}		{%2};
+	#var {my[mend][current]}	{%5};
+	#var {my[mend][max]}		{%6};
+	#var {my[mend][reset]}		{%7};
+}
+
+#gag {CL: [%6\%] MED: %5 BARK: %1 VEST: %2 BLADE: %4 PROT: %3}
+#act {CL: [%6\%] MED: %5 BARK: %1 VEST: %2 BLADE: %4 PROT: %3}{
+	#var {my[effects][barkskin]}{%1};
+	#var {my[effects][vestment]}{%2};
+	#var {my[effects][protection]}{%3};
+	#var {my[effects][blade]}{%4};
+	#var {my[effects][meditation]}{%5};
+        #var {my[cleanse][current]}{%6};
+        #if {"$my[effects][barkskin]" != "ON"}{!barkskin};
+        #if {"$my[effects][vestment]" != "ON"}{!vestment};
+        #if {"$my[effects][blade]" != "ON"}{!blade};
+        #if {"$my[effects][protection]" != "ON "}{!protection};
+        #if {$my[incombat] == 1 && "$my[effects][psummon][present]" != "ON"}{!psummon};
+        #if {$my[incombat] == 1 && "$my[effects][psummon][growth]" != "ON"}{!growth guard};
+	update_status;
+};
+
+#alias {update_status} {
+	#if {my[hp][current] < my[hp][max]} {
+		!lifeforce
+	};
+	#if {my[sp][current] < my[sp][max]} {
+		!soulforce
+	};
+
+	#var    {my[hp][graph]}         {@graph{$my[hp][current];${my[hp][max]}}};
+	#var    {my[sp][graph]}         {@graph{$my[sp][current];$my[sp][max]}};
+	#var    {my[gp1][graph]}        {@graph{$my[gp1][current];$my[gp1][max]}};
+	#var    {my[gp2][graph]}        {@graph{$my[gp2][current];$my[gp2][max]}};
+	#var    {enemy[graph]}          {@graph{$enemy[hp];100}};
+	#format {hp}                    {%+4s} {$my[hp][current]};
+	#format {hp_max}                {%+4s} {$my[hp][max]};
+	#format {sp}                    {%+4s} {$my[sp][current]};
+	#format {sp_max}                {%+4s} {$my[sp][max]};
+	#format {gp1}                   {%+4s} {$my[gp1][current]};
+	#format {gp1_max}               {%+4s} {$my[gp1][max]};
+	#format {gp2}                   {%+4s} {$my[gp2][current]};
+	#format {gp2_max}               {%+4s} {$my[gp2][max]};
+	#format {ehealth}               {%+7s} {$enemy[hp]%%};
+
+	#showme {HP:$hp/$hp_max SP:$sp/$sp_max MN:$gp1/$gp1_max PY:$gp2/$gp2_max E:$ehealth} {-4};
+	#showme {H:$my[hp][graph] S:$my[sp][graph] M:$my[gp1][graph] P:$my[gp2][graph] E:$enemy[graph]} {-3};
+	#showme {$mip[gline][2]} {-6};
+	#showme {$mip[gline][1]} {-7};
+}
+
+
+
+/* Heals */
+#NOP Guardian
+#unvar guard
+#act {Status of %1: %2/%3 hp  %4/%5 sp}{
+	#format {guard[name]} {%l} {%1};
+	#var {guard[hp][cur]}	{%2};
+	#var {guard[hp][max]}	{%3};
+	#var {guard[sp][cur]}	{%4};
+	#var {guard[sp][max]}	{%5};
+	#if {"$guard[hp][lim]" != "" && $guard[hp][cur] < $guard[hp][lim] } {
+		!invigorate $guard[name]
+	};
+	#if {"$guard[sp][lim]" != "" && $guard[sp][cur] < $guard[sp][lim] } {
+		!radiance $guard[name]
+	}
+}
+
+#alias {guard %1 %2} {
+	#var {guard[hp][lim]} {%1};
+	#var {guard[sp][lim]} {%2}
+}
+
+#alias {corpsetrig}{
+	!wrap corpse;
+	!divvy};
+
+#alias {co}{
+        !unwrap corpse;
+	#if {"$my[autocorpse][method]" == "guild"}{
+        	!offer;
+	};
+	#if {"$my[autocorpse][method]" == "nex"}{
+		!orare;
+	};
+}
+#alias {cco}{co}
+
+#act {High Guard dealt the killing blow to}{
+	log_damage_no_numbers %1;
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+}
+#act {Tree dealt the killing blow to}{
+	log_damage_no_numbers %1;
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+}
+#act {Fluubit dealt the killing blow to}{
+	log_damage_no_numbers %1;
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+}
+
+#class {fluubit} {close}

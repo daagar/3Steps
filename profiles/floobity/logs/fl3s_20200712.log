@@ -1,0 +1,11 @@
+#READ {.tt/profiles/3s/chars//vars/3schat.var} - FILE NOT FOUND.
+#READ {/draw.var} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/chars//char.tin} - FILE NOT FOUND.
+Connecting...
+<Entering 3Scapes.  Enter your character name or press enter to continue>
+Invalid character in position 1.
+What is your name:
+No record found for booger on this mud.
+This name is in use on another instance.
+Are you the owner of that character (Y/N):
+#SESSION 'fl3s' DIED.

@@ -1,0 +1,210 @@
+#class {flaabi} {open}
+
+#var guild gentech
+
+#gag {You will no longer dissipate attacks against you.}
+#gag {You begin to concentrate on turning aside harmful attacks.}
+#gag {Your cells rapidly freeze and die}
+#gag {The supercooled regions cause your cells}
+#gag {The searing heat that you are generating is damaging}
+#gag {Cells blacken and die around your superheated regions!}
+#gag {The tiny translucent bombardier beetle hit}
+
+#alias kk {kill $kstr}
+#alias k {kill %0}
+
+#gag {HP[%1/%2] SP[%3/%4] ST[%5\%] PP[%6\%] CF[%7/%8\%] FF[%9] E%10 %11}
+#act {HP[%1/%2] SP[%3/%4] ST[%5\%] PP[%6\%] CF[%7/%8\%] FF[%9] E[%10] %11}{
+	#var {my[hp][current]}		{%1};
+	#var {my[hp][max]}		{%2};
+	#var {my[sp][current]}		{%3};
+	#var {my[sp][max]}		{%4};
+	#var {my[gp1][current]}		{%5};
+	#var {my[gp2][current]}		{%6};
+	#var {my[relinquish][current]}	{%7};
+	#var {my[relinquish][reset]}	{%8};
+	#var {my[ff][current]}		{%9};
+	#replace {my[ff][current]}{%}{};
+	#math {my[hp][deficit]}{$my[hp][max] - $my[hp][current]};
+        #if {"%10" != ""}{
+		#var {my[attacker]}	{%10};
+		#var {my[incombat]}	{1};
+		#math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+        }{
+                #var {my[attacker]}	{0};
+		#var {my[incombat]}	{0};
+        };
+        #if {"%11" != ""}{
+                #var hpbarTmpInt 	{%11};
+        }{
+                #var hpbarInt 		{None};
+        };
+        #regex {$hpbarTmpInt}{%.%s%*}{
+                #var hpbarInt 		{&3};
+        };
+        #regex {$hpbarInt}{A}{
+                #var {my[adrenalize]}	 {1};
+                }{
+                #var {my[adrenalize]}	{0};
+        };
+        #regex {$hpbarInt}{H}{
+                #var {my[hyperproliferate]}	{1};
+                }{
+                #var {my[hyperproliferate]}	{0};
+        }
+        #regex {$hpbarInt}{D}{
+                #var {my[dissipate]}		{1};
+        }{
+                #var {my[dissipate]}		{0};
+        };
+        #regex {$hpbarInt}{V}{
+                #var {my[perseverance]}		{1};
+        }{
+                #var {my[perseverance]}		{0};
+        };
+        #regex {$hpbarInt}{R:%d}{
+                #var {my[relinq]}		{1};
+        }{
+                #var {my[relinq]}		{0};
+        };
+	#if {$my[dissipate] != 1}{
+		#if {$my[gp2][current] < $my[gp1][current]}{
+			!dissipate on;
+			#var {my[dissipate]}{1};
+		};
+	}{
+		#if {$my[gp1][current] < $my[gp2][current]}{
+			!dissipate off;
+			#var {my[dissipate]}{0};
+		};
+	};
+	#if {$my[gp1][current] < 10 || $my[gp2][current] < 20} {
+		#if {$my[relinquish][current] > 0}{
+			#if {$my[relinq] != 1} {
+				!relinquish;
+				#var {my[relinq]}	{1};
+			};
+		}{
+			#if {$my[bioplasts] > 0} {
+				!= give bioplast to fl;
+				!consume bioplast;
+			};
+		}
+	};
+	#if {$my[sp][current] < 10 && $my[relinquish][current] > 2 && $my[relinq] != 1}{
+			!relinquish;
+			#var {my[relinq]}	{1};
+	};
+	#if {$my[relinquish][reset] > 90 && $my[relinquish][current] > 0 && $my[relinq] != 1}{
+			!relinquish;
+			#var {my[relinq]}	{1};
+	};
+        #if {$my[adrenalize] != 1}{
+                #if {$my[sp][current] > 50}{
+                        !adrenalize on;
+                };
+        };
+        #if {$my[hyperproliferate] != 1}{
+                #if {$my[sp][current] > 50 && $my[relinq] != 1}{
+                        !hyperproliferate on;
+                };
+        };
+	#if {$my[incombat] == 0}{
+		#if {$my[hp][current] < $my[hp][max]}{
+			!morph;
+		};
+	}{
+		#if {$my[hp][deficit] > 500}{
+			!morph;
+		};
+	};
+	#if {$my[hp][current] < 1000}{
+		!morph;
+		!morph;
+	};
+	#if {"$my[form]" == "komodo dragon" || "$my[form]" == "bombardier beetle" || "$my[form]" == "wandering spider" || "$my[form]" == "tyrannosaurus rex" || "$my[form]" == "tasmanian devil" || "$my[form]" == "sabre tooth tiger" || "$my[form]" == "recluse"}{
+		#if {$my[perseverance] != 1}{
+			!perseverance some;
+			!perseverance on;
+		};
+	}{
+		#if {$my[perseverance] == 1}{
+			!perseverance off;
+		};
+	};
+}
+
+#gag {^F[%1] S[%2/%3\%] B[%4]$}
+#act {^F[%1] S[%2/%3\%] B[%4]$}{
+	#var {my[form]}			{%1};
+	#var {my[skill][name]}		{%2};
+	#var {my[skill][current]}	{%3};
+	#var {my[bioplasts]}		{%4};
+	update_status;
+}
+
+#alias {update_status} {
+        #if {"$cooler" == "on" || $corpses[cooler] > 0} {
+                #format {sb1_cooler} {%+2s} {$corpses[cooler]};
+                #var {sb1_cooler} { CL:<130>$sb1_cooler<088>}
+        } {
+                #var {sb1_cooler} {}
+        };
+        #if {"$freezer" == "on" || $corpses[freezer] > 0} {
+                #format {sb2_freezer} {%+2s} {$corpses[freezer]};
+                #var {sb2_freezer} { FZ:<130>$sb2_freezer<088>}
+        } {
+                #var {sb2_freezer} {}
+        };
+	#var	{my[hp][graph]}		{@graph{$my[hp][current];$my[hp][max]}};
+	#var	{my[sp][graph]}		{@graph{$my[sp][current];$my[sp][max]}};
+	#var	{my[gp1][graph]}	{@graph{$my[gp1][current];100}};
+	#var	{my[gp2][graph]}	{@graph{$my[gp2][current];100}};
+	#var	{my[ff][graph]}		{@graph{$my[ff][current];100}};
+	#var	{my[skill][graph]}	{@graph{$my[skill][current];100}};
+	#var	{enemy[graph]}		{@graph{$enemy[hp];100}};
+	#format {hp}			{%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
+	#format {hp_max}		{%+4s} {<128>$my[hp][max]<088>};
+	#format {sp}			{%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
+	#format {sp_max}		{%+4s} {<128>$my[sp][max]<088>};
+	#format {stam}			{%+8s} {@colscale{$my[gp1][current];100}};
+	#format {pp}			{%+7s} {@colscale{$my[gp2][current];100}};
+	#format {ff}			{%+8s} {@colscale{$my[ff][current];100}};
+	#format {skill}			{%+8s} {@colscale{$my[skill][current];100}};
+	#format {relin}			{%+2s} {$my[relinquish][current]};
+	#format {relin_r}		{%+3s} {$my[relinquish][reset]};
+	#format {bio}			{%+3s} {$my[bioplasts]};
+        #format {round_damage}          {%+16s} {$NumbersString};
+	#format {round_average}		{%+4s} {@rcolscale{$AvgDamage;2500}};
+	#format {ehealth}		{%+8s} {@colscale{$enemy[hp];100}\%};
+        #format {corpses[inventory]}    {%+2s} {$corpses[inventory]};
+        #format {corpses[truck]}	{%+2s} {$corpses[truck]};
+        #format {corpses[coffin]}	{%+2s} {$corpses[coffin]};
+        #format {corpses[freezer]}	{%+2s} {$corpses[freezer]};
+	#showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} ST:${stam}%  PP:${pp}%  FF:${ff}  G2N: ${skill}%  BP:${bio}    E: $round_damage($round_average)} {-4};
+	#showme {H:${my[hp][graph]} S:${my[sp][graph]} ST:${my[gp1][graph]} P:${my[gp2][graph]} F:${my[ff][graph]} G2N: $my[skill][graph] R:${relin}/${relin_r}\% E:${enemy[graph]}} {-3};
+	#showme {$mip[gline][2]} {-6};
+	#showme {$mip[gline][1]} {-7};
+}
+
+#alias {corpsetrig} {
+	!wrap corpse;
+	!divvy;
+}
+
+#alias {cco}{
+	#if {"$my[autocorpse][method]" == "guild"}{
+		#echo {Sorry, no corpse power};
+	};
+	#if {"$my[autocorpse][method]" == "nex"}{
+		!orare;
+	};
+};
+
+#act {Flaabi dealt the killing blow to %1.}{
+	log_damage_no_numbers %1;
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+};
+#class {flaabi} {close}

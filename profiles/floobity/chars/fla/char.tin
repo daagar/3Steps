@@ -1,0 +1,191 @@
+#class {fla} {open}
+
+#var guild monk
+
+#alias kk {
+        !akill $kstr;
+        !pressure;
+        !palm;
+        follow $kstr
+}
+
+#alias k {
+        !akill %0;
+        !pressure;
+        !palm;
+        follow %0
+}
+
+#alias lt talk %0
+#alias gl glance
+#alias l look %0
+#alias v vortex
+#alias p portal
+#alias ch monk %0
+#alias chist monk -h
+#alias gwho monks
+#alias pt ptell %0
+#alias ps members
+#alias is hide of the dragon
+#var spoon 0
+#var numitems 0
+#alias {spoon}{
+        #if { $spoon == 0}{
+                #var spoon 1;
+                #echo {Spooning!}
+                }{
+                #var spoon 0;
+                #echo {Not Spooning!}
+        }
+}
+
+
+#gag {You need not meditate further, type 'stopmed' to stop.}
+#gag {Follow whom?}
+#gag {You feel your body and mind relax a little}
+#gag {stands fast, resisting your stun attempt.}
+#gag {You critically hit %1}
+#gag {You've knocked your foe unconscious}
+#gag {You drive your attack past %1 resistances}
+#gag {You quickly tumble to avoid the brunt of the attack}
+#gag {Performing: hands}
+#gag {You lay hands upon yourself and feel healed.}
+#gag {Your body is wracked in pain as the life force is sucked from you}
+#gag {With skill and speed you dodge the attack}
+#gag {You nimbly dodge %1 attack}
+#gag {gurgles violently!}
+#gag {shakes uncontrollably.}
+#gag {body shakes apart!!}
+#gag {With furious speed you strike again}
+#gag {erupts from within!}
+#gag {quivers spasmodically.}
+#gag {Veins pop forth from %1 head, spraying}
+#gag {like a fountain.}
+#gag {SSPPLLLUUUURRRTTTTT!!!  Suddenly, a fissure appears in}
+#gag {and blood sprays out around you!!!}
+#gag {ZORCH!!!  Crackles of electricity shoot down your arms, leap onto}
+#gag {and scorch massive areas of flesh!}
+#gag {ZZZZZZZOOOOOOOTTTTT!!!  Lightning flies from your hands, incinerating}
+#gag {and leaving a dark outline of %1 form on the ground.}
+#gag {WHACK!!!  With great speed and power, you strike %1}
+#gag {vital point!  %1 screams out in pain!}
+#gag {point!  %1 screams out in pain!}
+#gag {CRRRRAAAAAAAAAAAACK!!!  Using great skill and agility, you strike}
+#gag {at a vital point!  %1 buckles under the pain}
+#gag {shriek of agony!$}
+#gag {Your strike has weakened %1 defenses}
+#gag {\*\*FREE CAST\*\*}
+#gag {Your muscles ripple and bulge with power}
+#gag {Psionic waves emanate from your body.}
+#gag {You are busy meditating, looking at things is too disruptive.}
+
+
+#act {You are busy meditating, looking at things is too disruptive.}{!glance;#var my[meditating][status] 1}
+#act {You sit down and begin to meditate}{#var my[meditating][status] 1}
+#act {You cannot meditate with anyone around you}{#var my[meditating][status] 1}
+#act {You are already meditating}{#var my[meditating][status] 1}
+#act {Your meditation has been interrupted}{#var my[meditating][status] 0}
+#act {Stopping meditation}{#var my[meditating][status] 0}
+#act {You cannot meditate while moving}{#var my[meditating][status] 0}
+#act {You can meditate no further.}{#var my[meditating][status] 0}
+
+#act {become hardened like the Scales of a Dragon.}{#var my[hide][status] 1}
+#act {Your skin slowly fades from the hardened scales into your natural texture.}{#var my[hide][status] 0}
+
+#act {Focus Left: %1} {
+        #var currFocus %1;
+        #var checkGS 1;
+}
+
+#act {Mental energies pour into you from the power of the Ancients.} {gs}
+
+#gag {HP: %1/%2 PP: %3/%4 Chi: %5/%6 G2:%7 M:%8 AE:%9\/%10\% CF:%11}
+#act {HP: %1/%2 PP: %3/%4 Chi: %5/%6 G2:%7 M:%8 AE:%9/%10\% CF:%11} {
+	#var {my[hp][current]}		{%1};
+	#var {my[hp][max]}		{%2};
+	#var {my[sp][current]}		{%3};
+	#var {my[sp][max]}		{%4};
+	#var {my[gp1][current]}		{%5};
+	#var {my[chi][current]}		{%5};
+	#var {my[gp1][max]}		{%6};
+	#var {my[chi][max]}		{%6};
+	#var {my[gtnl]}			{%7};
+	#var {my[gp2][current]}		{%8};
+	#var {my[ae]][current]}		{%9};
+	#var {my[ae][reset]}		{%10};
+	#var {my[chifocus][current]}	{%11};
+	#math {my[hp][deficit]}{$my[hp][max] - $my[hp][current]};
+	#math {my[chi][deficit]}{$my[chi][max] - $my[chi][current]};
+};
+
+#gag {^E:%1}
+#act {^E:%1}{
+        #if {"%1" != "None:"}{
+		#var {my[attacker]}	{%1};
+		#var {my[incombat]}	{1};
+		#math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+		#regex {$my[attacker]}{%*:%*}{
+			#var {my[damagetracker][foe]}{&1};
+		};
+        }{
+                #var {my[attacker]}	{0};
+		#var {my[incombat]}	{0};
+        };
+	#if {$my[incombat] == 0}{
+		#if {$my[chi][deficit] > 10}{
+			!enervate 50
+		};
+		#if {$my[hp][deficit] > 0}{
+			!hands;
+		};
+	}
+	update_status;
+}
+
+#alias {update_status} {
+	#var	{my[hp][graph]}		{@graph{$my[hp][current];$my[hp][max]}};
+	#var	{my[sp][graph]}		{@graph{$my[sp][current];$my[sp][max]}};
+	#var	{my[gp1][graph]}	{@graph{$my[gp1][current];$my[gp1][max]}};
+	#var	{my[gp2][graph]}	{@graph{$my[gp2][current];100}};
+	#var	{enemy[graph]}		{@graph{$enemy[hp];100}};
+	#format {hp}			{%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
+	#format {hp_max}		{%+4s} {<128>$my[hp][max]<088>};
+	#format {sp}			{%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
+	#format {sp_max}		{%+4s} {<128>$my[sp][max]<088>};
+	#format {gtnl}			{%+10s} {$my[gtnl]};
+	#format {chi}			{%+4s} {@colscale{$my[gp1][current];100}};
+	#format {chi_max}		{%+4s} {$my[gp1][max]};
+	#format {med}			{%+4s} {$my[gp2][current]};
+	#format {ehealth}		{%+8s} {@colscale{$enemy[hp];100}\%};
+	#showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} CH:${chi}/${chi_max}  M:${med}  G2N: ${gtnl}  E: $my[attacker]} {-4};
+	#showme {H:${my[hp][graph]} S:${my[sp][graph]} CH:${my[gp1][graph]}                          E:${enemy[graph]}} {-3};
+  	#showme {$mip[gline][2]} {-6};
+	#showme {$mip[gline][1]} {-7};
+}
+
+#alias {corpsetrig} {
+	!wrap corpse;
+	!divvy;
+	!study corpse;
+	!get coins from corpse;
+}
+
+#alias {cco}{
+	!unwrap corpse;
+	#if {"$my[autocorpse][method]" == "guild"}{
+		!study corpse;
+	};
+	#if {"$my[autocorpse][method]" == "nex"}{
+		!study corpse;
+		!orare;
+	};
+};
+
+#act {Fla dealt the killing blow to %1.} {
+	log_damage_no_numbers %1;
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+};
+
+#class {fla} {close}

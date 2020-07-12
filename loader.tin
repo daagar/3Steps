@@ -1,0 +1,12 @@
+#class {loader}{open}
+
+#screen {clear}{all};
+
+
+#alias {load_rc}{
+	#read .tt/profiles/rc.tin;
+};
+
+load_rc
+
+#class {loader}{close}

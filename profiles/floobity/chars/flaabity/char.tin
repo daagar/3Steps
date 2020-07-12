@@ -1,0 +1,178 @@
+#class {flaabity} {open}
+
+#var guild jedi
+#var subguild baadu
+
+#delay {2}{ftik}
+#var {my[cleanse][status]}{0};
+#var {my[cloud][threshold]}{50};
+#var {my[desired][weapon]}{lightsaber};
+#var {my[desired][mode]}{guide};
+#var {my[damage][type]}{boil};
+
+fbq uo1
+fbq uo2
+fbq donuts
+
+
+#nop {focus hpconfigure /HP: #hp/#mhp SP: #sp/#msp C: #c F: #f M: #sm/#%c D: #dn/#ng P: #df E: #es GXP: #gxp}
+#gag {HP: %2/%3 SP: %4/%5 C: %6 F: %7 M: %8/%9 D:%10/%11 P: %12 E: %14GXP:%13}
+#act {HP: %1/%2 SP: %3/%4 C: %5\% F: %6\% M: %7/%8\% D:%9/%10 P: %11 E:%12 GXP: %13\%} {
+	#var {my[hp][current]}		{%1};
+	#var {my[hp][max]}		{%2};
+	#var {my[sp][current]}		{%3};
+	#var {my[sp][max]}		{%4};
+	#var {my[gp1][current]}		{%5};
+	#var {my[conc][current]}	{%5};
+	#var {my[gp2][current]}		{%6};
+	#var {my[force][current]}	{%6};
+	#var {my[mode][current]}	{%7};
+	#var {my[charge][current]}	{%8};
+	#var {my[dissipate][current]}	{%9};
+	#var {my[energy][current]}	{%10};
+	#var {my[prots][current][all]}	{%11};
+	#var {my[attacker]}		{%12};
+	#var {my[gtnl]}			{%13};
+	#math {my[hp][deficit]}{$my[hp][max] - $my[hp][current]};
+	#math {my[sp][deficit]}{$my[sp][max] - $my[sp][current]};
+	#math {my[hp][percent]}{$my[hp][current] * 100 / $my[hp][max]};
+	#math {my[sp][percent]}{$my[sp][current] * 100 / $my[sp][max]};
+        #if {"${my[attacker]}" != " "}{
+		#var {my[incombat]}	{1};
+		#math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+		#var {my[cleanse][status]}{0};
+        }{
+		#var {my[incombat]}	{0};
+		#var {my[gouged]}	{0};
+        };
+	#if {${my[incombat]} == 1}{
+		#if {$my[hp][deficit] > 250}{
+			!focus reduce injury;
+		};
+		#if {$my[sp][deficit] > 200}{
+			!focus clear mind;
+		};
+		#if {${my[hp][percent]} < 50}{
+			ppp;
+		};
+		#if {${my[hp][percent]} < 30}{
+			panic;
+		};
+		#if {${my[conc][current]} < 10}{
+			panic;
+		};
+		#if {${my[force][current]} > 90}{
+			panic;
+		};
+		#if {${my[gouged]} != 1}{
+			!gouge;
+			!focus mindblock;
+			#var {my[gouged]}{1};
+			#nop {Safety measure for UO};
+			#if {$critter_room > 1 && "$area" == "Ultima Online"}{
+				ppp;
+				#var {critter_room}{0};
+			};
+		};
+	}{
+		#if {${my[conc][current]} < 80 && ${my[cleanse][status]} == 0}{
+			do_htrance
+		};
+		#if {${my[force][current]} > 10 && ${my[cleanse][status]} == 0}{
+			do_htrance
+		};
+		#if {${my[cleanse][status]} != 1}{
+			#if {${my[hp][current]} < $my[hp][max]}{
+				!focus reduce injury;
+			};
+			#if {${my[sp][current]} < $my[sp][max]}{
+				!focus clear mind;
+			};
+		};
+	};
+	#if {${my[cleanse][status]} != 1}{
+		#regex {$my[prots][current][all]}{s}{
+			#var {my[prots][current][lfs]}{1};
+		}{
+			#var {my[prots][current][lfs]}{0};
+			!focus lesser force shield;
+		};
+		#regex {$my[prots][current][all]}{S}{
+			#var {my[prots][current][gfs]}{1};
+		}{
+			#var {my[prots][current][gfs]}{0};
+			!focus greater force shield;
+		};
+		#regex {$my[prots][current][all]}{D}{
+			#var {my[prots][current][dodge]}{1};
+		}{
+			#var {my[prots][current][dodge]}{0};
+			!focus dodge /on;
+		};
+		#regex {$my[prots][current][all]}{RP}{
+			#var {my[prots][current][rpoison]}{1};
+		}{
+			#var {my[prots][current][rpoison]}{0};
+			!focus resist poison;
+		};
+		#if {"${my[mode][current]}" != "${my[desired][modeshort]}"}{
+			#if {"${my[desired][modeshort]}" == "h"}{
+				!sheath;
+				!focus hand to hand;
+			}{
+				!sheath;
+				!draw ${my[desired][weapon]};
+				!focus mode /${my[desired][mode]};
+			};
+		};
+		#if {"${my[mode][current]}" != "h"}{
+			#if {$my[charge][current] < 5}{
+				!smuggle remove cell;
+				!recharge ${my[desired][weapon]};
+			};
+		};
+		#regex {$mip[gline][2]}{Deflection UP}{
+			#nop;
+		}{
+			!focus force deflection;
+		};
+		#regex {$mip[gline][2]}{Accelerated Healing}{
+			#nop;
+		}{
+			!focus accelerated healing;
+		};
+	};
+	#var {my[damagetracker][guildstring]}{${guild}/${subguild} - ${my[desired][weapon]} - ${my[desired][mode]}/${my[desired][spell]}/${my[damage][type]}};
+	update_status;
+}
+
+
+#alias {update_status} {
+	#var	{my[hp][graph]}		{@graph{$my[hp][current];$my[hp][max]}};
+	#var	{my[sp][graph]}		{@graph{$my[sp][current];$my[sp][max]}};
+	#var	{my[gp1][graph]}	{@graph{$my[gp1][current];100}};
+	#var	{my[gp2][graph]}	{@graph{$my[gp2][current];100}};
+	#var	{my[charge][graph]}	{@graph{$my[charge][current];100}};
+	#var	{enemy[graph]}		{@graph{$enemy[hp];100}};
+	#format {hp}			{%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
+	#format {hp_max}		{%+4s} {<128>$my[hp][max]<088>};
+	#format {sp}			{%+4s} {@colscale{$my[sp][current];$my[sp][max]}};
+	#format {sp_max}		{%+4s} {<128>$my[sp][max]<088>};
+	#format {conc}			{%+8s} {@colscale{$my[conc][current];100}};
+	#format {force}			{%+6s} {@colscale{$my[force][current];100}};
+	#format {charge}		{%+6s} {@colscale{$my[charge][current];100}};
+	#format {ehealth}		{%+8s} {@colscale{$enemy[hp];100}\%};
+	#showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} C:${conc}%  F:${force}%    C: ${charge}%   M: ${my[desired][weapon]} - ${my[desired][mode]}/${my[desired][spell]}}{-4};
+	#showme {H:${my[hp][graph]} S:${my[sp][graph]} C:${my[gp1][graph]} F:${my[gp2][graph]} C: ${my[charge][graph]}E:${enemy[graph]}} {-3};
+	#showme {$mip[gline][2]} {-6};
+	#showme {$mip[gline][1]} {-7};
+}
+
+#act {Flaabity dealt the killing blow to %1.} {
+	log_damage_no_numbers %1;
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+}
+
+#class {flaabity} {close}
