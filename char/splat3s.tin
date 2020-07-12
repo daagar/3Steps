@@ -13,28 +13,28 @@
 	}
 };
 
-#gag {You will no longer dissipate attacks against you.}
-#gag {You will no longer persevere.}
-#gag {You focus on retaining your shape.}
-#gag {You begin to concentrate on turning aside harmful attacks.}
-#gag {Your cells rapidly freeze and die}
-#gag {The supercooled regions cause your cells}
-#gag {The searing heat that you are generating is damaging}
-#gag {Cells blacken and die around your superheated regions!}
-#gag {The tiny translucent bombardier beetle hit}
-#gag {The tiny translucent wandering spider hit}
-#gag {The tiny translucent bombardier beetle sighs.}
-#gag {The tiny translucent wandering spider sighs.}
-#gag {^You instinctively know that biting this being would have no effect.}
-#gag {^You are not able to bite anything at this time!}
-#gag {%1 writhes in pain as its flesh slowly rots!}
+#NOP #gag {You will no longer dissipate attacks against you.}
+#NOP #gag {You will no longer persevere.}
+#NOP #gag {You focus on retaining your shape.}
+#NOP #gag {You begin to concentrate on turning aside harmful attacks.}
+#NOP #gag {Your cells rapidly freeze and die}
+#NOP #gag {The supercooled regions cause your cells}
+#NOP #gag {The searing heat that you are generating is damaging}
+#NOP #gag {Cells blacken and die around your superheated regions!}
+#NOP #gag {The tiny translucent bombardier beetle hit}
+#NOP #gag {The tiny translucent wandering spider hit}
+#NOP #gag {The tiny translucent bombardier beetle sighs.}
+#NOP #gag {The tiny translucent wandering spider sighs.}
+#NOP #gag {^You instinctively know that biting this being would have no effect.}
+#NOP #gag {^You are not able to bite anything at this time!}
+#NOP #gag {%1 writhes in pain as its flesh slowly rots!}
 
-#gag {Energy pours into you, rejuvenating lost stamina and protoplasm!}
-#gag {You resume accelerating your natural regeneration.}
-#gag {You resume radiating heat.}
-#gag {You resume radiating cold.}
-#gag {When you persevere, you will dedicate %1 of your focus on retaining your shape.}
-#gag {The chaotic energies revitalize you!}
+#NOP #gag {Energy pours into you, rejuvenating lost stamina and protoplasm!}
+#NOP #gag {You resume accelerating your natural regeneration.}
+#NOP #gag {You resume radiating heat.}
+#NOP #gag {You resume radiating cold.}
+#NOP #gag {When you persevere, you will dedicate %1 of your focus on retaining your shape.}
+#NOP #gag {The chaotic energies revitalize you!}
 
 #act {^You instinctively know that biting this being would have no effect.}{
 	#var {my[bite][status]}{1};
@@ -66,7 +66,10 @@
 
 #var resumebot 0;
 
-#gag {HP[%1/%2] SP[%3/%4] ST[%5\%] PP[%6\%] CF[%7/%8\%] FF[%9] E%10 %11}
+#if {!$my[incombat]} {
+	#gag {HP[%1/%2] SP[%3/%4] ST[%5\%] PP[%6\%] CF[%7/%8\%] FF[%9] E%10 %11};
+};
+
 #act {HP[%1/%2] SP[%3/%4] ST[%5\%] PP[%6\%] CF[%7/%8\%] FF[%9] E[%10] %11}{
 	#var {my[hp][current]}			{%1};
 	#var {my[hp][max]}				{%2};
