@@ -1,9 +1,7 @@
-#class {fl} {open}
+#class {changeling} {open}
 
 #var guild changeling
 
-redraw jedimode off;
-redraw summoner off;
 redraw biome on;
 
 #alias {autope}{
@@ -354,11 +352,5 @@ fbq gspiders
         !fuse turbid and milky;
 }
 
-#act {Fl dealt the killing blow to %1.} {
-	#var {my[damagetracker][submit]}{1};
-	#if {"$my[autocorpse][method]" != "off"}{
-		corpsetrig;
-	};
-}
 
-#class {fl} {close}
+#class {changeling} {close}

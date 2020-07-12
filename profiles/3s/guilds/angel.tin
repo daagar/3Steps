@@ -1,10 +1,4 @@
-#class {floobity} {open}
-
-#var guild angel
-
-fbq donuts
-fbq uo2
-fbq uo3
+#class {angel} {open}
 
 #alias kk {kill $kstr}
 #alias k {kill %0}
@@ -713,23 +707,4 @@ set_defaults
         !possess reassert;
 }
 
-#act {Floobity dealt the killing blow to %1.} {
-	#var {my[damagetracker][submit]}{1};
-	#if {"$my[autocorpse][method]" != "off"}{
-		corpsetrig;
-	};
-}
-#act {Ominous Shadow dealt the killing blow to %1.} {
-	#var {my[damagetracker][submit]}{1};
-	#if {"$my[autocorpse][method]" != "off"}{
-		corpsetrig;
-	};
-}
-#act {Writhing Horror dealt the killing blow to %1.} {
-	#var {my[damagetracker][submit]}{1};
-	#if {"$my[autocorpse][method]" != "off"}{
-		corpsetrig;
-	};
-}
-
-#class {floobity} {close}
+#class {angel} {close}

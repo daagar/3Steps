@@ -1,4 +1,4 @@
-#class {fluub} {open}
+#class {bard} {open}
 
 #var guild bard
 
@@ -515,12 +515,4 @@
 	};
 };
 
-
-#act {Fluub dealt the killing blow to %1.} {
-	log_damage_no_numbers %1;
-	#if {"$my[autocorpse][method]" != "off"}{
-		corpsetrig;
-	};
-}
-
-#class {fluub} {close}
+#class {bard} {close}

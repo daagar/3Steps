@@ -1,4 +1,4 @@
-#class {floob} {open}
+#class {sii} {open}
 
 #var guild sii
 
@@ -314,11 +314,4 @@
 	};
 };
 
-#act {Floob dealt the killing blow to %1.} {
-	log_damage_no_numbers %1;
-	#if {"$my[autocorpse][method]" != "off"}{
-		corpsetrig;
-	};
-};
-
-#class {floob} {close}
+#class {sii} {close}

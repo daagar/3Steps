@@ -1,8 +1,7 @@
-#class {floobi} {open}
+#class {mage} {open}
 
-#var guild mages;
+#var guild mage;
 
-#read .tt/3k/summoner.tin;
 
 #gag {HP: %1/%2 SP: %3/%4/%5%/%6% Umb: %7% Cnc: %8% B:%9/%29% I:%10 S:%11/%12% G2N:%13% GLR:%14 %15 <P>}
 #act {HP: %1/%2 SP: %3/%4/%5%/%6% Umb: %7% Cnc: %8% B:%9/%10% I:%11 S:%12/%13% G2N:%14% GLR:%15 %16 <P>%17}{
@@ -448,17 +447,4 @@
 };
 
 
-#act {%1 dealt the killing blow to %2.}{
-        #format {killer}{%l}{%1};
-        #format {killee}{%l}{%2};
-	#regex {$killer}{{floobi|moon|maelstrom|orb|sorcerous|vortex|bank|mountain|mote|nobody|conglomeration|elemental|vine|nexus}}{
-		reset_tank;
-		#if {"$my[autocorpse][method]" != "off"}{
-			corpsetrig;
-		};
-	};
-	#var {my[damagetracker][submit]}{1};
-}
-
-
-#class {floobi} {close}
+#class {mage} {close}

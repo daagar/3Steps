@@ -1,4 +1,4 @@
-#class {flaabi} {open}
+#class {gentech} {open}
 
 #var guild gentech
 
@@ -201,10 +201,4 @@
 	};
 };
 
-#act {Flaabi dealt the killing blow to %1.}{
-	log_damage_no_numbers %1;
-	#if {"$my[autocorpse][method]" != "off"}{
-		corpsetrig;
-	};
-};
-#class {flaabi} {close}
+#class {gentech} {close}

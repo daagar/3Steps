@@ -1,4 +1,4 @@
-#class {fluubit} {open}
+#class {priest} {open}
 
 #var guild priest
 
@@ -193,23 +193,4 @@
 }
 #alias {cco}{co}
 
-#act {High Guard dealt the killing blow to}{
-	log_damage_no_numbers %1;
-	#if {"$my[autocorpse][method]" != "off"}{
-		corpsetrig;
-	};
-}
-#act {Tree dealt the killing blow to}{
-	log_damage_no_numbers %1;
-	#if {"$my[autocorpse][method]" != "off"}{
-		corpsetrig;
-	};
-}
-#act {Fluubit dealt the killing blow to}{
-	log_damage_no_numbers %1;
-	#if {"$my[autocorpse][method]" != "off"}{
-		corpsetrig;
-	};
-}
-
-#class {fluubit} {close}
+#class {priest} {close}

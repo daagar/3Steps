@@ -1,13 +1,7 @@
-#class {fleebity} {open}
+#class {jedi} {open}
 
 #var guild jedi
-#var subguild krath
 #read .tt/3s/jedimode.tin
-
-#var {my[cleanse][status]}{0};
-#var {my[cloud][threshold]}{50};
-#var {my[desired][weapon]}{lightdaggers};
-
 
 
 #nop {focus hpconfigure /HP: #hp/#mhp SP: #sp/#msp C: #c F: #f M: #sm/#%c D: #dn/#ng P: #df E: #es GXP: #gxp}
@@ -157,24 +151,4 @@
 	#showme {$mip[gline][1]} {-7};
 }
 
-#act {Fleebity dealt the killing blow to %1.} {
-	log_damage_no_numbers %1;
-	#if {"$my[autocorpse][method]" != "off"}{
-		corpsetrig;
-	};
-}
-
-#delay {2}{
-	#var {my[desired][weapon]}{lightdaggers};
-	ftwi;
-};
-
-#alias set_default_areas {
-	fbq aegisl1;
-	fbq aegisl2;
-	autoq;
-	autok;
-}
-
-set_default_areas
-#class {fleebity} {close}
+#class {jedi} {close}

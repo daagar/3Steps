@@ -1,11 +1,4 @@
-#class {fluubi} {open}
-
-#read .tt/api/8inix.tin
-#read .tt/api/adds.tin
-#read .tt/api/crypto.tin
-#read .tt/api/define.tin
-#read .tt/api/udefine.tin
-#read .tt/api/stocks.tin
+#class {juggernaut} {open}
 
 #alias kk {kill $kstr}
 
@@ -180,11 +173,4 @@
 	};
 	go home
 }
-
-#act {Fluubi dealt the killing blow to %1.}{
-	log_damage_no_numbers %1;
-	#if {"$my[autocorpse][method]" != "off"}{
-		corpsetrig;
-	};
-};
-#class {fluubi} {close}
+#class {juggernaut} {close}

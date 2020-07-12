@@ -1,4 +1,4 @@
-#class {floobit} {open}
+#class {elemental} {open}
 
 #var guild elemental
 
@@ -65,11 +65,5 @@
 
 #alias {cco}{co};
 
-#act {Floobit dealt the killing blow to %1}{
-	log_damage_no_numbers %1;
-	#if {"$my[autocorpse][method]" != "off"}{
-		corpsetrig;
-	};
-}
 
-#class {floobit} {close}
+#class {elemental} {close}

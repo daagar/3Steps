@@ -1,4 +1,4 @@
-#class {flyybit} {open}
+#class {necromancer} {open}
 
 #var guild necromancer
 
@@ -402,13 +402,4 @@
 	};
 }
 
-#var autogather 1
-
-#act {Flyybit dealt the killing blow to %1.} {
-	log_damage_no_numbers %1;
-	#if {"$my[autocorpse][method]" != "off"}{
-		corpsetrig;
-	};
-};
-
-#class {flyybit} {close}
+#class {necromancer} {close}
