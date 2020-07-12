@@ -1328,3 +1328,1016 @@ A Vortex (s,w,enter)
 The House of Fl (n,w,sci,new,cha,fan,atm,leave,login,sh,gld,gyp)
 =I= A large box (contains 38 items).
 #SESSION 'floo3s' DIED.
+Connecting...
+<Entering 3Scapes.  Enter your character name or press enter to continue>
+Password:
+Your character is currently logged in and linkdead.
+Prompt set.
+3Scapes welcomes you back from linkdeath.
+There is no reason to 'show_mode_selector' here.
+There is no reason to 'show_damage_selector' here.
+You fall out of your trained combat mode.
+You unwield offhand blaster.
+You slip your weapon into its sheath.
+You draw your weapon from the sheath in your belt.
+You wield offhand blaster.
+You will now fight using your weapon's standard mode.
+You adjust your grip on your blaster and steady your mind, focusing on a
+single point in your thoughts, readying to unleash the Force with your
+blaster and knowing you will strike your target.                        
+You are already protected by force deflection.
+You stop accelerated healing.
+You are already protected by force deflection.
+You begin to concentrate on healing your wounds.
+You will no longer see the HP bar on the main screen.
+You remove your setting for MAPCOLS.
+You will now see the HP bar on your main screen as well.
+l
+An empty room.
+=X=    There are twelve obvious exits: north, west, sci, new, cha, fan, atm,
+                                    leave, login, sh, gld, gyp              =X=
+=I= A large box (contains 37 items).
+go donuts
+The entrance to Fantasy (n,w,e,portal)
+=I= A platinum medallion.
+=I= A small wooden sign.
+Sentinel's Path (n,s,w,e)
+Sentinel's Path (w,e)
+=I= A weathered wooden sign, pointing west.
+Arborlin Trail (n,s,w)
+=I= A greenish street sign.
+Arborlin Trail (nw,s,e)
+Waverly Street (n,w,e)
+Alchemy row (n,s,w)
+Alchemy row (nw,n,s,w,e)
+=I= A tall street light.
+A Break in the Haze (n,w,e)
+=I= A glass sign with moving liquid inside, pointing north.
+A Vortex (s,w,enter)
+The center of Chaos (n,s,w,e,vortex)
+=I= An eighteenth hole flag.
+=I= A dirty fedora.
+=I= A bronze plaque.
+Eastwick (n,s,w,e)
+=I= A large ladder.
+Eastwick Road (n,s,w,e)
+=I= A small dispensing machine.
+=M= Villager.
+Wickward Path (n,s)
+=I= The Krispy
+Krematorium.
+You drool at the thought of a delicious donut and suddenly you're transported inside the shop!
+Floo disappears into the donut shop.
+ki
+You allow your mind to relax and stop deflecting attacks.
+You don't want to control pain if you're not fighting.
+Krispy Krematorium (ne,nw,n,s,exit)
+You step inside the portal and find yourself in a completely
+new and bizarre environment.
+Krispy Krematorium (se,n,s,w)
+=M= A Giant Powdered Blueberry Filled Donut.
+You close your eyes briefly, feeling the ebb and flow of the force stretch
+through your being.  Your eyes flutter open as you call upon your control
+of the force to deflect incoming attacks.
+You are already protected by force deflection.
+rcost
+                           Jedi Advancement Costs                          
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ [neutral   ability]  Strength      [ 30] :     503,638 experience points.
+ [neutral   ability]  Constitution  [ 80] :  12,254,146 experience points.
+ [neutral   ability]  Intelligence  [ 30] :     503,638 experience points.
+ [neutral   ability]  Wisdom        [ 83] :  13,920,855 experience points.
+ [neutral   ability]  Dexterity     [ 83] :  13,920,855 experience points.
+ [neutral   ability]  Charisma      [ 30] :     503,638 experience points.
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+     You need 14,996,995 more experience points to advance your level.     
+  You have 6,745,221 experience points to put towards raising your stats.  
+               You may advance 5 stats at your current level.              
+go home
+Krispy Krematorium (ne,nw,n,s,exit)
+Wickward Path (n,s)
+=I= The Krispy
+Krematorium.
+Eastwick Road (n,s,w,e)
+=I= A small dispensing machine.
+=M= Villager.
+Eastwick (n,s,w,e)
+=I= An eighteenth hole flag.
+=I= A large ladder.
+The center of Chaos (n,s,w,e,vortex)
+=I= A dirty fedora.
+=I= A bronze plaque.
+A Vortex (s,w,enter)
+The House of Fl (n,w,sci,new,cha,fan,atm,leave,login,sh,gld,gyp)
+=I= A large box (contains 37 items).
+go uo1
+The entrance to Fantasy (n,w,e,portal)
+=I= A platinum medallion.
+=I= A small wooden sign.
+Sentinel's Path (n,s,w,e)
+=M= A mosquito.
+Sentinel's Path (w,e)
+=I= A weathered wooden sign, pointing west.
+Arborlin Trail (n,s,w)
+=I= A greenish street sign.
+Arborlin Trail (nw,s,e)
+Waverly Street (n,w,e)
+Alchemy row (n,s,w)
+Alchemy row (nw,n,s,w,e)
+=I= A tall street light.
+A Break in the Haze (n,w,e)
+=I= A glass sign with moving liquid inside, pointing north.
+A Vortex (s,w,enter)
+The center of Chaos (n,s,w,e,vortex)
+=I= A bouncing bingo ball.
+=I= A dirty fedora.
+=I= A bronze plaque.
+Eastwick (n,s,w,e)
+=I= An eighteenth hole flag.
+=I= A large ladder.
+Eastwick Road (n,s,w,e)
+=I= A small dispensing machine.
+=M= Villager.
+Eastwick (n,e,w,s)
+=I= An Illuminati Pyramid.
+=I= An ancient IBM G5 mainframe.
+Eastwick (w,e)
+=I= A swirling void.
+=M= Villager {2}.
+=I= Magic mushroom magically stuck in the ground.
+Eastwick (n,s,w,e)
+=I= Arena Ticket.
+=I= A toy chest.
+South/North Fork (n,w,e)
+=I= A quaint candy store.
+Eastwick (s,e)
+=I= Erratic light.
+Eastwick Road (n,e)
+=I= A strange boy.
+=I= A leather-bound book.
+Eastwick (w,e)
+=I= A dream of Xanadu.
+=I= An Outhouse.
+Eastwick (u,n,s,w,e)
+=I= A joystick.
+Entrance to an apartment (s,w,out)
+A Hallway (n,s)
+A Den (n)
+=I= A binder of cds.
+=M= A discarded computer part.
+You are sucked into the world of Ultima Online!
+fbq uo1
+fbq uo2
+ki
+Entrance to the Dungeon of Shame (e,exit)
+Near a cluster of stalagmites (w,e)
+=M= A giant scorpion.
+You hold your blaster loosly in your hand, letting your gaze wander over
+the field of fire, your mind ranging out with the Force to find all
+targets of opportunity.                                                 
+Negative arrives.
+Rotcir arrives.
+A cloaking helix of mist forms around Rotcir.
+A Giant Scorpion arrives hunting Negative.
+Great pillars of white-hot fire descend from the heavens.
+Two roaring columns of celestial flame engulf A Giant Scorpion!
+The celestial pyre annihilates A Giant Scorpion with incredible force!
+Negative struck but did no damage to A Giant Scorpion.
+Negative struck but did no damage to A Giant Scorpion.
+Negative struck but did no damage to A Giant Scorpion.
+The ionbeam nukes!
+Negative focuses a nuclear blast at A Giant Scorpion.
+Negative's synthorg sonic emitters send a mighty roar at A Giant Scorpion.
+Negative leaves west.
+Rotcir leaves following Negative.
+Rotcir leaves west.
+Negative arrives.
+The scorpion stabs Negative with its stinger!
+Rotcir arrives.
+A cloaking helix of mist forms around Rotcir.
+Umbral ocean currents roar from the Astral, eddying powerfully
+around A Giant Scorpion, buffeting it with strange tides!
+Negative leaves east.
+Rotcir leaves following Negative.
+Rotcir leaves east.
+A Giant Scorpion leaves to hunt down Negative.
+The riptide ebbs back into the astral.
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+[Brasky disconnects]
+3k: [Resolute reconnects]
+[Brasky reconnects]
+Your concentration breaks, letting your lesser Force shield dissipate away.
+Your immune system's resistance to toxins returns to normal.
+You concentrate on the ebb and flow of the Force about you, searching
+for the subtle patterns within the fragile web.  With the force of your
+will alone you gather the Force about you in a cocoon of pure energy.
+3k: [Schlaus reconnects]
+HP: 968/968 SP: 215/266 C:  99.35% F:  17.85% M: S/ 98% D: 6/0 P: ASsRPD  E: 54% GXP:  48.35%
+3k: [Vat disconnects]
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+[Spice reconnects]
+[Spice leaves the game]
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+Negative arrives.
+Rotcir arrives.
+A cloaking helix of mist forms around Rotcir.
+Negative leaves west.
+Rotcir leaves following Negative.
+Rotcir leaves west.
+3k: [Id reconnects]
+Your immune system's resistance to toxins returns to normal.
+[Ricter enters the game]
+Your holocron glows brightly as it saves your status.
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+A Giant Scorpion gasps for breath, then slumps into death.
+Floo dealt the killing blow to A Giant Scorpion.
+You fire one last shot into your foe.
+You pick up The glowing, freshly slain corpse of A giant scorpion and wrap it up into the coffin's
+protective hold!
+The coffin is now full!
+You need a corpse to drain.
+There are no coins here to share!
+You enter a restorative trance.
+You abruptly exit your hibernation trance.
+The coffin expels a corpse onto the ground!
+You absorb the remaining energy from the corpse.
+You begin to concentrate on healing your wounds.
+You close your eyes briefly, feeling the ebb and flow of the force stretch
+through your being.  Your eyes flutter open as you call upon your control
+of the force to deflect incoming attacks.
+You enter a hibernation trance.
+ki
+The jumble of thoughts in your head dissipate.
+You abruptly exit your hibernation trance.
+Near a cluster of stalagmites (w,e)
+You begin to concentrate on healing your wounds.
+You close your eyes briefly, feeling the ebb and flow of the force stretch
+through your being.  Your eyes flutter open as you call upon your control
+of the force to deflect incoming attacks.
+An intersection in the cave (n,s,w,e)
+Around a bend (s,e)
+Along a narrow corridor (w,e)
+Along a narrow corridor (s,w,e)
+Along a narrow corridor (se,w)
+You enter a restorative trance.
+You abruptly exit your hibernation trance.
+At a fork in the path (se,ne,nw)
+You begin to concentrate on healing your wounds.
+You close your eyes briefly, feeling the ebb and flow of the force stretch
+through your being.  Your eyes flutter open as you call upon your control
+of the force to deflect incoming attacks.
+Approaching a dead end (sw,n)
+A dead end (s)
+=M= A giant scorpion [scratched] [81%].
+Auto-attacking
+Not Auto-attacking
+Queueing
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+You take a swig from your riot punch and fuel the fire in your belly!
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+Saving crafting status.
+[Negative disconnects]
+[Eisha reconnects]
+3k: [Id disconnects]
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+3k: [Id reconnects]
+3k: [Id leaves the game]
+3k: [Lance enters the game]
+Your concentration breaks, letting your greater Force shield dissipate away.
+Your immune system's resistance to toxins returns to normal.
+You stretch out your feelings to the world around you, touching things
+living and non.  With a twist of the Force you draw the power around
+you like a cocoon of pure energy.
+[JEDI]: Reena Bel Noir arrives at the Academy.
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+A Giant Scorpion gurgles in its own blood as it dies.
+Floo dealt the killing blow to A Giant Scorpion.
+You fire one last shot into your foe.
+You pick up The glowing, freshly slain corpse of A giant scorpion and wrap it up into the coffin's
+protective hold!
+The coffin is now full!
+You need a corpse to drain.
+There are no coins here to share!
+You enter a restorative trance.
+You abruptly exit your hibernation trance.
+The coffin expels a corpse onto the ground!
+You absorb the remaining energy from the corpse.
+You begin to concentrate on healing your wounds.
+You close your eyes briefly, feeling the ebb and flow of the force stretch
+through your being.  Your eyes flutter open as you call upon your control
+of the force to deflect incoming attacks.
+You enter a hibernation trance.
+The jumble of thoughts in your head dissipate.
+You soothe your mind with meditative techniques.
+Your mind becomes a blank slate, centering your soul.
+Your mind becomes a blank slate, centering your soul.
+You soothe your mind with meditative techniques.
+You abruptly exit your hibernation trance.
+You begin to concentrate on healing your wounds.
+You close your eyes briefly, feeling the ebb and flow of the force stretch
+through your being.  Your eyes flutter open as you call upon your control
+of the force to deflect incoming attacks.
+You enter a hibernation trance.
+Your thoughts clear, relaxing your mind.
+The jumble of thoughts in your head dissipate.
+Your mind relaxes from the strain it's been through.
+Your mind relaxes from the strain it's been through.
+Your mind relaxes from the strain it's been through.
+3k: [Rocco reconnects]
+Your mind relaxes from the strain it's been through.
+Your immune system's resistance to toxins returns to normal.
+Your thoughts clear, relaxing your mind.
+Your mind relaxes from the strain it's been through.
+Your thoughts clear, relaxing your mind.
+Your mind becomes a blank slate, centering your soul.
+Your mind relaxes from the strain it's been through.
+ki
+You abruptly exit your hibernation trance.
+A dead end (s)
+You begin to concentrate on healing your wounds.
+You close your eyes briefly, feeling the ebb and flow of the force stretch
+through your being.  Your eyes flutter open as you call upon your control
+of the force to deflect incoming attacks.
+Approaching a dead end (sw,n)
+You are already protected by force deflection.
+At a fork in the path (se,ne,nw)
+Southeast of the fork (s,nw)
+A wide tunnel near the light (n,s)
+=M= An earth elemental.
+You gouge An Earth Elemental's eyes, blinding them!
+An Earth Elemental opens their eyes as the gouge has worn off!
+3k: [Taleast reconnects]
+3k: [Falthrice disconnects]
+XP:  50.75%][Chrg:  97.3%]
+3k: [Per disconnects]
+3k: [Per reconnects]
+Your concentration breaks, letting your lesser Force shield dissipate away.
+You concentrate on the ebb and flow of the Force about you, searching
+for the subtle patterns within the fragile web.  With the force of your
+will alone you gather the Force about you in a cocoon of pure energy.
+Your immune system's resistance to toxins returns to normal.
+l
+The tunnel begins to widen here as you see huge voids in the walls where raw materials have been
+extracted. The pale blue light coming from the south brightens the room and allows you to get your
+bearings. The walls are very rough here, with traces of metal glistening all through the rock. There
+are pools of blood and bones all over the ground, and you start to wonder if the creatures here may
+be responsible.
+=X=    There are two obvious exits: north, south=X=
+=M= An earth elemental [wounded] [32%].
+gs
+                            Floo's Jedi Stats:                           
+ --------------------------------------------------------------------------
+| Mentor:                        SELF | Prev Career:              Sorcerer |
+| Tradition:            Teepo paladin | 2nd Childhood:           Bodyguard |
+ ------------------------ ------------------------ ------------------------
+| Ascention:         46  | Sense:              17 | Energy:            22  |
+| Concentration:  97.73% | Control:            17 | Dissipates:         6  |
+| Force:          27.12% | Alter:              12 | Dissipate Reset: 38.7% |
+ ------------------------ ------------------------ ------------------------
+| Skill Points:                     3 | Next Ascent:               51.279% |
+| Guild Age:       12 Day 9 Hr 38 Min | Combat Age:     10 Day 4 Hr 23 Min |
+| V_Cash:                           0 | Armory Donations:              411 |
+| Reflex:                                       focus reduce injury    850 |
+| Impulse:                                           focus clear mind  150 |
+ ------------------------------------- ------------------------------------
+|                                Combat Status                             |
+ --------------------------------------------------------------------------
+| Teepo blaster   -     black    -   Chg:  35%  Mast: 8 [A: 7][S: 7]       |
+| Offhand blaster -   cerulean   -   Chg:  96%  Mast: 8 [A: 7][S: 7]       |
+| Lightstaff      -     black    -   Chg: 100%  Mast: 3 [G: 2][F:na][D: 1] |
+| Hand to Hand Combat                                           Mastery: 1 |
+ --------------------------------------------------------------------------
+ Maintaining : cpain lfs gfs dodge fdef rpois
+ Crystals installed: 
+ --------------------------------------------------------------------------
+rcost
+                           Jedi Advancement Costs                          
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ [neutral   ability]  Strength      [ 30] :     503,638 experience points.
+ [neutral   ability]  Constitution  [ 80] :  12,254,146 experience points.
+ [neutral   ability]  Intelligence  [ 30] :     503,638 experience points.
+ [neutral   ability]  Wisdom        [ 83] :  13,920,855 experience points.
+ [neutral   ability]  Dexterity     [ 83] :  13,920,855 experience points.
+ [neutral   ability]  Charisma      [ 30] :     503,638 experience points.
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+     You need 12,536,341 more experience points to advance your level.     
+  You have 9,205,875 experience points to put towards raising your stats.  
+               You may advance 5 stats at your current level.              
+xp
+You have 303,011,928 total xp.
+You need 12,536,092 experience to achieve your next level.
+You have 9,206,124 to spend.
+XP Gain for the last 30 minutes: 3,749,211
+At this rate you will level in 1 hour 40 minutes
+xp
+You have 303,012,085 total xp.
+You need 12,535,935 experience to achieve your next level.
+You have 9,206,281 to spend.
+XP Gain for the last 30 minutes: 3,749,310
+At this rate you will level in 1 hour 40 minutes
+3k: [Xiu disconnects]
+3k: [Xiu reconnects]
+You adjust your grip on your blaster and steady your mind, focusing on a
+single point in your thoughts, readying to unleash the Force with your
+blaster and knowing you will strike your target.                        
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+An Earth Elemental gasps for breath, then slumps into death.
+Floo dealt the killing blow to An Earth Elemental.
+You fire one last shot into your foe.
+You pick up The glowing, freshly slain corpse of An earth elemental and wrap it up into the coffin's
+protective hold!
+The coffin is now full!
+You need a corpse to drain.
+There are no coins here to share!
+You enter a restorative trance.
+You abruptly exit your hibernation trance.
+The coffin expels a corpse onto the ground!
+You absorb the remaining energy from the corpse.
+You begin to concentrate on healing your wounds.
+You close your eyes briefly, feeling the ebb and flow of the force stretch
+through your being.  Your eyes flutter open as you call upon your control
+of the force to deflect incoming attacks.
+You allow your mind to relax and stop deflecting attacks.
+You don't want to control pain if you're not fighting.
+You enter a restorative trance.
+Your mind relaxes from the strain it's been through.
+3k: [Slacker disconnects]
+Your mind becomes a blank slate, centering your soul.
+Your thoughts clear, relaxing your mind.
+Your mind becomes a blank slate, centering your soul.
+3k: [Slacky reconnects]
+l
+You abruptly exit your hibernation trance.
+The tunnel begins to widen here as you see huge voids in the walls where raw materials have been
+extracted. The pale blue light coming from the south brightens the room and allows you to get your
+bearings. The walls are very rough here, with traces of metal glistening all through the rock. There
+are pools of blood and bones all over the ground, and you start to wonder if the creatures here may
+be responsible.
+=X=    There are two obvious exits: north, south=X=
+You begin to concentrate on healing your wounds.
+You close your eyes briefly, feeling the ebb and flow of the force stretch
+through your being.  Your eyes flutter open as you call upon your control
+of the force to deflect incoming attacks.
+ki
+A wide tunnel near the light (n,s)
+A wide tunnel near the light (n,s)
+=M= A giant scorpion.
+You gouge A Giant Scorpion's eyes, blinding them!
+3k: [Slacky disconnects]
+A Giant Scorpion opens their eyes as the gouge has worn off!
+3k: [Ser disconnects]
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+3k: [Sock reconnects]
+Your concentration breaks, letting your greater Force shield dissipate away.
+You stretch out your feelings to the world around you, touching things
+living and non.  With a twist of the Force you draw the power around
+you like a cocoon of pure energy.
+3k: [Lance disconnects]
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+Your immune system's resistance to toxins returns to normal.
+3k: [Lance reconnects]
+Saving crafting status.
+3k: [Sock disconnects]
+3k: [Ser reconnects]
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+You hold your blaster loosly in your hand, letting your gaze wander over
+the field of fire, your mind ranging out with the Force to find all
+targets of opportunity.                                                 
+l
+The pale blue light coming from the south is not far away now, and you can make out what appears to
+be a portal of some kind hanging in the air. These entities must feel compelled to stay near the
+portal. The walls are rough and have shiny dark black metal tracing through the rocks like veins.
+The floor is a mixture of rough clay and small rocks, with bones halfway buried all the way to the
+portal.
+=X=    There are two obvious exits: north, south=X=
+=M= A giant scorpion [wounded] [43%].
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+3k: [Caythias reconnects]
+3k: [Xaryl disconnects]
+3k: [Xara reconnects]
+3k: [Caythias disconnects]
+3k: [Turak reconnects]
+You feel a slight tingling sensation as Sahbo gently touches your mind,
+sensing the immediate danger around you.  You feel the sensation leave
+you, and the air around A giant scorpion glows with a glittering yellow
+light briefly.
+You feel your attack is more effective than normal.
+You feel your attack is more effective than normal.
+You are surprised at the effectiveness of your attack.
+Your attack strikes A Giant Scorpion with great force.
+You feel your attack is more effective than normal.
+Your attack strikes A Giant Scorpion with great force.
+Your attack strikes A Giant Scorpion with great force.
+jambo sahbo
+From afar, you go 'Jambo Jambo!' at Sahbo.
+gs
+                            Floo's Jedi Stats:                           
+ --------------------------------------------------------------------------
+| Mentor:                        SELF | Prev Career:              Sorcerer |
+| Tradition:            Teepo paladin | 2nd Childhood:           Bodyguard |
+ ------------------------ ------------------------ ------------------------
+| Ascention:         46  | Sense:              17 | Energy:            46  |
+| Concentration:  99.41% | Control:            17 | Dissipates:         6  |
+| Force:          36.07% | Alter:              12 | Dissipate Reset: 12.2% |
+ ------------------------ ------------------------ ------------------------
+| Skill Points:                     3 | Next Ascent:               52.263% |
+| Guild Age:       12 Day 9 Hr 42 Min | Combat Age:     10 Day 4 Hr 27 Min |
+| V_Cash:                           0 | Armory Donations:              411 |
+| Reflex:                                       focus reduce injury    850 |
+| Impulse:                                           focus clear mind  150 |
+ ------------------------------------- ------------------------------------
+|                                Combat Status                             |
+ --------------------------------------------------------------------------
+| Teepo blaster   -     black    -   Chg:  31%  Mast: 8 [A: 7][S: 7]       |
+| Offhand blaster -   cerulean   -   Chg:  95%  Mast: 8 [A: 7][S: 7]       |
+| Lightstaff      -     black    -   Chg: 100%  Mast: 3 [G: 2][F:na][D: 1] |
+| Hand to Hand Combat                                           Mastery: 1 |
+ --------------------------------------------------------------------------
+ Maintaining : cpain lfs gfs dodge fdef rpois
+ Crystals installed: 
+ --------------------------------------------------------------------------
+Your attack strikes A Giant Scorpion with great force.
+Your attack strikes A Giant Scorpion with great force.
+rcost
+                           Jedi Advancement Costs                          
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ [neutral   ability]  Strength      [ 30] :     503,638 experience points.
+ [neutral   ability]  Constitution  [ 80] :  12,254,146 experience points.
+ [neutral   ability]  Intelligence  [ 30] :     503,638 experience points.
+ [neutral   ability]  Wisdom        [ 83] :  13,920,855 experience points.
+ [neutral   ability]  Dexterity     [ 83] :  13,920,855 experience points.
+ [neutral   ability]  Charisma      [ 30] :     503,638 experience points.
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+     You need 11,237,915 more experience points to advance your level.     
+  You have 10,504,301 experience points to put towards raising your stats. 
+               You may advance 5 stats at your current level.              
+You feel your attack is more effective than normal.
+Your attack strikes A Giant Scorpion with great force.
+You are surprised at the effectiveness of your attack.
+Your attack strikes A Giant Scorpion with great force.
+toggle brief
+You disable your saber's brief combat mode.
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+Your attack strikes A Giant Scorpion with great force.
+Your blaster spits black energy at A Giant Scorpion.                    
+You feel your attack is more effective than normal.
+Cerulean energy spins A Giant Scorpion around.                          
+You are surprised at the effectiveness of your attack.
+Your shot punches A Giant Scorpion to the ground.                       
+Your attack strikes A Giant Scorpion with great force.
+Your shot punches A Giant Scorpion to the ground.                       
+Your attack strikes A Giant Scorpion with great force.
+Your shot grazes A Giant Scorpion.                                      
+You feel your attack is more effective than normal.
+Your shot punches A Giant Scorpion to the ground.                       
+The air around A Giant Scorpion shimmers, and it looks less vulnerable.
+Black energy spins A Giant Scorpion around.                             
+Your blaster spits cerulean energy at A Giant Scorpion.                 
+Your shot punches A Giant Scorpion to the ground.                       
+Your blaster spits cerulean energy at A Giant Scorpion.                 
+3k: [Xara disconnects]
+3k: [Xaryl reconnects]
+Your blaster spits black energy at A Giant Scorpion.                    
+Your shot punches A Giant Scorpion to the ground.                       
+Black energy spins A Giant Scorpion around.                             
+3k: [Turak disconnects]
+Black energy spins A Giant Scorpion around.                             
+Your blaster spits cerulean energy at A Giant Scorpion.                 
+Black energy spins A Giant Scorpion around.                             
+Your shot punches A Giant Scorpion to the ground.                       
+Your shot sears A Giant Scorpion's skin.                                
+3k: [Kiryn reconnects]
+Your shot punches A Giant Scorpion to the ground.                       
+Your shot sears A Giant Scorpion's skin.                                
+Your blaster spits black energy at A Giant Scorpion.                    
+Your blaster spits black energy at A Giant Scorpion.                    
+Cerulean energy spins A Giant Scorpion around.                          
+Your shot punches A Giant Scorpion to the ground.                       
+Your shot wings A Giant Scorpion.                                       
+Your shot wings A Giant Scorpion.                                       
+Your blaster spits cerulean energy at A Giant Scorpion.                 
+Your shot sears A Giant Scorpion's skin.                                
+Your blaster spits black energy at A Giant Scorpion.                    
+Cerulean energy spins A Giant Scorpion around.                          
+Black energy spins A Giant Scorpion around.                             
+Your blaster spits black energy at A Giant Scorpion.                    
+Cerulean energy spins A Giant Scorpion around.                          
+Black energy spins A Giant Scorpion around.                             
+Your blaster spits black energy at A Giant Scorpion.                    
+Your shot wings A Giant Scorpion.                                       
+Black energy spins A Giant Scorpion around.                             
+Your blaster spits cerulean energy at A Giant Scorpion.                 
+tell sahbo it would be pretty cool if that actually did something
+You tell Sahbo: it would be pretty cool if that actually did something
+Your shot punches A Giant Scorpion to the ground.                       
+Your shot punches A Giant Scorpion to the ground.                       
+Your blaster spits black energy at A Giant Scorpion.                    
+toggle brief
+You enable your saber's brief combat mode.
+tellhist
+Tell history:
+18:01 To: Sahbo : it would be pretty cool if that actually did something
+gwho
+                            =+=+=+=++=+=+=+=+=+=                           
+                               The Jedi of 3S
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+     AS  Lv   Name                    Rank       Tradition  Career
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+     75 150   Reena Bel Noir       Jedi Elder       Jedi    Healer
+    107 131   Griddlit                Jedi       Jensaarai  Sorcerer
+  F  46  63   Floo                    Jedi         Teepo    Sorcerer
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+       2 Light Side                2 Jedi                0 Dark Side
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+     Now do you understand?  The power is all around you, waiting to be
+                                   used.
+                         -- Jarec, Dark Jedi Master
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+l
+The pale blue light coming from the south is not far away now, and you can make out what appears to
+be a portal of some kind hanging in the air. These entities must feel compelled to stay near the
+portal. The walls are rough and have shiny dark black metal tracing through the rocks like veins.
+The floor is a mixture of rough clay and small rocks, with bones halfway buried all the way to the
+portal.
+=X=    There are two obvious exits: north, south=X=
+=M= A giant scorpion [dying] [17%].
+Your immune system's resistance to toxins returns to normal.
+Sahbo tells you: hehe, mind gxp for me :)
+noggle sahbo
+From afar, you noggle at Sahbo.
+players sii
+ Name            Level  GLEV Guild         Kills  Gender   PK?      Subguild
+------------------------------------------------------------------------------
+ Seoman           150    20  sii           420551 Male     Non-PK  Yelsh       
+-Hsima@3k         132   174  sii           288709 Male     Non-PK  Invero-iii  
+ Sahbo             71    14  sii            17059 Male     Non-PK  Staviolus   
+ Worm              33     9  sii             2711 Male     Non-PK  Blahk       
+-Akhenemhet        30    19  sii            77743 Male     Non-PK  Dasyn-cha   
+ Cullyn           WIZ   N/A  sii            16272 Male     Non-PK  Ta'veren    
+Totals per guild :
+sii           :  6(100%)
+Total Players : 6, Avg level: 74.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! There are UNREAD messages on the announcement board. !!
+!! Please type 'aread' to read them now.                !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+tell sii I have been doing tintin shit all day
+Can't find that person.
+aread
+Note 335 titled 'Gentech gxp rates.. (Someone, Sun Jun 21 12:50:16 2020):
+  .. have been noticeably improved by lessening the requirements - you no 
+  longer must group  nor must kill huge mobs to have a good gxp rate.  
+  The gxp bonus for grouping, fighting large mobs, exploring, and questing 
+  still remain. 
+  Cheers
+  Korenth
+Note number: 335/339
+tell sahbo I have been doing tintin crap all day
+You tell Sahbo: I have been doing tintin crap all day
+Sahbo tells you: noice
+A Giant Scorpion gasps for breath, then slumps into death.
+Floo dealt the killing blow to A Giant Scorpion.
+You fire one last shot into your foe.
+You pick up The glowing, freshly slain corpse of A giant scorpion and wrap it up into the coffin's
+protective hold!
+The coffin is now full!
+You need a corpse to drain.
+There are no coins here to share!
+You enter a hibernation trance.
+You abruptly exit your hibernation trance.
+The coffin expels a corpse onto the ground!
+You absorb the remaining energy from the corpse.
+You begin to concentrate on healing your wounds.
+You close your eyes briefly, feeling the ebb and flow of the force stretch
+through your being.  Your eyes flutter open as you call upon your control
+of the force to deflect incoming attacks.
+You enter a hibernation trance.
+Your mind becomes a blank slate, centering your soul.
+l
+You abruptly exit your hibernation trance.
+The pale blue light coming from the south is not far away now, and you can make out what appears to
+be a portal of some kind hanging in the air. These entities must feel compelled to stay near the
+portal. The walls are rough and have shiny dark black metal tracing through the rocks like veins.
+The floor is a mixture of rough clay and small rocks, with bones halfway buried all the way to the
+portal.
+=X=    There are two obvious exits: north, south=X=
+You begin to concentrate on healing your wounds.
+You close your eyes briefly, feeling the ebb and flow of the force stretch
+through your being.  Your eyes flutter open as you call upon your control
+of the force to deflect incoming attacks.
+You enter a restorative trance.
+ki
+You abruptly exit your hibernation trance.
+A wide tunnel near the light (n,s)
+You begin to concentrate on healing your wounds.
+You close your eyes briefly, feeling the ebb and flow of the force stretch
+through your being.  Your eyes flutter open as you call upon your control
+of the force to deflect incoming attacks.
+A portal floating in mid-air (n,w,portal)
+=M= A stone elemental.
+=I= A metal chest.
+=I= A shimmering pale blue portal.
+Your holocron glows brightly as it saves your status.
+l
+As you reach another dead end, the cave fills with light. There are four braziers forming a square
+placed around a shimmering blue portal. The portal is suspended in midair and makes a low-pitched
+humming sound as you get close to it. It looks like a much wider cave system with large sections of
+water as you stare through the portal. Behind the portal, there are multicolored stalagmites of all
+sizes near the cave walls. There are also several chests lined up adjacent to the portal.
+=X=    There are three obvious exits: north, west, portal=X=
+=M= A stone elemental [scratched] [99%].
+=I= A metal chest.
+=I= A shimmering pale blue portal.
+Vital energies leak through A Stone Elemental's damaged umbra!
+Vital energies leak through A Stone Elemental's damaged umbra!
+Vital energies leak through A Stone Elemental's damaged umbra!
+Vital energies leak through A Stone Elemental's damaged umbra!
+Vital energies leak through A Stone Elemental's damaged umbra!
+Vital energies leak through A Stone Elemental's damaged umbra!
+l
+As you reach another dead end, the cave fills with light. There are four braziers forming a square
+placed around a shimmering blue portal. The portal is suspended in midair and makes a low-pitched
+humming sound as you get close to it. It looks like a much wider cave system with large sections of
+water as you stare through the portal. Behind the portal, there are multicolored stalagmites of all
+sizes near the cave walls. There are also several chests lined up adjacent to the portal.
+=X=    There are three obvious exits: north, west, portal=X=
+=M= A stone elemental [scratched] [88%].
+=I= A metal chest.
+=I= A shimmering pale blue portal.
+Vital energies leak through A Stone Elemental's damaged umbra!
+From afar, Pumuckl beckons you.
+Vital energies leak through A Stone Elemental's damaged umbra!
+Vital energies leak through A Stone Elemental's damaged umbra!
+[Jinkai disconnects]
+jambo pumuckl
+Pumuckl is afk: dentist cleaning
+From afar, you go 'Jambo Jambo!' at Pumuckl.
+Vital energies leak through A Stone Elemental's damaged umbra!
+tell pumuckl where to?
+Pumuckl is afk: dentist cleaning
+You tell Pumuckl: where to?
+Your immune system's resistance to toxins returns to normal.
+Vital energies leak through A Stone Elemental's damaged umbra!
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+Vital energies leak through A Stone Elemental's damaged umbra!
+Pumuckl tells you: lich time!
+tell pumuckl is it actually good now?
+Pumuckl is afk: dentist cleaning
+You tell Pumuckl: is it actually good now?
+Vital energies leak through A Stone Elemental's damaged umbra!
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+Vital energies leak through A Stone Elemental's damaged umbra!
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+Pumuckl tells you: tier 3 is good =)
+l
+As you reach another dead end, the cave fills with light. There are four braziers forming a square
+placed around a shimmering blue portal. The portal is suspended in midair and makes a low-pitched
+humming sound as you get close to it. It looks like a much wider cave system with large sections of
+water as you stare through the portal. Behind the portal, there are multicolored stalagmites of all
+sizes near the cave walls. There are also several chests lined up adjacent to the portal.
+=X=    There are three obvious exits: north, west, portal=X=
+=M= A stone elemental [wounded] [68%].
+=I= A metal chest.
+=I= A shimmering pale blue portal.
+Vital energies leak through A Stone Elemental's damaged umbra!
+gs
+                            Floo's Jedi Stats:                           
+ --------------------------------------------------------------------------
+| Mentor:                        SELF | Prev Career:              Sorcerer |
+| Tradition:            Teepo paladin | 2nd Childhood:           Bodyguard |
+ ------------------------ ------------------------ ------------------------
+| Ascention:         46  | Sense:              17 | Energy:            73  |
+| Concentration:  97.39% | Control:            17 | Dissipates:         6  |
+| Force:          57.44% | Alter:              12 | Dissipate Reset: 83.6% |
+ ------------------------ ------------------------ ------------------------
+| Skill Points:                     3 | Next Ascent:               53.353% |
+| Guild Age:       12 Day 9 Hr 47 Min | Combat Age:     10 Day 4 Hr 31 Min |
+| V_Cash:                           0 | Armory Donations:              411 |
+| Reflex:                                       focus reduce injury    850 |
+| Impulse:                                           focus clear mind  150 |
+ ------------------------------------- ------------------------------------
+|                                Combat Status                             |
+ --------------------------------------------------------------------------
+| Teepo blaster   -     black    -   Chg:  18%  Mast: 8 [A: 7][S: 7]       |
+| Offhand blaster -   cerulean   -   Chg:  94%  Mast: 8 [A: 7][S: 7]       |
+| Lightstaff      -     black    -   Chg: 100%  Mast: 3 [G: 2][F:na][D: 1] |
+| Hand to Hand Combat                                           Mastery: 1 |
+ --------------------------------------------------------------------------
+ Maintaining : cpain lfs gfs dodge fdef rpois
+ Crystals installed: 
+ --------------------------------------------------------------------------
+3k: [Modrack disconnects]
+tell pumuckl did you find me the way into the maze?
+Pumuckl is afk: dentist cleaning
+You tell Pumuckl: did you find me the way into the maze?
+Vital energies leak through A Stone Elemental's damaged umbra!
+The bracers flare out in a shower of light, your form shimmers and
+fades momentarily, the force of your opponents attack passes right
+through you, fueling your life force rather than draining!
+tell pumuckl I might try that again
+Pumuckl is afk: dentist cleaning
+You tell Pumuckl: I might try that again
+3k: [Estariol disconnects]
+Pumuckl tells you: it's not great i admit, but it's FUn and that's
+        something heh
+Vital energies leak through A Stone Elemental's damaged umbra!
+l
+As you reach another dead end, the cave fills with light. There are four braziers forming a square
+placed around a shimmering blue portal. The portal is suspended in midair and makes a low-pitched
+humming sound as you get close to it. It looks like a much wider cave system with large sections of
+water as you stare through the portal. Behind the portal, there are multicolored stalagmites of all
+sizes near the cave walls. There are also several chests lined up adjacent to the portal.
+=X=    There are three obvious exits: north, west, portal=X=
+=M= A stone elemental [wounded] [60%].
+=I= A metal chest.
+=I= A shimmering pale blue portal.
+Vital energies leak through A Stone Elemental's damaged umbra!
+gs
+                            Floo's Jedi Stats:                           
+ --------------------------------------------------------------------------
+| Mentor:                        SELF | Prev Career:              Sorcerer |
+| Tradition:            Teepo paladin | 2nd Childhood:           Bodyguard |
+ ------------------------ ------------------------ ------------------------
+| Ascention:         46  | Sense:              17 | Energy:            40  |
+| Concentration:  96.04% | Control:            17 | Dissipates:         6  |
+| Force:          63.52% | Alter:              12 | Dissipate Reset: 78.9% |
+ ------------------------ ------------------------ ------------------------
+| Skill Points:                     3 | Next Ascent:               53.536% |
+| Guild Age:       12 Day 9 Hr 47 Min | Combat Age:     10 Day 4 Hr 32 Min |
+| V_Cash:                           0 | Armory Donations:              411 |
+| Reflex:                                       focus reduce injury    850 |
+| Impulse:                                           focus clear mind  150 |
+ ------------------------------------- ------------------------------------
+|                                Combat Status                             |
+ --------------------------------------------------------------------------
+| Teepo blaster   -     black    -   Chg:  16%  Mast: 8 [A: 7][S: 7]       |
+| Offhand blaster -   cerulean   -   Chg:  94%  Mast: 8 [A: 7][S: 7]       |
+| Lightstaff      -     black    -   Chg: 100%  Mast: 3 [G: 2][F:na][D: 1] |
+| Hand to Hand Combat                                           Mastery: 1 |
+ --------------------------------------------------------------------------
+ Maintaining : cpain lfs gfs dodge fdef rpois
+ Crystals installed: 
+ --------------------------------------------------------------------------
+go home
+Close to the blue light (nw,e)
+Deeper into the dungeon (se,w)
+South of the crossroads (se,sw,n,w,e)
+=I= A wooden chest.
+A shortcut (nw,e)
+=M= A giant scorpion.
+=M= An earth elemental.
+A shortcut (se,n)
+Continuing along the southern corridor (sw,n,s)
+An intersection in the cave (n,s,w,e)
+Near a cluster of stalagmites (w,e)
+Entrance to the Dungeon of Shame (e,exit)
+A Den (n)
+=I= A binder of cds.
+=M= A discarded computer part.
+A Hallway (n,s)
+Entrance to an apartment (s,w,out)
+Eastwick (u,n,s,w,e)
+=I= A strange boy.
+=I= A joystick.
+Eastwick (w,e)
+=I= A dream of Xanadu.
+=I= An Outhouse.
+Eastwick Road (n,e)
+=I= A leather-bound book.
+Eastwick (e,s)
+=I= Erratic light.
+South/North Fork (n,w,e,puddle)
+=I= Arena Ticket.
+=I= A mud puddle.
+=I= A quaint candy store.
+Eastwick (n,s,w,e)
+=I= A piece of USA(r) Today.
+=I= Erratio Forest.
+=I= A toy chest.
+Eastwick (w,e)
+=I= A
+fairy (Twinkling).
+=I= A swirling void.
+=M= Villager {2}.
+=I= Magic mushroom magically stuck in the ground.
+Eastwick (n,e,w,s)
+=I= An ancient IBM G5 mainframe.
+i
+Eastwick Road (n,s,w,e)
+=I= A Small ChaosBrand(tm) Television Set.
+=I= A Chocolate Cake.
+=I= A small dispensing machine.
+=M= Villager.
+Eastwick (n,s,w,e)
+=I= A large ladder.
+The center of Chaos (vortex,n,e,w,s)
+=I= A chromatic mutant plant.
+=I= A dirty fedora.
+=I= A bronze plaque.
+A Vortex (s,w,enter)
+=M= Cloaking helix of mist [scratched] (encircling Rotcir) [90%].
+=M= Watcher the bright snowy owl.
+=P= Rotcir the Planeswalker of the Supernal Nexus (malicious).
+The House of Fl (n,w,sci,new,cha,fan,atm,leave,login,sh,gld,gyp)
+=I= A large box (contains 37 items).
+1648 coins (weightless)
+Floo's paired blaster pistols [activated]
+*Robes of the Archmage (worn)
+*Adamantite Bracers (wavering) (worn)
+*Crelevere (worn on left hand)
+*Crelevere (worn on right hand)
+*Blood red helmet (worn on head)
+*Blood Red Armour (worn)
+*Party banner of Floo's party
+*Tactician's Manual
+*A small cube of avocado crystal
+*Assassin's Mark
+*An auction line
+*A ring of house keys
+*A Metronome
+*A Jug of Riot Punch
+An enchanted coffin (4/5 corpses) [.....&]
+*A Crafter's Satchel
+You sneak out of the room, evading the reach of A giant scorpion.
+You enter a hibernation trance.
+i
+1648 coins (weightless)
+Floo's paired blaster pistols [activated]
+*Robes of the Archmage (worn)
+*Adamantite Bracers (wavering) (worn)
+*Crelevere (worn on left hand)
+*Crelevere (worn on right hand)
+*Blood red helmet (worn on head)
+*Blood Red Armour (worn)
+*Party banner of Floo's party
+*Tactician's Manual
+*A small cube of avocado crystal
+*Assassin's Mark
+*An auction line
+*A ring of house keys
+*A Metronome
+*A Jug of Riot Punch
+An enchanted coffin (4/5 corpses) [.....&]
+*A Crafter's Satchel
+You soothe your mind with meditative techniques.
+The jumble of thoughts in your head dissipate.
+quit
+You abruptly exit your hibernation trance.
+Your smuggled items spill out of your pockets!
+There was this one time, at band camp...
+Saving Floo.
+Your holocron glows brightly as it saves your status.
+[JEDI]: Floo slumbers once more.
+UNHANDLED MIP: {EEE} {}
+The magical power fades from you.
+You remove your Robes of the Archmage.
+You remove your bracers.
+You remove your crelevere.
+You remove your crelevere.
+You remove your Blood red helmet.
+You feel somewhat weaker and less sure of yourself now.
+You remove your Blood Red Armour.
+[PARTY] Dissolving the party.
+Just before quitting, you empty your coffin.
+The coffin expels 4 corpses onto the ground!
+#SESSION 'floo3s' DIED.

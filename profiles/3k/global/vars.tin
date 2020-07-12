@@ -1,6 +1,0 @@
-#CLASS {vars} OPEN
-
-#class chat kill
-#read ${varspath}/3schat.var
-
-#CLASS {vars} CLOSE
