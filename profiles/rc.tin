@@ -31,7 +31,7 @@
 #PATHDIR          {w}	{e}	{8}
 
 #var {profilepath}{.tt/profiles};
-#var {myprofile}{floobity}
+#var {myprofile}{splat}
 #var {myprofilepath}{${profilepath}/${myprofile}};
 #alias {update_status}{#nop};
 #alias {display_biome}{#nop};

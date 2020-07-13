@@ -20,7 +20,7 @@
 
 #NOP **** Database Connection Info ****;
 #VAR {dbSettings[user]} {tintin};
-#VAR {dbSettings[pass]} {floobity};
+#VAR {dbSettings[pass]} {tintin};
 #VAR {dbSettings[database]} {tintin};
 #VAR {dbSettings[server]} {localhost};
 

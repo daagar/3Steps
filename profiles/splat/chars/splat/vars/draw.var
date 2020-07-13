@@ -1,0 +1,5 @@
+#CLASS {drawvar} OPEN
+
+#VARIABLE         {draw}  {{alert}{on}{biome}{off}{canvas}{on}{caption}{on}{chat}{on}{damage}{off}{exitpanel}{on}{gline}{on}{hpbar}{on}{jedimode}{off}{map}{on}{possess}{off}{selector}{on}{summoner}{off}}
+
+#CLASS {drawvar} CLOSE

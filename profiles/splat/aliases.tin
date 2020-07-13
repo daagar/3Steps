@@ -1,0 +1,7 @@
+#nop {}
+
+#alias {donatecoffin} {
+        go morgue;
+        !donate coffin;
+        goback;
+};
