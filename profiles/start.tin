@@ -21,12 +21,17 @@
 		redraw;
 		#read ${globalpath}/ansi_setup.tin
 	}{2};
-	#script {cat ${charpath}/lastroom.tt};
 	#read ${globalpath}/draw.tin;
+	#read ${myprofilepath}/aliases.tin;
+	#read ${myprofilepath}/vars.tin;
+	#read ${myprofilepath}/macros.tin;
+	#read ${myprofilepath}/triggers.tin;
 	#read ${charpath}/char.tin;
 	#read ${charpath}/aliases.tin;
 	#read ${charpath}/vars.tin;
+	#read ${charpath}/triggers.tin;
 	#read ${charpath}/macros.tin;
+	#script {cat ${charpath}/lastroom.tt};
 	resume_chat;
 }
 
