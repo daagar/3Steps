@@ -31,16 +31,16 @@
 #PATHDIR          {w}	{e}	{8}
 
 #var {profilepath}{.tt/profiles};
-#var {myprofile}{floobity}
+#var {myprofile}{floobity};
 #var {myprofilepath}{${profilepath}/${myprofile}};
 #alias {update_status}{#nop};
 #alias {display_biome}{#nop};
 
 #alias {configure_paths}{
-	#var {mudpath}{${profilepath}/${mud}};
+	#var {mudpath}{.tt/muds/${mud}};
 	#var {logpath}{${myprofilepath}/logs};
-	#var {globalpath}{${profilepath}/${mud}/global};
-	#var {mappath}{${profilepath}/${mud}/maps};
+	#var {globalpath}{${mudpath}/global};
+	#var {mappath}{${mudpath}/maps};
 	#var {charpath}{${myprofilepath}/chars/${char}};
 	#var {varpath}{${charpath}/vars};
 	#var {mapfile}{${mappath}/${mud}.map};
@@ -91,8 +91,8 @@
         #var {char}{$ses_name};
         #var {world}{${char}${mud}};
         #send {$ses_name};
-        #read .tt/.pass;
 	configure_paths;
+        #read ${charpath}/.pass;
 	#format logfile {${logpath}/%0_%t.log} {%Y%m%d};
 	#log {append}{$logfile};
 	#read ${profilepath}/start.tin;
