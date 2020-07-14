@@ -12,6 +12,8 @@
 #var autogather 0
 #var autokill 0
 
+#alias {kk}{kill $kstr};
+
 #nop {Make a global blacklist of critters to not stop on since they are followers, etc};
 
 #var {global_blacklist}{everybody;under the control of;betrayer;broodling;chromatic cuckoo owlet;tiny translucent;gemini}

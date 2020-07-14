@@ -4142,3 +4142,235 @@ A Vortex (s,w,enter)
 The House of Fl (n,w,sci,new,cha,fan,atm,leave,login,sh,gld,gyp)
 =I= A large box (contains 52 items).
 #SESSION 'floobi3s' DIED.
+Connecting...
+<Entering 3Scapes.  Enter your character name or press enter to continue>
+Password:
+Your character is currently logged in and linkdead.
+Prompt set.
+3Scapes welcomes you back from linkdeath.
+There is no reason to 'display_desired_summons' here.
+Autoconfiguring Staff
+Casting Fortitude on Offense Summons
+AutoRotating Summons
+Automatically Fleeing
+You already have an aura of light.
+You are now set to perform cast riptide when above 400 SP, should it be
+activated.
+To activate it, type: cast activate
+To activate it in combat, type: cast activate combat
+To deactivate it, type: cast deactivate
+You will now perform cast riptide every combat round.
+Lstats reset!
+You already have a material seam spell functioning.
+==========----------==========**********==========----------==========
+  Floobi, the Guardian of the Veil of the Bright Rift level 150
+  Total GXP : 19743051       GXP to next level: 1482747   Perc: 31%
+  GXP per hour: 14122.35     GXP to spend: 168863
+ Areas of Study, Skills, and Intrinsics:
+   Axiomatics     : 0/0(-)           Statics        : 19/19(-)
+   +Scope         : 0/10(50)         +Balance       : 4/4(-)
+   +Potence       : 0/10(50)         +Intensity     : 25/25(-)
+   Poetics        : 115/115(-)       Fortitude      : 45/71(75000)
+   +Force         : 50/50(-)         Potential      : 99/99(-)
+   +Meter         : 75/75(-)         Integrity      : 40/84(41250)
+  You may cast Bridge 5 more times.
+  Your Bridge is 92% reset.
+  You have the energy to open 6 more rifts.
+  You may not cast your school spell at this time.
+  You can imbue your umbral staff 6 more times.
+  Your magical energies are 43% reset.
+  Everybody the lemur is level 60
+  Umbra level : 99%   SP Burnt since inception: 88448799
+  Perform : cast riptide when over 400 SP - Combat Active
+  Your mind is 23.3% clear.
+  You have spent 1229 minutes channeling forces in the Astral.
+==========----------==========**********==========----------==========
+Removing contingency #1.
+Removing contingency #1.
+Removing contingency #1.
+Removing contingency #1.
+Removing contingency #1.
+Removing contingency #1.
+Removing contingency #1.
+Your contingency is now set up as follows:
+You will cast greater shield immediately should your shield ever fail.
+[Priority 1]
+Your contingency is now set up as follows:
+You will cast aura of light end of round should your aura ever fail.
+[Priority 2]
+Your contingency is now set up as follows:
+You will cast shroud of storms end of round should your shroud ever
+fail. [Priority 4]
+Your contingency is now set up as follows:
+You will cast blink end of round should your blink ever fail. [Priority
+5]
+Your contingency is now set up as follows:
+You will cast prismatic aura end of round should your prismatic aura
+ever fail. [Priority 6]
+Your contingency is now set up as follows:
+You will cast major globe end of round should your major globe ever
+fail. [Priority 3]
+Your contingency is now set up as follows:
+You will cast vocalize as all, begone end of round should your
+concentration ever rise above 90. [Priority 7]
+You will no longer see the HP bar on the main screen.
+You remove your setting for MAPCOLS.
+You will now see the HP bar on your main screen as well.
+players 3s
+ Name            Level  GLEV Guild         Kills  Gender   PK?      Subguild
+------------------------------------------------------------------------------
+ Arkhne            99    50  gentech        43888 Male     Non-PK  Officer     
+ Lasher            95    24  gentech        21068 Male     Non-PK  Examiner    
+-Nykki             35    20  gentech         2674 Female   Non-PK  Marauder    
+ Seoman           150    20  sii           420551 Male     Non-PK  Yelsh       
+ Sahbo             71    14  sii            17069 Male     Non-PK  Staviolus   
+ Worm              33     9  sii             2813 Male     Non-PK  Shai'quai'lat
+ Akhenemhet        30    19  sii            77743 Male     Non-PK  Dasyn-cha   
+ Floobi            99   150  mage           43095 Male     Non-PK  Rift        
+ Rotcir            74   147  mage            9317 Male     Non-PK  Nexus       
+ Griddlit         131   107  jedi           42764 Female   Non-PK  Saarai-kaar 
+-Zirzan            30    26  jedi             729 Male     Non-PK  Dark Adept  
+ Brasky            73    40  warder         15013 Male     Non-PK  Master Warder
+ Draal             27    24  warder          1632 Male     Non-PK  Youngling   
+ Jalisco          129    68  angel         222559 Male     Non-PK  Throne      
+ Joy               29     4  angel           2524 Female   Non-PK  Fallen Angel
+ Odonata           29    36  angel           2217 Male     Non-PK  Virtue      
+-Harmonia           8     4  angel             45 Female   Non-PK  Divine Angel
+ Goo              101   216  changeling     23376 Male     Non-PK  Changeling  
+ Uroboros          98   205  changeling     19227 Male     Non-PK  Changeling  
+ Niall             37   119  changeling      5130 Male     Non-PK  Simulacrum  
+ Castiel          102   135  fremen         49850 Male     Non-PK  Qizarate    
+ Eisha              5   108  fremen          1256 Female   Non-PK  Fedaykin    
+ Xaryl            150   113  priest        380801 Male     Non-PK  Alpha&Omega 
+ Wastovan          99    70  priest         41067 Male     Non-PK  Alpha&Omega 
+ Germi             50    37  priest          2163 Male     Non-PK  Hand-Servant
+Totals per guild :
+sii           :  4(16%), angel         :  4(16%), gentech       :  3(12%), 
+changeling    :  3(12%), priest        :  3(12%), mage          :  2( 8%), 
+jedi          :  2( 8%), warder        :  2( 8%), fremen        :  2( 8%)
+Total Players : 25, Avg level: 71.
+gs
+==========----------==========**********==========----------==========
+  Floobi, the Guardian of the Veil of the Bright Rift level 150
+  Total GXP : 19743051       GXP to next level: 1482747   Perc: 31%
+  GXP per hour: 14122.35     GXP to spend: 168863
+ Areas of Study, Skills, and Intrinsics:
+   Axiomatics     : 0/0(-)           Statics        : 19/19(-)
+   +Scope         : 0/10(50)         +Balance       : 4/4(-)
+   +Potence       : 0/10(50)         +Intensity     : 25/25(-)
+   Poetics        : 115/115(-)       Fortitude      : 45/71(75000)
+   +Force         : 50/50(-)         Potential      : 99/99(-)
+   +Meter         : 75/75(-)         Integrity      : 40/84(41250)
+  You may cast Bridge 5 more times.
+  Your Bridge is 93% reset.
+  You have the energy to open 6 more rifts.
+  You may not cast your school spell at this time.
+  You can imbue your umbral staff 6 more times.
+  Your magical energies are 43% reset.
+  Everybody the lemur is level 60
+  Umbra level : 100%   SP Burnt since inception: 88448988
+  Perform : cast riptide when over 400 SP - Combat Active
+  Your mind is 23.3% clear.
+  You have spent 1229 minutes channeling forces in the Astral.
+==========----------==========**********==========----------==========
+rcost
+                           Mage Advancement Costs                          
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ [lower     ability]  Strength      [ 40] :   1,003,721 experience points.
+ [lower     ability]  Constitution  [ 20] :       8,734 experience points.
+ [PRIME     ABILITY]  Intelligence  [100] :  25,587,730 experience points.
+ [secondary ability]  Wisdom        [100] :  25,587,730 experience points.
+ [secondary ability]  Dexterity     [ 60] :   3,837,238 experience points.
+ [neutral   ability]  Charisma      [174] : 272,254,396 experience points.
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+     You need 397,054,880 more experience points to advance your level.    
+ You have 262,945,120 experience points to put towards raising your stats. 
+              You may advance 27 stats at your current level.              
+l
+An empty room.
+=X=    There are twelve obvious exits: north, west, sci, new, cha, fan, atm,
+                                    leave, login, sh, gld, gyp              =X=
+=M= Everybody the big-eyed lemur.
+=M= Shielding nobody of purity (encircling Floobi) (100%).
+=I= A large box (contains 52 items).
+smuggle remove all
+You unsmuggle: A sorcerous star (coruscating)
+i
+ # Item
+-- -------------------------------------------------------------
+ 1 A sorcerous star (coruscating).
+ 1 *A stone of the philosophers (brilliant).
+ 1 *An astral nexus (strong) (connected) (worn).
+ 1 *A pair of Holy Shoes (worn on feet).
+ 1 *Robes of the Archmage (worn).
+ 1 *Crelevere (worn on left hand).
+ 1 *Crelevere (worn on right hand).
+ 1 *A Sorcerous Theorem (worn).
+ 1 *A simple wooden staff (umbral) (wielded) (spellshaped).
+ 1 *A material seam (deep) (0%).
+ 1 *Party banner of Floobi's party.
+ 1 *Mystic's Orb.
+ 1 *Bravado.
+ 1 *A ring of house keys.
+ 1 An enchanted coffin (4/5 corpses) [.....&].
+ 1 *An auction line.
+ 1 *Marionette strings.
+ 1 *A Jug of Riot Punch.
+ 1 *A Crafter's Satchel.
+ 1 *A Familiar Spirit.
+ 1 *Worn leather book.
+ 1 *A resonant Word of power (poetic) (bright with secrets).
+15744 coins (light)
+You are heavily loaded.
+unkeep all
+You unkeep all your stuff.
+put all in box
+You put A sorcerous star (coruscating) into the box.
+You can't drop that!
+You remove your Holy Shoes.
+You put A pair of Holy Shoes (worn on feet) into the box.
+The magical power fades from you.
+You remove your Robes of the Archmage.
+You put Robes of the Archmage (worn) into the box.
+You remove your crelevere.
+You put Crelevere (worn on left hand) into the box.
+You remove your crelevere.
+You put Crelevere (worn on right hand) into the box.
+You temporarily put the Theorem out of your mind.
+You remove your A Sorcerous Theorem.
+You put A Sorcerous Theorem (worn) into the box.
+You release the staff.
+You drop your wielded weapon.
+You put A simple wooden staff (umbral) (wielded) (spellshaped) into the box.
+You cannot drop the book. Use destroybook.
+i
+ # Item
+-- -------------------------------------------------------------
+ 1 A stone of the philosophers (brilliant).
+ 1 An astral nexus (strong) (connected) (worn).
+ 1 A material seam (deep) (0%).
+ 1 Party banner of Floobi's party.
+ 1 Mystic's Orb.
+ 1 Bravado.
+ 1 A ring of house keys.
+ 1 An enchanted coffin (4/5 corpses) [.....&].
+ 1 An auction line.
+ 1 Marionette strings.
+ 1 A Jug of Riot Punch.
+ 1 A Crafter's Satchel.
+ 1 A Familiar Spirit.
+ 1 Worn leather book.
+ 1 A resonant Word of power (poetic) (bright with energy).
+15744 coins (light)
+You are burdened.
+quit
+There was this one time, at band camp...
+Saving Floobi.
+[[MAGE]] Floobi steps through the Veil on another Astral jaunt!
+UNHANDLED MIP: {EEE} {}
+You can't drop that!
+[PARTY] Dissolving the party.
+Just before quitting, you empty your coffin.
+The coffin expels 4 corpses onto the ground!
+You cannot drop the book. Use destroybook.
+#SESSION 'floobi3s' DIED.

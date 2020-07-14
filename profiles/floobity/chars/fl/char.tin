@@ -2,6 +2,8 @@
 
 #var guild changeling
 
+redraw biome on
+
 #alias {autope}{
 	#if {$my[autopersevere] != 1}{
 		#var {my[autopersevere]} {1};
