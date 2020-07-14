@@ -4,54 +4,11 @@ Password:
 Your character is currently logged in and linkdead.
 Prompt set.
 3Scapes welcomes you back from linkdeath.
+You received tells while linkdead, check your 'tellhist'
 A tiny translucent bombardier beetle creeps into the room.
 You will no longer perform actions during combat.
-gwho
-<+>======================<( Changelings Online: 3 )>=======================<+>
- | Status Name           Cpx  Lvl  Guild Rank    Miscellaneous              |
- |--------------------------------------------------------------------------|
- |    I   <Atropos>      335  135  Changeling                               |
- |        Fl             278  104  Changeling    Toaster                    |
- |    F   Goo            218  103  Changeling    "Inches Along"             |
-<+>========================================================================<+>
-                       ~The chaotic forces are neutral~                       
-players 3s
-You will no longer see the HP bar on the main screen.
-You remove your setting for MAPCOLS.
-Saving crafting status.
- Name            Level  GLEV Guild         Kills  Gender   PK?      Subguild
-------------------------------------------------------------------------------
- Logon             -1     0  adventurer         0 Neuter   Non-PK              
- Atomkraft         79    47  monk           29063 Male     Non-PK              
- Zum              115   129  witch          17298 Male     Non-PK  Soothsayer  
- Stevie            86    45  warder         28431 Male     Non-PK  Veteran BM  
- Fl               104   278  changeling     49330 Neuter   Non-PK  Changeling  
- Goo              103   218  changeling     23525 Male     Non-PK  Changeling  
- Phenom           126    87  priest         55033 Male     Non-PK  Alpha&Omega 
- Negative         126    50  gentech       115048 Male     Non-PK  Officer     
- Arkhne            99    50  gentech        44288 Male     Non-PK  Officer     
- Odonata           30    38  angel           2589 Male     Non-PK  Virtue      
- General           98     4  sii            13908 Male     Non-PK  Orc         
- Grump             91    16  sii            67460 Male     Non-PK  Doshai      
-Totals per guild :
-changeling    :  2(16%), gentech       :  2(16%), sii           :  2(16%), 
-adventurer    :  1( 8%), monk          :  1( 8%), witch         :  1( 8%), 
-warder        :  1( 8%), priest        :  1( 8%), angel         :  1( 8%)
-Total Players : 12, Avg level: 90.
-You will now see the HP bar on your main screen as well.
-redraw canvas on
 tellhist
 Tell history:
-07:10 Hayt : that's awesome
-07:14 Hayt : wonder how much vaf stat reset costs - dont really wanna
-             spend it but ehh
-07:15 To: Hayt : $125  that's a lotta money
-07:15 Hayt : yeah no thanks :D
-07:15 Hayt : haha
-07:15 Hayt : yikes
-07:16 To: Hayt : I am hitting 146 damage higher today on average than
-                 yesterday
-07:17 Hayt : what is that as a %?
 07:17 To: Hayt : yesterday in wandering average damage was 2209.4866
 07:17 To: Hayt : today is 2357.7097
 07:18 Hayt : so 4.4%ish
@@ -116,170 +73,180 @@ Tell history:
 21:02 To: Korenth : I don't suppose you can look at teepo blasters while you
                     are looking at jedis.  They definitely don't feel
                     comparatively great right now
-3k: [Zokko disconnects]
+05:43 Atropos : tanking upped, try it out
+05:44 To: Atropos : I dig it!
+05:45 To: Atropos : also like the changes to sp usage
+05:58 To: Goo : tanking is upped :P
+05:59 To: Goo : I like it when changelings get a little love
+06:09 Atropos : i might break something so finish up mob and stay out of
+                combat
+06:10 To: Atropos : done
+06:44 Hayt : in the client
+You will no longer see the HP bar on the main screen.
+You remove your setting for MAPCOLS.
+You will now see the HP bar on your main screen as well.
+From afar, Castiel tips his hat to you.
+woo hayt
+From afar, you go 'Woo Woo!' at Hayt.
+The chaotic forces seeking control of you begin to wane, your control
+returning as the energies cease to course chaotically through you.
+You relinquish yourself to Chaos, and immediately feel the unpredictable
+and powerful forces surge through you, threatening to sweep you away in an
+instant!
+3k: [Glazed disconnects]
+gibber castiel
+From afar, you gibber on and on and on to Castiel.
+Castiel tells you: floobot's popularity is building momentum lol
+Your body ripples and shakes as energy flows into you.
+grin castiel
+From afar, you grin at Castiel.
 l
 An empty room.
 =X=    There are twelve obvious exits: north, west, sci, new, cha, fan, atm,
                                     leave, login, sh, gld, gyp              =X=
 =M= A tiny translucent bombardier beetle.
 =I= A large box (contains 55 items).
-morph mastodon
-You morph into a mastodon!
-go donuts
-The entrance to Fantasy (n,w,e,portal)
-=I= A small wooden sign.
-Sentinel's Path (n,s,w,e)
-Sentinel's Path (w,e)
-=I= A weathered wooden sign, pointing west.
-Arborlin Trail (n,s,w)
-=I= A greenish street sign.
-Arborlin Trail (nw,s,e)
-Waverly Street (n,w,e)
-Alchemy row (n,s,w)
-Alchemy row (nw,n,s,w,e)
-=I= A tall street light.
-A Break in the Haze (n,w,e)
-=I= A glass sign with moving liquid inside, pointing north.
-A Vortex (s,w,enter)
-=I= Green Moss {6}.
-The center of Chaos (n,s,w,e,vortex)
-=I= A
-fairy (Twinkling).
-=I= A dirty fedora.
-=I= A bronze plaque.
-Eastwick (n,s,w,e)
-=I= A large ladder.
-Eastwick Road (n,s,w,e)
-=I= A small dispensing machine.
-=M= Villager.
-Wickward Path (n,s)
-=I= The Krispy
-Krematorium.
-You drool at the thought of a delicious donut and suddenly you're transported inside the shop!
-Fl disappears into the donut shop.
-Tapir sways south.
-Aardvark leaves following Tapir.
-Aardvark sways south.
-ki
-Krispy Krematorium (ne,nw,n,s,exit)
-You step inside the portal and find yourself in a completely
-new and bizarre environment.
-Krispy Krematorium (se,n,s,w)
-=M= A Giant Strawberry Shortcake Eclair Donut !attacking you!.
-A tiny translucent bombardier beetle creeps into the room.
-Your thumbs are too tired to gouge right now...
-gwho
-<+>======================<( Changelings Online: 3 )>=======================<+>
- | Status Name           Cpx  Lvl  Guild Rank    Miscellaneous              |
- |--------------------------------------------------------------------------|
- |    I   <Atropos>      335  135  Changeling                               |
- |    F   Fl             278  104  Changeling    Mastodon                   |
- |    F   Goo            218  103  Changeling    "Inches Along"             |
-<+>========================================================================<+>
-                       ~The chaotic forces are neutral~                       
-jambo atropos
-WARNING: Atropos has been idle for 6 minutes 56 seconds.
-From afar, you go 'Jambo Jambo!' at Atropos.
-finger korenth
-   Korenth :: Leader of the Return [Slasher] (neutral)
--==========================================================================-
-|  Level: *** (Archon)         Gender: Male    Type: 
-|  Guild Allegiances: Gentech, Priest, Warder
-|  Professions: Hypnotist, Assassin
-|  Logged out 3 hours 2 mins 43 seconds ago.
-|  Age: 14 days 13 hours 27 minutes 48 seconds.
-|  Created: Sat Sep 07 16:00:17 2019.
-|  No unread mail.
--==========================================================================-
-jambo korenth
-Perform jambo at whom?
-3k: [Violia reconnects]
-players 3s
- Name            Level  GLEV Guild         Kills  Gender   PK?      Subguild
-------------------------------------------------------------------------------
- Atomkraft         79    47  monk           29063 Male     Non-PK              
- Zum              115   129  witch          17298 Male     Non-PK  Soothsayer  
- Stevie            86    45  warder         28431 Male     Non-PK  Veteran BM  
- Fl               104   278  changeling     49330 Neuter   Non-PK  Changeling  
- Goo              103   218  changeling     23525 Male     Non-PK  Changeling  
- Phenom           126    87  priest         55034 Male     Non-PK  Alpha&Omega 
- Negative         126    50  gentech       115049 Male     Non-PK  Officer     
- Arkhne            99    50  gentech        44290 Male     Non-PK  Officer     
- Odonata           30    38  angel           2590 Male     Non-PK  Virtue      
- General           98     4  sii            13910 Male     Non-PK  Orc         
- Grump             91    16  sii            67462 Male     Non-PK  Doshai      
-Totals per guild :
-changeling    :  2(18%), gentech       :  2(18%), sii           :  2(18%), 
-monk          :  1( 9%), witch         :  1( 9%), warder        :  1( 9%), 
-priest        :  1( 9%), angel         :  1( 9%)
-Total Players : 11, Avg level: 96.
-rcost
-                        Changeling Advancement Costs                       
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- [secondary ability]  Strength      [152] : 198,921,063 experience points.
- [PRIME     ABILITY]  Constitution  [150] : 192,254,396 experience points.
- [lower     ability]  Intelligence  [ 70] :   5,587,313 experience points.
- [neutral   ability]  Wisdom        [100] :  25,587,730 experience points.
- [secondary ability]  Dexterity     [ 50] :   1,503,805 experience points.
- [lower     ability]  Charisma      [ 20] :       8,734 experience points.
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    You need 1,076,771,264 more experience points to advance your level.   
- You have 183,228,736 experience points to put towards raising your stats. 
-               You may advance 4 stats at your current level.              
-finger hayt
-   frog the Hayt the frog {deadly} (very good)
--==========================================================================-
-|  Level: 139 (Crusader)       Gender: Male    Type: Non PK
-|  Guild Covenants: Changeling, Priest
-|  Professions: Hypnotist, Reforger, Tactician, Assassin, Swordsman
-|  Best Kill: Buried's evil twin, class: 55,865,370
-|  Arch Foe : Magenta's evil twin, class: 118,163,665
-|  On for 21 hours 12 mins 12 seconds.
-|  Age: 1 year 40 days 2 hours 46 minutes 10 seconds.
-|  Created: Thu May 28 08:36:32 2009.
-|  Married to Skuggo since Tue Jul 05 12:04:18 2011
-|  No unread mail.
-|  [...Linkdead for 7 hours 27 mins 16 seconds...]
-|  Alts: Crunch(necromancer,51,11D)  Hanz(mage,89,11D) 
-|        Dog(warder,96,12D)  Snoplogpitt(angel,104,1D) 
-|        Mother(witch,55,11D)  En(gentech,73,11D)  Ow(angel,50,11D) 
-|        Ol(sii,50,11D)  Vi(angel,33,11D)  Jag(monk,80,11D) 
-|        Ar(jedi,51,11D)  Cognus(jedi,29,11D) (all-offline) 
--==========================================================================-
-You feel closer to the chaos flux and more intimate with your current form.
-Giant Donut gurgles in its own blood as it dies.
-Fl dealt the killing blow to Giant Donut.
-Your reputation with Donut Slayers has increased slightly.
-Giant Donut's impaled body crumples lifelessly to the ground.              
-You pick up The sliced up, freshly slain corpse of Giant donut and wrap it up into the coffin's
-protective hold!
-The coffin is now full!
-There are no coins here to share!
-The coffin expels a corpse onto the ground!
-You flow over the corpse, creating a lucid bioplast with the raw protoplasm
-you obtain.                                                                
-bioplast: Taken.
-Clone can't carry that much more.
-There are no corpses here to wrap!
-You relinquish yourself to Chaos, and immediately feel the unpredictable
-and powerful forces surge through you, threatening to sweep you away in an
-instant!
---> You sense an approaching surge of chaotic energy <--
+tellhist
+Tell history:
+07:17 To: Hayt : today is 2357.7097
+07:18 Hayt : so 4.4%ish
+07:18 To: Hayt : so uhh, yeah, about 5%
+07:18 To: Hayt : not a lot
+07:18 To: Hayt : but I don't think I have any complaints about our damage
+07:19 To: Hayt : I'd really like to see defense scale more
+07:19 To: Hayt : offensive forms are already beast-mode damage doers
+07:51 To: Hayt : i also made a pokedex for the biome :p
+07:51 To: Hayt : records form info and room numbers for the mapper and
+                 stuff, so i can find them again
+07:52 To: Hayt : near as i can tell there are 195 forms
+07:52 To: Hayt : i exported the whole thing to google docs as well
+                 https://tinyurl.com/tinychabgeling2
+07:54 Castiel : I'm 11-12 hours of gxp away from God Emperor
+07:54 To: Castiel : excellent
+07:55 Hayt : neat ;D
+07:55 Castiel : Yeah, kinda rather play my jedi lol
+07:55 Castiel : but I'm worried they'll nerf the gxp and this is the best
+                use of time in the short run
+07:56 Hayt : this is cool
+07:56 To: Hayt : which?
+07:56 Hayt : the spreadsheet
+07:57 To: Hayt : if you wanna use the real thing you can switch to tintin!
+07:57 To: Hayt : all the cool kids are doing it
+07:57 Hayt : i use tiny fugue right now but maybe i'll do that :D
+07:57 To: Hayt : yeah i used tf before
+07:58 To: Hayt : and the tintin mapper convinced me to switch
+07:58 Hayt : well shit
+07:58 Hayt : can u tintin mobile?
+07:58 To: Hayt : yep.  thats what i am doing right now
+07:58 Hayt : sounds like quite the project
+07:59 To: Hayt : ive written some fancy stuff.  we have a discord channel
+                 if you wanna give it a go
+07:59 Hayt : not sure i'd be up for converting all my aliases,
+             triggers, etc but i guess i can look into it ;D
+07:59 Hayt : oh jeeze
+07:59 Hayt : sure i can check it out
+07:59 Hayt : very kind of you
+07:59 To: Hayt : i wrote an automapper.  lets you fight in d2
+07:59 Hayt : that's what im talkin about
+08:00 Hayt : yeah i'd love to check it out
+08:00 Hayt : you must be a developer
+08:00 To: Hayt : https://discord.gg/RR4cVgE
+08:00 Hayt : im popedog
+08:00 To: Hayt : im a server engineer, but we have a bunch of developers
+08:01 Hayt : sick
+08:03 To: Castiel : whats that for?
+08:03 Castiel : thanks for the loan for my teepo start
+08:05 To: Castiel : ah
+08:14 Hayt : thanks for the discord invite
+08:18 Hayt : even in max tank form
+08:18 Hayt : wl
+08:26 Castiel : coins come much easier on bigger toons for sure
+17:03 Castiel : a new member
+17:04 To: Castiel : the group is growing too big for me to hold everybody's
+                    hand :P
+17:08 Castiel : wastovan wont need much handholding
+17:08 Castiel : dude has a phd in computer science
+18:46 To: Wastovan : everything going alright?
+18:54 Wastovan : I was afk for a mtg actually and just back here :0
+21:02 To: Korenth : I don't suppose you can look at teepo blasters while you
+                    are looking at jedis.  They definitely don't feel
+                    comparatively great right now
+05:43 Atropos : tanking upped, try it out
+05:44 To: Atropos : I dig it!
+05:45 To: Atropos : also like the changes to sp usage
+05:58 To: Goo : tanking is upped :P
+05:59 To: Goo : I like it when changelings get a little love
+06:09 Atropos : i might break something so finish up mob and stay out of
+                combat
+06:10 To: Atropos : done
+06:44 Hayt : in the client
+06:52 Castiel : floobot's popularity is building momentum lol
 The chaotic forces seeking control of you begin to wane, your control
 returning as the energies cease to course chaotically through you.
-You relinquish yourself to Chaos, and immediately feel the unpredictable
-and powerful forces surge through you, threatening to sweep you away in an
-instant!
-Your body ripples and shakes as energy flows into you.
-The chaotic forces seeking control of you begin to wane, your control
-returning as the energies cease to course chaotically through you.
-3k: [Seeker disconnects]
-3k: [Rynn disconnects]
-3k: [Alchian disconnects]
+tell castiel it helps that ya all are super friendly 
+You tell Castiel: it helps that ya all are super friendly
+From afar, Hayt goes 'Woo Woo!' at you.
+Hayt tells you: on tf on this window
+Hayt tells you: still workin on it
+Castiel tells you: yeah, it's a nice community of active players
+l
+An empty room.
+=X=    There are twelve obvious exits: north, west, sci, new, cha, fan, atm,
+                                    leave, login, sh, gld, gyp              =X=
+=M= A tiny translucent bombardier beetle.
+=I= A large box (contains 55 items).
+3k: [Shandar disconnects]
+3k: [Shandar reconnects]
+3k: [Lance disconnects]
+[Castiel disconnects]
+3k: [Leianne reconnects]
 #SESSION 'fl3s' DIED.
+#READ {.tt/profiles/3s/global/aliases.tin} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/global/vars.tin} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/global/trigs.tin} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/global/triggers.tin} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/global/graph.tin} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/global/mip.tin} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/global/ansi.tin} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/global/mysql.tin} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/global/mapper.tin} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/global/chat.tin} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/global/aliases.tin} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/global/assemble.tin} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/global/corpses.tin} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/global/gag.tin} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/global/mob_monitors.tin} - FILE NOT FOUND.
+#READ {.tt/profiles/3s/global/draw.tin} - FILE NOT FOUND.
+#MAP: This session has no map data. Use #map create or #map read to create one.
 Connecting...
 <Entering 3Scapes.  Enter your character name or press enter to continue>
+
 Password:
+
+Your character is currently logged in and linkdead.
+Prompt set.
+3Scapes welcomes you back from linkdeath.
+There is no reason to 'redraw' here.
+There is no reason to 'fbq' here.
+There is no reason to 'fbq' here.
+There is no reason to 'fbq' here.
+There is no reason to 'resume_chat' here.
+A tiny translucent bombardier beetle creeps into the room.
+#ERROR: PROMPT ROW IS INSIDE THE SCROLLING REGION: {HP:@colscale{1350;1350}/1350 SP:@colscale{211;211}/ 211 ST:@colscale{100.00;100}%  PP:@colscale{100.00;100}%  FF:@colscale{14.43;100}  G2N: @colscale{29.38;100}%  BP: 39    E:  ->
+@rcolscale{;2500}} {-4}.
+#ERROR: PROMPT ROW IS INSIDE THE SCROLLING REGION: {H:@graph{1350;1350} S:@graph{211;211} ST:@graph{100.00;100} P:@graph{100.00;100} F:@graph{14.43;100} G2N: @graph{29.38;100} R: 5/ 51% E:@graph{$enemy[hp];100}} {-3}.
+#ERROR: PROMPT ROW IS INSIDE THE SCROLLING REGION: {$mip[gline][2]} {-7}.
+#ERROR: PROMPT ROW IS INSIDE THE SCROLLING REGION: {$mip[gline][1]} {-6}.
+There is no reason to 'db_list_biome' here.
+You will no longer perform actions during combat.
+#READ {.tt/profiles/3s/global/ansi_setup.tin} - FILE NOT FOUND.
+There is no reason to 'redraw' here.
+#ERROR: PROMPT ROW IS INSIDE THE SCROLLING REGION: {HP:@colscale{1350;1350}/1350 SP:@colscale{211;211}/ 211 ST:@colscale{100.00;100}%  PP:@colscale{100.00;100}%  FF:@colscale{14.43;100}  G2N: @colscale{29.38;100}%  BP: 39    E:  ->
+@rcolscale{;2500}} {-4}.
+#ERROR: PROMPT ROW IS INSIDE THE SCROLLING REGION: {H:@graph{1350;1350} S:@graph{211;211} ST:@graph{100.00;100} P:@graph{100.00;100} F:@graph{14.43;100} G2N: @graph{29.38;100} R: 5/ 51% E:@graph{;100}} {-3}.
+#ERROR: PROMPT ROW IS INSIDE THE SCROLLING REGION: {$mip[gline][2]} {-7}.
+#ERROR: PROMPT ROW IS INSIDE THE SCROLLING REGION: {$mip[gline][1]} {-6}.
+There is no reason to 'db_list_biome' here.
 #SESSION 'fl3s' DIED.
 Connecting...
 <Entering 3Scapes.  Enter your character name or press enter to continue>
@@ -289,32 +256,4 @@ Prompt set.
 3Scapes welcomes you back from linkdeath.
 A tiny translucent bombardier beetle creeps into the room.
 You will no longer perform actions during combat.
-l
-You will no longer see the HP bar on the main screen.
-You remove your setting for MAPCOLS.
-Mmm, the delicious smell of cinnamon floats along the air in this
-spacious corridor. The pungent spice seems to coat every surface you
-can see. It flakes off the ceiling and walls and covers the floor in a
-thin, fragrant layer. Cinnamon is said to be good for you, but you
-might want to be careful. There's enough of it in here to choke a
-horse.
-=X=    There are four obvious exits: southeast, north, south, west           =X=
-=M= A tiny translucent bombardier beetle.
-You will now see the HP bar on your main screen as well.
-3k: [Karsk disconnects]
-rcost
-                        Changeling Advancement Costs                       
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- [secondary ability]  Strength      [152] : 198,921,063 experience points.
- [PRIME     ABILITY]  Constitution  [150] : 192,254,396 experience points.
- [lower     ability]  Intelligence  [ 70] :   5,587,313 experience points.
- [neutral   ability]  Wisdom        [100] :  25,587,730 experience points.
- [secondary ability]  Dexterity     [ 50] :   1,503,805 experience points.
- [lower     ability]  Charisma      [ 20] :       8,734 experience points.
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    You need 1,073,793,880 more experience points to advance your level.   
- You have 186,206,120 experience points to put towards raising your stats. 
-               You may advance 4 stats at your current level.              
-3k: [Alchian reconnects]
-3k: [Alchian disconnects]
-3k: [Karsk reconnects]
+#SESSION 'fl3s' DIED.

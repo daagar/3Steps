@@ -37,10 +37,10 @@
 #alias {display_biome}{#nop};
 
 #alias {configure_paths}{
-	#var {mudpath}{${profilepath}/${mud}};
+	#var {mudpath}{.tt/muds/${mud}};
 	#var {logpath}{${myprofilepath}/logs};
-	#var {globalpath}{${profilepath}/${mud}/global};
-	#var {mappath}{${profilepath}/${mud}/maps};
+	#var {globalpath}{${mudpath}/global};
+	#var {mappath}{${mudpath}/maps};
 	#var {charpath}{${myprofilepath}/chars/${char}};
 	#var {varpath}{${charpath}/vars};
 	#var {mapfile}{${mappath}/${mud}.map};
