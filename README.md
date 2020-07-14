@@ -9,17 +9,63 @@ systemctl start mariadb
 
 ln -s tintin .tt
 
-vi .tt/.pass
+Wintin++ users:
+Edit main.tin and put this inside ->
+#read .tt/loader.tin
+
+Linux Users:
+Edit your .profile and put the following:
+alias tt='tt++ ~/.tt/loader.tin'
+
+make a copy of .tt/profiles/rc.tin.sample and copy it to
+.tt/profiles/rc.tin
+
+edit .tt/profiles/rc.tin and change the following line:
+
+#var {myprofile}{floobity};
+to be
+#var {myprofile}{<your name>};
+
+Create a new folder called .tt/profiles/<your name>
+(you can copy the contents of floobity for examples)
+
+This folder should contain the following .tin files (personal setup above and beyond the defaults):
+aliases.tin  macros.tin  menu.tin  triggers.tin  vars.tin
+
+and the following folders:
+chars  logs
+
+Edit your .tt/profiles/<your name>/menu.tin file and put the following for each of your characters (increment the number):
+
+#echo {1) <your character>(<your guild>)};
+#var {my[alts][1][name]}{<your character>3s};
+#var {my[alts][1][guild]}{<your guild>};
+
+#echo {};
+#echo {con <number>:};
+
+#line oneshot #alias {^%d$}{con %1};
+
+#line oneshot #alias {con}{
+	connect ${my[alts][%1][name]};
+	#unvar {my[alts]};
+	#unalias {con}
+};
+
+In the .tt/profiles/<your name>/chars folder create the following files (character specific files):
+aliases.tin  char.tin  macros.tin  triggers.tin  vars.tin .pass
 
 contents of .pass:
 	#send {mypassword}
 
-cd .tt
- 
-edit menu.tin
 
-Make menu.tin match your characters instead of mine and then for each character in menu.tin create 
-.tt/char/<charname3s>.tin
+and the following folder
+vars
+
+
+
+Make menu.tin match your characters instead of mine and then for each character in menu.tin create a character folder in
+.tt/profiles/<your name>/char/<charname>
 
 Edit rc.tin and change 
 #var {logpath}{/tintin/logs}
@@ -46,9 +92,6 @@ and then control-d
 gunzip tintin.sql.gz
 
 mysql -u root tintin < tintin.sql
-
-and then edit your .profile to include 
-alias tt='tt++ ~/.tt/.tinrc'
 
 ## Required Version
 * TinTin++ version 2.01.90 or higher required
@@ -84,24 +127,3 @@ alias tt='tt++ ~/.tt/.tinrc'
 #### 3k/mysql.tin
 * Database integration with mysql/mariadb
 
-### Aardwolf:
-
-#### map/AWmap.tin
-* Additional mapping features not included in the gmcp module
-* Data captures for longdesc
-* Aliases for easier map movement and mob hunting
-* Capture of AW mini-map
-* Auto saves map on disconnect
-
-#### AW/gmcp.tin
-* Modified from TheIxle's original script.
-* Chat monitor for all lines
-* Status updates integrated with graph function
-* Auto-mapping with exit-stubs
-* Terrain mapping to set roomsymbol to Aardwolf style terrain on adding new rooms
-
-#### AW/terrain.tin
-* Set rooms currently in your map to Aardwolf style terrain
-
-#### AW/snd.tin
-* Search and Destroy style mob hunting for TinTin

@@ -1,0 +1,29 @@
+#config {packet patch}{0.5}
+#config {repeat enter}{on}
+
+#event {MAP ENTER ROOM}{#map map 80x25 map.txt;#map get roomvnum roomvnum;#system {echo startmap $roomvnum > Dirs/lastroom.tt}}
+
+#log append 3k.log
+
+#gag {You KICK the Biker boot right up}
+#act {As you climb the stairs, you step on a weak board and fall through.}{#map undo}
+#act {You cannot go}{#map undo}
+#act {that these guards are demon spawn.}{#map undo}
+#act {The guards hiss as you attempt to move}{#map undo}
+#act {There are rocks blocking your passage in that direction.}{#map undo}
+#act {Buildings prevent you from going that direction.}{#map undo}
+#act {Buildings prevent you from going that way.}{#map undo}
+#act {This guard isn't going to let you go that way!}{#map undo}
+
+#act {smack dab in the middle of a large sewer}{
+	#if {$autokill == 1}{
+                #var findexit 0;
+                #var critter_room 0;
+                #var player_room 0;
+                #var domove 1;
+                #var starter 1;
+                glance
+	}
+}
+
+#act {The coffin is full!}{cco}

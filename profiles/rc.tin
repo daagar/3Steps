@@ -91,8 +91,8 @@
         #var {char}{$ses_name};
         #var {world}{${char}${mud}};
         #send {$ses_name};
-        #read .tt/.pass;
 	configure_paths;
+        #read ${charpath}/.pass;
 	#format logfile {${logpath}/%0_%t.log} {%Y%m%d};
 	#log {append}{$logfile};
 	#read ${profilepath}/start.tin;

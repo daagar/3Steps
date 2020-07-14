@@ -1,9 +1,0 @@
-#nop {}
-#act {You vanquished %1}{
-	update_chat %0;
-	corpsetrig;
-};
-#act {You killed %1}{
-	update_chat %0;
-	corpsetrig;
-};
