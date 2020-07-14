@@ -377,7 +377,7 @@
 	#if {$stepignore > 0}{
 		#echo {It's likely that you don't want to save.  Turn off the Magic Mapper and save again};
 	}{
-		#map write .tt/map/${mapfile}
+		#map write ${mapfile}
 	};
 }
 

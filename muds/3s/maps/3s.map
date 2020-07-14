@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 10
+F 11
 
 G 0
 
-I 6389
+I 13482
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -61064,6 +61064,7 @@ E {12974} {s} {s} {4} {0} {} {1.000} {}
 R {12962} {0} {} {the Ancient Arachnecropolis (sw,e)} { } {Stone after stone the walls in this magnificent Arachnecroplis are a sight to see. The foreboding height and size of the walls are forgotten as you lay eyes on the center of the necropolis. Inner walls while much shoter clearly create a designwork pathway toward the necropolis' center. } {Arachnecropolis} {} {} {} {1.000} {}
 E {12960} {sw} {sw} {12} {0} {} {1.000} {}
 E {12964} {e} {e} {2} {0} {} {1.000} {}
+E {13481} {enter crack} {enter crack} {0} {0} {} {1.000} {}
 
 R {12963} {0} {} {the Ancient Arachnecropolis (se,ne,s,w)} { } {These are the inner halls of the ancient Arachnecropolis. The outer walls of are massive and foreboding, making you feel like a tiny insect. From afar you can see massive tarantula spiders dangling from the towering ceilings, spinning webs. } {Arachnecropolis} {} {} {} {1.000} {}
 E {12960} {w} {w} {8} {0} {} {1.000} {}
@@ -63223,3 +63224,84 @@ E {12415} {e} {e} {2} {0} {} {1.000} {}
 
 R {13480} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {13478} {w} {w} {8} {0} {} {1.000} {}
+
+R {13481} {0} {} {a burrowed underground tunnel (crack,e,sw)} { } {The tunnels wind and wind around the outer edge of the Arachnecropolis' stone walls. The dirt seems to have been bored or burrowed by some massive insects as they left their telltale signs of old shed husks and claw marks. } {Arachnecropolis} {} {} {} {1.000} {}
+E {12962} {crack} {crack} {0} {0} {} {1.000} {}
+E {13482} {e} {e} {2} {0} {} {1.000} {}
+E {13483} {sw} {sw} {12} {0} {} {1.000} {}
+
+R {13482} {0} {} {a burrowed underground tunnel (w,e)} { } {The tunnels run near the cold stone of necropolis walls. These tunnels must have been here for centuries right under the Spider Lord's noses (so to speak). The sound of chittering and scraping mandibles can be heard in the distance from within the tunnels. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13481} {w} {w} {8} {0} {} {1.000} {}
+E {13500} {e} {e} {2} {0} {} {1.000} {}
+
+R {13483} {0} {} {a burrowed underground tunnel (s,ne)} { } {The tunnels run near the cold stone of necropolis walls. These tunnels must have been here for centuries right under the Spider Lord's noses (so to speak). The sound of chittering and scraping mandibles can be heard in the distance from within the tunnels. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13481} {ne} {ne} {3} {0} {} {1.000} {}
+E {13484} {s} {s} {4} {0} {} {1.000} {}
+
+R {13484} {0} {} {a burrowed underground tunnel (s,n)} { } {The tunnels wind and wind around the outer edge of the Arachnecropolis' stone walls. The dirt seems to have been bored or burrowed by some massive insects as they left their telltale signs of old shed husks and claw marks. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13483} {n} {n} {1} {0} {} {1.000} {}
+E {13485} {s} {s} {4} {0} {} {1.000} {}
+
+R {13485} {0} {} {a burrowed underground tunnel (s,n)} { } {The tunnels wind and wind around the outer edge of the Arachnecropolis' stone walls. The dirt seems to have been bored or burrowed by some massive insects as they left their telltale signs of old shed husks and claw marks. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13484} {n} {n} {1} {0} {} {1.000} {}
+E {13486} {s} {s} {4} {0} {} {1.000} {}
+
+R {13486} {0} {} {a burrowed underground tunnel (s,n)} { } {This tunnel is burrowed all around the Arachnecropolis. It seems some big bugs liked to make their home near the cool stone blocks of the necropolis walls. This place is dark and damp and uncomfortably difficult to walk through. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13485} {n} {n} {1} {0} {} {1.000} {}
+E {13487} {s} {s} {4} {0} {} {1.000} {}
+
+R {13487} {0} {} {a burrowed underground tunnel (se,n)} { } {The tunnels wind and wind around the outer edge of the Arachnecropolis' stone walls. The dirt seems to have been bored or burrowed by some massive insects as they left their telltale signs of old shed husks and claw marks. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13486} {n} {n} {1} {0} {} {1.000} {}
+E {13488} {se} {se} {6} {0} {} {1.000} {}
+
+R {13488} {0} {} {a burrowed underground tunnel (e,nw)} { } {The tunnels wind and wind around the outer edge of the Arachnecropolis' stone walls. The dirt seems to have been bored or burrowed by some massive insects as they left their telltale signs of old shed husks and claw marks. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13487} {nw} {nw} {9} {0} {} {1.000} {}
+E {13489} {e} {e} {2} {0} {} {1.000} {}
+
+R {13489} {0} {} {a burrowed underground tunnel (e,w)} { } {The tunnels wind and wind around the outer edge of the Arachnecropolis' stone walls. The dirt seems to have been bored or burrowed by some massive insects as they left their telltale signs of old shed husks and claw marks. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13488} {w} {w} {8} {0} {} {1.000} {}
+E {13490} {e} {e} {2} {0} {} {1.000} {}
+
+R {13490} {0} {} {a burrowed underground tunnel (e,w)} { } {The tunnels wind and wind around the outer edge of the Arachnecropolis' stone walls. The dirt seems to have been bored or burrowed by some massive insects as they left their telltale signs of old shed husks and claw marks. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13489} {w} {w} {8} {0} {} {1.000} {}
+E {13491} {e} {e} {2} {0} {} {1.000} {}
+
+R {13491} {0} {} {a burrowed underground tunnel (e,w)} { } {The tunnels wind and wind around the outer edge of the Arachnecropolis' stone walls. The dirt seems to have been bored or burrowed by some massive insects as they left their telltale signs of old shed husks and claw marks. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13490} {w} {w} {8} {0} {} {1.000} {}
+E {13492} {e} {e} {2} {0} {} {1.000} {}
+
+R {13492} {0} {} {a burrowed underground tunnel (ne,w)} { } {The tunnels run near the cold stone of necropolis walls. These tunnels must have been here for centuries right under the Spider Lord's noses (so to speak). The sound of chittering and scraping mandibles can be heard in the distance from within the tunnels. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13491} {w} {w} {8} {0} {} {1.000} {}
+E {13493} {ne} {ne} {3} {0} {} {1.000} {}
+
+R {13493} {0} {} {a burrowed underground tunnel (sw,n)} { } {This tunnel is burrowed all around the Arachnecropolis. It seems some big bugs liked to make their home near the cool stone blocks of the necropolis walls. This place is dark and damp and uncomfortably difficult to walk through. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13492} {sw} {sw} {12} {0} {} {1.000} {}
+E {13494} {n} {n} {1} {0} {} {1.000} {}
+
+R {13494} {0} {} {a burrowed underground tunnel (s,n)} { } {This tunnel is burrowed all around the Arachnecropolis. It seems some big bugs liked to make their home near the cool stone blocks of the necropolis walls. This place is dark and damp and uncomfortably difficult to walk through. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13493} {s} {s} {4} {0} {} {1.000} {}
+E {13495} {n} {n} {1} {0} {} {1.000} {}
+
+R {13495} {0} {} {a burrowed underground tunnel (s,n)} { } {This tunnel is burrowed all around the Arachnecropolis. It seems some big bugs liked to make their home near the cool stone blocks of the necropolis walls. This place is dark and damp and uncomfortably difficult to walk through. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13494} {s} {s} {4} {0} {} {1.000} {}
+E {13496} {n} {n} {1} {0} {} {1.000} {}
+
+R {13496} {0} {} {a burrowed underground tunnel (s,n)} { } {This tunnel is burrowed all around the Arachnecropolis. It seems some big bugs liked to make their home near the cool stone blocks of the necropolis walls. This place is dark and damp and uncomfortably difficult to walk through. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13495} {s} {s} {4} {0} {} {1.000} {}
+E {13497} {n} {n} {1} {0} {} {1.000} {}
+
+R {13497} {0} {} {a burrowed underground tunnel (s,nw)} { } {The tunnels run near the cold stone of necropolis walls. These tunnels must have been here for centuries right under the Spider Lord's noses (so to speak). The sound of chittering and scraping mandibles can be heard in the distance from within the tunnels. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13496} {s} {s} {4} {0} {} {1.000} {}
+E {13498} {nw} {nw} {9} {0} {} {1.000} {}
+
+R {13498} {0} {} {a burrowed underground tunnel (se,w)} { } {The tunnels run near the cold stone of necropolis walls. These tunnels must have been here for centuries right under the Spider Lord's noses (so to speak). The sound of chittering and scraping mandibles can be heard in the distance from within the tunnels. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13497} {se} {se} {6} {0} {} {1.000} {}
+E {13499} {w} {w} {8} {0} {} {1.000} {}
+
+R {13499} {0} {} {a burrowed underground tunnel (w,e)} { } {The tunnels run near the cold stone of necropolis walls. These tunnels must have been here for centuries right under the Spider Lord's noses (so to speak). The sound of chittering and scraping mandibles can be heard in the distance from within the tunnels. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13498} {e} {e} {2} {0} {} {1.000} {}
+E {13500} {w} {w} {8} {0} {} {1.000} {}
+
+R {13500} {0} {} {a burrowed underground tunnel (w,e)} { } {The tunnels wind and wind around the outer edge of the Arachnecropolis' stone walls. The dirt seems to have been bored or burrowed by some massive insects as they left their telltale signs of old shed husks and claw marks. } {Arachnecropolis} {} {} {} {1.000} {}
+E {13499} {e} {e} {2} {0} {} {1.000} {}
+E {13482} {w} {w} {8} {0} {} {1.000} {}
