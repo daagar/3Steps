@@ -30,15 +30,14 @@
 #PATHDIR          {u}	{d}	{16}
 #PATHDIR          {w}	{e}	{8}
 
-#var {tintinpath}{.tt};
-#var {profilepath}{${tintinpath}/profiles};
+#var {profilepath}{.tt/profiles};
 #var {myprofile}{floobity};
 #var {myprofilepath}{${profilepath}/${myprofile}};
 #alias {update_status}{#nop};
 #alias {display_biome}{#nop};
 
 #alias {configure_paths}{
-	#var {mudpath}{${tintinpath}/muds/${mud}};
+	#var {mudpath}{.tt/muds/${mud}};
 	#var {logpath}{${myprofilepath}/logs};
 	#var {globalpath}{${mudpath}/global};
 	#var {mappath}{${mudpath}/maps};
@@ -92,8 +91,8 @@
         #var {char}{$ses_name};
         #var {world}{${char}${mud}};
         #send {$ses_name};
-        #read .tt/.pass;
 	configure_paths;
+        #read ${charpath}/.pass;
 	#format logfile {${logpath}/%0_%t.log} {%Y%m%d};
 	#log {append}{$logfile};
 	#read ${profilepath}/start.tin;
