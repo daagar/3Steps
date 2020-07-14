@@ -1,0 +1,194 @@
+Anguish
+
+Area Name	Comments	Directions
+A Kaifouin caravan	Usually found around Drakhiya...	various
+A mutated garden	What do you get when you combine a mad mage with a green thumb? Strange things!	16n 5e
+Academy	The place for study and learning. Go to the water clock and get wiser when the timer runs out.	31n 9w 8n 1nw
+Alataciria	Watch out…	Quest Area
+Altons Caverns	Meet the possibly scariest mage of AA, and seek Glimmer.	17w 2s 3w 7n 1w
+Anakim	A unique flail to be found and also features a mini-quest	31n 9w 3n 6w
+Anasazi	Dig up the Shaman Spirit!! Is known as Anasazi: The Ancient Ones. Coded by: Tigress.	12w 4s 11w 4n 1e 1n 1w
+Andeli Castle	There is something strange going on in Andeli, but it is not the first time!	Quest Area
+Andellen Encampment	A group of militant elves have set up camp in the forest.	31n 4e 2n
+Anguish Tundra	Watch out for snow wolves	Region: Far northern Anguish arctic
+Arcadia	Brew some beer!	24n 5w
+Asyvans Domain	Snatch the Twohanded Powersword. What happened to that one noble family?	Quest Area
+Balan	Get threatened by feisty villagers! Kill the beast.	12w 3n 2w
+Battlefield	What has passed here? Jacks dagger can be thrown.	20n, 8w, s, w, s, 2w, n, ne
+Bear Guild	Where do the leaders of the Geographic society come from? If you cannot beat them, join them!	31n 9w 2n 2w 2s
+Blors Cavern	Kill Blor for The Destructor (+1 dex for dwarves). Stone Helmet & Gold Cape also of use.	20n 8w 1s 1w 1s 2w 1n 5w 2s
+Brawling Arena	AAs brawling arena.	n, e, n
+Brigand Fortress	Find the locker and see whats inside…	20n 8w 1s 1w 1s 1w climb mountain
+Brunswik	The battle rages on in Brunswik, but who fights whom and why?	31n 9w 10n 7w 3s
+Burnham Castle	There is much more to Burnham than meets the eye... Known as Dunsinane Castle. Coded by Amante.	Quest Area
+Burnham Woods	Popular killing place, but there is more to Burnham than meets the eye...	29n 4w 1s
+Caltisia Village	Ever try to walk on ice? Low level area with 4 kills.	31n 9w 10n 8e 6n 11e...
+Carcera Camp	The second most favourite skill trainer.	Varies
+Castle Virgis, SE isle	Amazon castle. Girl power! Sword of Virgis & Purple Cloak.	Get Atlantis from docks
+Chaos Tower	Try and kill Razar for the Shadow Sword.	12w 7n 5w 1d
+Convent	You would think people moved to convents to get away from trouble, now... Coded by: Gwendolyn.	Quest Area
+Cottage	Home of cottage cheese. Or not. Strangeness aplenty.	17w 3n enter
+Courts of Chaos	Shake hands with Maleficio, and participate in Chaotic activities in the guild of the eccentric.	16w 4n 2w n
+Crescent Lake	The fishing is good, and the scenery pretty.	17w 9s w
+Cyranos House	Cyrano is a fisherman with a heavy heart.	Quest area
+Dalair	Famous for necromancers and Chaos, home of The Dalair Free Press, the home of the orcs and likeminded.	16w 2n
+Dangerous Flora	aka Endora's Labyrinth. Its a-maze-ing	16w 4s 12w 6s 2e 15s 1e ne
+Drakhiya	An exotic town with heaps to explore. Search for the free Tabaq & pipe and check out the roof tops.	12w 4s 12w 6s 1e 1s 12e 11s 1e 11s 4w 1s 1w 2s 4w 1s 1e
+Drow Caverns	Another popular place. Find the attic... Coded by: Devlin.	12w 4s 12w 6s 1e 1s 8e 2s enter cave
+Drow Outpost	Calm on the outside, but... Find the scrolls!	12w 4s 12w 6s 1e 1s 1e 5s 3e 7s 1sw
+Drutes tomb	When dwarves do some burying, they do it properly.	31n 9w 10n 6e 7n 4w 1n 1e
+Duender	The home of the tree-hugging elves - join the guild of tea drinkers!	12w 4s 12w 6s 1e 1s 1sw
+Dwarven Mines	Find your inner rhythm, it is like stealing a toy from a baby...	16n 3w 1n
+Eastroad Inn	This chow is just so good you cannot leave without trying some.	10n 1e enter
+Ebonbane Manor	The Ebonbane noble family is extinct. What on Aerthe happened?	31n 9w 10n 13e 5s enter yard
+Elven Crypts	Zackwell's crypt. Dead elves, who could be interested... except everyone!	16w 4s 12w 6s 1e 1s sw se 1s 1w 6s 2e nw
+Elven Defense Fortress	Illarin and crew keep the forests safe and clean from orcs! Well, some of the forests.	12w 4s 12w 6s 1e 1s 1e 4s 1w
+Elven Nature Preserve	Elves have gathered rare creatures into a preserve, but something is afoot... Newbie area.	12w 4s 12w 6s 1e 1s 8e 6s 3w n enter gap
+Fairy Ring	Popular newbie area. Meet the fairy queen!	21n 1w 1n
+Farmstead	Farm life is so relaxing, natural and with no surprises... or? Head east from Duender.	Quest Area
+Felgands training camp	Great area, lotsa help on information on skilling	22n 2e
+Ferry (North Dock)	Tired of falling off the bridge? Grab a ride from Norrich! Newbies go for free.	14w 8s
+Ferry (South Dock)	Tired of falling off the bridge? Grab a ride from Norrich, newbies go for free! Just ring the bell.	12w 4s 12w 6s 1e 1s 9e 1n
+Flame Pit	Prove your worth in a challenging elemental environment!	23n 10w 1n 2w 2n 1e
+Flaws House	Visit an experienced adventurer, but watch out for the demons of the past...	33n ne 2n e ne n w ne up
+Fubs Fortress	There is danger to be found here, and strange souvenirs to bring as proof of surviving!	7n 1e
+Gabaldon	A kind society of druids just waiting for a hand.	12w 4s 12w 6s 1e 1s 1e 5s 2w 10s 1e
+Gaius House	So that's where he lives! Or does he?	31n 9w 13n 2e 2n
+Ghost Ship	A popular newbie area, visit it before you grow too big to fit in!	29n 5e enter ship
+Giant Conference	Now why would a bunch of giants have a conference? This requires investigation.	12w 4n 3w
+Glassblower	Glassblower?	12w 4s 12w 6s 2e 1s 7e 4s 5w 17s 3w s w s w s 2w 4s
+Gnoll Temple	A good chance to find out more about this special race. What do they worship?	31n 9w 10n 6e 1ne
+Graddams Camp	Graddam the animal healer is especially interesting to rangers!	31n 9w 10n 17e 6n 1ne
+Gralains Tomb	A long time ago, a dwarf leader lended a hand to Truehearts. Famous equipment to find!	23n 8w 1s 1sw
+Greenhaven	Got a tattoo you would like to get rid of? This place is fun exploring.	Quest Area
+Gremlin Village	Gremlins are strange and messy, but Grem is the place to find out more about their culture.	Quest area
+Greysons Island	This area was accessible in the early days, also called Greyson's Workroom.	Not accessible
+Hall of Heroes	Coming soon...	Coming soon...
+Harkke portal	The finest fuzzy-killing south of Natirar, this place is a haven for mid-level shapeshifters.	31n 6w 1n enter portal
+Hasashiyyini Compound	Coming soon...	12w 4s 12w 6s 1e 1s 12e 11s 1e 11s 4w 1s 1w 2s 5w 1s 1w follow tracks
+Hobbitat	The home of the Geographic society and interesting small shops, the crossroads game and a particular adventurer...	32n
+Home of Leau and Drais	Coming soon...	18n 2w ne
+Iceforge Clan Forge	Lotsa mining rooms and a well guarded weapons forge.	31n 9w 10n 8w 20n 3e 3s 3e 2s 6e ne 2e se 4e s w 2n u n (open n) n w to Uena (Usually a ddoor from paper boy)
+Iceforge Clan Tunnels	Mines.	5s 6e 5s 3e from sw door in ficers
+Ilderia	The Ilderians are a strange race, with their own sort of magic. Find out more!	12w 4s 12w 6s 1e 1s 1e 5s 2w 5s search thicket 1e
+Island Commune	On a small island off the north coast live the descendants of refugees.	31n 9w 10n 25e
+Isle of the Magi	Catch the Monster...	16w, 8s, 2w, s into river, 2x swim w, swim n
+Issla village	What are the lizardmen made of?	12w 4s 12w 6s 1e 1s 12e 11s 1e 10s 2w 1se
+Knight Forest	Save the girl. Lotsa bunnies to kill too.	31n 7w 5n
+Knights Retreat	King Drin rewards his officers with a retreat. Great area, lots to explore, but watch out for Jush!	16w 4s 8w 6s 2e s 7e 4s 5e 17s 5w sw
+Knights Stronghold	Beware the heir	23n 9w 3n
+Lighthouse	Do you believe in ghosts?	Quest Area
+Listhalia	Village of Listan. A gentle village in the elven forests.	Quest area
+Magic Caves	Strange caves to puzzle out.	17w 1n 2w
+Manor	This newbie area is so popular you see really old people there too! Fun for almost the whole family, but find somewhere else to go when you reach mid-levels...	8n 1e 1ne
+Manspiders	What is it between these manspiders and the drowgar?	12w 4s 12w 6s 1e 1s 8e 14s 1w 1se
+Mba'e	A secret community lurks under Neville. Don't you feel lucky? (Map)	13n 3e 3n 3w enter curtain
+Merrick	Another strange piece of history to snoop out.	Quest Area
+Monastery	This area has been brushed up from the original, and now supports some choosing...	Quest Area
+Monks Guild	The small but all the more friendly guild resides here. The gardens are often full of pilgrims meditating as well.	13n 3e 4n e 2n enter waterfall
+Monolith	One day there was nothing there, then poof! A monolith shows up. Watch out for Zhephani, she likes to follow...	12w 4s 12w 6s 1e 1s 12e 11s 1e 11s 4w 1s 1w 5s 3e 1s
+Morin Farm	The Newbie Farm	13n 5w 1s
+Morr	Nasty undead area with a nice new armour set	31n 9w 13n 2w
+Mt. Kresh	Hunt for the famous Staff of Azakath.	20n 8w 1s 1w 1s 2w 1n 4w 7n 1e 1n
+Music Man	There once was a man who really liked music...	Quest Area
+Nepeth	The capitol of the human Anguish, Nepeth has been renovated and has lots of wonders to discover. Take a while to enjoy the atmosphere!	12w 3n 1w 6n
+Neville	Famous for Puffy and Monks, Neville has several other people you want to meet as well. Explore! Play games!	13n 3e 1n
+Nomads Camp	With some patience, there are numerous mysteries to solve in the camp of the Azhads.	Quest area
+North orcs caves	These cave orcs sure have personalities!	31n 9w 10n 8w 24n 10e 4s 1w
+Norton Village	Lots to explore, make sure you visit the steam room.	31n 9w 10n 17e 7n 3e
+Numerologist	The numerologist can tell you strange things just by using her abacus. Try smashing her chest.	16w, 4s, 8w, 6s, 2e, enter
+Oblivos	This place is not for those looking for a quick heal, but take your boy/girlfriend out for a date in a real fancy dining facility.	9w 8s 1ne
+Orc Fortress	A nice, interesting place. Keep an ear and eye out, you might learn something interesting.	14w 1n enter waterfall
+Orc Mountain	This is probably the closest we get to orcish royalty.	17w 3n 1w 2n
+Paladin Estates	Kind NPCs and stables that might interest the horseowners.	16w 9s
+Paladin Hall	Join the paladin class, make good deeds or just relax in the library.	16n 2e
+Pearl Beach	Interesting things to do for good swimmers.	12w 4s 12w 6s 1e 1s 12e 9s 4e
+Prehistoric Valley	Watch out to not become a fossil yourself! :)	12w 4s 12w 6s 1e 1s 12e 11s 1e 11s 1w 2s 1e 1se 1sw
+Puffin Beach	A cute newbie area which should be visited early on before it closes up.	31n 9w 10n 21e 5n 1e
+Quarry	Ever wonder where all that stone to build the castles came from?	19n 5w
+Queens Orphanage	A colourful area with lots of details, worth touchyfeelying through. :)	11w 8n 1e
+Quildars Hut		Quest Area
+Ranger Camp	Join the rangers, get a wolf, never be alone again! Not even in the privy.	31n 9w 10n 16e 1s enter camp
+Rays Sheep Farm	Shear sheep, buy cheese, and try out some exotic weapons made to dual wield.	31n 9w 10n 8w 25n 11e 4s 5e 4s 5e n 4e s 2e 2s enter clearing
+Ravel	In this place you can unRavel fascinating places with a bit of careful exploring, if you excuse the pun.	12w 1n 1nw
+Rodentid Temple	Visit Bradbury and ask him about the rodentids.	2w 2s w n from Lizardman Village
+Ruined Tower aka Orc Garden	Watch out for the spider if you are a newbie!	15w 5s
+Rune	Home of the frost giants, Crescent and rune stones.	31n 9w 10n 7e 9n down
+Rylmis Forsaken Manor aka The Lab	Coming soon...	31n 9w 10n 6w 2n ne
+Sadris	A place to get to know one phenomenon well-known on AA.	12w 4s 12w 11n 3e
+Sand dragons	Look out for the dark, falling rocks, sleeping sand dragons, loud noises.. just be careful okay?	12w 4s 12w 6s 1e 1s 12e 11s 1e 11s 4w 1s 1w 4s 4e 2n
+Scythe Camp	Join Scythe, the guild built on kicking ass. Or explore the camp for fun and profit.	9w 5s enter camp OR walk
+Scythe encampment	Glocks encampment by the river bridge	16w 4s 4w
+SE Isle	Great newbie area. Lots to kill and a free healing room.	Get Atlantis from the Docks
+Seal Point	Great newbie area	31n 9w 10n 23e 2n e sw
+Shadow Elves	Gemmed Rondel Dagger to be found...	16w, 4s, 8w, 6s, 2e, s, 7e, 4s, 5e, 17s, 2w, 4n, 5w, sw
+Shapeshifter Enclave	Join the most reboot-friendly class there is!	12w 4s 12w 6s 1e 1s 12e 11s 3e
+Shieldhand Clan	Some great new weapons and a nice unique for clerics/paladins.	31n 9w 10n 7w 7n 4e se
+Shipyard	So, where did those ships at the harbour come from?	10n 5e
+Silent Glen	Help the witch out...	31n 9w 10n 5w 4n ne
+Silent Grove	Hunt for the treasure. Well worth it...	16w 4s 8w 6s e s sw se s w 13s e s w
+Slaver Encampment	Be careful when you go in, and it will be a fun trip, be careless and it may be a nightmare.	12w 4s 11w 2n 1nw
+Small house in the forest	They thought it would be safer away from the big city...	12w 4s 12w 6s 1e 1s 8e 4s e nw
+Snowfolk Igloo	Home of the brave, bold, and cold Snowfolk guild	31n 9w 10n 8w 25n 11e 4s 5e 4s 4e 3n enter igloo
+Spiders Nest	aka Thicket of bayberry bushes. Must be a use for all the spiderweb	17w 6s
+Star Caves	Tough stuff, but famous rewards.	Quest Area
+Steading	A chance to get to know those frost giants more closely...	31n 9w 10n 12e 1s
+Sylvanthic wolves	Sylvanthic wolves, famous for its Sylvanthic wolves.	12w 4s 12w 6s 1e 1s 1e 5s 2w 11s 1e 4s
+Sydryth	Inscribe your message for all time at the oak!	Quest area
+Tantallon	The effective capital of Anguish and main hub aka Main Village	You generally start your adventure here
+Tantallon Dumps	The Tantallon folk toss the weirdest things...	10s 1e enter mounds
+Tantallon Park	Nice newbie area with good exploring to do - like those games?	8w 1s enter park
+Tantallon Sea Rescue	Keeping you safe in those treacherous seas of AA	8s 1e 1ne
+Thranarack	Get those bushy sideburns you always wanted!	31n 9w 2n 4w 2n
+Tingi Village	Something fishy going on in Tingi Village	Quest area
+Treasure Hunter	A treasure hunter swears there is treasure to be found on Cyprum Island. Grab a row boat and head se.	Isle of Cyprum
+Troll Bridge	Be sure to bring the cash, or stay away from this bridge!	31n 1w 4n
+Trolls Den	Probably the biggest menace to the newbies of the realm	12w enter hole
+Underground Forest	Very popular area with an interesting kills and a light source to be found.	30n 12w 1s 2w 1d
+Virgision Village	Coming soon...	Coming soon...
+Wayfarers Rest	Your handy getting-fed place by the Shifter conclave.	12w 4s 12w 6s 1e 1s 12e 11s 1e 2s enter
+Windmill	It is a perfectly normal windmill. Also, it has something matter-of-factly abnormal. But never you mind about that.	11w 4n enter windmill
+Wizard Quest	Obviously	Quest...
+Yeti Caves	Help the Yeti's friend, the mage	31n 9w 10n 6w 14n 1e 1n
+Zhamarr	Visit the dark and desolate place of Zhamarr	Quest area
+Zhou	The favourite trainer of all!	26n 1e
+Zombie Miners	Famous axe to be found.	12w 4s 12w 6s 1e 1s 8e 13s w s swim e
+Anguish Westlands
+
+Area Name	Coords	Comments	Directions
+Aalgirzst	-37 14	Main city of the western orcs	Coming soon
+Knight Outpost	-22 15	Coming soon	Coming soon
+Sylvandor	-29 -24	Apply for entry today!	coming soon
+Westlands	Everywhere west of -17 -39 to -17 60	The world beyond the mist	Region: west of the old mist wall which ran north-south just west of Duender
+Infidian
+
+Directions for Infidian are from ddoor at the rickety dock/Factor's Hut (SW Infidian, coordinates 51, -23) unless otherwise stated
+Area Name	Coords	Comments	Directions
+Ancient Dungeon	73 -8	Find treasure or die trying	17e 15n 5e d
+Drakon Encampment	72 -17	Not just one area, but two...	18e 6n 3e
+Drakon Settlement	73 -14	Coming soon...	18e 9n 4e ne
+Dymwood Dell		A decaying forest frequented by hags and nightmares	Region: Northeastern Infidian, across a bridge
+Dymwood Gnomes	74 25	They have travelled here in search of something	from gwot: 1se 4e 5n 17e 3s 1w 1s se
+Chinchilla Farm	68 18	Furry and cute.	from Gwots Camp se all e 7s all e n
+Eagle Clan	69 -37	Excellent area with some VERY fine loot	16e 14s 2e ne
+Ex-clerics Hill	70 45	Buy some vodkha or make your own. There is more to this place than just vegetables...	from Gwots Camp se 5e 20n 9e n 2e nw
+Factors Hut	51 -23	This guy looks a bit shifty	at the rickety dock
+Fallan	63 4	Something's not right at the Village Fayre	from east peacekeeper 7e 9n 4e
+Forest Chapel	66 1	Get a makeover and learn some history	17e 17n 2w 3n e 4n w n
+Fort Mt. Wolf	67 21	Try and beat the game. Quality prizes on offer...	from dock: w 15n 3e 6n 8e 23n 6e se
+Gemynd	52 -5	Go visit Arica, the mayor of Gemynd	w 15n 3e 3n w
+Gwots Camp	57 24	Buy dulce and catch some fish	w 15n 3e 6n 8e 25n w n 4w
+Ironwood Forest		Bring some poison cures!	Region: Eastern Infidian, south of Pegasus Bay
+Keepinks Museum	59 -17	Come add to the collection	7e 6n e d
+Lava Tube	66 9	Shapeshifter earth clan (Ignatious)	from Gwots Camp se, 6e, 5n, 15e, 3s, 1w, 8s, 1w, 1s, 2w, 1s, 1w, 6s, 1w, 1s, 4w
+Mystic Fair	68 -25 or 62 -27 or 66 -34	Assorted wares and some sexy xaerres	Varying locations on the Ondoran plains
+Nehmar Farm	55 -7	Check out the new game and help out around the farm	1w 15n 3e 2n 2e s se
+Paper Mill	66 -7	Interesting rewards for helping the family with their craft	
+Ranors Pride	52 -7	Drinking games, private rooms, and a perk for fighters	w 15n 2e n nw
+Redcliff on Infidian	67 31	Visit the kinder and learn some new abilities.	w 15n 3e 6n 8e 25n e 7n 5e enter thicket
+Seabirds	50 -10	Birds and eggs, and something amiss	w 13n enter opening
+Storm Dragons	77 -20	Locate the treasure	SE Infidian
+Sunbird Tribe Village	68 -20	Go speak to the village Elder	17e 3n ne
+The Smoking Roc	60 -8	Pancakes and fancy smokes	w 15n 3e 2n 6e s e s enter
+Thraxi Hyf	72 -29	Watch out for untimely resets...	18e 6s 3e d
+

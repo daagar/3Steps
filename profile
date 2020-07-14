@@ -29,6 +29,7 @@ alias 3k='trcc 3k'
 alias 3s='trcc 3s'
 alias 3kx='trcx 3k'
 alias 3sx='trcx 3s'
-alias tt='tt++ ~/.tt/.tinrc'
+#alias tt='tt++ ~/.tt/.tinrc'
+alias tt='tt++ ~/.tt/loader.tin'
 
 export PATH
