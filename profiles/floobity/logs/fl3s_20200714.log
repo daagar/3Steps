@@ -257,3 +257,133 @@ Prompt set.
 A tiny translucent bombardier beetle creeps into the room.
 You will no longer perform actions during combat.
 #SESSION 'fl3s' DIED.
+Connecting...
+<Entering 3Scapes.  Enter your character name or press enter to continue>
+Password:
+Your character is currently logged in and linkdead.
+Prompt set.
+3Scapes welcomes you back from linkdeath.
+A tiny translucent bombardier beetle creeps into the room.
+l
+You will no longer perform actions during combat.
+An empty room.
+=X=    There are twelve obvious exits: north, west, sci, new, cha, fan, atm,
+                                    leave, login, sh, gld, gyp              =X=
+=M= A tiny translucent bombardier beetle.
+=I= A large box (contains 55 items).
+You will no longer see the HP bar on the main screen.
+You remove your setting for MAPCOLS.
+You will now see the HP bar on your main screen as well.
+go donuts
+#READ {.tt/Dirs/donuts_load.tt} - FILE NOT FOUND.
+The entrance to Fantasy (n,w,e,portal)
+=I= A small wooden sign.
+Sentinel's Path (n,s,w,e)
+Sentinel's Path (w,e)
+=I= A weathered wooden sign, pointing west.
+Arborlin Trail (n,s,w)
+=I= A greenish street sign.
+Arborlin Trail (nw,s,e)
+Waverly Street (n,w,e)
+Alchemy row (n,s,w)
+Alchemy row (nw,n,s,w,e)
+=I= A tall street light.
+A Break in the Haze (n,w,e)
+=I= A glass sign with moving liquid inside, pointing north.
+A Vortex (s,w,enter)
+The center of Chaos (n,s,w,e,vortex)
+=I= A bronze plaque.
+Eastwick (n,s,w,e)
+=I= A large ladder.
+Eastwick Road (n,e,w,s)
+=I= An Illuminati Pyramid.
+=I= A small dispensing machine.
+=M= Villager.
+Wickward Path (n,s)
+=I= The Krispy
+Krematorium.
+You drool at the thought of a delicious donut and suddenly you're transported inside the shop!
+Fl disappears into the donut shop.
+A tiny translucent bombardier beetle creeps into the room.
+ki
+Krispy Krematorium (ne,nw,n,s,exit)
+=M= A tiny translucent bombardier beetle.
+You step inside the portal and find yourself in a completely
+new and bizarre environment.
+Krispy Krematorium (se,n,s,w)
+Krispy Krematorium (nw,s,w)
+Krispy Krematorium (se,nw,s,w)
+Krispy Krematorium (se,s,w)
+=M= A Giant Sugar Donut !attacking you!.
+A tiny translucent bombardier beetle creeps into the room.
+Your thumbs are too tired to gouge right now...
+gs
+<+>========================================================================<+>
+ |                    Fl the Changeling - Complexity 278                    |
+ |--------------------------------------------------------------------------|
+ | Form        : Mastodon               Form Points : 9                     |
+ | Intimacy    : 3                      Next Point  : 14.45%                |
+ | Stamina     : 99.32%                 Perform     :                       |
+ | Protoplasm  : 100.00%                Instinct    : morph (1500 HP)       |
+ | Chaos Flux  : 5/53%                  Instinct2   : relinquish (5% PP)    |
+ | Clone       : Nobody, a small bomba                                      |
+ |--------------------------------------------------------------------------|
+ | Best Kill   : A blood elemental                        Class: 11,455,940 |
+ | Arch Foe    : a terrifying, colossal infernal          Class:    462,572 |
+ | Total Kills : 48,467                                                     |
+ |--------------------------------------------------------------------------|
+ | You have ingested 3,103,660 gold coins.                                  |
+ |                                                                          |
+ | You joined the guild on Sun Sep 11 21:06:10 2016, and have been active   |
+ | for 99 days 14 hours 41 minutes 27 seconds. (7.11% of the time)          |
+ |                                                                          |
+ | You have fought for 81 days 5 hours 24 minutes 43 seconds, which is      |
+ | 81.54% of your time in the guild.                                        |
+<+>========================================================================<+>
+rcost
+                        Changeling Advancement Costs                       
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ [secondary ability]  Strength      [100] :  25,587,730 experience points.
+ [PRIME     ABILITY]  Constitution  [100] :  25,587,730 experience points.
+ [lower     ability]  Intelligence  [ 25] :      66,323 experience points.
+ [neutral   ability]  Wisdom        [100] :  25,587,730 experience points.
+ [secondary ability]  Dexterity     [ 20] :       8,734 experience points.
+ [lower     ability]  Charisma      [ 20] :       8,734 experience points.
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+                  You may advance your level at any time.                  
+You have 8,292,660,464 experience points to put towards raising your stats.
+              You may advance 181 stats at your current level.             
+From afar, Dermi waves in your direction.
+l
+This bright red corridor has been slathered in strawberry filling from
+floor to ceiling. The fruity flavoring drips down the walls and pools
+beneath your feet in jelly-like puddles. The mess has made the floor
+so slick, it's a wonder you're able to stand. If American Greetings
+ever decides to license a Strawberry Shortcake: Apocalypse movie, it
+will probably look something like this.
+=X=    There are three obvious exits: southeast, south, west                  =X=
+=M= A tiny translucent bombardier beetle.
+=M= A Giant Sugar Donut [scratched] [92%] !attacking you!.
+go home
+#READ {.tt/Dirs/donuts_unload.tt} - FILE NOT FOUND.
+You are now hunted by Giant Donut.
+Krispy Krematorium (se,nw,s,w)
+Krispy Krematorium (nw,s,w)
+Krispy Krematorium (se,n,s,w)
+Krispy Krematorium (ne,nw,n,s,exit)
+Wickward Path (n,s)
+=I= The Krispy
+Krematorium.
+Eastwick Road (n,e,w,s)
+=I= An Illuminati Pyramid.
+=I= A small dispensing machine.
+=M= Villager.
+Eastwick (n,s,w,e)
+=I= A large ladder.
+The center of Chaos (n,s,w,e,vortex)
+=I= A bronze plaque.
+A Vortex (s,w,enter)
+The House of Fl (n,w,sci,new,cha,fan,atm,leave,login,sh,gld,gyp)
+=I= A large box (contains 55 items).
+A tiny translucent bombardier beetle creeps into the room.
+#SESSION 'fl3s' DIED.
