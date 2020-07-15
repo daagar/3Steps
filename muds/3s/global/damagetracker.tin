@@ -1,3 +1,4 @@
+#class {damagetracker}{open}
 #var {my[damagetracker][record]}{0};
 #var {my[damagetracker][foe]}{0};
 #var {my[damagetracker][damage]}{0};
@@ -52,7 +53,7 @@
 		#format {dbtimestamp} {%t} {[%Y:%m:%d %H:%M:%S]};
 		db_submit_damage
 	}{
-        	#system {echo "$my[damagetracker][guildstring] - $my[damagetracker][targetstring] -> $my[damagetracker][hits] time -> $my[damagetracker][damage] ($my[damagetracker][average] Avg)" >> .tt/logs/${guild}-damagehistory.txt};
+        	#line log {${logpath}/${guild}-damagehistory.txt}{$my[damagetracker][guildstring] - $my[damagetracker][targetstring] -> $my[damagetracker][hits] time -> $my[damagetracker][damage] ($my[damagetracker][average] Avg)};
         };
 };
 
@@ -87,8 +88,9 @@
 	#if {$my[config][db][damage] == 1}{
 		#format {dbtimestamp} {%t} {[%Y:%m:%d %H:%M:%S]};
 		db_submit_damage;
-	};
-        #system {echo "$my[damagetracker][guildstring] - $my[damagetracker][targetstring] -> $my[damagetracker][hits] times -> $my[damagetracker][damage] ($my[damagetracker][average] Avg)" >> .tt/logs/${guild}-damagehistory.txt};
+	}{
+        	#line log {${logpath}/${guild}-damagehistory.txt}{$my[damagetracker][guildstring] - $my[damagetracker][targetstring] -> $my[damagetracker][hits] times -> $my[damagetracker][damage] ($my[damagetracker][average] Avg)};
+        };
 };
 
 #var {damagetracker[rows]}{5};
@@ -167,7 +169,7 @@
 		#format {my[damagetracker][total]}{%+8s}{$my[damagetracker][total]};
 		#format {my[damagetracker][average]}{%-4s}{$my[damagetracker][average]};
 	}{
-		#system {echo "$my[damagetracker][guildstring] | $my[damagetracker][foe-full] | $my[damagetracker][rounds] | $my[damagetracker][total] | $my[damagetracker][average]" >> .tt/logs/kill-records.txt};
+		#line log {${logpath}/kill-records.txt}{$my[damagetracker][guildstring] | $my[damagetracker][foe-full] | $my[damagetracker][rounds] | $my[damagetracker][total] | $my[damagetracker][average]};
 	}
 	update_damage_table ${my[damagetracker][foe]} | ${my[damagetracker][rounds]} | ${my[damagetracker][total]} | ${my[damagetracker][average]};
 	reset_counter;
@@ -195,7 +197,8 @@
 		#format {dbtimestamp} {%t} {[%Y:%m:%d %H:%M:%S]};
 		db_submit_kill;
 	}{
-		#system {echo "$my[damagetracker][guildstring] | $my[damagetracker][foe-full] | $my[damagetracker][rounds] | $my[damagetracker][total] | $my[damagetracker][average]" >> .tt/logs/kill-records.txt};
+		#line log {${logpath}/kill-records.txt}{$my[damagetracker][guildstring] | $my[damagetracker][foe-full] | $my[damagetracker][rounds] | $my[damagetracker][total] | $my[damagetracker][average]};
 	};
 	reset_counter;
 };
+#class {damagetracker}{close}
