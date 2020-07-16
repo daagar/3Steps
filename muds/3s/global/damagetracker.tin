@@ -201,4 +201,13 @@
 	};
 	reset_counter;
 };
+#alias {damage_summary}{
+	#list {damagetracker[log]}{size}{damage_tracker_log_size};
+	#loop {1}{$damage_tracker_log_size}{mycount}{
+		#var {tmpline}{${damagetracker[log][${mycount}]}};
+		#replace {tmpline}{ | } { };
+		#echo {${tmpline}};
+	}
+};
+
 #class {damagetracker}{close}
