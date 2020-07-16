@@ -5,6 +5,7 @@
 .DS*
 info/
 profiles/rc.tin
+profiles/start.tin
 logs/
 vars/
 lastroom.tt

@@ -1099,7 +1099,7 @@ E { 2687} {s} {s} {4} {0} {} {1.000} {}
 R {  176} {0} {} {176} { } {The entrance to Aegis Global can be seen just off to the west, a bit of natural light streaming in from that direction.  Given your proximity to that safety, you should probably leave while you still can.  If you insist on exploring this building further, you could venture east or south inside what's left of the once thriving megacorp. } {Aegis Global - Level 1} {} {} {} {1.000} {}
 E {  177} {s} {s} {4} {0} {} {1.000} {}
 E {  179} {e} {e} {2} {0} {} {1.000} {}
-E {   62} {w} {#read .tt/Dirs/aegis_load.tt;w} {8} {0} {} {1.000} {}
+E {   62} {w} {#read ${mudpath}/areas/aegis_load.tt;w} {8} {0} {} {1.000} {}
 
 R {  177} {0} {} {177} { } {Litter is strewn across the floor, crunching beneath your feet as you traverse the halls of Aegis Global.  Flickering light from the damaged fluorescents overhead provides intermittent visibility of your broken surroundings.  Paint is peeling off the walls, splotches of blood decorating the remaining paint with gory details of some recent act of violence. } {Aegis Global - Level 1} {} {} {} {1.000} {}
 E {  176} {n} {n} {1} {0} {} {1.000} {}
@@ -5883,16 +5883,16 @@ E { 1186} {n} {n} {1} {0} {} {1.000} {}
 
 R { 1186} {0} {} {1186} { } {} {} {} {} {} {1.000} {}
 E { 1185} {s} {s} {4} {0} {} {1.000} {}
-E { 1187} {e} {#read .tt/Dirs/crystals1_load.tt;e} {2} {0} {} {1.000} {}
+E { 1187} {e} {#read ${mudpath}/areas/crystals1_load.tt;e} {2} {0} {} {1.000} {}
 
 R { 1187} {0} {} {crystals1} { } {} {} {crystals1} {} {} {1.000} {}
 E { 1188} {n} {n} {1} {0} {} {1.000} {}
 E { 1192} {e} {e} {2} {0} {} {1.000} {}
-E { 1186} {w} {#read .tt/Dirs/crystals1_unload.tt;w} {8} {0} {} {1.000} {}
+E { 1186} {w} {#read ${mudpath}/areas/crystals1_unload.tt;w} {8} {0} {} {1.000} {}
 
 R { 1188} {0} {} {1188} { } {} {} {} {} {} {1.000} {}
 E { 1189} {n} {n} {1} {0} {} {1.000} {}
-E { 1187} {s} {#read .tt/Dirs/crystals1_load.tt;s} {4} {0} {} {1.000} {}
+E { 1187} {s} {#read ${mudpath}/areas/crystals1_load.tt;s} {4} {0} {} {1.000} {}
 
 R { 1189} {0} {} {1189} { } {} {} {} {} {} {1.000} {}
 E { 1188} {s} {s} {4} {0} {} {1.000} {}
@@ -5907,7 +5907,7 @@ E { 1190} {e} {e} {2} {0} {} {1.000} {}
 
 R { 1192} {0} {} {1192} { } {} {} {} {} {} {1.000} {}
 E { 1193} {ne} {ne} {3} {0} {} {1.000} {}
-E { 1187} {w} {#read .tt/Dirs/crystals1_load.tt;w} {8} {0} {} {1.000} {}
+E { 1187} {w} {#read ${mudpath}/areas/crystals1_load.tt;w} {8} {0} {} {1.000} {}
 
 R { 1193} {0} {} {1193} { } {} {} {} {} {} {1.000} {}
 E { 1192} {sw} {sw} {12} {0} {} {1.000} {}
@@ -8163,14 +8163,14 @@ E { 1753} {w} {w} {8} {0} {} {1.000} {}
 
 R { 1753} {0} {} {1753} { } {} {} {} {} {} {1.000} {}
 E { 1752} {e} {e} {2} {0} {} {1.000} {}
-E { 1754} {d} {#read .tt/Dirs/crystals1.5_load.tt;d} {32} {0} {} {1.000} {}
+E { 1754} {d} {#read ${mudpath}/areas/crystals1.5_load.tt;d} {32} {0} {} {1.000} {}
 
 R { 1754} {0} {} {crystals1.5} { } {} {} {crystals1.5} {} {} {1.000} {}
 E { 1755} {se} {se} {6} {0} {} {1.000} {}
-E { 1753} {u} {#read .tt/Dirs/crystals1.5_unload.tt;u} {16} {0} {} {1.000} {}
+E { 1753} {u} {#read ${mudpath}/areas/crystals1.5_unload.tt;u} {16} {0} {} {1.000} {}
 
 R { 1755} {0} {} {1755} { } {} {} {} {} {} {1.000} {}
-E { 1754} {nw} {#read .tt/Dirs/crystals1.5_load.tt;nw} {9} {0} {} {1.000} {}
+E { 1754} {nw} {#read ${mudpath}/areas/crystals1.5_load.tt;nw} {9} {0} {} {1.000} {}
 E { 1756} {se} {se} {6} {0} {} {1.000} {}
 
 R { 1756} {0} {} {1756} { } {} {} {} {} {} {1.000} {}
@@ -8647,10 +8647,10 @@ E { 1874} {sw} {sw} {12} {0} {} {1.000} {}
 
 R { 1874} {0} {} {1874} { } {} {} {} {} {} {1.000} {}
 E { 1873} {ne} {ne} {3} {0} {} {1.000} {}
-E { 1875} {d} {#read .tt/Dirs/crystals2_load.tt;d} {32} {0} {} {1.000} {}
+E { 1875} {d} {#read ${mudpath}/areas/crystals2_load.tt;d} {32} {0} {} {1.000} {}
 
 R { 1875} {0} {} {crystals2} { } {} {} {crystals2} {} {} {1.000} {}
-E { 1874} {u} {#read .tt/Dirs/crystals2_unload.tt;u} {16} {0} {} {1.000} {}
+E { 1874} {u} {#read ${mudpath}/areas/crystals2_unload.tt;u} {16} {0} {} {1.000} {}
 E { 1876} {w} {w} {8} {0} {} {1.000} {}
 E { 1882} {sw} {sw} {12} {0} {} {1.000} {}
 E { 1883} {s} {s} {4} {0} {} {1.000} {}
@@ -8658,7 +8658,7 @@ E { 2042} {n} {n} {1} {0} {} {1.000} {}
 E { 2043} {ne} {ne} {3} {0} {} {1.000} {}
 
 R { 1876} {0} {} {1876} { } {} {} {} {} {} {1.000} {}
-E { 1875} {e} {#read .tt/Dirs/crystals2_load.tt;e} {2} {0} {} {1.000} {}
+E { 1875} {e} {#read ${mudpath}/areas/crystals2_load.tt;e} {2} {0} {} {1.000} {}
 E { 1877} {w} {w} {8} {0} {} {1.000} {}
 
 R { 1877} {0} {} {1877} { } {} {} {} {} {} {1.000} {}
@@ -9207,7 +9207,7 @@ R { 2008} {0} {} {2008} { } {} {} {} {} {} {1.000} {}
 E { 2007} {sw} {sw} {12} {0} {} {1.000} {}
 E { 2009} {nw} {nw} {9} {0} {} {1.000} {}
 E { 2068} {w} {w} {8} {0} {} {1.000} {}
-E { 2069} {d} {#read .tt/Dirs/crystals3_load.tt;d} {32} {0} {} {1.000} {}
+E { 2069} {d} {#read ${mudpath}/areas/crystals3_load.tt;d} {32} {0} {} {1.000} {}
 
 R { 2009} {0} {} {2009} { } {} {} {} {} {} {1.000} {}
 E { 2008} {se} {se} {6} {0} {} {1.000} {}
@@ -9454,11 +9454,11 @@ E { 2067} {nw} {nw} {9} {0} {} {1.000} {}
 E { 2008} {e} {e} {2} {0} {} {1.000} {}
 
 R { 2069} {0} {} {crystals3} { } {} {} {crystals3} {} {} {1.000} {}
-E { 2008} {u} {#read .tt/Dirs/crystals3_unload.tt;u} {16} {0} {} {1.000} {}
+E { 2008} {u} {#read ${mudpath}/areas/crystals3_unload.tt;u} {16} {0} {} {1.000} {}
 E { 2070} {ne} {ne} {3} {0} {} {1.000} {}
 
 R { 2070} {0} {} {2070} { } {} {} {} {} {} {1.000} {}
-E { 2069} {sw} {#read .tt/Dirs/crystals3_load.tt;sw} {12} {0} {} {1.000} {}
+E { 2069} {sw} {#read ${mudpath}/areas/crystals3_load.tt;sw} {12} {0} {} {1.000} {}
 E { 2071} {ne} {ne} {3} {0} {} {1.000} {}
 
 R { 2071} {0} {} {2071} { } {} {} {} {} {} {1.000} {}
@@ -10633,10 +10633,10 @@ E { 2351} {d} {d} {32} {0} {} {1.000} {}
 
 R { 2351} {0} {<118>} {2351} { } {} {} {} {} {} {1.000} {}
 E { 2350} {u} {u} {16} {0} {} {1.000} {}
-E { 2352} {d} {#read .tt/Dirs/crystals4_load.tt;d} {32} {0} {} {1.000} {}
+E { 2352} {d} {#read ${mudpath}/areas/crystals4_load.tt;d} {32} {0} {} {1.000} {}
 
 R { 2352} {0} {} {crystals4} { } {You travel through a dark and eerie tunnel.  In the dim light you sense a golden hue upon the rather dull grey stone walls of the cavern here.  A small drip of water falls to the ground nearby. } {Ant Hole} {crystals4} {} {} {1.000} {}
-E { 2351} {u} {#read .tt/Dirs/crystals4_unload.tt;u} {16} {0} {} {1.000} {}
+E { 2351} {u} {#read ${mudpath}/areas/crystals4_unload.tt;u} {16} {0} {} {1.000} {}
 E {12725} {se} {se} {6} {0} {} {1.000} {}
 E {12726} {sw} {sw} {12} {0} {} {1.000} {}
 E {12727} {ne} {ne} {3} {0} {} {1.000} {}
@@ -10689,15 +10689,15 @@ E { 2364} {w} {w} {8} {0} {} {1.000} {}
 
 R { 2364} {0} {} {2364} { } {} {} {} {} {} {1.000} {}
 E { 2363} {e} {e} {2} {0} {} {1.000} {}
-E { 2365} {s} {#read .tt/Dirs/spiders_load.tt;s} {4} {0} {} {1.000} {}
+E { 2365} {s} {#read ${mudpath}/areas/spiders_load.tt;s} {4} {0} {} {1.000} {}
 
 R { 2365} {0} {} {spiders} { } {} {} {spiders} {} {} {1.000} {}
-E { 2364} {n} {#read .tt/Dirs/spiders_unload.tt;n} {1} {0} {} {1.000} {}
+E { 2364} {n} {#read ${mudpath}/areas/spiders_unload.tt;n} {1} {0} {} {1.000} {}
 E { 2366} {w} {w} {8} {0} {} {1.000} {}
 
 R { 2366} {0} {} {2366} { } {} {} {} {} {} {1.000} {}
 E { 2367} {sw} {sw} {12} {0} {} {1.000} {}
-E { 2365} {e} {#read .tt/Dirs/spiders_load.tt;e} {2} {0} {} {1.000} {}
+E { 2365} {e} {#read ${mudpath}/areas/spiders_load.tt;e} {2} {0} {} {1.000} {}
 
 R { 2367} {0} {} {2367} { } {} {} {} {} {} {1.000} {}
 E { 2366} {ne} {ne} {3} {0} {} {1.000} {}
@@ -12046,13 +12046,13 @@ E {13239} {e} {e} {2} {0} {} {1.000} {}
 
 R { 2698} {0} {} {2698} { } {The path ends at the castle gates which stand rusted open. The place looks abandoned and uninhabitable. You hear some kind of wailing from inside. You try to tell yourself to relax, but you can't help feeling nervous about this place. } {Smurfland} {} {} {} {1.000} {}
 E { 2697} {n} {n} {1} {0} {} {1.000} {}
-E { 2699} {enter} {enter;#read .tt/Dirs/garg_load.tt} {0} {0} {} {1.000} {}
+E { 2699} {enter} {enter;#read ${mudpath}/areas/garg_load.tt} {0} {0} {} {1.000} {}
 
 R { 2699} {0} {} {In the dark castle (e,w,out,s)} { } {The place looks completely deserted. The floor boards break and creak as you step on them. Doors hang open to the east and west, broken off their hinges. It's too dark to see inside the rooms, you'll have to enter to find out what's hiding in there. } {Smurf Castle} {garg} {} {} {1.000} {}
 E { 2700} {w} {w} {8} {0} {} {1.000} {}
 E { 2701} {e} {e} {2} {0} {} {1.000} {}
 E { 2702} {s} {s} {4} {0} {} {1.000} {}
-E { 2698} {out} {out;#read .tt/Dirs/garg_unload.tt} {0} {0} {} {1.000} {}
+E { 2698} {out} {out;#read ${mudpath}/areas/garg_unload.tt} {0} {0} {} {1.000} {}
 
 R { 2700} {0} {} {A room in the dark castle (e)} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2699} {e} {e} {2} {0} {} {1.000} {}
@@ -12064,7 +12064,7 @@ R { 2702} {0} {} {In the dark castle (e,w,n,s)} { } {The place looks completely 
 E { 2703} {w} {w} {8} {0} {} {1.000} {}
 E { 2704} {e} {e} {2} {0} {} {1.000} {}
 E { 2705} {s} {s} {4} {0} {} {1.000} {}
-E { 2699} {n} {n;#read .tt/Dirs/garg_load.tt} {1} {0} {} {1.000} {}
+E { 2699} {n} {n;#read ${mudpath}/areas/garg_load.tt} {1} {0} {} {1.000} {}
 
 R { 2703} {0} {} {A room in the dark castle (e)} { } {This place looked nicer in the dark. Cobwebs and dust cover everything. It also smells like some animal either made its home in here, or just plain died. The only way out is back to the east. } {Smurf Castle} {} {} {} {1.000} {}
 E { 2702} {e} {e} {2} {0} {} {1.000} {}
@@ -12253,10 +12253,10 @@ E { 2748} {n} {n} {1} {0} {} {1.000} {}
 
 R { 2748} {0} {<118>} {2748} { } {} {} {} {} {} {1.000} {}
 E { 2747} {s} {s} {4} {0} {} {1.000} {}
-E { 2749} {portal} {portal;#read .tt/Dirs/mahjongg_load.tt} {0} {0} {} {1.000} {}
+E { 2749} {portal} {portal;#read ${mudpath}/areas/mahjongg_load.tt} {0} {0} {} {1.000} {}
 
 R { 2749} {0} {} {mahjongg} { } {         Mahjongg (forest) Light seems to dapple the leaf-strewn ground beneath your feet while lush maple and birch trees stretch into the clear blue sky overhead. This tile depicts a forest in the midst of a fall day, the paint so lifelike, you can almost smell the fresh aroma of the healthy flora and gentle breeze. Tiny animal tracks dot the bottom of the tile, as if small forest creatures had recently scampered across the path. } {Mahjongg} {mahjongg} {} {} {1.000} {}
-E { 2748} {portal} {portal;#read .tt/Dirs/mahjongg_unload.tt} {0} {0} {} {1.000} {}
+E { 2748} {portal} {portal;#read ${mudpath}/areas/mahjongg_unload.tt} {0} {0} {} {1.000} {}
 E { 2750} {n} {n} {1} {0} {} {1.000} {}
 E { 2763} {w} {w} {8} {0} {} {1.000} {}
 E { 2790} {e} {e} {2} {0} {} {1.000} {}
@@ -12265,7 +12265,7 @@ R { 2750} {0} {} {2750} { } {         Mahjongg (forest) This tile has been paint
 E { 2751} {n} {n} {1} {0} {} {1.000} {}
 E { 2762} {w} {w} {8} {0} {} {1.000} {}
 E { 2789} {e} {e} {2} {0} {} {1.000} {}
-E { 2749} {s} {s;#read .tt/Dirs/mahjongg_load.tt} {4} {0} {} {1.000} {}
+E { 2749} {s} {s;#read ${mudpath}/areas/mahjongg_load.tt} {4} {0} {} {1.000} {}
 
 R { 2751} {0} {} {2751} { } {         Mahjongg (jungle) Hazy golden light has been painted amidst dark green and brown foliage on this tile. Thick roots weave their way along the ground and gnarled tree trunks rise from the dark soil up into a canopy of leaves and palm fronds. Small animal tracks dot the soil, drawn in such perfect detail that they look completely real. } {Mahjongg} {} {} {} {1.000} {}
 E { 2750} {s} {s} {4} {0} {} {1.000} {}
@@ -12336,7 +12336,7 @@ E { 2750} {e} {e} {2} {0} {} {1.000} {}
 R { 2763} {0} {} {2763} { } {         Mahjongg (forest) Dark and mysterious, this tile depicts a thick forest in the dead of night. Black tree trunks clutter your surroundings, making every step a challenge. One misstep looks like it could lead you to bump your head right into the rough bark of one of these silent woodland sentinels. Of course, you realize this is silly to consider. All of this is just paint masterfully swiped and dabbed across a flat wooden game piece. } {Mahjongg} {} {} {} {1.000} {}
 E { 2762} {n} {n} {1} {0} {} {1.000} {}
 E { 2764} {w} {w} {8} {0} {} {1.000} {}
-E { 2749} {e} {e;#read .tt/Dirs/mahjongg_load.tt} {2} {0} {} {1.000} {}
+E { 2749} {e} {e;#read ${mudpath}/areas/mahjongg_load.tt} {2} {0} {} {1.000} {}
 
 R { 2764} {0} {} {2764} { } {         Mahjongg (farm) This tile has been painted to look like a wide green pasture surrounded by a dilapidated wooden fence. Patches of clover dot the grass and weeds grow tall along the fence posts. Beyond the fence lies a white farmhouse and behind it, a narrow outhouse. Long shadows trail the fence and buildings, evidence of the early evening hour depicted in this landscape. } {Mahjongg} {} {} {} {1.000} {}
 E { 2763} {e} {e} {2} {0} {} {1.000} {}
@@ -12486,7 +12486,7 @@ E { 2792} {e} {e} {2} {0} {} {1.000} {}
 R { 2790} {0} {} {2790} { } {         Mahjongg (forest) This tile has been painted to look like a dense forest of pines and junipers. The thick, brushy branches of the trees hang low, bearing cones and berries that would be ripe for the picking if they were actually real. The soil underfoot looks rich and dark, as if its softness could cushion your steps as you explore this strange and inviting environment. } {Mahjongg} {} {} {} {1.000} {}
 E { 2789} {n} {n} {1} {0} {} {1.000} {}
 E { 2791} {e} {e} {2} {0} {} {1.000} {}
-E { 2749} {w} {w;#read .tt/Dirs/mahjongg_load.tt} {8} {0} {} {1.000} {}
+E { 2749} {w} {w;#read ${mudpath}/areas/mahjongg_load.tt} {8} {0} {} {1.000} {}
 
 R { 2791} {0} {} {2791} { } {         Mahjongg (farm) You appear to be inside a dusty old barn, its doors thrown open to display a wide vista of wheatfields that stretch off into the horizon. Painted in shades of red and gold, the tile gives the impression that the barn is warm and dry. Hazy light full of dust motes shimmers over a wooden floor covered in rough straw. A shovel is propped up against the wall in one corner. } {Mahjongg} {} {} {} {1.000} {}
 E { 2790} {w} {w} {8} {0} {} {1.000} {}
@@ -13054,17 +13054,17 @@ E { 4591} {s} {s} {4} {0} {} {1.000} {}
 
 R { 2912} {0} {} {2912} { } {} {} {} {} {} {1.000} {}
 E { 2911} {s} {s} {4} {0} {} {1.000} {}
-E { 2913} {enter} {enter;#read .tt/Dirs/firegiants_load.tt} {0} {0} {} {1.000} {}
+E { 2913} {enter} {enter;#read ${mudpath}/areas/firegiants_load.tt} {0} {0} {} {1.000} {}
 E {11072} {w} {w} {8} {0} {} {1.000} {}
 
 R { 2913} {0} {} {fire giants} { } {} {} {} {} {} {1.000} {}
 E { 2914} {n} {n} {1} {0} {} {1.000} {}
-E { 2912} {leave} {leave;#read .tt/Dirs/firegiants_unload.tt} {0} {0} {} {1.000} {}
+E { 2912} {leave} {leave;#read ${mudpath}/areas/firegiants_unload.tt} {0} {0} {} {1.000} {}
 
 R { 2914} {0} {} {2914} { } {} {} {} {} {} {1.000} {}
 E { 2915} {nw} {nw} {9} {0} {} {1.000} {}
 E { 2926} {ne} {ne} {3} {0} {} {1.000} {}
-E { 2913} {s} {s;#read .tt/Dirs/firegiants_load.tt} {4} {0} {} {1.000} {}
+E { 2913} {s} {s;#read ${mudpath}/areas/firegiants_load.tt} {4} {0} {} {1.000} {}
 
 R { 2915} {0} {} {2915} { } {} {} {} {} {} {1.000} {}
 E { 2914} {se} {se} {6} {0} {} {1.000} {}
@@ -13254,11 +13254,11 @@ E { 2958} {e} {e} {2} {0} {} {1.000} {}
 
 R { 2958} {0} {} {2958} { } {} {} {} {} {} {1.000} {}
 E { 2957} {w} {w} {8} {0} {} {1.000} {}
-E { 2959} {enter} {enter;#read .tt/Dirs/askar_load.tt} {0} {0} {} {1.000} {}
+E { 2959} {enter} {enter;#read ${mudpath}/areas/askar_load.tt} {0} {0} {} {1.000} {}
 
 R { 2959} {0} {} {askars} { } {} {} {} {} {} {1.000} {}
 E { 2960} {s} {s} {4} {0} {} {1.000} {}
-E { 2958} {leave} {leave;#read .tt/Dirs/askar_unload.tt} {0} {0} {} {1.000} {}
+E { 2958} {leave} {leave;#read ${mudpath}/areas/askar_unload.tt} {0} {0} {} {1.000} {}
 
 R { 2960} {0} {} {2960} { } {} {} {} {} {} {1.000} {}
 E { 2959} {n} {n} {1} {0} {} {1.000} {}
@@ -13875,14 +13875,14 @@ E { 3099} {e} {e} {2} {0} {} {1.000} {}
 
 R { 3099} {0} {<118>} {3099} { } {} {} {} {} {} {1.000} {}
 E { 3098} {w} {w} {8} {0} {} {1.000} {}
-E { 3100} {swim} {search reeds;swim river;#read .tt/Dirs/ccows_load.tt} {0} {0} {} {1.000} {}
+E { 3100} {swim} {search reeds;swim river;#read ${mudpath}/areas/ccows_load.tt} {0} {0} {} {1.000} {}
 
 R { 3100} {0} {} {} { } {-= Riverbank =- The edge of the riverbank rises high to the east.  The River Summerset rises up to the sandy ground.  Blooms of meadowsweet and yellow agrimony grow in patches along the river's edge.  Bundles of reeds can be seen to the west, swaying in the breeze. } {Summerset Warrens} {ccows} {} {} {1.000} {}
-E { 3099} {swim} {search reeds;swim river;#read .tt/Dirs/ccows_unload.tt} {0} {0} {} {1.000} {}
+E { 3099} {swim} {search reeds;swim river;#read ${mudpath}/areas/ccows_unload.tt} {0} {0} {} {1.000} {}
 E { 3101} {e} {e} {2} {0} {} {1.000} {}
 
 R { 3101} {0} {} {-= Riverbank =- (ne,nw,n,w,e)} { } {-= Riverbank =- The high bank overlooks the river and is covered in nesting holes.  Purple water germander, meadowsweet, and agrimony grows on the bank.  Fields can be seen to the east and north.  Bushes grow in sporadic places here and flame trees give some shade from the sun.  The grass is lush and green in the fields.  } {Summerset Warrens} {} {} {} {1.000} {}
-E { 3100} {w} {w;#read .tt/Dirs/ccows_load.tt} {8} {0} {} {1.000} {}
+E { 3100} {w} {w;#read ${mudpath}/areas/ccows_load.tt} {8} {0} {} {1.000} {}
 E { 3134} {e} {e} {2} {0} {} {1.000} {}
 E { 3147} {n} {n} {1} {0} {} {1.000} {}
 E { 3328} {ne} {ne} {3} {0} {} {1.000} {}
@@ -15600,7 +15600,7 @@ R { 3451} {0} {} {Zelligar's Castle (leave,n,ne,nw)} { } {You stand in the first
 E { 3469} {n} {n} {1} {0} {} {1.000} {}
 E { 3499} {nw} {nw} {9} {0} {} {1.000} {}
 E { 3500} {ne} {ne} {3} {0} {} {1.000} {}
-E { 4545} {leave} {leave;#read .tt/Dirs/zelligar_unload.tt} {0} {0} {} {1.000} {}
+E { 4545} {leave} {leave;#read ${mudpath}/areas/zelligar_unload.tt} {0} {0} {} {1.000} {}
 
 R { 3452} {0} {} {3452} { } {You are standing on top of the large parapet that surrounds the castle.  From here you can see the large moat that also surrounds the castle.  It looks as if someone was quite concerned with the defense of this place. From this elevated position, you can see far off into the distance, which would probably be advantageous in spotting advancing soldiers quickly. } {Zelligar's Castle} {} {} {} {1.000} {}
 E { 3453} {nw} {nw} {9} {0} {} {1.000} {}
@@ -15672,7 +15672,7 @@ E { 3500} {sw} {sw} {12} {0} {} {1.000} {}
 
 R { 3469} {0} {} {3469} { } {You are now in a narrow hallway that leads to the north and the main part of the castle.  The walls are crumbling with age, and the floor is covered in rubble. } {Zelligar's Castle} {} {} {} {1.000} {}
 E { 3470} {n} {n} {1} {0} {} {1.000} {}
-E { 3451} {s} {s;#read .tt/Dirs/zelligar_load.tt} {4} {0} {} {1.000} {}
+E { 3451} {s} {s;#read ${mudpath}/areas/zelligar_load.tt} {4} {0} {} {1.000} {}
 
 R { 3470} {0} {} {3470} { } {You are now near the heart of the castle.  Perhaps once a dining room, this room is now in shambles.  There is a large table at the center of the room with a shattered chandelier lying on top of it.  The walls are crumbling and a light cloud of dust floats in the air. } {Zelligar's Castle} {} {} {} {1.000} {}
 E { 3469} {s} {s} {4} {0} {} {1.000} {}
@@ -17924,7 +17924,7 @@ E { 3930} {s} {s} {4} {0} {} {1.000} {}
 
 R { 3930} {0} {} {3930} { } {A long desk with several computers on it occupies the east wall of the computer room and a half-full bookshelf lies on the west wall. Various posters from computer games are pinned to the wall, and hand-made maps from old games are lovingly displayed as well. Chairs are set up along the length of the desk for easy access to the computers that lie on it. On the far side of the room is a printer. } {Gamer's House} {} {} {} {1.000} {}
 E { 3929} {n} {n} {1} {0} {} {1.000} {}
-E { 3931} {play diablo 2} {play diablo 2;#read .tt/muds/3s/areas/d2menu_load.tt} {0} {0} {} {1.000} {}
+E { 3931} {play diablo 2} {play diablo 2;#read ${mudpath}/areas/d2menu_load.tt} {0} {0} {} {1.000} {}
 E {11885} {play ultima online} {play ultima online} {0} {0} {} {1.000} {}
 
 R { 3931} {0} {} {Main Menu (windows)} { } {You are in the main menu of Diablo 2. Gigantic fiery words float in front of you spelling out the various difficulty levels: Normal, Nightmare and Hell, and the option to return to windows. Choose your fate carefully.... } {Diablo2 Normal 20+ Nightmare 40+ Hell 60+.} {d2menu} {} {} {1.000} {}
@@ -18469,15 +18469,15 @@ E { 4058} {w} {w} {8} {0} {} {1.000} {}
 R { 4058} {0} {<118>} {4058} { } {} {} {} {} {} {1.000} {}
 E { 4057} {e} {e} {2} {0} {} {1.000} {}
 E { 3010} {s} {s} {4} {0} {} {1.000} {}
-E { 4059} {portal} {portal;#read .tt/Dirs/pol_load.tt} {0} {0} {} {1.000} {}
+E { 4059} {portal} {portal;#read ${mudpath}/areas/pol_load.tt} {0} {0} {} {1.000} {}
 
 R { 4059} {0} {} {pol} { } {  	Forest of Despair (path) Dark overhanging branches filter out the light from above till only an oppressively pale glimmer lights the path.  The path itself seems to be hesitant about continuing any further as it twists on its narrowing way through the sylvan gloom. } {Portal Of Life} {pol} {} {} {1.000} {}
 E { 4060} {n} {n} {1} {0} {} {1.000} {}
-E { 4058} {portal} {portal;#read .tt/Dirs/pol_unload.tt} {0} {0} {} {1.000} {}
+E { 4058} {portal} {portal;#read ${mudpath}/areas/pol_unload.tt} {0} {0} {} {1.000} {}
 
 R { 4060} {0} {} {4060} { } {  	Forest of Despair (path) Dark overhanging branches filter out the light from above till only an oppressively pale glimmer lights the path.  The path itself seems to be hesitant about continuing any further as it twists on its narrowing way through the sylvan gloom. } {Portal Of Life} {} {} {} {1.000} {}
 E { 4061} {n} {n} {1} {0} {} {1.000} {}
-E { 4059} {s} {s;#read .tt/Dirs/pol_load.tt} {4} {0} {} {1.000} {}
+E { 4059} {s} {s;#read ${mudpath}/areas/pol_load.tt} {4} {0} {} {1.000} {}
 
 R { 4061} {0} {} {4061} { } {} {Portal Of Life} {} {} {} {1.000} {}
 E { 4060} {s} {s} {4} {0} {} {1.000} {}
@@ -20507,7 +20507,7 @@ E { 4545} {w} {w} {8} {0} {} {1.000} {}
 
 R { 4545} {0} {<128>} {4545} { } {} {} {} {} {} {1.000} {}
 E { 4544} {e} {e} {2} {0} {} {1.000} {}
-E { 3451} {enter} {enter;#read .tt/Dirs/zelligar_load.tt} {0} {0} {} {1.000} {}
+E { 3451} {enter} {enter;#read ${mudpath}/areas/zelligar_load.tt} {0} {0} {} {1.000} {}
 E { 4604} {s} {s} {4} {0} {} {1.000} {}
 
 R { 4546} {0} {} {4546} { } {} {} {} {} {} {1.000} {}
@@ -27354,7 +27354,7 @@ E { 6022} {e} {e} {2} {0} {} {1.000} {}
 R { 6038} {0} {} {6038} { } {A brand-spanking new path! How 'bout that? It's made out of some kind of spongy material that adds a bounce to your step. The land around the path is as flat as Leeloo Dallas and looks like it's covered in AstroTurf. } {Mud} {} {} {} {1.000} {}
 E { 2744} {s} {s} {4} {0} {} {1.000} {}
 E { 6039} {n} {n} {1} {0} {} {1.000} {}
-E { 9953} {drool longingly} {drool longingly;#read .tt/Dirs/donuts_load.tt} {0} {0} {} {1.000} {}
+E { 9953} {drool longingly} {drool longingly;#read ${mudpath}/areas/donuts_load.tt} {0} {0} {} {1.000} {}
 
 R { 6039} {0} {} {fortune cookie} { } {This portion of the path is as bouncy as a trampoline. It's all you can do to avoid doing a backflip! The surrounding AstroTurf is now bright red and decorated with shiny white polka-dots. What looks like a giant glazed donut hovers overhead, occasionally dripping sugary sweetness upon the ground. } {Mud} {} {} {} {1.000} {}
 E { 6038} {s} {s} {4} {0} {} {1.000} {}
@@ -32944,7 +32944,7 @@ R { 7309} {0} {} {changeling} { } {} {} {changeling} {} {} {1.000} {}
 E { 7308} {surface} {surface} {0} {0} {} {1.000} {}
 E { 7310} {downward} {downward} {0} {0} {} {1.000} {}
 E { 7311} {outward} {outward} {0} {0} {} {1.000} {}
-E { 7313} {biome} {#map leave;outward;surface;outward;surface;outward;surface;outward;surface;outward;surface;outward;surface;outward;surface;#map goto biome;#read .tt/Dirs/biome_load.tt} {0} {0} {} {1.000} {}
+E { 7313} {biome} {#map leave;outward;surface;outward;surface;outward;surface;outward;surface;outward;surface;outward;surface;outward;surface;#map goto biome;#read ${mudpath}/areas/biome_load.tt} {0} {0} {} {1.000} {}
 E { 7310} {d} {d} {32} {0} {} {1.000} {}
 
 R { 7310} {0} {} {changeling portal} { } {} {} {} {} {} {1.000} {}
@@ -32967,7 +32967,7 @@ E { 7314} {e} {e} {2} {0} {} {1.000} {}
 E { 7410} {w} {w} {8} {0} {} {1.000} {}
 E { 7388} {s} {s} {4} {0} {} {1.000} {}
 E { 7373} {n} {n} {1} {0} {} {1.000} {}
-E { 7309} {enter} {#map leave;enter;inward;inward;inward;inward;inward;inward;inward;inward;#read .tt/Dirs/biome_unload.tt;#map goto changeling} {0} {0} {} {1.000} {}
+E { 7309} {enter} {#map leave;enter;inward;inward;inward;inward;inward;inward;inward;inward;#read ${mudpath}/areas/biome_unload.tt;#map goto changeling} {0} {0} {} {1.000} {}
 
 R { 7314} {0} {} {7314} { } {} {Changeling Biome} {} {} {} {1.000} {}
 E { 7313} {w} {w} {8} {0} {} {1.000} {}
@@ -48069,7 +48069,7 @@ E { 9951} {e} {e} {2} {0} {} {1.000} {}
 E { 9954} {w} {w} {8} {0} {} {1.000} {}
 
 R { 9953} {0} {} {Krispy Krematorium (ne,nw,n,s,exit)} { } {A brand-spanking new path! How 'bout that? It's made out of some kind of spongy material that adds a bounce to your step. The land around the path is as flat as Leeloo Dallas and looks like it's covered in AstroTurf. } {Krispy Krematorium} {donuts} {} {} {1.000} {}
-E { 6038} {exit} {exit;#read .tt/Dirs/donuts_unload.tt} {0} {0} {} {1.000} {}
+E { 6038} {exit} {exit;#read ${mudpath}/areas/donuts_unload.tt} {0} {0} {} {1.000} {}
 E {10547} {nw} {nw} {9} {0} {} {1.000} {}
 E {10583} {ne} {ne} {3} {0} {} {1.000} {}
 E {10585} {s} {s} {4} {0} {} {1.000} {}
@@ -50720,7 +50720,7 @@ E {11245} {ne} {ne} {3} {0} {} {1.000} {}
 E {11288} {e} {e} {2} {0} {} {1.000} {}
 
 R {10585} {0} {} {Krispy Krematorium (n,s,w,e)} { } {The rich, delicious aroma of chocolate fills this corridor, the smell so thick, you can almost taste it on your tongue. Every surface around you is coated in melted chocolate, from the ceiling, to the walls, to the floor on which you tread. Footing is treacherous in here due to the floor being so slick so watch your step. } {Krispy Krematorium} {} {} {} {1.000} {}
-E { 9953} {n} {n;#read .tt/Dirs/donuts_load.tt} {1} {0} {} {1.000} {}
+E { 9953} {n} {n;#read ${mudpath}/areas/donuts_load.tt} {1} {0} {} {1.000} {}
 E {10586} {e} {e} {2} {0} {} {1.000} {}
 E {11289} {w} {w} {8} {0} {} {1.000} {}
 E {11304} {s} {s} {4} {0} {} {1.000} {}
@@ -63125,7 +63125,7 @@ E {13455} {w} {w} {8} {0} {} {1.000} {}
 
 R {13455} {0} {} {} { } {} {} {} {} {} {1.000} {}
 E {13454} {e} {e} {2} {0} {} {1.000} {}
-E {  968} {s} {s;#read .tt/Dirs/rcastle_load.tt} {4} {0} {} {1.000} {}
+E {  968} {s} {s;#read ${mudpath}/areas/rcastle_load.tt} {4} {0} {} {1.000} {}
 
 R {13456} {0} {} {At a landing pad. (board,s,w)} { } {The road up the mountain comes to a halt at a giant platform. The mountain walls cut off all travel past this point, and the only way out is back down the road. } {Juggernaut} {} {} {} {1.000} {}
 E { 6371} {w} {w} {8} {0} {} {1.000} {}
