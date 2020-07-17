@@ -18,7 +18,7 @@ F 8455
 
 G 0
 
-I 1
+I 15
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} { }
+L {UNICODE GRAPHICS} {NO DIAGONAL} {}
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -273,7 +273,7 @@ E {   12} {e} {e} {2} {0} {} {1.000} {}
 
 R {    4} {0} {} {Commercial Boulevard (n,s,w,e)} { } {You are standing at the intersection of Main Street and Commercial Boulevard.  Main leads north and Commercial runs to west and east. Just north of here is the center of town.  To the south lies a slightly disreputable looking, noisy, and gin-smelling building with a large garish tankard of ale painted over the door. } {Mud} {} {} {} {1.000} {}
 E {    1} {n} {n} {1} {0} {} {1.000} {}
-E {   13} {s} {s} {4} {0} {} {1.000} {}
+E { 2838} {s} {s} {4} {0} {} {1.000} {}
 E {   14} {w} {w} {8} {0} {} {1.000} {}
 E {   15} {e} {e} {2} {0} {} {1.000} {}
 
@@ -285,8 +285,10 @@ E {  355} {n} {n} {1} {0} {} {1.000} {}
 E {  356} {s} {s} {4} {0} {} {1.000} {}
 E {  357} {w} {w} {8} {0} {} {1.000} {}
 
-R {    6} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
+R {    6} {0} {} {The Foundation Emporium (u,d,w)} { } {           **  Welcome to the Foundation Emporium!  ** In a time long past, the city of Foundation was built around this shop.  Since then the shop has grown to be the largest in the land.  Many things change hands here, from the most common, to the most bizarre. There is a plaque hanging behind the counter. } {Mud} {} {} {} {1.000} {}
 E {    1} {w} {w} {8} {0} {} {1.000} {}
+E { 2836} {u} {u} {16} {0} {} {1.000} {}
+E { 2837} {d} {d} {32} {0} {} {1.000} {}
 
 R {    7} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
 
@@ -308,7 +310,7 @@ E {   31} {n} {n} {1} {0} {} {1.000} {}
 E {   32} {e} {e} {2} {0} {} {1.000} {}
 
 R {   13} {0} {} {Fortress Pub (sw,u,d,n,w,e)} { } {		Welcome to the Fortress!! You are in a wide spacious room dominated by an immense redwood bar at the southern end.  Light reflects off the brightly waxed oaken floors, lovingly maintained by the enigmatic Doyle, who nods in your direction from behind the bar.  Tables filled with adventurers of various sorts are packed into the room, along with more private booths along the eastern and western walls.  A spiral staircase made of some odd metal dominates the center of the Fortress.  The old-style western saloon doors that exit to Foundation are to the north.  An open door is to your west and there seems to be some sort of humidor set up in the eastern section.  There's yet another exit from the room to the south, behind the bar.  A menu is posted in neon glory above the bar. } {Mud} {} {} {} {1.000} {}
-E {    4} {n} {n} {1} {0} {} {1.000} {}
+E { 2838} {n} {n} {1} {0} {} {1.000} {}
 E {   48} {u} {u} {16} {0} {} {1.000} {}
 E {   49} {d} {d} {32} {0} {} {1.000} {}
 
@@ -381,7 +383,7 @@ E {  156} {w} {w} {8} {0} {} {1.000} {}
 E {  157} {e} {e} {2} {0} {} {1.000} {}
 E {   24} {vortex} {vortex} {0} {0} {} {1.000} {}
 
-R {   29} {0} {} {The Cosmic Rift (sw,n,exodus)} { } {The entire area fluctuates between blinding light and absolute darkness, making it impossible to see but a few inches ahead of pure nothingness. It seems that you've reached a plane that is neither physical nor celestial, but somewhere in between. A feeling of angelic presence emanates from the vast beyond, sparking curiosity deep within your very soul. You may choose to follow this calling via exodus or you may ignore it by returning to the southwest. To the north, you see some ruins. } {Mud} {} {} {} {1.000} {}
+R {   29} {0} {} {The Cosmic Rift (sw,n,exodus)} { } {The entire area fluctuates between blinding light and absolute darkness, making it impossible to see but a few inches ahead of pure nothingness. It seems that you've reached a plane that is neither physical nor celestial, but somewhere in between. A feeling of angelic presence emanates from the vast beyond, sparking curiosity deep within your very soul. You may choose to follow this calling via exodus or you may ignore it by returning to the southwest. To the north, you see some ruins. } {Angels} {} {} {} {1.000} {}
 E {   25} {sw} {sw} {12} {0} {} {1.000} {}
 E {  344} {n} {n} {1} {0} {} {1.000} {}
 E {  345} {exodus} {exodus} {0} {0} {} {1.000} {}
@@ -464,7 +466,7 @@ E {   13} {d} {d} {32} {0} {} {1.000} {}
 R {   49} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
 E {   13} {u} {u} {16} {0} {} {1.000} {}
 
-R {   50} {0} {} {Sentinel's Path (w,e)} { } {You are walking along a wide and grassy path running west to east through the great ancient forest.  A soft breeze blows past, carrying the scent of wild flowers. } {Bard} {} {} {} {1.000} {}
+R {   50} {0} {} {Sentinel's Path (w,e)} { } {You are walking along a wide and grassy path running west to east through the great ancient forest.  A soft breeze blows past, carrying the scent of wild flowers. } {Mud} {} {} {} {1.000} {}
 E {   43} {e} {e} {2} {0} {} {1.000} {}
 E {   52} {w} {w} {8} {0} {} {1.000} {}
 
@@ -472,7 +474,7 @@ R {   51} {5130} {<g09>} {} { } {} {} {} {} {} {1.000} {}
 E {   44} {w} {w} {8} {0} {} {1.000} {}
 E {   42} {e} {e} {2} {0} {} {1.000} {}
 
-R {   52} {0} {} {Sentinel's Path (n,s,w,e)} { } {You are at the intersection of a wide grassy path which goes east to west, and a well travelled road running north to south.  You can see a strange multicolored haze off to the west.  The colossal trees of the ancient forest prevent you from seeing much else of note. } {Bard} {} {} {} {1.000} {}
+R {   52} {0} {} {Sentinel's Path (n,s,w,e)} { } {You are at the intersection of a wide grassy path which goes east to west, and a well travelled road running north to south.  You can see a strange multicolored haze off to the west.  The colossal trees of the ancient forest prevent you from seeing much else of note. } {Mud} {} {} {} {1.000} {}
 E {   50} {e} {e} {2} {0} {} {1.000} {}
 E {   53} {n} {n} {1} {0} {} {1.000} {}
 E {   54} {s} {s} {4} {0} {} {1.000} {}
@@ -25118,3 +25120,13 @@ E { 2831} {descend} {descend} {0} {0} {} {1.000} {}
 R { 2834} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
 
 R { 2835} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 2836} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {    6} {d} {d} {32} {0} {} {1.000} {}
+
+R { 2837} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {    6} {u} {u} {16} {0} {} {1.000} {}
+
+R { 2838} {10} {} {} { } {} {} {} {} {} {1.000} {}
+E {   13} {s} {s} {4} {0} {} {1.000} {}
+E {    4} {n} {n} {1} {0} {} {1.000} {}

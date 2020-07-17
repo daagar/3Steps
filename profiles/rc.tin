@@ -43,7 +43,12 @@
 	#var {mappath}{${mudpath}/maps};
 	#var {charpath}{${myprofilepath}/chars/${char}};
 	#var {varpath}{${charpath}/vars};
-	#var {mapfile}{${mappath}/${mud}.map};
+	#if {"$mud" == "3k"} {
+		#var {mapfile}{${mappath}/3k.map};
+	} {
+		#var {mapfile}{${mappath}/${mud}.map};
+	}
+	
 }
 
 #var world {}

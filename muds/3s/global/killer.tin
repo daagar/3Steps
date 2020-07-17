@@ -11,6 +11,7 @@
 #var automap 0
 #var autogather 0
 #var autokill 0
+#var autoqueue 0
 
 #alias {kk}{kill $kstr};
 
@@ -610,14 +611,19 @@ make_global_blacklist
 			#math {tmp_size}{$area_size + 1};
 			#if {$room_index > $tmp_size}{
 				#var {room_index}{1};
-				#if {$autoqueue == 1}{
-					#math {targetarea}{${areaselector[current]} + 1};
-					#if {${targetarea} > ${queue_size}}{#var {targetarea}{1}};
+				#math {targetarea}{${areaselector[current]} + 1};
+				#if {${targetarea} > ${queue_size}} {
+					#if {$bot && !$autoqueue} {
+						.stop;
+						go cot;
+					} {
+						#var {targetarea}{1};
+						#var {do_queue2}{1};
+						#delay {0.15}{next_area_function};
+					}; 
+				} {
 					#var {do_queue2}{1};
 					#delay {0.15}{next_area_function};
-				}{
-					make_killpath {${roomlist[${room_index}]}};
-					step_function;
 				};
 			}{
 				#if {$room_index <= $area_size}{
@@ -631,11 +637,16 @@ make_global_blacklist
 				#nop {Manual path};
 				#math {room_num}{$room_num + 1};
 				#if {$room_num > $max_room}{
-					#if {$autoqueue == 1}{
-						#math {targetarea}{$my[areaselector][current] + 1};
-						#if {$targetarea > 6}{#var {targetarea}{1}};
-						#delay {0.15}{next_area_function};
-					};
+					#math {targetarea}{$my[areaselector][current] + 1};
+					#if {$targetarea > 6} {		
+						#if {$bot && !$autoqueue} {
+							.stop;
+							go cot;
+						} {
+							#var {targetarea}{1};
+							#delay {0.15}{next_area_function};
+						}
+					};		
 				}{
 					${kill_path[${room_num}]};
 				};

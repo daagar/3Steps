@@ -363,21 +363,21 @@
 
 #alias {mapname %1} {
 	#map name %1;
-	#map write .tt/map/${mapfile}
+	#map write ${mapfile}
 }
 
 #alias {mmu}{
 	#map run {%0};
 	#map set {roomnote} {%0};
 	#map set {roomname} {%0};
-	#map write .tt/map/${mapfile};
+	#map write ${mapfile};
 };
 
 #alias {mapsave} {
 	#if {$stepignore > 0}{
 		#echo {It's likely that you don't want to save.  Turn off the Magic Mapper and save again};
 	}{
-		#map write .tt/map/${mapfile}
+		#map write ${mapfile}
 	};
 }
 
