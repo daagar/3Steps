@@ -3,6 +3,7 @@
 #var guild jedi
 #var subguild baadu
 
+#read ${globalpath}/jedimode.tin;
 redraw jedimode on;
 #delay {2}{ftik};
 #var {my[cleanse][status]}{0};

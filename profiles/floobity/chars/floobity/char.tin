@@ -2,6 +2,9 @@
 
 #var guild angel
 
+#read ${globalpath}/angelform.tin
+
+
 fbq donuts
 fbq uo2
 fbq uo3
