@@ -3,6 +3,7 @@
 #var guild bard
 
 
+#read ${globalpath}/mystic.tin
 #alias kk {kill $kstr}
 #alias k {kill %0}
 
@@ -408,19 +409,19 @@
         #regex {$my[defense][all]}{CS}{#var my[defense][shot] 1}{#var my[defense][shot] 0};
         #regex {$my[defense][all]}{RF}{#var my[defense][fury] 1}{#var my[defense][fury] 0};
         #nop {Do the following always, regardless of incombat status};
-        #if {$my[defense][protection][evil] < 10 && "$my[configuration][alignment]" == "evil"}{
+        #if {$my[defense][protection][evil] < 10}{
         	proe;
 	};
-        #if {$my[defense][protection][good] < 10 && "$my[configuration][alignment]" == "good"}{
+        #if {$my[defense][protection][good] < 10}{
         	prog;
 	};
-        #if {$my[defense][protection][neutral] < 10 && "$my[configuration][alignment]" == "neutral"}{
+        #if {$my[defense][protection][neutral] < 10}{
         	pron;
 	};
-        #if {$my[defense][protection][heat] < 10 && "$my[configuration][temperature]" == "heat"}{
+        #if {$my[defense][protection][heat] < 10}{
         	proh;
 	};
-        #if {$my[defense][protection][frost] < 10 && "$my[configuration][temperature]" == "frost"}{
+        #if {$my[defense][protection][frost] < 10}{
         	prof;
 	};
         #if {$my[defense][skin] < 10}{
@@ -461,9 +462,9 @@
 				dosong;
 			};
 		};
-		#if {$my[hp][current] < 300}{panic};
-		#if {$my[sp][current] < 300}{panic};
-		#if {$my[karma][current] < 50}{panic};
+		#if {$my[hp][current] < 300}{go home};
+		#if {$my[sp][current] < 300}{go home};
+		#if {$my[karma][current] < 50}{go home};
 	}{
 		#if {$my[hp][current] < $my[hp][max] && $my[current][singing][status] != 1}{
 			!cast cure;

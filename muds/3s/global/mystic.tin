@@ -1,0 +1,174 @@
+#class {mystic}{open}
+
+#alias {show_bard_table}{
+	#if {"$draw[mystic]" == "on" && "$draw[canvas]" == "on"}{
+		#draw {rounded}{box} $mystic[top] -$mystic[width]+2 $mystic[bottom] -$mystic[width]+40;
+		#showme {Mystic Song Selector} $mystic[top] -$mystic[width]+12;
+		#showme {Instrumentals} $mystic[top]+1 -$mystic[width]+5;
+		#if {"${my[configuration][desiredsong]}" == "toxic blades"}{
+			#showme {<faa> Toxic Blades<088>} $mystic[top]+2 -$mystic[width]+5;
+		}{
+			#showme { Toxic Blades} $mystic[top]+2 -$mystic[width]+5;
+		};
+		#button {$mystic[top]+2;-$mystic[width]+3;$mystic[top]+2;-$mystic[width]+8}{
+			!cease;
+			#var {my[configuration][desiredsong]}{toxic blades};
+			show_bard_table;
+		};
+		#if {${my[configuration][autoplay]} == 1}{
+			#showme {[<128>ENABLED<088>]} $mystic[top]+1 -$mystic[width]+25;
+		}{
+			#showme {[<faa>DISABLE<088>]} $mystic[top]+1 -$mystic[width]+25;
+		};
+		#button {$mystic[top]+1;-$mystic[width]+25;$mystic[top]+1;-$mystic[width]+33}{
+			autoplay;
+			show_bard_table;
+		};
+		#if {"${my[configuration][desiredsong]}" == "acid rock"}{
+			#showme {<faa> Acid Rock<088>} $mystic[top]+3 -$mystic[width]+5;
+		}{
+			#showme { Acid rock} $mystic[top]+3 -$mystic[width]+5;
+		};
+		#button {$mystic[top]+3;-$mystic[width]+3;$mystic[top]+3;-$mystic[width]+8}{
+			!cease;
+			#var {my[configuration][desiredsong]}{acid rock};
+			show_bard_table;
+		};
+		#if {"${my[configuration][desiredsong]}" == "shower of light"}{
+			#showme {<faa> Shower of Light<088>} $mystic[top]+4 -$mystic[width]+5;
+		}{
+			#showme { Shower of Light} $mystic[top]+4 -$mystic[width]+5;
+		};
+		#button {$mystic[top]+4;-$mystic[width]+3;$mystic[top]+4;-$mystic[width]+8}{
+			!cease;
+			#var {my[configuration][desiredsong]}{shower of light};
+			show_bard_table;
+		};
+		#if {"${my[configuration][desiredsong]}" == "death march"}{
+			#showme {<faa> Death March<088>} $mystic[top]+5 -$mystic[width]+5;
+		}{
+			#showme { Death March} $mystic[top]+5 -$mystic[width]+5;
+		};
+		#button {$mystic[top]+5;-$mystic[width]+3;$mystic[top]+5;-$mystic[width]+8}{
+			!cease;
+			#var {my[configuration][desiredsong]}{death march};
+			show_bard_table;
+		};
+		#if {"${my[configuration][desiredsong]}" == "rainbow of death"}{
+			#showme {<faa> Rainbow of Death<088>} $mystic[top]+6 -$mystic[width]+5;
+		}{
+			#showme { Rainbow of Death} $mystic[top]+6 -$mystic[width]+5;
+		};
+		#button {$mystic[top]+6;-$mystic[width]+3;$mystic[top]+6;-$mystic[width]+8}{
+			!cease;
+			#var {my[configuration][desiredsong]}{rainbow of death};
+			show_bard_table;
+		};
+		#showme {A Capella} $mystic[top]+7 -$mystic[width]+5;
+		#if {"${my[configuration][desiredsong]}" == "minstrel boy"}{
+			#showme {<faa> Minstrel Boy<088>} $mystic[top]+8 -$mystic[width]+5;
+		}{
+			#showme { Minstrel Boy} $mystic[top]+8 -$mystic[width]+5;
+		};
+		#button {$mystic[top]+8;-$mystic[width]+3;$mystic[top]+8;-$mystic[width]+8}{
+			!cease;
+			#var {my[configuration][desiredsong]}{minstrel boy};
+			show_bard_table;
+		};
+		#showme {Both} $mystic[top]+9 -$mystic[width]+5;
+		#if {"${my[configuration][desiredsong]}" == "into the fire"}{
+			#showme {<faa> Into the Fire<088>} $mystic[top]+10 -$mystic[width]+5;
+		}{
+			#showme { Into the Fire} $mystic[top]+10 -$mystic[width]+5;
+		};
+		#button {$mystic[top]+10;-$mystic[width]+3;$mystic[top]+10;-$mystic[width]+8}{
+			!cease;
+			#var {my[configuration][desiredsong]}{into the fire};
+			show_bard_table;
+		};
+		#if {"${my[configuration][desiredsong]}" == "sands of time"}{
+			#showme {<faa> Sands of Time<088>} $mystic[top]+11 -$mystic[width]+5;
+		}{
+			#showme { Sands of Time} $mystic[top]+11 -$mystic[width]+5;
+		};
+		#button {$mystic[top]+11;-$mystic[width]+3;$mystic[top]+11;-$mystic[width]+8}{
+			!cease;
+			#var {my[configuration][desiredsong]}{sands of time};
+			show_bard_table;
+		};
+		#if {"${my[configuration][desiredsong]}" == "devil went down to georgia"}{
+			#showme {<faa> Devil Went Down to Georgia<088>} $mystic[top]+12 -$mystic[width]+5;
+		}{
+			#showme { Devil Went Down to Georgia} $mystic[top]+12 -$mystic[width]+5;
+		};
+		#button {$mystic[top]+12;-$mystic[width]+3;$mystic[top]+12;-$mystic[width]+8}{
+			!cease;
+			#var {my[configuration][desiredsong]}{devil went down to georgia};
+			show_bard_table;
+		};
+		show_spell_selector;
+	};
+};
+
+#alias {show_spell_selector}{
+	#if {"$draw[mystic]" == "on" && "$draw[canvas]" == "on"}{
+		#draw {line} $mystic[top]+13 -$mystic[width]+3 $mystic[top]+13 -$mystic[width]+39;
+		#showme {Mystic Spell Selector} $mystic[top]+13 -$mystic[width]+13;
+		#if {"${my[configuration][desiredspell]}" == "lightning bolt"}{
+			#showme {<faa>Lightning Bolt<088>} $mystic[top]+14 -$mystic[width]+5;
+		}{
+			#showme {Lightning Bolt} $mystic[top]+14 -$mystic[width]+5;
+		};
+		#button {$mystic[top]+14;-$mystic[width]+3;$mystic[top]+14;-$mystic[width]+8}{
+			#var {my[configuration][desiredspell]}{lightning bolt};
+			show_spell_selector;
+		};
+		#if {${my[configuration][autocast]} == 1}{
+			#showme {[<128>ENABLED<088>]} $mystic[top]+14 -$mystic[width]+25;
+		}{
+			#showme {[<faa>DISABLE<088>]} $mystic[top]+14 -$mystic[width]+25;
+		};
+		#button {$mystic[top]+14;-$mystic[width]+25;$mystic[top]+14;-$mystic[width]+33}{
+			autocast;
+			show_bard_table;
+		};
+		#if {"${my[configuration][desiredspell]}" == "harmonic disruption"}{
+			#showme {<faa>Harmonic Disruption<088>} $mystic[top]+15 -$mystic[width]+5;
+		}{
+			#showme {Harmonic Disruption} $mystic[top]+15 -$mystic[width]+5;
+		};
+		#button {$mystic[top]+15;-$mystic[width]+3;$mystic[top]+15;-$mystic[width]+8}{
+			#var {my[configuration][desiredspell]}{harmonic disruption};
+			show_spell_selector;
+		};
+		#if {"${my[configuration][desiredspell]}" == "blazing notes"}{
+			#showme {<faa>Blazing Notes<088>} $mystic[top]+16 -$mystic[width]+5;
+		}{
+			#showme {Blazing Notes} $mystic[top]+16 -$mystic[width]+5;
+		};
+		#button {$mystic[top]+16;-$mystic[width]+3;$mystic[top]+16;-$mystic[width]+8}{
+			#var {my[configuration][desiredspell]}{blazing notes};
+			show_spell_selector;
+		};
+		#if {"${my[configuration][desiredspell]}" == "augmented chord"}{
+			#showme {<faa>Augmented Chord<088>} $mystic[top]+17 -$mystic[width]+5;
+		}{
+			#showme {Augmented Chord} $mystic[top]+17 -$mystic[width]+5;
+		};
+		#button {$mystic[top]+17;-$mystic[width]+3;$mystic[top]+17;-$mystic[width]+8}{
+			#var {my[configuration][desiredspell]}{augmented chord};
+			show_spell_selector;
+		};
+		#if {"${my[configuration][desiredspell]}" == "caustic critic"}{
+			#showme {<faa>Caustic Critic<088>} $mystic[top]+18 -$mystic[width]+5;
+		}{
+			#showme {Caustic Critic} $mystic[top]+18 -$mystic[width]+5;
+		};
+		#button {$mystic[top]+18;-$mystic[width]+3;$mystic[top]+18;-$mystic[width]+8}{
+			#var {my[configuration][desiredspell]}{caustic critic};
+			show_spell_selector;
+		};
+	};
+};
+
+#class {mystic}{close}

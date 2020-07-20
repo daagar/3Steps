@@ -116,6 +116,15 @@
 	#var possess[width] 0;
 };
 
+#if {"$draw[mystic]" == "on" && "$guild" == "bard"}{
+	#NOP redraw mystic off;
+	#var mystic[height] 20;
+	#var mystic[width] $right_split;
+} {
+	#var mystic[height] -1;
+	#var mystic[width] 0;
+};
+
 #if {"$draw[gline]" == "on"} {
 	#var gline[height] 3;
 } {
@@ -143,6 +152,8 @@
 	#math {summoner[bottom]} 	{${summoner[top]} + ${summoner[height]}};
 	#math {possess[top]}		{${summoner[bottom]} + 1};
 	#math {possess[bottom]}		{${possess[top]} + ${possess[height]}};
+	#math {mystic[top]}		{${possess[bottom]} + 1};
+	#math {mystic[bottom]}		{${mystic[top]} + ${mystic[height]}};
 }
 
 create_panel_alignment
@@ -252,6 +263,10 @@ create_panel_alignment
 	#NOP possess;
 	show_current_form_table;
 };
+#if {"$draw[mystic]" == "on" && "$draw[canvas]" == "on"} {
+	#NOP mystic;
+	show_bard_table;
+};
 
 #alias redraw {
 	#var redraw[args][1] valid;
@@ -272,6 +287,7 @@ create_panel_alignment
 			#case {"summoner"}	{#var redraw[option] %1};
 			#case {"possess"}	{#var redraw[option] %1};
 			#case {"damage"}	{#var redraw[option] %1};
+			#case {"mystic"}	{#var redraw[option] %1};
 			#default		{#var redraw[args][1] invalid;#showme REDRAW:  Invalid redraw option}
 		};
 		#if {"%2" != ""} {

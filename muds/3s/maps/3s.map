@@ -14,11 +14,11 @@ CROOMS <178>
 CSYMBOLS <128>
 CUSER <258>
 
-F 10
+F 11
 
 G 0
 
-I 5929
+I 969
 
 L {ASCII NESW LINE} {NO EXITS} {#}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -4991,7 +4991,6 @@ E { 3931} {menu} {menu} {0} {0} {} {1.000} {}
 E { 4292} {n} {n} {1} {0} {} {1.000} {}
 E { 4590} {s} {s} {4} {0} {} {1.000} {}
 E { 4845} {w} {w} {8} {0} {} {1.000} {}
-E {13111} {e} {e} {2} {0} {} {1.000} {}
 
 R {  970} {0} {} {Rogue Encampment (leave)} { } {You are in a large open area with archery targets scattered about. The Rogues train with their leader Kashya. Arrows whizz through the air, most hitting their target with deadly accuracy. Younger rogues have been relegated to arrow pickup duty, and they scurry all about the fields. } {Diablo2 Normal 20+ Nightmare 40+ Hell 60+.} {} {} {} {1.000} {}
 
@@ -32602,228 +32601,233 @@ E {  679} {e} {e} {2} {0} {} {1.000} {}
 E { 5822} {n} {n} {1} {0} {} {1.000} {}
 E { 5823} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7222} {0} {<118>} {7222} { } {} {} {} {} {} {1.000} {}
+R { 7222} {0} {} {7222} { } {The foyer of the bard guild has a high ceiling that vaults up into darkness.  The center area is completely open, and light pouring in through tall windows illuminates a great seal on the marble floor. There are doorways to your left and right, and flanking each doorway are pedestals on which rest potted ferns.  Another entrance in front of you leads west to the center staircase of the tower.  On either side of that entrance hang giant tapestries depicting great battle scenes of bard history.  Standing before these works of art, you feel a reaffirming sense of kinship with the bards that have come before you and those who will follow in your footsteps. } {Bard} {} {} {} {1.000} {}
 E { 7221} {e} {e} {2} {0} {} {1.000} {}
 E { 7223} {w} {w} {8} {0} {} {1.000} {}
 E { 7261} {n} {n} {1} {0} {} {1.000} {}
 E { 7276} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7223} {0} {} {7223} { } {} {} {} {} {} {1.000} {}
+R { 7223} {0} {} {7223} { } {The plush, dark red carpet is worn flat in the middle by the passage of many feet.  However it still muffles the sound of your footsteps in this wide hallway.  A plentitude of light streams in from the foyer at one end of the hall, and mysteriously from an opening at the other end.  Yet oddly, this hallway travels deep into the center of the tower.  Along both walls hang portraits with wise faces of bards in colourful regalia looking down upon you.  The distant sounds of cheerful music lilt down from the western end of the hallway, indicating the nonstop bustle of activity in the guild.  } {Bard} {} {} {} {1.000} {}
 E { 7222} {e} {e} {2} {0} {} {1.000} {}
 E { 7224} {w} {w} {8} {0} {} {1.000} {}
+E {13627} {n} {n} {1} {0} {} {1.000} {}
+E { 7275} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7224} {0} {} {7224} { } {} {} {} {} {} {1.000} {}
+R { 7224} {0} {} {7224} { } {A rush of wind hits your face and you have to squint your eyes against the bright sun.  The center of the tower is spacious and hollow, and by craning your head you can see straight up three stories to the baby blue sky.  The ground is made of the same flagstone materials as the courtyard outside, and in the center grows an ancient towering species of the rowan tree, but one far older and larger than any you have ever encountered.  To your right begins a stone staircase that hugs the tower wall and spirals around the courtyard to the upper levels.  Through open windows on the next story a cacophony of music floats down mixed with the sounds of clashing metal, creating a friendly buzz of noise overlaid with occasional shouts of laughter. Slightly to your left is a circular stairwell where stone steps lead down into darkness. } {Bard} {} {} {} {1.000} {}
 E { 7223} {e} {e} {2} {0} {} {1.000} {}
 E { 7225} {u} {u} {16} {0} {} {1.000} {}
 E { 7252} {d} {d} {32} {0} {} {1.000} {}
 
-R { 7225} {0} {} {7225} { } {} {} {} {} {} {1.000} {}
+R { 7225} {0} {} {7225} { } {The wide staircase crosses an opening in the tower wall as it spirals around the inner circle.  From here you can enter the second story of the tower to your east or continue to the upper or lower levels. Although the wind tugs more briskly here, the broad stairs offer no danger of losing your balance.  In fact looking over the edge you are afforded a breathtaking view of the courtyard below. } {Bard} {} {} {} {1.000} {}
 E { 7224} {d} {d} {32} {0} {} {1.000} {}
 E { 7226} {u} {u} {16} {0} {} {1.000} {}
 E { 7227} {e} {e} {2} {0} {} {1.000} {}
 
-R { 7226} {0} {} {7226} { } {} {} {} {} {} {1.000} {}
+R { 7226} {0} {<118>} {7226} { } {} {} {} {} {} {1.000} {}
 E { 7225} {d} {d} {32} {0} {} {1.000} {}
 
-R { 7227} {0} {} {7227} { } {} {} {} {} {} {1.000} {}
+R { 7227} {0} {} {7227} { } {On this level of the tower, there is wall-to-wall royal blue carpeting. Plenty of light streams in through the courtyard to the west, but there are also brass sconces set at equal intervals for lighting at night. Against the walls are several glass display cases that feature objects from bard history.  The exit to the east intersects with the hallway that circles the tower.  As you travel down the hallway, a sudden gust sends a small swirling flurry of leaves in from the courtyard entrance into the otherwise immaculate corridor. } {Bard} {} {} {} {1.000} {}
 E { 7225} {w} {w} {8} {0} {} {1.000} {}
 E { 7228} {e} {e} {2} {0} {} {1.000} {}
 
-R { 7228} {0} {} {7228} { } {} {} {} {} {} {1.000} {}
+R { 7228} {0} {} {7228} { } {You have come to a spacious intersection in the hallway.  Potted ferns in large brass urns sit on either side of french glass doors that open out onto a narrow stone veranda to the east.  Sunlight striking the imperfect paned glass is showered into the hallway in a million dots of rainbow colors that dance in and out of view as wispy clouds pass in front of the sun.  Although the walls and ceiling are made of thick stone, the effect is like standing inside a multifaceted crystal ball. The rich blue carpet continues to the north and south around the tower. A small brass plaque is set in the stone wall next to the north exit. } {Bard} {} {} {} {1.000} {}
 E { 7227} {w} {w} {8} {0} {} {1.000} {}
 E { 7229} {e} {e} {2} {0} {} {1.000} {}
 E { 7230} {n} {n} {1} {0} {} {1.000} {}
 E { 7251} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7229} {0} {} {7229} { } {} {} {} {} {} {1.000} {}
+R { 7229} {0} {} {7229} { } {A stiff breeze blows in from the east, wafting up scents from the garden below.  The balcony is narrow but has a pair of white marble benches near the stone railing.  On the corners of the railing are perched two smiling gargoyles that look out at the panoramic view of Foundation.  A few neatly trimmed tendrils of ivy growing up from below drape over the doorway that leads out onto the veranda.  Next to the french doors you see a small brass plaque affixed to the stone wall. } {Bard} {} {} {} {1.000} {}
 E { 7228} {w} {w} {8} {0} {} {1.000} {}
 
-R { 7230} {0} {} {7230} { } {} {} {} {} {} {1.000} {}
+R { 7230} {0} {} {7230} { } {There are no windows in this section of the hall, creating a darker cool interior. Your eyes are drawn to the inside wall where there is a large recessed alcove.  In the alcove a soft light from above illuminates a sculpture of a gallant bard dressed in full platemail astride a rearing stallion.  Next to the statue a small brass plaque is affixed to the stone wall.  You can see a spacious chamber to the south, and the carpeted hallway also continues to the northwest from where loud clashing of metal on metal rings out. } {Bard} {} {} {} {1.000} {}
 E { 7228} {s} {s} {4} {0} {} {1.000} {}
 E { 7231} {nw} {nw} {9} {0} {} {1.000} {}
 
-R { 7231} {0} {} {7231} { } {} {} {} {} {} {1.000} {}
+R { 7231} {0} {} {7231} { } {If you have ever tried walking when there is music playing, then you have experienced the sensation of rhythm.  As your ear listens to the rhythmic beat coming from the door to the south, your footsteps can't help but fall in line.  The merry syncopation floats down the hallway and out through the open windows.  A stone archway is visible down the hall to the west, and the hallway also continues in the other direction to the southeast. } {Bard} {} {} {} {1.000} {}
 E { 7230} {se} {se} {6} {0} {} {1.000} {}
 E { 7232} {s} {s} {4} {0} {} {1.000} {}
 E { 7233} {w} {w} {8} {0} {} {1.000} {}
 
-R { 7232} {0} {} {rhythm} { } {} {} {} {} {} {1.000} {}
+R { 7232} {0} {} {rhythm} { } {The Hall of Rhythm is a circular chamber that pulsates with the beat of drums drifting down from the dark recesses of the lofty ceiling, piped in from some unknown source.  Glass globes light the hall with a soft dim glow, the reflections from the flames forming shallow pools of light at the bases of the sconces around the room.  Various percussion instruments taken from different times and places decorate the walls. The wooden floor in the room is completely bare, save for the slight gritty feel of resin as one might expect on a stage for dancing.  If you are ready to learn something new, perhaps you can try joining in the rhythmic beat with a dance of your own. } {Bard} {} {} {} {1.000} {}
 E { 7231} {n} {n} {1} {0} {} {1.000} {}
 
-R { 7233} {0} {} {7233} { } {} {} {} {} {} {1.000} {}
+R { 7233} {0} {} {7233} { } {You are in the middle section of the hallway in front of an open archway, through which comes the loud sounds of clashing weapons. Further down the hall to the east you can see another room with its door thrown wide open, while in the other direction the hallway curves out of sight to the southwest.  A few errant dust motes drift through the hallway and catch the light coming in from the open windows. } {Bard} {} {} {} {1.000} {}
 E { 7231} {e} {e} {2} {0} {} {1.000} {}
 E { 7234} {s} {s} {4} {0} {} {1.000} {}
 E { 7237} {w} {w} {8} {0} {} {1.000} {}
 
-R { 7234} {0} {} {alacrity} { } {} {} {alacrity} {} {} {1.000} {}
+R { 7234} {0} {} {alacrity} { } {As you enter the Hall of Alacrity, you stand at the top of three concentric rings of stone seating that lead down to an oval sand-covered floor.  Shallow steps are carved into the stonework both from this entrance as well as extending from the arena floor up to east and west exits.  In the center ring, there is a standard of the gallant guild on one side and the standard of the mystic guild on the other.  The southern wall directly across from you has a row of windows along the ceiling that lets in light and a cool breeze.  Below the windows, a statue of the god Hermes watches over the proceedings. } {Bard} {alacrity} {} {} {1.000} {}
 E { 7233} {n} {n} {1} {0} {} {1.000} {}
 E { 7235} {dodge} {dodge} {0} {0} {} {1.000} {}
 E { 7236} {melee} {melee} {0} {0} {} {1.000} {}
 
-R { 7235} {0} {} {dodge} { } {} {} {} {} {} {1.000} {}
+R { 7235} {0} {<118>} {dodge} { } {} {} {} {} {} {1.000} {}
 E { 7234} {out} {out} {0} {0} {} {1.000} {}
 
-R { 7236} {0} {} {melee} { } {} {} {} {} {} {1.000} {}
+R { 7236} {0} {<118>} {melee} { } {} {} {} {} {} {1.000} {}
 E { 7234} {out} {out} {0} {0} {} {1.000} {}
 
-R { 7237} {0} {} {7237} { } {} {} {} {} {} {1.000} {}
+R { 7237} {0} {} {7237} { } {A series of white stone arches and rows of tall narrow open windows extend down the carpeted hallway to the east.  Although the guild hall is already generally filled with noise, laughter, and music, the banging and clanging coming from down the hall is particularly loud even for the bard guild.  The hallway also curves around to the southwest. } {Bard} {} {} {} {1.000} {}
 E { 7233} {e} {e} {2} {0} {} {1.000} {}
 E { 7238} {sw} {sw} {12} {0} {} {1.000} {}
 
-R { 7238} {0} {} {7238} { } {} {} {} {} {} {1.000} {}
+R { 7238} {0} {} {7238} { } {This windowless section of hallway is thrown into shadows by the light coming from the windows further down.  The indirect lighting dapples the floor like walking deep in a woods where only little bits succeed in filtering through the overhanging treetops.  In the recessed inside corner of the corridor is a large boulder that looks imported from the stone giant villages of the far dragon isles with a vivid forest backdrop painted on the back wall itself.  A sculpture of a satyr who reaches no more than chest height to you blows on a set of pan pipes to the rapt attention of his audience, a young nymph perched atop the boulder with head cocked.  Amongst the leaves and branches painted on the wall you see a small brass plaque.  The long hallway continues to the south and curves out of sight to the northeast. } {Bard} {} {} {} {1.000} {}
 E { 7237} {ne} {ne} {3} {0} {} {1.000} {}
 E { 7239} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7239} {0} {} {7239} { } {} {} {} {} {} {1.000} {}
+R { 7239} {0} {} {7239} { } {The sun shines in brightly through the open windows, and you can look down into the gardens far below.  Beyond the tower walls lies the city of Foundation.  Some distance away, you can just make out the gates of the city.  Within the tower walls, it is still and quiet for this moment as you absorb the tranquil scene.  Directly to your east is a stone archway framing the entrance to the Hall of Harmony.  The royal blue carpeting continues north and south. } {Bard} {} {} {} {1.000} {}
 E { 7238} {n} {n} {1} {0} {} {1.000} {}
 E { 7240} {e} {e} {2} {0} {} {1.000} {}
 E { 7243} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7240} {0} {} {harmony} { } {} {} {} {} {} {1.000} {}
+R { 7240} {0} {} {harmony} { } {Although birdsong can be heard throughout the tower due to the close garden grounds outside, in here the singing and chirruping is louder, coming directly from the lush plantlife around the room.  Ivy hangs from four supporting stone columns in the room and is also beginning to creep up the walls.  Small trees in large planters are set around the room, as are potted ferns and smaller flowering plants and bushes.  In the center of the conservatory, a statue of the goddess Harmonia stands as the centerpiece of a large marble fountain with her hands outstretched. Water sprays up in a series of shooting streams that encircle the basin around her, tossing sparkling mist into the air.  Additional alcoves to the north and south are almost obscured by the vegetation. } {Bard} {} {} {} {1.000} {}
 E { 7239} {w} {w} {8} {0} {} {1.000} {}
 E { 7241} {playing} {playing} {0} {0} {} {1.000} {}
 E { 7242} {singing} {singing} {0} {0} {} {1.000} {}
 
-R { 7241} {0} {} {playing} { } {} {} {} {} {} {1.000} {}
+R { 7241} {0} {<118>} {playing} { } {} {} {} {} {} {1.000} {}
 E { 7240} {out} {out} {0} {0} {} {1.000} {}
 
-R { 7242} {0} {} {singing} { } {} {} {} {} {} {1.000} {}
+R { 7242} {0} {<118>} {singing} { } {} {} {} {} {} {1.000} {}
 E { 7240} {out} {out} {0} {0} {} {1.000} {}
 
-R { 7243} {0} {} {7243} { } {} {} {} {} {} {1.000} {}
+R { 7243} {0} {} {7243} { } {Unlike the other corners of the tower, this section of the hallway has windows.  They are thrown open and sunlight brightens the hallway and bounces off the royal blue carpeting.  A recessed alcove contains a modest graceful display in which bamboo stalks rise out of an arrangement of basalt rocks set in a flat stone basin.  The stalks are of varying heights and widths, cut diagonally across their tops, and create an effect reminiscent of a pipe organ.  Water gurgling up from the bottom darkens the basalt to a dark gray and occasionally spills up and over the tops of the bamboo pipes.  Behind the fountain is a small brass plaque affixed to the wall.  The hallway continues to the north and southeast. } {Bard} {} {} {} {1.000} {}
 E { 7239} {n} {n} {1} {0} {} {1.000} {}
 E { 7244} {se} {se} {6} {0} {} {1.000} {}
 
-R { 7244} {0} {} {7244} { } {} {} {} {} {} {1.000} {}
+R { 7244} {0} {} {7244} { } {The royal blue carpeting extends down the hall to the east, where a single open archway is visible.  A cloud passing over the sun temporarily shades the hallway then each section gradually brightens again.  For the moment you are held captured in a bubble of silence as all activity in the tower seems to fall into a lull.  As the sun moves from behind the cloud you hear a faint snatch of song coming from down the hall to the northwest and the moment is broken. } {Bard} {} {} {} {1.000} {}
 E { 7243} {nw} {nw} {9} {0} {} {1.000} {}
 E { 7245} {e} {e} {2} {0} {} {1.000} {}
 
-R { 7245} {0} {} {7245} { } {} {} {} {} {} {1.000} {}
+R { 7245} {0} {} {7245} { } {A cool wind blows through the hallway, lifting some of the heat that has built up from the sun shining in through the windows.  It is relatively quiet in this section, and even the birds that normally sing outside are unnaturally still.  Directly to the north is an open archway, through which you catch enticing glimpses of reflected light.  The carpeted hallway continues to the east and west. } {Bard} {} {} {} {1.000} {}
 E { 7244} {w} {w} {8} {0} {} {1.000} {}
 E { 7246} {n} {n} {1} {0} {} {1.000} {}
 E { 7249} {e} {e} {2} {0} {} {1.000} {}
 
-R { 7246} {0} {} {spellcraft} { } {} {} {} {} {} {1.000} {}
+R { 7246} {0} {} {spellcraft} { } {The first thing you notice about the Hall of Spellcrafting is that it has five tall mirrors with elaborate gold-gilded frames positioned throughout the room.  In the center of these mirrors stands a beautiful woman in a flowing gown cupping a crystal ball in her hands.  The color in her cheeks is so vibrant and she eyes you so expectantly that at first it is easy to mistake her for a real person instead of the stone statue that she is.  There are tapestries on each of the four walls, as well as alcoves to the west and east. } {Bard} {} {} {} {1.000} {}
 E { 7245} {s} {s} {4} {0} {} {1.000} {}
 E { 7247} {power} {power} {0} {0} {} {1.000} {}
 E { 7248} {mana} {mana} {0} {0} {} {1.000} {}
 
-R { 7247} {0} {} {power} { } {} {} {} {} {} {1.000} {}
+R { 7247} {0} {<118>} {power} { } {} {} {} {} {} {1.000} {}
 E { 7246} {out} {out} {0} {0} {} {1.000} {}
 
-R { 7248} {0} {} {mana} { } {} {} {} {} {} {1.000} {}
+R { 7248} {0} {<118>} {mana} { } {} {} {} {} {} {1.000} {}
 E { 7246} {out} {out} {0} {0} {} {1.000} {}
 
-R { 7249} {0} {} {7249} { } {} {} {} {} {} {1.000} {}
+R { 7249} {0} {} {7249} { } {A gentle breeze caresses your neck as a light wind blows in from the open windows in the hallway.  Looking down the corridor to the west, you see an open archway on the inner wall of the tower, and long tall windows on the outer wall.  Sunlight coming through the windows catches on dust in the hall creating slanting beams and illuminating the surrounding atmosphere with a soft glow. The hallway also bends out of sight around a corner to the northeast. } {Bard} {} {} {} {1.000} {}
 E { 7245} {w} {w} {8} {0} {} {1.000} {}
 E { 7250} {n} {n} {1} {0} {} {1.000} {}
 E { 7251} {ne} {ne} {3} {0} {} {1.000} {}
 
-R { 7250} {0} {} {knowledge} { } {} {} {} {} {} {1.000} {}
+R { 7250} {0} {} {knowledge} { } {The hall of Knowledge is a circular chamber filled with tomes, books, scrolls and other precious possessions gained by bards and sages throughout the centuries.  The domed ceiling is smooth and illuminates the room with a dull white light.  The hall is extremely quiet as sound is magically dampened allowing bards to research and increase their knowledge in peace.  Layers of shelves encircle the chamber with each layer consisting of two separate semi-circles separated by a small gap allowing access to the inside rows.  This large hall is where Bards come to increase their knowledge of the realms and lore. } {Bard} {} {} {} {1.000} {}
 E { 7249} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7251} {0} {} {7251} { } {} {} {} {} {} {1.000} {}
+R { 7251} {0} {} {7251} { } {This windowless section of the hall is dim and cool.  The main source of light comes from an illuminated alcove set in the inside wall of the corridor.  In the alcove rests a striking sculpture of a bard standing tall with a real harp clutched in one arm and the other arm outstretched with fingers spread wide.  The bard's lips are parted as if in the act of speaking a phrase that only the stone can hear.  Thrown over the bard's shoulder is a cloak carved out of smooth dark amethyst.  Next to the statue a small brass plaque is affixed to the stone wall.  You can see a spacious chamber to the north and hear murmurings and incantations coming from the southwest where the carpeted hallway continues. } {Bard} {} {} {} {1.000} {}
 E { 7249} {sw} {sw} {12} {0} {} {1.000} {}
 E { 7228} {n} {n} {1} {0} {} {1.000} {}
 
-R { 7252} {0} {} {7252} { } {} {} {} {} {} {1.000} {}
+R { 7252} {0} {} {7252} { } {The stairwell from the courtyard above leads to this small anteroom.  It has a tiled floor that alternates beige and white in a diamond checker pattern, with a nondescript grating in one corner.  The walls have a rough stone texture and are painted a sierra brown.  The room is bare save for a small niche carved in the middle of the north, south, and west walls, each decorated with a musical instrument.  To the east, a set of double doors is thrown open.  Through them, you can see a hallway lit by globes set in brass sconces on the walls. } {Bard} {} {} {} {1.000} {}
 E { 7224} {u} {u} {16} {0} {} {1.000} {}
 E { 7253} {e} {e} {2} {0} {} {1.000} {}
 
-R { 7253} {0} {} {7253} { } {} {} {} {} {} {1.000} {}
+R { 7253} {0} {} {7253} { } {Your footsteps echo hollowly in the underground passage, and the stone floor feels cold and hard beneath your feet.  Although the hallway is wide, you instinctively feel the entire weight of the tower pressing down overhead.  The flickering globes on the walls cast dancing shadows that leap towards you.  Feeling suddenly alone, your heart quickens and you keep your ears alert for sounds behind you.  Longing for company, you set eyes on the archway to the east from which emanates a murmur of voices.  Above the archway, neat gothic lettering is engraved into the stone. } {Bard} {} {} {} {1.000} {}
 E { 7252} {w} {w} {8} {0} {} {1.000} {}
 E { 7254} {sw} {sw} {12} {0} {} {1.000} {}
 E { 7258} {nw} {nw} {9} {0} {} {1.000} {}
 E { 7260} {e} {e} {2} {0} {} {1.000} {}
 
-R { 7254} {0} {} {7254} { } {} {} {} {} {} {1.000} {}
+R { 7254} {0} {} {7254} { } {Through the archway to the south you hear recitations of poetry.  The cheery sound is a welcome reprieve from the silence of the catacombs. Above the archway is inscribed part of a sonnet by the master bard himself, carved in flowing script into the rock wall.  The hallway continues northwest and northeast. } {Bard} {} {} {} {1.000} {}
 E { 7253} {ne} {ne} {3} {0} {} {1.000} {}
 E { 7255} {s} {s} {4} {0} {} {1.000} {}
 E { 7256} {nw} {nw} {9} {0} {} {1.000} {}
 
-R { 7255} {0} {} {7255} { } {} {} {} {} {} {1.000} {}
+R { 7255} {0} {} {7255} { } {A medium-sized room, almost one third of it is taken up by a stage against the far wall.  The backdrop of the stage is a long dark red curtain hung on the wall.  The rest of the room contains lounge chairs and small tables, where bards may wander in and listen to performances of music and oratory being given.  Noteworthy performances are transcribed onto a board here for others to peruse, and other bards freely add their own writings to the board as well.  Many bards weary from their travels come down to relax in here with their brethren and regale each other with tales and performances while they recuperate. } {Bard} {} {} {} {1.000} {}
 E { 7254} {n} {n} {1} {0} {} {1.000} {}
 
-R { 7256} {0} {} {7256} { } {} {} {} {} {} {1.000} {}
+R { 7256} {0} {} {7256} { } {These are the innermost halls of the tower.  A hushed silence has fallen over your surroundings, and even your footsteps sound more muted.  An archway to the west invites you to enter the library which houses the vast stores of knowledge of the bard guild.  How unusual that there isn't a door here to guard one of the guild's greatest treasures.  There is a phrase inscribed above the austere entrance.  When you have gleaned the knowledge you sought within, you may return to the main guild hall by the corridor northeast or southeast. } {Bard} {} {} {} {1.000} {}
 E { 7254} {se} {se} {6} {0} {} {1.000} {}
 E { 7257} {w} {w} {8} {0} {} {1.000} {}
 E { 7258} {ne} {ne} {3} {0} {} {1.000} {}
 
-R { 7257} {0} {} {7257} { } {} {} {} {} {} {1.000} {}
+R { 7257} {0} {} {7257} { } {Stepping onto the threshold of the library you stop and sway, for you find yourself at the top of a wide set of shallow stairs descending a short ways to the floor of the library.  Wall-to-wall mahogany bookshelves hold immense collections that disappear into the dim recesses of the ceiling.  Tall ladders on brass rails can be rolled around the room to reach the higher books.  In the middle of the floor, reading desks with small lamps provide the only source of illumination. The centerpiece of the room is a large world globe easily as tall as a human.  Stepping down into the center of the library you are hit with the musty scent of ancient leather-bound tomes that have been written by bard scholars over the years.  A message board has been placed against the back wall for bards to share stories of their travels with fellow bards. } {Bard} {} {} {} {1.000} {}
 E { 7256} {e} {e} {2} {0} {} {1.000} {}
 
-R { 7258} {0} {} {7258} { } {} {} {} {} {} {1.000} {}
+R { 7258} {0} {} {7258} { } {Following the curve of the hallway, you come to an opening leading north to an alcove. Above the archway, flames from the light sconces in the hallway cast a flickering glow over a passage engraved into the stone. The hallway continues to the southwest and southeast. } {Bard} {} {} {} {1.000} {}
 E { 7256} {sw} {sw} {12} {0} {} {1.000} {}
 E { 7259} {n} {n} {1} {0} {} {1.000} {}
 E { 7253} {se} {se} {6} {0} {} {1.000} {}
 
-R { 7259} {0} {} {7259} { } {} {} {} {} {} {1.000} {}
+R { 7259} {0} {} {7259} { } {As you enter this small room you see that it is circular with a domed mosaic ceiling. Candles in tall black iron stands on either side of the entrance illuminate the room. The white stonewashed walls are offset by rich velvety red carpet. Your eyes are drawn to three equally-spaced white marble statues that stand quietly around the room, faces of muses gazing peacefully down at the room's attendants.  Curved white benches offer a resting place between each of the statues.  Off to the left on the south wall by the entrance, a message board has been placed for bards to share their ideas for the guild with fellow bard members as inspiration strikes them. } {Bard} {} {} {} {1.000} {}
 E { 7258} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7260} {0} {} {7260} { } {} {} {} {} {} {1.000} {}
+R { 7260} {0} {} {7260} { } {If your sense of direction holds true, you are now directly below the main foyer of the guild hall.  This lower atrium is quite large, with columns throughout it supporting the roof.  Around the room are placed comfortable leather couches and low tables.  Large rugs fight off the chill of the catacombs, and tall lamps by each of the couches keep the atrium well lit.  Bookshelves to the left provide light reading material, and a large painting in an oak frame decorates the far wall. To your right is a message board on which bard guild members can tack up notices and discussions of the latest happenings in the realms. } {Bard} {} {} {} {1.000} {}
 E { 7253} {w} {w} {8} {0} {} {1.000} {}
 
-R { 7261} {0} {} {7261} { } {} {} {} {} {} {1.000} {}
+R { 7261} {0} {} {7261} { } {You are in the northeast quadrant of a carpeted hallway that leads around the tower.  At periodic intervals, tall shuttered windows show the surrounding view outside the tower and send in a light refreshing breeze that smells of flowers and trees.  The ceiling of the hallway is high, with supporting stone arches every couple of feet.  On the inside wall, a large canvas mural stretches down the hall to the northwest.  To the south, you can see the guild foyer. } {Bard} {} {} {} {1.000} {}
 E { 7222} {s} {s} {4} {0} {} {1.000} {}
 E { 7262} {nw} {nw} {9} {0} {} {1.000} {}
 
-R { 7262} {0} {} {7262} { } {} {} {} {} {} {1.000} {}
+R { 7262} {0} {} {7262} { } {As you continue through the northeast quadrant of the tower, a light gust of wind through the open shutters blows in the scent of flowers and freshly cut grass.  On the inside wall a large canvas mural stretches all the way down the hall to the southeast, leading to the guild foyer. Directly to the south is an archway with no door, through which you see shimmering colors as if from light reflecting off the rippling surface of a pool. } {Bard} {} {} {} {1.000} {}
 E { 7261} {se} {se} {6} {0} {} {1.000} {}
 E { 7263} {w} {w} {8} {0} {} {1.000} {}
+E {13627} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7263} {0} {} {7263} { } {} {} {} {} {} {1.000} {}
+R { 7263} {0} {} {7263} { } {You are at the entrance to an open stone archway leading south, the center of three in the carpeted hallway.  Austere stone support columns propagate down the hallway at even intervals, extending overhead in light-dappled arches that catch the swaying shadows of plants and trees moving outside in the gentle breeze.  You can hear the rustle of leaves with each gust of cool air that billows in through the open windows. Somewhere in the gardens outside a whippoorwill hoots a plaintive cry. } {Bard} {} {} {} {1.000} {}
 E { 7262} {e} {e} {2} {0} {} {1.000} {}
 E { 7264} {w} {w} {8} {0} {} {1.000} {}
 E { 7265} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7264} {0} {} {7264} { } {} {} {} {} {} {1.000} {}
+R { 7264} {0} {} {7264} { } {You are in the northwest quadrant of a carpeted hallway that leads around the tower.  An errant bumblebee zips in one of the open windows then lazily floats out again.  On the inside wall is a large canvas mural that stretches all the way down the hall to the southwest, from where you hear the faint clinking of coins.  To the south is an archway with no door, through which you see a museum-like chamber. } {Bard} {} {} {} {1.000} {}
 E { 7263} {e} {e} {2} {0} {} {1.000} {}
 E { 7266} {sw} {sw} {12} {0} {} {1.000} {}
+E {13626} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7265} {0} {} {bard advancement} { } {} {} {} {} {} {1.000} {}
+R { 7265} {0} {} {bard advancement} { } {As you pass under the archway you find yourself in a large hexagon-shaped room.  On each of the six walls is a large plaque upon which is inscribed calligraphic script.  Although the room is windowless, glass globes on either side of each of the plaques keep the room well-lit.  The room itself is bare save for six evenly arranged tall stands with square glass display cases protecting their contents.  These are softly illuminated from within.  In the center of this ring of displays, the seal of the Bard Guild is engraved upon the marble floor and inlaid with gold. There's a small placard here. Commands: advance [level,str,con,int,wis,dex,cha]           cost, tally, required, questansi,           list [name -or- # -or- short] } {Bard} {} {} {} {1.000} {}
 E { 7263} {n} {n} {1} {0} {} {1.000} {}
 
-R { 7266} {0} {} {7266} { } {} {} {} {} {} {1.000} {}
+R { 7266} {0} {} {7266} { } {As you progress through the northwest quadrant of the tower, tall windows at periodic intervals show the surrounding view.  Sunlight streaming in through them catches on dust motes flitting through the air, brightening them like tiny hovering fireflies.  As they drift up into the shadows of the arched ceiling, they wink out of sight, their light extinguished.  On the inside wall is a large canvas mural that stretches around the hall to the northeast from where faint sounds of clanking equipment can be heard.  You also hear the clinking of coins coming from the south. } {Bard} {} {} {} {1.000} {}
 E { 7264} {ne} {ne} {3} {0} {} {1.000} {}
 E { 7267} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7267} {0} {} {7267} { } {} {} {} {} {} {1.000} {}
+R { 7267} {0} {} {7267} { } {You can look down the carpeted hallway and see rows of stone arches across the ceiling forming a patterned tunnel of light and dark stonework, accentuated by light coming in from the windows.  This section of the hallway extends north and south, and a sign above the doorway to the east reads, 'Bard Guild Bank.' } {Bard} {} {} {} {1.000} {}
 E { 7266} {n} {n} {1} {0} {} {1.000} {}
 E { 7268} {e} {e} {2} {0} {} {1.000} {}
 E { 7269} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7268} {0} {} {7268} { } {} {} {} {} {} {1.000} {}
+R { 7268} {0} {} {7268} { } {There are some who might argue that gold has a smell, that faint metallic hint in the air that signifies the accumulation of great wealth.  Closing your eyes and inhaling deeply, you might almost imagine it permeating this posh bank reception room.  In the center of the room is a wooden stand-alone counter with a protective glass top for filling out forms and paperwork.  Lined against the mahogany paneled walls are no fewer than five automated bank machines, all ready to accept your transactions with the greatest expediency.  No expenses have been spared, including highly realistic plastic ferns that adorn endtables throughout the bank, providing a splash of color without the tedium of watering live plants.  High quality print reproductions of famous paintings adorn the walls, as good as the real thing. } {Bard} {} {} {} {1.000} {}
 E { 7267} {w} {w} {8} {0} {} {1.000} {}
 
-R { 7269} {0} {} {7269} { } {} {} {} {} {} {1.000} {}
+R { 7269} {0} {} {7269} { } {As you continue through the southwest section of the tower a bird chirps somewhere nearby and the scent of pine tickles your nose through the open windows.  Light bounces off the ceiling arches that extend row after row down the hallway and onto the large canvas mural that stretches to the southeast.  A murmuring of voices comes from that direction down the hall, and there is also the distinct clinking of coins to the north. } {Bard} {} {} {} {1.000} {}
 E { 7267} {n} {n} {1} {0} {} {1.000} {}
 E { 7270} {se} {se} {6} {0} {} {1.000} {}
 
-R { 7270} {0} {} {7270} { } {} {} {} {} {} {1.000} {}
+R { 7270} {0} {} {7270} { } {You are in the southwest quadrant of the tower.  Workers must regularly come through here\; the carpet is spotless despite all the heavy traffic, and the wall sconces are polished to a high shine.  On the inside wall is a large canvas mural that stretches all the way down the hall to the northwest, from where the faint sounds of clinking coins is barely discernable.  To your north is an open doorway, above which hangs a sign that reads 'Bard Guild Shop'. } {Bard} {} {} {} {1.000} {}
 E { 7269} {nw} {nw} {9} {0} {} {1.000} {}
 E { 7271} {e} {e} {2} {0} {} {1.000} {}
 E { 7273} {n} {n} {1} {0} {} {1.000} {}
 
-R { 7271} {0} {} {7271} { } {} {} {} {} {} {1.000} {}
+R { 7271} {0} {} {7271} { } {Sunlight bounces off the white stone arches that arc over the ceiling, and somewhere outside through the open windows you hear birds chirping. Their melodious songs are almost drowned out by the loud clinks and clanks of weapons and armours emanating from the doorway to the north. Above the entrance a sign proclaims, 'Bard Equipment Storage.' The carpeted hallway continues east and west. } {Bard} {} {} {} {1.000} {}
 E { 7270} {w} {w} {8} {0} {} {1.000} {}
 E { 7272} {n} {n} {1} {0} {} {1.000} {}
 E { 7274} {e} {e} {2} {0} {} {1.000} {}
 
-R { 7272} {0} {} {bard box} { } {} {} {} {} {} {1.000} {}
+R { 7272} {0} {} {bard box} { } {As you walk into the shop the most bewildering assortment of items greets your eyes.  Hanging on display all over the walls are various pieces of body armour, some more dented than others.  Cloaks, hats, and helmets hang on a rack against the wall to your right.  A weapons rack on your left displays wicked looking swords and daggers.  At the end of the room is a large counter with a glass case housing all manner of pitch pipes, scrolls, and other objects.  Behind the counter, an old man with a sly twinkle in his eye relaxes on a bar stool in front of an open window. } {Bard} {} {} {} {1.000} {}
 E { 7271} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7273} {0} {} {bard shop} { } {} {} {} {} {} {1.000} {}
+R { 7273} {0} {} {bard shop} { } {A portly old man sitting behind the counter gives you a beaming smile as you enter.  Light from the open window behind him brightens up the neatly kept store.  The walls are filled with shelves of items, mostly survival gear for long journeys.  You see a torch bin in one corner, and a tall display stack of music boxes in the center of the store that must have taken all morning to arrange.  There is a selection of tuners for instruments sitting on the counter next to the check-out stand.  Off to the west a curtained doorway leads to Barnaby's storage area where he keeps his more expensive items.  A sign propped up on the counter lists the full range of items for sale. } {Bard} {} {} {} {1.000} {}
 E { 7270} {s} {s} {4} {0} {} {1.000} {}
 
-R { 7274} {0} {} {7274} { } {} {} {} {} {} {1.000} {}
+R { 7274} {0} {} {7274} { } {As you walk through the southeast quadrant of the tower you idly admire the mural on the wall that extends to the northeast in the direction of the guild foyer.  Directly to the north is an open doorway above which is a sign that reads, 'Bard Guild Armoury.'  There is murmuring to the west, like the general hubbub of sound on a busy day in the marketplace. Through the open windows to the southeast flowers are abloom in the garden, and the profile of a statue is barely visible in the shade of a tree. } {Bard} {} {} {} {1.000} {}
 E { 7271} {w} {w} {8} {0} {} {1.000} {}
 E { 7275} {n} {n} {1} {0} {} {1.000} {}
 E { 7276} {ne} {ne} {3} {0} {} {1.000} {}
 
-R { 7275} {0} {} {7275} { } {} {} {} {} {} {1.000} {}
+R { 7275} {0} {} {7275} { } {As you enter the armoury you have to check back over your shoulder to make sure that you are still within the guild hall.  Tanthis has hung rich red, purple, and blue dyed fabrics on all of the walls, and laid out samples of all of his wares on display tables around the room.  The large open area in the center encourages browsing through the tables. All that is missing is the crunch of sand under your feet and the smell of blueberry pies in the air.  Perched on a stool at the back of the room next to the money till, Tanthis gives you a smile and a nod. } {Bard} {} {} {} {1.000} {}
 E { 7274} {s} {s} {4} {0} {} {1.000} {}
+E { 7223} {n} {n} {1} {0} {} {1.000} {}
 
-R { 7276} {0} {} {7276} { } {} {} {} {} {} {1.000} {}
+R { 7276} {0} {} {7276} { } {You are in the southeast quadrant of a carpeted hallway that leads around the tower. The high ceiling of the hallway has supporting stone arches every couple of feet.  At periodic intervals tall shuttered windows show the surrounding view outside the tower, and a light refreshing breeze blows in through them from the east. On the inside wall is a large canvas mural that stretches down the hall to the southwest, where voices can be heard.  Through the doors to the north, you can see the guild foyer. } {Bard} {} {} {} {1.000} {}
 E { 7274} {sw} {sw} {12} {0} {} {1.000} {}
 E { 7222} {n} {n} {1} {0} {} {1.000} {}
 
@@ -61771,9 +61775,6 @@ E {13110} {n} {n} {1} {0} {} {1.000} {}
 R {13110} {0} {} {cavern (s,e,downwest)} { } {You are moving through a winding and dark tunnel.  In the dim light you sense a golden hue upon the rather dull grey stone walls of the cavern here.  You can hear a scraping sound further into the tunnel. } {Ant Hole} {} {} {} {1.000} {}
 E {13109} {s} {s} {4} {0} {} {1.000} {}
 
-R {13111} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
-E {  969} {w} {w} {8} {0} {} {1.000} {}
-
 R {13112} {0} {} {shadowed tunnel (nw,s)} { } {You travel through a dark and eerie tunnel.  Strange shadows flutter along the stone walls of the cave, creating a feeling that you are not alone.  The ground is moist and very soft to the touch. } {Ant Hole} {} {} {} {1.000} {}
 E {13044} {nw} {nw} {9} {0} {} {1.000} {}
 E {13139} {s} {s} {4} {0} {} {1.000} {}
@@ -63703,27 +63704,27 @@ E {13567} {ascend} {ascend} {0} {0} {} {1.000} {}
 R {13591} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {13567} {n} {n} {1} {0} {} {1.000} {}
 
-R {13592} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {13592} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 5712} {d} {d} {32} {0} {} {1.000} {}
 E { 7082} {u} {u} {16} {0} {} {1.000} {}
 
-R {13593} {10} {} {} { } {} {} {} {} {} {1.000} {}
+R {13593} {5130} {} {} { } {} {} {} {} {} {1.000} {}
 E {13568} {d} {d} {32} {0} {} {1.000} {}
 E { 7081} {u} {u} {16} {0} {} {1.000} {}
 
-R {13594} {10} {} {} { } {} {} {} {} {} {1.000} {}
+R {13594} {5130} {} {} { } {} {} {} {} {} {1.000} {}
 E {11554} {d} {d} {32} {0} {} {1.000} {}
 E { 7080} {u} {u} {16} {0} {} {1.000} {}
 
-R {13595} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {13595} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {13566} {d} {d} {32} {0} {} {1.000} {}
 E { 5921} {u} {u} {16} {0} {} {1.000} {}
 
-R {13596} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {13596} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 5920} {d} {d} {32} {0} {} {1.000} {}
 E { 5919} {u} {u} {16} {0} {} {1.000} {}
 
-R {13597} {10} {<118>} {} { } {} {} {} {} {} {1.000} {}
+R {13597} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E { 5953} {d} {d} {32} {0} {} {1.000} {}
 E { 5922} {u} {u} {16} {0} {} {1.000} {}
 
@@ -63734,3 +63735,10 @@ R {13599} {0} {} {An ancient mausoleum (door)} { } {You've found your way into a
 E {13577} {door} {door} {0} {0} {} {1.000} {}
 
 R {13600} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R {13626} {0} {} {Hall of Achievement (n)} { } {The width of a modest stateroom with a high gothic ceiling, the hall of achievement carries its size with elegance and aplomb.  Like the guild foyer, the crest of the bard guild is set into a marble floor, but here the seal is etched entirely in gold.  At the far end of the room, two statues, a gallant and a mystic bard, stand eternal guard.  Between them an arched window offers a direct view of the inner courtyard and the ancient rowan tree.  On the west wall next to the gallant bard, the Gallant standard hangs down from a brass bar mounted on the wall. Similarly, the east wall is adorned with the standard of the Mystics. But it is standing between the two on the great seal of the bard guild where you may come to advance your standing should you prove worthy. } {Bard} {} {} {} {1.000} {}
+E { 7264} {n} {n} {1} {0} {} {1.000} {}
+
+R {13627} {0} {} {Backstage of a Theatre (n)} { } {You find yourself in the backstage area of an old theatre.  Old props from past performances lie about the room.  The air is slightly musty from disuse, and a light film of dust covers most objects.  The exits to various stages and settings have long since been mortared over.  The room is a curious remnant from an old past. } {Bard} {} {} {} {1.000} {}
+E { 7262} {n} {n} {1} {0} {} {1.000} {}
+E { 7223} {s} {s} {4} {0} {} {1.000} {}
