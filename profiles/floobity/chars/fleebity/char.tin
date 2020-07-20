@@ -4,7 +4,6 @@
 #var subguild krath
 
 #read ${globalpath}/jedimode.tin;
-redraw jedimode on
 #var {my[cleanse][status]}{0};
 #var {my[cloud][threshold]}{50};
 #var {my[desired][weapon]}{lightdaggers};

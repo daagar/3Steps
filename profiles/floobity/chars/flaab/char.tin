@@ -4,7 +4,6 @@
 #var subguild shimura
 
 #read ${globalpath}/jedimode.tin
-redraw jedimode on
 #var {my[desired][mode]}{hand to hand};
 #var {my[desired][modeshort]}{h};
 #var {my[desired][weapon]}{none};
