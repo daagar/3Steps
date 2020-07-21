@@ -7,6 +7,9 @@
 #alias kk {kill $kstr}
 #alias k {kill %0}
 
+!alias doheal cast cure
+#var {my[current][heal][type]}{cast cure};
+
 
 #gag {^With remarkable skill and aim you drive your weapon into a poorly defended};
 #gag {^spot on %1};
@@ -248,8 +251,9 @@
         };
 }
 
+
 #alias set_guardian {
-        !cast mystic guardian at hp/$my[configuration][guardian][hp]/cast cure;
+        !cast mystic guardian at hp/$my[configuration][guardian][hp]/doheal;
         !setpanic enthrall at 25%;
         #var {my[current][guardian][hp]}{$my[configuration][guardian][hp]};
 }
@@ -298,6 +302,25 @@
               	#var my[current][singing][status] 1;
                	#var my[current][playing][status] 1;
         };
+	#if {"${my[configuration][desiredsong]}" == "into the fire"}{
+              	#var my[current][singing][status] 1;
+               	#var my[current][playing][status] 1;
+        };
+	#if {"${my[configuration][desiredsong]}" == "devil went down to georgia"}{
+              	#var my[current][singing][status] 1;
+               	#var my[current][playing][status] 1;
+        };
+	#if {${my[current][singing][status]} == 1 && ${my[current][playing][status]} == 1}{
+		#if {"${my[current][heal][type]}" != "karma tap"}{
+			!alias doheal karma tap;
+			#var {my[current][heal][type]}{karma tap};
+		};
+	}{
+		#if {"${my[current][heal][type]}" != "cast cure"}{
+			!alias doheal cast cure;
+			#var {my[current][heal][type]}{cast cure};
+		};
+	};
 };
 
 #alias {bst}{
@@ -465,6 +488,9 @@
 		#if {$my[hp][current] < 300}{go home};
 		#if {$my[sp][current] < 300}{go home};
 		#if {$my[karma][current] < 50}{go home};
+		#if {${my[current][singing][status]} == 1 && ${my[current][playing][status]} == 1 && ${my[hp][difference]} > 300}{
+			!karma tap;
+		};
 	}{
 		#if {$my[hp][current] < $my[hp][max] && $my[current][singing][status] != 1}{
 			!cast cure;
