@@ -384,9 +384,9 @@
         #math {my[karma][difference]}{$my[karma][max] - $my[karma][current]};
         #math {my[voice][difference]}{$my[voice][max] - $my[voice][current]};
         #if {$my[configuration][autoplay] == 1}{
-                #math {my[configuration][guardian][hp]}{$my[hp][max] * 0.6};
+                #math {my[configuration][guardian][hp]}{$my[hp][max] * 0.8};
         }{
-                #math {my[configuration][guardian][hp]}{$my[hp][max] * 0.4};
+                #math {my[configuration][guardian][hp]}{$my[hp][max] * 0.6};
         };
 	#if {$my[current][guardian][hp] != $my[configuration][guardian][hp]}{
 		set_guardian;
