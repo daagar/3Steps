@@ -111,7 +111,7 @@
 };
 
 #ticker {form_damage}{
-	#if {"$draw[biome]" == "on"}{
+	#if {"$draw[canvas]" == "on" && "$draw[biome]" == "on"}{
 		db_query_form_damage
 	};
 }{30};

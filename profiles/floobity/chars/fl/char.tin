@@ -2,7 +2,7 @@
 
 #var guild changeling
 
-redraw biome on
+#read ${globalpath}/pokedex.tin
 
 #alias {autope}{
 	#if {$my[autopersevere] != 1}{

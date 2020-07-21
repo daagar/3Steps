@@ -13,7 +13,6 @@
 /* Determine Dimensions */
 
 #if {"$draw[chat]" == "on"} {
-	#read ${globalpath}/chat.tin;
 	#math chat[height] {$chat[rows] + 1};
 	#if {"$draw[map]" == "on"} {
 		#math {chat[right]} {-$map[width]-2};
@@ -55,7 +54,6 @@
 };
 
 #if {"$draw[exitpanel]" == "on"} {
-	#read ${globalpath}/exits.tin;
 	#var exitpanel[width] $right_split;
 	#var exitpanel[height] 5;
 } {
@@ -65,7 +63,6 @@
 
 #if {"$draw[selector]" == "on"} {
 	#NOP redraw selector off;
-	#read ${globalpath}/killer.tin;
 	#var selector[width] $right_split;
 	#var selector[height] 8;
 } {
@@ -75,7 +72,6 @@
 
 #if {"$draw[damage]" == "on"} {
 	#NOP redraw damage off;
-	#read ${globalpath}/damagetracker.tin;
 	#var damage[width] $right_split;
 	#var damage[height] 8;
 } {
@@ -86,7 +82,6 @@
 
 #if {"$draw[biome]" == "on" && "$guild" == "changeling"} {
 	#NOP redraw biome off;
-	#read ${globalpath}/pokedex.tin;
 	#var biome[height] 16;
 	#var biome[width] $right_split;
 } {
@@ -96,7 +91,6 @@
 
 #if {"$draw[jedimode]" == "on" && "$guild" == "jedi"} {
 	#NOP redraw jedimode off;
-	#read ${globalpath}/jedimode.tin;
 	#var jedimode[height] 20;
 	#var jedimode[width] $right_split;
 } {
@@ -106,7 +100,6 @@
 
 #if {"$draw[summoner]" == "on" && "$guild" == "mages"} {
 	#NOP redraw summoner off;
-	#read ${globalpath}/summoner.tin;
 	#var summoner[height] 12;
 	#var summoner[width] $right_split;
 } {
@@ -116,12 +109,20 @@
 
 #if {"$draw[possess]" == "on" && "$guild" == "angel"}{
 	#NOP redraw possess off;
-	#read ${globalpath}/angelform.tin;
 	#var possess[height] 8;
 	#var possess[width] $right_split;
 } {
 	#var possess[height] -1;
 	#var possess[width] 0;
+};
+
+#if {"$draw[mystic]" == "on" && "$guild" == "bard"}{
+	#NOP redraw mystic off;
+	#var mystic[height] 20;
+	#var mystic[width] $right_split;
+} {
+	#var mystic[height] -1;
+	#var mystic[width] 0;
 };
 
 #if {"$draw[gline]" == "on"} {
@@ -151,6 +152,8 @@
 	#math {summoner[bottom]} 	{${summoner[top]} + ${summoner[height]}};
 	#math {possess[top]}		{${summoner[bottom]} + 1};
 	#math {possess[bottom]}		{${possess[top]} + ${possess[height]}};
+	#math {mystic[top]}		{${possess[bottom]} + 1};
+	#math {mystic[bottom]}		{${mystic[top]} + ${mystic[height]}};
 }
 
 create_panel_alignment
@@ -260,6 +263,10 @@ create_panel_alignment
 	#NOP possess;
 	show_current_form_table;
 };
+#if {"$draw[mystic]" == "on" && "$draw[canvas]" == "on"} {
+	#NOP mystic;
+	show_bard_table;
+};
 
 #alias redraw {
 	#var redraw[args][1] valid;
@@ -280,6 +287,7 @@ create_panel_alignment
 			#case {"summoner"}	{#var redraw[option] %1};
 			#case {"possess"}	{#var redraw[option] %1};
 			#case {"damage"}	{#var redraw[option] %1};
+			#case {"mystic"}	{#var redraw[option] %1};
 			#default		{#var redraw[args][1] invalid;#showme REDRAW:  Invalid redraw option}
 		};
 		#if {"%2" != ""} {

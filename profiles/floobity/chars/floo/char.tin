@@ -3,7 +3,7 @@
 #var guild jedi
 #var subguild teepo
 
-redraw jedimode on
+#read ${globalpath}/jedimode.tin;
 #var {my[desired][weapon]}{offhand blaster};
 #var {my[desired][weapon]}{offhand blaster};
 #var {my[desired][mode]}{aimed shot};

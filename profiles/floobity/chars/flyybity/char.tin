@@ -83,9 +83,27 @@
 #gag {The chest fades into nothingness.}
 #gag {Nobody tells you:}
 #gag {Your maximum dream factor is %1 mistress, invoking that now.}
-#gag {^C:D=}
-#gag {^B:D=}
-#gag {^D=}
+
+#nop {Combat Round Stuff};
+#nop {Since Necros show health after they have left combat, check for invokes instead};
+
+#var {my[combat][check]}{0}
+
+#gag {^C:D=};
+#act {^C:D=}{
+	#var {my[combat][check]}{0};
+};
+
+#gag {^B:D=};
+#act {^B:D=}{
+	#var {my[combat][check]}{0};
+};
+#gag {^D=};
+#act {^D=}{
+	#var {my[combat][check]}{0};
+};
+
+
 #gag {Shadowy powers compel you to}
 
 #act {Visions of the guild appear first in your mind, then reality...}{
@@ -116,7 +134,7 @@
         !close chest;
         !deliver;
         !donate all;
-}
+};
 
 #alias pck {
         !retrieve;
@@ -124,7 +142,7 @@
         !put %0 in chest;
         !close chest;
         !deliver;
-}
+};
 
 #alias ppck {
         !retrieve;
@@ -132,13 +150,13 @@
         !put all in chest;
         !close chest;
         !deliver;
-}
+};
 
 #alias necrobuy {
         #var necrobuy 1;
         buy;
         #delay {2}{#var necrobuy 0};
-}
+};
 
 #act {^  %w %w %* %d for %d coins}{
         #format {reagent}{%l}{%1 %2};
@@ -146,7 +164,7 @@
         #if {$necrobuy == 1}{
                 !buy $amount $reagent;
         }
-}
+};
 
 #alias pc {
         #if {$my[undead][health] > 0}{
@@ -159,14 +177,14 @@
         !preserve corpse;
         !get corpse;
         !keep corpse;
-}
+};
 
 #alias co {
         !unwrap corpse;
         !absorb;
         pc;
         !absorb;
-}
+};
 #alias cor {
         #nop {
         !=give corpse;
@@ -176,13 +194,13 @@
         pc;
         };
         !absorb prime;
-}
+};
 
 #alias cco {
         !get corpse;
-}
+};
 
-#var autogather {1};
+#var {autogather} {1};
 
 /* HP Bar */
 #gag {HP[%1/%2] SP[%3/%4] NP[%5/%6|%7c] Status[w%8\%|p%9|v%10|r%11\%]}
@@ -234,6 +252,19 @@
 	#var {my[mem][rtr]}			{%7};		
 	#var {my[mem][pro]}			{%8};		
 	#math {my[corpses][total]}{$my[corpses][inventory] + $my[corpses][undead] + $my[corpses][coffin]};
+	#if {${my[attacker][ehealth]} == "none"}{
+		#var {my[incombat]}{0};
+	}{
+		#if {${my[combat][check]} < 1}{
+			#var {my[incombat]}{1};
+		}{
+			#var {my[incombat]}{0};
+		};
+		#math {my[combat][check]}{${my[combat][check]} + 1};
+	};
+	#if {$my[incombat] == 1}{
+		#math {my[damagetracker][rounds]}{$my[damagetracker][rounds] + 1};
+	};
 };
 
 #gag {\$[%8] Cr[%9\%] Exp[%10]}
@@ -290,7 +321,6 @@
         #var doabsorb 0;
         #var doabsorbprime 0;
         #var dodream 0;
-        #nop {Auto Alter};
         #nop {SP Healing};
         #if {$my[sp][current] < 50}{
 		#if {$my[mem][drm] > 20}{
@@ -303,8 +333,8 @@
         };
         #nop {HP Healing};
         #if {$my[hp][diff] > 150}{
-                #if {$my[corpses][total] > 0}{
-                        #var doabsorbprime 1;
+                #if {$my[mem][drm] > 10}{
+                        #var dodream 1;
                 };
         };
         #nop {Both Healing};
@@ -320,7 +350,7 @@
                 };
         };
         #nop {SP and NP Healing};
-        #if {$my[spnp][diff] > 500}{
+        #if {$my[spnp][diff] > 1500}{
                 #if {$my[corpses][total] > 0}{
                         #var doabsorb 1;
                 };
@@ -380,7 +410,8 @@
 	#showme {H:$my[hp][graph] SP:$my[sp][graph]     NP:$my[gp1][graph]   E:$enemy[graph] IC: <138>${corpses[inventory]}<088> CC: <138>$corpses[coffin]<088>${sb2_freezer} UC: <138>$corpses[undead]<088>} {-3};
 	#showme {$mip[gline][2]} {-6};
 	#showme {$mip[gline][1]} {-7};
-}
+};
+
 
 #alias {corpsetrig} {
         #2 pc;
@@ -391,7 +422,7 @@
 	};
 }
 
-#act {Flyybity dealt the killing blow to} {
+#act {Flyybity dealt the killing blow to %1.} {
 	log_damage_no_numbers %1;
 	#if {"$my[autocorpse][method]" != "off"}{
 		corpsetrig;

@@ -1,17 +1,25 @@
 #class {killer}{open}
-#var domove 0 
-#var critter_room 0 
-#var player_room 0
-#var starter 0
-#var stepper 0
-#var reversedir s
-#var reverse_dir 0
-#var findexit 0
-#var area_aggro 0
-#var automap 0
-#var autogather 0
-#var autokill 0
-#var autoqueue 0
+
+#alias {reset_killer_once}{
+	#var domove 0;
+	#var critter_room 0;
+	#var player_room 0;
+	#var starter 0;
+	#var stepper 0;
+	#var reversedir s;
+	#var reverse_dir 0;
+	#var findexit 0;
+	#var area_aggro 0;
+	#var automap 0;
+	#var autogather 0;
+	#var autokill 0;
+	#var autoqueue 0;
+	#var killer_reset 1;
+};
+
+#if {$killer_reset != 1}{
+	reset_killer_once;
+};
 
 #alias {kk}{kill $kstr};
 
