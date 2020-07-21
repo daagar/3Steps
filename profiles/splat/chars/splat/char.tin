@@ -6,7 +6,7 @@
 #var my[round] 0
 #var my[rounds_last] 0
 
-#NOP #read ${globalpath}/pokedex.tin
+#read ${globalpath}/pokedex.tin
 
 #alias {autope}{
 	#if {$my[autopersevere] != 1}{
