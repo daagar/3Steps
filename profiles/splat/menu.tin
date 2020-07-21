@@ -7,6 +7,10 @@
 #var {my[alts][1][name]}{splat3s};
 #var {my[alts][1][guild]}{changeling};
 
+#echo {2) Crankshaft (cyborg)};
+#var {my[alts][2][name]}{crankshaft};
+#var {my[alts][1][guild]}{cyborg};
+
 
 
 #echo {};

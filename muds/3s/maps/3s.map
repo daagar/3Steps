@@ -18,7 +18,7 @@ F 8455
 
 G 0
 
-I 15
+I 468
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} {}
+L {UNICODE GRAPHICS} {NO DIAGONAL} { }
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -883,14 +883,20 @@ E {  153} {s} {s} {4} {0} {} {1.000} {}
 R {  153} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
 E {  152} {n} {n} {1} {0} {} {1.000} {}
 
-R {  154} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
+R {  154} {0} {} {Crazy Road (n,s,w,shop)} { } {You step away from the void and into insanity.  You hear wailing coming from the distance and the room begins to spin before your eyes. Who knows where you are heading now but wherever it is, it's likely to be odd.  There seems to be a path off to the west, but you can't be sure. } {Mud} {} {} {} {1.000} {}
 E {   28} {s} {s} {4} {0} {} {1.000} {}
+E { 2839} {n} {n} {1} {0} {} {1.000} {}
+E { 2840} {w} {w} {8} {0} {} {1.000} {}
+E { 2841} {shop} {shop} {0} {0} {} {1.000} {}
 
-R {  155} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
+R {  155} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {   28} {n} {n} {1} {0} {} {1.000} {}
 
-R {  156} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
+R {  156} {0} {} {Eastwick (e,w,s,n)} { } {This is the Eastwick road.  It leads to you know not where. At the northern edge of the road, there is a ladder that  climbs up to the sky. Follow your feet and see where you go. } {Mud} {} {} {} {1.000} {}
 E {   28} {e} {e} {2} {0} {} {1.000} {}
+E { 2852} {w} {w} {8} {0} {} {1.000} {}
+E { 2853} {s} {s} {4} {0} {} {1.000} {}
+E { 2840} {n} {n} {1} {0} {} {1.000} {}
 
 R {  157} {0} {} {A road leading north-south (n,s,w,e)} { } {You are on a road moving east-west.  Looking to the south you can see a huge range of mountains in the distance.  To the north the ground is all charred.  You can see an occasional geyser of fire shoot up from the ground.  The land to the east seems to phase in and out periodically.  You can't be sure but it just might be the remains of the old Kingdom capital now called, aptly enough, Kayos. } {Mud} {} {} {} {1.000} {}
 E {   28} {w} {w} {8} {0} {} {1.000} {}
@@ -901,14 +907,18 @@ E {  162} {play flute} {play flute} {0} {0} {} {1.000} {}
 
 R {  158} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
 
-R {  159} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
+R {  159} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {  157} {s} {s} {4} {0} {} {1.000} {}
 
 R {  160} {0} {} {North of Center (n,s,w,e)} { } {} {Mud} {} {} {} {1.000} {}
 E {  157} {n} {n} {1} {0} {} {1.000} {}
 
-R {  161} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
+R {  161} {0} {} {A roadside (d,n,s,w,e)} { } {You have come to an intersection with a highway that appears to go nowhere.  There are tractor trailer trucks wizzing by on both sides.  After watching for a couple of minutes you could swear you have been watching the same trucks go back and forth, over and over again.  There is a really bad smell around here that you can't pin down.  Maybe those geysers?  Maybe Lovecraftian flatulence? There is a manhole cover here as well.  It seems loose--perhaps you could go down here...But to where? } {Mud} {} {} {} {1.000} {}
 E {  157} {w} {w} {8} {0} {} {1.000} {}
+E { 2844} {n} {n} {1} {0} {} {1.000} {}
+E { 2845} {d} {d} {32} {0} {} {1.000} {}
+E { 2846} {s} {s} {4} {0} {} {1.000} {}
+E { 2847} {e} {e} {2} {0} {} {1.000} {}
 
 R {  162} {0} {} {A very small forest (s,exit)} {E} {You seem to be in some sort of forest. The trees look like large mushrooms. And, you are feeling pretty small and insignificant. Must just be the fact that you think you glimpsed a 10 foot frog off to your left. There's some smoke coming from the south. Maybe there's a town there. } {Smurfland} {smurf} {} {} {1.000} {}
 E {  163} {s} {s} {4} {0} {} {1.000} {}
@@ -2145,7 +2155,8 @@ E {  346} {surface} {surface} {0} {0} {} {1.000} {}
 
 R {  467} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
 
-R {  468} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
+R {  468} {0} {} {Floating in protoplasm (office,bank,newbie,outward,login} { } {Dim, directionless light illuminates the pool, allowing you to see your chaotic surroundings. Chaotic flows of protoplasm whirl around you, or perhaps it is you that is moving while the protoplasm remains stationary, it is hard to be certain.  Thick bands of colour, all shades of yellow and greens can be seen within the flows. The protoplasm is silent as it flows around in the pool, the only sounds being those of foreign origins.  Fluctuating in volume, clarity and coherency, they are chaotic, yet soothing.  Chaotic eddies in the nearby protoplasm try and drag you in several directions simultaneously, your instincts revealing to you the exact destination of each. } {Changeling} {donate} {} {} {1.000} {}
+E {  466} {upward} {upward} {0} {0} {} {1.000} {}
 
 R {  469} {0} {} {Within a pool protoplasm (downward,outward,inward)} { } {The protoplasm is silent as it flows around in the pool, the only sounds being those of foreign origins.  Fluctuating in volume, clarity and coherency, they are chaotic, yet soothing. Spiralling around you, the protoplasm forms bands of greens and yellows which appear to glow in the dim, strange light.  At times you feel like you are moving, but a glance to the centre of the pool where you can see the patterns orbiting, shows you that it's only your imagination. The light which illuminates the pool appears to fluctuate erratically, both in intensity and colour.  } {Changeling} {} {} {} {1.000} {}
 E {  470} {downward} {downward} {0} {0} {} {1.000} {}
@@ -25127,6 +25138,489 @@ E {    6} {d} {d} {32} {0} {} {1.000} {}
 R { 2837} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
 E {    6} {u} {u} {16} {0} {} {1.000} {}
 
-R { 2838} {10} {} {} { } {} {} {} {} {} {1.000} {}
+R { 2838} {5130} {} {} { } {} {} {} {} {} {1.000} {}
 E {   13} {s} {s} {4} {0} {} {1.000} {}
 E {    4} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2839} {0} {} {Crazy Road (s,e)} { } {Your brain is under a serious assault now.  Images of horror and mayhem surround you.  Strange blobs of color float before your eyes, morphing into various shapes, each more hideous than the last. Insanity seems to be just another few breaths away. } {Mud} {} {} {} {1.000} {}
+E {  154} {s} {s} {4} {0} {} {1.000} {}
+E { 2842} {e} {e} {2} {0} {} {1.000} {}
+
+R { 2840} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {  154} {e} {e} {2} {0} {} {1.000} {}
+E {  156} {s} {s} {4} {0} {} {1.000} {}
+
+R { 2841} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 2842} {0} {} {A bridge (w,e)} { } {You are crossing a bridge of mist.  In places, the mist gives way to hideous shapes made out of gold.  Which, you suddenly realize is absolutely impossible.  The more you look at them the more you start to look like them.  And anyone with an ounce of sense wouldn't like that!  Of course, they wouldn't be here either but you ignore that thought. } {Mud} {} {} {} {1.000} {}
+E { 2839} {w} {w} {8} {0} {} {1.000} {}
+E { 2843} {e} {e} {2} {0} {} {1.000} {}
+
+R { 2843} {0} {} {The Yellow Brick Road (s,w)} { } {The ground beneath you is made of solid gold bricks.  You look  around cautiously, in sudden fear that a house may drop out of  the sky from nowhere and land on your head.  A crowd of drooling idiots mills around here as if waiting for something. } {Mud} {} {} {} {1.000} {}
+E { 2842} {w} {w} {8} {0} {} {1.000} {}
+E { 2844} {s} {s} {4} {0} {} {1.000} {}
+
+R { 2844} {0} {} {A path of yellow dirt (n,s)} { } {That highway definitely didn't go anywhere.  As you move north it totally disappears.  No trucks, no asphalt, nothing.  You suddenly find yourself on a road of yellow dirt.  You almost imagine that you can see the outlines of bricks.  This has got to be your imagination. To make matters worse, you think you detect the odor of a dead skunk somewhere nearby. } {Mud} {} {} {} {1.000} {}
+E { 2843} {n} {n} {1} {0} {} {1.000} {}
+E {  161} {s} {s} {4} {0} {} {1.000} {}
+
+R { 2845} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E {  161} {u} {u} {16} {0} {} {1.000} {}
+
+R { 2846} {0} {} {A path of yellow dirt (d,n,s)} { } {That highway definitely didn't go anywhere.  As you move south it totally disappears.  No trucks, no asphalt, nothing except a small manhole in the ground.  You suddenly find yourself on a road of yellow dirt.  You almost imagine that you can see the outlines of bricks.  This has got to be your imagination. } {Mud} {} {} {} {1.000} {}
+E {  161} {n} {n} {1} {0} {} {1.000} {}
+E { 2848} {d} {d} {32} {0} {} {1.000} {}
+E { 2849} {s} {s} {4} {0} {} {1.000} {}
+
+R { 2847} {0} {} {elbow joint (n,s,w)} { } {As you turn the corner, you note that you have entered a steel gray tunnel.  You plink your finger off the rounded wall and realize that you are walking inside a giant junction pipe. } {Mud} {} {} {} {1.000} {}
+E {  161} {w} {w} {8} {0} {} {1.000} {}
+E { 2850} {n} {n} {1} {0} {} {1.000} {}
+E { 2851} {s} {s} {4} {0} {} {1.000} {}
+
+R { 2848} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 2846} {u} {u} {16} {0} {} {1.000} {}
+
+R { 2849} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 2846} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2850} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 2847} {s} {s} {4} {0} {} {1.000} {}
+
+R { 2851} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 2847} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2852} {0} {} {Eastwick Road (n,s,w,e)} { } {This is the road of Eastwick.  It leads to you know not where. Follow your feet and see where you go. There is a manhole here in the ground. } {Mud} {} {} {} {1.000} {}
+E {  156} {e} {e} {2} {0} {} {1.000} {}
+E { 2857} {n} {n} {1} {0} {} {1.000} {}
+E { 2858} {w} {w} {8} {0} {} {1.000} {}
+E { 2861} {s} {s} {4} {0} {} {1.000} {}
+
+R { 2853} {0} {} {South Forest (n,s,w)} { } {Branching off from the main road, you enter a plain forest. The ground beneath you is simply dirt with random tufts of grass shooting up through the ground. There is a marking of some sort etched in the dirt. } {Mud} {} {} {} {1.000} {}
+E {  156} {n} {n} {1} {0} {} {1.000} {}
+E { 2854} {s} {s} {4} {0} {} {1.000} {}
+E { 2859} {w} {w} {8} {0} {} {1.000} {}
+
+R { 2854} {0} {} {South Forest (n,s)} { } {The non-forest continues south.  But now the `ground' is beginning to take on a purplish tint which seems to be coming from that obloid to the south. There is a dense patch of purple mist in this area through which you can dimly see huge shapes moving. } {Mud} {} {} {} {1.000} {}
+E { 2853} {n} {n} {1} {0} {} {1.000} {}
+E { 2856} {s} {s} {4} {0} {} {1.000} {}
+
+R { 2855} {0} {} {Porch (e,n)} { } {You stand on the porch of an old house. You can see something is wrong with it. The door is half off its hinges and all of the windows are broken. } {Gremlins} {gremlins} {} {} {1.000} {}
+E { 2859} {e} {e} {2} {0} {} {1.000} {}
+E { 2860} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2856} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 2854} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2857} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 2852} {s} {s} {4} {0} {} {1.000} {}
+
+R { 2858} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 2852} {e} {e} {2} {0} {} {1.000} {}
+
+R { 2859} {5130} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 2855} {w} {w} {8} {0} {} {1.000} {}
+E { 2853} {e} {e} {2} {0} {} {1.000} {}
+
+R { 2860} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 2855} {s} {s} {4} {0} {} {1.000} {}
+
+R { 2861} {0} {} {Wickland Street (n,s)} { } {This appears to be a new side street. The pavement looks fresh and clean. Nary a pothole to be found! Too bad the same can't be said for the ground just beyond the curb on each side of this pleasant little avenue. It seems to be littered with craters. } {Mud} {} {} {} {1.000} {}
+E { 2852} {n} {n} {1} {0} {} {1.000} {}
+E { 2862} {s} {s} {4} {0} {} {1.000} {}
+
+R { 2862} {0} {} {Wickland Street (n,s)} { } {Wickland Street continues merrily along, now winding through what appears to be a bamboo forest. A thick one at that! The trees of the forest are so thick on each side of the street that they almost run right up against the curbs. } {Mud} {} {} {} {1.000} {}
+E { 2861} {n} {n} {1} {0} {} {1.000} {}
+E { 2863} {s} {s} {4} {0} {} {1.000} {}
+E { 2864} {draw tile} {#read .tt/muds/3s/areas/mahjongg_load.tt;draw tile} {0} {0} {} {1.000} {}
+
+R { 2863} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+E { 2862} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2864} {0} {} {## Mahjongg ## (n,exit)} { } {         Mahjongg (castle) This interior courtyard serves as the entrance to the Castle of Mahjongg. Bas relief sculptures decorate the stone walls, depicting all manner of exotic creatures and fierce-looking warriors. A curved staircase leads around the courtyard and up to an arched doorway that stands open to visitors to the north. A decorative iron fence surrounds the garden in the middle of the courtyard, preventing you from accidently stepping on any of the lovely flora that grows beneath the bright sunshine shining down from the open ceiling above. } {Mahjongg} {mahjongg} {} {} {1.000} {}
+E { 2865} {n} {n} {1} {0} {} {1.000} {}
+E { 2862} {exit} {#read .tt/muds/3s/areas/mahjongg_unload.tt;exit} {0} {0} {} {1.000} {}
+
+R { 2865} {0} {} {## Mahjongg ## (s,portal)} { } {         Mahjongg (castle) You stand within a narrow hall painted in dark red and lined with flickering torches. There is an open door on the south end of the hall that leads back toward the entrance of the castle. There are also two doors on each side of the hall, but they are closed to visitors. The most intriguing aspect of this room is on the north end of the hallway where you can see a wavering blue portal that seems to beckon you closer. } {Mahjongg} {} {} {} {1.000} {}
+E { 2864} {s} {s} {4} {0} {} {1.000} {}
+E { 2867} {portal} {portal} {0} {0} {} {1.000} {}
+
+R { 2866} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 2867} {0} {} {## Mahjongg ## (n,w,e,portal)} {P} {         Mahjongg (forest) This tile has been painted to look like a dense forest of pines and junipers. The thick, brushy branches of the trees hang low, bearing cones and berries that would be ripe for the picking if they were actually real. The soil underfoot looks rich and dark, as if its softness could cushion your steps as you explore this strange and inviting environment. } {Mahjongg} {} {} {} {1.000} {}
+E { 2868} {n} {n} {1} {0} {} {1.000} {}
+E { 2869} {w} {w} {8} {0} {} {1.000} {}
+E { 2870} {e} {e} {2} {0} {} {1.000} {}
+E { 2865} {portal} {portal} {0} {0} {} {1.000} {}
+
+R { 2868} {0} {} {## Mahjongg ## (s,e,w,n)} { } {         Mahjongg (forest) Clustered dogwoods are painted on this tile, their white and yellow flowers in full bloom. Clouds seem to float against the blue sky overhead, a round sun shining down upon the forest with bright midday light. The bottom of the tile is painted to look like plush, green grass. If it were real, your feet would sink in it with every step. } {Mahjongg} {} {} {} {1.000} {}
+E { 2867} {s} {s} {4} {0} {} {1.000} {}
+E { 2873} {e} {e} {2} {0} {} {1.000} {}
+E { 2887} {w} {w} {8} {0} {} {1.000} {}
+E { 2888} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2869} {0} {} {## Mahjongg ## (n,w,e)} { } {         Mahjongg (forest) Clustered dogwoods are painted on this tile, their white and yellow flowers in full bloom. Clouds seem to float against the blue sky overhead, a round sun shining down upon the forest with bright midday light. The bottom of the tile is painted to look like plush, green grass. If it were real, your feet would sink in it with every step. } {Mahjongg} {} {} {} {1.000} {}
+E { 2867} {e} {e} {2} {0} {} {1.000} {}
+E { 2887} {n} {n} {1} {0} {} {1.000} {}
+E { 2889} {w} {w} {8} {0} {} {1.000} {}
+
+R { 2870} {0} {} {## Mahjongg ## (e,w,n)} { } {         Mahjongg (forest) Light seems to dapple the leaf-strewn ground beneath your feet while lush maple and birch trees stretch into the clear blue sky overhead. This tile depicts a forest in the midst of a fall day, the paint so lifelike, you can almost smell the fresh aroma of the healthy flora and gentle breeze. Tiny animal tracks dot the bottom of the tile, as if small forest creatures had recently scampered across the path. } {Mahjongg} {} {} {} {1.000} {}
+E { 2867} {w} {w} {8} {0} {} {1.000} {}
+E { 2872} {e} {e} {2} {0} {} {1.000} {}
+E { 2873} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2871} {0} {<118>} {} { } {} {} {} {} {} {1.000} {}
+
+R { 2872} {0} {} {## Mahjongg ## (e,w,n)} { } {         Mahjongg (farm) The tranquil scene before you is of a small farmhouse located atop a hill of green grass dotted with yellow dandelions. A wooden fence leads away from the house, stretching off to the borders of the tile. Behind the fence, you can make out what appears to be a crop of corn, almost ready for harvest. A weathervane stands out against the rising sun, welcoming the morning from its place at the peak of the farmhouse's roof. } {Mahjongg} {} {} {} {1.000} {}
+E { 2870} {w} {w} {8} {0} {} {1.000} {}
+E { 2874} {e} {e} {2} {0} {} {1.000} {}
+E { 2875} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2873} {0} {} {## Mahjongg ## (w,e,s,n)} { } {         Mahjongg (jungle) A stormy night in the jungle is portrayed on this tile. Trees bend in a strong wind, the gusts whipping the fronds in a leafy frenzy. Puddles decorate the ground, muddy brown spots that would soak your boots if they consisted of more than paint and imagination. Vines swing between the branches of the trees, creating loops of green and yellow color. } {Mahjongg} {} {} {} {1.000} {}
+E { 2870} {s} {s} {4} {0} {} {1.000} {}
+E { 2875} {e} {e} {2} {0} {} {1.000} {}
+E { 2868} {w} {w} {8} {0} {} {1.000} {}
+E { 2886} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2874} {0} {} {## Mahjongg ## (e,w,n)} { } {         Mahjongg (farm) You appear to be inside a dusty old barn, its doors thrown open to display a wide vista of wheatfields that stretch off into the horizon. Painted in shades of red and gold, the tile gives the impression that the barn is warm and dry. Hazy light full of dust motes shimmers over a wooden floor covered in rough straw. A shovel is propped up against the wall in one corner. } {Mahjongg} {} {} {} {1.000} {}
+E { 2872} {w} {w} {8} {0} {} {1.000} {}
+E { 2876} {e} {e} {2} {0} {} {1.000} {}
+E { 2877} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2875} {0} {} {## Mahjongg ## (w,e,s,n)} { } {         Mahjongg (jungle) A gorgeous sunrise of red and gold decorates this tile, the light illuminating a jungle full of thriving plants and palm trees. Green leaves droop from low-hanging tree branches, their shiny surfaces so lifelike, you can almost reach out and stroke them. Vines and tree roots snake their way over the ground, turning the bottom of the tile into a mosaic of twisting colors. } {Mahjongg} {} {} {} {1.000} {}
+E { 2872} {s} {s} {4} {0} {} {1.000} {}
+E { 2877} {e} {e} {2} {0} {} {1.000} {}
+E { 2873} {w} {w} {8} {0} {} {1.000} {}
+E { 2885} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2876} {0} {} {## Mahjongg ## (e,w,n)} { } {         Mahjongg (sea) You seem to be treading water in the midst of a large coral reef. Given that your legs aren't actually moving, this is an interesting situation. Hazy green water surrounds you while a beautiful reef of white, red, pink, yellow, and orange coral rises in a dizzying array of patterns from the ocean floor. Some of the coral looks like it might be sharp. Good thing it's just paint and not the real thing. } {Mahjongg} {} {} {} {1.000} {}
+E { 2874} {w} {w} {8} {0} {} {1.000} {}
+E { 2878} {e} {e} {2} {0} {} {1.000} {}
+E { 2879} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2877} {0} {} {## Mahjongg ## (w,e,s,n)} { } {         Mahjongg (jungle) A stormy night in the jungle is portrayed on this tile. Trees bend in a strong wind, the gusts whipping the fronds in a leafy frenzy. Puddles decorate the ground, muddy brown spots that would soak your boots if they consisted of more than paint and imagination. Vines swing between the branches of the trees, creating loops of green and yellow color. } {Mahjongg} {} {} {} {1.000} {}
+E { 2874} {s} {s} {4} {0} {} {1.000} {}
+E { 2879} {e} {e} {2} {0} {} {1.000} {}
+E { 2875} {w} {w} {8} {0} {} {1.000} {}
+E { 2884} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2878} {0} {} {## Mahjongg ## (n,w)} { } {         Mahjongg (sea) The ocean floor appears to be at your feet. Crystal blue water surrounds you, a situation that would require you to swim if it were real. The floor consists of white sand littered with small shells in a thousand different shapes and colors. You can make out a white conch, a striped nautilus, a pink murex, and a brown starfish amongst the collection. } {Mahjongg} {} {} {} {1.000} {}
+E { 2876} {w} {w} {8} {0} {} {1.000} {}
+E { 2880} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2879} {0} {} {## Mahjongg ## (w,e,s,n)} { } {         Mahjongg (garden) You appear to be in the midst of an overgrown garden. Weeds grow tall and thick amongst the flowers and the brown rise of an ant hill can clearly be seen behind a clump of barberry bushes. Green, leafy vines partially obscure a low stone wall that stretches off in the background. A golden sun has been painted in the upper corner of this tile. The sun seems to shine bright afternoon light down upon this scene, as if to nourish the surrounding plants. } {Mahjongg} {} {} {} {1.000} {}
+E { 2876} {s} {s} {4} {0} {} {1.000} {}
+E { 2880} {e} {e} {2} {0} {} {1.000} {}
+E { 2877} {w} {w} {8} {0} {} {1.000} {}
+E { 2883} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2880} {0} {} {## Mahjongg ## (s,ne,w,n)} { } {         Mahjongg (sea) The ocean floor appears to be at your feet. Crystal blue water surrounds you, a situation that would require you to swim if it were real. The floor consists of white sand littered with small shells in a thousand different shapes and colors. You can make out a white conch, a striped nautilus, a pink murex, and a brown starfish amongst the collection. } {Mahjongg} {} {} {} {1.000} {}
+E { 2878} {s} {s} {4} {0} {} {1.000} {}
+E { 2881} {ne} {ne} {3} {0} {} {1.000} {}
+E { 2879} {w} {w} {8} {0} {} {1.000} {}
+E { 2882} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2881} {0} {} {## Mahjongg ## (w,sw,n)} { } {         Mahjongg (jungle) Leafy plants and twisting vines decorate this tile in bright green splendor. The flora looks so real, you'd think you could actually reach out and touch it. The bottom edge of the tile is painted to resemble dark black soil and the top edge is the color of a clear blue sky. } {Mahjongg} {} {} {} {1.000} {}
+E { 2880} {sw} {sw} {12} {0} {} {1.000} {}
+E { 2882} {w} {w} {8} {0} {} {1.000} {}
+E { 2911} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2882} {0} {} {## Mahjongg ## (w,e,s,n)} { } {         Mahjongg (garden) It looks like you've stepped right into someone's vegetable garden. While you know none of it is real, the neatly tilled rows that line the soil are so well painted, it's easy to be fooled by them. The garden looks like it was recently watered, as drops of moisture still decorate the leafy carrots and radishes that are planted here. You know what type of vegetables they are due to the little signs posted at the end of each row. } {Mahjongg} {} {} {} {1.000} {}
+E { 2880} {s} {s} {4} {0} {} {1.000} {}
+E { 2883} {w} {w} {8} {0} {} {1.000} {}
+E { 2881} {e} {e} {2} {0} {} {1.000} {}
+E { 2910} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2883} {0} {} {## Mahjongg ## (w,e,s,n)} { } {         Mahjongg (garden) Honeysuckle and wisteria proliferate in this garden, their colorful flowers blooming in an array of purples and oranges. Growing up a faded wooden trellis, these vines rise right up to the top of the tile. A shallow creek seems to run through the middle of this scene, its waters sparkling in morning light. Several hummingbirds are painted amongst the flowers, apparently sampling their nectar. } {Mahjongg} {} {} {} {1.000} {}
+E { 2879} {s} {s} {4} {0} {} {1.000} {}
+E { 2884} {w} {w} {8} {0} {} {1.000} {}
+E { 2882} {e} {e} {2} {0} {} {1.000} {}
+E { 2909} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2884} {0} {} {## Mahjongg ## (s,e,w,n)} { } {         Mahjongg (forest) Light seems to dapple the leaf-strewn ground beneath your feet while lush maple and birch trees stretch into the clear blue sky overhead. This tile depicts a forest in the midst of a fall day, the paint so lifelike, you can almost smell the fresh aroma of the healthy flora and gentle breeze. Tiny animal tracks dot the bottom of the tile, as if small forest creatures had recently scampered across the path. } {Mahjongg} {} {} {} {1.000} {}
+E { 2877} {s} {s} {4} {0} {} {1.000} {}
+E { 2885} {w} {w} {8} {0} {} {1.000} {}
+E { 2883} {e} {e} {2} {0} {} {1.000} {}
+E { 2908} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2885} {0} {} {## Mahjongg ## (s,e,w,n)} { } {         Mahjongg (forest) Towering oak trees surround you, their leafy branches filtering pale yellow light down upon a forest floor covered in loose dirt and soft green grasses. Shadows dapple the ground, forming patterns of light and dark shapes that bewilder the eye if stared at for any length of time. This tile is truly beautiful to behold. } {Mahjongg} {} {} {} {1.000} {}
+E { 2875} {s} {s} {4} {0} {} {1.000} {}
+E { 2886} {w} {w} {8} {0} {} {1.000} {}
+E { 2884} {e} {e} {2} {0} {} {1.000} {}
+E { 2907} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2886} {0} {} {## Mahjongg ## (n,s,w,e)} { } {         Mahjongg (forest) Massive sycamores surround you, their multi-colored bark neatly blending into the greens and browns of the forest. The canopy overhead is thick, blocking out all but the scantest hint of sunlight. If you didn't already know this scenery was nothing more than paint, you'd be tempted to reach out and pluck one of the large green leaves right off a tree. } {Mahjongg} {} {} {} {1.000} {}
+E { 2873} {s} {s} {4} {0} {} {1.000} {}
+E { 2888} {w} {w} {8} {0} {} {1.000} {}
+E { 2906} {n} {n} {1} {0} {} {1.000} {}
+E { 2885} {e} {e} {2} {0} {} {1.000} {}
+
+R { 2887} {0} {} {## Mahjongg ## (w,e,s,n)} { } {         Mahjongg (jungle) A gorgeous sunrise of red and gold decorates this tile, the light illuminating a jungle full of thriving plants and palm trees. Green leaves droop from low-hanging tree branches, their shiny surfaces so lifelike, you can almost reach out and stroke them. Vines and tree roots snake their way over the ground, turning the bottom of the tile into a mosaic of twisting colors. } {Mahjongg} {} {} {} {1.000} {}
+E { 2868} {e} {e} {2} {0} {} {1.000} {}
+E { 2869} {s} {s} {4} {0} {} {1.000} {}
+E { 2890} {w} {w} {8} {0} {} {1.000} {}
+E { 2899} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2888} {0} {} {## Mahjongg ## (n,s,w,e)} { } {         Mahjongg (jungle) Leafy plants and twisting vines decorate this tile in bright green splendor. The flora looks so real, you'd think you could actually reach out and touch it. The bottom edge of the tile is painted to resemble dark black soil and the top edge is the color of a clear blue sky. } {Mahjongg} {} {} {} {1.000} {}
+E { 2868} {s} {s} {4} {0} {} {1.000} {}
+E { 2899} {w} {w} {8} {0} {} {1.000} {}
+E { 2905} {n} {n} {1} {0} {} {1.000} {}
+E { 2886} {e} {e} {2} {0} {} {1.000} {}
+
+R { 2889} {0} {} {## Mahjongg ## (n,w,e)} { } {         Mahjongg (farm) This tile has been painted to look like a wide green pasture surrounded by a dilapidated wooden fence. Patches of clover dot the grass and weeds grow tall along the fence posts. Beyond the fence lies a white farmhouse and behind it, a narrow outhouse. Long shadows trail the fence and buildings, evidence of the early evening hour depicted in this landscape. } {Mahjongg} {} {} {} {1.000} {}
+E { 2869} {e} {e} {2} {0} {} {1.000} {}
+E { 2890} {n} {n} {1} {0} {} {1.000} {}
+E { 2891} {w} {w} {8} {0} {} {1.000} {}
+
+R { 2890} {0} {} {## Mahjongg ## (n,s,w,e)} { } {         Mahjongg (jungle) Spiky leaves and fronds decorate this tile in a hundred shades of green. The jungle depicted here is so thick you can barely see a glimpse of the light blue sky along the top or the black soil drawn along the bottom. Blurry images dot the upper reaches of this square\; perhaps they represent insects buzzing their way through the foliage. } {Mahjongg} {} {} {} {1.000} {}
+E { 2889} {s} {s} {4} {0} {} {1.000} {}
+E { 2892} {w} {w} {8} {0} {} {1.000} {}
+E { 2898} {n} {n} {1} {0} {} {1.000} {}
+E { 2887} {e} {e} {2} {0} {} {1.000} {}
+
+R { 2891} {0} {} {## Mahjongg ## (n,w,e)} { } {         Mahjongg (farm) This tile has been painted to look like a wide green pasture surrounded by a dilapidated wooden fence. Patches of clover dot the grass and weeds grow tall along the fence posts. Beyond the fence lies a white farmhouse and behind it, a narrow outhouse. Long shadows trail the fence and buildings, evidence of the early evening hour depicted in this landscape. } {Mahjongg} {} {} {} {1.000} {}
+E { 2889} {e} {e} {2} {0} {} {1.000} {}
+E { 2892} {n} {n} {1} {0} {} {1.000} {}
+E { 2893} {w} {w} {8} {0} {} {1.000} {}
+
+R { 2892} {0} {} {## Mahjongg ## (w,e,s,n)} { } {         Mahjongg (garden) You appear to be in the midst of an overgrown garden. Weeds grow tall and thick amongst the flowers and the brown rise of an ant hill can clearly be seen behind a clump of barberry bushes. Green, leafy vines partially obscure a low stone wall that stretches off in the background. A golden sun has been painted in the upper corner of this tile. The sun seems to shine bright afternoon light down upon this scene, as if to nourish the surrounding plants. } {Mahjongg} {} {} {} {1.000} {}
+E { 2891} {s} {s} {4} {0} {} {1.000} {}
+E { 2894} {w} {w} {8} {0} {} {1.000} {}
+E { 2890} {e} {e} {2} {0} {} {1.000} {}
+E { 2897} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2893} {0} {} {## Mahjongg ## (n,e)} { } {         Mahjongg (sea) You appear to be in the middle of the sea with an oncoming wave about to wash over you at any minute. A blazingly bright sun shines down from overhead and off in the distance, you can make out a thin brown line that represents a shore. Whitecaps can be seen along the surface of the water, indicating an unfelt breeze. It's a good thing this is just a picture or you'd find yourself needing to swim. } {Mahjongg} {} {} {} {1.000} {}
+E { 2891} {e} {e} {2} {0} {} {1.000} {}
+E { 2894} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2894} {0} {} {## Mahjongg ## (s,nw,e,n)} { } {         Mahjongg (sea) You appear to be in the middle of the sea with an oncoming wave about to wash over you at any minute. A blazingly bright sun shines down from overhead and off in the distance, you can make out a thin brown line that represents a shore. Whitecaps can be seen along the surface of the water, indicating an unfelt breeze. It's a good thing this is just a picture or you'd find yourself needing to swim. } {Mahjongg} {} {} {} {1.000} {}
+E { 2893} {s} {s} {4} {0} {} {1.000} {}
+E { 2895} {nw} {nw} {9} {0} {} {1.000} {}
+E { 2892} {e} {e} {2} {0} {} {1.000} {}
+E { 2896} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2895} {0} {} {## Mahjongg ## (e,se,n)} { } {         Mahjongg (jungle) Hazy golden light has been painted amidst dark green and brown foliage on this tile. Thick roots weave their way along the ground and gnarled tree trunks rise from the dark soil up into a canopy of leaves and palm fronds. Small animal tracks dot the soil, drawn in such perfect detail that they look completely real. } {Mahjongg} {} {} {} {1.000} {}
+E { 2894} {se} {se} {6} {0} {} {1.000} {}
+E { 2896} {e} {e} {2} {0} {} {1.000} {}
+E { 2900} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2896} {0} {} {## Mahjongg ## (w,e,s,n)} { } {         Mahjongg (garden) Bonsai trees dot the landscape of greenery and stone that surround a small pond. A narrow wooden bridge spans the pond, leading from one side of pebbled path to the other. Jasmine and roses add spots of white and yellow color to the overwhelming green of the bamboo shoots that rise up in dense clusters from the soil. Although merely a picture, this garden still brings a sense of serenity to your soul. } {Mahjongg} {} {} {} {1.000} {}
+E { 2894} {s} {s} {4} {0} {} {1.000} {}
+E { 2895} {w} {w} {8} {0} {} {1.000} {}
+E { 2897} {e} {e} {2} {0} {} {1.000} {}
+E { 2901} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2897} {0} {} {## Mahjongg ## (w,e,s,n)} { } {         Mahjongg (garden) Honeysuckle and wisteria proliferate in this garden, their colorful flowers blooming in an array of purples and oranges. Growing up a faded wooden trellis, these vines rise right up to the top of the tile. A shallow creek seems to run through the middle of this scene, its waters sparkling in morning light. Several hummingbirds are painted amongst the flowers, apparently sampling their nectar. } {Mahjongg} {} {} {} {1.000} {}
+E { 2892} {s} {s} {4} {0} {} {1.000} {}
+E { 2896} {w} {w} {8} {0} {} {1.000} {}
+E { 2898} {e} {e} {2} {0} {} {1.000} {}
+E { 2902} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2898} {0} {} {## Mahjongg ## (s,e,w,n)} { } {         Mahjongg (forest) This tile has been painted to look like a dense forest of pines and junipers. The thick, brushy branches of the trees hang low, bearing cones and berries that would be ripe for the picking if they were actually real. The soil underfoot looks rich and dark, as if its softness could cushion your steps as you explore this strange and inviting environment. } {Mahjongg} {} {} {} {1.000} {}
+E { 2890} {s} {s} {4} {0} {} {1.000} {}
+E { 2897} {w} {w} {8} {0} {} {1.000} {}
+E { 2899} {e} {e} {2} {0} {} {1.000} {}
+E { 2903} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2899} {0} {} {## Mahjongg ## (s,e,w,n)} { } {         Mahjongg (forest) This tile has been painted to look like a dense forest of pines and junipers. The thick, brushy branches of the trees hang low, bearing cones and berries that would be ripe for the picking if they were actually real. The soil underfoot looks rich and dark, as if its softness could cushion your steps as you explore this strange and inviting environment. } {Mahjongg} {} {} {} {1.000} {}
+E { 2887} {s} {s} {4} {0} {} {1.000} {}
+E { 2898} {w} {w} {8} {0} {} {1.000} {}
+E { 2888} {e} {e} {2} {0} {} {1.000} {}
+E { 2904} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2900} {0} {} {## Mahjongg ## (e,s,n)} { } {         Mahjongg (jungle) Leafy plants and twisting vines decorate this tile in bright green splendor. The flora looks so real, you'd think you could actually reach out and touch it. The bottom edge of the tile is painted to resemble dark black soil and the top edge is the color of a clear blue sky. } {Mahjongg} {} {} {} {1.000} {}
+E { 2895} {s} {s} {4} {0} {} {1.000} {}
+E { 2901} {e} {e} {2} {0} {} {1.000} {}
+E { 2920} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2901} {0} {} {## Mahjongg ## (s,e,w,n)} { } {         Mahjongg (jungle) This shadowy tile is all darkness and silhouette. The black shapes of towering trees and leafy canopy decorate your surroundings with a vague sense of ominous portent. Virtually everything in sight is either the color of midnight blue or jet black. A thin sliver of moonlight can be seen high above the canopy, offering just enough light for you to see by. } {Mahjongg} {} {} {} {1.000} {}
+E { 2896} {s} {s} {4} {0} {} {1.000} {}
+E { 2902} {e} {e} {2} {0} {} {1.000} {}
+E { 2900} {w} {w} {8} {0} {} {1.000} {}
+E { 2919} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2902} {0} {} {## Mahjongg ## (s,e,w,n)} { } {         Mahjongg (forest) Clustered dogwoods are painted on this tile, their white and yellow flowers in full bloom. Clouds seem to float against the blue sky overhead, a round sun shining down upon the forest with bright midday light. The bottom of the tile is painted to look like plush, green grass. If it were real, your feet would sink in it with every step. } {Mahjongg} {} {} {} {1.000} {}
+E { 2897} {s} {s} {4} {0} {} {1.000} {}
+E { 2903} {e} {e} {2} {0} {} {1.000} {}
+E { 2901} {w} {w} {8} {0} {} {1.000} {}
+E { 2918} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2903} {0} {} {## Mahjongg ## (s,nw,e,w)} { } {         Mahjongg (forest) Massive sycamores surround you, their multi-colored bark neatly blending into the greens and browns of the forest. The canopy overhead is thick, blocking out all but the scantest hint of sunlight. If you didn't already know this scenery was nothing more than paint, you'd be tempted to reach out and pluck one of the large green leaves right off a tree. } {Mahjongg} {} {} {} {1.000} {}
+E { 2898} {s} {s} {4} {0} {} {1.000} {}
+E { 2904} {e} {e} {2} {0} {} {1.000} {}
+E { 2918} {nw} {nw} {9} {0} {} {1.000} {}
+E { 2902} {w} {w} {8} {0} {} {1.000} {}
+
+R { 2904} {0} {} {## Mahjongg ## (w,e,s,n)} { } {         Mahjongg (garden) Honeysuckle and wisteria proliferate in this garden, their colorful flowers blooming in an array of purples and oranges. Growing up a faded wooden trellis, these vines rise right up to the top of the tile. A shallow creek seems to run through the middle of this scene, its waters sparkling in morning light. Several hummingbirds are painted amongst the flowers, apparently sampling their nectar. } {Mahjongg} {} {} {} {1.000} {}
+E { 2899} {s} {s} {4} {0} {} {1.000} {}
+E { 2905} {e} {e} {2} {0} {} {1.000} {}
+E { 2903} {w} {w} {8} {0} {} {1.000} {}
+E { 2916} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2905} {0} {} {## Mahjongg ## (w,e,s,ne,nw,n)} { } {         Mahjongg (jungle) Hazy golden light has been painted amidst dark green and brown foliage on this tile. Thick roots weave their way along the ground and gnarled tree trunks rise from the dark soil up into a canopy of leaves and palm fronds. Small animal tracks dot the soil, drawn in such perfect detail that they look completely real. } {Mahjongg} {} {} {} {1.000} {}
+E { 2888} {s} {s} {4} {0} {} {1.000} {}
+E { 2906} {e} {e} {2} {0} {} {1.000} {}
+E { 2904} {w} {w} {8} {0} {} {1.000} {}
+E { 2915} {ne} {ne} {3} {0} {} {1.000} {}
+E { 2916} {nw} {nw} {9} {0} {} {1.000} {}
+E { 2917} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2906} {0} {} {## Mahjongg ## (w,e,s,n)} { } {         Mahjongg (garden) Bonsai trees dot the landscape of greenery and stone that surround a small pond. A narrow wooden bridge spans the pond, leading from one side of pebbled path to the other. Jasmine and roses add spots of white and yellow color to the overwhelming green of the bamboo shoots that rise up in dense clusters from the soil. Although merely a picture, this garden still brings a sense of serenity to your soul. } {Mahjongg} {} {} {} {1.000} {}
+E { 2886} {s} {s} {4} {0} {} {1.000} {}
+E { 2907} {e} {e} {2} {0} {} {1.000} {}
+E { 2905} {w} {w} {8} {0} {} {1.000} {}
+E { 2915} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2907} {0} {} {## Mahjongg ## (s,e,w)} { } {         Mahjongg (forest) Clustered dogwoods are painted on this tile, their white and yellow flowers in full bloom. Clouds seem to float against the blue sky overhead, a round sun shining down upon the forest with bright midday light. The bottom of the tile is painted to look like plush, green grass. If it were real, your feet would sink in it with every step. } {Mahjongg} {} {} {} {1.000} {}
+E { 2885} {s} {s} {4} {0} {} {1.000} {}
+E { 2908} {e} {e} {2} {0} {} {1.000} {}
+E { 2906} {w} {w} {8} {0} {} {1.000} {}
+
+R { 2908} {0} {} {## Mahjongg ## (ne,s,e,w)} { } {         Mahjongg (forest) This tile has been painted to look like a dense forest of pines and junipers. The thick, brushy branches of the trees hang low, bearing cones and berries that would be ripe for the picking if they were actually real. The soil underfoot looks rich and dark, as if its softness could cushion your steps as you explore this strange and inviting environment. } {Mahjongg} {} {} {} {1.000} {}
+E { 2884} {s} {s} {4} {0} {} {1.000} {}
+E { 2909} {e} {e} {2} {0} {} {1.000} {}
+E { 2914} {ne} {ne} {3} {0} {} {1.000} {}
+E { 2907} {w} {w} {8} {0} {} {1.000} {}
+
+R { 2909} {0} {} {## Mahjongg ## (s,e,w,n)} { } {         Mahjongg (jungle) A stormy night in the jungle is portrayed on this tile. Trees bend in a strong wind, the gusts whipping the fronds in a leafy frenzy. Puddles decorate the ground, muddy brown spots that would soak your boots if they consisted of more than paint and imagination. Vines swing between the branches of the trees, creating loops of green and yellow color. } {Mahjongg} {} {} {} {1.000} {}
+E { 2883} {s} {s} {4} {0} {} {1.000} {}
+E { 2910} {e} {e} {2} {0} {} {1.000} {}
+E { 2908} {w} {w} {8} {0} {} {1.000} {}
+E { 2914} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2910} {0} {} {## Mahjongg ## (s,e,w,n)} { } {         Mahjongg (jungle) Leafy plants and twisting vines decorate this tile in bright green splendor. The flora looks so real, you'd think you could actually reach out and touch it. The bottom edge of the tile is painted to resemble dark black soil and the top edge is the color of a clear blue sky. } {Mahjongg} {} {} {} {1.000} {}
+E { 2882} {s} {s} {4} {0} {} {1.000} {}
+E { 2911} {e} {e} {2} {0} {} {1.000} {}
+E { 2909} {w} {w} {8} {0} {} {1.000} {}
+E { 2913} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2911} {0} {} {## Mahjongg ## (w,s,n)} { } {         Mahjongg (jungle) A gorgeous sunrise of red and gold decorates this tile, the light illuminating a jungle full of thriving plants and palm trees. Green leaves droop from low-hanging tree branches, their shiny surfaces so lifelike, you can almost reach out and stroke them. Vines and tree roots snake their way over the ground, turning the bottom of the tile into a mosaic of twisting colors. } {Mahjongg} {} {} {} {1.000} {}
+E { 2881} {s} {s} {4} {0} {} {1.000} {}
+E { 2910} {w} {w} {8} {0} {} {1.000} {}
+E { 2912} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2912} {0} {} {## Mahjongg ## (s,w,ne,n)} { } {         Mahjongg (farm) What appears to be a small lake fronts a white farmhouse and barn off in the distance. A path leads from the barn to a large grain silo just down a short hill. A cloudy sky looks down upon this scene, creating interesting patterns of light and shadow on the rippled surface of the lake. All of this looks so realistic, it's easy to forget that it's nothing but paint and tile. } {Mahjongg} {} {} {} {1.000} {}
+E { 2911} {s} {s} {4} {0} {} {1.000} {}
+E { 2913} {w} {w} {8} {0} {} {1.000} {}
+E { 2932} {ne} {ne} {3} {0} {} {1.000} {}
+E { 2933} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2913} {0} {} {## Mahjongg ## (s,w,e,n)} { } {         Mahjongg (farm) The tranquil scene before you is of a small farmhouse located atop a hill of green grass dotted with yellow dandelions. A wooden fence leads away from the house, stretching off to the borders of the tile. Behind the fence, you can make out what appears to be a crop of corn, almost ready for harvest. A weathervane stands out against the rising sun, welcoming the morning from its place at the peak of the farmhouse's roof. } {Mahjongg} {} {} {} {1.000} {}
+E { 2910} {s} {s} {4} {0} {} {1.000} {}
+E { 2914} {w} {w} {8} {0} {} {1.000} {}
+E { 2912} {e} {e} {2} {0} {} {1.000} {}
+E { 2931} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2914} {0} {} {## Mahjongg ## (ne,s,sw,e)} { } {         Mahjongg (farm) You appear to be inside a dusty old barn, its doors thrown open to display a wide vista of wheatfields that stretch off into the horizon. Painted in shades of red and gold, the tile gives the impression that the barn is warm and dry. Hazy light full of dust motes shimmers over a wooden floor covered in rough straw. A shovel is propped up against the wall in one corner. } {Mahjongg} {} {} {} {1.000} {}
+E { 2909} {s} {s} {4} {0} {} {1.000} {}
+E { 2908} {sw} {sw} {12} {0} {} {1.000} {}
+E { 2931} {ne} {ne} {3} {0} {} {1.000} {}
+E { 2913} {e} {e} {2} {0} {} {1.000} {}
+
+R { 2915} {0} {} {## Mahjongg ## (s,nw,sw)} { } {         Mahjongg (sea) You appear to be in the middle of the sea with an oncoming wave about to wash over you at any minute. A blazingly bright sun shines down from overhead and off in the distance, you can make out a thin brown line that represents a shore. Whitecaps can be seen along the surface of the water, indicating an unfelt breeze. It's a good thing this is just a picture or you'd find yourself needing to swim. } {Mahjongg} {} {} {} {1.000} {}
+E { 2906} {s} {s} {4} {0} {} {1.000} {}
+E { 2905} {sw} {sw} {12} {0} {} {1.000} {}
+E { 2926} {nw} {nw} {9} {0} {} {1.000} {}
+
+R { 2916} {0} {} {## Mahjongg ## (s,ne,se)} { } {         Mahjongg (sea) Well, this is just odd. If you were to believe what your eyes are telling you, you're currently in the deep sea. The fact that you're not wet and that you're breathing oxygen confirms that this is all just an illusion created by a very cleverly painted tile. The water is a murky blue and no hint of surface can be found. Small specks of plankton dot the landscape, seemingly floating on the current. } {Mahjongg} {} {} {} {1.000} {}
+E { 2905} {se} {se} {6} {0} {} {1.000} {}
+E { 2904} {s} {s} {4} {0} {} {1.000} {}
+E { 2926} {ne} {ne} {3} {0} {} {1.000} {}
+
+R { 2917} {0} {} {## Mahjongg ## (s,n)} { } {         Mahjongg (sea) You seem to be treading water in the midst of a large coral reef. Given that your legs aren't actually moving, this is an interesting situation. Hazy green water surrounds you while a beautiful reef of white, red, pink, yellow, and orange coral rises in a dizzying array of patterns from the ocean floor. Some of the coral looks like it might be sharp. Good thing it's just paint and not the real thing. } {Mahjongg} {} {} {} {1.000} {}
+E { 2905} {s} {s} {4} {0} {} {1.000} {}
+E { 2926} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2918} {0} {} {## Mahjongg ## (nw,s,se,w)} { } {         Mahjongg (farm) What appears to be a small lake fronts a white farmhouse and barn off in the distance. A path leads from the barn to a large grain silo just down a short hill. A cloudy sky looks down upon this scene, creating interesting patterns of light and shadow on the rippled surface of the lake. All of this looks so realistic, it's easy to forget that it's nothing but paint and tile. } {Mahjongg} {} {} {} {1.000} {}
+E { 2903} {se} {se} {6} {0} {} {1.000} {}
+E { 2902} {s} {s} {4} {0} {} {1.000} {}
+E { 2919} {w} {w} {8} {0} {} {1.000} {}
+E { 2923} {nw} {nw} {9} {0} {} {1.000} {}
+
+R { 2919} {0} {} {## Mahjongg ## (s,e,w,n)} { } {         Mahjongg (farm) This tile has been painted to look like a wide green pasture surrounded by a dilapidated wooden fence. Patches of clover dot the grass and weeds grow tall along the fence posts. Beyond the fence lies a white farmhouse and behind it, a narrow outhouse. Long shadows trail the fence and buildings, evidence of the early evening hour depicted in this landscape. } {Mahjongg} {} {} {} {1.000} {}
+E { 2901} {s} {s} {4} {0} {} {1.000} {}
+E { 2920} {w} {w} {8} {0} {} {1.000} {}
+E { 2918} {e} {e} {2} {0} {} {1.000} {}
+E { 2923} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2920} {0} {} {## Mahjongg ## (nw,e,s,n)} { } {         Mahjongg (farm) You seem to be in the middle of a large crop circle. A pattern of intersecting circles of various sizes stretches off in every direction. The flattened barley that makes up this phenomena spirals outward from a bright red barn sitting in the center of the pattern. Off in the distance sits an old tractor. } {Mahjongg} {} {} {} {1.000} {}
+E { 2900} {s} {s} {4} {0} {} {1.000} {}
+E { 2921} {nw} {nw} {9} {0} {} {1.000} {}
+E { 2919} {e} {e} {2} {0} {} {1.000} {}
+E { 2922} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2921} {0} {} {## Mahjongg ## (ne,e,se)} { } {         Mahjongg (farm) The tranquil scene before you is of a small farmhouse located atop a hill of green grass dotted with yellow dandelions. A wooden fence leads away from the house, stretching off to the borders of the tile. Behind the fence, you can make out what appears to be a crop of corn, almost ready for harvest. A weathervane stands out against the rising sun, welcoming the morning from its place at the peak of the farmhouse's roof. } {Mahjongg} {} {} {} {1.000} {}
+E { 2920} {se} {se} {6} {0} {} {1.000} {}
+E { 2922} {e} {e} {2} {0} {} {1.000} {}
+E { 2924} {ne} {ne} {3} {0} {} {1.000} {}
+
+R { 2922} {0} {} {## Mahjongg ## (w,e,s,n)} { } {         Mahjongg (garden) Honeysuckle and wisteria proliferate in this garden, their colorful flowers blooming in an array of purples and oranges. Growing up a faded wooden trellis, these vines rise right up to the top of the tile. A shallow creek seems to run through the middle of this scene, its waters sparkling in morning light. Several hummingbirds are painted amongst the flowers, apparently sampling their nectar. } {Mahjongg} {} {} {} {1.000} {}
+E { 2920} {s} {s} {4} {0} {} {1.000} {}
+E { 2923} {e} {e} {2} {0} {} {1.000} {}
+E { 2921} {w} {w} {8} {0} {} {1.000} {}
+E { 2924} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2923} {0} {} {## Mahjongg ## (nw,w,se,s)} { } {         Mahjongg (garden) A central path of polished stone leads through a riot of color, so many types of flowers you wouldn't know where to start in identifying all of them. At the far end of the path there appears to be a tall hedge trimmed into the shape of two globes, each floating over the end of the garden. } {Mahjongg} {} {} {} {1.000} {}
+E { 2919} {s} {s} {4} {0} {} {1.000} {}
+E { 2918} {se} {se} {6} {0} {} {1.000} {}
+E { 2924} {nw} {nw} {9} {0} {} {1.000} {}
+E { 2922} {w} {w} {8} {0} {} {1.000} {}
+
+R { 2924} {0} {} {## Mahjongg ## (se,sw,s,n)} { } {         Mahjongg (jungle) Leafy plants and twisting vines decorate this tile in bright green splendor. The flora looks so real, you'd think you could actually reach out and touch it. The bottom edge of the tile is painted to resemble dark black soil and the top edge is the color of a clear blue sky. } {Mahjongg} {} {} {} {1.000} {}
+E { 2923} {se} {se} {6} {0} {} {1.000} {}
+E { 2922} {s} {s} {4} {0} {} {1.000} {}
+E { 2921} {sw} {sw} {12} {0} {} {1.000} {}
+E { 2925} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2925} {0} {} {## Mahjongg ## (s)} { } {         Mahjongg (jungle) A stormy night in the jungle is portrayed on this tile. Trees bend in a strong wind, the gusts whipping the fronds in a leafy frenzy. Puddles decorate the ground, muddy brown spots that would soak your boots if they consisted of more than paint and imagination. Vines swing between the branches of the trees, creating loops of green and yellow color. } {Mahjongg} {} {} {} {1.000} {}
+E { 2924} {s} {s} {4} {0} {} {1.000} {}
+
+R { 2926} {0} {} {## Mahjongg ## (se,s,sw,n)} { } {         Mahjongg (forest) Light seems to dapple the leaf-strewn ground beneath your feet while lush maple and birch trees stretch into the clear blue sky overhead. This tile depicts a forest in the midst of a fall day, the paint so lifelike, you can almost smell the fresh aroma of the healthy flora and gentle breeze. Tiny animal tracks dot the bottom of the tile, as if small forest creatures had recently scampered across the path. } {Mahjongg} {} {} {} {1.000} {}
+E { 2916} {sw} {sw} {12} {0} {} {1.000} {}
+E { 2915} {se} {se} {6} {0} {} {1.000} {}
+E { 2917} {s} {s} {4} {0} {} {1.000} {}
+E { 2927} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2927} {0} {} {## Mahjongg ## (w,e,s,n)} { } {         Mahjongg (garden) Circular pathways of dry sand surround a gurgling fountain that leaves what looks like a fine mist throughout this garden. Light refracts off the mist, catching the variety of colors found in the blooming flowers and creating a dazzling kaleidoscope effect. Tiny bumble bees hover over some of the flowers, as if in the act of pollination while bright sunshine beams down upon the scene, warming flower and insect alike. } {Mahjongg} {} {} {} {1.000} {}
+E { 2926} {s} {s} {4} {0} {} {1.000} {}
+E { 2928} {w} {w} {8} {0} {} {1.000} {}
+E { 2929} {e} {e} {2} {0} {} {1.000} {}
+E { 2930} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2928} {0} {} {## Mahjongg ## (ne,e)} { } {         Mahjongg (farm) The tranquil scene before you is of a small farmhouse located atop a hill of green grass dotted with yellow dandelions. A wooden fence leads away from the house, stretching off to the borders of the tile. Behind the fence, you can make out what appears to be a crop of corn, almost ready for harvest. A weathervane stands out against the rising sun, welcoming the morning from its place at the peak of the farmhouse's roof. } {Mahjongg} {} {} {} {1.000} {}
+E { 2927} {e} {e} {2} {0} {} {1.000} {}
+E { 2930} {ne} {ne} {3} {0} {} {1.000} {}
+
+R { 2929} {0} {} {## Mahjongg ## (nw,w)} { } {         Mahjongg (farm) What appears to be a small lake fronts a white farmhouse and barn off in the distance. A path leads from the barn to a large grain silo just down a short hill. A cloudy sky looks down upon this scene, creating interesting patterns of light and shadow on the rippled surface of the lake. All of this looks so realistic, it's easy to forget that it's nothing but paint and tile. } {Mahjongg} {} {} {} {1.000} {}
+E { 2927} {w} {w} {8} {0} {} {1.000} {}
+E { 2930} {nw} {nw} {9} {0} {} {1.000} {}
+
+R { 2930} {0} {} {## Mahjongg ## (sw,se,s)} { } {         Mahjongg (garden) Honeysuckle and wisteria proliferate in this garden, their colorful flowers blooming in an array of purples and oranges. Growing up a faded wooden trellis, these vines rise right up to the top of the tile. A shallow creek seems to run through the middle of this scene, its waters sparkling in morning light. Several hummingbirds are painted amongst the flowers, apparently sampling their nectar. } {Mahjongg} {} {} {} {1.000} {}
+E { 2927} {s} {s} {4} {0} {} {1.000} {}
+E { 2928} {sw} {sw} {12} {0} {} {1.000} {}
+E { 2929} {se} {se} {6} {0} {} {1.000} {}
+
+R { 2931} {0} {} {## Mahjongg ## (ne,e,sw,s)} { } {         Mahjongg (garden) It looks like you've stepped right into someone's vegetable garden. While you know none of it is real, the neatly tilled rows that line the soil are so well painted, it's easy to be fooled by them. The garden looks like it was recently watered, as drops of moisture still decorate the leafy carrots and radishes that are planted here. You know what type of vegetables they are due to the little signs posted at the end of each row. } {Mahjongg} {} {} {} {1.000} {}
+E { 2914} {sw} {sw} {12} {0} {} {1.000} {}
+E { 2913} {s} {s} {4} {0} {} {1.000} {}
+E { 2933} {e} {e} {2} {0} {} {1.000} {}
+E { 2934} {ne} {ne} {3} {0} {} {1.000} {}
+
+R { 2932} {0} {} {## Mahjongg ## (nw,w,sw)} { } {         Mahjongg (farm) You appear to be inside a dusty old barn, its doors thrown open to display a wide vista of wheatfields that stretch off into the horizon. Painted in shades of red and gold, the tile gives the impression that the barn is warm and dry. Hazy light full of dust motes shimmers over a wooden floor covered in rough straw. A shovel is propped up against the wall in one corner. } {Mahjongg} {} {} {} {1.000} {}
+E { 2912} {sw} {sw} {12} {0} {} {1.000} {}
+E { 2933} {w} {w} {8} {0} {} {1.000} {}
+E { 2934} {nw} {nw} {9} {0} {} {1.000} {}
+
+R { 2933} {0} {} {## Mahjongg ## (w,e,s,n)} { } {         Mahjongg (garden) A central path of polished stone leads through a riot of color, so many types of flowers you wouldn't know where to start in identifying all of them. At the far end of the path there appears to be a tall hedge trimmed into the shape of two globes, each floating over the end of the garden. } {Mahjongg} {} {} {} {1.000} {}
+E { 2912} {s} {s} {4} {0} {} {1.000} {}
+E { 2931} {w} {w} {8} {0} {} {1.000} {}
+E { 2932} {e} {e} {2} {0} {} {1.000} {}
+E { 2934} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2934} {0} {} {## Mahjongg ## (se,sw,s,n)} { } {         Mahjongg (jungle) Purple and gold mountains decorate the horizon beyond the jungle trees and foliage that border you on every side. This tile is so realistic, you can almost feel the dampness of the jungle soil beneath your feet. To further this impression, drops of dew have been painted on some of the nearby leaves, tempting you to reach out and touch them. } {Mahjongg} {} {} {} {1.000} {}
+E { 2933} {s} {s} {4} {0} {} {1.000} {}
+E { 2932} {se} {se} {6} {0} {} {1.000} {}
+E { 2931} {sw} {sw} {12} {0} {} {1.000} {}
+E { 2935} {n} {n} {1} {0} {} {1.000} {}
+
+R { 2935} {0} {} {## Mahjongg ## (s)} { } {         Mahjongg (jungle) A stormy night in the jungle is portrayed on this tile. Trees bend in a strong wind, the gusts whipping the fronds in a leafy frenzy. Puddles decorate the ground, muddy brown spots that would soak your boots if they consisted of more than paint and imagination. Vines swing between the branches of the trees, creating loops of green and yellow color. } {Mahjongg} {} {} {} {1.000} {}
+E { 2934} {s} {s} {4} {0} {} {1.000} {}

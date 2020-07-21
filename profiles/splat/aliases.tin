@@ -5,3 +5,21 @@
         !donate coffin;
         goback;
 };
+
+#alias {togglecorpse} {
+	#switch {"${my[autocorpse][method]}"}{
+		#case {"nex"}{
+			#var {my[autocorpse][method]}{coffin};
+		};
+		#case {"guild"}{
+			#var {my[autocorpse][method]}{nex};
+		};
+		#case {"off"}{
+			#var {my[autocorpse][method]}{guild};
+		};
+        #case {"coffin"} {
+            #var {my[autocorpse][method]}{off};
+        }
+    };
+	#echo {Corpse trigger is now $my[autocorpse][method]};
+}

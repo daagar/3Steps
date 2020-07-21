@@ -40,6 +40,7 @@
 	#var {mudpath}{.tt/muds/${mud}};
 	#var {logpath}{${myprofilepath}/logs};
 	#var {globalpath}{${mudpath}/global};
+	#var {areapath}{${mudpath}/areas};
 	#var {mappath}{${mudpath}/maps};
 	#var {charpath}{${myprofilepath}/chars/${char}};
 	#var {varpath}{${charpath}/vars};
