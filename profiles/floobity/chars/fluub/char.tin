@@ -358,11 +358,9 @@ autoq
 #var my[current][playing][status] 0
 #var my[configuration][autoplay] 1
 #var my[current][guardian][hp] 0
-#var my[configuration][desiredsong] {death march}
-#var my[configuration][desiredspell] {augmented chord};
+#var my[configuration][desiredsong] {shower of light}
+#var my[configuration][desiredspell] {blazing notes};
 #var my[configuration][autocast] 1;
-#var my[configuration][alignment] evil;
-#var my[configuration][temperature] heat;
 #var my[current][laugh][status] 0;
 
 #nop {bset custom_hp HP: &$HP2$& SP: &$SP2$& K: &$K2$& V: &$V2$& [ &$P$& ]&$NL$&E: &$C$& D: &$AS2$& GTNL: &$G2N$& (&$G2N%$& - &$G2S$&)}
