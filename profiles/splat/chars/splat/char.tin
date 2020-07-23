@@ -337,7 +337,8 @@
     #format {corpses[freezer]}	{%+2s} {$corpses[freezer]};
 	#showme {<088>HP:${hp}/${hp_max} SP:${sp}/${sp_max} ST:${stam}%  PP:${pp}%  BP:${bio}    R: ${my[round]}(${my[rounds_last]})} {-4};
 	#showme {H:${my[hp][graph]} S:${my[sp][graph]} ST:${my[gp1][graph]} P:${my[gp2][graph]} R:${relin}/${relin_r}\% E:${enemy[graph]}} {-3};
-	#showme {$mip[gline][1] $mip[gline][2]} {-6};
+	#showme {$mip[gline][2]} {-6};
+	#showme {$mip[gline][1]} {-7};
 }
 
 #alias {corpsetrig} {

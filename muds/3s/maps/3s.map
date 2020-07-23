@@ -18,7 +18,7 @@ F 8455
 
 G 0
 
-I 468
+I 473
 
 L {ASCII NESW LINE} {NO EXITS} {x}
 L {ASCII NESW LINE} {N} {o}
@@ -216,7 +216,7 @@ L {MUDFONT CURVED} {N E} {\u2818}
 L {MUDFONT CURVED} {S E} {\u28A0}
 L {MUDFONT CURVED} {S W} {\u2844}
 L {MUDFONT CURVED} {N W} {\u2803}
-L {UNICODE GRAPHICS} {NO DIAGONAL} { }
+L {UNICODE GRAPHICS} {NO DIAGONAL} {}
 L {UNICODE GRAPHICS} {SE} {\u2E0C}
 L {UNICODE GRAPHICS} {NE} {\u2E1D}
 L {UNICODE GRAPHICS} {SE NE} {>}
@@ -2166,7 +2166,7 @@ E {  466} {inward} {inward} {0} {0} {} {1.000} {}
 R {  470} {0} {<g09>} {} { } {} {} {} {} {} {1.000} {}
 
 R {  471} {0} {} {A sea of protoplasm (surface,downward,outward,inward)} { } {Dim, directionless light illuminates the pool, allowing you to see your chaotic surroundings. Spiralling around you, the protoplasm forms bands of greens and yellows which appear to glow in the dim, strange light.  At times you feel like you are moving, but a glance to the centre of the pool where you can see the patterns orbiting, shows you that it's only your imagination. Numerous sounds reach your senses, some obvious in their origins, while others are distorted and altered beyond recognition.  Looking upwards presents you with an odd sight\; sunlight can be seen streaming down into the pool from what appears to be the surface of a pond. } {Changeling} {} {} {} {1.000} {}
-E {  473} {surface} {surface;#read .tt/Dirs/biome_load.tt} {0} {0} {} {1.000} {}
+E {  473} {surface} {#read .tt/muds/3s/areas/biome_load.tt;surface} {0} {0} {} {1.000} {}
 E {  474} {downward} {downward} {0} {0} {} {1.000} {}
 E {  475} {outward} {outward} {0} {0} {} {1.000} {}
 E {  469} {inward} {inward} {0} {0} {} {1.000} {}
