@@ -384,9 +384,9 @@
         #math {my[karma][difference]}{$my[karma][max] - $my[karma][current]};
         #math {my[voice][difference]}{$my[voice][max] - $my[voice][current]};
         #if {$my[configuration][autoplay] == 1}{
-                #math {my[configuration][guardian][hp]}{$my[hp][max] * 0.8};
-        }{
                 #math {my[configuration][guardian][hp]}{$my[hp][max] * 0.6};
+        }{
+                #math {my[configuration][guardian][hp]}{$my[hp][max] * 0.4};
         };
 	#if {$my[current][guardian][hp] != $my[configuration][guardian][hp]}{
 		set_guardian;
@@ -488,9 +488,6 @@
 		#if {$my[hp][current] < 300}{go home};
 		#if {$my[sp][current] < 300}{go home};
 		#if {$my[karma][current] < 50}{go home};
-		#if {${my[current][singing][status]} == 1 && ${my[current][playing][status]} == 1 && ${my[hp][difference]} > 300}{
-			!karma tap;
-		};
 	}{
 		#if {$my[hp][current] < $my[hp][max] && $my[current][singing][status] != 1}{
 			!cast cure;

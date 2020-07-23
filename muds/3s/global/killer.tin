@@ -461,6 +461,18 @@ make_global_blacklist
 	#regex {$tkstr}{%* %w$}{
 		#var {tkstr}{&2};
 	};
+	#regex {$tkstr}{sentry}{
+		#var {tkstr}{sentry};
+	};
+	#regex {$tkstr}{soldier}{
+		#var {tkstr}{soldier};
+	};
+	#regex {$tkstr}{assembler}{
+		#var {tkstr}{assembler};
+	};
+	#regex {$tkstr}{guardian}{
+		#var {tkstr}{guardian};
+	};
 	#var {kstr}{$tkstr};
 	#if {"$area" == "Changeling Biome" && $domove2 == 1}{
 		bscan;
