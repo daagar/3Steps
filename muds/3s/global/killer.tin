@@ -21,7 +21,12 @@
 	reset_killer_once;
 };
 
+#nop {A Couple helpful aliases}
 #alias {kk}{kill $kstr};
+#alias {bl}{
+	#list {global[blacklist]} ins -1 {%0};
+	#list {global[blacklist]}{size}{global_blacklist_size};
+};
 
 #nop {Make a global blacklist of critters to not stop on since they are followers, etc};
 
@@ -355,10 +360,6 @@ make_global_blacklist
 	};
 }
 
-#alias {bl}{
-	#list {critter[blacklist]} ins -1 {%0};
-	#list {critter[blacklist]}{size}{blacklist_size};
-};
 
 #alias {steptest}{
         #if {$manual_stepper == 1}{
@@ -461,6 +462,18 @@ make_global_blacklist
 	#var {tkstr}{${critter_array[${critter_room}]}};
 	#regex {$tkstr}{%* %w$}{
 		#var {tkstr}{&2};
+	};
+	#regex {$tkstr}{sentry}{
+		#var {tkstr}{sentry};
+	};
+	#regex {$tkstr}{soldier}{
+		#var {tkstr}{soldier};
+	};
+	#regex {$tkstr}{assembler}{
+		#var {tkstr}{assembler};
+	};
+	#regex {$tkstr}{guardian}{
+		#var {tkstr}{guardian};
 	};
 	#var {kstr}{$tkstr};
 	#if {"$area" == "Changeling Biome" && $domove2 == 1}{

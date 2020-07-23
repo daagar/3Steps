@@ -21,6 +21,7 @@
 			#showme {[<faa>DISABLE<088>]} $mystic[top]+1 -$mystic[width]+25;
 		};
 		#button {$mystic[top]+1;-$mystic[width]+25;$mystic[top]+1;-$mystic[width]+33}{
+			cease;
 			autoplay;
 			show_bard_table;
 		};
@@ -84,6 +85,7 @@
 		#button {$mystic[top]+10;-$mystic[width]+3;$mystic[top]+10;-$mystic[width]+8}{
 			!cease;
 			#var {my[configuration][desiredsong]}{into the fire};
+			#var {my[configuration][autocast]}{0};
 			show_bard_table;
 		};
 		#if {"${my[configuration][desiredsong]}" == "sands of time"}{
@@ -94,6 +96,7 @@
 		#button {$mystic[top]+11;-$mystic[width]+3;$mystic[top]+11;-$mystic[width]+8}{
 			!cease;
 			#var {my[configuration][desiredsong]}{sands of time};
+			#var {my[configuration][autocast]}{0};
 			show_bard_table;
 		};
 		#if {"${my[configuration][desiredsong]}" == "devil went down to georgia"}{
@@ -104,6 +107,7 @@
 		#button {$mystic[top]+12;-$mystic[width]+3;$mystic[top]+12;-$mystic[width]+8}{
 			!cease;
 			#var {my[configuration][desiredsong]}{devil went down to georgia};
+			#var {my[configuration][autocast]}{0};
 			show_bard_table;
 		};
 		show_spell_selector;

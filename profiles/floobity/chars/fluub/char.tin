@@ -4,8 +4,19 @@
 
 
 #read ${globalpath}/mystic.tin
-#alias kk {kill $kstr}
 #alias k {kill %0}
+
+fbq aegisl1
+fbq aegisl2
+fbq aegisl3
+fbq aegisl4
+fbq aegisl5
+
+autok
+autoq
+
+!alias doheal cast cure
+#var {my[current][heal][type]}{cast cure};
 
 
 #gag {^With remarkable skill and aim you drive your weapon into a poorly defended};
@@ -248,8 +259,9 @@
         };
 }
 
+
 #alias set_guardian {
-        !cast mystic guardian at hp/$my[configuration][guardian][hp]/cast cure;
+        !cast mystic guardian at hp/$my[configuration][guardian][hp]/doheal;
         !setpanic enthrall at 25%;
         #var {my[current][guardian][hp]}{$my[configuration][guardian][hp]};
 }
@@ -298,6 +310,25 @@
               	#var my[current][singing][status] 1;
                	#var my[current][playing][status] 1;
         };
+	#if {"${my[configuration][desiredsong]}" == "into the fire"}{
+              	#var my[current][singing][status] 1;
+               	#var my[current][playing][status] 1;
+        };
+	#if {"${my[configuration][desiredsong]}" == "devil went down to georgia"}{
+              	#var my[current][singing][status] 1;
+               	#var my[current][playing][status] 1;
+        };
+	#if {${my[current][singing][status]} == 1 && ${my[current][playing][status]} == 1}{
+		#if {"${my[current][heal][type]}" != "karma tap"}{
+			!alias doheal karma tap;
+			#var {my[current][heal][type]}{karma tap};
+		};
+	}{
+		#if {"${my[current][heal][type]}" != "cast cure"}{
+			!alias doheal cast cure;
+			#var {my[current][heal][type]}{cast cure};
+		};
+	};
 };
 
 #alias {bst}{
@@ -327,11 +358,9 @@
 #var my[current][playing][status] 0
 #var my[configuration][autoplay] 1
 #var my[current][guardian][hp] 0
-#var my[configuration][desiredsong] {death march}
-#var my[configuration][desiredspell] {augmented chord};
+#var my[configuration][desiredsong] {shower of light}
+#var my[configuration][desiredspell] {blazing notes};
 #var my[configuration][autocast] 1;
-#var my[configuration][alignment] evil;
-#var my[configuration][temperature] heat;
 #var my[current][laugh][status] 0;
 
 #nop {bset custom_hp HP: &$HP2$& SP: &$SP2$& K: &$K2$& V: &$V2$& [ &$P$& ]&$NL$&E: &$C$& D: &$AS2$& GTNL: &$G2N$& (&$G2N%$& - &$G2S$&)}
