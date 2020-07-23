@@ -20,7 +20,12 @@
 	reset_killer_once;
 };
 
+#nop {A Couple helpful aliases}
 #alias {kk}{kill $kstr};
+#alias {bl}{
+	#list {global[blacklist]} ins -1 {%0};
+	#list {global[blacklist]}{size}{global_blacklist_size};
+};
 
 #nop {Make a global blacklist of critters to not stop on since they are followers, etc};
 
@@ -354,10 +359,6 @@ make_global_blacklist
 	};
 }
 
-#alias {bl}{
-	#list {critter[blacklist]} ins -1 {%0};
-	#list {critter[blacklist]}{size}{blacklist_size};
-};
 
 #alias {steptest}{
         #if {$manual_stepper == 1}{
@@ -602,7 +603,7 @@ make_global_blacklist
 		#if {${critter_room} > 0}{
 				#var domove2 0;
 				#if {$autokill == 1}{
-					kill $kstr;
+					kk;
 				};
 		}{
 			go ${areaselector[roomnote][${targetarea}]};
@@ -696,7 +697,7 @@ make_global_blacklist
 		#if {${critter_room} > 0}{
 				#var domove2 0;
 				#if {$autokill == 1}{
-					kill $kstr;
+					kk;
 				};
 		}{
 			step_function;
