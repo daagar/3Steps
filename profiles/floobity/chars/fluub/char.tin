@@ -4,8 +4,16 @@
 
 
 #read ${globalpath}/mystic.tin
-#alias kk {kill $kstr}
 #alias k {kill %0}
+
+fbq aegisl1
+fbq aegisl2
+fbq aegisl3
+fbq aegisl4
+fbq aegisl5
+
+autok
+autoq
 
 !alias doheal cast cure
 #var {my[current][heal][type]}{cast cure};
