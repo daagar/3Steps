@@ -483,7 +483,7 @@
 	#if {"$draw[chat]" == "on"}{
 		#math chat[start]	{$chat[rows] * $chat[page]};
 		#math chat[end]		{$chat[rows] * $chat[page] - $chat[rows] + 1};
-		#line sub {var} #draw {tile} 1 1 $chat[rows] -44 $chat[log][-$chat[start]..-$chat[end]]
+		#line sub {var} #draw {tile} 1 1 $chat[rows] -$map[width]-2 $chat[log][-$chat[start]..-$chat[end]]
 	};
 }
 
