@@ -437,39 +437,43 @@ autoq
         #regex {$my[defense][all]}{B/%d}{#var my[defense][blink] &1}{#var my[defense][blink] 0};
         #regex {$my[defense][all]}{CS}{#var my[defense][shot] 1}{#var my[defense][shot] 0};
         #regex {$my[defense][all]}{RF}{#var my[defense][fury] 1}{#var my[defense][fury] 0};
+        #nop {Set a limit for defenses that changes in and out of combat};
+        #if {$my[incombat] == 1}{
+        	#var {my[defense][threshold]}{50};
+        }{
+		#var {my[defense][threshold]}{300};
+	};
         #nop {Do the following always, regardless of incombat status};
-        #if {$my[defense][protection][evil] < 10}{
+        #if {$my[defense][protection][evil] < ${my[defense][threshold]}}{
         	proe;
 	};
-        #if {$my[defense][protection][good] < 10}{
+        #if {$my[defense][protection][good] < ${my[defense][threshold]}}{
         	prog;
 	};
-        #if {$my[defense][protection][neutral] < 10}{
+        #if {$my[defense][protection][neutral] < ${my[defense][threshold]}}{
         	pron;
 	};
-        #if {$my[defense][protection][heat] < 10}{
+        #if {$my[defense][protection][heat] < ${my[defense][threshold]}}{
         	proh;
 	};
-        #if {$my[defense][protection][frost] < 10}{
+        #if {$my[defense][protection][frost] < ${my[defense][threshold]}}{
         	prof;
 	};
-        #if {$my[defense][skin] < 10}{
+        #if {$my[defense][skin] < ${my[defense][threshold]}}{
         	hskin;
 	};
-        #if {$my[defense][grace] < 10}{
+        #if {$my[defense][grace] < ${my[defense][threshold]}}{
         	agrace;
 	}{
-        	#if {$my[defense][rock] < 10}{
+        	#if {$my[defense][rock] < ${my[defense][threshold]}}{
         		iamarock;
 		}{
-        		#if {$my[defense][omuse] < 10}{
+        		#if {$my[defense][omuse] < ${my[defense][threshold]}}{
         			omuse;
 			};
 		};
 	};
-#nop {
-	#if {$my[karma][difference] < 50 && $my[defense][shot] != 1}{!called shot};
-};
+	#if {$my[karma][difference] == 0 && $my[defense][shot] != 1}{!called shot};
 	#if {$my[defense][fury] != 1}{!righteous fury};
         #if {$my[current][laugh][status] != 1}{!heartening laugh};
 	#if {$my[incombat] == 1}{
