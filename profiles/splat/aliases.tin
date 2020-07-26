@@ -1,5 +1,9 @@
 #nop {}
 
+#NOP Avoid killing the wrong things
+bl vilgan;
+bl cancer;
+
 #alias {donatecoffin} {
         go morgue;
         !donate coffin;
@@ -22,4 +26,4 @@
         }
     };
 	#echo {Corpse trigger is now $my[autocorpse][method]};
-}
+};

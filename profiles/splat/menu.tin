@@ -3,14 +3,17 @@
 #echo {Alts:};
 #echo {};
 
-#echo {1) Splat (changeling)};
+#echo {1) Splat 3S (changeling)};
 #var {my[alts][1][name]}{splat3s};
 #var {my[alts][1][guild]}{changeling};
 
 #echo {2) Crankshaft (cyborg)};
 #var {my[alts][2][name]}{crankshaft};
-#var {my[alts][1][guild]}{cyborg};
+#var {my[alts][2][guild]}{cyborg};
 
+#echo {3) Daagar (changeling)};
+#var {my[alts][3][name]}{daagar};
+#var {my[alts][3][guild]}{changeling};
 
 
 #echo {};
