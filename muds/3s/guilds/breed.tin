@@ -1,0 +1,184 @@
+#class {breed} {open}
+
+#var guild breed
+
+/* Breed Gags */
+#gag {Your PsiKnife (wielded)}
+#gag {You redirect some of the deflected energy}
+#gag {You are too far away to mindsink}
+#gag {You cannot use another Working so soon!}
+#gag {You try and channel the attack, but the crystal already overflows}
+
+/* Breed Movement - should be in mapper but don't know how to create new just yet */
+#alias gtower {guild;archway;#4 n}
+#alias btower {tower;step on star;focus chaos;home}
+#alias getcrystal {gtower;#3 n;w;sw;enter;buy 3;hold crystal;keep crystal;out;ne;e;#3 s;btower}
+#alias cont {#2 s;e;enter;imagine all ways}
+#alias bcont {out;out;w;#2 n}
+#alias far {#4 s;#2 w;enter;place hand on plate}
+#alias bfar {out;out;#2 e;#4 n}
+#alias harn {#4 s;#2 e;ne;enter;concentrate on inner self}
+#alias bharn {out;out;sw;#2 w;#4 n}
+#alias sense {#4 n;w;enter;say malachi}
+#alias bsense {out;out;e;#4 s}
+#alias psi {#4 w;n;enter;turn fluxwards;e}
+#alias bpsi {w;out;out;s;#4 w}
+#alias will {#4w;n;enter;turn fluxwards;w}
+#alias bwill {e;out;out;s;#4 e}
+#alias gen {#3 w;enter;knock seven times}
+#alias bgen {out;out;#3 e}
+#alias hand {#3 w;s;enter;open mind to mystery;e}
+#alias bhand {w;out;out;n;#3 e}
+#alias aeth {#3 w;s;enter;open mind to mystery;w}
+#alias baeth {e;out;out;n;#3 e}
+#alias mol {#3 w;s;enter;open mind to mystery;n}
+#alias bmol {s;out;out;s;#3 w}
+#alias self {#3 n;e;se;enter;focus on portal}
+#alias bself {out;out;nw;w;#3 s}
+#alias acad {#2 s;e;ne;enter}
+#alias bacad {out;out;sw;w;s;#2 n}
+
+/* Breed Other */
+#alias defup {flare;#delay {2} {repel};#delay {2} {deflect};#delay {2} {contain};#delay {2} {psiblade};#delay {2} {quicken}}
+
+
+/* Breed Power Actions */
+#act {You try and channel the attack, but the crystal already overflows}{
+	!psidraw 1000 from kulnara;
+}
+#act {You are too far away to mindsink}{
+	!contact stop;
+	!contact;
+}
+
+#act {You must establish contact before you can mindsink}{
+	!contact;
+}
+
+#sub {\: Non-existent} {:   1         }
+#sub {\: Insubstantial} {:   2          }
+#sub {\: Feeble} {:   3   }
+#sub {\: Puny} {:   4 }
+#sub {\: Slight} {:   5   }
+#sub {\: Passable} {:   6     }
+#sub {\: Mediocre} {:   7     }
+#sub {\: Average} {:   8    }
+#sub {\: Moderate} {:   9     }
+#sub {\: Intermediate} {:  10        }
+#sub {\: Significant} {:  11       }
+#sub {\: Substantial} {:  12       }
+#sub {\: Powerful} {:  13    }
+#sub {\: Expert} {:  14   }
+#sub {\: Masterful} {:  15      }
+#sub {\: Superior} {:  16     }
+#sub {\: Incredible} {:  17      }
+#sub {\: Astonishing} {:  18        }
+#sub {\: Unapproachable} {:  19           }
+#sub {\: Absolute} {:  20    }
+#sub {\: Uncharted} {:  21+     }
+
+#alias kk {kill $kstr; #delay {2} {!contact} }
+
+#nop {alias kk { kill zombie; #delay {2} {!contact} } }
+#alias k { kill %0; #delay {2} {!contact}}
+
+/* Get Mob name */
+#act {discorporate %1\.}{
+	#var {my[damagetracker][foe]}{%1}
+}
+
+#act {%w taps you on the shoulder.}{
+        #format {mytarget}{%l}{%1};
+        !aura $mytarget;
+};
+
+/* HP Bar */
+#nop {1450/1450(0) 7789/9550(589) 4(4%)6 51% Fl Rp Dt Cn Pb Qk Ct E:75% C:Confident}
+#nop {*hicyan*$HP$*reset*/*hicyan*$MAXHP$*reset*(*hicyan*$TALAR$*reset*) *yellow*$PP$*reset*/*yellow*$MAXPP$*reset*(*yellow*$CRYSTAL$*reset*) *hiblack*$SA$*reset*(*grey*$RESET$*reset*%)*hiblack*$ENHANCE$*reset* *higreen*$FOCUS$*reset*% *brown*$MAINTAIN$*reset* E:*magenta*$ENEMY$*reset* C:$CONF$}
+
+#gag {%1/%2(%3) %4/%5(%6) %7(%8\%)%9 %10\% %11 E:%12\% C:%13}
+#act {%1/%2(%3) %4/%5(%6) %7(%8\%)%9 %10\% %11 E:%12\% C:%13}{
+	#var {my[hp][current]}		{%1};
+	#var {my[hp][max]}		{%2};
+	#var {my[hp][stored]}		{%3};
+	#var {my[gp1][current]}		{%4};
+	#var {my[gp1][max]}		{%5};
+	#var {my[gp1][stored]}		{%6};
+	#var {my[aura][current]}	{%7};
+	#var {my[aura][reset]}		{%8};
+	#var {my[enhance][current]}	{%9};
+	#var {my[focus]}		{%10}
+	#var {my[activepowers]}		{%11}
+	#var {my[enemy][hp]}		{%12}
+	#var {my[confidence]}		{%13}
+	#math {my[hp][diff]}{$my[hp][max] - $my[hp][current]};
+	#math {my[gp1][diff]}{$my[gp1][max] - $my[gp1][current]};
+	#if {$my[gp1][current] < $my[gp1][max]*0.25} {
+		!mindsink;
+	}
+
+}
+
+
+#gag {%1/%2(%3) %4/%5(%6) %7(%8\%)%9 %10\% %11 E:%12 C:%13}
+#act {%1/%2(%3) %4/%5(%6) %7(%8\%)%9 %10\% %11 E:%12 C:%13}{
+        #var {my[hp][current]}          {%1};
+        #var {my[hp][max]}              {%2};
+        #var {my[hp][stored]}           {%3};
+        #var {my[gp1][current]}         {%4};
+        #var {my[gp1][max]}             {%5};
+        #var {my[gp1][stored]}          {%6};
+        #var {my[aura][current]}        {%7};
+        #var {my[aura][reset]}          {%8};
+        #var {my[enhance][current]}     {%9};
+        #var {my[focus]}                {%10}
+        #var {my[activepowers]}         {%11}
+        #var {my[enemy][hp]}            {%12}
+        #var {my[confidence]}           {%13}
+        #math {my[hp][diff]}{$my[hp][max] - $my[hp][current]};
+        #math {my[gp1][diff]}{$my[gp1][max] - $my[gp1][current]};
+        #if {$my[gp1][current] < $my[gp1][max]*0.25} {
+                !mindsink;
+        }
+
+}
+
+
+#alias {update_status} {
+	#var {my[hp][graph]}		{@graph{$my[hp][current];$my[hp][max]}};
+	#var {my[gp1][graph]}		{@graph{$my[gp1][current];$my[gp1][max]}};
+	#var {enemy[graph]}		{@graph{$enemy[hp];100}};
+	#format {hp}			{%+4s} {@colscale{$my[hp][current];$my[hp][max]}};
+	#format {hp_stored}		{%+3s} {<168>$my[hp][stored]<088>};
+	#format {hp_max}		{%+4s} {<128>$my[hp][max]<088>};
+	#format {psi}			{%+5s} {@colscale{$my[gp1][current];$my[gp1][max]}};
+	#format {psi_max}		{%+5s} {<128>$my[gp1][max]<088>};
+	#format {psi_stored}            {%+5s} {<128>$my[gp1][stored]<088>};
+	#format {ehealth}		{%+8s} {@colscale{$enemy[hp];100}\%};
+	#showme {<088>HP:$hp($hp_stored)/$hp_max PSI:$psi/$psi_max($psi_stored)  E: $ehealth} {-4};
+	#showme {H:$my[hp][graph] PSI:$my[gp1][graph]   E:$enemy[graph]} {-3};
+	#showme {$mip[gline][2]} {-6};
+	#showme {$mip[gline][1]} {-7};
+}
+
+#var autogather 0;
+#var autobot 0;
+
+#alias {corpsetrig} {
+        !wrap;
+	!a;
+        !divvy coins;
+	#if {$autogather == 1}{
+		!get all;
+		ppck;
+	};
+}
+
+#act {dealt the killing blow to} {
+	log_damage %1;
+	#if {"$my[autocorpse][method]" != "off"}{
+		corpsetrig;
+	};
+};
+
+#class {breed} {close}
