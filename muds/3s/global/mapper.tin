@@ -80,6 +80,8 @@
 	};
 };
 
+#act {%*=I=%*}{#regex {%2}{%*cask of chaotic energy%*}{#map set roomnote seacask;#map set roomsymbol c;#map set roomcolor <158>;}};
+
 #NOP Kill-Loop to find rooms with critters and no people
 
 #NOP Room Short with Exits
@@ -89,7 +91,7 @@
 	#if {"$mapping" == "on"} {
 		#replace exits {,} {;};
 		#foreach {$exits} {eachexit} {
-        		#if {"%2" == "Sewer Portal" && "$area" == "Chaotic Sewers"}{
+        		#if {("%2" == "Sewer Portal" && "$area" == "Chaotic Sewers") || ("$area" == "The Sea of Chaos" && "$eachexit" == "out")}{
         			#nop {};
         		}{
 				#map dig $eachexit;
@@ -97,7 +99,7 @@
 		};
 		#map get {roomexit} {rexit};
 		#foreach {$rexit} {eachexit} {
-        		#if {"%2" == "Sewer Portal" && "$area" == "Chaotic Sewers"}{
+        		#if {("%2" == "Sewer Portal" && "$area" == "Chaotic Sewers")  || ("$area" == "The Sea of Chaos" && "$eachexit" == "out")}{
         			#nop {};
         		}{
 				#map at {$eachexit} {
@@ -162,7 +164,7 @@
         #if {$upexit == 0}{
                 #list {room_dirs}{find}{menu}{upexit};
         };
-        #if {"%2" == "Sewer Portal" && "$area" == "Chaotic Sewers"}{
+        #if {("%2" == "Sewer Portal" && "$area" == "Chaotic Sewers")}{
                 #map set roomnote exit;#map set roomsymbol x;#map set roomcolor <128>;
         };
         #list {room_dirs}{find}{$reversedir}{reverse_dir};
@@ -391,9 +393,7 @@
 }
 
 #alias {mapoff}{
-	#nop {
-	!brief on yes;
-	};
+	#nop {!brief on yes;};
 	!brief on full;
 	#map flag static on;
 	#unvar mapstatic;

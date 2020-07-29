@@ -30,7 +30,7 @@
 
 #nop {Make a global blacklist of critters to not stop on since they are followers, etc};
 
-#var {global_blacklist}{everybody;under the control of;betrayer;broodling;chromatic cuckoo owlet;tiny translucent;gemini}
+#var {global_blacklist}{everybody;under the control of;betrayer;broodling;chromatic cuckoo owlet;tiny translucent;gemini;a small wandering spider}
 
 #alias {make_global_blacklist}{
 	#list {global[blacklist]}{create}{$global_blacklist};
