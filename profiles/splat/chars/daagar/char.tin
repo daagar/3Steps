@@ -392,7 +392,7 @@
 #alias fa {
         #NOP !fuse all black;
         #NOP !fuse all dark;
-        #NOP !fuse all murky;
+        !fuse all murky;
         !fuse all turbid;
         #NOP !fuse all lucid;
         !fuse all milky;
@@ -410,7 +410,7 @@
         #NOP !fuse dark and turbid;
         #NOP !fuse dark and milky;
         #NOP !fuse dark and opaque;
-        #NOP !fuse murky and turbid;
+        !fuse murky and turbid;
         !fuse turbid and milky;
 }
 
