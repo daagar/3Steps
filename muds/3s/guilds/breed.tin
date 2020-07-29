@@ -95,9 +95,8 @@
 /* HP Bar */
 #nop {1450/1450(0) 7789/9550(589) 4(4%)6 51% Fl Rp Dt Cn Pb Qk Ct E:75% C:Confident}
 #nop {*hicyan*$HP$*reset*/*hicyan*$MAXHP$*reset*(*hicyan*$TALAR$*reset*) *yellow*$PP$*reset*/*yellow*$MAXPP$*reset*(*yellow*$CRYSTAL$*reset*) *hiblack*$SA$*reset*(*grey*$RESET$*reset*%)*hiblack*$ENHANCE$*reset* *higreen*$FOCUS$*reset*% *brown*$MAINTAIN$*reset* E:*magenta*$ENEMY$*reset* C:$CONF$}
-
-#gag {%1/%2(%3) %4/%5(%6) %7(%8\%)%9 %10\% %11 E:%12\% C:%13}
-#act {%1/%2(%3) %4/%5(%6) %7(%8\%)%9 %10\% %11 E:%12\% C:%13}{
+#gag {%1/%2(%3) %4/%5(%6) %7(%8\%)%9 %10\% %11 E:%12* C:%13}
+#act {%1/%2(%3) %4/%5(%6) %7(%8\%)%9 %10\% %11 E:%12* C:%13}{
 	#var {my[hp][current]}		{%1};
 	#var {my[hp][max]}		{%2};
 	#var {my[hp][stored]}		{%3};
@@ -118,31 +117,6 @@
 	}
 
 }
-
-
-#gag {%1/%2(%3) %4/%5(%6) %7(%8\%)%9 %10\% %11 E:%12 C:%13}
-#act {%1/%2(%3) %4/%5(%6) %7(%8\%)%9 %10\% %11 E:%12 C:%13}{
-        #var {my[hp][current]}          {%1};
-        #var {my[hp][max]}              {%2};
-        #var {my[hp][stored]}           {%3};
-        #var {my[gp1][current]}         {%4};
-        #var {my[gp1][max]}             {%5};
-        #var {my[gp1][stored]}          {%6};
-        #var {my[aura][current]}        {%7};
-        #var {my[aura][reset]}          {%8};
-        #var {my[enhance][current]}     {%9};
-        #var {my[focus]}                {%10}
-        #var {my[activepowers]}         {%11}
-        #var {my[enemy][hp]}            {%12}
-        #var {my[confidence]}           {%13}
-        #math {my[hp][diff]}{$my[hp][max] - $my[hp][current]};
-        #math {my[gp1][diff]}{$my[gp1][max] - $my[gp1][current]};
-        #if {$my[gp1][current] < $my[gp1][max]*0.25} {
-                !mindsink;
-        }
-
-}
-
 
 #alias {update_status} {
 	#var {my[hp][graph]}		{@graph{$my[hp][current];$my[hp][max]}};
