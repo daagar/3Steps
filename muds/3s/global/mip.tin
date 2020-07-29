@@ -434,6 +434,10 @@
 	#REGEX {%0} { stumbles in confusion as the headband hypnotizes } {#var mipgag 1};
 	#REGEX {%0} { stumbles in confusion as the amulet hypnotizes } {#var mipgag 1};
 
+	#REGEX {%0} {~Korenth~} {#bell};
+	#REGEX {%0} {~Zanadu~} {#bell};
+	#REGEX {%0} {~Simon~} {#bell};
+	#REGEX {%0} {~Setinekht~} {#bell};
 	#IF {$mipgag == 0} {.mipProcessBAB %0}
 }
 
