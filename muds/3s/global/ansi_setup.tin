@@ -20,6 +20,6 @@
 
 #send {setmod MAPCOLS CLEAR}; 
 
-#send {prompt -reset};
+#send {prompt >$nl$};
 
 #class {ansi_setup} {close}
