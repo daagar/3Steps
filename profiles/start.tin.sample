@@ -1,5 +1,5 @@
 #config {repeat enter}{on};
-#config {packet patch}{0.1};
+#config {packet patch}{0.5};
 
 #alias {load} {
 	#read ${globalpath}/aliases.tin;
