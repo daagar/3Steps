@@ -90,7 +90,7 @@
 		#var {logpath}{/tintin/logs}
  	to wherever you want your logs to go
 
-* Edit mysql.tin and change your mysql database password to whatever you want your passwords to be
+* Rename mysql.tin.sample in .tt/profiles to mysql.tin and change your mysql database password to whatever you want your passwords to be
 
 * Log in to mysql and create the tintin database:
 
