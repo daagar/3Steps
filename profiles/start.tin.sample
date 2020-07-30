@@ -9,7 +9,7 @@
 	#read ${globalpath}/graph.tin;
 	#read ${globalpath}/mip.tin;
 	#read ${globalpath}/ansi.tin;
-	#read ${globalpath}/mysql.tin;
+	#read ${profilepath}/mysql.tin;
 	#read ${globalpath}/mapper.tin;
 	#read ${globalpath}/chat.tin;
 	#read ${globalpath}/aliases.tin;
